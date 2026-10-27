@@ -1,0 +1,19 @@
+name: Direct social tests
+on:
+  pull_request:
+    paths:
+      - "scripts/publish-social-issue.mjs"
+      - "tests/direct-social.test.js"
+      - "src/meta.js"
+      - ".github/workflows/direct-*.yml"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm test
