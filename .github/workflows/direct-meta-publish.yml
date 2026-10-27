@@ -8,7 +8,7 @@ on:
         type: number
         required: true
   issues:
-    types: [labeled]
+    types: [opened, labeled]
 
 permissions:
   contents: read
@@ -23,7 +23,8 @@ jobs:
     if: >-
       github.event_name == 'workflow_dispatch' ||
       (github.event.issue.user.login == github.repository_owner &&
-       github.event.label.name == 'social-publish')
+       contains(github.event.issue.labels.*.name, 'social-publish') &&
+       (github.event.action == 'opened' || github.event.label.name == 'social-publish'))
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
