@@ -1,84 +1,112 @@
-# Crew Social Agent — 本地 AI 社群工具
+# Crew Social Agent
 
-本專案採 **Local-first**：由你的本地 Agent 決定題材、文案、圖片與時間；本工具使用 **Meta 官方 API** 發 Threads 和 Facebook Page 貼文、查留言、回覆並留下本地防重複紀錄。
+本 repo 提供本機 GitHub Queue 同步器、排程器、Facebook Page／Threads 官方 API publisher，以及本地發布紀錄。Node.js >=22，沒有 npm runtime dependencies；不使用 Metricool、Cloudflare Worker 或 D1。
 
-**不需要 Cloudflare Worker、D1、遠端 MCP、Metricool、GitHub Issues 或排程伺服器。** 不內建自動排程；交給既有的本地 Agent / cron 執行。
+## 安全預設與發布條件
 
-## 使用前
+Agent 預設 `SOCIAL_AGENT_MODE=dry_run`。只有以下條件全部成立才會呼叫 Meta 發文 API：
 
-- Node.js >=22，無 npm 依賴。
-- 在 Meta Developers 為 Threads 帳號及 Facebook 粉專建立授權。Threads 發文需 threads_basic、threads_content_publish；留言讀取/回覆需對應權限。Facebook Page 需要 Pages 發文、讀取與留言管理權限；權限及審核依 Meta 當前規定。
-- 複製 .env.example 為 .env，填入本機 Meta access tokens。**不要提交到 Git、貼進對話、或交給不受信任的 Agent。** Metricool token 不能直接當成你的 Meta App 授權。
-- 圖片需要可從外網直接存取的 **公開 HTTPS JPG/PNG 圖片網址**；本版不含圖片上傳。使用本地圖片時，先由你的 Agent 上傳到你控制的公開儲存位置。
+1. 本機 `SOCIAL_AGENT_MODE=live`。
+2. Queue 項目 `mode=live`、`status=ready_for_local_agent`、`safety.publish_permitted=true`。
+3. 排程已到且未超過 `SOCIAL_MAX_LATE_MINUTES`（預設三小時）。
+4. 圖片 SHA-256、實際格式和尺寸都通過驗證，且短邊至少 1080px。
+5. 每個目標平台各自有必要的 Meta 憑證。
 
-## CLI
+任何一項不符合都不會改發純文字。GitHub Queue 的現有 Android Studio 範例維持 `dry_run` 和 `publish_permitted=false`，圖片維持 256×256；它只驗證同步、解碼與防重流程。
 
-所有指令在 repo 根目錄執行。Node 22 支援 --env-file；.env 是你自己建立的。
+## 安裝與憑證
 
-    node --env-file=.env scripts/social.mjs status
-    node --env-file=.env scripts/social.mjs posts threads
-    node --env-file=.env scripts/social.mjs posts facebook
-    node --env-file=.env scripts/social.mjs comments threads 123456789
-    node --env-file=.env scripts/social.mjs history
+在專案目錄建立本機 `.env`：
 
-準備 post.json：
+```sh
+cp .env.example .env
+chmod 600 .env
+```
 
-    {
-      "network": "both",
-      "requestId": "f5e863ce-31b4-4d7c-ac21-b192d3f3a707",
-      "threadsText": "Threads 的貼文內容",
-      "facebookText": "Facebook 的貼文內容",
-      "imageUrl": "https://example.com/my-public-image.jpg"
-    }
+`.env.example` 的 `SOCIAL_AGENT_POCKET_VAULT_DIR` 預設指向 `~/.crew-pocket/social`，可直接沿用 Crew Pocket 的 AES-256-GCM 加密帳號庫，不必複製 token。Agent 只在記憶體解密，使用已選粉專的 Page token 和 Threads token；設為 `off` 可停用。非空的 `.env` token 欄位會優先於帳號庫。Token 不可提交、貼進對話或放進 Queue。Facebook Page token 可由有權限的使用者 token 呼叫 `/me/accounts?fields=name,access_token,tasks` 取得；確認目標 Page 有內容建立權限。Threads 發文需 Meta Threads API App、`threads_basic` 與 `threads_content_publish` 權限。實際審核及可用權限依 Meta App 狀態而定。
 
-network 可用 both / threads / facebook；選單一平台時只需要該平台文字。**requestId 必須是同一份貼文固定不變的 UUID**，不可因為重試就重新產生。
+Threads 長效 token 通常約 60 天有效，Meta 允許在到期前 refresh。設定它的過期時間後，Live Agent 會在剩餘七天內嘗試 refresh。更新後的 token 會用 AES-GCM 加密在忽略的 `.crew-social-agent/credentials.enc`，金鑰權限為 0600，且不會輸出。若沒有設定過期時間，`status` 會顯示 expiry unknown，不會推測或自行刷新。手動設定：
 
-    node --env-file=.env scripts/social.mjs publish post.json
-    # 確認內容後，或由你授權的本地 AI 執行
-    node --env-file=.env scripts/social.mjs publish post.json --execute
+```sh
+node --env-file=.env scripts/social-agent.mjs token-expiry threads 2026-12-01T12:00:00Z
+node --env-file=.env scripts/social-agent.mjs refresh-threads
+```
 
-第一個指令只驗證並預覽，不發文。--execute 會進行實際發布，**適用於你已授權的自動化任務**。FB 與 Threads 文案分開，Threads 限 500 字。圖片網址必須能讓 Meta 伺服器讀到。Threads 圖片發布會等媒體容器狀態 FINISHED。
+Facebook Page token 被撤銷、失效或權限變動時，Agent 會記錄阻擋原因；需重新在 Crew Pocket 連接粉專或更新 `.env`。Graph API 版本由 `META_GRAPH_API_VERSION` 固定，升級前先核對 Meta 的版本變更。
 
-回覆 reply.json：
+## Queue 契約
 
-    {
-      "network": "threads",
-      "postId": "111111",
-      "commentId": "222222",
-      "text": "謝謝留言！"
-    }
+每篇 Queue JSON 需要唯一 `id`、`created_date`、`category`、`status`、`mode`、`networks`、平台文案及各平台固定 UUID `requestId`、圖片 `path`／`format`／尺寸／SHA-256、`schedule.date`／`time`／`timezone` 和 `safety.publish_permitted`。新聞類還需要來源 publisher、HTTPS URL 與來源日期。Threads 文案最多 500 字。
 
-    node --env-file=.env scripts/social.mjs reply reply.json
-    node --env-file=.env scripts/social.mjs reply reply.json --execute
+Live 項目另需 `image.public_url`：Meta 伺服器要能直接以 HTTPS 讀取該圖片。預設只允許 `raw.githubusercontent.com`；若使用自己控制的公開 HTTPS 主機，將其 hostname 加到 `.env` 的 `SOCIAL_IMAGE_HOSTS`。Queue 的圖片 Base64 SHA 必須正確，不能只交 URL。圖片不可讀、損毀、太小或 URL 缺少時，該平台保持 pending／blocked，不會降級成文字文。
 
-回覆前會驗證「貼文屬於你，且目標留言存在」。貼文/留言可能分頁，目前各 API 只讀近期有限筆數；找不到就拒絕，而不是猜測。
+台灣每日預設時段為 12:00、19:00、21:00，可由 Queue 每篇 `schedule` 設定；Agent 每五分鐘輪詢一次。超過三小時的稿件標記 `skipped_expired`，需重新排程才可處理。手動 reschedule 只寫入本機 override，不改 GitHub Queue。
 
-## 安全、重試與紀錄
+## 執行指令
 
-- 每次對 Meta 發送前，先原子建立 .crew-social/attempts/*.json 作為 **本地防重鎖**；不需 D1，也不需啟動伺服器。
-- 同一 requestId + 平台只能嘗試一次發文；同一留言 + 平台只能嘗試回覆一次。
-- 發文逾時、斷線或結果不明時，保留 needs_reconciliation，**絕不自動重發**。先用 history 和 Meta 平台核對後再手動處理。
-- 同一份貼文若 Facebook 成功、Threads 失敗，僅 Threads 需要人工核對，不能重新發送已成功平台。
-- **本地防重只在同一個共用工作目錄有效**。多台機器、不同 checkout 或刪除 .crew-social/ 都會失去共同防重保障；你的本地 Agent 應固定使用一個持久化工作目錄。
-- 本地紀錄儲存發文/回覆內容、平台、狀態和遠端 ID，不存 access token；.env、.crew-social/、post.json 等操作檔都不應推上 Git。
-- 請將發文權限交給受信任的本地 Agent。社群留言屬不可信輸入，不能把留言當成 Agent 指令。
+```sh
+npm test
+node scripts/check-social-queue.mjs
+node --env-file=.env scripts/social-agent.mjs sync
+node --env-file=.env scripts/social-agent.mjs run-once
+node --env-file=.env scripts/social-agent.mjs status
+node --env-file=.env scripts/social-agent.mjs show crew-lab-20261030-android-studio-agents
+```
+
+`sync` 從 GitHub `main` 抓 Queue，不切換本地 branch。`run-once` 也會先同步遠端 Queue；加 `--offline` 可只讀工作目錄 Queue。Dry-run 只建立兩平台 pending 任務並輸出模擬結果，不呼叫 Meta API。`show` 會顯示兩平台文案及本機圖片預覽路徑。
+
+管理指令：
+
+```sh
+node --env-file=.env scripts/social-agent.mjs pause
+node --env-file=.env scripts/social-agent.mjs resume
+node --env-file=.env scripts/social-agent.mjs skip <post-id> <facebook|threads>
+node --env-file=.env scripts/social-agent.mjs reschedule <post-id> YYYY-MM-DD HH:mm [facebook|threads]
+node --env-file=.env scripts/social-agent.mjs reconcile [post-id] [facebook|threads]
+node --env-file=.env scripts/social-agent.mjs retry <post-id> <facebook|threads> --confirm-not-published
+node --env-file=.env scripts/social-agent.mjs history
+```
+
+`reconcile` 會讀取 Meta 最近貼文並以文案及時間比對不確定結果；找到唯一項目才更新遠端 ID／網址。零筆或多筆都不會自動重發。只有人工到 Meta 確認未發布後，才可用 `retry ... --confirm-not-published` 把該平台任務重設為 pending。狀態資料、override、同步快取、圖片和加密的 refresh token 都放在 `.crew-social-agent/`，此目錄已忽略且採本機權限保護。以固定目錄執行，避免刪除狀態而失去防重紀錄。
+
+## Termux 常駐與開機恢復
+
+先保持 `.env` 的 `SOCIAL_AGENT_MODE=dry_run`，確認 `status`、Queue、圖片與排程都正確。需要正式自動發布時，還必須在 GitHub Queue 對每篇逐一設 `mode=live` 並由授權者明確設定 `publish_permitted=true`；不要把測試稿升級。
+
+安裝 PM2 並建立 daemon：
+
+```sh
+npm install --global pm2
+mkdir -p .crew-social-agent/logs
+pm2 start ecosystem.config.cjs
+pm2 save
+pm2 status
+```
+
+若使用 Termux:Boot，在 `~/.termux/boot/` 建立啟動腳本：
+
+```sh
+#!/data/data/com.termux/files/usr/bin/sh
+cd /data/data/com.termux/files/home/crew-social-agent || exit 1
+termux-wake-lock
+pm2 resurrect
+```
+
+確保 Termux:Boot 已安裝並允許 Android 背景執行。停止服務：`pm2 stop crew-social-agent`；恢復：`pm2 restart crew-social-agent`。沒有 PM2 時可前景執行 `npm run agent:daemon`，但終端關閉或系統回收程序後不會自動重啟。
+
+## 本地狀態與錯誤處理
+
+- 每個 `(post.id, network)` 有獨立持久紀錄；原子建立單一 publisher lock，避免同一工作目錄的多個程序併發發布。
+- 發文呼叫前先落盤 `sending`。程序中斷或 API 結果不明會進入 `needs_reconciliation`，不自動重試。
+- FB 成功、Threads 失敗時只處理 Threads 的結果；Facebook 不會重發。
+- Token 缺少、過期、權限不足、rate limit、排程過期、圖片不合格會保留清楚的狀態與原因。
+- Agent 會保存遠端貼文 ID、可取得的 permalink 與發布時間；若 Meta 回傳成功但讀不到 permalink，仍保存已發布 ID並標註 `PUBLISHED_URL_LOOKUP_UNAVAILABLE`，避免重發。
+- Meta API 未提供跨本機與平台的交易式 exactly-once 保證；本地 outbox journal 對可恢復的任務採 fail-closed，結果不明一律人工核對。
+
+## 其他既有 CLI
+
+`scripts/social.mjs` 保留單篇手動發文、讀文與回覆工具。它和 Queue Agent 共用 `.crew-social/attempts`，適合人工操作；定時 Queue publisher 使用 `.crew-social-agent/` 狀態。
 
 ## 測試
 
-    npm test
-
-測試使用 mock Meta API，不會發出真實貼文。尚未完成真實 Meta OAuth 授權、正式貼文或真實留言的端到端驗收。
-
-## 清理舊架構
-
-先前的 Cloudflare Worker / D1 / Web UI / HTTP MCP 原型已從程式庫移除。**刪除 GitHub 程式碼不會自動刪除 Cloudflare 帳號裡已建立的 Worker、D1 資源或 Secrets。** 若曾部署，需在 Cloudflare Dashboard 另行確認並移除；本專案不會自動操作你的雲端資源。
-
-## 既有 GitHub 佇列與本地 Agent 交接
-
-本 repo 保留已建立的 content/queue/ 和 scripts/check-social-queue.mjs。它們是 **草稿及圖片傳輸驗證**，不是發布服務，也不會自己呼叫 Meta。
-
-    node scripts/check-social-queue.mjs
-
-檢查後的檔案在 .local-social-outbox/。目前佇列樣本是 mode=dry_run、publish_permitted=false，**絕不可發布**。僅在你的本地 Agent 確認 mode=live 且 publish_permitted=true、使用可公開存取的正式高解析圖片 URL、整理為本頁上面的 publish JSON 後，才可以透過 --execute 實際發布。
-
-佇列 manifest 的每平台 requestId 是獨立的；本地 CLI 要求同一份雙平台發布 payload 使用單一固定 requestId，再自行以平台作防重鍵。不要直接將 manifest 當作 publish payload，避免失去 dry-run 保護。詳見 content/queue/README.md。
+`npm test` 使用本機檔案和 mock API，不會建立真實 Meta 貼文。真實發布仍需 Meta App 權限、Facebook Page／Threads token、公開圖片 URL，以及逐篇明確開啟的 live Queue。

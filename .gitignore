@@ -5,6 +5,7 @@ node_modules/
 .DS_Store
 coverage/
 .crew-social/
+.crew-social-agent/
 .local-social-outbox/
 post.json
 reply.json

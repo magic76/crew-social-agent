@@ -7,7 +7,10 @@
   "scripts": {
     "test": "node --test tests/*.test.js",
     "social": "node scripts/social.mjs",
-    "queue:check": "node scripts/check-social-queue.mjs"
+    "queue:check": "node scripts/check-social-queue.mjs",
+    "agent": "node scripts/social-agent.mjs",
+    "agent:once": "node scripts/social-agent.mjs run-once",
+    "agent:daemon": "node scripts/social-agent.mjs daemon"
   },
   "engines": {
     "node": ">=22"
