@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261030-android-studio-agents",
+  "created_date": "2026-10-30",
+  "title": "Android Studio 整合外部 AI Agent",
+  "category": "ai-news",
+  "status": "ready_for_local_agent",
+  "mode": "dry_run",
+  "networks": [
+    "threads",
+    "facebook"
+  ],
+  "source": {
+    "publisher": "Android Developers",
+    "published_date": "2026-10-28",
+    "url": "https://developer.android.com/blog/posts/ai-agents-android-studio-integration"
+  },
+  "image": {
+    "format": "webp",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-10-30-android-studio-agent.webp.base64",
+    "width": 256,
+    "height": 256,
+    "sha256": "91bfe05f89b2dbb98a125f09bc9e8ec2e39562874128c1e5e48e2b0af31abda8",
+    "production_note": "Small 256px transport-test asset. For real publication, replace with the 1254px original ChatGPT-provided image or a 1080px rendition.",
+    "alt": "電腦前的開發者和兩位可愛 AI 助手，一起檢查 Android 程式與手機模擬器。"
+  },
+  "posts": {
+    "threads": {
+      "text": "Google 最近把 Android Studio 開放給外部 AI Agent 了。\n\nClaude、Codex 都能進去，連模擬器、Build、Logcat 都能用。\n\n以前 AI 寫完 Android 程式，還得我自己打開手機看哪裡炸掉。\n\n現在連抓 Bug 都想自己來了。\n\n嗯.....希望它們先學會不要讓 Loading 轉個沒完。\n\n#AndroidStudio #AIAgent",
+      "requestId": "ab21f9d3-0f7e-4c28-b978-39373530d101"
+    },
+    "facebook": {
+      "text": "Google 最近把 Android Studio 開放給外部 AI Agent 了。\n\nClaude、Codex 都能進去，連模擬器、Build、Logcat 都能用。\n\n以前 AI 寫完 Android 程式，還得我自己打開手機看哪裡炸掉。\n\n現在連抓 Bug 都想自己來了。\n\n嗯.....希望它們先學會不要讓 Loading 轉個沒完。\n\n#AndroidStudio #AIAgent",
+      "requestId": "ab21f9d3-0f7e-4c28-b978-39373530d102"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "One-post transport test only; no live Meta posting. Manual promotion to live mode after agent pipeline verification."
+  }
+}
