@@ -85,12 +85,12 @@ async function threadsApi(token,path,{method='GET',form,fetcher=fetch}={}) {
   if(!res.ok || !json || json.error) throw Error('Threads API request failed (HTTP '+res.status+')');
   return json;
 }
-export async function sendImagePost(env,network,{text,imageUrl},fetcher=fetch) {
+export async function sendImagePost(env,network,{text,imageUrl,altText},fetcher=fetch) {
   if(network==='facebook') return sendPost(env,'facebook',{text,imageUrl},fetcher);
   if(network!=='threads') return fail('Invalid network');
   const token=env.THREADS_ACCESS_TOKEN;
   const container=await threadsApi(token,'me/threads',{method:'POST',
-    form:{media_type:'IMAGE',image_url:imageUrl,text},fetcher});
+    form:{media_type:'IMAGE',image_url:imageUrl,text,...(altText?{alt_text:altText}:{})},fetcher});
   if(!validId(container.id)) return fail('Threads media creation returned no ID');
   let ready=false;
   for(let i=0;i<15;i++){

@@ -21,7 +21,11 @@ async function graph(url, token, method='GET', body=null, fetcher=fetch) {
   catch { throw new UpstreamError(502, 'Invalid Meta response'); }
   if (!response.ok || parsed?.error) {
     // Never include raw remote messages: they can contain identifiers or private data.
-    throw new UpstreamError(502, `Meta API rejected request (${response.status})`);
+    const code=Number.isInteger(parsed?.error?.code)?`, code ${parsed.error.code}`:'';
+    const error=new UpstreamError(response.status, `Meta API rejected request (HTTP ${response.status}${code})`);
+    error.metaCode=Number.isInteger(parsed?.error?.code)?parsed.error.code:null;
+    error.httpStatus=response.status;
+    throw error;
   }
   return parsed;
 }
@@ -31,7 +35,9 @@ const threadUrl = (path, params={}) => {
   return url.toString();
 };
 const facebookUrl = (path, params={}) => {
-  const url = new URL(`https://graph.facebook.com/v24.0/${path}`);
+  const version=process.env.META_GRAPH_API_VERSION||'v26.0';
+  if(!/^v\d+\.\d+$/.test(version))throw new UpstreamError(500,'Invalid META_GRAPH_API_VERSION');
+  const url = new URL(`https://graph.facebook.com/${version}/${path}`);
   Object.entries(params).forEach(([k,v])=>url.searchParams.set(k,String(v)));
   return url.toString();
 };
@@ -43,6 +49,19 @@ export function available(env) {
     facebook: Boolean(env.FACEBOOK_PAGE_TOKEN && idOK(env.FACEBOOK_PAGE_ID))
   };
 }
+export async function refreshThreadsToken(accessToken,fetcher=fetch){
+  if(typeof accessToken!=='string'||!accessToken)throw new UpstreamError(400,'Threads token is not configured');
+  const url=new URL('https://graph.threads.net/refresh_access_token');
+  url.searchParams.set('grant_type','th_refresh_token');
+  url.searchParams.set('access_token',accessToken);
+  let response;
+  try{response=await fetcher(url.toString(),{method:'GET',headers:{Accept:'application/json'},redirect:'error',signal:AbortSignal.timeout(15000)});}
+  catch{throw new UpstreamError(502,'Threads token refresh failed or timed out');}
+  const json=await response.json().catch(()=>null);
+  if(!response.ok||!json?.access_token||!Number.isFinite(Number(json.expires_in))||Number(json.expires_in)<=0)
+    throw new UpstreamError(response.status||502,`Threads token refresh failed (HTTP ${response.status||502})`);
+  return {accessToken:json.access_token,expiresIn:Number(json.expires_in)};
+}
 export async function listPosts(env, network, fetcher=fetch) {
   if (network === 'threads') {
     const res=await graph(threadUrl('me/threads',{fields:'id,text,permalink,timestamp',limit:30}),env.THREADS_ACCESS_TOKEN,'GET',null,fetcher);
@@ -53,6 +72,10 @@ export async function listPosts(env, network, fetcher=fetch) {
     return collect(res).filter(x=>idOK(x.id)).map(x=>({id:x.id,text:x.message||'',url:x.permalink_url||'',timestamp:x.created_time||'',network}));
   }
   throw new UpstreamError(400,'Unsupported network');
+}
+export async function getPublishedPost(env,network,postId,fetcher=fetch){
+  const posts=await listPosts(env,network,fetcher);
+  return posts.find(post=>post.id===postId)||null;
 }
 export async function listComments(env,network,postId,fetcher=fetch) {
   if (!idOK(postId)) throw new UpstreamError(400,'Invalid post ID');

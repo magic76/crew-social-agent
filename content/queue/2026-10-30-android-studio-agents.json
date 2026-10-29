@@ -6,6 +6,11 @@
   "category": "ai-news",
   "status": "ready_for_local_agent",
   "mode": "dry_run",
+  "schedule": {
+    "date": "2026-10-30",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
   "networks": [
     "threads",
     "facebook"
