@@ -71,7 +71,7 @@ export async function sendReply(env,network,commentId,text,fetcher=fetch) {
   if(!idOK(commentId))throw new UpstreamError(400,'Invalid comment ID');
   if(network==='threads'){
     // Two-step publication. If creation succeeded but publication is ambiguous,
-    // the caller leaves its D1 lock in needs_reconciliation state.
+    // the local journal must retain a lock in needs_reconciliation state.
     const container=await graph(threadUrl('me/threads'),env.THREADS_ACCESS_TOKEN,'POST',
       {media_type:'TEXT',reply_to_id:commentId,text},fetcher);
     if(!idOK(container.id))throw new UpstreamError(502,'Threads returned no creation ID');

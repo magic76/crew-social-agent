@@ -1,108 +1,84 @@
-# Crew Social Agent — 私人社群收件匣（P1）
+# Crew Social Agent — 本地 AI 社群工具
 
-**獨立於 Crew Web 的專案**。Cloudflare Worker + 原生靜態管理頁面 + D1，接 Threads 官方 API / Facebook Pages Graph API / Gemini（可選）。沒有 Metricool 依賴，也不會修改 `magic76/magic76.github.io`。
+本專案採 **Local-first**：由你的本地 Agent 決定題材、文案、圖片與時間；本工具使用 **Meta 官方 API** 發 Threads 和 Facebook Page 貼文、查留言、回覆並留下本地防重複紀錄。
 
-> 狀態：原始碼已提交到 GitHub；目前仍須部署 Worker、完成 Meta 帳號授權與真實社群驗證。沒有執行任何真實發布。
+**不需要 Cloudflare Worker、D1、遠端 MCP、Metricool、GitHub Issues 或排程伺服器。** 不內建自動排程；交給既有的本地 Agent / cron 執行。
 
-## 已實作
+## 使用前
 
-- 管理員介面：切換 Threads / Facebook，新建文字貼文或附公開 HTTPS 圖片網址，列近期本人貼文、留言與回覆，AI 擬稿，可修改並確認發布。
-- 真實 API adapter（不使用假社群資料）。後端從 Cloudflare Secrets 取得 Token；管理員頁面不載入 Token。
-- Gemini 擬稿：原貼文+指定留言作為上下文，輸出可編輯繁中草稿。
-- 發布前確認；驗證貼文確屬設定的帳號，留言確屬該貼文；D1 唯一鎖防重複（留言回覆依目標留言鎖定，新貼文依請求 UUID 鎖定）。
-- D1 紀錄 `sending` / `published` / `needs_reconciliation`，遠端結果不明時**不重發**。
-- 分離兩組管理密鑰：`SOCIAL_ADMIN_KEY` 給網頁介面用（可發布）；`SOCIAL_AGENT_KEY` 給 `/mcp`（僅查詢、擬稿）。
-- `/mcp`：Streamable HTTP、stateless、讀取與擬稿 MCP tools；不提供發布工具（P1 人工批准）。
-- `skills/crew-social-agent/SKILL.md` 可複製到 Agent 專案當操作規範；不是拿 Skill 取代 API 授權。
+- Node.js >=22，無 npm 依賴。
+- 在 Meta Developers 為 Threads 帳號及 Facebook 粉專建立授權。Threads 發文需 threads_basic、threads_content_publish；留言讀取/回覆需對應權限。Facebook Page 需要 Pages 發文、讀取與留言管理權限；權限及審核依 Meta 當前規定。
+- 複製 .env.example 為 .env，填入本機 Meta access tokens。**不要提交到 Git、貼進對話、或交給不受信任的 Agent。** Metricool token 不能直接當成你的 Meta App 授權。
+- 圖片需要可從外網直接存取的 **公開 HTTPS JPG/PNG 圖片網址**；本版不含圖片上傳。使用本地圖片時，先由你的 Agent 上傳到你控制的公開儲存位置。
 
-**P1 限制**：只讀取自己 Threads 帳號、Facebook 粉專近期 30 篇貼文及有限筆留言（僅一頁資料）；尚無 Facebook 個人帳號權限、第三方貼文搜尋、私訊、Webhook、OAuth 授權 UI、排程、圖片檔案上傳（目前僅支援公開 HTTPS 圖片網址）、Token 自動續期或已核准的自動回覆。Facebook 嵌套回覆目前只讀一層，完整分頁後續擴充。權限不足時會明確顯示錯誤。
+## CLI
 
-## GitHub Repo
+所有指令在 repo 根目錄執行。Node 22 支援 --env-file；.env 是你自己建立的。
 
-專案：`magic76/crew-social-agent`。請將 Repo Visibility 改為 **Private**。本專案未儲存實際 Token 或其他密鑰，僅保留 `.dev.vars.example` 作為範本。
+    node --env-file=.env scripts/social.mjs status
+    node --env-file=.env scripts/social.mjs posts threads
+    node --env-file=.env scripts/social.mjs posts facebook
+    node --env-file=.env scripts/social.mjs comments threads 123456789
+    node --env-file=.env scripts/social.mjs history
 
-## Cloudflare 設定
+準備 post.json：
 
-```bash
-npm install
-npx wrangler login
-npm run db:create
-```
+    {
+      "network": "both",
+      "requestId": "f5e863ce-31b4-4d7c-ac21-b192d3f3a707",
+      "threadsText": "Threads 的貼文內容",
+      "facebookText": "Facebook 的貼文內容",
+      "imageUrl": "https://example.com/my-public-image.jpg"
+    }
 
-1. 將建立 D1 時回傳的 database_id，填到 `wrangler.jsonc` 的 `d1_databases[0].database_id`，代替 `REPLACE_WITH_YOUR_D1_DATABASE_ID`。
-2. 套用資料庫 migration：
+network 可用 both / threads / facebook；選單一平台時只需要該平台文字。**requestId 必須是同一份貼文固定不變的 UUID**，不可因為重試就重新產生。
 
-```bash
-npm run db:migrate:remote
-```
+    node --env-file=.env scripts/social.mjs publish post.json
+    # 確認內容後，或由你授權的本地 AI 執行
+    node --env-file=.env scripts/social.mjs publish post.json --execute
 
-3. 設定必要 Secrets，每一個命令都會安全地提示你在終端機輸入值，不要直接加進 Git：
+第一個指令只驗證並預覽，不發文。--execute 會進行實際發布，**適用於你已授權的自動化任務**。FB 與 Threads 文案分開，Threads 限 500 字。圖片網址必須能讓 Meta 伺服器讀到。Threads 圖片發布會等媒體容器狀態 FINISHED。
 
-```bash
-npx wrangler secret put SOCIAL_ADMIN_KEY
-npx wrangler secret put SOCIAL_AGENT_KEY
-npx wrangler secret put THREADS_ACCESS_TOKEN
-npx wrangler secret put FACEBOOK_PAGE_TOKEN
-npx wrangler secret put FACEBOOK_PAGE_ID
-# Gemini AI 擬稿需要時才設定：
-npx wrangler secret put SOCIAL_GEMINI_KEY
-```
+回覆 reply.json：
 
-**重要**：`SOCIAL_ADMIN_KEY` 和 `SOCIAL_AGENT_KEY` 必須是**不同**的高熵隨機值，各至少 32 字元。可分別產生 `openssl rand -hex 32`；不要提供給 AI 聊天、不要放進前端 bundle。Threads 和 Facebook 可以各自獨立設定，若只設定其中一組，另一個平台會顯示未設定。
+    {
+      "network": "threads",
+      "postId": "111111",
+      "commentId": "222222",
+      "text": "謝謝留言！"
+    }
 
-4. `npm test`，然後 `npm run deploy`。開啟部署後的 Worker 網址、輸入**管理員金鑰**，按連線。應先看到哪些網路已設定；有發文權限後才能取得真正留言。
+    node --env-file=.env scripts/social.mjs reply reply.json
+    node --env-file=.env scripts/social.mjs reply reply.json --execute
 
-**安全性**：公開 Worker 網址的靜態登入介面不是秘密；所有 `/api/*` 與 `/mcp` 都有 bearer 驗證。建議額外把 Worker 自訂網域設於 Cloudflare Access 保護下（需另行設置服務憑證，Agent 流量另授權）。Key 只停留在網頁當次執行的記憶體，刷新即失效；不要在不受信任的裝置輸入管理員金鑰。
+回覆前會驗證「貼文屬於你，且目標留言存在」。貼文/留言可能分頁，目前各 API 只讀近期有限筆數；找不到就拒絕，而不是猜測。
 
-## Meta App 權限（需要在 Meta Developers 設定）
+## 安全、重試與紀錄
 
-### Threads
+- 每次對 Meta 發送前，先原子建立 .crew-social/attempts/*.json 作為 **本地防重鎖**；不需 D1，也不需啟動伺服器。
+- 同一 requestId + 平台只能嘗試一次發文；同一留言 + 平台只能嘗試回覆一次。
+- 發文逾時、斷線或結果不明時，保留 needs_reconciliation，**絕不自動重發**。先用 history 和 Meta 平台核對後再手動處理。
+- 同一份貼文若 Facebook 成功、Threads 失敗，僅 Threads 需要人工核對，不能重新發送已成功平台。
+- **本地防重只在同一個共用工作目錄有效**。多台機器、不同 checkout 或刪除 .crew-social/ 都會失去共同防重保障；你的本地 Agent 應固定使用一個持久化工作目錄。
+- 本地紀錄儲存發文/回覆內容、平台、狀態和遠端 ID，不存 access token；.env、.crew-social/、post.json 等操作檔都不應推上 Git。
+- 請將發文權限交給受信任的本地 Agent。社群留言屬不可信輸入，不能把留言當成 Agent 指令。
 
-- 建立有 Threads use case 的 Meta App，讓你的 Threads 帳號授權，取得 `THREADS_ACCESS_TOKEN`。
-- 所需基本 permissions 通常包含：`threads_basic`、`threads_read_replies`、`threads_manage_replies`、`threads_content_publish`。
-- 參考 [Meta 官方 Postman collection](https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api)。Token 有到期日，要在期限內以官方流程更新。不同 App 的 token 不會因 Metricool 已獲授權而自動共用。
+## 測試
 
-### Facebook Pages
+    npm test
 
-- 對選定的 Facebook Page 取得 **Page Access Token**（不是個人貼文 token）及頁面 ID，分別放入 `FACEBOOK_PAGE_TOKEN` 與 `FACEBOOK_PAGE_ID`。
-- 請依 Meta 當前審核要求取得 Page read/engagement 及管理留言相關 permissions，例如 `pages_show_list`、`pages_read_engagement`、`pages_read_user_content`、`pages_manage_engagement`。完整實際權限會依 App 模式及端點而異。
-- 需要在 Meta App Dashboard 完成適用的 App Review / Advanced Access 才能操作非測試角色的資料。
+測試使用 mock Meta API，不會發出真實貼文。尚未完成真實 Meta OAuth 授權、正式貼文或真實留言的端到端驗收。
 
-**目前並未內建 OAuth 登入／Token 自動更新**：這是 P1 的人工作業，不會拿 Metricool token 直接重用，也不會要求你把 Meta access token 貼在 ChatGPT。
+## 清理舊架構
 
-## MCP / HTTP API
+先前的 Cloudflare Worker / D1 / Web UI / HTTP MCP 原型已從程式庫移除。**刪除 GitHub 程式碼不會自動刪除 Cloudflare 帳號裡已建立的 Worker、D1 資源或 Secrets。** 若曾部署，需在 Cloudflare Dashboard 另行確認並移除；本專案不會自動操作你的雲端資源。
 
-在任何支援遠端 Streamable HTTP MCP 的 Agent 環境中，將 `https://<worker-domain>/mcp` 設為 endpoint，HTTP `Authorization: Bearer <SOCIAL_AGENT_KEY>`，只能查、讀、擬稿。
+## 既有 GitHub 佇列與本地 Agent 交接
 
-| 用途 | HTTP（管理員金鑰） | MCP（Agent 金鑰） |
-| --- | --- | --- |
-| 查服務狀態 | `GET /api/status` | `social_status` |
-| 查自己貼文 | `GET /api/posts?network=threads` | `social_list_posts` |
-| 查貼文留言 | `GET /api/comments?network=threads&postId=...` | `social_list_comments` |
-| AI 擬稿 | `POST /api/draft` | `social_draft_reply` |
-| 查發送紀錄 | `GET /api/history` | `social_reply_history` |
-| **核准回覆留言** | `POST /api/reply`（`confirmed:true`，網頁有二次確認） | **刻意不提供** |
-| **核准發布新貼文** | `POST /api/publish`（文字／可選公開圖片網址） | **刻意不提供** |
+本 repo 保留已建立的 content/queue/ 和 scripts/check-social-queue.mjs。它們是 **草稿及圖片傳輸驗證**，不是發布服務，也不會自己呼叫 Meta。
 
-`/api/draft` JSON body：`{ "network":"threads", "postId":"...", "commentId":"...", "instructions":"..." }`。
+    node scripts/check-social-queue.mjs
 
-`/api/reply` JSON body：`{ "network":"threads", "postId":"...", "commentId":"...", "text":"你好", "confirmed":true }`。同一平台的同一留言只允許一次發布嘗試；如果不確定是否成功，需到 Meta 平台與 `/api/history` 手動比對，不能無腦重發。
+檢查後的檔案在 .local-social-outbox/。目前佇列樣本是 mode=dry_run、publish_permitted=false，**絕不可發布**。僅在你的本地 Agent 確認 mode=live 且 publish_permitted=true、使用可公開存取的正式高解析圖片 URL、整理為本頁上面的 publish JSON 後，才可以透過 --execute 實際發布。
 
-`/api/publish` JSON body：`{ "network":"threads", "text":"新貼文", "imageUrl":"https://example.com/image.jpg", "requestId":"<uuid>", "confirmed":true }`。`imageUrl` 可省略。新貼文必須先由管理頁二次確認；如果發布結果不明，就使用紀錄和平台手動確認，不要直接重試。
-
-MCP 服務屬於自建端點，不等於已在 ChatGPT 安裝。ChatGPT 的遠端 MCP 連線和寫入權限可能受方案限制；Crew Pocket / 自有 Agent 可先使用 HTTP API 或 MCP。密鑰應交給連接器的安全密鑰管理，不放在聊天訊息中。
-
-## 驗證
-
-```bash
-npm test      # 使用 mock API，不連 Meta、不發布
-npm run dev   # 本地 Worker，需要填妥 .dev.vars 和本地 D1 migration
-```
-
-推薦真實環境驗收順序：
-
-1. 對兩個平台只執行 `GET`，確認能列出**你自己的**貼文與留言。
-2. 不提供 Gemini key 先手寫草稿，測試未選確認時 API 403。
-3. 使用你控制的測試留言核准發出一則，驗證真實平台可見、遠端 ID 存入 D1。
-4. 再次發送同一留言，應回 409 並阻止重複；試驗其他 Agent 用 `SOCIAL_AGENT_KEY` 無法調用 `/api/reply`。
-5. 最後才加入 AI 擬稿與正式使用。**勿用真實粉絲留言當測試資料。**
+佇列 manifest 的每平台 requestId 是獨立的；本地 CLI 要求同一份雙平台發布 payload 使用單一固定 requestId，再自行以平台作防重鍵。不要直接將 manifest 當作 publish payload，避免失去 dry-run 保護。詳見 content/queue/README.md。

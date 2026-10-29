@@ -20,7 +20,7 @@ node scripts/check-social-queue.mjs
 
 1. 只處理 `status=ready_for_local_agent`，且 `mode=live`、`safety.publish_permitted=true` 的項目。**此範例是 `mode=dry_run`、`publish_permitted=false`，不得發布。**
 2. 發布每個平台前，使用 `(id, network)` 當成不可重用的去重鍵；維持 `pending -> sending -> published/needs_reconciliation` 的本地持久狀態。不能因 polling、重開機或 HTTP timeout 就重新發。
-3. 送圖前必須使用通過 checksum 的高解析 JPG/PNG/WebP，並上傳至 Meta 可取得的公開 HTTPS 圖片 URL；不要直接把 GitHub 的 `.base64` 當作圖片網址。Facebook/Threads 相關權限、帳號對應需另行完成；本 repo P1 原有的 `/api/publish` 仍要求 `SOCIAL_ADMIN_KEY` 與 `confirmed:true`，沒有建立無審核的自動發布 API。
+3. 送圖前必須使用通過 checksum 的高解析 JPG/PNG/WebP，並上傳至 Meta 可取得的公開 HTTPS 圖片 URL；不要直接把 GitHub 的 `.base64` 當作圖片網址。Facebook/Threads 相關權限、帳號對應需另行完成；本 repo 已改為本地 CLI，不再提供 Worker `/api/publish`。正式發布須由受信任的本地 Agent 檢查 `mode=live` 與 `publish_permitted=true` 後，轉成 `scripts/social.mjs publish` 的輸入格式並明確使用 `--execute`。
 4. 一則文章的 FB 與 Threads 狀態分開管理。結果不明時進入 `needs_reconciliation`，先讀取平台實際紀錄並人工查核，嚴禁直接重發。
 5. 新聞先保存官方原始來源與發布日期，不憑空補模型數據，保持 Crew Lab SI 原有短句、工程師乾幽默；不是每篇都推 Crew。
 
