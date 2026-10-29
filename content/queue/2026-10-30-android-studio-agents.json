@@ -5,7 +5,7 @@
   "title": "Android Studio 整合外部 AI Agent",
   "category": "ai-news",
   "status": "ready_for_local_agent",
-  "mode": "dry_run",
+  "mode": "live",
   "schedule": {
     "date": "2026-10-30",
     "time": "12:00",
@@ -21,14 +21,15 @@
     "url": "https://developer.android.com/blog/posts/ai-agents-android-studio-integration"
   },
   "image": {
-    "format": "webp",
+    "format": "jpeg",
     "storage": "base64-utf8",
-    "path": "content/queue/assets/2026-10-30-android-studio-agent.webp.base64",
-    "width": 256,
-    "height": 256,
-    "sha256": "91bfe05f89b2dbb98a125f09bc9e8ec2e39562874128c1e5e48e2b0af31abda8",
-    "production_note": "Small 256px transport-test asset. For real publication, replace with the 1254px original ChatGPT-provided image or a 1080px rendition.",
-    "alt": "電腦前的開發者和兩位可愛 AI 助手，一起檢查 Android 程式與手機模擬器。"
+    "path": "content/queue/assets/2026-10-30-android-studio-agent.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "94e4d262fb0c7d099cb6413c84f098e4fccbf42586b033cf751b826451654e57",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-30-android-studio-agent.jpg",
+    "alt": "電腦前的開發者和兩位可愛 AI 助手，一起檢查 Android 程式與手機模擬器。",
+    "original_webp_path": "content/queue/assets/2026-10-30-android-studio-agent.webp"
   },
   "posts": {
     "threads": {
@@ -41,7 +42,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "One-post transport test only; no live Meta posting. Manual promotion to live mode after agent pipeline verification."
+    "publish_permitted": true,
+    "reason": "Owner explicitly approved this Threads/Facebook single-post release on 2026-10-30. Publish only at the scheduled time; keep separate idempotency per platform."
   }
 }
