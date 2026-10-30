@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "crew-video-handoff-2026-10-30-permissions-101",
+  "status": "draft_handoff_only",
+  "publish_permitted": false,
+  "created_date": "2026-10-30",
+  "title": "最小權限原則：AI Agent 權限安全",
+  "media": {
+    "type": "video/mp4",
+    "path": "content/video-handoffs/assets/2026-10-30-permissions-101-gemini.mp4",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/2026-10-30-permissions-101-gemini.mp4",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration_seconds": 24,
+    "narration": "Gemini Traditional Chinese WAV, 18.6 seconds; subtitles are burned in."
+  },
+  "posts": {
+    "facebook": "最近在弄 Crew Video Lab，拿「最小權限原則」試做了一支科普短片。\n\nAI Agent 可以幫忙做很多事，但權限如果一次開太大，出事時影響範圍也會跟著變大。\n\n所以能只給它完成任務需要的權限，就先不要把整個工具箱都交出去。\n\n這支有用 Gemini 中文配音，從原始動畫、字幕到 MP4 都跑了一遍。\n\n嗯……以前是怕 AI 不會做事，現在還要記得不要讓它什麼都能做。",
+    "threads": "最近拿「最小權限原則」試做了一支科普短片。\n\nAI Agent 權限開太大，可能一個入口就連到更多系統。能只給任務需要的，就先別把整個工具箱交出去。\n\n這支用 Gemini 中文配音，從分鏡到 MP4 實際跑了一遍。\n\n嗯……現在除了教 AI 做事，還要記得管好它能做什麼。"
+  },
+  "local_agent_note": "這是交接素材，不在現有 Social Queue 中，不能直接由目前 image-only publisher 發布。使用者會另外要求本地 Agent 發文；收到要求後再以平台原生影片上傳流程發佈 FB 與 Threads，保留影片附件，不要降級為純文字。"
+}
