@@ -14,17 +14,17 @@ const pad=n=>String(n).padStart(2,'0');
 function timecode(t){const h=Math.floor(t/3600),m=Math.floor(t/60)%60,s=t%60;return `${pad(h)}:${pad(m)}:${pad(Math.floor(s))},${String(Math.round((s%1)*1000)).padStart(3,'0')}`;}
 function probe(file){const r=spawnSync('ffprobe',['-v','error','-show_entries','format=duration,size:stream=codec_type,width,height','-of','json',file],{encoding:'utf8'});if(r.status!==0)fail('ffprobe failed for '+basename(file));return JSON.parse(r.stdout);}
 function run(name,args){const p=spawnSync(name,args,{stdio:'inherit'});if(p.error||p.status!==0)fail(name+' failed');}
-function opts(argv){const o={project:argv[0]||'video-lab/examples/permissions-101',provider:'gemini',voice:'Kore',model:'gemini-3.8-flash-tts',out:'',video:'',offset:0.45};for(const arg of argv.slice(1)){const m=/^--([a-z-]+)=(.*)$/.exec(arg);if(!m||!(m[1] in o))fail('Unrecognized argument '+arg);o[m[1]]=m[1]==='offset'?Number(m[2]):m[2];}return o;}
-async function geminiWav(text,config){
- const apiKey=process.env.GEMINI_API_KEY;
+function opts(argv){const o={project:argv[0]||'video-lab/examples/permissions-101',provider:'gemini',voice:'Kore',model:'gemini-3.8-flash-tts',out:'',video:'',offset:0.45,style:'Natural Taiwan Mandarin (zh-TW). Warm, clear, engaging science narration, conversational rhythm, normal pace and gentle pauses at punctuation. Keep a consistent narrator voice and read the supplied Traditional Chinese text verbatim.'};for(const arg of argv.slice(1)){const m=/^--([a-z-]+)=(.*)$/.exec(arg);if(!m||!(m[1] in o))fail('Unrecognized argument '+arg);o[m[1]]=m[1]==='offset'?Number(m[2]):m[2];}return o;}
+export async function geminiWav(text,config,fetcher=fetch){
+ const apiKey=config.apiKey||process.env.GEMINI_API_KEY;
  if(!apiKey)fail('GEMINI_API_KEY is missing; do not put it in GitHub or source files');
  const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),120000);
  let res;try{
-  res=await fetch('https://generativelanguage.googleapis.com/v1beta/interactions',{
+  res=await fetcher('https://generativelanguage.googleapis.com/v1beta/interactions',{
    method:'POST',headers:{'content-type':'application/json','x-goog-api-key':apiKey},signal:controller.signal,
    body:JSON.stringify({model:config.model,input:[{type:'user_input',content:[{
-    type:'text',text,annotations:[{type:'speech_metadata',style:'Calm, warm educational narration. Speak in natural Taiwan Mandarin (zh-TW), clearly and a little briskly, without adding any words.'}]
-   }]}],response_format:{type:'audio'},generation_config:{speech_config:[{voice:config.voice,language:'zh-TW'}]}})
+    type:'text',text,annotations:[{type:'speech_metadata',style:config.style}]
+   }]}],response_format:{type:'audio'},generation_config:{speech_config:[{voice:config.voice}]}})
   });
  }finally{clearTimeout(timeout)}
  if(!res.ok)fail('Gemini TTS request failed HTTP '+res.status+' (response body suppressed to avoid leaking credentials)');
@@ -37,7 +37,7 @@ async function geminiWav(text,config){
  return data;
 }
 async function main(){
- const args=process.argv.slice(2);if(args.includes('--help')){console.log('node scripts/video-voice.mjs PROJECT [--provider=gemini|espeak] [--voice=Kore] [--video=FILE] [--out=FILE]');return;}
+ const args=process.argv.slice(2);if(args.includes('--help')){console.log('node scripts/video-voice.mjs PROJECT [--provider=gemini|espeak] [--voice=Kore] [--video=FILE] [--out=FILE] [--style=TEXT]');return;}
  const o=opts(args),project=resolve(o.project),story=JSON.parse(await readFile(join(project,'story.json'),'utf8'));
  const video=resolve(o.video||join(project,'original.mp4'));
  const output=resolve(o.out||join(project,'narrated.mp4'));
@@ -53,6 +53,7 @@ async function main(){
   if(o.provider==='gemini')await writeFile(path,await geminiWav(text,o));
   else run('espeak',['-v','zh','-s','160','-p','52','-a','145','-w',path,text]);
   const len=Number(probe(path).format.duration),start=Number(scene.start)+o.offset,remaining=Number(scene.duration)-o.offset-.12;
+  if(!Number.isFinite(len)||len<0.2)fail('Invalid generated voice duration for '+scene.id);
   if(len>remaining){retime.push({id:scene.id,available:remaining,audioSeconds:len,recommendedSceneDuration:Math.ceil((len+o.offset+.12)*10)/10});}
   else {sounds.push({path,start,len});lines.push(`${i+1}\n${timecode(start)} --> ${timecode(start+len)}\n${text}\n`);}
  }
@@ -60,12 +61,13 @@ async function main(){
  const captions=join(sceneFolder,'narration.srt');await writeFile(captions,lines.join('\n')+'\n');
  const inputs=['-i',video];for(const item of sounds)inputs.push('-i',item.path);inputs.push('-i',captions);
  const filters=[];for(let i=0;i<sounds.length;i++){
-  filters.push(`[${i+1}:a]aresample=48000,adelay=${Math.round(sounds[i].start*1000)}:all=1,volume=1.65[v${i}]`);
+  const fadeEnd=Math.max(0,sounds[i].len-0.05).toFixed(3);
+  filters.push(`[${i+1}:a]aresample=48000,volume=1.0,afade=t=in:st=0:d=0.03,afade=t=out:st=${fadeEnd}:d=0.05,adelay=${Math.round(sounds[i].start*1000)}:all=1[v${i}]`);
  }
  const voiced=sounds.map((_,i)=>`[v${i}]`).join('');
  filters.push(`${voiced}amix=inputs=${sounds.length}:normalize=0:duration=longest[voice]`);
- filters.push(hasOriginalAudio?'[0:a]volume=0.16[bg]':'anullsrc=r=48000:cl=mono,atrim=duration='+duration+'[bg]');
- filters.push('[bg][voice]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.92[a]');
+ filters.push(hasOriginalAudio?'[0:a]volume=0.10[bg]':'anullsrc=r=48000:cl=mono,atrim=duration='+duration+'[bg]');
+ filters.push('[bg][voice]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.90,loudnorm=I=-16:TP=-1.5:LRA=9[a]');
  run('ffmpeg',['-hide_banner','-loglevel','error','-y',...inputs,'-filter_complex',filters.join(';'),'-map','0:v:0','-map','[a]','-map',`${sounds.length+1}:s:0`,'-c:v','copy','-c:a','aac','-b:a','192k','-c:s','mov_text','-metadata:s:s:0','language=zho','-movflags','+faststart','-t',String(duration),output]);
  const metadata=probe(output);if(Math.abs(Number(metadata.format.duration)-duration)>.2||!metadata.streams.some(s=>s.codec_type==='audio'))fail('Invalid rendered narrated MP4');
  console.log(JSON.stringify({status:'rendered',provider:o.provider,output,duration,subtitles:captions,voice:o.voice,sceneCount:sounds.length},null,2));

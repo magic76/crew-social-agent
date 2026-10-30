@@ -69,3 +69,17 @@ node scripts/video-voice.mjs video-lab/examples/permissions-101 --provider=gemin
 
 官方說明：https://ai.google.dev/gemini-api/docs/speech-generation
 
+### 台灣中文 Gemini 配音品質設定（2026-10）
+
+正式配音優先使用 `gemini-3.8-flash-tts`，不要將 eSpeak 測試語音當作可發布音質。現行 `scripts/video-voice.mjs` 使用 Google 官方 `/v1beta/interactions` API，設定 `generation_config.speech_config=[{"voice":"Kore"}]`，透過 `speech_metadata.style` 指定自然台灣華語語調。不要在 `speech_config` 加入未核實的語言欄位，語言與口音由中文台灣旁白內容及風格提示決定。
+
+~~~sh
+node --env-file=.env scripts/video-voice.mjs video-lab/examples/permissions-101 \
+  --provider=gemini --model=gemini-3.8-flash-tts --voice=Kore \
+  --video=/absolute/path/original.mp4 \
+  --out=/absolute/path/gemini-narrated.mp4
+~~~
+
+可加 `--style="Natural Taiwan Mandarin (zh-TW), conversational pace, calm explanatory tone."` 調整語氣。從已有原始 MP4 及 storyboard 產生新語音；若旁白超出分鏡，會輸出 `retime-required.json` 並阻擋截斷。混音已降低背景音量、避免人聲過度放大，並增加每段短淡入淡出。
+
+測試：`node --test tests/video-voice-gemini.test.js` 不需要 API key，只驗證請求契約及模擬 WAV。**真正 Gemini 音質仍需在本機用自己的 Key 實測並試聽；測試通過不代表已產生 Gemini 影片。**

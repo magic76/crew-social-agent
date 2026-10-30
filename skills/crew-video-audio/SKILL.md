@@ -17,3 +17,5 @@ Output: narration audio, cue captions (.srt), provenance/credits and explicit QC
 ## Working CLI (Gemini 3.8 TTS)
 
 Run `node scripts/video-voice.mjs PROJECT --provider=gemini --video=/absolute/path/original.mp4 --out=/absolute/path/narrated.mp4` with local `GEMINI_API_KEY`. The CLI uses the official Interactions API, requests Taiwan Mandarin, measures each generated WAV, fails on overflow with `generated-voice/retime-required.json`, creates SRT cues and muxes AAC audio to the rendered video. Optional `--provider=espeak` is a low-quality offline smoke test only, not a Gemini substitute. Keep API keys local and generated media out of Git. See video-lab/README.md for exact usage. No Gemini calls have been verified in an environment without credentials.
+
+Gemini 3.8 TTS narration: choose a single consistent voice and Taiwan Mandarin `speech_metadata.style`. The pipeline has a mock REST regression test and adds fade-in/out on scene audio, soft background mixing and loudness normalization. Don't claim a real voice-quality test without calling the model with locally configured credentials. See video-lab/README.md.
