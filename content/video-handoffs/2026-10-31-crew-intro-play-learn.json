@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "crew-video-handoff-2026-10-31-crew-intro-play-learn",
+  "status": "ready_for_video_publisher",
+  "publish_permitted": true,
+  "created_date": "2026-10-30",
+  "schedule": {
+    "date": "2026-10-30",
+    "time": "23:35",
+    "timezone": "Asia/Taipei"
+  },
+  "platforms": [
+    "facebook",
+    "threads"
+  ],
+  "title": "Crew 介紹：跟朋友玩遊戲、和老師學外語",
+  "media": {
+    "type": "video/mp4",
+    "path": "content/video-handoffs/assets/2026-10-31-crew-intro-play-learn.mp4",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/2026-10-31-crew-intro-play-learn.mp4",
+    "size_bytes": 2365493,
+    "sha256": "57a69ef9c2c1eda03326a68cc57dd66cea9d696a96b962e38ffb5d343a3b5dc3",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration_seconds": 24.83,
+    "alt_text": "一支直式短片，實際操作 Crew 網站：跟 Crew 朋友玩 1A2B 和五子棋，再挑選老師開始咖啡廳點餐情境課。",
+    "narration": "Gemini Traditional Chinese WAV, 23.84 seconds; subtitles are burned in."
+  },
+  "posts": {
+    "facebook": {
+      "text": "最近幫 Crew 拍了一支介紹短片，這次不放截圖，直接實際操作一遍。\n\n無聊可以找 Crew 朋友玩 1A2B、下五子棋；想練外語，就挑一位老師，從咖啡廳點餐這種日常情境開始練。\n\n旁白是 Crew 自己的 Gemini 配音生成的，從錄影、字幕到 MP4 都實際跑了一遍。\n\n嗯……五子棋我還沒贏過 Noah，英文倒是先學會點燕麥奶拿鐵了。\n\nhttps://www.3sssi.com",
+      "requestId": "54ccc623-df4c-407f-aea0-920d67770ac4"
+    },
+    "threads": {
+      "text": "幫 Crew 拍了支介紹短片，直接實際操作一遍。\n\n跟 Crew 朋友玩 1A2B、下五子棋，再挑個老師從咖啡廳點餐開始練外語。旁白是 Crew 自己的 Gemini 配音。\n\n嗯……五子棋還沒贏過 Noah，燕麥奶拿鐵倒是會點了。\n\nhttps://www.3sssi.com",
+      "requestId": "64a7c226-dd03-417e-b8be-ef7c6158f8ca"
+    }
+  },
+  "local_agent_note": "使用者已明確授權此交接稿交由本地 video publisher 立即正式發布。請以 SOCIAL_AGENT_MODE=live 執行平台原生影片發布，保留固定 requestId 與影片附件，不要降級為圖文。若憑證缺漏或公開影片驗證失敗，保持阻擋並回報，不要自行重送。"
+}

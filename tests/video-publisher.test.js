@@ -17,8 +17,9 @@ const env=(mode='live')=>({SOCIAL_AGENT_MODE:mode,SOCIAL_TIMEZONE:'Asia/Taipei',
 async function loadedFixture(stateDir){
   const loaded=await loadLocalVideoHandoffs({repoRoot:root,stateDir,env:env()});
   assert.deepEqual(loaded.errors,[]);
-  assert.equal(loaded.items.length,1);
-  return loaded.items[0];
+  const items=loaded.items.filter(x=>x.entry.id==='crew-video-handoff-2026-10-30-permissions-101');
+  assert.equal(items.length,1);
+  return items[0];
 }
 function approved(item,platforms=item.networks){
   return {...item,networks:platforms,entry:{...item.entry,status:'ready_for_video_publisher',publish_permitted:true,
