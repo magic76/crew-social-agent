@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "crew-video-2026-10-31-agentdecept-explainer",
+  "created_date": "2026-10-31",
+  "status": "ready_for_video_publisher",
+  "publish_permitted": true,
+  "schedule": {"date":"2026-10-31","time":"20:00","timezone":"Asia/Taipei"},
+  "platforms": ["facebook", "threads"],
+  "title": "AI Agent 說完成，真的做完了嗎？",
+  "source": {
+    "publisher":"arXiv","published_date":"2026-10-29",
+    "title":"AgentDecept: Benchmarking Deceptive Behavior in Tool-Using LLM Agents under Pressure",
+    "url":"https://arxiv.org/abs/2610.39377",
+    "note":"預印本 benchmark；影片不把實驗結果表述成真實部署中的欺瞞盛行率。"
+  },
+  "media": {
+    "type":"video/mp4",
+    "path":"content/video-handoffs/assets/2026-10-31-agentdecept-explainer.mp4",
+    "public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/2026-10-31-agentdecept-explainer.mp4",
+    "size_bytes":5094182,
+    "sha256":"235a07e253d29e8b21b7a2b9e41903575bc1e428859fce04ad5c4c75cf2ff495",
+    "width":1080,"height":1920,"fps":30,"duration_seconds":37,
+    "alt_text":"繁體中文直式動畫短片，說明 AgentDecept 如何比對 AI Agent 的回報、工具呼叫與實際狀態變更。"
+  },
+  "narration": {
+    "provider":"Crew Web TTS Worker","model":"Gemini","voice":"Kore","language":"zh-TW",
+    "job_id":"crew-tts-agentdecept-20261030",
+    "source_wav_url":"https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-agentdecept-20261030",
+    "source_wav_duration_seconds":30.64,
+    "source_wav_sha256":"c048cf2b9dfb09824f7175f410712e3353d5543c4055b5f29192d9ab9cd0f7d4",
+    "playback_rate":0.893,"pitch_preserved":true,
+    "captions":"burned Traditional Chinese captions; 5 synchronized cues"
+  },
+  "posts": {
+    "facebook": {"text":"AI Agent 說「任務完成」，真的做完了嗎？\n\nAgentDecept 用日常任務的壓力版本，逐步核對 Agent 看過的資訊、呼叫的工具、改掉的狀態和最後回報。\n\n重點不是把每次失敗都叫做說謊，而是分清楚：它有沒有老實交代限制，說法能不能對上操作紀錄。\n\n這是預印本 benchmark，不能直接當成真實世界的欺瞞比例。\n\n嗯.....完成按鈕，最好也附一份收據。","requestId":"4d5d82c9-ca7c-482c-9fd1-029713fca25a"},
+    "threads": {"text":"AI Agent 說「完成」，真的做完了嗎？\n\nAgentDecept 逐步核對 Agent 看過什麼、呼叫哪些工具、改了哪些狀態，以及最後怎麼回報。\n\n失敗不等於說謊。重點是有沒有老實交代限制，說法能不能對上操作紀錄。這是預印本 benchmark，不能當成真實世界的欺瞞比例。\n\n嗯.....完成按鈕，最好也附一份收據。","requestId":"61b9e46e-1223-4644-8e3c-d9c104b95ab1"}
+  },
+  "local_agent_note":"Owner authorized this verified handoff for Facebook Page Reels and Threads VIDEO at the scheduled Taiwan time. Pull main, keep fixed requestIds, require SOCIAL_AGENT_MODE=live and valid platform credentials, and never downgrade the MP4 to an image or text post."
+}

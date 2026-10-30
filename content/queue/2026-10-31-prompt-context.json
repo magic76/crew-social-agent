@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261031-prompt-context",
+  "created_date": "2026-10-31",
+  "title": "給 AI 上下文的三格寫法",
+  "category": "ai-practical-tip",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {"date":"2026-10-31","time":"12:00","timezone":"Asia/Taipei"},
+  "networks": ["facebook", "threads"],
+  "source": {"publisher":"OpenAI","published_date":"2026-10-29","url":"https://openai.com/index/updated-model-spec/","note":"Practical evergreen interpretation of the Model Spec context and oversight guidance; not presented as a new product feature."},
+  "image": {
+    "format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-10-31-prompt-context.jpg.base64",
+    "width":1254,"height":1254,"sha256":"4a139aadc72340355e5b6ace59da7c8a94d3adaa6a5ce6e56abde6c558e9a174",
+    "public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-prompt-context.jpg",
+    "alt":"人手把目標、資料和限制三種象徵物交給桌前的 AI 助手，最後得到整齊的計畫。",
+    "original_webp_path":"content/queue/assets/2026-10-31-prompt-context.webp"
+  },
+  "posts": {
+    "facebook": {"text":"叫 AI 做事，我現在很常先補三格：\n\n1. 目標：最後要交付什麼。\n2. 現況：手上已經有哪些資料。\n3. 邊界：哪些不能動、哪些要先問。\n\n例如不要只說「幫我改網站」，改成「修手機版導覽；保留桌機版；不要改 API；完成後列出實測尺寸」。\n\n模型沒有突然變聰明，只是少花一半時間猜我到底在想什麼。\n\n嗯.....很多 prompt 技巧，最後都只是人類終於把需求寫清楚。","requestId":"22f0a154-5379-412e-bf8f-b49c02b18c8e"},
+    "threads": {"text":"叫 AI 做事，我現在很常先補三格：\n\n1. 目標：最後交付什麼\n2. 現況：已有哪些資料\n3. 邊界：哪些不能動、哪些要先問\n\n不要只說「幫我改網站」，改成「修手機版導覽；保留桌機版；不要改 API；完成後列出實測尺寸」。\n\n模型沒突然變聰明，只是不用一直猜。\n\n嗯.....很多 prompt 技巧，最後只是需求終於寫清楚。","requestId":"bad01d0f-62da-403f-aa9f-812d5ee76eb2"}
+  },
+  "safety": {"publish_permitted":true,"reason":"Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."}
+}

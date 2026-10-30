@@ -1,0 +1,19 @@
+{
+  "checked_at":"2026-10-31T07:00:00+08:00",
+  "state":"passed",
+  "render_engine":"HyperFrames 0.8.222",
+  "source":"index.html + story.json + real Gemini WAV",
+  "video":{"width":1080,"height":1920,"fps":"30/1","duration_seconds":37,"codec":"h264","pixel_format":"yuv420p"},
+  "audio":{"present":true,"codec":"aac","sample_rate":48000,"channels":2,"mean_volume_db":-17.6,"max_volume_db":-1.5,"source_wav_seconds":30.64,"speech_truncated":false},
+  "captions":{"language":"zh-TW","burned_in":true,"cues":5,"checked_against_script":true},
+  "checks": {
+    "story_validation":"passed",
+    "hyperframes_check":"passed with 6 structural lint warnings and one nonblocking type-floor warning; 0 runtime/layout/motion errors; 48/48 contrast checks passed",
+    "full_ffmpeg_decode":"passed",
+    "visual_samples":[3,18,25,32],
+    "visual_result":"passed; beginning, middle and ending frames contain intended scene graphics and readable Traditional Chinese captions",
+    "audio_samples_seconds":[1,18,32],
+    "audio_result":"passed; non-silent speech signal present in all sampled windows"
+  },
+  "known_limitations":["AgentDecept is a preprint benchmark; the video uses explanatory schematics rather than reconstructed product screens."]
+}

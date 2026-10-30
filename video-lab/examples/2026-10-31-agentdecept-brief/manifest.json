@@ -1,0 +1,11 @@
+{
+  "id":"agentdecept-brief-20261031",
+  "created_at":"2026-10-31T07:00:00+08:00",
+  "duration":37,"width":1080,"height":1920,"fps":30,
+  "format":"MP4 / H.264 / AAC / yuv420p",
+  "sha256":"235a07e253d29e8b21b7a2b9e41903575bc1e428859fce04ad5c4c75cf2ff495",
+  "public_media_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/2026-10-31-agentdecept-explainer.mp4",
+  "platforms":["facebook","threads"],
+  "status":"ready_for_video_publisher",
+  "suggested_caption":"AI Agent 說完成，真的做完了嗎？驗收時，記得看操作收據。"
+}

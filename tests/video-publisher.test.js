@@ -31,10 +31,11 @@ const publicVideoFetcher=bytes=>async(url,options)=>{
   return new Response(bytes,{status:200,headers:{'content-type':'video/mp4','content-length':String(bytes.length)}});
 };
 
-test('MP4 handoff validation reports real file metadata and preserves the draft publication gate',async()=>{
+test('MP4 handoff validation reports real file metadata and enforces the draft publication gate',async()=>{
   const dir=await tmp();
   try{
-    const item=await loadedFixture(dir);
+    const loaded=await loadedFixture(dir);
+    const item={...loaded,entry:{...loaded.entry,status:'draft_handoff_only',publish_permitted:false}};
     assert.deepEqual({width:item.mediaInfo.width,height:item.mediaInfo.height,fps:item.mediaInfo.fps,duration:item.mediaInfo.durationSeconds,
       video:item.mediaInfo.videoCodec,audio:item.mediaInfo.audioCodec},
       {width:1080,height:1920,fps:30,duration:24,video:'avc1',audio:'mp4a'});

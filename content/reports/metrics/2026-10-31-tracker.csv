@@ -1,0 +1,15 @@
+date,content_id,platform,schedule_time,published_at,remote_url,non_follower_reach,shares,new_followers,website_clicks,followers_per_1000_non_follower_reach,status
+2026-10-31,crew-lab-20261031-model-spec,facebook,10:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-model-spec,threads,10:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-prompt-context,facebook,12:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-prompt-context,threads,12:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-agentdecept,facebook,14:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-agentdecept,threads,14:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-gemini-carbon,facebook,16:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-gemini-carbon,threads,16:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-ai-for-science,facebook,19:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-ai-for-science,threads,19:00,,,,,,,pending_local_publisher
+2026-10-31,crew-video-2026-10-31-agentdecept-explainer,facebook,20:00,,,,,,,pending_local_publisher
+2026-10-31,crew-video-2026-10-31-agentdecept-explainer,threads,20:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-dev-queue-qa,facebook,21:00,,,,,,,pending_local_publisher
+2026-10-31,crew-lab-20261031-dev-queue-qa,threads,21:00,,,,,,,pending_local_publisher

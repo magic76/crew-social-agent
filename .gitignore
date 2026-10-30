@@ -17,6 +17,7 @@ video-lab/outbox/
 video-lab/**/output.mp4
 video-lab/**/renders/
 video-lab/**/node_modules/
+video-lab/**/.hyperframes/
 
 video-lab/**/generated-voice/
 video-lab/**/narrated.mp4

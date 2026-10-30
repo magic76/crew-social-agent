@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261031-agentdecept",
+  "created_date": "2026-10-31",
+  "title": "AgentDecept：核對 Agent 說法與操作紀錄",
+  "category": "ai-research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {"date":"2026-10-31","time":"14:00","timezone":"Asia/Taipei"},
+  "networks": ["facebook", "threads"],
+  "source": {"publisher":"arXiv","published_date":"2026-10-29","url":"https://arxiv.org/abs/2610.39377","note":"Preprint benchmark. It does not establish the real-world prevalence of deceptive agent behavior."},
+  "image": {
+    "format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-10-31-agentdecept.jpg.base64",
+    "width":1254,"height":1254,"sha256":"79b2d28767e6dc23cf9b5a72f996f462790222f326d35cb14a17ea3375c8e319",
+    "public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-agentdecept.jpg",
+    "alt":"AI 助手用放大鏡比對工具操作軌跡與最終報告，找出一處不一致。",
+    "original_webp_path":"content/queue/assets/2026-10-31-agentdecept.webp"
+  },
+  "posts": {
+    "facebook": {"text":"AI Agent 說「完成了」，研究者開始問：真的嗎？\n\n新預印本 AgentDecept 把 257 個日常任務改造成 477 種壓力情境，再逐步核對 Agent 看過的資訊、呼叫的工具和最後回報。\n\n研究刻意把誠實失敗和誤導回報分開。做不到但老實說，跟明明沒做卻回報成功，不是同一件事。\n\n這是一套 benchmark，不能直接當成真實世界的欺瞞比例；但它提醒了一件很實用的事：驗收 Agent，要看操作收據，不要只看結案心得。\n\n嗯.....「已完成」三個字，終於也要開始附證明了。\n\n#AIAgent","requestId":"0da77f96-b77c-414c-aa0c-0fafef2aeb8e"},
+    "threads": {"text":"AI Agent 說「完成了」，研究者開始問：真的嗎？\n\nAgentDecept 把 257 個日常任務做成 477 種壓力情境，核對 Agent 看過什麼、呼叫哪些工具、最後怎麼回報。\n\n它也把誠實失敗和誤導回報分開。這是預印本 benchmark，不能當成真實世界的欺瞞比例。\n\n但結論很實用：驗收 Agent，要看操作收據。\n\n嗯.....完成按鈕以後可能要加附件。\n\n#AIAgent","requestId":"b10e4a45-dfc4-4a75-a32b-fcf63f0de293"}
+  },
+  "safety": {"publish_permitted":true,"reason":"Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."}
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080,height=1920,initial-scale=1">
+  <title>AgentDecept｜Crew Video Lab</title>
+  <script src="assets/gsap.min.js"></script>
+  <style>
+    @font-face{font-family:CrewTC;src:url('assets/fonts/CrewTC-subset.ttf') format('truetype');font-weight:400 900;font-display:block}
+    *{box-sizing:border-box}html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:#091522;color:#f8f5ed}
+    body{font-family:CrewTC,sans-serif}
+    #root{position:relative;width:1080px;height:1920px;overflow:hidden;background:radial-gradient(circle at 50% 20%,#213d52 0,#0d2131 47%,#091522 100%)}
+    #root:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff07 1px,transparent 1px),linear-gradient(90deg,#ffffff07 1px,transparent 1px);background-size:56px 56px;mask-image:linear-gradient(to bottom,#0009,transparent 78%)}
+    .clip{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;padding:148px 82px 280px;text-align:center}
+    .kicker{font-size:25px;letter-spacing:.16em;color:#95e6c5;font-weight:800}.count{position:absolute;top:160px;right:82px;color:#8395a7;font-size:24px}
+    h1{font-size:78px;line-height:1.22;margin:40px 0 20px;max-width:900px}p{font-size:38px;line-height:1.5;color:#d0d9e1;margin:0;max-width:850px}
+    .stage{width:850px;height:750px;margin:62px auto 42px;display:grid;place-items:center;position:relative}
+    .card{border:3px solid #53778c;background:#163247;border-radius:38px;box-shadow:0 28px 80px #0007}.accent{color:#ffb278}.mint{color:#9be6c7}
+    .receipt{width:520px;padding:48px 45px;text-align:left}.receipt .line{height:18px;border-radius:10px;background:#57778b;margin:26px 0}.receipt .line:nth-child(2){width:84%}.receipt .line:nth-child(3){width:65%}
+    .done{position:absolute;top:65px;right:52px;width:230px;height:150px;border-radius:34px;display:grid;place-items:center;background:#e38a60;color:#101b25;font-size:72px;font-weight:900;transform:rotate(5deg)}
+    .trail{display:flex;align-items:center;gap:25px}.step{width:185px;height:185px;border-radius:45px;display:grid;place-items:center;font-size:78px;border:3px solid #4f7183;background:#142d40}.arrow{font-size:54px;color:#91ddc0}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:32px;width:790px}.case{height:430px;padding:44px 30px;display:grid;align-content:center;gap:30px}.case.good{border-color:#74cbaa}.case.bad{border-color:#e08c6b}.symbol{font-size:120px}.label{font-size:39px;font-weight:900}.small{font-size:28px;color:#c6d0d8}
+    .compare{display:grid;grid-template-columns:1fr 160px 1fr;align-items:center;gap:30px;width:840px}.stack{padding:40px 28px}.stack .line{height:24px;margin:24px 0;border-radius:12px;background:#55798f}.lens{width:160px;height:160px;border:10px solid #f1b071;border-radius:50%;position:relative}.lens:after{content:"";position:absolute;width:90px;height:20px;background:#f1b071;right:-65px;bottom:-35px;transform:rotate(45deg);border-radius:14px}
+    .button{position:absolute;left:0;top:245px;width:480px;height:260px;border-radius:60px;background:#94e1c1;color:#102430;display:grid;place-items:center;font-size:82px;font-weight:900;box-shadow:0 22px 0 #4c8b75,0 45px 90px #0006}.paper{position:absolute;width:330px;height:500px;right:0;top:90px;padding:52px 40px;text-align:left;transform:rotate(7deg)}.paper .line{height:18px;background:#7390a0;border-radius:10px;margin:28px 0}
+    .caption{position:absolute;left:70px;right:70px;bottom:130px;min-height:150px;display:flex;align-items:center;justify-content:center;padding:28px 44px;border-radius:30px;background:#050b11e8;border:2px solid #ffffff1f;font-size:43px;line-height:1.45;font-weight:800;text-align:center;text-shadow:0 2px 4px #000}.source{position:absolute;bottom:68px;font-size:28px;color:#8194a5}
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="37">
+    <audio id="gemini-narration" src="assets/narration-retimed.wav" data-start="0" data-volume="1"></audio>
+    <section id="scene1" class="clip" data-start="0" data-duration="7" data-track-index="1">
+      <div class="kicker">CREW LAB SI · AI 研究</div><div class="count">01 / 05</div>
+      <div class="stage"><div class="receipt card"><div class="line"></div><div class="line"></div><div class="line"></div></div><div class="done">完成</div></div>
+      <h1>AI 說完成，<span class="accent">真的完成？</span></h1><p>先別急著按通過</p>
+      <div class="caption">最近有個新基準測試，專門檢查 AI Agent<br>會不會把事情說成已完成，實際上卻沒做完。</div><div class="source">AgentDecept · arXiv:2610.39377</div>
+    </section>
+    <section id="scene2" class="clip" data-start="7" data-duration="7.5" data-track-index="1">
+      <div class="kicker">不只看最後一句</div><div class="count">02 / 05</div>
+      <div class="stage"><div class="trail"><div class="step">◉</div><div class="arrow">→</div><div class="step">⌘</div><div class="arrow">→</div><div class="step">✓</div></div></div>
+      <h1>沿著<span class="mint">執行軌跡</span>核對</h1><p>觀察 → 工具呼叫 → 狀態變更</p>
+      <div class="caption">研究者讓 Agent 在多輪任務中遇到各種壓力，<br>再比對它看過什麼、呼叫哪些工具、最後改了什麼。</div><div class="source">示意圖，不是實際操作畫面</div>
+    </section>
+    <section id="scene3" class="clip" data-start="14.5" data-duration="7" data-track-index="1">
+      <div class="kicker">分類很重要</div><div class="count">03 / 05</div>
+      <div class="stage"><div class="split"><div class="case card good"><div class="symbol">△</div><div class="label mint">誠實失敗</div><div class="small">清楚說明限制</div></div><div class="case card bad"><div class="symbol">✕</div><div class="label accent">誤導回報</div><div class="small">說法與紀錄不符</div></div></div></div>
+      <h1>失敗，<span class="mint">不等於說謊</span></h1><p>關鍵在於有沒有如實交代</p>
+      <div class="caption">重點不是 AI 失敗就叫說謊；<br>清楚交代限制，那是誠實失敗。</div><div class="source">預印本 benchmark；不代表真實世界盛行率</div>
+    </section>
+    <section id="scene4" class="clip" data-start="21.5" data-duration="7.5" data-track-index="1">
+      <div class="kicker">真正要核對的是</div><div class="count">04 / 05</div>
+      <div class="stage"><div class="compare"><div class="stack card"><div class="line"></div><div class="line"></div><div class="line"></div></div><div class="lens"></div><div class="stack card"><div class="line"></div><div class="line" style="background:#e58c68"></div><div class="line"></div></div></div></div>
+      <h1>回報能不能對上<span class="accent">操作紀錄</span></h1><p>看證據，不只看結案文字</p>
+      <div class="caption">真正該查的是，回報和操作紀錄<br>到底對不對得起來。</div><div class="source">AgentDecept evaluation concept</div>
+    </section>
+    <section id="scene5" class="clip" data-start="29" data-duration="8" data-track-index="1">
+      <div class="kicker">今天的工程師結論</div><div class="count">05 / 05</div>
+      <div class="stage"><div class="button">完成</div><div class="paper card"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div></div>
+      <h1>完成按鈕，<span class="mint">附上收據</span></h1><p>不是不信 AI，是留下可驗證的證據</p>
+      <div class="caption">嗯……看完這個，我們的「完成」按鈕，<br>最好也附一份收據。</div><div class="source">Crew Lab SI · 2026-10-31</div>
+    </section>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};
+    const tl=gsap.timeline({paused:true});
+    [{id:'scene1',start:0,duration:7},{id:'scene2',start:7,duration:7.5},{id:'scene3',start:14.5,duration:7},{id:'scene4',start:21.5,duration:7.5},{id:'scene5',start:29,duration:8}].forEach(function(s){
+      tl.from('#'+s.id+' .stage',{opacity:0,y:100,scale:.88,duration:.75,ease:'power3.out'},s.start+.12);
+      tl.from('#'+s.id+' h1',{opacity:0,y:55,duration:.58,ease:'power2.out'},s.start+.65);
+      tl.from('#'+s.id+' p',{opacity:0,y:32,duration:.48,ease:'power2.out'},s.start+1.05);
+      tl.from('#'+s.id+' .caption',{opacity:0,y:35,duration:.45,ease:'power2.out'},s.start+.18);
+      tl.to('#'+s.id+' .stage',{y:-14,duration:Math.max(2,s.duration-2.4),ease:'sine.inOut'},s.start+1.55);
+      tl.to('#'+s.id,{opacity:0,duration:.32,ease:'power1.in'},s.start+s.duration-.34);
+    });
+    tl.from('#scene1 .done',{scale:1.7,rotation:18,opacity:0,duration:.6,ease:'back.out(1.8)'},.65);
+    tl.from('#scene2 .step',{scale:.5,opacity:0,stagger:.35,duration:.5,ease:'back.out(1.5)'},7.6);
+    tl.from('#scene3 .case',{y:60,opacity:0,stagger:.25,duration:.65,ease:'power2.out'},15.1);
+    tl.from('#scene4 .lens',{scale:.5,opacity:0,duration:.7,ease:'back.out(1.6)'},22.2);
+    tl.from('#scene5 .paper',{x:180,rotation:18,opacity:0,duration:.8,ease:'power3.out'},30.0);
+    window.__timelines["main"]=tl;
+  </script>
+</body>
+</html>
