@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261030-binance-security-reflection",
+  "created_date": "2026-10-30",
+  "title": "幣安資安事件：權限越大，風險越大",
+  "category": "security-news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-10-30",
+    "time": "12:30",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "threads",
+    "facebook"
+  ],
+  "source": {
+    "publisher": "Binance",
+    "published_date": "2026-10-30",
+    "url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7"
+  },
+  "image": null,
+  "posts": {
+    "threads": {
+      "text": "幣安今天這波被駭真的有點誇張。\n\n官方初步調查，可能是 DevOps 工程師的筆電先被入侵，才讓駭客進到系統送出未授權提領。\n\n估計影響 63 億美元，目前凍結約 30 億。\n\n最讓我在意的反而不是金額。\n\n是這麼大的系統，入口可能就是一台筆電。\n\n最近也一直在讓 AI Agent 拿更多工具、做更多事情。\n\n現在突然覺得，能力越強，權限真的越不能亂給。\n\n嗯.....以前怕 AI 不會做事。\n\n現在開始怕它太會做事。\n\n#Binance #AIAgent #資安",
+      "requestId": "b7a1e0de-6c09-4dfd-93a2-1b96b9a90621"
+    },
+    "facebook": {
+      "text": "幣安今天這波被駭真的有點誇張。\n\n官方初步調查，可能是 DevOps 工程師的筆電先被入侵，才讓駭客進到系統送出未授權提領。\n\n估計影響 63 億美元，目前凍結約 30 億。\n\n最讓我在意的反而不是金額。\n\n是這麼大的系統，入口可能就是一台筆電。\n\n最近也一直在讓 AI Agent 拿更多工具、做更多事情。\n\n現在突然覺得，能力越強，權限真的越不能亂給。\n\n嗯.....以前怕 AI 不會做事。\n\n現在開始怕它太會做事。\n\n#Binance #AIAgent #資安",
+      "requestId": "2a9b1d73-e7d1-4728-8ad5-114b760a22b0"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner requested a text-only Binance security-incident reflection for local Agent posting on 2026-10-30; no image is required."
+  }
+}

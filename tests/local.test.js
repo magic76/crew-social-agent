@@ -72,3 +72,19 @@ test('Threads images await media status before publishing',async()=>{
   assert.equal(await sendImagePost(env,'threads',{text:'hello',imageUrl:draft.imageUrl},fetcher),'222222');
   assert.deepEqual(seen,['/v1.0/me/threads','/v1.0/111111','/v1.0/me/threads_publish']);
 });
+
+
+test('Threads and Facebook text-only posting use official text endpoints',async()=>{
+  const calls=[],fetcher=async(url,opt)=>{
+    const u=new URL(url),form=new URLSearchParams(opt.body);
+    calls.push({path:u.pathname,mediaType:form.get('media_type'),imageUrl:form.get('image_url'),text:form.get('text'),message:form.get('message')});
+    return response({id:String(111111+calls.length)});
+  };
+  assert.equal(await sendImagePost(env,'threads',{text:'純文字 Threads'},fetcher),'111113');
+  assert.equal(await sendImagePost(env,'facebook',{text:'純文字 Facebook'},fetcher),'111114');
+  assert.deepEqual(calls.map(x=>x.path),['/v1.0/me/threads','/v1.0/me/threads_publish','/v26.0/123456/feed']);
+  assert.equal(calls[0].mediaType,'TEXT');
+  assert.equal(calls[0].imageUrl,null);
+  assert.equal(calls[0].text,'純文字 Threads');
+  assert.equal(calls[2].message,'純文字 Facebook');
+});

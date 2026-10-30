@@ -62,7 +62,7 @@ async function show(postId){
   try{items=(await queueItems(false,process.env)).items;}catch{items=(await queueItems(true,process.env)).items;}
   const found=items.find(x=>x.entry.id===postId);
   if(!found)throw new Error('Queue item not found. Run sync first.');
-  out({id:found.entry.id,title:found.entry.title,mode:found.entry.mode,status:found.entry.status,schedule:found.entry.schedule,networks:found.entry.networks,posts:Object.fromEntries(found.entry.networks.map(n=>[n,found.entry.posts[n].text])),image:{...found.entry.image,previewPath:join(stateDir,'cache',`${found.entry.id}.${found.entry.image.format}`)},safety:found.entry.safety});
+  out({id:found.entry.id,title:found.entry.title,mode:found.entry.mode,status:found.entry.status,schedule:found.entry.schedule,networks:found.entry.networks,posts:Object.fromEntries(found.entry.networks.map(n=>[n,found.entry.posts[n].text])),image:found.entry.image?{...found.entry.image,previewPath:join(stateDir,'cache',`${found.entry.id}.${found.entry.image.format}`)}:null,safety:found.entry.safety});
 }
 
 async function main(){
@@ -70,7 +70,7 @@ async function main(){
   if(!command||command==='help'||command==='--help'){console.log(usage);return;}
   if(command==='sync'){
     const {items,errors,syncedAt,branch:usedBranch,commit}=await syncRemoteQueue({repoRoot:root,branch,stateDir,env:process.env});
-    out({syncedAt,branch:usedBranch,commit,items:items.map(({entry,imageBytes})=>({id:entry.id,mode:entry.mode,networks:entry.networks,imageBytes:imageBytes.length,sha256:entry.image.sha256,publishPermitted:entry.safety.publish_permitted})),queueErrors:errors});return;
+    out({syncedAt,branch:usedBranch,commit,items:items.map(({entry,imageBytes})=>({id:entry.id,mode:entry.mode,networks:entry.networks,imageBytes:imageBytes?.length??0,sha256:entry.image?.sha256??null,publishPermitted:entry.safety.publish_permitted})),queueErrors:errors});return;
   }
   if(command==='run-once'){
     if(args.length>1||(args.length===1&&args[0]!=='--offline'))throw new Error('run-once accepts only [--offline]');

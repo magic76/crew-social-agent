@@ -86,6 +86,7 @@ async function threadsApi(token,path,{method='GET',form,fetcher=fetch}={}) {
   return json;
 }
 export async function sendImagePost(env,network,{text,imageUrl,altText},fetcher=fetch) {
+  if(!imageUrl)return sendPost(env,network,{text},fetcher);
   if(network==='facebook') return sendPost(env,'facebook',{text,imageUrl},fetcher);
   if(network!=='threads') return fail('Invalid network');
   const token=env.THREADS_ACCESS_TOKEN;

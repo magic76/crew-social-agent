@@ -34,13 +34,14 @@ async function makeItems(manifests,readAsset,env,stateDir){
     let entry=null;
     try{
       entry=JSON.parse(manifestText);
-      const rel=entry.image?.path;
-      if(typeof rel!=='string'||!ASSET_RE.test(rel))throw new Error('Unsafe or unsupported image path');
-      const bytes=decodeAsset(await readAsset(rel));
+      const textOnly=entry.image===null;
+      const rel=textOnly?null:entry.image?.path;
+      if(!textOnly&&(typeof rel!=='string'||!ASSET_RE.test(rel)))throw new Error('Unsafe or unsupported image path');
+      const bytes=textOnly?null:decodeAsset(await readAsset(rel));
       validateQueueEntry(entry,bytes,env);
       await writeFile(join(cache,basename(name)),JSON.stringify(entry,null,2)+'\n',{mode:0o600});
-      await writeFile(join(cache,`${entry.id}.${entry.image.format}`),bytes,{mode:0o600});
-      items.push({entry,imageBytes:bytes,assetName:basename(rel)});
+      if(bytes)await writeFile(join(cache,`${entry.id}.${entry.image.format}`),bytes,{mode:0o600});
+      items.push({entry,imageBytes:bytes,assetName:rel?basename(rel):null});
     }catch(e){
       errors.push({file:name,postId:typeof entry?.id==='string'?entry.id:null,networks:Array.isArray(entry?.networks)?entry.networks.filter(n=>n==='facebook'||n==='threads'):[],reason:String(e.message||'Queue validation failed').slice(0,240)});
     }

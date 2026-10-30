@@ -30,20 +30,21 @@ const imageFetcher=bytes=>async url=>{
   return new Response(bytes,{status:200,headers:{'content-type':'image/webp','content-length':String(bytes.length)}});
 };
 
-test('GitHub test queue produces two pending dry-run tasks and no Meta calls',async()=>{
+test('GitHub live queue remains pending in local dry-run mode and never calls Meta',async()=>{
   const dir=await tmp();
   try{
-    const {items}=await loadLocalQueue({repoRoot:process.cwd(),stateDir:join(dir,'state'),env:process.env});
-    assert.equal(items.length,1);
-    assert.equal(items[0].imageBytes.length,6426);
+    const {items,errors}=await loadLocalQueue({repoRoot:process.cwd(),stateDir:join(dir,'state'),env:process.env});
+    assert.deepEqual(errors,[]);
+    assert.ok(items.length>=2);
+    assert.ok(items.every(x=>x.imageBytes===null||Buffer.isBuffer(x.imageBytes)));
     let sends=0;
     const result=await runQueue({items,stateDir:join(dir,'state'),env:env('dry_run'),send:async()=>{sends++;throw Error('must not send');}});
     assert.equal(sends,0);
-    assert.equal(result.length,2);
+    assert.equal(result.length,items.reduce((n,x)=>n+x.entry.networks.length,0));
     assert.ok(result.every(x=>x.dryRun&&x.state==='pending'));
     const tasks=await allTasks(join(dir,'state'));
-    assert.equal(tasks.length,2);
-    assert.ok(tasks.every(x=>x.state==='pending'&&x.lastSimulationMode==='queue_dry_run'));
+    assert.equal(tasks.length,result.length);
+    assert.ok(tasks.every(x=>x.state==='pending'&&x.lastSimulationMode==='agent_dry_run'));
   }finally{await rm(dir,{recursive:true,force:true});}
 });
 
@@ -214,4 +215,33 @@ test('queue validator rejects a public image whose bytes do not match manifest S
   assert.throws(()=>validateQueueEntry(item.entry,different,env()),/SHA-256/);
   const noTimezone=structuredClone(item.entry);delete noTimezone.schedule.timezone;
   assert.throws(()=>validateQueueEntry(noTimezone,item.imageBytes,env()),/Schedule/);
+});
+
+
+test('intentional text-only Queue is accepted, cached, sent once to both platforms, and has no image fetch',async()=>{
+  const root=await tmp(),dir=join(root,'state');
+  const {entry}=fixture({id:'crew-social-agent-text-only1'});
+  entry.image=null;
+  try{
+    await mkdir(join(root,'content','queue'),{recursive:true});
+    await writeFile(join(root,'content','queue','2026-10-30-text-only.json'),JSON.stringify(entry));
+    const {items,errors}=await loadLocalQueue({repoRoot:root,stateDir:dir,env:env()});
+    assert.equal(errors.length,0);
+    assert.equal(items.length,1);
+    assert.equal(items[0].imageBytes,null);
+    assert.equal(validateQueueEntry(entry,null,env()).imageInfo,null);
+    let calls=0;
+    const send=async(_env,network,payload)=>{calls++;assert.equal(payload.imageUrl,null);assert.equal(payload.text,entry.posts[network].text);return network==='facebook'?'111111':'222222';};
+    const fetcher=async()=>{throw Error('Text-only queue must never fetch an image')};
+    const first=await runQueue({items,stateDir:dir,env:env(),send,fetcher});
+    assert.deepEqual(first.map(x=>x.state),['published','published']);
+    assert.equal(calls,2);
+    const second=await runQueue({items,stateDir:dir,env:env(),send,fetcher});
+    assert.deepEqual(second.map(x=>x.state),['published','published']);
+    assert.equal(calls,2);
+    const unsafe=structuredClone(entry);delete unsafe.image;
+    assert.throws(()=>validateQueueEntry(unsafe,null,env()),/Unsafe or unsupported image path/);
+    const missingImage={...entry,image:{format:'webp',path:'content/queue/assets/not-found.webp.base64',width:1200,height:1200,sha256:sha(Buffer.from('missing'))}};
+    assert.throws(()=>validateQueueEntry(missingImage,null,env()),/Queue image is missing/);
+  }finally{await rm(root,{recursive:true,force:true});}
 });

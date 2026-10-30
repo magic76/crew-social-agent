@@ -132,14 +132,21 @@ export function validateQueueEntry(entry, imageBytes, env = process.env) {
   if(entry.category.toLowerCase().includes('news') && (!entry.source||!entry.source.publisher||!entry.source.url||!validDate(entry.source.published_date)||!/^https:\/\//i.test(entry.source.url))) fail('News items require publisher, HTTPS source URL, and published_date');
   if(!entry.safety||typeof entry.safety.publish_permitted!=='boolean') fail('safety.publish_permitted must be a boolean');
   if(!validSchedule(entry.schedule)) fail('Schedule date, time, and timezone are required and must be valid');
-  const imagePath=entry.image?.path;
-  if(typeof imagePath!=='string'||!/^content\/queue\/assets\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g)\.base64$/i.test(imagePath)) fail('Unsafe or unsupported image path');
-  if(!Buffer.isBuffer(imageBytes)||imageBytes.length===0) fail('Queue image is missing');
-  const digest=createHash('sha256').update(imageBytes).digest('hex');
-  if(digest!==entry.image.sha256) fail('Queue image SHA-256 mismatch');
-  const info=imageInfo(imageBytes);
-  if(entry.image.format&&entry.image.format.toLowerCase()!==info.format) fail('Queue image format mismatch');
-  if(entry.image.width!==info.width||entry.image.height!==info.height) fail('Queue image dimensions do not match the decoded image');
+  // Explicit image:null enables an intentional text-only post.
+  // Other image objects still undergo the complete fail-closed validation.
+  let info=null;
+  if(entry.image===null){
+    if(imageBytes!=null)fail('Text-only queue must not include image bytes');
+  }else{
+    const imagePath=entry.image?.path;
+    if(typeof imagePath!=='string'||!/^content\/queue\/assets\/[A-Za-z0-9._-]+\.(?:webp|png|jpe?g)\.base64$/i.test(imagePath)) fail('Unsafe or unsupported image path');
+    if(!Buffer.isBuffer(imageBytes)||imageBytes.length===0) fail('Queue image is missing');
+    const digest=createHash('sha256').update(imageBytes).digest('hex');
+    if(digest!==entry.image.sha256) fail('Queue image SHA-256 mismatch');
+    info=imageInfo(imageBytes);
+    if(entry.image.format&&entry.image.format.toLowerCase()!==info.format) fail('Queue image format mismatch');
+    if(entry.image.width!==info.width||entry.image.height!==info.height) fail('Queue image dimensions do not match the decoded image');
+  }
   const posts={};
   for(const network of entry.networks){
     const p=entry.posts?.[network];
@@ -148,7 +155,7 @@ export function validateQueueEntry(entry, imageBytes, env = process.env) {
     if(!UUID_RE.test(p.requestId||'')) fail(`Invalid ${network} requestId`);
     posts[network]={text:p.text.trim(),requestId:p.requestId};
   }
-  const liveImageUrl=entry.mode==='live'&&entry.safety.publish_permitted ? validatePublicImageUrl(entry.image.public_url,env) : null;
+  const liveImageUrl=entry.image!==null&&entry.mode==='live'&&entry.safety.publish_permitted ? validatePublicImageUrl(entry.image.public_url,env) : null;
   return {entry,imageBytes,imageInfo:info,posts,liveImageUrl};
 }
 
@@ -324,15 +331,17 @@ export async function runQueue({items,queueErrors=[],stateDir=DEFAULT_STATE_DIR,
           task=await updateTask(stateDir,task,{state:'skipped_expired',lastError:'SCHEDULE_EXPIRED',schedule});
           results.push({postId:entry.id,network,state:'skipped_expired',lateMinutes:timing.lateMinutes});continue;
         }
-        if(Math.min(checked.imageInfo.width,checked.imageInfo.height)<1080){results.push({postId:entry.id,network,state:'blocked',reason:'IMAGE_RESOLUTION_BELOW_1080'});continue;}
-        let imageUrl;
-        try{imageUrl=validatePublicImageUrl(entry.image.public_url,env);}catch(e){results.push({postId:entry.id,network,state:'blocked',reason:diagnostic(e)});continue;}
+        if(checked.imageInfo&&Math.min(checked.imageInfo.width,checked.imageInfo.height)<1080){results.push({postId:entry.id,network,state:'blocked',reason:'IMAGE_RESOLUTION_BELOW_1080'});continue;}
+        let imageUrl=null;
+        if(checked.imageInfo){
+          try{imageUrl=validatePublicImageUrl(entry.image.public_url,env);}catch(e){results.push({postId:entry.id,network,state:'blocked',reason:diagnostic(e)});continue;}
+        }
         if(network==='threads'&&env.THREADS_REFRESH_BLOCKED){results.push({postId:entry.id,network,state:'blocked',reason:env.THREADS_REFRESH_BLOCKED===true?'THREADS_TOKEN_REFRESH_FAILED':env.THREADS_REFRESH_BLOCKED});continue;}
         if(!available(env)[network]){results.push({postId:entry.id,network,state:'blocked',reason:'CREDENTIALS_MISSING'});continue;}
-        try{await verifyPublicImage(imageUrl,imageBytes,fetcher);}catch(e){results.push({postId:entry.id,network,state:'blocked',reason:diagnostic(e)});continue;}
+        if(imageUrl)try{await verifyPublicImage(imageUrl,imageBytes,fetcher);}catch(e){results.push({postId:entry.id,network,state:'blocked',reason:diagnostic(e)});continue;}
         task=await updateTask(stateDir,task,{state:'sending',startedAt:new Date(now).toISOString(),attempts:(task.attempts||0)+1,lastError:null,schedule});
         try{
-          const sent=await send(env,network,{text:checked.posts[network].text,imageUrl,altText:entry.image.alt||''},fetcher);
+          const sent=await send(env,network,{text:checked.posts[network].text,imageUrl,altText:entry.image?.alt||''},fetcher);
           const remoteId=typeof sent==='string'?sent:sent.id;
           let postUrl=typeof sent==='object'?sent.url||'': '';
           if(!postUrl&&remoteId){try{postUrl=(await lookup(env,network,remoteId,fetcher))?.url||'';}catch{}}

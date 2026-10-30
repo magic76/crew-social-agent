@@ -36,3 +36,9 @@ node --env-file=.env scripts/social-agent.mjs status
 `run-once` 先 fetch GitHub `main`，讀取 queue 檔案與 Base64 圖片，但不 checkout、不改動目前 branch。若本機或 queue 還是 dry-run，只建立 `(id, network)` 的 pending 紀錄，不呼叫發文 API。Local publisher 在 `.crew-social-agent/` 保存 journal、同步快取、override 及安全憑證；此資料夾不能提交到 GitHub。
 
 Meta API 不提供本地 agent 與平台間的交易式 exactly-once；所以 `sending` 中斷或 timeout 進入 `needs_reconciliation`，`reconcile` 先查遠端貼文，不自動重送。Facebook 與 Threads 狀態分開，即使一邊成功也不會重送該平台。
+
+## 純文字貼文（免附圖）
+
+使用者明確要求不附圖的文章可以使用 `"image": null`。其他 Queue 欄位和發文授權三旗標不變：
+`status="ready_for_local_agent"`、`mode="live"`、`safety.publish_permitted=true`。
+Local Publisher 遇到明確的 `image:null`，會略過圖片解碼、圖檔快取、圖片尺寸與公網 URL 校驗，改呼叫官方 Threads TEXT 與 Facebook /feed API。**只有明確的 null 才是純文字**；缺少 image 欄位、壞圖、圖檔 URL 不符一律 fail-closed，不允許自動退成純文字。
