@@ -110,3 +110,16 @@ pm2 resurrect
 ## 測試
 
 `npm test` 使用本機檔案和 mock API，不會建立真實 Meta 貼文。真實發布仍需 Meta App 權限、Facebook Page／Threads token、公開圖片 URL，以及逐篇明確開啟的 live Queue。
+
+## Crew Video Lab：HTML 科普動畫／教學短片
+
+已加入共用 Agent Skills 和可修改的 1080×1920、30fps、24 秒 HTML 動畫範例。入口：[video-lab/README.md](video-lab/README.md) 與 [skills/crew-video-lab/SKILL.md](skills/crew-video-lab/SKILL.md)。
+
+~~~sh
+node scripts/video-lab.mjs validate video-lab/examples/permissions-101
+node scripts/video-lab.mjs check video-lab/examples/permissions-101
+node scripts/video-lab.mjs preview video-lab/examples/permissions-101
+node scripts/video-lab.mjs render video-lab/examples/permissions-101
+~~~
+
+validate 是 Node.js 內建語法／分鏡檢查；check、preview、render 需要安裝 HyperFrames 的瀏覽器／FFmpeg 環境。範例仍為**靜音 HTML 動畫原始專案**，不能聲稱已配音、已輸出 MP4 或已發布。既有 Social Queue 暫時只支援文字和圖片，沒有影片發布 API；請勿把 MP4 當圖片送入 Queue。
