@@ -14,7 +14,8 @@
     "video:validate": "node scripts/video-lab.mjs validate",
     "video:check": "node scripts/video-lab.mjs check",
     "video:preview": "node scripts/video-lab.mjs preview",
-    "video:render": "node scripts/video-lab.mjs render"
+    "video:render": "node scripts/video-lab.mjs render",
+    "video:voice": "node scripts/video-voice.mjs"
   },
   "engines": {
     "node": ">=22"

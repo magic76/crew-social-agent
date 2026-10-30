@@ -123,3 +123,13 @@ node scripts/video-lab.mjs render video-lab/examples/permissions-101
 ~~~
 
 validate 是 Node.js 內建語法／分鏡檢查；check、preview、render 需要安裝 HyperFrames 的瀏覽器／FFmpeg 環境。範例仍為**靜音 HTML 動畫原始專案**，不能聲稱已配音、已輸出 MP4 或已發布。既有 Social Queue 暫時只支援文字和圖片，沒有影片發布 API；請勿把 MP4 當圖片送入 Queue。
+
+### Video Lab 中文配音
+
+Gemini 3.8 TTS（使用者自行設定 `GEMINI_API_KEY`）或 eSpeak 離線測試語音，支援依場景產音、超時阻擋、音量混合、SRT 字幕軌。參考 [video-lab/README.md](video-lab/README.md)。
+
+```sh
+node scripts/video-voice.mjs video-lab/examples/permissions-101 --provider=gemini --video=/absolute/path/original.mp4 --out=/absolute/path/narrated.mp4
+```
+
+注意：必須先存在真正的原始 MP4；此 Repo 的示範 HTML 不含預渲染影片。請勿將 API Key 或生成音訊提交到 Git。

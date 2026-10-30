@@ -47,3 +47,25 @@ node scripts/video-lab.mjs validate video-lab/work/<new-slug>
 - https://hyperframes.app/docs/1-startup/2-quickstart
 - https://github.com/remotion-dev/skills
 - https://github.com/motion-canvas/motion-canvas
+
+## 中文語音旁白（Gemini 3.8 TTS）
+
+使用 Node 22+、FFmpeg/ffprobe。這個 CLI 以 \`story.json\` 的逐場景 \`narration\` 產生語音、測量實際長度、建立 UTF-8 SRT 時間軸，再將聲音混入已渲染的 MP4。配音超出場景時間時**會產生 retime-required.json 並停止，不會截斷語音**。它不需要複製 Gemini Key 到 Repo。
+
+1. 先在本地渲染原版影片，例如 \`original.mp4\`，再指定給 \`--video=\`。
+2. 在安全的本地環境設定 \`GEMINI_API_KEY\`（可透過忽略的 .env 使用 \`node --env-file=.env\`）。
+3. 使用以下指令：
+
+~~~sh
+node scripts/video-voice.mjs video-lab/examples/permissions-101 --provider=gemini --voice=Kore --video=/absolute/path/original.mp4 --out=/absolute/path/narrated.mp4
+~~~
+
+- API model 預設 \`gemini-3.8-flash-tts\`；若想壓低成本可設定 \`--model=gemini-3.8-flash-lite-tts\`。目前依 Gemini 官方 Interactions API 實作；至少需取得該模型的 API 使用權。
+- 會要求台灣華語語氣，但真正口音需以實際生成音檔試聽，請勿保證。
+- 本地沒法呼叫 Gemini 時，可用 \`--provider=espeak\` 測試動態配音／字幕流程。eSpeak 是**機械合成聲**，不可假裝是 Gemini 成品；且需先安裝 \`espeak\`。
+- \`generated-voice/scene-*.wav\`、\`generated-voice/narration.srt\`、\`narrated.mp4\` 是本地產物，不要提交至 Repo。
+- 影片來源如果有背景音軌，會自動降低背景音量再混合；沒有背景音軌也能處理。
+- MP4 會保留已渲染的畫面、加入 AAC 旁白及可切換的 SRT 字幕（MOV_TEXT 軌）。**嵌入字幕不代表每個社群播放器都會顯示字幕**；正式 Reels/Threads 版本仍須另做燒錄字幕的 QA。
+
+官方說明：https://ai.google.dev/gemini-api/docs/speech-generation
+

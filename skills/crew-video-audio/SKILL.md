@@ -13,3 +13,7 @@ description: Add consented licensed narration, accurately timed Traditional Chin
 7. Run ffprobe to confirm audio exists and matches duration, inspect samples for clipping and off-sync; if audio is omitted, label the output as "silent" and use text-only education.
 
 Output: narration audio, cue captions (.srt), provenance/credits and explicit QC notes. No external voice subscription or hidden key is required for the silent starter.
+
+## Working CLI (Gemini 3.8 TTS)
+
+Run `node scripts/video-voice.mjs PROJECT --provider=gemini --video=/absolute/path/original.mp4 --out=/absolute/path/narrated.mp4` with local `GEMINI_API_KEY`. The CLI uses the official Interactions API, requests Taiwan Mandarin, measures each generated WAV, fails on overflow with `generated-voice/retime-required.json`, creates SRT cues and muxes AAC audio to the rendered video. Optional `--provider=espeak` is a low-quality offline smoke test only, not a Gemini substitute. Keep API keys local and generated media out of Git. See video-lab/README.md for exact usage. No Gemini calls have been verified in an environment without credentials.

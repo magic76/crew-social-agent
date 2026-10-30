@@ -43,3 +43,7 @@ Preview and render require HyperFrames and its browser/FFmpeg prerequisites on t
 
 ## Acceptance definition
 A completed video must have story.json, index.html, source/credit ledger, optional licensed assets + audio, successful render, mp4 metadata (resolution/fps/duration), reviewed keyframes, subtitles where speech exists, and an honest QA summary. For a scaffold, state that it is NOT YET a rendered or voice-ready video.
+
+### Narration automation
+
+After the silent video has been rendered, run `node scripts/video-voice.mjs PATH --provider=gemini --video=/absolute/path/original.mp4 --out=/absolute/path/narrated.mp4` using a local `GEMINI_API_KEY`. Read `skills/crew-video-audio/SKILL.md`; do not truncate audio or treat the local eSpeak synthetic smoke test as production-quality Mandarin. Check subtitle track and mix before delivery.
