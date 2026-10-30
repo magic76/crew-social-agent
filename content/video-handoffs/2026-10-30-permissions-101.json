@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "id": "crew-video-handoff-2026-10-30-permissions-101",
-  "status": "draft_handoff_only",
-  "publish_permitted": false,
+  "status": "ready_for_video_publisher",
+  "publish_permitted": true,
   "created_date": "2026-10-30",
   "schedule": {
     "date": "2026-10-30",
@@ -37,5 +37,5 @@
       "requestId": "f0a94fa1-7e5d-4a9d-b4f5-1b1385a03e83"
     }
   },
-  "local_agent_note": "這是交接素材，不在現有 Social Queue 中，不能直接由目前 image-only publisher 發布。使用者會另外要求本地 Agent 發文；收到要求後再以平台原生影片上傳流程發佈 FB 與 Threads，保留影片附件，不要降級為純文字。"
+  "local_agent_note": "使用者已明確授權此交接稿交由本地 video publisher 正式發布。請以本機 SOCIAL_AGENT_MODE=live 同步並執行平台原生影片發布流程，保留固定 requestId 與影片附件，不要降級為圖文。若排程已超過 SOCIAL_MAX_LATE_MINUTES、憑證缺漏或公開影片驗證失敗，保持阻擋並回報，不要自行重送。"
 }
