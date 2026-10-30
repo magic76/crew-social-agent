@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createCipheriv,createHash,randomBytes} from 'node:crypto';
 import {mkdtemp,mkdir,readdir,readFile,rm,stat,writeFile} from 'node:fs/promises';
-import {join} from 'node:path';
+import {basename,join} from 'node:path';
 import {tmpdir} from 'node:os';
 import {allTasks,ensureTask,retryAfterReconciliation,runQueue,setOverride,setPaused,validateQueueEntry} from '../local-publisher/core.js';
 import {loadLocalQueue} from '../local-publisher/github.js';
@@ -24,7 +24,7 @@ function fixture({id='crew-social-agent-test-post1',width=1200,height=1200,netwo
   for(const n of networks)entry.posts[n]={text:`${n} test post`,requestId:`11111111-1111-4111-8111-${n==='threads'?'111111111111':'222222222222'}`};
   return {entry,imageBytes};
 }
-const env=(mode='live')=>({SOCIAL_AGENT_MODE:mode,SOCIAL_TIMEZONE:'UTC',SOCIAL_IMAGE_HOSTS:'images.example.com',THREADS_ACCESS_TOKEN:'threads-test',FACEBOOK_PAGE_TOKEN:'facebook-test',FACEBOOK_PAGE_ID:'123456'});
+const env=(mode='live')=>({SOCIAL_AGENT_MODE:mode,SOCIAL_TIMEZONE:'UTC',SOCIAL_IMAGE_HOSTS:'images.example.com,raw.githubusercontent.com',THREADS_ACCESS_TOKEN:'threads-test',FACEBOOK_PAGE_TOKEN:'facebook-test',FACEBOOK_PAGE_ID:'123456'});
 const imageFetcher=bytes=>async url=>{
   assert.equal(new URL(url).hostname,'images.example.com');
   return new Response(bytes,{status:200,headers:{'content-type':'image/webp','content-length':String(bytes.length)}});
@@ -147,7 +147,7 @@ test('bad queue image is recorded while a valid queue item remains usable',async
     const source=join(process.cwd(),'content/queue/2026-10-30-android-studio-agents.json');
     const manifest=JSON.parse(await readFile(source,'utf8'));
     await writeFile(join(queue,'2026-10-30-android-studio-agents.json'),JSON.stringify(manifest));
-    await writeFile(join(assets,'2026-10-30-android-studio-agent.webp.base64'),await readFile(join(process.cwd(),manifest.image.path)));
+    await writeFile(join(assets,basename(manifest.image.path)),await readFile(join(process.cwd(),manifest.image.path)));
     const broken=structuredClone(manifest);broken.id='crew-social-agent-broken-image';broken.image.path='content/queue/assets/missing.webp.base64';
     await writeFile(join(queue,'2026-10-31-broken-image.json'),JSON.stringify(broken));
     const {items,errors}=await loadLocalQueue({repoRoot:repo,stateDir:state,env:process.env});

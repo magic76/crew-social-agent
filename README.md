@@ -12,6 +12,8 @@ Agent 預設 `SOCIAL_AGENT_MODE=dry_run`。只有以下條件全部成立才會�
 4. 附圖貼文需驗證圖片 SHA-256、實際格式和尺寸（短邊至少 1080px）；明確指定 image:null 的純文字貼文則走 TEXT 發布流程。
 5. 每個目標平台各自有必要的 Meta 憑證。
 
+影片使用獨立的 `content/video-handoffs/` 契約，不放入 image/text Queue。必須同時符合本機 `SOCIAL_AGENT_MODE=live`、交接稿 `status=ready_for_video_publisher`、`publish_permitted=true`、有效排程及平台憑證。Facebook 走 Page Reels 上傳流程；Threads 建立 VIDEO container，等待 Meta 處理完成後才發布。任何不確定結果進入 `needs_reconciliation`，不會重送，也不會把影片靜默降級成圖文或純文字。
+
 圖文稿缺圖或圖片驗證失敗時，不會自行降級成純文字。現有 Android Studio Queue 使用 1254×1254 正式圖片；實際發文依排程、帳號憑證及本地去重紀錄執行。
 
 ## 安裝與憑證
@@ -40,20 +42,28 @@ Facebook Page token 被撤銷、失效或權限變動時，Agent 會記錄阻擋
 
 Live 項目另需 `image.public_url`：Meta 伺服器要能直接以 HTTPS 讀取該圖片。預設只允許 `raw.githubusercontent.com`；若使用自己控制的公開 HTTPS 主機，將其 hostname 加到 `.env` 的 `SOCIAL_IMAGE_HOSTS`。附圖稿的圖片 Base64 SHA 必須正確，不能只交 URL。圖片不可讀、損毀、太小或 URL 缺少時，該平台保持 pending／blocked，不會降級成文字文。要發純文字必須明確使用 image:null。
 
-台灣每日預設時段為 12:00、19:00、21:00，可由 Queue 每篇 `schedule` 設定；Agent 每五分鐘輪詢一次。超過三小時的稿件標記 `skipped_expired`，需重新排程才可處理。手動 reschedule 只寫入本機 override，不改 GitHub Queue。
+### 影片交接
+
+影片另放在 `content/video-handoffs/<日期>-<slug>.json`，媒體放在 `content/video-handoffs/assets/`。交接稿需要穩定 `id`、`status`、`publish_permitted`、`schedule`、`platforms`、各平台含固定 UUID `requestId` 的文案，以及 MP4 的 `path`、`public_url`、`size_bytes`、SHA-256、實際寬高、fps 和秒數。發布器會解析 MP4、比對 SHA，再抓取公開 HTTPS URL 核對內容；預設只接受 `raw.githubusercontent.com`，自有主機需加到 `.env` 的 `SOCIAL_VIDEO_HOSTS`。
+
+目前同時發 FB Page Reels 和 Threads 的安全範圍是 MP4、直式 9:16、至少 540×960、23–60 fps、4–60 秒、影片編碼 H.264 或 HEVC；本地 publisher 為單次驗證設 1 GB 上限。日後擴充規格時先更新平台驗證與測試。`draft_handoff_only` 不會自動升級成可發布狀態。
+
+台灣每日預設時段為 12:00、19:00、21:00，可由每篇 `schedule` 設定；Agent 預設每 30 分鐘輪詢一次，可用 `.env` 的 `SOCIAL_POLL_INTERVAL_MS` 調整。超過三小時的稿件標記 `skipped_expired`，需重新排程才可處理。圖文稿 reschedule 只寫入本機 override，不改 GitHub Queue。
 
 ## 執行指令
 
 ```sh
 npm test
 node scripts/check-social-queue.mjs
+node scripts/check-video-handoffs.mjs
 node --env-file=.env scripts/social-agent.mjs sync
 node --env-file=.env scripts/social-agent.mjs run-once
 node --env-file=.env scripts/social-agent.mjs status
 node --env-file=.env scripts/social-agent.mjs show crew-lab-20261030-android-studio-agents
+node --env-file=.env scripts/social-agent.mjs show-video crew-video-handoff-2026-10-30-permissions-101
 ```
 
-`sync` 從 GitHub `main` 抓 Queue，不切換本地 branch。`run-once` 也會先同步遠端 Queue；加 `--offline` 可只讀工作目錄 Queue。Dry-run 只建立兩平台 pending 任務並輸出模擬結果，不呼叫 Meta API。`show` 會顯示兩平台文案及本機圖片預覽路徑。
+`sync` 從 GitHub `main` 抓 image/text Queue 和獨立 video handoffs，不切換本地 branch。`run-once` 也會先同步遠端；加 `--offline` 可只讀工作目錄。Dry-run 只建立 pending 任務並輸出模擬結果，不呼叫 Meta API。`show` 和 `show-video` 可查看文案及媒體快取路徑。
 
 管理指令：
 
@@ -63,15 +73,17 @@ node --env-file=.env scripts/social-agent.mjs resume
 node --env-file=.env scripts/social-agent.mjs skip <post-id> <facebook|threads>
 node --env-file=.env scripts/social-agent.mjs reschedule <post-id> YYYY-MM-DD HH:mm [facebook|threads]
 node --env-file=.env scripts/social-agent.mjs reconcile [post-id] [facebook|threads]
+node --env-file=.env scripts/social-agent.mjs reconcile-video [handoff-id] [facebook|threads]
 node --env-file=.env scripts/social-agent.mjs retry <post-id> <facebook|threads> --confirm-not-published
+node --env-file=.env scripts/social-agent.mjs retry-video <handoff-id> <facebook|threads> --confirm-not-published
 node --env-file=.env scripts/social-agent.mjs history
 ```
 
-`reconcile` 會讀取 Meta 最近貼文並以文案及時間比對不確定結果；找到唯一項目才更新遠端 ID／網址。零筆或多筆都不會自動重發。只有人工到 Meta 確認未發布後，才可用 `retry ... --confirm-not-published` 把該平台任務重設為 pending。狀態資料、override、同步快取、圖片和加密的 refresh token 都放在 `.crew-social-agent/`，此目錄已忽略且採本機權限保護。以固定目錄執行，避免刪除狀態而失去防重紀錄。
+`reconcile` 和 `reconcile-video` 只查 Meta 狀態，不會重新發布；狀態不明時保留人工核對。只有人工確認遠端未發布後，才能用對應的 `retry ... --confirm-not-published` 重設該平台任務。狀態資料、同步快取、圖片／影片和加密的 refresh token 都放在 `.crew-social-agent/`，此目錄已忽略且採本機權限保護。以固定目錄執行，避免刪除狀態而失去防重紀錄。
 
 ## Termux 常駐與開機恢復
 
-先保持 `.env` 的 `SOCIAL_AGENT_MODE=dry_run`，確認 `status`、Queue、圖片與排程都正確。需要正式自動發布時，還必須在 GitHub Queue 對每篇逐一設 `mode=live` 並由授權者明確設定 `publish_permitted=true`；不要把測試稿升級。
+先保持 `.env` 的 `SOCIAL_AGENT_MODE=dry_run`，確認 `status`、Queue、影片、媒體網址與排程都正確。正式自動發布圖文稿需要各篇 Queue live 欄位；影片則由授權者逐篇將 handoff 設成 `ready_for_video_publisher` 並明確設定 `publish_permitted=true`。不要把測試稿升級。
 
 安裝 PM2 並建立 daemon：
 
@@ -122,7 +134,7 @@ node scripts/video-lab.mjs preview video-lab/examples/permissions-101
 node scripts/video-lab.mjs render video-lab/examples/permissions-101
 ~~~
 
-validate 是 Node.js 內建語法／分鏡檢查；check、preview、render 需要安裝 HyperFrames 的瀏覽器／FFmpeg 環境。範例仍為**靜音 HTML 動畫原始專案**，不能聲稱已配音、已輸出 MP4 或已發布。既有 Social Queue 暫時只支援文字和圖片，沒有影片發布 API；請勿把 MP4 當圖片送入 Queue。
+validate 是 Node.js 內建語法／分鏡檢查；check、preview、render 需要安裝 HyperFrames 的瀏覽器／FFmpeg 環境。範例仍為**靜音 HTML 動畫原始專案**，不能聲稱已配音、已輸出 MP4 或已發布。影片媒體維持獨立 handoff，不放進 image/text Queue。
 
 ### Video Lab 中文配音
 

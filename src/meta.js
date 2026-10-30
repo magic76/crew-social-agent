@@ -134,3 +134,93 @@ export async function sendPost(env,network,{text,imageUrl},fetcher=fetch){
   }
   throw new UpstreamError(400,'Unsupported network');
 }
+
+const pause = ms => new Promise(resolve => setTimeout(resolve,ms));
+const apiVersion = () => process.env.META_GRAPH_API_VERSION||'v26.0';
+const completion = value => ['complete','completed','published','finished'].includes(String(value||'').toLowerCase());
+
+async function threadsVideoStatus(env,containerId,fetcher){
+  return graph(threadUrl(`${containerId}/`,{fields:'id,status,error_message'}),env.THREADS_ACCESS_TOKEN,'GET',null,fetcher);
+}
+
+async function facebookVideoStatus(env,videoId,fetcher){
+  return graph(facebookUrl(`${videoId}`,{fields:'status,permalink_url'}),env.FACEBOOK_PAGE_TOKEN,'GET',null,fetcher);
+}
+
+/** Publish a public MP4 as a Threads VIDEO and Facebook Page Reel. */
+export async function sendVideoPost(env,network,{text,videoUrl,title='',altText='',onProgress=async()=>{},pollAttempts=10,pollIntervalMs=30000},fetcher=fetch){
+  if(typeof text!=='string'||!text.trim())throw new UpstreamError(400,'Video post text is required');
+  if(typeof videoUrl!=='string'||!videoUrl.startsWith('https://'))throw new UpstreamError(400,'A public HTTPS video URL is required');
+  if(network==='threads'){
+    const container=await graph(threadUrl('me/threads'),env.THREADS_ACCESS_TOKEN,'POST',{
+      media_type:'VIDEO',video_url:videoUrl,text:text.trim(),...(altText?{alt_text:altText}:{})
+    },fetcher);
+    if(!idOK(container.id))throw new UpstreamError(502,'Threads returned no video container ID');
+    await onProgress({providerMediaId:container.id,stage:'container_created'});
+    let ready=false;
+    for(let attempt=0;attempt<pollAttempts;attempt++){
+      if(attempt&&pollIntervalMs)await pause(pollIntervalMs);
+      const status=await threadsVideoStatus(env,container.id,fetcher);
+      const value=String(status.status||'').toUpperCase();
+      if(value==='FINISHED'){ready=true;break;}
+      if(value==='ERROR'||value==='EXPIRED')throw new UpstreamError(502,'Threads video container failed processing');
+    }
+    if(!ready)throw new UpstreamError(504,'Threads video processing was not confirmed; reconcile before retrying');
+    await onProgress({providerMediaId:container.id,stage:'container_ready'});
+    const published=await graph(threadUrl('me/threads_publish'),env.THREADS_ACCESS_TOKEN,'POST',
+      {creation_id:container.id},fetcher);
+    if(!idOK(published.id))throw new UpstreamError(502,'Threads returned no published video ID');
+    return {id:published.id,mediaId:container.id,url:''};
+  }
+  if(network==='facebook'){
+    if(!idOK(env.FACEBOOK_PAGE_ID))throw new UpstreamError(400,'Facebook Page ID is not configured');
+    const started=await graph(facebookUrl(`${env.FACEBOOK_PAGE_ID}/video_reels`),env.FACEBOOK_PAGE_TOKEN,
+      'POST',{upload_phase:'start'},fetcher);
+    if(!idOK(started.video_id))throw new UpstreamError(502,'Facebook returned no Reel upload ID');
+    await onProgress({providerMediaId:started.video_id,stage:'upload_session_created'});
+    const version=apiVersion();
+    let uploadUrl;
+    try{uploadUrl=new URL(started.upload_url||`https://rupload.facebook.com/video-upload/${version}/${started.video_id}`);}
+    catch{throw new UpstreamError(502,'Facebook returned an invalid Reel upload URL');}
+    if(uploadUrl.protocol!=='https:'||uploadUrl.hostname!=='rupload.facebook.com'||
+      !uploadUrl.pathname.includes('/video-upload/')||!uploadUrl.pathname.endsWith('/'+started.video_id))
+      throw new UpstreamError(502,'Facebook returned an untrusted Reel upload URL');
+    let uploaded;
+    try{
+      const response=await fetcher(uploadUrl.toString(),{method:'POST',redirect:'error',
+        headers:{Authorization:`OAuth ${env.FACEBOOK_PAGE_TOKEN}`,file_url:videoUrl,Accept:'application/json'},
+        signal:AbortSignal.timeout(120000)});
+      uploaded=await response.json().catch(()=>null);
+      if(!response.ok||uploaded?.success!==true)throw new UpstreamError(response.status||502,'Facebook Reel upload failed');
+    }catch(error){
+      if(error instanceof UpstreamError)throw error;
+      throw new UpstreamError(502,'Facebook Reel upload failed or timed out');
+    }
+    await onProgress({providerMediaId:started.video_id,stage:'uploaded'});
+    const finished=await graph(facebookUrl(`${env.FACEBOOK_PAGE_ID}/video_reels`),env.FACEBOOK_PAGE_TOKEN,
+      'POST',{video_id:started.video_id,upload_phase:'finish',video_state:'PUBLISHED',description:text.trim(),...(title?{title}:{})},fetcher);
+    if(finished.success!==true)throw new UpstreamError(502,'Facebook did not confirm Reel publication');
+    await onProgress({providerMediaId:started.video_id,stage:'publish_requested'});
+    let publishedStatus=null;
+    for(let attempt=0;attempt<pollAttempts;attempt++){
+      if(attempt&&pollIntervalMs)await pause(pollIntervalMs);
+      publishedStatus=await facebookVideoStatus(env,started.video_id,fetcher);
+      const status=publishedStatus.status||{};
+      if(completion(status.publishing_phase?.status)||completion(status.video_status)){break;}
+      if(['error','failed'].includes(String(status.video_status||'').toLowerCase()))
+        throw new UpstreamError(502,'Facebook Reel processing failed');
+      publishedStatus=null;
+    }
+    if(!publishedStatus)throw new UpstreamError(504,'Facebook Reel publication was not confirmed; reconcile before retrying');
+    return {id:started.video_id,mediaId:started.video_id,url:publishedStatus.permalink_url||''};
+  }
+  throw new UpstreamError(400,'Unsupported network');
+}
+
+/** Inspect a previously started video operation; this never publishes or retries it. */
+export async function inspectVideoPostStatus(env,network,mediaId,fetcher=fetch){
+  if(!idOK(mediaId))throw new UpstreamError(400,'Invalid video media ID');
+  if(network==='threads')return threadsVideoStatus(env,mediaId,fetcher);
+  if(network==='facebook')return facebookVideoStatus(env,mediaId,fetcher);
+  throw new UpstreamError(400,'Unsupported network');
+}

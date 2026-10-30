@@ -11,7 +11,7 @@ When asked to make science explainers, tutorials, HTML animations, voice-over vi
 5. Never say an MP4 has been rendered without a real file plus ffprobe/visual checks.
 
 ## Social publishing
-Read [skills/crew-social-agent/SKILL.md](skills/crew-social-agent/SKILL.md). The video workflow must never auto-publish using the existing image/text-only Queue. Treat video publishing as a separate, unimplemented integration until corresponding platform APIs and validation are added. Preserve production publisher safety and idempotency.
+Read [skills/crew-social-agent/SKILL.md](skills/crew-social-agent/SKILL.md). Never place video files in the existing image/text Queue. Video handoffs use their own contract and publisher; only `ready_for_video_publisher` plus `publish_permitted=true`, a due schedule, global live mode and valid credentials can publish. Preserve production publisher safety and idempotency.
 
 ## Boundaries
 - Never commit API keys, Meta tokens, generated voice secrets or private data.
