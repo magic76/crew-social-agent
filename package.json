@@ -10,7 +10,11 @@
     "queue:check": "node scripts/check-social-queue.mjs",
     "agent": "node scripts/social-agent.mjs",
     "agent:once": "node scripts/social-agent.mjs run-once",
-    "agent:daemon": "node scripts/social-agent.mjs daemon"
+    "agent:daemon": "node scripts/social-agent.mjs daemon",
+    "video:validate": "node scripts/video-lab.mjs validate",
+    "video:check": "node scripts/video-lab.mjs check",
+    "video:preview": "node scripts/video-lab.mjs preview",
+    "video:render": "node scripts/video-lab.mjs render"
   },
   "engines": {
     "node": ">=22"
