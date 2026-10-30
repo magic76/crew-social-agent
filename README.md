@@ -9,10 +9,10 @@ Agent 預設 `SOCIAL_AGENT_MODE=dry_run`。只有以下條件全部成立才會�
 1. 本機 `SOCIAL_AGENT_MODE=live`。
 2. Queue 項目 `mode=live`、`status=ready_for_local_agent`、`safety.publish_permitted=true`。
 3. 排程已到且未超過 `SOCIAL_MAX_LATE_MINUTES`（預設三小時）。
-4. 圖片 SHA-256、實際格式和尺寸都通過驗證，且短邊至少 1080px。
+4. 附圖貼文需驗證圖片 SHA-256、實際格式和尺寸（短邊至少 1080px）；明確指定 image:null 的純文字貼文則走 TEXT 發布流程。
 5. 每個目標平台各自有必要的 Meta 憑證。
 
-任何一項不符合都不會改發純文字。GitHub Queue 的現有 Android Studio 範例維持 `dry_run` 和 `publish_permitted=false`，圖片維持 256×256；它只驗證同步、解碼與防重流程。
+圖文稿缺圖或圖片驗證失敗時，不會自行降級成純文字。現有 Android Studio Queue 使用 1254×1254 正式圖片；實際發文依排程、帳號憑證及本地去重紀錄執行。
 
 ## 安裝與憑證
 
@@ -38,7 +38,7 @@ Facebook Page token 被撤銷、失效或權限變動時，Agent 會記錄阻擋
 
 每篇 Queue JSON 需要唯一 `id`、`created_date`、`category`、`status`、`mode`、`networks`、平台文案及各平台固定 UUID `requestId`、圖片 `path`／`format`／尺寸／SHA-256、`schedule.date`／`time`／`timezone` 和 `safety.publish_permitted`。新聞類還需要來源 publisher、HTTPS URL 與來源日期。Threads 文案最多 500 字。
 
-Live 項目另需 `image.public_url`：Meta 伺服器要能直接以 HTTPS 讀取該圖片。預設只允許 `raw.githubusercontent.com`；若使用自己控制的公開 HTTPS 主機，將其 hostname 加到 `.env` 的 `SOCIAL_IMAGE_HOSTS`。Queue 的圖片 Base64 SHA 必須正確，不能只交 URL。圖片不可讀、損毀、太小或 URL 缺少時，該平台保持 pending／blocked，不會降級成文字文。
+Live 項目另需 `image.public_url`：Meta 伺服器要能直接以 HTTPS 讀取該圖片。預設只允許 `raw.githubusercontent.com`；若使用自己控制的公開 HTTPS 主機，將其 hostname 加到 `.env` 的 `SOCIAL_IMAGE_HOSTS`。附圖稿的圖片 Base64 SHA 必須正確，不能只交 URL。圖片不可讀、損毀、太小或 URL 缺少時，該平台保持 pending／blocked，不會降級成文字文。要發純文字必須明確使用 image:null。
 
 台灣每日預設時段為 12:00、19:00、21:00，可由 Queue 每篇 `schedule` 設定；Agent 每五分鐘輪詢一次。超過三小時的稿件標記 `skipped_expired`，需重新排程才可處理。手動 reschedule 只寫入本機 override，不改 GitHub Queue。
 
