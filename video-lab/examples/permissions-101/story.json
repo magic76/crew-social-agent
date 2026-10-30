@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "id": "permissions-101",
+  "title": "什麼是最小權限原則？",
+  "language": "zh-TW",
+  "kind": "explainer",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 24
+  },
+  "sources": [
+    {
+      "publisher": "NIST",
+      "title": "SP 800-53 Rev. 5 – AC-6 Least Privilege",
+      "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+      "note": "最小權限原則。此片為通用資安科普，不影射某一事件的實際入侵過程。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "start": 0,
+      "duration": 6,
+      "title": "一個帳號，要多少權限？",
+      "body": "只給工作真正需要的",
+      "narration": "一個帳號，到底該擁有多少權限？答案可能比你想的少。",
+      "visual": "question, credential card"
+    },
+    {
+      "id": "scene2",
+      "start": 6,
+      "duration": 6,
+      "title": "權限越多，風險越廣",
+      "body": "一個入口可能連到更多系統",
+      "narration": "權限如果給得太多，一個帳號出問題，影響可能擴大。",
+      "visual": "one node connects to four systems"
+    },
+    {
+      "id": "scene3",
+      "start": 12,
+      "duration": 6,
+      "title": "最小權限原則",
+      "body": "只開目前工作需要的門",
+      "narration": "最小權限的做法，就是只開放當下工作真正需要的能力。",
+      "visual": "three denied options, one allowed"
+    },
+    {
+      "id": "scene4",
+      "start": 18,
+      "duration": 6,
+      "title": "敏感操作，再確認一次",
+      "body": "少給權限，降低風險",
+      "narration": "遇到高風險操作，再加一道確認。權限管理也是安全設計。",
+      "visual": "shield, check, approval"
+    }
+  ]
+}

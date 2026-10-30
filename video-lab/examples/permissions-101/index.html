@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080,height=1920,initial-scale=1">
+  <title>最小權限原則｜Crew Video Lab</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>
+    * { box-sizing:border-box; }
+    html,body { margin:0; width:1080px; height:1920px; overflow:hidden; background:#0b1627; color:#f4f7ff; }
+    body { font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif; }
+    #root { position:relative; overflow:hidden; width:1080px; height:1920px; background:radial-gradient(circle at 50% 25%,#1d3452 0,#0b1627 65%); }
+    .clip { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:130px 86px 240px; text-align:center; }
+    .kicker { position:absolute; top:160px; left:0; right:0; color:#8dd9bc; letter-spacing:.2em; font-size:26px; font-weight:800; }
+    h1 { max-width:900px; font-size:83px; line-height:1.24; margin:24px 0; letter-spacing:1px; }
+    p { font-size:40px; line-height:1.5; color:#d4dce8; margin:12px 0; max-width:820px; }
+    .illustration { margin:35px auto 60px; display:grid; place-items:center; width:600px; height:540px; }
+    .glass { background:#263f5b; border:3px solid #6095a4; border-radius:45px; box-shadow:0 35px 95px #0004; }
+    .credential { display:grid; place-items:center; width:405px; height:380px; font-weight:900; font-size:130px; color:#9ee3cd; }
+    .nodes { display:grid; grid-template-columns:1fr 1fr; gap:32px; width:580px; }
+    .node { display:grid; place-items:center; min-height:210px; border:3px solid #d5a477; border-radius:32px; font-size:60px; background:#303f53; }
+    .node:nth-child(2n) { border-color:#b27979; }
+    .grant { width:590px; display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+    .permission { display:grid; place-items:center; height:215px; border-radius:30px; border:3px solid #63738b; background:#29364a; font-size:58px; color:#c8d0dc; }
+    .permission.allowed { border-color:#8dd9bc; background:#275c51; color:white; }
+    .shield { display:grid; place-items:center; font-size:185px; width:430px; height:430px; border-radius:50%; border:7px solid #8dd9bc; background:#1e4946; color:#9ef0ca; }
+    .line { width:550px; height:7px; margin:40px auto; border-radius:9px; background:#8dd9bc; transform-origin:left center; }
+    .foot { position:absolute; bottom:120px; font-size:26px; color:#9caec4; letter-spacing:.15em; }
+  </style>
+</head>
+<body>
+  <div id="root" data-composition-id="main" data-start="0" data-width="1080" data-height="1920" data-duration="24">
+    <section id="scene1" class="clip" data-start="0" data-duration="6" data-track-index="1">
+      <div class="kicker">CREW VIDEO LAB · 資安科普</div>
+      <div class="illustration"><div class="credential glass">?</div></div>
+      <h1>一個帳號，要多少權限？</h1>
+      <div class="line"></div>
+      <p>只給工作真正需要的</p>
+      <div class="foot">01 / 04</div>
+    </section>
+    <section id="scene2" class="clip" data-start="6" data-duration="6" data-track-index="1">
+      <div class="kicker">01 · 為什麼需要限制？</div>
+      <div class="illustration"><div class="nodes">
+        <div class="node">⚙</div><div class="node">▤</div><div class="node">⌁</div><div class="node">◆</div>
+      </div></div>
+      <h1>權限越多，風險越廣</h1>
+      <div class="line"></div>
+      <p>一個入口可能連到更多系統</p>
+      <div class="foot">02 / 04</div>
+    </section>
+    <section id="scene3" class="clip" data-start="12" data-duration="6" data-track-index="1">
+      <div class="kicker">02 · 最小權限原則</div>
+      <div class="illustration"><div class="grant">
+        <div class="permission allowed">✓</div><div class="permission">×</div>
+        <div class="permission">×</div><div class="permission">×</div>
+      </div></div>
+      <h1>只開需要的門</h1>
+      <div class="line"></div>
+      <p>權限跟著任務走</p>
+      <div class="foot">03 / 04</div>
+    </section>
+    <section id="scene4" class="clip" data-start="18" data-duration="6" data-track-index="1">
+      <div class="kicker">03 · 實際怎麼做？</div>
+      <div class="illustration"><div class="shield">✓</div></div>
+      <h1>敏感操作，再確認一次</h1>
+      <div class="line"></div>
+      <p>少給權限，降低風險</p>
+      <div class="foot">04 / 04</div>
+    </section>
+  </div>
+  <script>
+    window.__timelines=window.__timelines||{};
+    const tl=gsap.timeline({paused:true});
+    [
+      {id:"scene1",start:0},{id:"scene2",start:6},
+      {id:"scene3",start:12},{id:"scene4",start:18}
+    ].forEach(function(shot){
+      tl.from("#"+shot.id+" .illustration",{opacity:0,y:120,scale:.85,duration:.85,ease:"power3.out"},shot.start+.12);
+      tl.from("#"+shot.id+" h1",{opacity:0,y:60,duration:.65,ease:"power2.out"},shot.start+.75);
+      tl.from("#"+shot.id+" .line",{scaleX:0,duration:.65,ease:"power2.out"},shot.start+1.15);
+      tl.from("#"+shot.id+" p",{opacity:0,y:30,duration:.55,ease:"power2.out"},shot.start+1.65);
+      tl.to("#"+shot.id+" .illustration",{y:-16,duration:1.5,ease:"sine.inOut"},shot.start+3.1);
+      tl.to("#"+shot.id+" h1, #"+shot.id+" p, #"+shot.id+" .illustration",
+        {opacity:0,duration:.3,ease:"power1.in"},shot.start+5.63);
+    });
+    window.__timelines["main"]=tl;
+  </script>
+</body>
+</html>
