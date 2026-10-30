@@ -11,10 +11,10 @@ Deliver in a versioned directory:
 - sources.md or source ledger in story.json, credits.md, qa.json
 - manifest.json: id, created_at, duration, width, height, fps, format, file SHA-256, public_media_url (only if uploaded), suggested caption, platforms, status.
 
-Status progression: project_draft → rendered → verified → ready_for_video_publisher → published. Video status must not reuse image-only Queue's live flag.
+Status progression: project_draft → rendered → verified → draft_handoff_only → ready_for_video_publisher → published. Do not reuse the image-only Queue's `mode=live` field for videos.
 
-Do not put video content under content/queue/*.json: the current local-publisher expects image:null or an image and may route to text/image APIs. Replacing .jpg with .mp4 is NOT valid. Keep videos in video-lab/outbox or a future separate video/queue schema until true Threads VIDEO and Facebook Reels uploaders are implemented and tested.
+Do not put video content under `content/queue/*.json`. Keep it under `content/video-handoffs/` with the separate schema; replacing `.jpg` with `.mp4` is invalid. A handoff must include `schema_version`, a stable `id`, `created_date`, `status`, `publish_permitted`, `schedule`, `platforms`, platform captions with fixed UUID `requestId`s, and MP4 metadata (`path`, public HTTPS URL, byte size, SHA-256, width, height, fps and duration). The publisher verifies the MP4, public URL and hash before any API call. `draft_handoff_only` and `publish_permitted=false` must remain blocked until explicitly approved by the owner.
 
-Before live publication, verify media format and file size vs current Meta API, separate platform IDs, persistent idempotency journal, long-running upload/processing status, remote receipt, and reconciliation on ambiguous timeouts. Never silently downgrade a requested video to a text or image post.
+Before live publication, verify media format and size, separate platform IDs, persistent idempotency journal, provider processing status, remote receipt, and reconciliation on ambiguous timeouts. The current cross-post profile is MP4, H.264/HEVC, 9:16, 540×960 minimum, 23–60 fps, 4–60 seconds, up to 1 GB. Never silently downgrade a requested video to a text or image post.
 
-GitHub is ideal for source and skills; production MP4s may need external object storage to avoid Git repository bloat and Meta URL fetch constraints. Report actual uploaded links rather than inventing a public URL. This repo does not yet publish videos.
+GitHub is used for this repository's handoff and public test media. Larger production MP4s should use a trusted public host allowlisted by `SOCIAL_VIDEO_HOSTS` to avoid repository bloat. Report only actual Meta post links; never construct or invent one.
