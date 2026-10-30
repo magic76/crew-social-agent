@@ -9,3 +9,10 @@ coverage/
 .local-social-outbox/
 post.json
 reply.json
+
+# Crew Video Lab output and local working directories
+video-lab/work/
+video-lab/outbox/
+video-lab/**/output.mp4
+video-lab/**/renders/
+video-lab/**/node_modules/
