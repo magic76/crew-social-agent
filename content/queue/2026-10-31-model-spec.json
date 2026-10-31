@@ -6,19 +6,53 @@
   "category": "ai-news",
   "status": "ready_for_local_agent",
   "mode": "live",
-  "schedule": {"date":"2026-10-31","time":"10:00","timezone":"Asia/Taipei"},
-  "networks": ["facebook", "threads"],
-  "source": {"publisher":"OpenAI","published_date":"2026-10-29","url":"https://openai.com/index/updated-model-spec/"},
+  "schedule": {
+    "date": "2026-10-31",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-10-29",
+    "url": "https://openai.com/index/updated-model-spec/"
+  },
   "image": {
-    "format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-10-31-model-spec.jpg.base64",
-    "width":1254,"height":1254,"sha256":"0c53f6e7c0f5e7bdff7efaf99feca5aa888ca59d896bacaae4cb54991ba91f2f",
-    "public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-model-spec.jpg",
-    "alt":"人手拿著指南針，AI 助手整理象徵人類意圖、誠實、照護與監督的五張圖卡。",
-    "original_webp_path":"content/queue/assets/2026-10-31-model-spec.webp"
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-10-31-model-spec.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "0c53f6e7c0f5e7bdff7efaf99feca5aa888ca59d896bacaae4cb54991ba91f2f",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-model-spec.jpg",
+    "alt": "人手拿著指南針，AI 助手整理象徵人類意圖、誠實、照護與監督的五張圖卡。",
+    "original_webp_path": "content/queue/assets/2026-10-31-model-spec.webp"
   },
   "posts": {
-    "facebook": {"text":"OpenAI 前天更新了 Model Spec。\n\n這次不只是加幾條規則，而是把整份規範整理成五個核心：忠於人類意圖、降低傷害、誠實透明、保留人的主導權，以及照顧受影響的人。\n\n其中一個有趣變化，是把「理解上下文」和「說清楚副作用」拉到更前面。AI 不只要照字面做，還得讓人知道它怎麼理解、哪裡不確定。\n\n官方也寫得很直接：這是努力方向，不代表現在的模型已經全部做到。\n\n嗯.....規範先寫好了，接下來輪到現實世界不要裝沒看到。\n\n#AI","requestId":"2eccb31d-f68e-427d-bdf8-e88225c7217d"},
-    "threads": {"text":"OpenAI 前天更新了 Model Spec。\n\n新版本用五個核心重整規範：忠於人類意圖、降低傷害、誠實透明、保留人的主導權，以及照顧受影響的人。\n\n它也更強調上下文、監督和副作用要說清楚。官方同時提醒：這是目標，不代表現有模型已完全做到。\n\n嗯.....規範寫得很完整，現在就等 AI 跟我們都照著做。\n\n#AI","requestId":"2cce1e44-2472-424c-a1c0-f47a77be7b62"}
+    "facebook": {
+      "text": "OpenAI 前天更新了 Model Spec。\n\n這次不只是加幾條規則，而是把整份規範整理成五個核心：忠於人類意圖、降低傷害、誠實透明、保留人的主導權，以及照顧受影響的人。\n\n其中一個有趣變化，是把「理解上下文」和「說清楚副作用」拉到更前面。AI 不只要照字面做，還得讓人知道它怎麼理解、哪裡不確定。\n\n官方也寫得很直接：這是努力方向，不代表現在的模型已經全部做到。\n\n嗯.....規範先寫好了，接下來輪到現實世界不要裝沒看到。\n\n#AI",
+      "requestId": "2eccb31d-f68e-427d-bdf8-e88225c7217d"
+    },
+    "threads": {
+      "text": "OpenAI 前天更新了 Model Spec。\n\n新版本用五個核心重整規範：忠於人類意圖、降低傷害、誠實透明、保留人的主導權，以及照顧受影響的人。\n\n它也更強調上下文、監督和副作用要說清楚。官方同時提醒：這是目標，不代表現有模型已完全做到。\n\n嗯.....規範寫得很完整，現在就等 AI 跟我們都照著做。\n\n#AI",
+      "requestId": "2cce1e44-2472-424c-a1c0-f47a77be7b62"
+    }
   },
-  "safety": {"publish_permitted":true,"reason":"Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."}
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：OpenAI\nhttps://openai.com/index/updated-model-spec/",
+      "requestId": "c96f45cb-acf0-4b31-ae9a-ffa2d440daa5"
+    },
+    "threads": {
+      "text": "參考來源：OpenAI\nhttps://openai.com/index/updated-model-spec/",
+      "requestId": "55e60536-b925-4465-8951-43aa33370d35"
+    }
+  }
 }
