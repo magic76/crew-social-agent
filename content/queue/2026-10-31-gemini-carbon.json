@@ -6,19 +6,54 @@
   "category": "ai-tool",
   "status": "ready_for_local_agent",
   "mode": "live",
-  "schedule": {"date":"2026-10-31","time":"16:00","timezone":"Asia/Taipei"},
-  "networks": ["facebook", "threads"],
-  "source": {"publisher":"Google","published_date":"2026-10-28","url":"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/","note":"Google announcement and benchmark claims; initial access is limited to selected cyber defenders, not general availability."},
+  "schedule": {
+    "date": "2026-10-31",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "source": {
+    "publisher": "Google",
+    "published_date": "2026-10-28",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+    "note": "Google announcement and benchmark claims; initial access is limited to selected cyber defenders, not general availability."
+  },
   "image": {
-    "format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-10-31-gemini-carbon.jpg.base64",
-    "width":1254,"height":1254,"sha256":"727b2eab96b23154e93e3a207708651a9276bc913b11ba412e287db8032a6a39",
-    "public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-gemini-carbon.jpg",
-    "alt":"受控實驗室裡的深色晶體 AI 核心，研究人員檢查防護、程式與修補符號。",
-    "original_webp_path":"content/queue/assets/2026-10-31-gemini-carbon.webp"
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-10-31-gemini-carbon.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "727b2eab96b23154e93e3a207708651a9276bc913b11ba412e287db8032a6a39",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-gemini-carbon.jpg",
+    "alt": "受控實驗室裡的深色晶體 AI 核心，研究人員檢查防護、程式與修補符號。",
+    "original_webp_path": "content/queue/assets/2026-10-31-gemini-carbon.webp"
   },
   "posts": {
-    "facebook": {"text":"Google 公布 Gemini 4 Carbon，主打長時間工程任務和資安防禦。\n\n官方列出漏洞發現、驗證和修補等 benchmark 成績，也聲稱內部測試裡不實宣稱與高嚴重度偏離警示都有下降。\n\n但現在不是打開產品就能選。Google 先提供給部分資安防禦人員，還在做受控測試，之後才會逐步開放。\n\n所以目前最準確的使用心得是：還沒有使用心得。\n\n嗯.....模型發布越來越像新餐廳試營運，先看菜單，還不能訂位。\n\n#Gemini","requestId":"127a95ab-a097-49be-9849-b9cd5fe18598"},
-    "threads": {"text":"Google 公布 Gemini 4 Carbon，主打長時間工程任務和資安防禦。\n\n官方公布漏洞發現、驗證、修補等 benchmark，也聲稱內部測試的不實宣稱與偏離警示下降。\n\n但目前只先給部分資安防禦人員受控測試，還沒全面開放。\n\n所以最準確的使用心得是：還沒有使用心得。\n\n嗯.....先看菜單，暫時不能訂位。\n\n#Gemini","requestId":"dd86ddbf-fac7-4161-bfed-f54a70516c93"}
+    "facebook": {
+      "text": "Google 公布 Gemini 4 Carbon，主打長時間工程任務和資安防禦。\n\n官方列出漏洞發現、驗證和修補等 benchmark 成績，也聲稱內部測試裡不實宣稱與高嚴重度偏離警示都有下降。\n\n但現在不是打開產品就能選。Google 先提供給部分資安防禦人員，還在做受控測試，之後才會逐步開放。\n\n所以目前最準確的使用心得是：還沒有使用心得。\n\n嗯.....模型發布越來越像新餐廳試營運，先看菜單，還不能訂位。\n\n#Gemini",
+      "requestId": "127a95ab-a097-49be-9849-b9cd5fe18598"
+    },
+    "threads": {
+      "text": "Google 公布 Gemini 4 Carbon，主打長時間工程任務和資安防禦。\n\n官方公布漏洞發現、驗證、修補等 benchmark，也聲稱內部測試的不實宣稱與偏離警示下降。\n\n但目前只先給部分資安防禦人員受控測試，還沒全面開放。\n\n所以最準確的使用心得是：還沒有使用心得。\n\n嗯.....先看菜單，暫時不能訂位。\n\n#Gemini",
+      "requestId": "dd86ddbf-fac7-4161-bfed-f54a70516c93"
+    }
   },
-  "safety": {"publish_permitted":true,"reason":"Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."}
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Google\nhttps://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "requestId": "475773d6-7b0a-4fdd-ae05-eb8361283a6b"
+    },
+    "threads": {
+      "text": "參考來源：Google\nhttps://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+      "requestId": "2db107bb-1de7-4a27-aa87-b7c085dd98db"
+    }
+  }
 }
