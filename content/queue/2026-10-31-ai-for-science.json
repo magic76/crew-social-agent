@@ -6,19 +6,54 @@
   "category": "ai-application",
   "status": "ready_for_local_agent",
   "mode": "live",
-  "schedule": {"date":"2026-10-31","time":"19:00","timezone":"Asia/Taipei"},
-  "networks": ["facebook", "threads"],
-  "source": {"publisher":"Anthropic","published_date":"2026-10-28","url":"https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions","note":"Program announcement. Several collaborations are early-stage; no universal productivity claim is inferred."},
+  "schedule": {
+    "date": "2026-10-31",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "source": {
+    "publisher": "Anthropic",
+    "published_date": "2026-10-28",
+    "url": "https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+    "note": "Program announcement. Several collaborations are early-stage; no universal productivity claim is inferred."
+  },
   "image": {
-    "format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-10-31-ai-for-science.jpg.base64",
-    "width":1254,"height":1254,"sha256":"351fa6ca2142fccc3911e952f8e619061c5f3278fd7ae7b4baef88f3b2a2d10e",
-    "public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-ai-for-science.jpg",
-    "alt":"科學家圍著研究桌提出問題，多位 AI 助手整理植物、分子、岩石與星圖資料卡。",
-    "original_webp_path":"content/queue/assets/2026-10-31-ai-for-science.webp"
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-10-31-ai-for-science.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "351fa6ca2142fccc3911e952f8e619061c5f3278fd7ae7b4baef88f3b2a2d10e",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-ai-for-science.jpg",
+    "alt": "科學家圍著研究桌提出問題，多位 AI 助手整理植物、分子、岩石與星圖資料卡。",
+    "original_webp_path": "content/queue/assets/2026-10-31-ai-for-science.webp"
   },
   "posts": {
-    "facebook": {"text":"Anthropic 的 AI for Science 計畫擴大了，這次列出 20 個科學基金會、研究機構和團隊。\n\n案例橫跨腦科學、氣候、癌症影像、基因資料和形式化數學。用途也不是叫 AI 直接宣布新發現，而是協助整理大型資料、提出假設、設計實驗和溝通結果。\n\n其中還有一個研究預覽中的 Model Hardware Standard，想讓 AI Agent 用共同規格操作實驗室儀器。\n\n官方也提醒，多數合作仍在早期階段。\n\n嗯.....AI 進實驗室沒問題，先學會每個步驟都留紀錄。\n\n#AIforScience","requestId":"0ce47403-2b4a-4c4f-94df-a7a90391de83"},
-    "threads": {"text":"Anthropic 的 AI for Science 計畫擴大到 20 個科學基金會、研究機構和團隊。\n\n案例涵蓋腦科學、氣候、癌症影像、基因資料和形式化數學。AI 主要協助整理資料、提出假設、設計實驗與溝通結果。\n\n還有一套研究預覽中的共同規格，讓 Agent 能更安全地操作實驗室儀器。多數合作仍在早期。\n\n嗯.....AI 進實驗室可以，記得先留完整實驗紀錄。\n\n#AIforScience","requestId":"fb9abdfe-6318-47da-9b5e-3747b08c2005"}
+    "facebook": {
+      "text": "Anthropic 的 AI for Science 計畫擴大了，這次列出 20 個科學基金會、研究機構和團隊。\n\n案例橫跨腦科學、氣候、癌症影像、基因資料和形式化數學。用途也不是叫 AI 直接宣布新發現，而是協助整理大型資料、提出假設、設計實驗和溝通結果。\n\n其中還有一個研究預覽中的 Model Hardware Standard，想讓 AI Agent 用共同規格操作實驗室儀器。\n\n官方也提醒，多數合作仍在早期階段。\n\n嗯.....AI 進實驗室沒問題，先學會每個步驟都留紀錄。\n\n#AIforScience",
+      "requestId": "0ce47403-2b4a-4c4f-94df-a7a90391de83"
+    },
+    "threads": {
+      "text": "Anthropic 的 AI for Science 計畫擴大到 20 個科學基金會、研究機構和團隊。\n\n案例涵蓋腦科學、氣候、癌症影像、基因資料和形式化數學。AI 主要協助整理資料、提出假設、設計實驗與溝通結果。\n\n還有一套研究預覽中的共同規格，讓 Agent 能更安全地操作實驗室儀器。多數合作仍在早期。\n\n嗯.....AI 進實驗室可以，記得先留完整實驗紀錄。\n\n#AIforScience",
+      "requestId": "fb9abdfe-6318-47da-9b5e-3747b08c2005"
+    }
   },
-  "safety": {"publish_permitted":true,"reason":"Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."}
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Anthropic\nhttps://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "requestId": "4a06fd75-acfd-4e1f-8483-49e49b4812a4"
+    },
+    "threads": {
+      "text": "參考來源：Anthropic\nhttps://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions",
+      "requestId": "c40b046f-d78c-4314-88bc-8f5800383179"
+    }
+  }
 }
