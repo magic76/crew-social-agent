@@ -31,4 +31,5 @@
 
 ## 編輯判斷
 
-本日資訊足夠，沒有用常青題材補位。六篇不重複；21:00 開發日常只描述本 repo 已存在並通過驗證的 first-reply 發布契約，不聲稱平台已實際發布。
+本日資訊足夠，沒有用常青題材補位。六篇不重複；21:00 開發日常依後續指示改為檢視使用者的 LG TV Companion GitHub，描述 Android v1.4.29 最新提交中的獨立 WebView 彈窗、Pyppo 跳轉處理與 intent:// 備援解析；未聲稱有實機測試。
+- LG TV Companion v1.4.29 commit，2026-10-31： https://github.com/magic76/lg-tv-companion/commit/81ea8e44c26634af365b8f2468ffde0146def9bf

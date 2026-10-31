@@ -7,4 +7,4 @@
 3. **synthetic-enterprise-evals**：透明盒中的虛構公司，含員工、郵件、會議、文件；外側 AI 助手測試任務，不接觸真實客戶資料。
 4. **a2ui**：Agent 送出結構化資料，經可信元件目錄組成卡片、表單、圖表；呈現 declarative UI 與雙向互動。
 5. **self-improving-automations**：自動化分析 issue、留言與合併結果，提出修改草稿，最後停在人類審核閘門前。
-6. **source-reply-pipeline**：主貼文分流到 Facebook／Threads，後接各自獨立的來源回覆與 idempotency token；發布管線示意。
+6. **source-reply-pipeline**：手機與智慧電視呈現媒體瀏覽器；獨立播放器彈窗收回原頁，旁有安全導向圖示，對應 LG TV Companion Android v1.4.29 的 WebView 修補。

@@ -19,7 +19,9 @@
 | 14:00 | AI 研究 | 用合成企業環境測試 Copilot | `content/queue/2026-11-01-synthetic-enterprise-evals.json` |
 | 16:00 | AI 工具 | A2UI 讓 Agent 回傳可控介面 | `content/queue/2026-11-01-a2ui.json` |
 | 19:00 | AI 應用 | 從結果改進 Copilot Automations | `content/queue/2026-11-01-self-improving-automations.json` |
-| 21:00 | 開發日常 | 把來源留言變成發布契約 | `content/queue/2026-11-01-source-reply-pipeline.json` |
+| 21:00 | 開發日常 | LG TV Companion 的播放器彈窗善後 | `content/queue/2026-11-01-source-reply-pipeline.json` |
+
+21:00 開發日常已依後續指示改為 LG TV Companion Android v1.4.29 的 WebView／導向處理，來源與兩平台首則回覆列於 Queue。
 
 六篇都包含 Facebook 與 Threads 完整文案、平台獨立固定 UUID v4 requestId，並設定 `status=ready_for_local_agent`、`mode=live`、`safety.publish_permitted=true`。
 
@@ -36,7 +38,7 @@
 | synthetic-enterprise-evals | 1254×1254 | `70d35aca4e01c91dfe790ff6312a1e14c632e57e41a71eb1fb854c6ee39a181b` |
 | a2ui | 1254×1254 | `438eeea2054a0c2cb9e58a820a63a0aaf38596212f33706f69d4b9947a449d5a` |
 | self-improving-automations | 1254×1254 | `ccf8c99608d4cdd69b163a5c7dd35883fbff88be77d97ef942f9fc01a978ad62` |
-| source-reply-pipeline | 1254×1254 | `aa9ad0229b7e1134d3341a385fbc56b0956fbf614dee566247810b0d0a36ac6f` |
+| source-reply-pipeline | 1254×1254 | `ce240f94dc1bca3dca4a60f68d80065ada2d0b17cdbffb2d031cb5b2d9a0d7d3` |
 
 每張均保存 JPEG、WebP 與無換行 canonical `.jpg.base64`；Queue validator 已確認 Base64 解碼 bytes、尺寸、格式和 SHA-256 一致。圖片由 OpenAI 內建 ImageGen 各自獨立生成，prompt 紀錄在 `content/reports/2026-11-01-image-prompts.md`。
 
