@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261101-source-reply-pipeline",
+  "created_date": "2026-11-01",
+  "title": "把來源留言變成發布契約",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {"date":"2026-11-01","time":"21:00","timezone":"Asia/Taipei"},
+  "networks": ["facebook", "threads"],
+  "source": {"publisher":"Crew Social Agent","published_date":"2026-11-01","url":"https://github.com/magic76/crew-social-agent"},
+  "image": {"format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-11-01-source-reply-pipeline.jpg.base64","width":1254,"height":1254,"sha256":"aa9ad0229b7e1134d3341a385fbc56b0956fbf614dee566247810b0d0a36ac6f","public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-01-source-reply-pipeline.jpg","alt":"貼文發布管線在主文後分別送出 Facebook 與 Threads 的首則來源回覆，並保存獨立識別碼。","original_webp_path":"content/queue/assets/2026-11-01-source-reply-pipeline.webp"},
+  "posts": {
+    "facebook": {"text":"今天把「參考來源放第一則留言」從寫作習慣，改成發布契約。\n\n只要 Queue 有 source 或 references，Facebook 和 Threads 都必須各自帶一則包含完整 URL 的 first reply，而且主文、留言、兩個平台各有自己的 requestId。\n\nPublisher 會先發主文，再送來源留言；如果網路中斷、結果不明，就停在 reconciliation，先查遠端，不會閉著眼睛重送。\n\n這類功能看起來只是多一則留言，實際上是在處理「主文成功、留言失敗」這種很日常的半套成功。\n\n嗯.....社群發文也是分散式系統，只是錯誤訊息比較會被看見。\n\n#開發日常 #Automation","requestId":"12b4daf1-33b8-4713-a4ce-a23c36273cb6"},
+    "threads": {"text":"今天把「來源放第一則留言」從習慣改成發布契約。\n\nQueue 只要有 source／references，Facebook 與 Threads 都要各帶完整 URL 的 first reply；主文和留言也各有獨立 requestId。\n\n若結果不明，Publisher 停在 reconciliation，先查遠端，不盲目重送。\n\n嗯.....社群發文也是分散式系統，只是錯誤訊息比較會被看見。\n\n#開發日常","requestId":"d66c4032-5ea4-4205-95c2-6d3239dd2992"}
+  },
+  "safety": {"publish_permitted":true,"reason":"Owner authorized the 2026-11-01 Crew Lab SI daily batch; publish only at the scheduled Taiwan time with fixed per-platform idempotency."},
+  "first_replies": {
+    "facebook": {"text":"參考來源：Crew Social Agent\nhttps://github.com/magic76/crew-social-agent","requestId":"bf5d1eb8-7f55-411f-b1db-39acb8661304"},
+    "threads": {"text":"參考來源：Crew Social Agent\nhttps://github.com/magic76/crew-social-agent","requestId":"2bcc4e69-582f-4bf8-a32d-844df3a78a06"}
+  }
+}

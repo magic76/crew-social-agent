@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261101-agent-eval-loop",
+  "created_date": "2026-11-01",
+  "title": "Agent 評估先看失敗樣本",
+  "category": "ai-practical-tip",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {"date":"2026-11-01","time":"12:00","timezone":"Asia/Taipei"},
+  "networks": ["facebook", "threads"],
+  "source": {"publisher":"Google Developers Blog","published_date":"2026-10-28","url":"https://developers.googleblog.com/en/hill-climbing-agent-quality-with-agents-cli-evaluation/"},
+  "image": {"format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-11-01-agent-eval-loop.jpg.base64","width":1254,"height":1254,"sha256":"b8fa4a86bb43c31f9c39cef3f872d0195972ad00b6139d5b57021d37f26e9d2f","public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-01-agent-eval-loop.jpg","alt":"工程師沿著生成、評分、比較、分析與改進的循環，逐步檢查 AI Agent 的失敗樣本。","original_webp_path":"content/queue/assets/2026-11-01-agent-eval-loop.webp"},
+  "posts": {
+    "facebook": {"text":"做 AI Agent 評估，有個很實用的順序：先整理失敗，再調提示詞。\n\nGoogle 的 Agents CLI 把流程拆成 generate、grade、compare、analyze、optimize。真正值得抄的不是指令，而是節奏：\n\n1. 固定一組測試輸入與期待結果\n2. 每次只改一件事\n3. 比較新舊版本\n4. 把失敗分群，找共同原因\n5. 排程重跑，避免今天修好、明天又壞\n\n只看平均分數，很容易得到一個看起來進步、但不知道哪裡進步的 Agent。\n\n嗯.....分數會鼓掌，失敗樣本才會講人話。\n\n#AI #Agent","requestId":"b0bb875a-9ea8-469c-b49f-12dbd692060d"},
+    "threads": {"text":"做 AI Agent 評估，先整理失敗，再調提示詞。\n\n可以照這個循環：固定測試輸入與期待結果 → 每次只改一件事 → 比較新舊版本 → 把失敗分群 → 排程重跑。\n\n只看平均分數，容易得到一個看起來進步、但不知道哪裡進步的 Agent。\n\n嗯.....分數會鼓掌，失敗樣本才會講人話。\n\n#AI #Agent","requestId":"5d80b199-d76f-43b1-8769-f7dbc4d11c47"}
+  },
+  "safety": {"publish_permitted":true,"reason":"Owner authorized the 2026-11-01 Crew Lab SI daily batch; publish only at the scheduled Taiwan time with fixed per-platform idempotency."},
+  "first_replies": {
+    "facebook": {"text":"參考來源：Google Developers Blog\nhttps://developers.googleblog.com/en/hill-climbing-agent-quality-with-agents-cli-evaluation/","requestId":"24c531a7-1035-4bb5-8fc7-fd4991d197af"},
+    "threads": {"text":"參考來源：Google Developers Blog\nhttps://developers.googleblog.com/en/hill-climbing-agent-quality-with-agents-cli-evaluation/","requestId":"59cc6680-306a-44ab-a0b5-aa7031fb3599"}
+  }
+}

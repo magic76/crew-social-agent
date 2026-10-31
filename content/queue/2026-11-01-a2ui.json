@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261101-a2ui",
+  "created_date": "2026-11-01",
+  "title": "A2UI 讓 Agent 回傳可控介面",
+  "category": "ai-tool",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {"date":"2026-11-01","time":"16:00","timezone":"Asia/Taipei"},
+  "networks": ["facebook", "threads"],
+  "source": {"publisher":"Google Developers Blog","published_date":"2026-10-29","url":"https://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/"},
+  "image": {"format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-11-01-a2ui.jpg.base64","width":1254,"height":1254,"sha256":"438eeea2054a0c2cb9e58a820a63a0aaf38596212f33706f69d4b9947a449d5a","public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-01-a2ui.jpg","alt":"AI Agent 以結構化資料描述介面，再由受信任的元件目錄渲染成卡片、表單與圖表。","original_webp_path":"content/queue/assets/2026-11-01-a2ui.webp"},
+  "posts": {
+    "facebook": {"text":"Agent 不只回一段文字，也可以回一個能操作的介面。\n\nGoogle 介紹的 A2UI，用宣告式資料描述卡片、表單和互動，前端再從自己的可信元件目錄渲染。重點是 Agent 傳的是結構，不是把一段陌生 JavaScript 直接塞進你的頁面。\n\n它還能跨框架，使用者在介面裡的操作也可以再回到 Agent，形成雙向流程。\n\n適合用在客服表單、審核面板、報價流程這類「只聊天不太夠」的場景。\n\n嗯.....AI 終於學會做表單了，請先不要讓它加第 47 個必填欄位。\n\n#AITools #A2UI","requestId":"724bf9c7-4315-4ecc-a4cc-773cc54411f4"},
+    "threads": {"text":"Agent 不只回文字，也可以回可操作介面。\n\nA2UI 用宣告式資料描述卡片、表單和互動，前端再從自己的可信元件目錄渲染。Agent 傳的是結構，不是陌生 JavaScript。\n\n它適合客服表單、審核面板、報價流程這類「只聊天不太夠」的場景。\n\n嗯.....請先不要讓它加第 47 個必填欄位。\n\n#AITools #A2UI","requestId":"f82544df-2076-4145-a788-7e47e9e68e65"}
+  },
+  "safety": {"publish_permitted":true,"reason":"Owner authorized the 2026-11-01 Crew Lab SI daily batch; publish only at the scheduled Taiwan time with fixed per-platform idempotency."},
+  "first_replies": {
+    "facebook": {"text":"參考來源：Google Developers Blog\nhttps://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/","requestId":"5d77ca86-7a4f-440a-b69e-ec02500adaa4"},
+    "threads": {"text":"參考來源：Google Developers Blog\nhttps://developers.googleblog.com/build-generative-ui-apps-with-a2ui-copilotkit-agents/","requestId":"6aa42710-cfdc-4ce1-921b-2441b4ecc611"}
+  }
+}

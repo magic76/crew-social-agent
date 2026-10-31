@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261101-training-preference-signal",
+  "created_date": "2026-11-01",
+  "title": "網站可用共同訊號表達 AI 訓練偏好",
+  "category": "ai-news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {"date":"2026-11-01","time":"10:00","timezone":"Asia/Taipei"},
+  "networks": ["facebook", "threads"],
+  "source": {"publisher":"OpenAI","published_date":"2026-10-30","url":"https://openai.com/index/helping-websites-express-ai-training-preferences/"},
+  "references": [
+    {"publisher":"IETF Datatracker","published_date":"2026-10-30","url":"https://datatracker.ietf.org/doc/html/draft-kelley-aipref-training-preference-signal"}
+  ],
+  "image": {"format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-11-01-training-preference-signal.jpg.base64","width":1254,"height":1254,"sha256":"eca1b1bcda885e43cef025d1c1455fbb252cbda708e160038a0011d6752fe4b7","public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-01-training-preference-signal.jpg","alt":"網站管理員在伺服器控制台設定 AI 訓練偏好，旁邊的機器人等待讀取共同訊號。","original_webp_path":"content/queue/assets/2026-11-01-training-preference-signal.webp"},
+  "posts": {
+    "facebook": {"text":"網站不想讓內容被拿去訓練 AI，之後可能不用再對每家公司各寫一套規則。\n\nOpenAI 10 月 30 日表示，未來幾個月會支援一個放在 robots.txt 的共同 AI 訓練偏好訊號。IETF 的草案做法，是用 `User-Agent: __usage_ai-training` 搭配 Allow／Disallow，讓網站按路徑表達偏好。\n\n要注意兩件事：它目前還是網路草案，不是正式 RFC；OpenAI 也說是「未來幾個月」才支援，不代表今天所有 AI 公司都會遵守。\n\n方向很合理：網站說一次，願意聽的人就不要假裝耳背。\n\n#AI #網站治理","requestId":"b7458fb8-864f-48ef-92e1-9c7311c69ea4"},
+    "threads": {"text":"網站表達 AI 訓練偏好，可能不用再對每家公司各寫一套規則。\n\nOpenAI 表示未來幾個月會支援 robots.txt 的共同訊號；IETF 草案用 `User-Agent: __usage_ai-training` 搭配 Allow／Disallow，讓網站按路徑表達偏好。\n\n但它目前仍是草案，不是正式 RFC，也不代表所有 AI 公司今天都會遵守。\n\n網站說一次，願意聽的人就不要假裝耳背。\n\n#AI","requestId":"220cabda-b42a-47f9-a5d3-4c41394988ef"}
+  },
+  "safety": {"publish_permitted":true,"reason":"Owner authorized the 2026-11-01 Crew Lab SI daily batch; publish only at the scheduled Taiwan time with fixed per-platform idempotency."},
+  "first_replies": {
+    "facebook": {"text":"參考來源：OpenAI\nhttps://openai.com/index/helping-websites-express-ai-training-preferences/\n\n參考草案：IETF Datatracker\nhttps://datatracker.ietf.org/doc/html/draft-kelley-aipref-training-preference-signal","requestId":"a8dd5591-a7f2-43dd-94c3-238fdfd37f38"},
+    "threads": {"text":"參考來源：OpenAI\nhttps://openai.com/index/helping-websites-express-ai-training-preferences/\n\n參考草案：IETF Datatracker\nhttps://datatracker.ietf.org/doc/html/draft-kelley-aipref-training-preference-signal","requestId":"e89fa85e-7e18-4d79-9662-dd2a498f7226"}
+  }
+}

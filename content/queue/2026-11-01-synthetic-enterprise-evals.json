@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261101-synthetic-enterprise-evals",
+  "created_date": "2026-11-01",
+  "title": "用合成企業環境測試 Copilot",
+  "category": "ai-research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {"date":"2026-11-01","time":"14:00","timezone":"Asia/Taipei"},
+  "networks": ["facebook", "threads"],
+  "source": {"publisher":"Microsoft Research","published_date":"2026-10-30","url":"https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/"},
+  "image": {"format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-11-01-synthetic-enterprise-evals.jpg.base64","width":1254,"height":1254,"sha256":"70d35aca4e01c91dfe790ff6312a1e14c632e57e41a71eb1fb854c6ee39a181b","public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-01-synthetic-enterprise-evals.jpg","alt":"一座由郵件、會議、文件和員工角色組成的合成公司，供 AI 在不接觸客戶資料下接受測試。","original_webp_path":"content/queue/assets/2026-11-01-synthetic-enterprise-evals.webp"},
+  "posts": {
+    "facebook": {"text":"不能拿真實公司的信件來反覆測 AI，那要怎麼知道它在企業環境裡可靠？\n\nMicrosoft Research 的做法，是建立合成企業 tenant：裡面有虛構員工、郵件、會議與文件，再用公開資料校準角色和工作流程。接著讓 Copilot 做摘要、找資料、列行動項目，檢查回答是否完整、正確而且有根據。\n\n官方表示，這套評估推動內部綜合品質指標比初始方法提高 39%。但這是特定系統與指標的內部結果，不能直接外推成所有企業 AI 都進步 39%。\n\n合成資料不是現實世界，不過至少可以重複測試，又不用先借客戶信箱。\n\n#AI研究 #Copilot","requestId":"2c1d57d4-adf1-4a23-bad3-d2d0b70f2706"},
+    "threads": {"text":"不能拿真實公司信件反覆測 AI，Microsoft Research 就建立合成企業 tenant：虛構員工、郵件、會議與文件，再讓 Copilot 做摘要、搜尋和列行動項目。\n\n官方稱內部綜合品質指標比初始方法提高 39%；這是特定系統的內部結果，不能直接外推。\n\n合成資料不等於現實，但可以重複測試，也不用先借客戶信箱。\n\n#AI研究","requestId":"1742264f-bfc1-4acd-a92b-29acd1283bc7"}
+  },
+  "safety": {"publish_permitted":true,"reason":"Owner authorized the 2026-11-01 Crew Lab SI daily batch; publish only at the scheduled Taiwan time with fixed per-platform idempotency."},
+  "first_replies": {
+    "facebook": {"text":"參考來源：Microsoft Research\nhttps://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/","requestId":"d76cbe53-09eb-4fb8-875e-37fae12d3065"},
+    "threads": {"text":"參考來源：Microsoft Research\nhttps://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/","requestId":"e1b6c0e0-1070-4cf8-bd15-97e8ad25517f"}
+  }
+}

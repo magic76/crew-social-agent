@@ -1,0 +1,15 @@
+date,content_id,platform,schedule_time,published_at,remote_url,non_follower_reach,shares,new_followers,website_clicks,followers_per_1000_non_follower_reach,status
+2026-11-01,crew-lab-20261101-training-preference-signal,facebook,10:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-training-preference-signal,threads,10:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-agent-eval-loop,facebook,12:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-agent-eval-loop,threads,12:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-synthetic-enterprise-evals,facebook,14:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-synthetic-enterprise-evals,threads,14:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-a2ui,facebook,16:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-a2ui,threads,16:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-self-improving-automations,facebook,19:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-self-improving-automations,threads,19:00,,,,,,,pending_local_publisher
+2026-11-01,crew-video-2026-11-01-synthetic-enterprise-evals,facebook,20:00,,,,,,,pending_local_publisher
+2026-11-01,crew-video-2026-11-01-synthetic-enterprise-evals,threads,20:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-source-reply-pipeline,facebook,21:00,,,,,,,pending_local_publisher
+2026-11-01,crew-lab-20261101-source-reply-pipeline,threads,21:00,,,,,,,pending_local_publisher

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "crew-video-2026-11-01-synthetic-enterprise-evals",
+  "created_date": "2026-11-01",
+  "status": "ready_for_video_publisher",
+  "publish_permitted": true,
+  "schedule": {"date":"2026-11-01","time":"20:00","timezone":"Asia/Taipei"},
+  "platforms": ["facebook", "threads"],
+  "title": "測 AI，也可以先開一間假的公司",
+  "source": {
+    "publisher":"Microsoft Research",
+    "published_date":"2026-10-30",
+    "title":"From synthetic enterprise data evaluations to real Microsoft 365 Copilot AI confidence",
+    "url":"https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+    "note":"影片說明合成 tenant 評估；不把內部指標外推為所有企業 AI 的表現。"
+  },
+  "media": {
+    "type":"video/mp4",
+    "path":"content/video-handoffs/assets/2026-11-01-synthetic-enterprise-evals.mp4",
+    "public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/2026-11-01-synthetic-enterprise-evals.mp4",
+    "size_bytes":3654313,
+    "sha256":"c89769c14a9a0c8e53c0530bc7f595f081b5c5bd8c97e55b7016438804bddfba",
+    "width":1080,"height":1920,"fps":30,"duration_seconds":40,
+    "alt_text":"繁體中文直式動畫短片，說明如何用虛構員工、郵件、會議和文件建立合成企業環境，評估 Copilot 的摘要、搜尋與行動項目。"
+  },
+  "narration": {
+    "provider":"Crew Web TTS Worker","model":"Gemini","voice":"Kore","language":"zh-TW",
+    "job_id":"crew-tts-synthetic-enterprise-brief-20261031",
+    "source_wav_url":"https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-synthetic-enterprise-brief-20261031",
+    "source_wav_duration_seconds":28.08,
+    "source_wav_sha256":"8dd3de825b1dbdec42c8d0935e52a4fbe15d74675fc17b482624475d8c79ea75",
+    "playback_rate":0.82,
+    "lead_in_seconds":1.5,
+    "pitch_preserved":true,
+    "captions":"burned Traditional Chinese captions; 5 synchronized cues"
+  },
+  "posts": {
+    "facebook": {"text":"不能拿真實公司的信件反覆測 AI，那要怎麼知道它在企業環境裡可靠？\n\nMicrosoft Research 建立合成企業 tenant：虛構員工、郵件、會議與文件，再讓 Copilot 做摘要、找資料和列行動項目。答案是否完整、正確、有根據，都可以重複核對。\n\n合成資料不等於真實世界，但測試過程不必先碰客戶資料。\n\n嗯.....原來測 AI，也可以先開一間假的公司。\n\n#AI研究 #Copilot","requestId":"74a30cc6-fe94-4fbd-a4a0-f9b129e00a0c"},
+    "threads": {"text":"不能拿真實公司信件反覆測 AI，Microsoft Research 就建立合成企業 tenant：虛構員工、郵件、會議與文件，再讓 Copilot 做摘要、搜尋和列行動項目。\n\n合成資料不等於真實世界，但可以重複核對，又不用先碰客戶資料。\n\n嗯.....測 AI，也可以先開一間假的公司。\n\n#AI研究","requestId":"461a9765-278f-440c-aa3d-bc80f787e730"}
+  },
+  "first_replies": {
+    "facebook": {"text":"參考來源：Microsoft Research\nhttps://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/","requestId":"43e3835e-6b94-4ef2-abe3-25a9ac9265af"},
+    "threads": {"text":"參考來源：Microsoft Research\nhttps://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/","requestId":"81bdd2a1-e44d-4245-a354-d2ab1229c702"}
+  },
+  "local_agent_note":"Owner authorized this verified handoff for Facebook Page Reels and Threads VIDEO at 20:00 Asia/Taipei. Pull main, preserve fixed requestIds, require SOCIAL_AGENT_MODE=live and valid platform credentials, publish each source URL as the first reply, and never downgrade the MP4 to an image or text post."
+}

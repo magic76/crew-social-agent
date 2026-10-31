@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261101-self-improving-automations",
+  "created_date": "2026-11-01",
+  "title": "Copilot Automations 從結果提出改寫建議",
+  "category": "ai-application",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {"date":"2026-11-01","time":"19:00","timezone":"Asia/Taipei"},
+  "networks": ["facebook", "threads"],
+  "source": {"publisher":"GitHub Changelog","published_date":"2026-10-28","url":"https://github.blog/changelog/2026-10-28-copilot-automations-now-learn-from-outcomes-and-self-improve/"},
+  "image": {"format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-11-01-self-improving-automations.jpg.base64","width":1254,"height":1254,"sha256":"ccf8c99608d4cdd69b163a5c7dd35883fbff88be77d97ef942f9fc01a978ad62","public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-01-self-improving-automations.jpg","alt":"自動化機器人分析標籤、留言和合併結果，提出提示詞改進草稿，最後由人類審核。","original_webp_path":"content/queue/assets/2026-11-01-self-improving-automations.webp"},
+  "posts": {
+    "facebook": {"text":"自動化跑久了，最麻煩的不是它不動，是它很穩定地做錯同一件事。\n\nGitHub Copilot Automations 現在會參考實際結果，例如 issue 標籤、留言和 PR 是否合併，分析哪些提示詞有效，再提出改寫建議。\n\n比較重要的安全閥是：建議不會自己套用，仍要人類審核。\n\n這種做法很適合有明確回饋訊號的流程，例如自動分類、產生修正 PR、整理維運工作。沒有可驗證的結果，AI 只是在研究大家按讚的表情。\n\n嗯.....會自我改進很好，會先送審更好。\n\n#GitHubCopilot #Automation","requestId":"16da62a7-a0bc-4a13-a4cf-4874d2054a7c"},
+    "threads": {"text":"自動化跑久了，最麻煩的不是它不動，是它穩定地做錯同一件事。\n\nGitHub Copilot Automations 會參考標籤、留言和 PR 是否合併，分析結果並提出提示詞改寫建議；建議不會自動套用，仍要人類審核。\n\n有可驗證結果，才叫學習；沒有的話，只是在研究大家按讚的表情。\n\n#GitHubCopilot","requestId":"409148af-55d8-4192-b05a-0994c09b1e19"}
+  },
+  "safety": {"publish_permitted":true,"reason":"Owner authorized the 2026-11-01 Crew Lab SI daily batch; publish only at the scheduled Taiwan time with fixed per-platform idempotency."},
+  "first_replies": {
+    "facebook": {"text":"參考來源：GitHub Changelog\nhttps://github.blog/changelog/2026-10-28-copilot-automations-now-learn-from-outcomes-and-self-improve/","requestId":"a6813d5a-70ee-461a-a1af-bb55c44abb36"},
+    "threads": {"text":"參考來源：GitHub Changelog\nhttps://github.blog/changelog/2026-10-28-copilot-automations-now-learn-from-outcomes-and-self-improve/","requestId":"c6eafd74-18d1-4738-b2b6-6f0ebc3738f3"}
+  }
+}

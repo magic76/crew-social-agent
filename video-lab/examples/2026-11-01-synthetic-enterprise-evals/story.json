@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "id": "synthetic-enterprise-evals-20261101",
+  "title": "測 AI，也可以先開一間假的公司",
+  "language": "zh-TW",
+  "kind": "explainer",
+  "video": {"width":1080,"height":1920,"fps":30,"duration":40},
+  "sources": [
+    {
+      "publisher":"Microsoft Research",
+      "title":"From synthetic enterprise data evaluations to real Microsoft 365 Copilot AI confidence",
+      "url":"https://www.microsoft.com/en-us/research/blog/from-synthetic-enterprise-data-evaluations-to-real-microsoft-copilot-ai-confidence/",
+      "published_date":"2026-10-30",
+      "note":"影片以示意動畫說明合成 tenant 評估，不把內部指標外推為所有企業 AI 的表現。"
+    }
+  ],
+  "scenes": [
+    {"id":"scene1","start":0,"duration":8,"title":"不能拿客戶信件測 AI","body":"那要怎麼知道它可靠？","narration":"不能用真實公司信件測 AI，怎麼知道它可靠？","visual":"真實資料庫鎖定，測試指標停在門外"},
+    {"id":"scene2","start":8,"duration":8,"title":"先生成一間不存在的公司","body":"員工、會議、郵件、文件","narration":"微軟先生成一間不存在的公司，裡面有員工、郵件、會議和文件。","visual":"合成企業樓層逐一建立角色與資料"},
+    {"id":"scene3","start":16,"duration":8,"title":"讓 Copilot 做日常任務","body":"摘要、搜尋、列行動項目","narration":"接著讓 Copilot 做摘要、找資料、列行動項目，","visual":"三張任務卡依序送進測試台"},
+    {"id":"scene4","start":24,"duration":8,"title":"答案要有根據","body":"完整 × 正確 × 可追溯","narration":"再檢查答案是否完整、正確而且有根據。合成資料不等於真實世界，","visual":"答案與合成文件逐項核對"},
+    {"id":"scene5","start":32,"duration":8,"title":"可重複，也不碰客戶資料","body":"合成環境不是現實，但能安全回歸測試","narration":"但可以重複測試，又不用碰客戶資料。嗯……測 AI，也可以先開一間假的公司。","visual":"重播按鈕、隱私鎖與小型公司模型收尾"}
+  ]
+}
