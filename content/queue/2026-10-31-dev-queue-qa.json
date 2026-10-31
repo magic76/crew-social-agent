@@ -6,19 +6,54 @@
   "category": "development-diary",
   "status": "ready_for_local_agent",
   "mode": "live",
-  "schedule": {"date":"2026-10-31","time":"21:00","timezone":"Asia/Taipei"},
-  "networks": ["facebook", "threads"],
-  "source": {"publisher":"Crew Lab SI","published_date":"2026-10-31","url":"https://github.com/magic76/crew-social-agent","note":"Development diary based on this repository's queue validation workflow; it does not claim platform publication before local Publisher receipts exist."},
+  "schedule": {
+    "date": "2026-10-31",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "source": {
+    "publisher": "Crew Lab SI",
+    "published_date": "2026-10-31",
+    "url": "https://github.com/magic76/crew-social-agent",
+    "note": "Development diary based on this repository's queue validation workflow; it does not claim platform publication before local Publisher receipts exist."
+  },
   "image": {
-    "format":"jpeg","storage":"base64-utf8","path":"content/queue/assets/2026-10-31-dev-queue-qa.jpg.base64",
-    "width":1254,"height":1254,"sha256":"84e7754850df71514601eb90412d24e60bceb805611681e0dc254813948360bf",
-    "public_url":"https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-dev-queue-qa.jpg",
-    "alt":"工程師與 AI 助手檢查內容輸送帶上的圖片、聲音、影片、雜湊與收據，空盒被擋下。",
-    "original_webp_path":"content/queue/assets/2026-10-31-dev-queue-qa.webp"
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-10-31-dev-queue-qa.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "84e7754850df71514601eb90412d24e60bceb805611681e0dc254813948360bf",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-10-31-dev-queue-qa.jpg",
+    "alt": "工程師與 AI 助手檢查內容輸送帶上的圖片、聲音、影片、雜湊與收據，空盒被擋下。",
+    "original_webp_path": "content/queue/assets/2026-10-31-dev-queue-qa.webp"
   },
   "posts": {
-    "facebook": {"text":"今天在整理自動發文流程，最花時間的不是寫六篇文。\n\n是證明那六篇真的存在。\n\n圖片要有原檔、JPEG、WebP、Base64，還要核對尺寸和 SHA。影片要確認配音、字幕、編碼、長度，最後再從 GitHub 抓回來比一次。\n\n少一個就不准把狀態改成 ready。\n\n整套流程看起來很龜毛，但至少 Agent 不能只回一句「完成」。\n\n嗯.....現在連我自己按完成，都覺得後面應該附張收據。","requestId":"ebfcd691-a6bc-4573-a615-ee63fef2858d"},
-    "threads": {"text":"今天整理自動發文流程，最花時間的不是寫六篇文。\n\n是證明那六篇真的存在。\n\n圖片要核對原檔、JPEG、WebP、Base64、尺寸和 SHA；影片要驗配音、字幕、編碼、長度，最後還要從 GitHub 抓回來比一次。\n\n少一個就不准 ready。\n\n嗯.....現在連我自己按完成，都覺得後面應該附張收據。","requestId":"bcf38ffc-4ca1-4e7a-b865-1a21ff96b3af"}
+    "facebook": {
+      "text": "今天在整理自動發文流程，最花時間的不是寫六篇文。\n\n是證明那六篇真的存在。\n\n圖片要有原檔、JPEG、WebP、Base64，還要核對尺寸和 SHA。影片要確認配音、字幕、編碼、長度，最後再從 GitHub 抓回來比一次。\n\n少一個就不准把狀態改成 ready。\n\n整套流程看起來很龜毛，但至少 Agent 不能只回一句「完成」。\n\n嗯.....現在連我自己按完成，都覺得後面應該附張收據。",
+      "requestId": "ebfcd691-a6bc-4573-a615-ee63fef2858d"
+    },
+    "threads": {
+      "text": "今天整理自動發文流程，最花時間的不是寫六篇文。\n\n是證明那六篇真的存在。\n\n圖片要核對原檔、JPEG、WebP、Base64、尺寸和 SHA；影片要驗配音、字幕、編碼、長度，最後還要從 GitHub 抓回來比一次。\n\n少一個就不准 ready。\n\n嗯.....現在連我自己按完成，都覺得後面應該附張收據。",
+      "requestId": "bcf38ffc-4ca1-4e7a-b865-1a21ff96b3af"
+    }
   },
-  "safety": {"publish_permitted":true,"reason":"Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."}
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner authorized the daily Crew Lab SI batch. Publish only at the scheduled Taiwan time with per-platform idempotency."
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Crew Lab SI\nhttps://github.com/magic76/crew-social-agent",
+      "requestId": "2e731ef0-13bb-48ee-a51e-769aac8731f4"
+    },
+    "threads": {
+      "text": "參考來源：Crew Lab SI\nhttps://github.com/magic76/crew-social-agent",
+      "requestId": "6b20feb1-2185-48d7-b793-145e804b03d2"
+    }
+  }
 }
