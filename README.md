@@ -38,7 +38,7 @@ Facebook Page token 被撤銷、失效或權限變動時，Agent 會記錄阻擋
 
 ## Queue 契約
 
-每篇 Queue JSON 需要唯一 `id`、`created_date`、`category`、`status`、`mode`、`networks`、平台文案及各平台固定 UUID `requestId`、圖片 `path`／`format`／尺寸／SHA-256、`schedule.date`／`time`／`timezone` 和 `safety.publish_permitted`。新聞類還需要來源 publisher、HTTPS URL 與來源日期。Threads 文案最多 500 字。
+每篇 Queue JSON 需要唯一 `id`、`created_date`、`category`、`status`、`mode`、`networks`、平台文案及各平台固定 UUID `requestId`、圖片 `path`／`format`／尺寸／SHA-256、`schedule.date`／`time`／`timezone` 和 `safety.publish_permitted`。新聞類還需要來源 publisher、HTTPS URL 與來源日期。有參考來源的文章需在 `first_replies` 為每個 network 提供首則留言、包含完整來源 URL，並使用獨立 UUID v4 `requestId`；多筆來源可使用 `references` 陣列。Threads 文案與回覆最多 500 字，Facebook 回覆最多 1000 字。
 
 Live 項目另需 `image.public_url`：Meta 伺服器要能直接以 HTTPS 讀取該圖片。預設只允許 `raw.githubusercontent.com`；若使用自己控制的公開 HTTPS 主機，將其 hostname 加到 `.env` 的 `SOCIAL_IMAGE_HOSTS`。附圖稿的圖片 Base64 SHA 必須正確，不能只交 URL。圖片不可讀、損毀、太小或 URL 缺少時，該平台保持 pending／blocked，不會降級成文字文。要發純文字必須明確使用 image:null。
 
@@ -108,7 +108,7 @@ pm2 resurrect
 
 ## 本地狀態與錯誤處理
 
-- 每個 `(post.id, network)` 有獨立持久紀錄；原子建立單一 publisher lock，避免同一工作目錄的多個程序併發發布。
+- 每個 `(post.id, network)` 有獨立持久紀錄；原子建立單一 publisher lock，避免同一工作目錄的多個程序併發發布。主文發布成功後，若 Queue 有 `first_replies[network]`，Agent 會立即發布首則留言。留言同樣先落盤 `sending`；若程序中斷或 Meta 回應不明，後續只核對遠端留言，不自動重送。
 - 發文呼叫前先落盤 `sending`。程序中斷或 API 結果不明會進入 `needs_reconciliation`，不自動重試。
 - FB 成功、Threads 失敗時只處理 Threads 的結果；Facebook 不會重發。
 - Token 缺少、過期、權限不足、rate limit、排程過期、圖片不合格會保留清楚的狀態與原因。
