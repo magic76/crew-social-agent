@@ -23,6 +23,19 @@
 
 六篇都包含 Facebook 與 Threads 正式文案、各平台獨立固定 UUID v4 requestId，並設定 `status=ready_for_local_agent`、`mode=live`、`safety.publish_permitted=true`。完整文案以 Queue JSON 為發布單一來源。
 
+## 首則來源回覆
+
+六篇來源文章均已在 Facebook 與 Threads 的 `first_replies` 欄位加入首則來源留言，每平台使用獨立 UUID v4 requestId。Local Publisher 會在主文成功後發布留言；若結果不明，只核對遠端留言並停在 reconciliation，不自動重送。此為 Queue 交接，**不是平台留言已發布的回執**。
+
+| 時間 | 來源 | Queue 中的來源連結 |
+|---|---|---|
+| 10:00 | OpenAI | https://openai.com/index/updated-model-spec/ |
+| 12:00 | OpenAI | https://openai.com/index/updated-model-spec/ |
+| 14:00 | arXiv | https://arxiv.org/abs/2610.39377 |
+| 16:00 | Google | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/ |
+| 19:00 | Anthropic | https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions |
+| 21:00 | Crew Social Agent | https://github.com/magic76/crew-social-agent |
+
 ## 六張正式圖片
 
 | slug | 尺寸 | JPEG SHA-256 |
