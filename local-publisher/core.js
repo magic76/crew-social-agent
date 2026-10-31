@@ -2,14 +2,16 @@ import {createHash, randomUUID} from 'node:crypto';
 import {mkdir, open, readFile, readdir, rename, unlink} from 'node:fs/promises';
 import {dirname,join, resolve} from 'node:path';
 import {inflateSync} from 'node:zlib';
-import {available, listPosts} from '../src/meta.js';
+import {available, listPosts, listComments, sendReply} from '../src/meta.js';
 import {sendImagePost} from '../src/local.js';
 
 export const NETWORKS = ['facebook', 'threads'];
 export const DEFAULT_STATE_DIR = '.crew-social-agent';
 const ID_RE = /^[a-z0-9][a-z0-9-]{11,99}$/;
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const UUID_V4_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const MAX_IMAGE_BYTES = 15 * 1024 * 1024;
+const FIRST_REPLY_REQUIRED_FROM = '2026-10-31';
 const fail = message => { throw new Error(message); };
 
 function uint24le(buf, offset) { return buf[offset] | (buf[offset + 1] << 8) | (buf[offset + 2] << 16); }
@@ -130,6 +132,29 @@ export function validateQueueEntry(entry, imageBytes, env = process.env) {
   if(!validDate(entry.created_date)) fail('Invalid created_date');
   if(typeof entry.category!=='string'||!entry.category.trim()) fail('Queue category is required');
   if(entry.category.toLowerCase().includes('news') && (!entry.source||!entry.source.publisher||!entry.source.url||!validDate(entry.source.published_date)||!/^https:\/\//i.test(entry.source.url))) fail('News items require publisher, HTTPS source URL, and published_date');
+  const references=[];
+  if(entry.source!==undefined){
+    const validSource=entry.source&&typeof entry.source==='object'&&typeof entry.source.publisher==='string'&&entry.source.publisher.trim()&&
+      typeof entry.source.url==='string'&&/^https:\/\//i.test(entry.source.url)&&validDate(entry.source.published_date);
+    if(!validSource&&(entry.category.toLowerCase().includes('news')||entry.created_date>=FIRST_REPLY_REQUIRED_FROM))
+      fail('Source requires publisher, HTTPS URL, and published_date');
+    if(validSource)references.push(entry.source.url);
+  }
+  if(entry.references!==undefined){
+    if(!Array.isArray(entry.references)||!entry.references.length)fail('references must be a non-empty array when provided');
+    for(const reference of entry.references){
+      if(!reference||typeof reference!=='object'||typeof reference.publisher!=='string'||!reference.publisher.trim()||
+        typeof reference.url!=='string'||!/^https:\/\//i.test(reference.url)||!validDate(reference.published_date))
+        fail('Each reference requires publisher, HTTPS URL, and published_date');
+      references.push(reference.url);
+    }
+  }
+  const firstReplies={};
+  if(entry.first_replies!==undefined&&(!entry.first_replies||typeof entry.first_replies!=='object'||Array.isArray(entry.first_replies)))
+    fail('first_replies must be an object keyed by network');
+  if(entry.first_replies){
+    for(const network of Object.keys(entry.first_replies))if(!NETWORKS.includes(network)||!entry.networks.includes(network))fail('first_replies contains an unsupported network');
+  }
   if(!entry.safety||typeof entry.safety.publish_permitted!=='boolean') fail('safety.publish_permitted must be a boolean');
   if(!validSchedule(entry.schedule)) fail('Schedule date, time, and timezone are required and must be valid');
   // Explicit image:null enables an intentional text-only post.
@@ -154,9 +179,21 @@ export function validateQueueEntry(entry, imageBytes, env = process.env) {
     if(!p||typeof p.text!=='string'||!p.text.trim()||p.text.trim().length>limit) fail(`Invalid ${network} text`);
     if(!UUID_RE.test(p.requestId||'')) fail(`Invalid ${network} requestId`);
     posts[network]={text:p.text.trim(),requestId:p.requestId};
+    const reply=entry.first_replies?.[network];
+    if(reply!==undefined){
+      const max=network==='threads'?500:1000;
+      if(!reply||typeof reply!=='object'||typeof reply.text!=='string'||!reply.text.trim()||reply.text.trim().length>max)
+        fail(`Invalid ${network} first reply text`);
+      if(!UUID_V4_RE.test(reply.requestId||''))fail(`Invalid ${network} first reply requestId; UUID v4 is required`);
+      const missing=Array.from(new Set(references)).filter(url=>!reply.text.includes(url));
+      if(missing.length)fail(`${network} first reply must include every reference URL`);
+      firstReplies[network]={text:reply.text.trim(),requestId:reply.requestId};
+    }else if(references.length&&entry.created_date>=FIRST_REPLY_REQUIRED_FROM){
+      fail(`${network} first reply is required when references are present`);
+    }
   }
   const liveImageUrl=entry.image!==null&&entry.mode==='live'&&entry.safety.publish_permitted ? validatePublicImageUrl(entry.image.public_url,env) : null;
-  return {entry,imageBytes,imageInfo:info,posts,liveImageUrl};
+  return {entry,imageBytes,imageInfo:info,posts,firstReplies,liveImageUrl};
 }
 
 function validTimezone(tz){try{new Intl.DateTimeFormat('en',{timeZone:tz}).format();return true;}catch{return false;}}
@@ -180,13 +217,22 @@ export async function ensureTask(stateDir, entry, network) {
   const path=taskPath(stateDir,entry.id,network);
   await ensureDir(dirname(path));
   const now=new Date().toISOString();
+  const firstReply=entry.first_replies?.[network];
   const initial={postId:entry.id,network,requestId:entry.posts[network].requestId,state:'pending',createdAt:now,
-    schedule:entry.schedule||null,text:entry.posts[network].text,remoteId:null,publicUrl:null,attempts:0};
+    schedule:entry.schedule||null,text:entry.posts[network].text,remoteId:null,publicUrl:null,attempts:0,
+    firstReply:firstReply?{...firstReply,state:'pending',remoteId:null,attempts:0}:null};
   try {const h=await open(path,'wx',0o600);try{await h.writeFile(JSON.stringify(initial,null,2)+'\n');await h.sync();}finally{await h.close();}return initial;}
   catch(e){
     if(e.code!=='EEXIST')throw e;
     const current=await readJson(path);
     if(current.requestId!==initial.requestId)fail('Queue requestId changed for an existing post/network; create a new post id');
+    if(firstReply){
+      if(current.firstReply&&(current.firstReply.requestId!==firstReply.requestId||current.firstReply.text!==firstReply.text))
+        fail('Queue first reply changed for an existing post/network; create a new post id');
+      if(!current.firstReply)return updateTask(stateDir,current,{firstReply:initial.firstReply});
+    }else if(current.firstReply?.state==='pending'){
+      return updateTask(stateDir,current,{firstReply:{...current.firstReply,state:'skipped',lastError:'FIRST_REPLY_REMOVED_FROM_QUEUE'}});
+    }
     return current;
   }
 }
@@ -283,7 +329,10 @@ async function lock(stateDir){
 }
 
 async function recoverInterrupted(stateDir){
-  for(const t of await allTasks(stateDir))if(t.state==='sending')await updateTask(stateDir,t,{state:'needs_reconciliation',lastError:'PROCESS_RESTARTED_DURING_SEND',reconciliationRequired:true});
+  for(const t of await allTasks(stateDir)){
+    if(t.state==='sending')await updateTask(stateDir,t,{state:'needs_reconciliation',lastError:'PROCESS_RESTARTED_DURING_SEND',reconciliationRequired:true});
+    else if(t.firstReply?.state==='sending')await updateTask(stateDir,t,{firstReply:{...t.firstReply,state:'needs_reconciliation',lastError:'PROCESS_RESTARTED_DURING_FIRST_REPLY',reconciliationRequired:true}});
+  }
 }
 
 function diagnostic(error){
@@ -296,7 +345,49 @@ function diagnostic(error){
   return msg.slice(0,240);
 }
 
-export async function runQueue({items,queueErrors=[],stateDir=DEFAULT_STATE_DIR,env=process.env,now=new Date(),send=sendImagePost,lookup=lookupPublished,fetcher=fetch,timezone=env.SOCIAL_TIMEZONE||'Asia/Taipei'}={}){
+async function publishFirstReply(task,{stateDir,env,now,fetcher,sendFirstReply,lookupFirstReplies}){
+  const reply=task.firstReply;
+  if(!reply||reply.state==='published'||reply.state==='skipped_expired'||reply.state==='skipped')
+    return {task,state:reply?.state||'not_configured',remoteId:reply?.remoteId||null};
+  if(!task.remoteId)return {task,state:'blocked',reason:'PARENT_POST_ID_MISSING'};
+  const startedAt=Date.parse(reply.startedAt||reply.createdAt||task.publishedAt||task.createdAt)-5*60*1000;
+  try{
+    const comments=await lookupFirstReplies(env,task.network,task.remoteId,fetcher);
+    const matches=comments.filter(comment=>comment.parentId===task.remoteId&&String(comment.text||'').trim()===reply.text&&
+      (!comment.timestamp||Date.parse(comment.timestamp)>=startedAt));
+    if(matches.length===1){
+      const next={...reply,state:'published',remoteId:matches[0].id,publishedAt:matches[0].timestamp||new Date(now).toISOString(),reconciliationRequired:false,lastError:null};
+      const updated=await updateTask(stateDir,task,{firstReply:next});
+      return {task:updated,state:'published',remoteId:next.remoteId,reconciled:true};
+    }
+    if(matches.length>1){
+      const next={...reply,state:'needs_reconciliation',reconciliationRequired:true,lastError:'MULTIPLE_FIRST_REPLY_MATCHES'};
+      const updated=await updateTask(stateDir,task,{firstReply:next});
+      return {task:updated,state:next.state,reason:next.lastError,matches:matches.length};
+    }
+    if(reply.state==='needs_reconciliation')
+      return {task,state:'needs_reconciliation',reason:'NO_FIRST_REPLY_MATCH; NOT_RETRYING',matches:0};
+  }catch(error){
+    if(reply.state==='needs_reconciliation')return {task,state:'needs_reconciliation',reason:diagnostic(error)};
+    const next={...reply,state:'needs_reconciliation',reconciliationRequired:true,lastError:diagnostic(error)};
+    const updated=await updateTask(stateDir,task,{firstReply:next});
+    return {task:updated,state:next.state,reason:next.lastError};
+  }
+  const sending={...reply,state:'sending',startedAt:new Date(now).toISOString(),attempts:(reply.attempts||0)+1,lastError:null};
+  let updated=await updateTask(stateDir,task,{firstReply:sending});
+  try{
+    const remoteId=await sendFirstReply(env,task.network,task.remoteId,reply.text,fetcher);
+    const published={...sending,state:'published',remoteId,publishedAt:new Date().toISOString(),reconciliationRequired:false,lastError:null};
+    updated=await updateTask(stateDir,updated,{firstReply:published});
+    return {task:updated,state:'published',remoteId};
+  }catch(error){
+    const unresolved={...sending,state:'needs_reconciliation',reconciliationRequired:true,lastError:diagnostic(error)};
+    updated=await updateTask(stateDir,updated,{firstReply:unresolved});
+    return {task:updated,state:unresolved.state,reason:unresolved.lastError};
+  }
+}
+
+export async function runQueue({items,queueErrors=[],stateDir=DEFAULT_STATE_DIR,env=process.env,now=new Date(),send=sendImagePost,lookup=lookupPublished,sendFirstReply=sendReply,lookupFirstReplies=listComments,fetcher=fetch,timezone=env.SOCIAL_TIMEZONE||'Asia/Taipei'}={}){
   const release=await lock(stateDir);
   try{
     await recoverInterrupted(stateDir);
@@ -312,7 +403,31 @@ export async function runQueue({items,queueErrors=[],stateDir=DEFAULT_STATE_DIR,
       for(const network of entry.networks){
         let task;
         try{task=await ensureTask(stateDir,entry,network);}catch(e){results.push({postId:entry.id,network,state:'blocked',reason:diagnostic(e)});continue;}
-        if(task.state==='published'||task.state==='skipped'||task.state==='skipped_expired'||task.state==='needs_reconciliation'){
+        if(task.state==='published'){
+          if(task.firstReply&&task.firstReply.state!=='published'&&task.firstReply.state!=='skipped'&&task.firstReply.state!=='skipped_expired'){
+            const override=await readOverride(stateDir,entry.id,network);
+            if(paused){results.push({postId:entry.id,network,state:'published',firstReplyState:'paused'});continue;}
+            if(entry.status!=='ready_for_local_agent'||entry.mode!=='live'||env.SOCIAL_AGENT_MODE!=='live'||entry.safety.publish_permitted!==true){
+              results.push({postId:entry.id,network,state:'published',firstReplyState:'pending',firstReplyReason:'LIVE_PUBLISH_NOT_PERMITTED'});continue;
+            }
+            if(task.firstReply.state==='pending'){
+              const timing=isScheduleDue(override.schedule||entry.schedule||task.schedule,now,timezone,late);
+              if(timing.state==='waiting'){results.push({postId:entry.id,network,state:'published',firstReplyState:'pending',firstReplyReason:'NOT_DUE',scheduledAt:timing.scheduledAt});continue;}
+              if(timing.state==='expired'){
+                const skipped={...task.firstReply,state:'skipped_expired',lastError:'FIRST_REPLY_SCHEDULE_EXPIRED'};
+                task=await updateTask(stateDir,task,{firstReply:skipped});
+                results.push({postId:entry.id,network,state:'published',firstReplyState:'skipped_expired'});continue;
+              }
+            }
+            const first=await publishFirstReply(task,{stateDir,env,now,fetcher,sendFirstReply,lookupFirstReplies});
+            task=first.task;
+            results.push({postId:entry.id,network,state:'published',remoteId:task.remoteId,publicUrl:task.publicUrl||null,firstReplyState:first.state,firstReplyRemoteId:first.remoteId||undefined,firstReplyReason:first.reason});
+            continue;
+          }
+          results.push({postId:entry.id,network,state:'published',remoteId:task.remoteId,publicUrl:task.publicUrl||null,firstReplyState:task.firstReply?.state||'not_configured'});
+          continue;
+        }
+        if(task.state==='skipped'||task.state==='skipped_expired'||task.state==='needs_reconciliation'){
           results.push({postId:entry.id,network,state:task.state,remoteId:task.remoteId||undefined});continue;
         }
         const override=await readOverride(stateDir,entry.id,network);
@@ -346,14 +461,18 @@ export async function runQueue({items,queueErrors=[],stateDir=DEFAULT_STATE_DIR,
           let postUrl=typeof sent==='object'?sent.url||'': '';
           if(!postUrl&&remoteId){try{postUrl=(await lookup(env,network,remoteId,fetcher))?.url||'';}catch{}}
           task=await updateTask(stateDir,task,{state:'published',remoteId,publicUrl:postUrl||null,publishedAt:new Date().toISOString(),reconciliationRequired:false,lastError:postUrl?null:'PUBLISHED_URL_LOOKUP_UNAVAILABLE'});
-          results.push({postId:entry.id,network,state:'published',remoteId,publicUrl:postUrl||null});
+          if(task.firstReply){
+            const first=await publishFirstReply(task,{stateDir,env,now,fetcher,sendFirstReply,lookupFirstReplies});
+            task=first.task;
+            results.push({postId:entry.id,network,state:'published',remoteId,publicUrl:postUrl||null,firstReplyState:first.state,firstReplyRemoteId:first.remoteId||undefined,firstReplyReason:first.reason});
+          }else results.push({postId:entry.id,network,state:'published',remoteId,publicUrl:postUrl||null});
         }catch(e){
           task=await updateTask(stateDir,task,{state:'needs_reconciliation',reconciliationRequired:true,lastError:diagnostic(e)});
           results.push({postId:entry.id,network,state:'needs_reconciliation',reason:diagnostic(e)});
         }
       }
     }
-    await atomicJson(join(resolve(stateDir),'last-run.json'),{finishedAt:new Date().toISOString(),resultCount:results.length,results:results.map(({postId,network,state,reason})=>({postId,network,state,reason}))});
+    await atomicJson(join(resolve(stateDir),'last-run.json'),{finishedAt:new Date().toISOString(),resultCount:results.length,results:results.map(({postId,network,state,reason,firstReplyState,firstReplyReason})=>({postId,network,state,reason,firstReplyState,firstReplyReason}))});
     return results;
   }finally{await release();}
 }
