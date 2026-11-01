@@ -31,5 +31,5 @@
 
 ## 編輯判斷
 
-本日資訊足夠，沒有用常青題材補位。六篇不重複；21:00 開發日常依後續指示改為檢視使用者的 LG TV Companion GitHub，描述 Android v1.4.29 最新提交中的獨立 WebView 彈窗、Pyppo 跳轉處理與 intent:// 備援解析；未聲稱有實機測試。
-- LG TV Companion v1.4.29 commit，2026-10-31： https://github.com/magic76/lg-tv-companion/commit/81ea8e44c26634af365b8f2468ffde0146def9bf
+本日資訊足夠，沒有用常青題材補位。六篇不重複；21:00 開發日常依後續指示改為介紹 LG TV Companion 手機 App 的觸控板遙控、Wi-Fi 喚醒條件與手機開網站／找公開影片串流等功能；沒有宣稱實機測試結果。
+- LG TV Companion 專案與安裝說明，repo 最新更新日期 2026-10-31：https://github.com/magic76/lg-tv-companion
