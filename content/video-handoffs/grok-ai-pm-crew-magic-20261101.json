@@ -2,10 +2,14 @@
   "schema_version": 1,
   "id": "grok-ai-pm-crew-magic-20261101",
   "created_date": "2026-11-01",
-  "status": "draft_handoff_only",
-  "publish_permitted": false,
-  "ready_for_video_publisher": false,
-  "schedule": null,
+  "status": "ready_for_video_publisher",
+  "publish_permitted": true,
+  "ready_for_video_publisher": true,
+  "schedule": {
+    "date": "2026-11-01",
+    "time": "17:37",
+    "timezone": "Asia/Taipei"
+  },
   "platforms": [
     "facebook",
     "threads"
@@ -70,5 +74,5 @@
       "requestId": "9f2f311c-22ba-41ac-a610-d776dff896ff"
     }
   },
-  "local_agent_note": "This is a verified draft only. Do not post: publish_permitted remains false and ready_for_video_publisher remains false by owner instruction. When the owner authorizes publishing, set the approved schedule and both gate fields, then use SOCIAL_AGENT_MODE=live with valid Facebook and Threads credentials. Keep the fixed requestIds and publish the MP4 as video."
+  "local_agent_note": "Owner authorized immediate publication on 2026-11-01 Asia/Taipei. Publish the verified MP4 to Facebook and Threads independently, preserving requestIds and per-platform idempotency."
 }
