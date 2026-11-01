@@ -49,7 +49,7 @@
     "intentional_closing_hold_seconds": 2.7,
     "decoded_output_audio_seconds": 50.730667,
     "sync_method": "Each original 24 kHz mono WAV cross-correlated against decoded final AAC around its expected timeline offset.",
-    "max_abs_voice_offset_seconds": 0.0,
+    "max_abs_voice_offset_seconds": 0,
     "min_normalized_correlation": 0.9983,
     "per_scene_alignment": [
       {
@@ -57,7 +57,7 @@
         "job_id": "crew-tts-grok-ai-pm-s1-20261101",
         "voice_start_seconds": 0.45,
         "voice_duration_seconds": 4.8,
-        "measured_offset_seconds": 0.0,
+        "measured_offset_seconds": 0,
         "normalized_correlation": 0.9983
       },
       {
@@ -65,7 +65,7 @@
         "job_id": "crew-tts-grok-ai-pm-s2-20261101",
         "voice_start_seconds": 6.75,
         "voice_duration_seconds": 5.52,
-        "measured_offset_seconds": 0.0,
+        "measured_offset_seconds": 0,
         "normalized_correlation": 0.9992
       },
       {
@@ -73,7 +73,7 @@
         "job_id": "crew-tts-grok-ai-pm-s3-20261101",
         "voice_start_seconds": 13.77,
         "voice_duration_seconds": 6.12,
-        "measured_offset_seconds": 0.0,
+        "measured_offset_seconds": 0,
         "normalized_correlation": 0.9986
       },
       {
@@ -81,7 +81,7 @@
         "job_id": "crew-tts-grok-ai-pm-s4-20261101",
         "voice_start_seconds": 21.39,
         "voice_duration_seconds": 6.04,
-        "measured_offset_seconds": 0.0,
+        "measured_offset_seconds": 0,
         "normalized_correlation": 0.9995
       },
       {
@@ -89,7 +89,7 @@
         "job_id": "crew-tts-grok-ai-pm-s5-20261101",
         "voice_start_seconds": 28.93,
         "voice_duration_seconds": 3.44,
-        "measured_offset_seconds": 0.0,
+        "measured_offset_seconds": 0,
         "normalized_correlation": 0.9994
       },
       {
@@ -97,7 +97,7 @@
         "job_id": "crew-tts-grok-ai-pm-s6-20261101",
         "voice_start_seconds": 33.87,
         "voice_duration_seconds": 6.36,
-        "measured_offset_seconds": 0.0,
+        "measured_offset_seconds": 0,
         "normalized_correlation": 0.9987
       },
       {
@@ -105,7 +105,7 @@
         "job_id": "crew-tts-grok-ai-pm-s7-20261101",
         "voice_start_seconds": 41.73,
         "voice_duration_seconds": 6.32,
-        "measured_offset_seconds": 0.0,
+        "measured_offset_seconds": 0,
         "normalized_correlation": 0.9993
       }
     ],
@@ -350,11 +350,15 @@
   "publication": {
     "status": "draft_handoff_only",
     "publish_permitted": false,
-    "public_download_url_verification": "pending_until_commit",
+    "public_download_url_verification": "pending_independent_download",
     "ready_for_video_publisher": false,
-    "public_download_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/grok-ai-pm-crew-magic-20261101.mp4"
+    "public_download_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/grok-ai-pm-crew-magic-20261101.mp4",
+    "remote_git_blob_sha": "6526a656d84107f545b9819e19e70389f6978d61",
+    "remote_git_tree_verification": "confirmed_on_main_matching_local_git_blob"
   },
   "limitations": [
-    "The Worker applies one fixed natural, warm, calm Taiwan Mandarin style; scene-by-scene emotional notes are editorial direction and are not separately controlled by the Worker."
+    "The Worker applies one fixed natural, warm, calm Taiwan Mandarin style; scene-by-scene emotional notes are editorial direction and are not separately controlled by the Worker.",
+    "Recovery QA independently repeated full decoding and audio correlation, and sampled scene captions; it did not independently transcribe or listen to the narration.",
+    "Public raw download was not independently fetched in the recovery environment; verify its downloaded SHA-256 before publication."
   ]
 }
