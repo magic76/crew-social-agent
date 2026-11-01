@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "grok-ai-pm-crew-magic-20261101",
+  "created_date": "2026-11-01",
+  "status": "draft_handoff_only",
+  "publish_permitted": false,
+  "ready_for_video_publisher": false,
+  "platforms": [
+    "facebook",
+    "threads"
+  ],
+  "project_path": "video-lab/work/grok-ai-pm-20261101",
+  "media": null,
+  "qa_status": "not_verified",
+  "voice_status": "queued_not_verified",
+  "note": "Blocked handoff; no verified voiced MP4 URL. Local agent must not post until all checks and explicit authorization pass."
+}
