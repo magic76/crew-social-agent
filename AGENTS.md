@@ -15,6 +15,6 @@ Read [skills/crew-social-agent/SKILL.md](skills/crew-social-agent/SKILL.md). Nev
 
 ## Boundaries
 - Never commit API keys, Meta tokens, generated voice secrets or private data.
-- Keep generated MP4, temp files, downloaded dependencies, caches out of Git.
+- Keep temp files, downloaded dependencies and caches out of Git. Generated MP4 and voice assets may be committed only when the owner requests a repository-hosted video handoff and the materials are suitable for that repository's visibility; otherwise keep them out of Git.
 - Prefer source-backed educational accuracy; no invented demonstrations, tests or statistics.
 - Do not change existing social Queue entries or Meta publication logic for a video request unless explicitly requested.

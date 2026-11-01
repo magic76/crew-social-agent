@@ -22,6 +22,12 @@ This is the canonical entry point. Read the entire Skill before creating videos.
 - Narrative: what happened / how it works / why it matters / one takeaway. Distinguish explanatory illustration from an actual reconstruction.
 - Use sourced facts, not model speculation. Headlines and numerical claims must be fact checked.
 - Generate distinct production IDs/slugs. Never replace other video projects without approval.
+- For Crew Lab SI handoffs, default to a voiced MP4 with Traditional Chinese captions, Facebook and Threads copy, downloadable media, source files and honest QA. Keep the handoff a draft for the owner's local agent unless the owner authorizes publication; an explicit request overrides these defaults.
+
+## Resume and recover interrupted work
+- Before restarting, inspect current remote HEAD, project and handoff history, Library, attachments and any accessible prior working directories and local commits. A previous workspace may be inaccessible; do not equate inaccessibility with loss. Avoid overwriting newer remote or uncommitted work.
+- Inventory existing final MP4, scene WAVs, subtitles, story, rendering sources, QA and social copy. Verify recovered assets before using them. Prefer an existing verified final; otherwise restore from the surviving sources and regenerate only the missing or defective parts.
+- Save recoverable checkpoints and the completed MP4 promptly to durable, accessible storage, and commit the agreed project/handoff assets to the repository. Check the real remote head and commit outcome, not just a local commit. Provide a usable download link, SHA-256, QA and actual remaining limitations; do not report completion before these are available.
 
 ## Starting a new video
 Copy video-lab/examples/permissions-101 to a unique folder in video-lab/work/<slug>. Change story.json and index.html together. Run:
@@ -46,4 +52,4 @@ A completed video must have story.json, index.html, source/credit ledger, option
 
 ### Narration automation
 
-After the silent video has been rendered, run `node scripts/video-voice.mjs PATH --provider=gemini --video=/absolute/path/original.mp4 --out=/absolute/path/narrated.mp4` using a local `GEMINI_API_KEY`. Read `skills/crew-video-audio/SKILL.md`; do not truncate audio or treat the local eSpeak synthetic smoke test as production-quality Mandarin. Check subtitle track and mix before delivery.
+Read `skills/crew-video-audio/SKILL.md` and choose the available authorized Crew Web TTS queue or local Gemini CLI. Measure scene WAVs before finalizing scene timing, captions and render; do not truncate audio or treat the local eSpeak synthetic smoke test as production-quality Mandarin. Check subtitles, mix and final output before delivery.

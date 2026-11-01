@@ -10,4 +10,4 @@ Canonical upstream: https://github.com/remotion-dev/skills
 Official command: npx skills add remotion-dev/skills
 Start from official scaffolding: npx create-video@latest --yes --blank my-video. Then read upstream remotion-best-practices, remotion-create, remotion-markup, remotion-render and remotion-captions.
 
-Retain Crew Video Lab's own research, story, claims/credits, caption and QA requirements. Do not copy Remotion upstream skill content into this repo (it evolves separately). Check software licensing before monetization or commercial-scale use. Export actual 1080×1920 MP4 plus media metadata; no video Social publisher is assumed.
+Retain Crew Video Lab's own research, story, claims/credits, caption and QA requirements. Do not copy Remotion upstream skill content into this repo (it evolves separately). Check software licensing before monetization or commercial-scale use. Export an actual 1080×1920 MP4 plus media metadata and follow [../crew-video-handoff/SKILL.md](../crew-video-handoff/SKILL.md) for the separate local video publisher.
