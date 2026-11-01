@@ -33,11 +33,11 @@
   },
   "posts": {
     "facebook": {
-      "text": "最近把 LG TV Companion 的手機 App 整理到一個程度，家裡那支遙控器開始有點危險。\n\n手機和電視連同一個 Wi-Fi，遙控器頁就能當觸控板：滑動移游標、點一下選取、雙指捲動。手機 App 要保持開著，因為它負責搭橋。Wi-Fi 喚醒要電視接著電源、開啟「Mobile TV On → Turn on via Wi-Fi」；能不能成功還看電視韌體和路由器。想開網站或找影片，也能從手機操作，再把支援的公開影片串流投到電視。\n\n三張 App 畫面合成一張，專案和安裝說明在這裡：\nhttps://github.com/magic76/lg-tv-companion\n\n嗯.....我的遙控器可以退休了。\n\n#開發日常 #LGwebOS",
+      "text": "最近把 LG TV Companion 的手機 App 整理到一個程度，家裡那支遙控器開始有點危險。\n\n手機和電視連同一個 Wi-Fi，進入遙控器分頁就會自動連上觸控板：滑動移游標、點一下選取、雙指捲動。切到背景時觸控板會暫停，回到遙控器分頁就會恢復。Wi-Fi 喚醒要電視接著電源、開啟「Mobile TV On → Turn on via Wi-Fi」；能不能成功還看電視韌體和路由器。想開網站或找影片，也能從手機操作，再把支援的公開影片串流投到電視。\n\n三張 App 畫面合成一張，專案和安裝說明在這裡：\nhttps://github.com/magic76/lg-tv-companion\n\n嗯.....我的遙控器可以退休了。\n\n#開發日常 #LGwebOS",
       "requestId": "12b4daf1-33b8-4713-a4ce-a23c36273cb6"
     },
     "threads": {
-      "text": "LG TV Companion 的手機 App 最近整理到一個程度，家裡那支遙控器開始有點危險。\n\n手機和電視連同一個 Wi-Fi，遙控器頁就是觸控板：滑動移游標、點一下選取、雙指捲動；手機 App 要保持開著負責搭橋。Wi-Fi 喚醒需電視接著電源、開啟「Mobile TV On → Turn on via Wi-Fi」，實際效果看韌體和路由器。手機也能開網站、找影片，再把支援的公開串流投到電視。\n\n三張 App 畫面合成一張。專案和安裝：https://github.com/magic76/lg-tv-companion\n\n嗯.....我的遙控器可以退休了。",
+      "text": "LG TV Companion 的手機 App 最近整理到一個程度，家裡那支遙控器開始有點危險。\n\n手機和電視連同一個 Wi-Fi，進入遙控器分頁就會自動連上觸控板：滑動移游標、點一下選取、雙指捲動；切到背景會暫停，回到遙控器分頁就恢復。Wi-Fi 喚醒需電視接著電源、開啟「Mobile TV On → Turn on via Wi-Fi」，實際效果看韌體和路由器。手機也能開網站、找影片，再把支援的公開串流投到電視。\n\n三張 App 畫面合成一張。專案和安裝：https://github.com/magic76/lg-tv-companion\n\n嗯.....我的遙控器可以退休了。",
       "requestId": "d66c4032-5ea4-4205-95c2-6d3239dd2992"
     }
   },
