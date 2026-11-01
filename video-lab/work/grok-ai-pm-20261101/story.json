@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "id": "grok-ai-pm-crew-magic-20261101",
+  "title": "我怎麼用 Grok 管理 ChatGPT 寫程式",
+  "language": "zh-TW",
+  "kind": "personal-workflow",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 59
+  },
+  "sources": [
+    {
+      "publisher": "Crew Lab SI",
+      "title": "Crew Magic 個人作品",
+      "url": "https://www.3sssi.com/magic",
+      "note": "個人作品連結，工作流程依使用者親述，畫面非操作實錄。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene1",
+      "start": 0,
+      "duration": 8,
+      "title": "我讓 Grok 當 AI 監工",
+      "body": "ChatGPT 負責開發，Grok 負責驗收。",
+      "narration": "我最近讓 Grok 當監工，ChatGPT 當工程師。",
+      "visual": "animated workflow diagram",
+      "emotion_direction": "好奇，有驚喜感，強調「監工」"
+    },
+    {
+      "id": "scene2",
+      "start": 8,
+      "duration": 9,
+      "title": "我只說目標，Grok 幫我拆任務",
+      "body": "一句想法，變成能執行的任務。",
+      "narration": "我說出想做的功能，Grok 拆成任務，交給 ChatGPT 寫程式。",
+      "visual": "animated workflow diagram",
+      "emotion_direction": "帶點期待，節奏明快"
+    },
+    {
+      "id": "scene3",
+      "start": 17,
+      "duration": 9,
+      "title": "寫完還不算，先通過驗收",
+      "body": "測試、畫面、互動流程，逐一檢查。",
+      "narration": "寫完不是就算了。Grok 還會看測試、檢查畫面，找出問題。",
+      "visual": "animated workflow diagram",
+      "emotion_direction": "強調「不是就算了」，接著俐落"
+    },
+    {
+      "id": "scene4",
+      "start": 26,
+      "duration": 8,
+      "title": "發現問題？再交回去修",
+      "body": "修改 → 測試 → 再驗證",
+      "narration": "找到問題，再請 ChatGPT 修。修完繼續驗收，直到結果能用。",
+      "visual": "animated workflow diagram",
+      "emotion_direction": "篤定，節奏逐漸加快"
+    },
+    {
+      "id": "scene5",
+      "start": 34,
+      "duration": 8,
+      "title": "Crew Magic 就是一個例子",
+      "body": "一輪輪修正，讓成果更完整。",
+      "narration": "我的 Crew Magic，就是這樣一步步改出來的。",
+      "visual": "animated workflow diagram",
+      "emotion_direction": "分享成果，有成就感"
+    },
+    {
+      "id": "scene6",
+      "start": 42,
+      "duration": 9,
+      "title": "最大的差別：少驗收很多",
+      "body": "大部分檢查，先由 Grok 接手。",
+      "narration": "以前 AI 寫完，我還要花好多時間自己驗收。現在 Grok 先做掉大半。",
+      "visual": "animated workflow diagram",
+      "emotion_direction": "前半微微無奈，後半輕鬆有感"
+    },
+    {
+      "id": "scene7",
+      "start": 51,
+      "duration": 8,
+      "title": "我決定方向，AI 團隊負責完成",
+      "body": "最後，我只需要確認成果。",
+      "narration": "我專心決定方向，再確認最後成果。這才像有一個真的 AI 團隊。",
+      "visual": "animated workflow diagram",
+      "emotion_direction": "自信、自然收尾"
+    }
+  ]
+}
