@@ -1,0 +1,44 @@
+{
+  "model": "gemini-3.8-flash-tts",
+  "voice": "Kore",
+  "status": "queued_not_verified",
+  "queue_path": "content/video-tts/requests/index.json",
+  "result_endpoint": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result",
+  "jobs": [
+    {
+      "scene": "scene1",
+      "id": "crew-tts-grok-ai-pm-s1-20261101",
+      "desired_emotion": "好奇"
+    },
+    {
+      "scene": "scene2",
+      "id": "crew-tts-grok-ai-pm-s2-20261101",
+      "desired_emotion": "期待"
+    },
+    {
+      "scene": "scene3",
+      "id": "crew-tts-grok-ai-pm-s3-20261101",
+      "desired_emotion": "俐落"
+    },
+    {
+      "scene": "scene4",
+      "id": "crew-tts-grok-ai-pm-s4-20261101",
+      "desired_emotion": "篤定"
+    },
+    {
+      "scene": "scene5",
+      "id": "crew-tts-grok-ai-pm-s5-20261101",
+      "desired_emotion": "開心"
+    },
+    {
+      "scene": "scene6",
+      "id": "crew-tts-grok-ai-pm-s6-20261101",
+      "desired_emotion": "放鬆"
+    },
+    {
+      "scene": "scene7",
+      "id": "crew-tts-grok-ai-pm-s7-20261101",
+      "desired_emotion": "滿意"
+    }
+  ]
+}
