@@ -4,7 +4,7 @@ Read the relevant Skill before editing this repository. These instructions apply
 
 ## Video creation
 When asked to make science explainers, tutorials, HTML animations, voice-over videos or short-form Reels:
-1. Start with [skills/crew-video-lab/SKILL.md](skills/crew-video-lab/SKILL.md).
+1. Start with [skills/crew-video-lab/SKILL.md](skills/crew-video-lab/SKILL.md). New daily explainers must then use [Crew Light v1](content/video-style/STYLE.md) and `node scripts/video-lab.mjs style PROJECT`; its light palette, Kore voice and caption/motion rules supersede older visual defaults. Existing videos remain renderable without conversion.
 2. Follow the specialist Skills for research, storyboard, HTML animation, audio/captions, QA and delivery.
 3. Use the starter under video-lab/examples/permissions-101; adapt the topic but keep timing and QA constraints.
 4. HyperFrames is the default renderer, Remotion is a documented fallback. Install upstream framework Skills from their official repository only when needed.

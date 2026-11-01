@@ -1,3 +1,7 @@
+## 每日影片固定風格
+
+新影片先讀 [Crew Light v1](../content/video-style/STYLE.md)，使用 `node scripts/video-lab.mjs style PROJECT` 建立共用模板，再沿用下面的驗證、Gemini WAV 與 FFmpeg 流程。歷史專案無須改寫。範例位於 `content/video-style/samples/`，不屬於發布 Queue。
+
 # Crew Video Lab — HTML 科普／教學影片製作
 
 這套功能收在既有 magic76/crew-social-agent，但**不修改現有 FB/Threads 圖片或文字發文 API**。目的是讓任何 clone 此 repo 的 Agent 都能讀 Skill，以一致方式從議題查證一路做出短片。

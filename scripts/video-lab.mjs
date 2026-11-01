@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+import {buildStyle} from './video-style.mjs';
 import {readFile,stat} from 'node:fs/promises';
 import {spawnSync} from 'node:child_process';
 import {resolve,join} from 'node:path';
@@ -32,7 +33,8 @@ export async function validateProject(dir){
 async function main(){
   const action=process.argv[2]||'help';
   const folder=resolve(process.argv[3]||'video-lab/examples/permissions-101');
-  if(action==='help'){console.log('Usage: node scripts/video-lab.mjs validate|check|preview|render [folder]');return;}
+  if(action==='style'){await buildStyle(folder);console.log('Crew Light style created:',folder);return;}
+  if(action==='help'){console.log('Usage: node scripts/video-lab.mjs style|validate|check|preview|render [folder]');return;}
   if(!['validate','check','preview','render'].includes(action))fail('Unknown command');
   const verified=await validateProject(folder);console.log(JSON.stringify({story:'valid',...verified},null,2));
   if(action==='validate')return;

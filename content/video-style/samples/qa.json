@@ -1,0 +1,29 @@
+{
+  "base_revision": "c3a45a5437cf2f5dd6d47574b05c1591c3e6f849",
+  "renderer": "HyperFrames 0.8.226 + FFmpeg",
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "duration": 30.2,
+  "sha256": "bcc8ee837be91f7dc8f7ec6fc64b892076e0539fee42fc193f0f528c840a7823",
+  "bytes": 5200056,
+  "checks": {
+    "story_validate": "passed",
+    "hyperframes_check": "passed with nonblocking warnings; see check-summary.txt",
+    "full_decode": "passed, zero stderr",
+    "keyframes": {
+      "times": [
+        1,
+        15,
+        29
+      ],
+      "review": "passed; title wrapping corrected"
+    },
+    "audio": "AAC; original Kore WAV complete; padded tail",
+    "source_audio_correlation": 0.9988508967795869,
+    "tests": "37 passed",
+    "independent_listening_or_transcription": "not_verified",
+    "caption_word_alignment": "estimated from original script; not_verified"
+  },
+  "publication": "style sample only; no Queue or handoff created"
+}

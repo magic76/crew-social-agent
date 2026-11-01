@@ -1,0 +1,44 @@
+HyperFrames 0.8.226
+
+Lint
+  ⚠ nested_structure_needs_subcomposition: <section id="scene1"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    /workspace/scratch/c0e2c3723431/repo/content/video-style/samples/index.html #scene1 t=0s
+    Fix: Move <section id="scene1"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <section id="scene2"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    /workspace/scratch/c0e2c3723431/repo/content/video-style/samples/index.html #scene2 t=0s
+    Fix: Move <section id="scene2"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <section id="scene3"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    /workspace/scratch/c0e2c3723431/repo/content/video-style/samples/index.html #scene3 t=0s
+    Fix: Move <section id="scene3"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <section id="scene4"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    /workspace/scratch/c0e2c3723431/repo/content/video-style/samples/index.html #scene4 t=0s
+    Fix: Move <section id="scene4"> and its contents into a sub-composition file and mount it with data-composition-src.
+  ⚠ nested_structure_needs_subcomposition: <section id="scene5"> is a timeline element that contains nested <div>. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.
+    /workspace/scratch/c0e2c3723431/repo/content/video-style/samples/index.html #scene5 t=0s
+    Fix: Move <section id="scene5"> and its contents into a sub-composition file and mount it with data-composition-src.
+  0 error(s), 5 warning(s), 0 info(s)
+
+Runtime
+  ◇ 0 errors, 0 warnings
+
+Layout
+  ◇ 0 issues across 9 sample(s)
+
+Motion
+  ◇ 0 errors, 0 warnings
+
+Contrast
+  ◇ 58/58 text checks pass WCAG AA
+
+Craft
+  ⚠ line_unread: "不能用真實公司信件測 AI，" (7 words) is on screen 1.90 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.
+    index.html #caption-0 t=0.141s
+  0 error(s), 1 warning(s), 0 info(s)
+
+Audio
+  ◇ 0 errors, 0 warnings
+
+Snapshots
+  ◇ disabled
+
+◇  Check passed

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">Crew greets you</title><desc id="desc">Original Crew mascot: a soft black circular body, large white eyes and floating hands. Transparent background.</desc>
+<g fill="#171719"><g id="body"><path d="M246 127C321 127 361 179 361 253C361 330 320 383 246 383C172 383 131 330 131 253C131 179 171 127 246 127Z"/></g><g id="eyes" class="eye"><ellipse cx="203" cy="224" rx="34" ry="47" fill="white"/><ellipse cx="289" cy="224" rx="34" ry="47" fill="white"/><ellipse cx="211" cy="225" rx="13" ry="22"/><ellipse cx="297" cy="225" rx="13" ry="22"/></g><path d="M224 294 Q246 315 270 292" fill="none" stroke="white" stroke-width="11" stroke-linecap="round"/>
+<g id="left-hand" class="hand"><ellipse cx="103" cy="311" rx="25" ry="32" transform="rotate(-30 103 311)"/></g>
+<g id="right-hand" class="hand" transform="rotate(18 405 170)"><path d="M378 193V143Q378 132 387 132Q395 132 395 143V158V115Q395 104 404 104Q412 104 412 115V157V123Q412 112 420 112Q429 112 429 123V167L438 155Q446 147 452 154Q459 160 452 170L431 205Q423 219 405 220Q382 219 378 193Z"/></g><g id="gesture" fill="none" stroke="#9EAEEC" stroke-width="8" stroke-linecap="round"><path d="M373 89L364 72M443 87L451 72M466 117L484 110"/></g></g>
+</svg>
