@@ -4,8 +4,8 @@
   "created_date": "2026-11-01",
   "title": "LG TV Companion：我的遙控器可以退休了",
   "category": "development-diary",
-  "status": "ready_for_local_agent",
-  "mode": "live",
+  "status": "draft",
+  "mode": "dry_run",
   "schedule": {
     "date": "2026-11-01",
     "time": "21:00",
@@ -42,8 +42,8 @@
     }
   },
   "safety": {
-    "publish_permitted": true,
-    "reason": "Owner authorized the 2026-11-01 Crew Lab SI daily batch; publish only at the scheduled Taiwan time with fixed per-platform idempotency."
+    "publish_permitted": false,
+    "reason": "Superseded by crew-lab-20261102-lg-tv-companion; original ID retained for audit after its first reply changed."
   },
   "first_replies": {
     "facebook": {
@@ -54,5 +54,6 @@
       "text": "專案與安裝說明：LG TV Companion（magic76）\nhttps://github.com/magic76/lg-tv-companion",
       "requestId": "f4125be1-8a56-484f-a8cd-8deec201546f"
     }
-  }
+  },
+  "superseded_by": "crew-lab-20261102-lg-tv-companion"
 }
