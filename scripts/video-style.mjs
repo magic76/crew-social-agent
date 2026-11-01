@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Crew motion-card theme. Additive: does not modify Queue, handoffs or voice jobs.
+// Crew Cloud motion-card theme. Additive: does not modify Queue, handoffs or voice jobs.
 import {readFile,writeFile,copyFile,mkdir,stat} from 'node:fs/promises';
 import {resolve,relative,dirname,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -34,7 +34,7 @@ export async function buildStyleProject(folder){
   const items=s.items||String(s.body||s.visual||'').split(/[、×｜|]/).map(x=>x.trim()).filter(Boolean).slice(0,3);
   const text=chunks(s.narration);let offset=s.start+0.12;const span=(s.duration-0.3)/text.length;
   for(const line of text){cues.push({start:offset,end:offset+span,text:line});offset+=span;}
-  return `<section id="${esc(s.id)}" class="clip" data-start="${s.start}" data-duration="${s.duration}" data-track-index="${i}"><div class="scene-content"><div class="eyebrow">CREW LAB SI <span>${String(i+1).padStart(2,'0')} / ${String(doc.scenes.length).padStart(2,'0')}</span></div><h1>${(s.titleLines||[s.title]).map(line=>Array.from(line).reduce((a,c,i)=>a+(i===10?"<br>":"")+esc(c),"")).join("<br>")}</h1><div class="diagram"><div class="icon-tile">${icon(s.visualType||types[i%types.length])}</div><div class="item-stack">${items.map((x,j)=>`<div class="item"><b>${String(j+1).padStart(2,'0')}</b><span>${esc(x)}</span><i>✓</i></div>`).join('')}</div></div><div class="mascot">${mascot[i]}</div><div class="footer-note">${esc(s.note||'概念示意 · Crew Lab SI')}</div></div></section>`;
+  return `<section id="${esc(s.id)}" class="clip" data-start="${s.start}" data-duration="${s.duration}" data-track-index="${i}"><div class="scene-content"><div class="eyebrow">CREW LAB SI <span>${String(i+1).padStart(2,'0')} / ${String(doc.scenes.length).padStart(2,'0')}</span></div><h1>${(s.titleLines||[s.title]).map(line=>Array.from(line).reduce((a,c,i)=>a+(i===10?"<br>":"")+esc(c),"")).join("<br>")}</h1><div class="diagram"><div class="icon-tile">${icon(s.visualType||types[i%types.length])}</div><div class="item-stack">${items.map((x,j)=>`<div class="item"><b>${String(j+1).padStart(2,'0')}</b><span>${esc(x)}</span><i>✓</i></div>`).join('')}</div></div><div class="mascot" data-mascot="crew-cloud" aria-label="Crew Cloud">${mascot[i].replace(/id="([^"]+)"/g,(_,id)=>`id="${s.id}-${id}"`).replace(/aria-labelledby="([^"]+)"/g,(_,id)=>`aria-labelledby="${id.split(/\s+/).map(x=>s.id+"-"+x).join(" ")}"`)}</div><div class="footer-note">${esc(s.note||'概念示意 · Crew Lab SI')}</div></div></section>`;
  }).join('\n');
  const captionCues=doc.captions||cues;
  const html=`<!doctype html><html lang="zh-TW"><head><meta charset="utf-8"><title>${esc(doc.title)}</title><style>
@@ -43,7 +43,7 @@ export async function buildStyleProject(folder){
  const timeline=gsap.timeline({paused:true});window.__timelines=window.__timelines||{};window.__timelines["main"]=timeline;
  const scenes=${JSON.stringify(doc.scenes.map(s=>({id:s.id,start:s.start,duration:s.duration})))};
  scenes.forEach((s,i)=>{const q='#'+s.id,enter=Math.max(0,s.start-.5);timeline.set(q,{opacity:1},enter).fromTo(q+' .scene-content',{y:i===0?0:36,opacity:i===0?1:0,scale:i===0?1:.975},{y:0,opacity:1,scale:1,duration:.6,ease:'power3.out'},enter);timeline.fromTo(q+' .item',{y:30,opacity:0},{y:0,opacity:1,stagger:.16,duration:.55,ease:'power3.out'},s.start+.3);if(i<scenes.length-1)timeline.to(q,{opacity:0,y:-20,duration:.5,ease:'power2.inOut'},s.start+s.duration-.5);
- for(let t=s.start;t+1.6<=s.start+s.duration;t+=1.6){timeline.to(q+' .mascot',{y:-10,rotation:1.2,duration:.8,ease:'sine.inOut'},t).to(q+' .mascot',{y:0,rotation:-1.2,duration:.8,ease:'sine.inOut'},t+.8);timeline.to(q+' .eye',{scaleY:.1,duration:.09},t+.7).to(q+' .eye',{scaleY:1,duration:.12},t+.79);timeline.to(q+' .icon-tile',{y:-5,duration:.8,ease:'sine.inOut'},t).to(q+' .icon-tile',{y:0,duration:.8,ease:'sine.inOut'},t+.8);}
+ for(let t=s.start;t+1.6<=s.start+s.duration;t+=1.6){timeline.to(q+' .mascot',{y:-10,duration:.8,ease:'sine.inOut'},t).to(q+' .mascot',{y:0,duration:.8,ease:'sine.inOut'},t+.8);timeline.to(q+' .eye',{scaleY:.1,duration:.09},t+.7).to(q+' .eye',{scaleY:1,duration:.12},t+.79);timeline.to(q+' .icon-tile',{y:-5,duration:.8,ease:'sine.inOut'},t).to(q+' .icon-tile',{y:0,duration:.8,ease:'sine.inOut'},t+.8);}
  });
  const cues=${JSON.stringify(captionCues)};cues.forEach((c,i)=>{timeline.set('#caption-'+i,{opacity:1},c.start).set('#caption-'+i,{opacity:0},c.end)});timeline.fromTo('.progress',{scaleX:0},{scaleX:1,duration:${doc.video.duration},ease:'none'},0);timeline.to('.blue',{x:60,y:30,duration:${doc.video.duration},ease:'none'},0);timeline.to('.purple',{x:-40,y:-60,duration:${doc.video.duration},ease:'none'},0);
  </script></body></html>`;

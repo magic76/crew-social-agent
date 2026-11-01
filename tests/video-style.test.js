@@ -23,6 +23,9 @@ test('style composes a valid deterministic project with local assets and exact c
   const html=await readFile(join(dir,'index.html'),'utf8');
   assert.match(html,/window\.__timelines\["main"\]=timeline/);
   assert.match(html,/paused:true/);
+  assert.match(html,/data-mascot="crew-cloud"/);
+  assert.match(html,/aria-label="Crew Cloud"/);
+  assert.match(html,/scaleY:\.1,duration:\.09/);
   assert.match(html,/"start":0\.12,"end":2\.5,"text":"測 AI，先開一間假公司？"/);
   const dependencies=[...html.matchAll(/(?:src=["']|url\(['"]?)([^"')]+)/g)].map(x=>x[1]);
   assert.ok(dependencies.length>=3);
@@ -39,4 +42,18 @@ test('style requires an explicit font rather than silently using a topic-specifi
  const {dir,story}=await fixture();
  try{delete story.font;await writeFile(join(dir,'story.json'),JSON.stringify(story));await assert.rejects(buildStyle(dir),/doc.font is required/);await assert.rejects(stat(join(dir,'index.html')),e=>e.code==='ENOENT');}
  finally{await rm(dir,{recursive:true,force:true});}
+});
+
+test('Crew Cloud poses preserve flat orange bodies, transparent PNGs and blink hooks',async()=>{
+ for(const pose of ['wave','think','surprise','thumbs-up']){
+  const svg=await readFile(resolve('content/video-style/mascot',pose+'.svg'),'utf8');
+  assert.match(svg,/Crew Cloud/);
+  assert.match(svg,/#FF9A00/i);
+  assert.match(svg,/class="cloud-body"/);
+  assert.equal((svg.match(/class="eye"/g)||[]).length,2);
+  assert.doesNotMatch(svg,/<(?:linearGradient|radialGradient|image)\b/);
+  if(pose==='surprise')assert.match(svg,/class="mouth"/);else assert.doesNotMatch(svg,/class="mouth"/);
+  const png=await readFile(resolve('content/video-style/mascot',pose+'.png'));
+  assert.equal(png.readUInt32BE(16),1024);assert.equal(png.readUInt32BE(20),1024);assert.equal(png[25],6,'RGBA PNG required');
+ }
 });
