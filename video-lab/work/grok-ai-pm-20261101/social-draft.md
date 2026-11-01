@@ -1,39 +1,40 @@
-# Crew Lab SI｜Grok 監工短片發文草稿
+# Crew Lab SI｜Grok 幫我監督 ChatGPT 開發
 
-## Facebook
-以前用 AI 寫程式，最花時間的反而是驗收。
+## Facebook 正式貼文
 
-最近我把 Grok 拉來當監工，ChatGPT 繼續負責開發。
+我現在讓 Grok 幫忙管 ChatGPT 寫程式。
 
-我只要說想做什麼，Grok 幫我拆任務、安排開發，寫完還會檢查測試跟畫面。有問題就再交回去修。
-
-Crew Magic 就是這樣一輪輪改出來的。
-
-最有感的是……我真的少驗收很多。
-
-現在不只是 AI 幫我寫程式，是 AI 開始幫我管理 AI。
-https://www.3sssi.com/magic
-
-#Grok #ChatGPT #AIAgent #CrewLabSI
-
-## Threads（450 字內）
-最近讓 Grok 當監工，ChatGPT 當工程師。
-
-我說想做的功能，Grok 拆任務、交給 ChatGPT 開發。寫完還會看測試、檢查畫面，有問題再叫它修。
+我講要做什麼，Grok 拆任務、協調開發；ChatGPT 寫完，Grok 再看測試、畫面和互動。有問題就退回去修。
 
 Crew Magic 就是這樣一輪輪改出來的。
 
-以前 AI 寫完，最累的是自己驗收。
-現在 Grok 幫我接手不少。
+最有感的是，我真的少做了很多人工驗收。
 
-嗯.....AI 現在真的可以幫 AI 監工了。
+嗯.....現在 AI 不只幫我寫程式，還會幫我盯另一個 AI。
+
 https://www.3sssi.com/magic
 
-#Grok #AIAgent #CrewLabSI
+#Grok #ChatGPT #AI開發 #CrewLabSI
 
-## FB／Threads 首則回覆
-作品：https://www.3sssi.com/magic
-GitHub：https://github.com/magic76/magic76.github.io
+## Threads 正式貼文（450 字以內）
 
-## 狀態
-草稿：使用者本地 Agent 負責正式發布；本次不授權發文。
+我現在讓 Grok 幫忙管 ChatGPT 寫程式。
+
+我說方向，Grok 拆任務，ChatGPT 開發；完成後再看測試、畫面和互動，有問題就退回去修。
+
+Crew Magic 就是這樣一輪輪改出來的。
+
+最有感的是，我真的少做很多人工驗收。
+
+嗯.....AI 現在也有監工了。
+https://www.3sssi.com/magic
+
+#Grok #ChatGPT #CrewLabSI
+
+## 來源說明
+
+本片依照使用者的實際開發工作流製作，沒有外部研究引用；Crew Magic 作品連結已放在貼文正文。
+
+## 發布狀態
+
+草稿交接。正式發布由使用者本地 Agent 負責；本次不授權發文。

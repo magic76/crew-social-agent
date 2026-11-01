@@ -1,0 +1,360 @@
+{
+  "schema_version": 1,
+  "result": "passed",
+  "project_id": "grok-ai-pm-crew-magic-20261101",
+  "verified_at_utc": "2026-11-01T08:19:15Z",
+  "source_main_head": "262cfde885440ea946dee08186225e9ae414d68d",
+  "media": {
+    "path": "content/video-handoffs/assets/grok-ai-pm-crew-magic-20261101.mp4",
+    "container": "MP4",
+    "bytes": 6682889,
+    "sha256": "247f52d6e4ba90b78252519641e97140d4bc0942a69554eaf2569d1b84e657f5",
+    "duration_seconds": 50.766667,
+    "video_duration_seconds": 50.766667,
+    "audio_duration_seconds": 50.75,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "video_codec": "h264",
+    "video_profile": "High",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "audio_profile": "LC",
+    "audio_sample_rate_hz": 96000,
+    "audio_channels": 2,
+    "video_frames": 1523
+  },
+  "render": {
+    "status": "rendered_and_decoded",
+    "engine": "Crew Video Lab / HyperFrames + FFmpeg",
+    "hyperframes_version": "0.8.226",
+    "node_version": "v24.22.1",
+    "ffmpeg_version": "ffmpeg version 6.1.1-3ubuntu5 Copyright (c) 2000-2023 the FFmpeg developers",
+    "ffprobe_version": "ffprobe version 6.1.1-3ubuntu5 Copyright (c) 2007-2023 the FFmpeg developers",
+    "story_duration_seconds": 50.75,
+    "full_decode_exit_code": 0,
+    "full_decode_stderr_empty": true
+  },
+  "audio": {
+    "status": "passed",
+    "provider": "Crew Web TTS Worker",
+    "model": "gemini-3.8-flash-tts",
+    "voice": "Kore",
+    "language": "zh-TW",
+    "style": "Natural Taiwan Mandarin (zh-TW); calm, warm, conversational explanation; consistent one-take flow, subtle pauses, clear articulation. Do not add or omit words.",
+    "style_control_note": "Worker applies one fixed style; desired_emotion fields are editorial notes, not per-job model controls.",
+    "no_music": true,
+    "total_spoken_seconds": 38.6,
+    "last_spoken_end_seconds": 48.05,
+    "intentional_closing_hold_seconds": 2.7,
+    "decoded_output_audio_seconds": 50.730667,
+    "sync_method": "Each original 24 kHz mono WAV cross-correlated against decoded final AAC around its expected timeline offset.",
+    "max_abs_voice_offset_seconds": 0.0,
+    "min_normalized_correlation": 0.9983,
+    "per_scene_alignment": [
+      {
+        "scene": "scene1",
+        "job_id": "crew-tts-grok-ai-pm-s1-20261101",
+        "voice_start_seconds": 0.45,
+        "voice_duration_seconds": 4.8,
+        "measured_offset_seconds": 0.0,
+        "normalized_correlation": 0.9983
+      },
+      {
+        "scene": "scene2",
+        "job_id": "crew-tts-grok-ai-pm-s2-20261101",
+        "voice_start_seconds": 6.75,
+        "voice_duration_seconds": 5.52,
+        "measured_offset_seconds": 0.0,
+        "normalized_correlation": 0.9992
+      },
+      {
+        "scene": "scene3",
+        "job_id": "crew-tts-grok-ai-pm-s3-20261101",
+        "voice_start_seconds": 13.77,
+        "voice_duration_seconds": 6.12,
+        "measured_offset_seconds": 0.0,
+        "normalized_correlation": 0.9986
+      },
+      {
+        "scene": "scene4",
+        "job_id": "crew-tts-grok-ai-pm-s4-20261101",
+        "voice_start_seconds": 21.39,
+        "voice_duration_seconds": 6.04,
+        "measured_offset_seconds": 0.0,
+        "normalized_correlation": 0.9995
+      },
+      {
+        "scene": "scene5",
+        "job_id": "crew-tts-grok-ai-pm-s5-20261101",
+        "voice_start_seconds": 28.93,
+        "voice_duration_seconds": 3.44,
+        "measured_offset_seconds": 0.0,
+        "normalized_correlation": 0.9994
+      },
+      {
+        "scene": "scene6",
+        "job_id": "crew-tts-grok-ai-pm-s6-20261101",
+        "voice_start_seconds": 33.87,
+        "voice_duration_seconds": 6.36,
+        "measured_offset_seconds": 0.0,
+        "normalized_correlation": 0.9987
+      },
+      {
+        "scene": "scene7",
+        "job_id": "crew-tts-grok-ai-pm-s7-20261101",
+        "voice_start_seconds": 41.73,
+        "voice_duration_seconds": 6.32,
+        "measured_offset_seconds": 0.0,
+        "normalized_correlation": 0.9993
+      }
+    ],
+    "source_wav_peak_scan": [
+      {
+        "scene": "scene1",
+        "peak_pcm16": 26352,
+        "peak_dbfs": -1.89
+      },
+      {
+        "scene": "scene2",
+        "peak_pcm16": 27528,
+        "peak_dbfs": -1.51
+      },
+      {
+        "scene": "scene3",
+        "peak_pcm16": 27099,
+        "peak_dbfs": -1.65
+      },
+      {
+        "scene": "scene4",
+        "peak_pcm16": 27634,
+        "peak_dbfs": -1.48
+      },
+      {
+        "scene": "scene5",
+        "peak_pcm16": 26477,
+        "peak_dbfs": -1.85
+      },
+      {
+        "scene": "scene6",
+        "peak_pcm16": 26816,
+        "peak_dbfs": -1.74
+      },
+      {
+        "scene": "scene7",
+        "peak_pcm16": 27645,
+        "peak_dbfs": -1.48
+      }
+    ],
+    "jobs": [
+      {
+        "scene": "scene1",
+        "id": "crew-tts-grok-ai-pm-s1-20261101",
+        "http_status": 200,
+        "content_type": "audio/wav",
+        "status": "downloaded_and_verified",
+        "file": "assets/voice/scene1.wav",
+        "duration_seconds": 4.8,
+        "bytes": 236516,
+        "sha256": "0433b3044979f592db268b33d2927f3f170cb44821fb29b283e629c915220241",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_format": "pcm_s16le",
+        "result_url": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-grok-ai-pm-s1-20261101"
+      },
+      {
+        "scene": "scene2",
+        "id": "crew-tts-grok-ai-pm-s2-20261101",
+        "http_status": 200,
+        "content_type": "audio/wav",
+        "status": "downloaded_and_verified",
+        "file": "assets/voice/scene2.wav",
+        "duration_seconds": 5.52,
+        "bytes": 271076,
+        "sha256": "cad7b81ddd21ea17704911597dbb1a23e5516a25b2d5a9acfd680fe64470a92f",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_format": "pcm_s16le",
+        "result_url": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-grok-ai-pm-s2-20261101"
+      },
+      {
+        "scene": "scene3",
+        "id": "crew-tts-grok-ai-pm-s3-20261101",
+        "http_status": 200,
+        "content_type": "audio/wav",
+        "status": "downloaded_and_verified",
+        "file": "assets/voice/scene3.wav",
+        "duration_seconds": 6.12,
+        "bytes": 299876,
+        "sha256": "9e9e7cdea904db9196753b63c38fc09ec292f97e669a82d85d9808cfeacf96dd",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_format": "pcm_s16le",
+        "result_url": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-grok-ai-pm-s3-20261101"
+      },
+      {
+        "scene": "scene4",
+        "id": "crew-tts-grok-ai-pm-s4-20261101",
+        "http_status": 200,
+        "content_type": "audio/wav",
+        "status": "downloaded_and_verified",
+        "file": "assets/voice/scene4.wav",
+        "duration_seconds": 6.04,
+        "bytes": 296036,
+        "sha256": "d7bdcb64024dfe7cbeb6b7876b231acf3094fed0f73f112db3b6a9e387d9320e",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_format": "pcm_s16le",
+        "result_url": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-grok-ai-pm-s4-20261101"
+      },
+      {
+        "scene": "scene5",
+        "id": "crew-tts-grok-ai-pm-s5-20261101",
+        "http_status": 200,
+        "content_type": "audio/wav",
+        "status": "downloaded_and_verified",
+        "file": "assets/voice/scene5.wav",
+        "duration_seconds": 3.44,
+        "bytes": 171236,
+        "sha256": "be21b50e38eada0417fe9ca46febdbf6e4e66a0432a748d551a568123e72ee0b",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_format": "pcm_s16le",
+        "result_url": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-grok-ai-pm-s5-20261101"
+      },
+      {
+        "scene": "scene6",
+        "id": "crew-tts-grok-ai-pm-s6-20261101",
+        "http_status": 200,
+        "content_type": "audio/wav",
+        "status": "downloaded_and_verified",
+        "file": "assets/voice/scene6.wav",
+        "duration_seconds": 6.36,
+        "bytes": 311396,
+        "sha256": "f5e48f8e445665f4b2b4003255725bb739cec53c4603912e743e8c66c6bd91f8",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_format": "pcm_s16le",
+        "result_url": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-grok-ai-pm-s6-20261101"
+      },
+      {
+        "scene": "scene7",
+        "id": "crew-tts-grok-ai-pm-s7-20261101",
+        "http_status": 200,
+        "content_type": "audio/wav",
+        "status": "downloaded_and_verified",
+        "file": "assets/voice/scene7.wav",
+        "duration_seconds": 6.32,
+        "bytes": 309476,
+        "sha256": "5489df06987fe9315d09ab23034294fafcfc159a6f991070f35d500c89abef0c",
+        "sample_rate_hz": 24000,
+        "channels": 1,
+        "sample_format": "pcm_s16le",
+        "result_url": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-grok-ai-pm-s7-20261101"
+      }
+    ]
+  },
+  "captions": {
+    "status": "passed",
+    "language": "zh-TW",
+    "format": "SRT sidecar plus burned HTML/GSAP captions",
+    "file": "video-lab/work/grok-ai-pm-20261101/captions.srt",
+    "cue_count": 7,
+    "burned_into_video": true,
+    "text_matches_narration": true,
+    "cue_times_follow_measured_wav_durations": true,
+    "captions_fully_visible_through_each_spoken_segment": true,
+    "cues": [
+      {
+        "index": 1,
+        "start": "00:00:00.450",
+        "end": "00:00:05.250",
+        "text": "我最近讓 Grok 當監工，\nChatGPT 當工程師。"
+      },
+      {
+        "index": 2,
+        "start": "00:00:06.750",
+        "end": "00:00:12.270",
+        "text": "我說出想做的功能，Grok 拆成任務，\n交給 ChatGPT 寫程式。"
+      },
+      {
+        "index": 3,
+        "start": "00:00:13.770",
+        "end": "00:00:19.890",
+        "text": "寫完不是就算了。Grok 還會看測試、\n檢查畫面，找出問題。"
+      },
+      {
+        "index": 4,
+        "start": "00:00:21.390",
+        "end": "00:00:27.430",
+        "text": "找到問題，再請 ChatGPT 修。\n修完繼續驗收，直到結果能用。"
+      },
+      {
+        "index": 5,
+        "start": "00:00:28.930",
+        "end": "00:00:32.370",
+        "text": "我的 Crew Magic，\n就是這樣一步步改出來的。"
+      },
+      {
+        "index": 6,
+        "start": "00:00:33.870",
+        "end": "00:00:40.230",
+        "text": "以前 AI 寫完，我還要花好多時間自己驗收。\n現在 Grok 先做掉大半。"
+      },
+      {
+        "index": 7,
+        "start": "00:00:41.730",
+        "end": "00:00:48.050",
+        "text": "我專心決定方向，再確認最後成果。\n這才像有一個真的 AI 團隊。"
+      }
+    ]
+  },
+  "visual_review": {
+    "status": "passed",
+    "scene_keyframes_reviewed": 7,
+    "scene_keyframe_times_seconds": [
+      2.45,
+      8.75,
+      15.77,
+      23.39,
+      30.93,
+      35.87,
+      43.73
+    ],
+    "scene_captions_visible": true,
+    "transition_keyframes_reviewed": 6,
+    "transition_times_seconds": [
+      7.05,
+      14.07,
+      21.69,
+      29.23,
+      34.17,
+      42.03
+    ],
+    "transition_frames_black": false,
+    "last_second_time_seconds": 50.25,
+    "last_second_frame_normal": true,
+    "traditional_chinese_glyphs_clear": true,
+    "no_fake_product_ui": true,
+    "crew_magic_visual_labeled_as_illustration": true
+  },
+  "hyperframes_check": {
+    "status": "passed",
+    "errors": 0,
+    "layout_issues": 0,
+    "contrast_checks_passed": 54,
+    "contrast_checks_total": 54,
+    "nonblocking_structural_warnings": 8,
+    "intentional_audio_warning": "The 2.7 second closing hold uses a silent WAV after narration ends."
+  },
+  "publication": {
+    "status": "draft_handoff_only",
+    "publish_permitted": false,
+    "public_download_url_verification": "pending_until_commit",
+    "ready_for_video_publisher": false,
+    "public_download_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/grok-ai-pm-crew-magic-20261101.mp4"
+  },
+  "limitations": [
+    "The Worker applies one fixed natural, warm, calm Taiwan Mandarin style; scene-by-scene emotional notes are editorial direction and are not separately controlled by the Worker."
+  ]
+}

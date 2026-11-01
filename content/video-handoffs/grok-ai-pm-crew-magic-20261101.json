@@ -5,13 +5,70 @@
   "status": "draft_handoff_only",
   "publish_permitted": false,
   "ready_for_video_publisher": false,
+  "schedule": null,
   "platforms": [
     "facebook",
     "threads"
   ],
+  "title": "我怎麼利用 Grok，管理 ChatGPT 開發程式",
   "project_path": "video-lab/work/grok-ai-pm-20261101",
-  "media": null,
-  "qa_status": "not_verified",
-  "voice_status": "queued_not_verified",
-  "note": "Blocked handoff; no verified voiced MP4 URL. Local agent must not post until all checks and explicit authorization pass."
+  "source": {
+    "type": "owner_firsthand_workflow",
+    "note": "依照使用者提供的實際開發流程；無外部研究引用。"
+  },
+  "media": {
+    "type": "video/mp4",
+    "path": "content/video-handoffs/assets/grok-ai-pm-crew-magic-20261101.mp4",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/grok-ai-pm-crew-magic-20261101.mp4",
+    "size_bytes": 6682889,
+    "sha256": "247f52d6e4ba90b78252519641e97140d4bc0942a69554eaf2569d1b84e657f5",
+    "container": "MP4",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration_seconds": 50.766667,
+    "video_codec": "h264",
+    "video_profile": "High",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "audio_profile": "LC",
+    "audio_sample_rate_hz": 96000,
+    "audio_channels": 2,
+    "alt_text": "繁體中文直式動畫短片，說明 Grok 如何拆解任務並驗收 ChatGPT 的程式開發成果。"
+  },
+  "narration": {
+    "provider": "Crew Web TTS Worker",
+    "model": "gemini-3.8-flash-tts",
+    "voice": "Kore",
+    "language": "zh-TW",
+    "scene_count": 7,
+    "source_audio_directory": "video-lab/work/grok-ai-pm-20261101/assets/voice/",
+    "source_audio_file_pattern": "scene1.wav through scene7.wav",
+    "total_spoken_seconds": 38.6,
+    "last_spoken_end_seconds": 48.05,
+    "intentional_closing_hold_seconds": 2.7
+  },
+  "captions": {
+    "status": "passed",
+    "language": "zh-TW",
+    "format": "SRT sidecar plus burned-in captions",
+    "path": "video-lab/work/grok-ai-pm-20261101/captions.srt",
+    "cue_count": 7,
+    "text_matches_narration": true,
+    "cue_times_follow_measured_wav_durations": true
+  },
+  "qa_status": "passed",
+  "qa_path": "video-lab/work/grok-ai-pm-20261101/qa.json",
+  "voice_status": "passed",
+  "posts": {
+    "facebook": {
+      "text": "我現在讓 Grok 幫忙管 ChatGPT 寫程式。\n\n我講要做什麼，Grok 拆任務、協調開發；ChatGPT 寫完，Grok 再看測試、畫面和互動。有問題就退回去修。\n\nCrew Magic 就是這樣一輪輪改出來的。\n\n最有感的是，我真的少做了很多人工驗收。\n\n嗯.....現在 AI 不只幫我寫程式，還會幫我盯另一個 AI。\n\nhttps://www.3sssi.com/magic\n\n#Grok #ChatGPT #AI開發 #CrewLabSI",
+      "requestId": "2d1d5de8-1ded-4539-b9f1-70be920f9de4"
+    },
+    "threads": {
+      "text": "我現在讓 Grok 幫忙管 ChatGPT 寫程式。\n\n我說方向，Grok 拆任務，ChatGPT 開發；完成後再看測試、畫面和互動，有問題就退回去修。\n\nCrew Magic 就是這樣一輪輪改出來的。\n\n最有感的是，我真的少做很多人工驗收。\n\n嗯.....AI 現在也有監工了。\nhttps://www.3sssi.com/magic\n\n#Grok #ChatGPT #CrewLabSI",
+      "requestId": "9f2f311c-22ba-41ac-a610-d776dff896ff"
+    }
+  },
+  "local_agent_note": "This is a verified draft only. Do not post: publish_permitted remains false and ready_for_video_publisher remains false by owner instruction. When the owner authorizes publishing, set the approved schedule and both gate fields, then use SOCIAL_AGENT_MODE=live with valid Facebook and Threads credentials. Keep the fixed requestIds and publish the MP4 as video."
 }

@@ -9,7 +9,7 @@ import {available,inspectVideoPostStatus,listPosts,sendVideoPost} from '../src/m
 import {inspectMp4} from './mp4.js';
 import {isScheduleDue} from './core.js';
 
-const FILE_RE=/^\d{4}-\d{2}-\d{2}-[a-z0-9-]+\.json$/;
+const FILE_RE=/^[a-z0-9][a-z0-9-]{11,99}\.json$/i;
 const VIDEO_RE=/^content\/video-handoffs\/assets\/[A-Za-z0-9._-]+\.mp4$/i;
 const ID_RE=/^[a-z0-9][a-z0-9-]{11,99}$/;
 const UUID_RE=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
