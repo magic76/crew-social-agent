@@ -37,6 +37,48 @@
       "day": "2026-10-31",
       "voice": "Kore",
       "text": "不能用真實公司信件測 AI，怎麼知道它可靠？微軟先生成一間不存在的公司，裡面有員工、郵件、會議和文件。接著讓 Copilot 做摘要、找資料、列行動項目，再檢查答案是否完整、正確而且有根據。合成資料不等於真實世界，但可以重複測試，又不用碰客戶資料。嗯……測 AI，也可以先開一間假的公司。"
+    },
+    {
+      "id": "crew-tts-grok-ai-pm-s1-20261101",
+      "day": "2026-11-01",
+      "voice": "Kore",
+      "text": "我最近讓 Grok 當監工，ChatGPT 當工程師。"
+    },
+    {
+      "id": "crew-tts-grok-ai-pm-s2-20261101",
+      "day": "2026-11-01",
+      "voice": "Kore",
+      "text": "我說出想做的功能，Grok 拆成任務，交給 ChatGPT 寫程式。"
+    },
+    {
+      "id": "crew-tts-grok-ai-pm-s3-20261101",
+      "day": "2026-11-01",
+      "voice": "Kore",
+      "text": "寫完不是就算了。Grok 還會看測試、檢查畫面，找出問題。"
+    },
+    {
+      "id": "crew-tts-grok-ai-pm-s4-20261101",
+      "day": "2026-11-01",
+      "voice": "Kore",
+      "text": "找到問題，再請 ChatGPT 修。修完繼續驗收，直到結果能用。"
+    },
+    {
+      "id": "crew-tts-grok-ai-pm-s5-20261101",
+      "day": "2026-11-01",
+      "voice": "Kore",
+      "text": "我的 Crew Magic，就是這樣一步步改出來的。"
+    },
+    {
+      "id": "crew-tts-grok-ai-pm-s6-20261101",
+      "day": "2026-11-01",
+      "voice": "Kore",
+      "text": "以前 AI 寫完，我還要花好多時間自己驗收。現在 Grok 先做掉大半。"
+    },
+    {
+      "id": "crew-tts-grok-ai-pm-s7-20261101",
+      "day": "2026-11-01",
+      "voice": "Kore",
+      "text": "我專心決定方向，再確認最後成果。這才像有一個真的 AI 團隊。"
     }
   ]
 }
