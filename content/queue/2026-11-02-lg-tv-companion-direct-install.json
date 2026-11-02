@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261102-lg-tv-companion-direct-install",
+  "created_date": "2026-11-02",
+  "title": "LG TV Companion：不用 AI，也能從手機安裝 webOS App",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-02",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "source": {
+    "publisher": "LG TV Companion（magic76）",
+    "published_date": "2026-11-02",
+    "url": "https://github.com/magic76/lg-tv-companion"
+  },
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-01-lg-tv-companion-app.jpg.base64",
+    "width": 2335,
+    "height": 1888,
+    "sha256": "5dde91ee00d10c7ba20f51d7b4188da7dbf634bd63fc63a55464a648bd8f108a",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-01-lg-tv-companion-app.jpg",
+    "alt": "LG TV Companion 舊版三個手機功能截圖合成圖：遙控觸控板、網站／影片以及 Wi-Fi 喚醒設定；新版四畫面海報目前另在對話附件，尚未同步至 GitHub。",
+    "original_webp_path": "content/queue/assets/2026-11-01-lg-tv-companion-app.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "最近把 LG TV Companion 又加了一個功能。\n\n之前想在 LG 電視裝自己做的 App，還得找 AI 幫忙處理一堆指令。\n\n現在直接做進手機 App 裡了。\n\nAndroid 手機裝好 Companion，電視開啟 Developer Mode 和 Key Server，連上同一個 Wi-Fi、輸入 passphrase，就能直接安裝 webOS App。連電視端的 .ipk 套件都內附了，不用另外找檔案。\n\n其他功能也一起整理了：\n• 手機當遙控器，觸控板、音量都能控制\n• Wi-Fi 喚醒電視（依型號與設定而定）\n• 從手機開網站、找支援的影片投放\n• 跟電視上的 Gemini 語音對話\n\n嗯.....原本只是想讓遙控器退休，結果連安裝 App 都順手做掉了。\n\n有 LG webOS 電視的可以玩玩看。\nhttps://github.com/magic76/lg-tv-companion\n\n#LGwebOS #開發日常",
+      "requestId": "03c602da-158f-4e73-8ebd-a1f5d8e17ea7"
+    },
+    "threads": {
+      "text": "最近把 LG TV Companion 又加了一個功能。\n\n以前想在 LG 電視裝自己的 App，還得找 AI 幫忙處理指令。\n\n現在 Android 手機裝好 Companion，電視開啟 Developer Mode / Key Server、連上 Wi-Fi，輸入 passphrase，就能直接裝 webOS App。連 .ipk 都內附了。\n\n順便還有觸控板遙控、Wi-Fi 喚醒、網站／影片投放、Gemini 語音對話。\n\n嗯.....原本只想讓遙控器退休，連安裝 App 都一起做掉了。\n\nhttps://github.com/magic76/lg-tv-companion",
+      "requestId": "d1e97665-af5a-4d95-b7ba-8bef781c8032"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly requested GitHub handoff to local agent for Facebook and Threads; this is a new follow-up post focused on direct .ipk installation."
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "專案及安裝說明：\nhttps://github.com/magic76/lg-tv-companion",
+      "requestId": "7b9000c6-f802-4c62-a3bc-dc52c6fbb8d1"
+    },
+    "threads": {
+      "text": "專案及安裝說明：\nhttps://github.com/magic76/lg-tv-companion",
+      "requestId": "a63fc431-510d-4d85-bb84-22c804f90464"
+    }
+  },
+  "media_handoff_note": "目前暫用 GitHub 已存在的三畫面配圖，因本次四畫面新生成海報未能透過連接器上傳。若要改用新版海報，請先上傳完整 jpg 與 .base64，並一起更新 image.path / public_url / width / height / sha256，再執行本地發文。"
+}
