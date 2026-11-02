@@ -4,8 +4,8 @@
   "created_date": "2026-11-02",
   "title": "LG TV Companion：不用 AI，也能從手機安裝 webOS App",
   "category": "development-diary",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-02",
     "time": "21:00",
@@ -41,8 +41,8 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "New four-screen image attached. Draft remains disabled until the local publisher verifies the public image and enables publication."
+    "publish_permitted": true,
+    "reason": "Owner requested local-agent publication; four-screen image and its public GitHub mirror were verified."
   },
   "first_replies": {
     "facebook": {
