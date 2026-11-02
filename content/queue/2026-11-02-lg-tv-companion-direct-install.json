@@ -23,13 +23,12 @@
   "image": {
     "format": "jpeg",
     "storage": "base64-utf8",
-    "path": "content/queue/assets/2026-11-01-lg-tv-companion-app.jpg.base64",
-    "width": 2335,
-    "height": 1888,
-    "sha256": "5dde91ee00d10c7ba20f51d7b4188da7dbf634bd63fc63a55464a648bd8f108a",
-    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-01-lg-tv-companion-app.jpg",
-    "alt": "LG TV Companion 舊版三個手機功能截圖合成圖：遙控觸控板、網站／影片以及 Wi-Fi 喚醒設定；新版四畫面海報目前另在對話附件，尚未同步至 GitHub。",
-    "original_webp_path": "content/queue/assets/2026-11-01-lg-tv-companion-app.webp"
+    "path": "content/queue/assets/2026-11-02-lg-tv-companion-direct-install.jpg.base64",
+    "width": 1229,
+    "height": 1536,
+    "sha256": "9a10c55946f24228451b282fbdd18c340d614c6e256d8d324b82524807c88138",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-02-lg-tv-companion-direct-install.jpg",
+    "alt": "LG 電視 Companion 四畫面介紹圖：手機安裝電視 App、遙控觸控板、網站與影片，以及 AI 對話。"
   },
   "posts": {
     "facebook": {
@@ -43,7 +42,7 @@
   },
   "safety": {
     "publish_permitted": false,
-    "reason": "The intended four-screen image is not yet uploaded to GitHub. Fail closed until the local agent adds the final media and verifies its SHA-256, dimensions, and public URL, then explicitly promotes to ready/live."
+    "reason": "New four-screen image attached. Draft remains disabled until the local publisher verifies the public image and enables publication."
   },
   "first_replies": {
     "facebook": {
@@ -54,6 +53,5 @@
       "text": "專案及安裝說明：\nhttps://github.com/magic76/lg-tv-companion",
       "requestId": "a63fc431-510d-4d85-bb84-22c804f90464"
     }
-  },
-  "media_handoff_note": "本次新四畫面圖已在 ChatGPT 產出，尚未上傳 GitHub。勿使用此稿引用的舊三畫面圖片自動發文。待本地 Agent 把新 jpg 和 .base64 上傳、更新 image.path/format/width/height/sha256/public_url，驗證成功後再啟用 mode=live,status=ready_for_local_agent,safety.publish_permitted=true，並檢查排程。"
+  }
 }
