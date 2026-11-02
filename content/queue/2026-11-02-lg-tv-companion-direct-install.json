@@ -4,8 +4,8 @@
   "created_date": "2026-11-02",
   "title": "LG TV Companion：不用 AI，也能從手機安裝 webOS App",
   "category": "development-diary",
-  "status": "ready_for_local_agent",
-  "mode": "live",
+  "status": "draft",
+  "mode": "dry_run",
   "schedule": {
     "date": "2026-11-02",
     "time": "21:00",
@@ -42,8 +42,8 @@
     }
   },
   "safety": {
-    "publish_permitted": true,
-    "reason": "Owner explicitly requested GitHub handoff to local agent for Facebook and Threads; this is a new follow-up post focused on direct .ipk installation."
+    "publish_permitted": false,
+    "reason": "The intended four-screen image is not yet uploaded to GitHub. Fail closed until the local agent adds the final media and verifies its SHA-256, dimensions, and public URL, then explicitly promotes to ready/live."
   },
   "first_replies": {
     "facebook": {
@@ -55,5 +55,5 @@
       "requestId": "a63fc431-510d-4d85-bb84-22c804f90464"
     }
   },
-  "media_handoff_note": "目前暫用 GitHub 已存在的三畫面配圖，因本次四畫面新生成海報未能透過連接器上傳。若要改用新版海報，請先上傳完整 jpg 與 .base64，並一起更新 image.path / public_url / width / height / sha256，再執行本地發文。"
+  "media_handoff_note": "本次新四畫面圖已在 ChatGPT 產出，尚未上傳 GitHub。勿使用此稿引用的舊三畫面圖片自動發文。待本地 Agent 把新 jpg 和 .base64 上傳、更新 image.path/format/width/height/sha256/public_url，驗證成功後再啟用 mode=live,status=ready_for_local_agent,safety.publish_permitted=true，並檢查排程。"
 }
