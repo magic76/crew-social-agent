@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261103-grid-protectors",
+  "created_date": "2026-11-03",
+  "title": "AI 園區與電網：OpenAI Grid Protectors",
+  "category": "ai-news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-03",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-03-grid-protectors.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "08037b6beee6351e1bb1fe62a0c76c061eac8a54ddb1b6462acb92053d9e85ea",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-03-grid-protectors.jpg",
+    "alt": "資料中心在電網負載圖上調整用電的概念插畫。",
+    "original_webp_path": "content/queue/assets/2026-11-03-grid-protectors.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 園區的電費，最後不一定要變成大家尖峰時段的帳單。\n\nOpenAI 今天公布 Grid Protectors 計畫：未來資料中心會在電網吃緊時降低用電；喬治亞州的合作，規劃最高 1,000 MW 的彈性需求。這個容量相當於約 70 萬戶家庭的平均用電量。\n\n先把話說準：這是未來園區和電力安排的規劃，不代表現在已經替 70 萬戶供電，或已經省下同等電量。真正值得追的是，園區能不能在尖峰時配合降載，也把新增的電網成本自己負起來。\n\nAI 往前跑，電網也得一起算進去。\n\n#AI基礎建設 #電力",
+      "requestId": "dcf654a0-94e3-4c69-90e2-1bc00f773bf7"
+    },
+    "threads": {
+      "text": "AI 園區的電費，不一定只能由尖峰時段的大家一起扛。\n\nOpenAI 的 Grid Protectors 計畫要讓未來資料中心在電網吃緊時降載；喬治亞合作規劃最高 1,000 MW 彈性需求，約等於 70 萬戶家庭的平均用電量。\n\n這是未來園區的規劃，不是現在已經供給 70 萬戶的電。接下來要看它如何落實，也看大型用電者能否自己負擔新增電網成本。\n\n#AI基礎建設",
+      "requestId": "cf739344-7ff9-44e9-b0f4-afd74784e559"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly requested this scheduled live batch on 2026-11-03."
+  },
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-11-02",
+    "url": "https://openai.com/index/grid-protectors-program/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜OpenAI：Introducing the Grid Protectors Program（2026-11-02）\nhttps://openai.com/index/grid-protectors-program/",
+      "requestId": "91439a44-b26c-4c18-ab06-7f07ab1ca14e"
+    },
+    "threads": {
+      "text": "參考來源｜OpenAI：Introducing the Grid Protectors Program（2026-11-02）\nhttps://openai.com/index/grid-protectors-program/",
+      "requestId": "b850bfc9-86bf-46f4-b25d-b992536e17b0"
+    }
+  }
+}

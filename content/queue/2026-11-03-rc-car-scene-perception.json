@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261103-rc-car-scene-perception",
+  "created_date": "2026-11-03",
+  "title": "RC 車開發日常：先把看見與控制拆開",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-03",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-03-rc-car-scene-perception.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "d4384b11accb02c3980f9a3dbcb588f87b257d8742bf1ef8d7de3e76e885a45a",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-03-rc-car-scene-perception.jpg",
+    "alt": "小型遙控車辨識道路、彎道與障礙的概念插畫。",
+    "original_webp_path": "content/queue/assets/2026-11-03-rc-car-scene-perception.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "RC 車這個小專案，接下來想先把「看見」和「控制」拆成兩題。\n\n第一題：畫面裡哪裡能走、哪裡是彎道、哪裡有障礙？\n第二題：車要怎麼根據這些訊號調整方向和速度？\n\n如果一開始把辨識和駕駛全塞在一起，車一轉錯，就很難知道該查相機、場景理解，還是控制邏輯。\n\n所以目前先定義可檢查的場景標記，再讓控制層接過去。車還沒完成，先把問題切開，之後才知道該從哪裡修……\n\n#開發日常 #AI視覺 #RC車",
+      "requestId": "78522d6d-50d0-415f-b607-0c875922b6a3"
+    },
+    "threads": {
+      "text": "RC 車開發先拆成兩題：它看見了什麼？控制要怎麼用這些訊號？\n\n先辨識可走區、彎道和障礙，再把結果交給控制層。這樣車轉錯時，才比較能分辨問題在相機、場景理解，還是控制邏輯。\n\n目前先定義可檢查的場景標記。車還沒完成，先把問題切開……\n\n#開發日常",
+      "requestId": "c44e8f1f-987d-45bb-ad79-fbbf6eb6c9d6"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly requested this scheduled live batch on 2026-11-03."
+  }
+}

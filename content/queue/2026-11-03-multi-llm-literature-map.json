@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261103-multi-llm-literature-map",
+  "created_date": "2026-11-03",
+  "title": "多模型如何協助整理跨領域文獻",
+  "category": "ai-application",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-03",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-03-multi-llm-literature-map.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "ce81f500ec596b64ef5a4043ff4a5d5cb48559b9f1f8fd545bbf403ff8874b6d",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-03-multi-llm-literature-map.jpg",
+    "alt": "多個模型依共同概念表整理文獻並標出分歧的示意圖。",
+    "original_webp_path": "content/queue/assets/2026-11-03-multi-llm-literature-map.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "多模型一起看文獻，重點不一定是湊出一個「共識分數」。\n\nScientific Reports 11/2 的研究，把十個本機語言模型組成 council，依照同一份概念詞彙表，整理 31 篇研究、36 個概念，再比較不同研究之間與模型之間的支持程度。\n\n有意思的是，研究把分歧也留下來：不同情境的文獻，模型和研究彼此的同意程度並不一樣。這讓多模型的用途比較像是把不同方法的論文，先整理成可檢查的證據地圖；不是叫模型替領域專家下結論。\n\n如果要用在跨領域回顧，我會把每個分數都要求附上對應證據，並讓不同意見可追溯。共識之外，分歧本身也有資訊。\n\n#AI研究 #文獻回顧",
+      "requestId": "8069799c-1de3-441b-8e7e-acef2bc0b2f2"
+    },
+    "threads": {
+      "text": "多模型整理文獻，未必要把目標設成「投票找共識」。\n\nScientific Reports 11/2 的研究用十個本機模型、同一套 36 個概念詞彙，整理 31 篇研究，再比較不同研究與模型間的支持程度。它也把分歧留下來，讓結果能整理成可檢查的證據地圖。\n\n這種方法適合協助跨領域文獻整理，不能取代專家判讀；每個分數仍要能追回原文證據。\n\n#AI研究",
+      "requestId": "7d7842ae-03d6-47a3-9b1e-42dda6591ff1"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly requested this scheduled live batch on 2026-11-03."
+  },
+  "source": {
+    "publisher": "Scientific Reports（Hamed Nejat 等）",
+    "published_date": "2026-11-02",
+    "url": "https://www.nature.com/articles/s41598-026-77038-y"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜Scientific Reports：Ontology-constrained multi-LLM scoring of hypothesis support in the predictive processing literature（2026-11-02）\nhttps://www.nature.com/articles/s41598-026-77038-y",
+      "requestId": "f4375d29-f798-4b90-84da-7492365923cc"
+    },
+    "threads": {
+      "text": "參考來源｜Scientific Reports：Ontology-constrained multi-LLM scoring of hypothesis support in the predictive processing literature（2026-11-02）\nhttps://www.nature.com/articles/s41598-026-77038-y",
+      "requestId": "47bff3f7-2e92-4081-9b90-518b7bafad65"
+    }
+  }
+}

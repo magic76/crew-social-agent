@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261103-clinical-benchmark-overlap",
+  "created_date": "2026-11-03",
+  "title": "醫療 AI 基準測試也要查資料重疊",
+  "category": "ai-research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-03",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-03-clinical-benchmark-overlap.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "9c3fd9b1d180db9a8d596e3dca5b3a21a6c7545dafd1d443ebe23eb355d30fa1",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-03-clinical-benchmark-overlap.jpg",
+    "alt": "訓練資料和測試題目交疊、造成分數解讀偏差的示意圖。",
+    "original_webp_path": "content/queue/assets/2026-11-03-clinical-benchmark-overlap.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "醫療 AI 的基準測試分數高，還要多問一題：測試題是不是早就出現在訓練資料裡？\n\nScientific Reports 11/2 發表的研究，檢查一個 Qwen3-8B 微調模型與八個公開基準的文字重疊。作者報告，PubMedQA、MedQA 和 MMLU Professional Medicine 的 exact-stem 重疊都超過 70%。\n\n但在未被這種比對標記的 1,838 題 MedXpertQA 上，微調模型是 20.8%，母模型是 15.6%，差 5.2 個百分點。這個結果只適用於研究的資料、模型與評估流程；作者也指出訓練語料不能重新公開供第三方重做重疊分析。\n\n所以看模型分數時，也要看測試切分、訓練資料重疊和評估方法。分數本身不會替你說明它代表什麼。\n\n#AI研究 #醫療AI",
+      "requestId": "f800708d-9cf9-4d5c-9691-a420df729c1f"
+    },
+    "threads": {
+      "text": "醫療 AI 基準分數高，還得問：測試題有沒有已經出現在訓練資料？\n\nScientific Reports 11/2 的研究比對一個 Qwen3-8B 微調模型與八個公開基準，報告 PubMedQA、MedQA、MMLU Professional Medicine 的 exact-stem 重疊都超過 70%。在未被標記的 1,838 題 MedXpertQA 上，微調模型 20.8%、母模型 15.6%。\n\n這是特定資料和評估流程下的結果；作者也說訓練語料無法公開供他人重做重疊分析。看分數，還要看測試切分、資料重疊和方法。\n\n#AI研究",
+      "requestId": "9d5d48d0-2b48-4a60-987f-051a3bdb55ed"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly requested this scheduled live batch on 2026-11-03."
+  },
+  "source": {
+    "publisher": "Scientific Reports（Adnan Agha、Eram Anwar）",
+    "published_date": "2026-11-02",
+    "url": "https://www.nature.com/articles/s41598-026-77367-y"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜Scientific Reports：Training-corpus overlap and evaluation protocol constrain measured gains in a fine-tuned clinical language model（2026-11-02）\nhttps://www.nature.com/articles/s41598-026-77367-y",
+      "requestId": "4900c518-2c39-4dbb-85dc-11e9fa6e95ba"
+    },
+    "threads": {
+      "text": "參考來源｜Scientific Reports：Training-corpus overlap and evaluation protocol constrain measured gains in a fine-tuned clinical language model（2026-11-02）\nhttps://www.nature.com/articles/s41598-026-77367-y",
+      "requestId": "1a2281c4-ead8-4238-9205-4c9988454069"
+    }
+  }
+}

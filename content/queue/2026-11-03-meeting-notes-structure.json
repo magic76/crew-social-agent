@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261103-meeting-notes-structure",
+  "created_date": "2026-11-03",
+  "title": "會議紀錄別只叫 AI 寫摘要",
+  "category": "practical-tip",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-03",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-03-meeting-notes-structure.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "ddd2c7e6901401c097693fc5fedc0869ddba117436e4653027976acf4b7421c1",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-03-meeting-notes-structure.jpg",
+    "alt": "會議內容分成決定、待辦、負責人與期限的視覺化清單。",
+    "original_webp_path": "content/queue/assets/2026-11-03-meeting-notes-structure.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 幫你整理會議，先別只說「幫我寫摘要」。\n\n把輸出欄位定好，之後會比較好核對：\n• 已做決定\n• 待辦事項\n• 負責人\n• 截止時間\n• 沒有提到的欄位，標「未提及」\n\n可以直接貼這句：\n「請只根據以下逐字稿整理，使用上面五個欄位。若逐字稿沒有明確提到負責人或期限，請填『未提及』，不要推測或補完。」\n\n這不是讓 AI 從此不出錯，而是讓它補腦時比較容易被看出來。摘要漂亮之外，還要能回頭查。",
+      "requestId": "e919f734-d6c5-47fc-84bd-eef42f25381d"
+    },
+    "threads": {
+      "text": "會議紀錄別只叫 AI「寫摘要」。先定義輸出欄位：決定、待辦、負責人、期限；逐字稿沒提到的就標「未提及」，不要猜。\n\n提示詞可以加一句：「請只根據逐字稿整理；未明確提到的負責人或期限填『未提及』，不要推測。」\n\n這樣不是保證零錯誤，而是讓補腦比較容易被發現。",
+      "requestId": "5ae52b2b-d505-44e8-b187-1ab1b5644269"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly requested this scheduled live batch on 2026-11-03."
+  }
+}

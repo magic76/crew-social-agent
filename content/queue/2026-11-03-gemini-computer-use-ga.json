@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261103-gemini-computer-use-ga",
+  "created_date": "2026-11-03",
+  "title": "Gemini Computer Use 正式 GA",
+  "category": "ai-tools",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-03",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-03-gemini-computer-use-ga.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "5ac5b2bdc1b26f94ca9e37c007694f883428b5fffcd283bae0b9b5a4bfa47eae",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-03-gemini-computer-use-ga.jpg",
+    "alt": "AI 代理透過畫面理解與游標操作完成網頁任務的概念插畫。",
+    "original_webp_path": "content/queue/assets/2026-11-03-gemini-computer-use-ga.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "Google Gemini API 的 Computer Use 工具，10/30 起正式 GA。\n\nGoogle AI for Developers 的 release notes 說，這項工具已在 Interactions 與 GenerateContent 兩個 API 一般可用。對正在評估網頁或桌面代理的團隊，這是值得留意的版本更新。\n\n不過「正式可用」不等於「可以讓代理隨便點」。上線前仍要想清楚：哪些動作可自動執行、哪些要先確認，以及失敗時怎麼停下來。\n\n先把一小段可驗證的流程定義好，再擴大範圍，通常比一次交出整台電腦穩妥。\n\n#Gemini #AI工具",
+      "requestId": "9d047851-a706-4709-adae-aa7f6eff224f"
+    },
+    "threads": {
+      "text": "Gemini API 的 Computer Use 工具在 10/30 正式 GA，涵蓋 Interactions 與 GenerateContent API。\n\n這是可用狀態更新，不是自動化風險消失：先界定代理能做哪些動作、哪些需要確認，再逐步擴大流程。\n\n#Gemini #AI工具",
+      "requestId": "9858496a-30e3-4e03-a60e-8ede8020f58e"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly requested this scheduled live batch on 2026-11-03."
+  },
+  "source": {
+    "publisher": "Google AI for Developers｜Gemini API Release Notes",
+    "published_date": "2026-10-30",
+    "url": "https://ai.google.dev/gemini-api/docs/changelog"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜Google AI for Developers：Gemini API Release Notes（2026-10-30）\nhttps://ai.google.dev/gemini-api/docs/changelog",
+      "requestId": "89351df4-4a1b-4997-94a0-a1ac829c82c6"
+    },
+    "threads": {
+      "text": "參考來源｜Google AI for Developers：Gemini API Release Notes（2026-10-30）\nhttps://ai.google.dev/gemini-api/docs/changelog",
+      "requestId": "e8c781b2-736b-49a8-8585-f3ad91a17010"
+    }
+  }
+}
