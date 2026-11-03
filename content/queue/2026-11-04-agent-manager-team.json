@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261104-agent-manager-team",
+  "created_date": "2026-11-03",
+  "title": "我只跟一個 Agent 說話，後面卻是整個 team",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-04",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-04-agent-manager-team.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "0ff87eb745f33e6a717807eab55ae339bf8de67006c3492a16ff99ea2b69ecde",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-04-agent-manager-team.jpg",
+    "alt": "漫畫風格插畫：左側是開發者被多個 AI 對話視窗包圍，右側由一個助理 agent 統籌四個 agent 與各自的專業 subagent。"
+  },
+  "posts": {
+    "facebook": {
+      "text": "以前我一個人同時對著十多個 Claude AI。\n\n每個都在做事，我也得一直切視窗、看進度、確認有沒有跑偏。後來加了一個 manager，幫我把一個需求交給一個 team。\n\n現在變成我只跟一個助理 agent 說話，下面有四個 agent；這四個再各自調度一堆專精不同領域的 subagent。\n\n底下的 AI 愈來愈多，我要盯的東西反而愈來愈少。\n\n這次最有感的不是多快，而是我的注意力終於不用一直被多個 agent 拉來拉去。\n\n嗯.....原來 AI team 擴編，最後是為了讓我少開幾個視窗。",
+      "requestId": "9dc11d0c-e9b8-46cb-ad22-9dcf6da771ce"
+    },
+    "threads": {
+      "text": "以前我一個人同時對著十多個 Claude AI。\n\n每個都在做事，我也得一直切視窗、看進度、確認有沒有跑偏。後來加了一個 manager，幫我把一個需求交給一個 team。\n\n現在變成我只跟一個助理 agent 說話，下面有四個 agent；這四個再各自調度一堆專精不同領域的 subagent。\n\n底下的 AI 愈來愈多，我要盯的東西反而愈來愈少。\n\n這次最有感的不是多快，而是我的注意力終於不用一直被多個 agent 拉來拉去。\n\n嗯.....原來 AI team 擴編，最後是為了讓我少開幾個視窗。",
+      "requestId": "7f32a9c3-ce35-48b0-98ed-92d364e13014"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner asked for this prepared Facebook/Threads post to be handed to their local agent for publication at the scheduled time on 2026-11-04."
+  }
+}
