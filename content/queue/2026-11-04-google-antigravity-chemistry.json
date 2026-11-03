@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261104-google-antigravity-chemistry",
+  "created_date": "2026-11-04",
+  "title": "AI Agent 進化學實驗室，最後還要靠實驗",
+  "category": "ai-application",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-04",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-04-agentic-chemistry.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "8a934f27c93d67fc7fbd8bf542c127a20b5c03b310c8b36fd9726bba6bc490e0",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-04-agentic-chemistry.jpg",
+    "alt": "研究者檢視 AI 協助整理的化合物、論文、分子分析圖和候選分子卡片。",
+    "original_webp_path": "content/queue/assets/2026-11-04-agentic-chemistry.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 可以幫忙做藥物研究嗎？至少有一種新工作流正在成形。\n\nGoogle DeepMind 11/3 分享 Antigravity 化學 skills 的示範：Agent 搜尋數千種化合物資料、做比對和建模，再提出可能值得研究的分子與合成路線。流程使用 RDKit、ChEMBL、PubChem 等化學工具和資料來源。文中說，示範的一輪工作約一小時。\n\n但這不是 AI 已經設計出有效藥物。資料會有缺漏，不同實驗的測量也有誤差；候選分子仍要真的合成，再做實驗驗證。\n\n我覺得這種分工比較實際：AI 幫忙整理線索、串流程，專業工具負責計算，科學家判斷哪些結果值得追。\n\nAI 可以把「找方向」變快，最後還是得讓實驗回答。",
+      "requestId": "6a1756d6-e2d4-4c49-97ed-23f81da2c0e0"
+    },
+    "threads": {
+      "text": "AI Agent 幫忙做藥物研究，真的可以少掉好幾天？\n\nGoogle DeepMind 11/3 示範 Antigravity 化學 skills：Agent 從論文和資料庫整理數千種化合物，再用 RDKit 等工具分析、建模並提出候選。DeepMind 說，示範的一輪工作約一小時。\n\n但候選分子仍只是研究假說，還要真的合成和實驗驗證。\n\n我喜歡這種分工：AI 串流程，專業工具計算，研究者判斷值不值得追。",
+      "requestId": "52d6bb9f-3680-42e0-93b8-576476d74e80"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "User requested the scheduled Crew Lab daily content batch for 2026-11-04; publication is delegated to the local Publisher."
+  },
+  "source": {
+    "publisher": "Google DeepMind",
+    "published_date": "2026-11-03",
+    "title": "Agentic Cheminformatics with Google Antigravity",
+    "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜Google DeepMind：Agentic Cheminformatics with Google Antigravity（2026-11-03）\nhttps://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+      "requestId": "20a79804-5041-425c-97a1-eb9bae4fcd8d"
+    },
+    "threads": {
+      "text": "參考來源｜Google DeepMind：Agentic Cheminformatics with Google Antigravity（2026-11-03）\nhttps://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/",
+      "requestId": "3d36ad71-2be9-4dbe-997e-d910e089b254"
+    }
+  }
+}

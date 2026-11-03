@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261104-openai-physical-engineering",
+  "created_date": "2026-11-04",
+  "title": "AI 開始碰真正的產品設計了",
+  "category": "ai-news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-04",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-04-physical-engineering.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "22b4ebc8459888ae8a775b8e003ad1ae66cc141163f924c009ba9119ab03ddaa",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-04-physical-engineering.jpg",
+    "alt": "米白底 3D 示意圖：AI、裝置外殼草圖、電路板與氣流模擬卡片組成工程設計流程。",
+    "original_webp_path": "content/queue/assets/2026-11-04-physical-engineering.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 開始碰真正的產品設計了。\n\nOpenAI 11/3 分享一個工程示範：Astra 協助設計裝置外殼、PCB、介面和韌體，兩位團隊成員不到一週完成設計，之後做出一小批原型。\n\nOpenAI 也說，內部硬體團隊用模型協助 CAD、製造圖和模擬；從 2 月以來，這些團隊的模型使用量以 token 計增加了 23 倍。\n\n但文章也提到，要準備量產仍需要多輪檢視，模型有時沒顧到製造公差和組裝細節。這是特定團隊的早期示範，不代表 AI 已能自己做出可量產產品。\n\n我覺得有意思的是，AI 的輸出不再只要看起來合理，還得跟板子、材料、模擬和製造限制對得上。\n\n你會放心讓 AI 直接改你手上的產品設計嗎？",
+      "requestId": "b2400d57-a35a-4ddc-a25d-800dd4491a95"
+    },
+    "threads": {
+      "text": "AI 開始碰真正的產品設計了。\n\nOpenAI 11/3 分享 Astra 協助設計裝置外殼、PCB、介面和韌體：兩位團隊成員不到一週完成設計，之後才做出一小批原型。\n\n但量產前仍要多輪檢查，像製造公差和組裝細節，模型還沒顧得夠完整。這是特定團隊的早期示範，不是 AI 已經能獨立量產。\n\nAI 真正進工廠前，最難的一關可能是每個細節都得對。你會讓它直接改產品設計嗎？",
+      "requestId": "af893cd0-7510-4a74-a629-224a3caf83e9"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "User requested the scheduled Crew Lab daily content batch for 2026-11-04; publication is delegated to the local Publisher."
+  },
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-11-03",
+    "title": "Accelerating engineering for the physical world",
+    "url": "https://openai.com/index/accelerating-engineering-for-the-physical-world/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜OpenAI：Accelerating engineering for the physical world（2026-11-03）\nhttps://openai.com/index/accelerating-engineering-for-the-physical-world/",
+      "requestId": "3dd890f6-0886-49f5-aee2-1f0ff8314804"
+    },
+    "threads": {
+      "text": "參考來源｜OpenAI：Accelerating engineering for the physical world（2026-11-03）\nhttps://openai.com/index/accelerating-engineering-for-the-physical-world/",
+      "requestId": "b99cea6c-ae39-4230-9bf2-868ba59cb70a"
+    }
+  }
+}

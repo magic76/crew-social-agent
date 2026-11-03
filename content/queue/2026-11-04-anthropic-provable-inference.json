@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261104-anthropic-provable-inference",
+  "created_date": "2026-11-04",
+  "title": "AI 回答能不能附一張可驗證的收據",
+  "category": "ai-research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-04",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-04-provable-inference.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "e6dfcba46fda9c453b56e4e75b490e7958c8377d540f3a1d90ac3bf4f6d24013",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-04-provable-inference.jpg",
+    "alt": "紫藍透明模型方塊被鎖住，放大鏡檢查密碼學證明並顯示通過。",
+    "original_webp_path": "content/queue/assets/2026-11-04-provable-inference.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 回答漂亮，還能不能證明真的是你指定的模型算出來？\n\nAnthropic 11/2 公布 FlashProve 的研究進度：用 zkSNARK 替模型推論產生可驗證的證明，目標是讓使用者確認輸出對應到特定模型權重，同時不必公開權重。\n\n他們報告的原型在單張 H100 上，替 400B、4-bit 的 Llama 4 Maverick 產生證明約每秒 110 tokens；每 1,024 tokens 的證明約 19 MB，代價則是約多 70–95 倍 GPU 時間。\n\n所以目前比較像一個值得研究的安全原型，不是每個聊天服務都能直接套上的功能。信任模型也許不只看它答得對不對，還要問「是不是它答的」。\n\n你會想要每次 API 回答都帶一張可驗證的收據嗎？",
+      "requestId": "1eae5b82-4a8e-42cd-a643-c075c8e1d0a7"
+    },
+    "threads": {
+      "text": "AI 回答對了，怎麼知道真的是指定模型算的？\n\nAnthropic 11/2 分享 FlashProve：用 zkSNARK 為推論產生可驗證證明，讓人驗證輸出對應到特定模型權重，又不必公開權重。\n\n原型在單張 H100 上替 400B、4-bit 模型產證明約 110 tokens/s；每 1,024 tokens 的證明約 19 MB，計算成本約是模型推論的 70–95 倍。\n\n技術還很早期。AI 服務真的需要一張「答案收據」嗎？",
+      "requestId": "a8827c5a-3501-43b3-b43a-900f6ed8cca9"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "User requested the scheduled Crew Lab daily content batch for 2026-11-04; publication is delegated to the local Publisher."
+  },
+  "source": {
+    "publisher": "Anthropic",
+    "published_date": "2026-11-02",
+    "title": "Progress on provable inference for large language models",
+    "url": "https://www.anthropic.com/research/provable-inference"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜Anthropic：Progress on provable inference for large language models（2026-11-02）\nhttps://www.anthropic.com/research/provable-inference",
+      "requestId": "5b46f944-dab2-4163-961b-4c556e614f66"
+    },
+    "threads": {
+      "text": "參考來源｜Anthropic：Progress on provable inference for large language models（2026-11-02）\nhttps://www.anthropic.com/research/provable-inference",
+      "requestId": "fe264760-d24e-4e29-8081-b7df52dabc00"
+    }
+  }
+}

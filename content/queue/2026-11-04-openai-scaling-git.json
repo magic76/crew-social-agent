@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261104-openai-scaling-git",
+  "created_date": "2026-11-04",
+  "title": "AI coding agent 一多，Git 也會變瓶頸",
+  "category": "ai-tools",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-04",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-04-git-concurrency.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "802a8ad2a24dd0d1f4f73c2688474ed94abfb61615b27befefab470b5ee23499",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-04-git-concurrency.jpg",
+    "alt": "三個獨立工作區從共享版本庫分出各自分支，最後匯入同一張審查卡。",
+    "original_webp_path": "content/queue/assets/2026-11-04-git-concurrency.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI coding agent 一多，Git 也會變成瓶頸？\n\nOpenAI 11/2 介紹 Pando：為了讓大量分支能同時 push、讀取而打造的大型 Git 後端。它保留 Git protocol 和 client；OpenAI 表示，production 的 median push latency 降了近 5 倍，每天傳輸近 1 PB 的 Git 資料。\n\n先說，Pando 是 OpenAI 自己使用的內部後端，不是現在可以下載安裝的工具。\n\n但這篇提醒我：AI 讓寫程式變快後，瓶頸不一定是模型，也可能是程式碼庫、分支、review 和整合的協調能力。\n\nAgent 要並行做事，工作區和版本控制最好先有邊界。你現在的 repo 是幾個 AI 同時改？",
+      "requestId": "25323871-6c6c-4ac7-96f3-88de384ca109"
+    },
+    "threads": {
+      "text": "AI coding agent 一多，Git 也會變瓶頸？\n\nOpenAI 介紹 Pando：Git 相容的內部後端，支援大量分支同時讀寫；公司報告 production push latency 降近 5 倍、每天傳輸近 1 PB 資料。\n\n它不是公開下載的工具，但提醒我們：Agent 寫程式變快後，版本控制、review 和整合也可能跟著卡住。\n\n你會讓幾個 AI 同時改同一個 repo？",
+      "requestId": "57771011-dc61-46dd-9b7f-b14eedf2d0c1"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "User requested the scheduled Crew Lab daily content batch for 2026-11-04; publication is delegated to the local Publisher."
+  },
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-11-02",
+    "title": "Scaling Git at OpenAI",
+    "url": "https://openai.com/index/scaling-git-at-openai/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜OpenAI：Scaling Git at OpenAI（2026-11-02）\nhttps://openai.com/index/scaling-git-at-openai/",
+      "requestId": "fa512434-745a-440d-be9b-c01463958898"
+    },
+    "threads": {
+      "text": "參考來源｜OpenAI：Scaling Git at OpenAI（2026-11-02）\nhttps://openai.com/index/scaling-git-at-openai/",
+      "requestId": "bf4c4d3c-0406-4e23-b634-e1bfd3527dfd"
+    }
+  }
+}

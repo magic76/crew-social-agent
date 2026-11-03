@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261104-ga4-event-debug",
+  "created_date": "2026-11-04",
+  "title": "gtag 載入了，GA4 的資料為什麼沒到",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-04",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-04-ga4-event-debug.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "622840f42987acfad281a3803b2d322c25d021b168cfe9c8305760faf90c6cbd",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-04-ga4-event-debug.jpg",
+    "alt": "開發者檢查網站網路請求，查看事件訊號是否成功送達分析儀表板。",
+    "original_webp_path": "content/queue/assets/2026-11-04-ga4-event-debug.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "昨天我修 GA4，有個很容易讓人以為「完成了」的狀況：頁面已經載入 gtag.js，報表卻完全沒資料。\n\n我後來看網路請求，才發現沒有送出 collect。把事件送出修好，再看到 collect request，才敢說它真的有跑。\n\n很多開發任務都一樣：套件裝了不等於功能完成，按鈕有反應不等於資料有到。\n\n讓 AI 幫忙 debug，也要它拿出驗收證據：改了哪裡、輸入後產生什麼、請求有沒有送出、結果在哪裡確認。\n\n你判斷 AI 說「完成」時，會看哪個證據？",
+      "requestId": "3155d2ec-1383-4520-a479-65707528da85"
+    },
+    "threads": {
+      "text": "昨天修 GA4，頁面明明載入了 gtag.js，報表卻沒資料。\n\n一看 network 才發現沒有 collect request。修完後確認事件真的送出，我才敢說處理完成。\n\n套件載入不等於功能成功；AI 說「改好了」，也要看驗收證據。\n\n你會用什麼證據判斷一個 bug 真的修好？",
+      "requestId": "f0d10366-e4f0-4e63-b667-91e3325f4e41"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "User requested the scheduled Crew Lab daily content batch for 2026-11-04; publication is delegated to the local Publisher."
+  }
+}

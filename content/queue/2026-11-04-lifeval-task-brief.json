@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261104-lifeval-task-brief",
+  "created_date": "2026-11-04",
+  "title": "讓 AI 做日常任務，先寫清楚完成條件",
+  "category": "practical-tip",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-04",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-04-lifeval-task-brief.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "f19c83a2d5b378e51436f4db3546957f33f0159e4bfe57ddea70e19b42bbe4a7",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-04-lifeval-task-brief.jpg",
+    "alt": "家庭在桌邊用 AI 助理整理行程，畫面以日曆、地圖、預算和核對清單圖示呈現。",
+    "original_webp_path": "content/queue/assets/2026-11-04-lifeval-task-brief.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "OpenAI 最近推出 LifeVal，想衡量 AI 能不能幫人完成找幼兒園、辦政府文件、排預算、買菜等日常任務，而不只是回答得像不像。\n\n我看完想到一個很好用的下指令方法：把「要完成什麼」講清楚，再補上限制、需要交付的結果，以及哪些事要先問你。\n\n例如不要只說「幫我安排週末」，可以寫：\n「找三個交通方便的親子活動，列出時間、地址、價格和官方連結；先整理比較表，不要代我預約或付款。」\n\n這不保證 AI 一定做對，但會讓結果比較容易核對，也能清楚分開「先給建議」和「可以替我執行」。\n\n你平常會把這條界線寫進提示詞嗎？",
+      "requestId": "d9d8e793-c5e1-4d5b-905b-ecb4f40cdb89"
+    },
+    "threads": {
+      "text": "OpenAI 新的 LifeVal 想衡量 AI 能不能幫人完成日常任務，像找幼兒園、辦文件、排預算；不只是回答得像不像。\n\n我把它變成一個下指令小技巧：講清楚「目標、限制、交付格式、哪些動作要先問我」。\n\n例：「找三個交通方便的親子活動，列時間、地址、價格與官方連結；先給我比較表，別代我預約或付款。」\n\n這不保證 AI 做對，但會讓結果容易核對。你會把建議和代執行的界線寫進提示詞嗎？",
+      "requestId": "c964f92e-39a7-4b2d-9b47-706397f95409"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "User requested the scheduled Crew Lab daily content batch for 2026-11-04; publication is delegated to the local Publisher."
+  },
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-11-02",
+    "title": "LifeVal",
+    "url": "https://openai.com/index/lifeval/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜OpenAI：LifeVal（2026-11-02）\nhttps://openai.com/index/lifeval/",
+      "requestId": "ce6e6927-4824-44b3-a56b-14c36b58836d"
+    },
+    "threads": {
+      "text": "參考來源｜OpenAI：LifeVal（2026-11-02）\nhttps://openai.com/index/lifeval/",
+      "requestId": "55662ebb-678e-4dbc-bc4d-4bbce931f08e"
+    }
+  }
+}
