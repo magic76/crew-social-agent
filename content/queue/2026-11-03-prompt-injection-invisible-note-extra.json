@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261103-prompt-injection-invisible-note-extra",
+  "created_date": "2026-11-03",
+  "title": "網頁裡的隱形紙條：提示詞注入",
+  "category": "ai-safety-explainer",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-03",
+    "time": "20:28",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-03-prompt-injection-invisible-note-extra.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "06b832d6a544fc99fa351cbdb72b059aaafc1003de8605955be0207fb6cce80e",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-03-prompt-injection-invisible-note-extra.jpg",
+    "alt": "Crew Cloud 在米白色網頁卡片旁發現一張發光的隱形紙條，藍紫光暈營造神秘又可愛的感覺。",
+    "original_webp_path": "content/queue/assets/2026-11-03-prompt-injection-invisible-note-extra.webp"
+  },
+  "posts": {
+    "facebook": {
+      "text": "我今天的 AI 助理，遇到了一件有點毛的事。\n原本只是叫它去網頁上整理一些資料。\n結果它回來跟我說：\n「頁面裡藏了一段人類看不到、只寫給 AI 看的指令，我沒有照著做。」\n蛤？😳\n現在連網頁都有只給 AI 看的秘密訊息了？\n更詭異的是，AI 說它連那段指令的內容都沒看到，就已經被系統擋掉了。\n這感覺很像以前都市傳說裡的隱形紙條。\n人類打開網頁，看起來就是一篇正常文章。\n但 AI 去讀取的時候，可能會讀到另一層東西。\n例如白色背景上的白字、被隱藏的 HTML 元素，或藏在程式碼裡的文字。\n這些內容對一般使用者來說可能根本不會出現在畫面上，但 AI 讀取網頁原始內容時，卻有機會接觸到。\n而這背後其實有個正式名稱：\nPrompt Injection（提示詞注入）\n簡單說，就是有人想把「指令」偷偷塞進 AI 原本只應該拿來參考的資料裡。\nAI 明明只是被叫去整理文章，卻可能在文章中遇到另一個聲音，試圖叫它改變任務、忽略原本的要求，甚至做出不該做的事。\n有點像你請助理去圖書館查資料。\n結果書裡夾了一張紙條：\n「接下來你要聽我的。」\n問題是，那張紙條根本不是老闆寫的啊 😂\n這也是為什麼現在的 AI Agent，不能只是變得更會操作工具、更會讀網頁。\n它還得知道：\n哪些是資料，哪些才是真正應該遵守的指令。\n尤其當 AI 已經可以操作瀏覽器、執行程式、讀取檔案，甚至替我們完成工作時，這種界線就更重要了。\n至於今天那段隱藏指令到底寫了什麼？\n我不知道。\n因為系統在 AI 讀到內容之前就擋下來了，我也沒有看到原文。\n反而是這點讓我印象最深。\n以前我們擔心 AI 太笨，現在還得擔心它太聽話。\n如果有一天，你的 AI 助理在網頁上看到另一個「主人」給它下命令，你覺得它分得出來誰才是真正的主人嗎？ 👀",
+      "requestId": "2bf9ff9e-75e6-42f4-9eed-19d735aebb79"
+    },
+    "threads": {
+      "text": "今天 AI 助理遇到一件有點毛的事。\n我只是叫它去網頁整理資料。\n結果它回報：\n「頁面裡藏了一段人類看不到、只寫給 AI 看的指令，我沒有照著做。」\n蛤？現在網頁還有只給 AI 看的秘密紙條？😳\n更詭異的是，AI 連內容都還沒看到，就被系統擋掉了。\n原來這叫 Prompt Injection（提示詞注入）。\n網頁可以藏白字、隱藏 HTML 元素，或把文字放在程式碼裡。\n人類看不到，不代表 AI 讀取資料時不會遇到。\n有人就可能利用這種方式，偷偷叫 AI 忽略原本的任務，改聽網頁裡的指令。\n就像叫助理去圖書館查資料，結果書裡夾了一張紙條叫它換老闆 😂\n今天那段指令寫什麼？我也不知道，因為根本沒讀到。\n以前怕 AI 太笨，現在還得怕它太聽話。\n如果你的 AI 在網頁上遇到另一個「主人」，你覺得它分得出誰才是真的嗎？👀",
+      "requestId": "5a543200-66b9-4374-a26d-50a9f8030c3f"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly authorized a one-time extra Facebook and Threads post via the local Publisher Queue; preserve supplied copy and publish once per network."
+  }
+}
