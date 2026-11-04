@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261104-crew-pocket-mobile-workstation",
+  "created_date": "2026-11-04",
+  "title": "一支手機變隨身電腦？Crew Pocket 把 AI 工作放進口袋",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-04",
+    "time": "20:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-04-crew-pocket-mobile-workstation.jpg.base64",
+    "width": 1490,
+    "height": 1584,
+    "sha256": "e913255cb7d5eb74310eeff937de25ce5acd034e147572e11ce360058ba35539",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-04-crew-pocket-mobile-workstation.jpg",
+    "alt": "兩張 Crew Pocket 手機畫面並排：左側顯示 AI 角色完成 Crew Car v0.1.34 更新安裝的工作報告；右側顯示多個角色卡片與工作狀態。"
+  },
+  "posts": {
+    "facebook": {
+      "text": "手機直接幫我把新版 App 拉下來、裝好了。\n嗯，這支手機現在有點不像手機了。\n\n這是 Crew Pocket。它把 AI 角色、專案和工作回報放在同一個手機介面；你可以把事情交給適合的角色，再回來看進度和結果。\n\n截圖裡，我讓 Car dev 更新 Crew Car。Workbench 回報 v0.1.34 已拉取並安裝，手機也確認了版本；更新 commit、APK 和 11 項操作紀錄都能直接查看。另一頁同時顯示 10 個角色，Helper Dev、LG TV、Parking、Pocket Dev……誰在工作、最近聊到什麼，都在手機裡。\n\n寫程式、查資料、管理不同專案，把工作交給 AI 角色處理，人不在電腦前也能看工作進度。感覺像把一台小電腦，連同一群 AI 同事，直接裝進口袋。\n\n想試試手機上跑 Crew Pocket 是什麼感覺？安裝說明在這裡：\nhttps://github.com/magic76/crew-pocket",
+      "requestId": "4429f148-6e5d-48b2-95a2-41d148585e61"
+    },
+    "threads": {
+      "text": "手機直接叫 AI 把新版 App 拉下來，還安裝好了。\n嗯，這支手機有點不像手機了。\n\nCrew Pocket 把 AI 角色、專案和工作回報放在同一個手機介面。截圖裡我讓 Car dev 更新 Crew Car，Workbench 回報 v0.1.34 已安裝，手機也確認了版本；commit、APK、11 項操作紀錄都看得到。另一頁同時顯示 10 個角色和工作狀態。\n\n寫程式、查資料、管理多個專案，交給不同角色處理；人在外面也能用手機看進度和結果。隨身電腦大概就是這樣吧？\n\nCrew Pocket 安裝說明：https://github.com/magic76/crew-pocket",
+      "requestId": "b43cf74c-9c65-493c-86bf-8a3fd12ef652"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner explicitly requested this post be prepared in the queue for publication by the local agent."
+  }
+}
