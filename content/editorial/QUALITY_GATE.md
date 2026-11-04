@@ -1,13 +1,13 @@
 # Social Editor quality gate
 
-Record one concrete reason for each row for every candidate. Do not average ratings or let an AI's numeric self-score approve a story.
+Record one concrete reason for each row for every candidate. Include a `reader_context` sentence that introduces a named product or feature to someone who has never seen it. Do not average ratings or let an AI's numeric self-score approve a story.
 
 | Dimension | Pass asks | Hold or reject when |
 |---|---|---|
 | Truth | Each factual sentence maps to dated primary or owned-project evidence; uncertainty is stated. | First-person experience, outcome, date, or metric is unsupported. |
 | Interest | A specific surprise, friction, trade-off, decision, consequence, or useful payoff is visible. | The item is only a feature list or a generic announcement. |
 | Personal relevance | The material connects to the author's real project or a clearly stated point of view. | It could be posted unchanged by any AI news account. |
-| Opening | The first one or two lines give a concrete reason to read on. | It begins with a stock announcement or abstract setup. |
+| Opening | The first one or two lines orient an unfamiliar reader: what product, game, feature or activity this is, then the concrete reason to read on. | It starts with unexplained product jargon or a bug before readers know what the thing does. |
 | Template risk | The draft has a distinct structure and does not repeat an opener, punchline, or moral from recent posts. | Stock phrases, repeated framing, or an interchangeable AI conclusion dominate. |
 | Media fit | The chosen medium adds proof, context, humor, or clarity; text-only is intentional when enough. | The image is decorative, misleading, fabricated as a real UI, or required only to fill a slot. |
 

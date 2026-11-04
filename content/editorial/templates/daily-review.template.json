@@ -13,7 +13,8 @@
       "claims": [
         {"text": "One factual claim", "evidence_ids": ["src-1"]}
       ],
-      "story_spine": "What happened → specific friction or choice → why a reader may care.",
+      "reader_context": "One sentence explaining the product or activity to an unfamiliar reader.",
+      "story_spine": "Context → what happened → specific friction or choice → why a reader may care.",
       "decision": {"outcome": "hold", "reason_code": "needs_asset", "reason": "Name the concrete missing item or editorial reason."},
       "quality_review": {
         "truth": {"status": "pass", "reason": "Point to the supported claim or uncertainty."},

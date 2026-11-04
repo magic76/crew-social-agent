@@ -39,6 +39,19 @@ test('selected drafts need independent copy and specific reasons for all six rev
   assert.ok(result.errors.some(message => message.includes('must be separately edited')));
 });
 
+test('review requires context that explains a named product or feature to a new reader', () => {
+  const missing = structuredClone(sample);
+  missing.candidates[0].reader_context = 'Crew Play';
+  assert.ok(validateEditorialReview(missing, { repoRoot: root }).errors.some(message => message.includes('reader_context')));
+});
+
+test('owner edit feedback log is append-ready JSONL and keeps observation separate from hypothesis', async () => {
+  const content = await readFile(resolve(root, 'content/editorial/feedback/events.jsonl'), 'utf8');
+  const events = content.split(/\r?\n/).filter(line => line.trim()).map(line => JSON.parse(line));
+  assert.ok(events.length >= 1);
+  assert.ok(events.every(event => typeof event.owner_signal === 'string' && typeof event.editor_hypothesis === 'string' && event.status === 'provisional'));
+});
+
 test('Queue-ready draft cannot bypass unresolved review, source replies, or authorization', () => {
   const broken = structuredClone(sample);
   const post = broken.candidates[0];

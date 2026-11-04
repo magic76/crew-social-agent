@@ -4,7 +4,7 @@ This directory stores the new editorial decisions and learning records. It is se
 
 ## Daily files
 
-- `reviews/YYYY-MM-DD-<slug>.json` records at least six candidates, evidence, selection or rejection reasons, six concrete quality notes, the chosen copy, media direction, and handoff readiness. Use `templates/daily-review.template.json` as a shape guide.
+- `reviews/YYYY-MM-DD-<slug>.json` records at least six candidates, evidence, a plain-language `reader_context`, selection or rejection reasons, six concrete quality notes, the chosen copy, media direction, and handoff readiness. Use `templates/daily-review.template.json` as a shape guide.
 - Run `npm run editorial:check` after adding or editing a review. A valid file is structurally complete; it is not automatically suitable or authorized for publication.
 - Keep the original research report in `content/reports/` or `content/research/`; do not count a research finding as a social post.
 - Keep owner feedback in `feedback/events.jsonl`. Append, never rewrite prior events. Use the schema and instructions in that folder.

@@ -15,20 +15,21 @@
         {"text": "Number Bomb is a player-only guessing game hosted by the AI friend.", "evidence_ids": ["src-crew-play-504"]},
         {"text": "Memory Match voice waits for a resolved turn and completed playback before continuing.", "evidence_ids": ["src-crew-play-504"]}
       ],
-      "story_spine": "Opening the number wheel obscured the range → the player had to hunt for the rule while choosing → pinning the bounds keeps the next choice legible.",
+      "reader_context": "Crew Play is a web hub with mini-games; in Number Bomb, the player guesses a secret number from 1 to 100, gets a higher-or-lower hint and narrows the range while the AI friend hosts.",
+      "story_spine": "Explain the guessing game → the number wheel hid the current range → pinning the bounds lets players choose without hunting for the rule.",
       "decision": {"outcome": "selected", "reason_code": "specific_ui_friction", "reason": "A concrete interface mismatch makes a small real fix understandable without inventing a test or reader reaction."},
       "quality_review": {
         "truth": {"status": "pass", "reason": "The commit diff explicitly pins the allowed range in the wheel and game panel."},
         "interest": {"status": "pass", "reason": "The game asks for a guess while the current bounds disappear from view."},
         "personal_relevance": {"status": "pass", "reason": "This is a direct change in the author's Crew Play repository."},
-        "opening": {"status": "pass", "reason": "Start on the specific UI friction rather than a company announcement."},
+        "opening": {"status": "pass", "reason": "The revised opening explains Crew Play and the number-guessing rules before introducing the wheel problem."},
         "template_risk": {"status": "pass", "reason": "The draft uses a concrete product moment and avoids the recent news-summary pattern."},
         "media_fit": {"status": "hold", "reason": "A genuine Number Bomb screen capture would prove the layout; none is stored with this review, so the copy stays draft-only."}
       },
-      "template_scan": {"compared_review_ids": ["recent Queue and posts from 2026-11-02 through 2026-11-04"], "repeated_openers": [], "stock_phrase_hits": [], "note": "The opening is a UI friction, not a repeated news or research lead."},
+      "template_scan": {"compared_review_ids": ["recent Queue and posts from 2026-11-02 through 2026-11-04"], "repeated_openers": [], "stock_phrase_hits": [], "note": "The opening introduces the game and its rules before the UI friction; it avoids a news or research lead."},
       "drafts": {
-        "facebook": {"text": "Crew Play 的「終極密碼」有個很小的 UI 問題：數字滾輪一打開，目前可猜的範圍就被遮住了。\n\n玩家要選數字，還得先找規則在哪。互動很像把考題出好了，再把題目蓋起來。\n\n現在把上下界固定顯示在滾輪裡。這次也把回合節奏理清：玩家猜、AI 當主持；翻牌要等棋盤狀態確認、語音播完再繼續。\n\n這次不是多加一個更會講話的 AI。是先讓它知道什麼時候該安靜。"},
-        "threads": {"text": "Crew Play 的終極密碼一打開數字滾輪，可猜範圍就被遮住了。\n\n玩家選數字，還得先找規則在哪。現在把上下界固定放在滾輪裡。\n\nAI 主持等回合確認、語音播完再接話。產品有時候升級，是讓 AI 晚半拍。"},
+        "facebook": {"text": "我在 Crew Play（裡面有幾個 AI 陪玩的網頁小遊戲）做了一個「終極密碼」：從 1 到 100 猜一個秘密數字，每次猜完會提示要猜更大或更小，範圍就慢慢縮小；AI 朋友負責當主持人。\n\n我把輸入改成數字滾輪後，才發現一個很蠢的問題：滾輪一打開，現在可以猜的範圍就看不到了。要猜數字，還得先找規則在哪。\n\n所以我把目前的上下界固定顯示在滾輪裡。順手也整理了回合節奏：玩家猜、AI 負責主持；翻牌遊戲則等回合結果確認、語音播完再接話。\n\n至少不用一邊猜數字，一邊找範圍。"},
+        "threads": {"text": "我在 Crew Play（網頁小遊戲）做了個「終極密碼」：從 1 到 100 猜秘密數字，遊戲每次提示「再猜大一點／小一點」，AI 朋友當主持人。\n\n我把輸入換成滾輪後，卻把「目前可以猜哪個範圍」蓋住了。數字還沒猜到，先開始找範圍。\n\n現在上下界固定放在滾輪裡。AI 主持也等回合確認、語音播完才接話。"},
         "first_replies": null
       },
       "media": {"type": "real_screenshot", "reason": "An actual Number Bomb capture showing the wheel and visible allowed range would prove the change. Do not synthesize a fake UI.", "asset": {"status": "not_available", "path": null, "provenance": null}, "alt_text": "待取得真實畫面；Crew Play 終極密碼數字滾輪與固定顯示的可猜範圍。"},
@@ -40,6 +41,7 @@
       "class": "development",
       "evidence": [{"id": "src-crew-play-504b", "type": "github_commit", "label": "Crew Play issue 504 Number Bomb host mode", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
       "claims": [{"text": "The player makes the guesses while the AI friend hosts instead of taking a contestant turn.", "evidence_ids": ["src-crew-play-504b"]}],
+      "reader_context": "Number Bomb is a Crew Play guessing game where the player guesses while the AI friend hosts.",
       "story_spine": "The game changed from alternating guesses to a player-only host mode → the AI's role is clearer → separate from the range-visibility story only if a real interaction sequence is available.",
       "decision": {"outcome": "rejected", "reason_code": "overlaps_selected_story", "reason": "The role change is in the same release but reads as a feature note without a distinct interaction or observed consequence."},
       "quality_review": {
@@ -61,6 +63,7 @@
       "class": "development",
       "evidence": [{"id": "src-crew-play-504c", "type": "github_commit", "label": "Crew Play issue 504 verified-turn narration and audio-drain pacing", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
       "claims": [{"text": "Memory Match AI narration waits for the resolved pair and completed speech playback.", "evidence_ids": ["src-crew-play-504c"]}],
+      "reader_context": "Memory Match is a Crew Play card game where players flip cards to find matching pairs, with optional AI voice narration.",
       "story_spine": "Voice used to risk moving ahead of game state → narration is tied to resolved turns and drained audio → explain only with a real clip or reproduction.",
       "decision": {"outcome": "hold", "reason_code": "needs_demonstration", "reason": "The code and tests show careful pacing logic, but a reader-facing clip or explicit reported symptom is needed to make the story concrete."},
       "quality_review": {
@@ -82,6 +85,7 @@
       "class": "development",
       "evidence": [{"id": "src-crew-play-504d", "type": "github_commit", "label": "Crew Play issue 504 stale narration guard", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
       "claims": [{"text": "The change prevents old keyless narration from being replayed when Live voice begins after a game event.", "evidence_ids": ["src-crew-play-504d"]}],
+      "reader_context": "Crew Play's Live voice companion can narrate events while someone plays the site's mini-games.",
       "story_spine": "Live voice could start after a silent turn → stale narration needs a guard → this is a maintenance detail without a captured user-facing consequence.",
       "decision": {"outcome": "rejected", "reason_code": "low_reader_payoff", "reason": "The fix is real but too internal to carry a post by itself without an observed user problem."},
       "quality_review": {
@@ -103,6 +107,7 @@
       "class": "development",
       "evidence": [{"id": "src-crew-play-504e", "type": "github_commit", "label": "Crew Play issue 504 queued narration survives voice reconnect", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
       "claims": [{"text": "Tests cover a committed narration cue remaining queued across a voice reconnect.", "evidence_ids": ["src-crew-play-504e"]}],
+      "reader_context": "Crew Play's optional Live voice companion speaks during mini-games and can reconnect while a turn is in progress.",
       "story_spine": "Connection changes could interrupt committed voice cues → the code retains them → need an actual reproduction or user-facing example before telling it as a story.",
       "decision": {"outcome": "hold", "reason_code": "needs_user_visible_context", "reason": "A commit test documents an edge case, but the record does not say who encountered it or what was heard."},
       "quality_review": {
@@ -124,6 +129,7 @@
       "class": "development",
       "evidence": [{"id": "src-crew-play-504f", "type": "github_commit", "label": "Crew Play issue 504 game hub copy and optional voice labels", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
       "claims": [{"text": "The game hub describes Number Bomb as player guesses with the AI friend hosting and labels some games as optional voice.", "evidence_ids": ["src-crew-play-504f"]}],
+      "reader_context": "Crew Play is a web game hub that lists mini-games and explains whether each one uses an AI host or optional voice.",
       "story_spine": "The catalog labels explain host/voice behavior → clearer expectations help selection → this is a release note without a unique story or reader payoff.",
       "decision": {"outcome": "rejected", "reason_code": "announcement_only", "reason": "The wording improvement is useful product maintenance but there is no concrete surprise or separate editorial story."},
       "quality_review": {

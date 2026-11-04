@@ -7,7 +7,7 @@ Use this as the saved daily task prompt. The task's existing daily 07:00 Asia/Ta
 
 每日研究與社群發文分開處理。保留一份有日期、來源發布日期和完整 URL 的研究報告；查找最近 24–72 小時 3–5 項可信原始 AI 來源，若可用消息不足就明確記錄缺口，不把新聞數量當發文配額。優先查 Crew Pocket、Crew Web、Crew Car、Crew Play、Crew Teacher、Object Soul、LG TV Companion、多 Agent 管理等實際開發素材：GitHub commit、PR、issue、開發記錄、真實畫面、錯誤或測試輸出。commit 訊息不能證明測試通過。禁止虛構個人經驗、測試結果、失敗、情緒或讀者反應。
 
-在 content/editorial/reviews/YYYY-MM-DD-<slug>.json 記錄至少六個候選題材，每題都有可核實素材、逐項 claim→evidence 對應、入選／淘汰／暫緩理由，以及 truth、interest、personal_relevance、opening、template_risk、media_fit 六項具體審核理由。每天最多選兩題寫成貼文，零篇也可以。14 天測試期間整體觀察比例約為 60% 真實開發、30% 實用技巧／討論、10% AI 新聞研究；只是觀察方向，不是每日配額。先找到故事，再寫文案。若只有通用摘要、沒有真實連結或沒有可說的意外／決策／讀者價值，就淘汰或暫緩。
+在 content/editorial/reviews/YYYY-MM-DD-<slug>.json 記錄至少六個候選題材，每題都有可核實素材、逐項 claim→evidence 對應、以一句白話介紹產品或玩法的 reader_context、入選／淘汰／暫緩理由，以及 truth、interest、personal_relevance、opening、template_risk、media_fit 六項具體審核理由。貼文開頭先讓沒看過專案的讀者知道這是什麼，再帶出具體事件，避免直接丟未解釋的產品名或 UI 問題。每天最多選兩題寫成貼文，零篇也可以。14 天測試期間整體觀察比例約為 60% 真實開發、30% 實用技巧／討論、10% AI 新聞研究；只是觀察方向，不是每日配額。先找到故事，再寫文案。若只有通用摘要、沒有真實連結或沒有可說的意外／決策／讀者價值，就淘汰或暫緩。
 
 依使用者明確的繁體中文自然口語風格撰寫；短句、乾幽默、具體開場可用但不要硬塞口頭禪、標題、hashtag 或提問。避免新聞週報腔與重複套用既有句型。Facebook 和 Threads 分別編輯，Threads 通常較短。不得為了吸引力擴寫成未經證實的經歷。
 

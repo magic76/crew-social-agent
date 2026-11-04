@@ -54,6 +54,7 @@ export function validateEditorialReview(review, { repoRoot = process.cwd() } = {
       if (typeof claim?.text !== 'string' || claim.text.trim().length < 8) error(`${where}.claims[${cIndex}].text`, 'must be a factual claim');
       if (!Array.isArray(claim?.evidence_ids) || claim.evidence_ids.length === 0 || claim.evidence_ids.some(id => !evidenceIds.has(id))) error(`${where}.claims[${cIndex}].evidence_ids`, 'must point to existing evidence IDs');
     }
+    if (typeof candidate.reader_context !== 'string' || candidate.reader_context.trim().length < 15) error(`${where}.reader_context`, 'explain the product, feature or activity for someone who has not seen it before');
     if (typeof candidate.story_spine !== 'string' || candidate.story_spine.trim().length < 20) error(`${where}.story_spine`, 'state event, friction/choice and reader value, or explain what is missing');
     if (!OUTCOMES.has(candidate.decision?.outcome)) error(`${where}.decision.outcome`, 'must be selected, rejected or hold');
     if (typeof candidate.decision?.reason_code !== 'string' || candidate.decision.reason_code.trim().length < 3) error(`${where}.decision.reason_code`, 'use a trackable reason code');
