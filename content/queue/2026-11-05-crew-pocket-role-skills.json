@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261105-crew-pocket-role-skills",
+  "created_date": "2026-11-05",
+  "title": "Crew Pocket 讓 Agent 自己挑技能手冊",
+  "category": "development-diary",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-05",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/crew-pocket",
+    "published_date": "2026-11-04",
+    "title": "Merge pull request #129: Agent-selected Role Skill discovery with persistent SKILL.md",
+    "url": "https://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜Crew Pocket 合併 PR #129：Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+      "requestId": "c94055a1-27e5-4ffd-af76-da2be36d183c"
+    },
+    "threads": {
+      "text": "參考來源｜Crew Pocket 合併 PR #129：Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+      "requestId": "6e4a5c0a-5d17-4af1-af01-5e0b50608ced"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Pocket 是我用來管理多個 AI 角色和專案的 Android 工作台。每個角色都能有自己的技能手冊。\n\n以前程式會看任務和手冊的關鍵字像不像，再自動把手冊塞給 Agent。問題是，字有碰到，不代表這次真的適用；通用測試過了，也不代表某個候選技能就該直接啟用。\n\n現在只把人工確認過的技能列給正在做事的 Agent，由它判斷這次要不要用，再按需讀完整手冊。批准後的技能會存成標準 SKILL.md，重開後還在；候選技能則先等人確認。\n\n少一點關鍵字占卜，多一點讓真正做事的 Agent 看清楚手上的選項。",
+      "requestId": "e706707e-7521-4572-9786-58adaf27e1fc"
+    },
+    "threads": {
+      "text": "Crew Pocket 是我用來管理 AI 角色和專案的 Android 工作台。每個角色可以有自己的操作手冊。\n\n以前程式看任務字眼和手冊關鍵字像不像，就自動塞給 Agent。結果「文字有重疊」被當成「這次真的適用」。\n\n現在只展示人工啟用的技能清單，讓正在處理任務的 Agent 自己挑、需要時才讀全文；批准過的手冊會存成 SKILL.md，重開後還在。\n\n少一點關鍵字占卜。",
+      "requestId": "4a597f54-decc-4b63-924b-febd3785d54d"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "Draft only; approval for this specific copy was not found, and this run cannot verify the owner’s local live mode or credentials."
+  }
+}

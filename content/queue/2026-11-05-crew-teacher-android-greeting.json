@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261105-crew-teacher-android-greeting",
+  "created_date": "2026-11-05",
+  "title": "Crew Teacher Android 開場暖機音訊修正",
+  "category": "development-diary",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-05",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/magic76.github.io",
+    "published_date": "2026-11-04",
+    "title": "fix: prevent Android WebView microphone warm-up noise from suppressing Live greeting (#511)",
+    "url": "https://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜Crew Teacher Android WebView 開場音訊修正（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+      "requestId": "05d66b1a-52ba-46cc-a34b-1d3269f415aa"
+    },
+    "threads": {
+      "text": "參考來源｜Crew Teacher Android WebView 開場音訊修正（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+      "requestId": "6cca9ff9-79f6-4f54-bf65-f7d092ade1bd"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Teacher 是我做的 AI 教師 App，可以讓人和 AI 老師對話。網頁版會先打招呼，Android 版卻常常等我先說。\n\n我追到一個原因：Android WebView 啟動麥克風時，會先出現一小段暖機雜音。舊判斷太敏感，可能把它當成我已經開口，AI 的招呼就被跳過。\n\n現在程式要累積 240 毫秒的語音，才把它當成有人先說；中間最多容許 80 毫秒停頓。也加了開場決策和第一段音訊狀態，方便查聲音到底有沒有開始播。\n\n改動已經進到程式，但我還沒把 Android 真機重測當成驗收完成。原來不是 AI 在裝忙，可能是麥克風一開機先搶答。",
+      "requestId": "e7d92b29-b6b5-40b5-b704-c1a29df396c1"
+    },
+    "threads": {
+      "text": "Crew Teacher 是我做的 AI 教師 App。網頁版會先打招呼，Android 版卻常等我先說。\n\n原因追到 Android WebView 開麥克風時的暖機雜音：舊判斷可能把它當成我已經開口，於是跳過 AI 的招呼。\n\n現在要累積 240 毫秒語音（中間可停最多 80 毫秒）才略過開場，也記錄第一段音訊有沒有真正開始播放。\n\n程式改了，Android 真機還要驗收。不是 AI 害羞，是麥克風先搶答。",
+      "requestId": "2a6f1f80-4991-4dc6-a2f8-1311b989f1a4"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "Draft only; approval for this specific copy was not found, and this run cannot verify the owner’s local live mode or credentials."
+  }
+}

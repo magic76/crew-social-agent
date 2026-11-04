@@ -1,0 +1,594 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-05",
+  "review_id": "2026-11-05-daily-editorial-review",
+  "candidates": [
+    {
+      "id": "candidate-01-android-live-greeting",
+      "topic": "Android WebView startup noise caused the Live opening to be skipped",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-android-live-511",
+          "type": "github_commit",
+          "label": "Crew Teacher commit #511: sustained early speech before skipping the opening",
+          "url": "https://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "The opening is now skipped only after 240 ms of voiced audio, with a short pause of up to 80 ms allowed.",
+          "evidence_ids": [
+            "src-android-live-511"
+          ]
+        },
+        {
+          "text": "The change adds diagnostics for the opening decision and the first audio playback state.",
+          "evidence_ids": [
+            "src-android-live-511"
+          ]
+        }
+      ],
+      "reader_context": "Crew Teacher is an AI teaching app whose Live voice mode can greet the learner before they speak.",
+      "story_spine": "The web app greeted first while Android could wait → WebView warm-up noise could be mistaken for speech → a new threshold and audio diagnostics make the opening decision inspectable.",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_cross_platform_bug",
+        "reason": "A real cross-platform difference has a code-level cause and a concrete fix, without inventing a test outcome."
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "Each material claim maps to the code change; copy does not claim a completed device retest."
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "The web app greeted first while Android could wait, with a specific audio-threshold cause."
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "This is a change in the author’s Crew Teacher project and matches the reported cross-platform behavior."
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "The first sentence explains Crew Teacher before naming Android WebView or its audio logic."
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "The draft follows one debugging sequence and includes a verifiable threshold instead of a generic AI lesson."
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "Text carries the sequence; no genuine Android capture or log is stored, so a generated screen would mislead."
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "recent Queue posts dated 2026-11-02 through 2026-11-04",
+          "2026-11-04-crew-play-editorial-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "The opener identifies the teaching app and its web/Android difference; it avoids the recent news-summary and feature-announcement openings."
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Teacher 是我做的 AI 教師 App，可以讓人和 AI 老師對話。網頁版會先打招呼，Android 版卻常常等我先說。\n\n我追到一個原因：Android WebView 啟動麥克風時，會先出現一小段暖機雜音。舊判斷太敏感，可能把它當成我已經開口，AI 的招呼就被跳過。\n\n現在程式要累積 240 毫秒的語音，才把它當成有人先說；中間最多容許 80 毫秒停頓。也加了開場決策和第一段音訊狀態，方便查聲音到底有沒有開始播。\n\n改動已經進到程式，但我還沒把 Android 真機重測當成驗收完成。原來不是 AI 在裝忙，可能是麥克風一開機先搶答。"
+        },
+        "threads": {
+          "text": "Crew Teacher 是我做的 AI 教師 App。網頁版會先打招呼，Android 版卻常等我先說。\n\n原因追到 Android WebView 開麥克風時的暖機雜音：舊判斷可能把它當成我已經開口，於是跳過 AI 的招呼。\n\n現在要累積 240 毫秒語音（中間可停最多 80 毫秒）才略過開場，也記錄第一段音訊有沒有真正開始播放。\n\n程式改了，Android 真機還要驗收。不是 AI 害羞，是麥克風先搶答。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源｜Crew Teacher Android WebView 開場音訊修正（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+            "requestId": "05d66b1a-52ba-46cc-a34b-1d3269f415aa"
+          },
+          "threads": {
+            "text": "參考來源｜Crew Teacher Android WebView 開場音訊修正（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+            "requestId": "6cca9ff9-79f6-4f54-bf65-f7d092ade1bd"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "The sequence is understandable in copy; no authentic Android capture or diagnostic output is attached, so a generated screen would imply a test that did not happen.",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-05-crew-teacher-android-greeting.json",
+        "schedule": {
+          "date": "2026-11-05",
+          "time": "10:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-02-role-skill-routing",
+      "topic": "Crew Pocket stopped injecting Role Skills by keyword match",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pocket-role-skill-129",
+          "type": "github_commit",
+          "label": "Crew Pocket merge commit for PR #129: Agent-selected Role Skill discovery with persistent SKILL.md",
+          "url": "https://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "The production path no longer uses keyword matching to inject a full Role Skill; the current Agent can inspect verified options and fetch full Markdown on demand.",
+          "evidence_ids": [
+            "src-pocket-role-skill-129"
+          ]
+        },
+        {
+          "text": "Only manually verified and activated skills enter the catalog, and approved skills can persist as SKILL.md across restarts.",
+          "evidence_ids": [
+            "src-pocket-role-skill-129"
+          ]
+        },
+        {
+          "text": "The new path avoids a second model invocation.",
+          "evidence_ids": [
+            "src-pocket-role-skill-129"
+          ]
+        }
+      ],
+      "reader_context": "Crew Pocket is an Android workspace for managing AI roles and projects; a Role Skill is a role-specific instruction manual.",
+      "story_spine": "The app used keyword overlap to choose and inject role instructions → similar words do not prove that a manual applies → the working Agent now inspects approved options and reads a manual only when needed.",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "meaningful_routing_change",
+        "reason": "This changes a real AI workflow from keyword guessing to an inspectable, on-demand choice that is relevant to agent users."
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "The merged PR describes manual activation, Agent-selected retrieval, and persistent SKILL.md files."
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "Keyword overlap could supply an irrelevant instruction, a concrete failure mode in role setup."
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "This is a real change in the author’s Crew Pocket role-skill routing."
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "The opener explains Crew Pocket and Role Skills before discussing the implementation."
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "The copy follows one decision change rather than a feature-release summary."
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "Plain text explains the routing change; no authentic before/after UI is stored."
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "Crew Pocket Queue post dated 2026-11-04",
+          "2026-11-04-crew-play-editorial-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "The draft explains Crew Pocket and the Role Skill concept first and is distinct from the recent mobile-workstation post."
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Pocket 是我用來管理多個 AI 角色和專案的 Android 工作台。每個角色都能有自己的技能手冊。\n\n以前程式會看任務和手冊的關鍵字像不像，再自動把手冊塞給 Agent。問題是，字有碰到，不代表這次真的適用；通用測試過了，也不代表某個候選技能就該直接啟用。\n\n現在只把人工確認過的技能列給正在做事的 Agent，由它判斷這次要不要用，再按需讀完整手冊。批准後的技能會存成標準 SKILL.md，重開後還在；候選技能則先等人確認。\n\n少一點關鍵字占卜，多一點讓真正做事的 Agent 看清楚手上的選項。"
+        },
+        "threads": {
+          "text": "Crew Pocket 是我用來管理 AI 角色和專案的 Android 工作台。每個角色可以有自己的操作手冊。\n\n以前程式看任務字眼和手冊關鍵字像不像，就自動塞給 Agent。結果「文字有重疊」被當成「這次真的適用」。\n\n現在只展示人工啟用的技能清單，讓正在處理任務的 Agent 自己挑、需要時才讀全文；批准過的手冊會存成 SKILL.md，重開後還在。\n\n少一點關鍵字占卜。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源｜Crew Pocket 合併 PR #129：Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+            "requestId": "c94055a1-27e5-4ffd-af76-da2be36d183c"
+          },
+          "threads": {
+            "text": "參考來源｜Crew Pocket 合併 PR #129：Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+            "requestId": "6e4a5c0a-5d17-4af1-af01-5e0b50608ced"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "The routing change is clearer in plain language; no authentic role-skill UI or before/after capture is attached.",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-05-crew-pocket-role-skills.json",
+        "schedule": {
+          "date": "2026-11-05",
+          "time": "19:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-03-souls-scroll-safe-editor",
+      "topic": "Object Soul editing controls were changed to avoid stealing mobile scroll gestures",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-souls-scroll-20261104",
+          "type": "github_commit",
+          "label": "Object Soul commit: mobile scroll-safe controls with tap-only steppers and explicit gesture mode",
+          "url": "https://github.com/magic76/magic76.github.io/commit/024f7a0a3d2649466b25f53b0f2f35d3fe127b43",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "The editor replaces drag sliders with tap-only number steppers and collapses advanced placement controls by default.",
+          "evidence_ids": [
+            "src-souls-scroll-20261104"
+          ]
+        },
+        {
+          "text": "Portrait movement now requires an explicit gesture mode so normal page scrolling remains available outside editing.",
+          "evidence_ids": [
+            "src-souls-scroll-20261104"
+          ]
+        }
+      ],
+      "reader_context": "Object Soul is a web editor for adjusting the portrait and appearance of an AI character.",
+      "story_spine": "Touch controls were made scroll-safe → page movement and portrait editing are now separate → a real before/after capture is needed to make the effect visible.",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "needs_authentic_visual",
+        "reason": "The code change is verifiable, but its user benefit is mostly visual and no safe real mobile before/after capture is available."
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "The commit and tests explicitly replace drag ranges and require an editing gesture."
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "The touch conflict is familiar, but no reported user incident is attached to the change."
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "This is a specific change in the author’s Object Soul editor."
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "A useful opener needs an actual moment when scrolling changed a portrait unexpectedly."
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "No copy drafted; the hold avoids turning a control refactor into a generic bug diary."
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "A genuine mobile before/after capture would show the change; none is stored with this review."
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "recent Queue posts dated 2026-11-02 through 2026-11-04"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "Held before drafting because a generic small-UI-fix opener would read like release notes."
+      },
+      "drafts": null,
+      "media": {
+        "type": "real_screenshot",
+        "reason": "A genuine mobile before/after capture could make the scroll-safe editor change visible.",
+        "asset": {
+          "status": "not_available",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-04-live-conversation-measurement",
+      "topic": "Object Soul analytics distinguish a Live connection from a verified conversation",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-souls-funnel-20261104",
+          "type": "github_commit",
+          "label": "Object Soul commit: verify guest Live dialogue and analytics funnel without private text logging",
+          "url": "https://github.com/magic76/magic76.github.io/commit/ea15d38b8515ab7d36579dfb4aeeeaac6956da28",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "The analytics separate Live attempts, user input, AI replies and confirmed two-sided conversations instead of counting a connection alone.",
+          "evidence_ids": [
+            "src-souls-funnel-20261104"
+          ]
+        },
+        {
+          "text": "The change tests a completed exchange without recording private conversation text.",
+          "evidence_ids": [
+            "src-souls-funnel-20261104"
+          ]
+        }
+      ],
+      "reader_context": "Object Soul Live lets visitors speak with an AI character; its usage dashboard measures where the conversation succeeds or stops.",
+      "story_spine": "A connected session did not prove an exchange happened → analytics now separate attempt, input, reply and confirmed conversation → the mechanism is real but no public-facing result is available.",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "internal_measurement_only",
+        "reason": "The code is verifiable but this is internal instrumentation; no user-visible event or public result makes it worth a post today."
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "The commit distinguishes connection, user input, AI reply and a confirmed exchange."
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "This matters to product analytics, but no observed user consequence or result is available."
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "The instrumentation is in the author’s Object Soul Live project."
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "Without an example of a misleading connected count, the opener would need to explain analytics first."
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "No draft yet; holding avoids another abstract AI-measurement explainer."
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "A real dashboard or redacted event trace would be needed; neither is attached."
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "recent Queue posts dated 2026-11-02 through 2026-11-04"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "Held for a user-facing example, not because analytics topics need a fixed style."
+      },
+      "drafts": null,
+      "media": {
+        "type": "real_output",
+        "reason": "A redacted event trace or dashboard could demonstrate the distinction, but no verified shareable output is available.",
+        "asset": {
+          "status": "not_available",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-05-number-bomb-wheel-range",
+      "topic": "Crew Play pinned the Number Bomb guessing range inside the number wheel",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-crew-play-504",
+          "type": "github_commit",
+          "label": "Crew Play issue 504 merge commit: hosted Number Bomb and persistent range display",
+          "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2",
+          "checked_at": "2026-11-05"
+        },
+        {
+          "id": "src-previous-review",
+          "type": "repo_file",
+          "label": "Yesterday’s Crew Play editorial review already selected this range-visibility story",
+          "url": "https://github.com/magic76/crew-social-agent/blob/main/content/editorial/reviews/2026-11-04-crew-play.json",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "The number wheel now keeps the allowed guessing range visible while the page header scrolls away.",
+          "evidence_ids": [
+            "src-crew-play-504"
+          ]
+        },
+        {
+          "text": "The same UI-friction topic was already selected in the 2026-11-04 review.",
+          "evidence_ids": [
+            "src-previous-review"
+          ]
+        }
+      ],
+      "reader_context": "Crew Play is a web hub of mini-games; Number Bomb asks a player to guess a hidden number using higher-or-lower hints.",
+      "story_spine": "The UI range was hard to see → code pins it inside the wheel → this exact reader story was already selected yesterday, so it should not become a second draft.",
+      "decision": {
+        "outcome": "rejected",
+        "reason_code": "already_reviewed",
+        "reason": "The same number-wheel friction and reader context were already selected in the 2026-11-04 review; repeating it today would create a duplicate draft."
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "The commit shows the range change and the dated review contains the previously selected topic."
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "The disappearing range is a concrete game friction, but the story already has a reviewed draft."
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "This is a real Crew Play change in the author’s repository."
+        },
+        "opening": {
+          "status": "not_applicable",
+          "reason": "No new draft is made because the exact topic already has a reviewed opening."
+        },
+        "template_risk": {
+          "status": "fail",
+          "reason": "Repeating yesterday’s product, problem and explanation would make the sequence feel templated."
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "Yesterday’s review also records that a genuine game capture is unavailable."
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-04-crew-play-editorial-review"
+        ],
+        "repeated_openers": [
+          "Crew Play Number Bomb range visibility"
+        ],
+        "stock_phrase_hits": [],
+        "note": "Rejected as a duplicate of yesterday’s selected candidate, not as a judgment on the story itself."
+      },
+      "drafts": null,
+      "media": {
+        "type": "real_screenshot",
+        "reason": "The prior review records no authentic Number Bomb capture; do not synthesize a game interface.",
+        "asset": {
+          "status": "not_available",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-06-anthropic-vault-research",
+      "topic": "Anthropic reports a prokaryotic vault structure studied with Claude",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-anthropic-vault-20261104",
+          "type": "primary_research",
+          "label": "Anthropic research: Investigating vault particles with Claude, published 2026-11-04",
+          "url": "https://www.anthropic.com/research/investigating-vault-particles-with-claude",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Anthropic says its team found a first 3D structure of a vault particle in prokaryotic cells and used Claude across literature search, method optimization and microscopy processing.",
+          "evidence_ids": [
+            "src-anthropic-vault-20261104"
+          ]
+        },
+        {
+          "text": "The company reports a purification step fell from about three days to 90 minutes, while saying the biological function remains unknown and the preprint link is pending.",
+          "evidence_ids": [
+            "src-anthropic-vault-20261104"
+          ]
+        }
+      ],
+      "reader_context": "A vault particle is a large protein shell in cells; the article describes a bacteriophage-related structure and an early biology research workflow.",
+      "story_spine": "Anthropic describes Claude supporting lab steps → the team reports a structure and shorter preparation time → the preprint is not yet publicly linked and the structure’s biological function remains unknown.",
+      "decision": {
+        "outcome": "rejected",
+        "reason_code": "company_claim_without_public_preprint",
+        "reason": "The research is interesting, but its preprint is not yet linked, the speed claim is company-reported, and it does not connect to the author’s current development work."
+      },
+      "quality_review": {
+        "truth": {
+          "status": "hold",
+          "reason": "The primary source is Anthropic’s article; its submitted bioRxiv preprint is not publicly linked yet."
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "A protein structure studied with AI-supported lab work is an unusual research story."
+        },
+        "personal_relevance": {
+          "status": "revise",
+          "reason": "This is not connected to the author’s own development work or a reported experiment."
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "A reader-friendly draft needs more biology context than today’s development diary can carry."
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "No draft was written, so no generic AI-is-changing-science ending is added."
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "A precise molecular diagram would need a verified structure asset, which is not in this repository."
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "recent Queue posts dated 2026-11-02 through 2026-11-04"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "Rejected after checking the missing preprint and weak connection to the author’s work, not because news is disallowed."
+      },
+      "drafts": null,
+      "media": {
+        "type": "diagram",
+        "reason": "A sourced cryo-EM structure could explain the vault, but no verified image was collected for this review.",
+        "asset": {
+          "status": "not_available",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    }
+  ]
+}
