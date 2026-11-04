@@ -2,6 +2,10 @@
 
 本 repo 提供本機 GitHub Queue 同步器、排程器、Facebook Page／Threads 官方 API publisher，以及本地發布紀錄。Node.js >=22，沒有 npm runtime dependencies；不使用 Metricool、Cloudflare Worker 或 D1。
 
+## 社群內容流程
+
+新貼文使用 [Crew Social Editor](skills/crew-social-editor/SKILL.md) 的證據導向編輯流程：先選故事，再寫稿；初始 14 天試行每日最多兩篇，零篇也可以；研究報告和發布 Queue 分開維護。既有已授權 Queue 與 Local Publisher 契約維持不變。
+
 ## 安全預設與發布條件
 
 Agent 預設 `SOCIAL_AGENT_MODE=dry_run`。只有以下條件全部成立才會呼叫 Meta 發文 API：

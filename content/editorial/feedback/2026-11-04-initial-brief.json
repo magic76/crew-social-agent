@@ -1,0 +1,14 @@
+{
+  "event_id": "crew-editorial-2026-11-04-brief",
+  "date": "2026-11-04",
+  "signal_type": "workflow_direction",
+  "content_id": null,
+  "owner_signal": "將內容定位改為工程師與 AI 的真實開發日記；先找故事，初期每日最多兩篇，零篇可以；避免新聞摘要、配圖模板和重複文章結構。",
+  "before": null,
+  "after": null,
+  "editor_hypothesis": "實際開發素材與具體意外，比單純資訊完整更符合本次試行目標；要以後續相似內容與明確編輯回饋檢驗，不把本 brief 推廣成固定句型。",
+  "evidence": ["user editorial redesign brief, 2026-11-04"],
+  "metrics": null,
+  "scope": "14-day pilot starting 2026-11-05",
+  "status": "direct_instruction"
+}

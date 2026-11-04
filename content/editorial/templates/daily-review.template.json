@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "date": "YYYY-MM-DD",
+  "review_id": "YYYY-MM-DD-topic-review",
+  "candidates": [
+    {
+      "id": "candidate-01",
+      "topic": "Specific, verifiable story",
+      "class": "development",
+      "evidence": [
+        {"id": "src-1", "type": "github_commit", "label": "Primary evidence title", "url": "https://github.com/owner/repo/commit/sha", "checked_at": "YYYY-MM-DD"}
+      ],
+      "claims": [
+        {"text": "One factual claim", "evidence_ids": ["src-1"]}
+      ],
+      "story_spine": "What happened → specific friction or choice → why a reader may care.",
+      "decision": {"outcome": "hold", "reason_code": "needs_asset", "reason": "Name the concrete missing item or editorial reason."},
+      "quality_review": {
+        "truth": {"status": "pass", "reason": "Point to the supported claim or uncertainty."},
+        "interest": {"status": "revise", "reason": "Name the surprise, friction, or missing payoff."},
+        "personal_relevance": {"status": "pass", "reason": "Name the actual project or point of view."},
+        "opening": {"status": "revise", "reason": "Describe the concrete hook or why it is missing."},
+        "template_risk": {"status": "pass", "reason": "Compare with recent posts and name a repeated pattern if found."},
+        "media_fit": {"status": "hold", "reason": "Name the medium and whether the genuine asset exists."}
+      },
+      "template_scan": {"compared_review_ids": [], "repeated_openers": [], "stock_phrase_hits": [], "note": "State what was compared."},
+      "drafts": null,
+      "media": {"type": "text-only", "reason": "Why this medium fits.", "asset": {"status": "not_needed", "path": null, "provenance": null}, "alt_text": null},
+      "handoff": {"status": "draft_handoff_only", "authorization_basis": null, "publish_permitted": false, "queue_path": null}
+    }
+  ]
+}

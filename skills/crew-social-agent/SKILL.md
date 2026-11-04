@@ -4,6 +4,8 @@ description: Run local Threads/Facebook publishing and comment management from a
 ---
 # Crew Social Agent (Local-first)
 
+For choosing and editing new social content, follow [Crew Social Editor](../crew-social-editor/SKILL.md) and run `npm run editorial:check` before creating a new Queue handoff. This does not change publisher behavior or grant publication permission.
+
 Use this repository's Node 22 CLI from the repo root, with .env configured locally. Never paste Meta tokens into chat, commit them, or log them.
 
 Commands:

@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-04",
+  "review_id": "2026-11-04-crew-play-editorial-review",
+  "candidates": [
+    {
+      "id": "candidate-01-range-wheel",
+      "topic": "The Number Bomb wheel hid the current allowed range",
+      "class": "development",
+      "evidence": [
+        {"id": "src-crew-play-504", "type": "github_commit", "label": "Crew Play issue 504: host mode, verified-turn voice, persistent number range", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}
+      ],
+      "claims": [
+        {"text": "The change pins the current allowed range inside the Number Bomb wheel and game panel.", "evidence_ids": ["src-crew-play-504"]},
+        {"text": "Number Bomb is a player-only guessing game hosted by the AI friend.", "evidence_ids": ["src-crew-play-504"]},
+        {"text": "Memory Match voice waits for a resolved turn and completed playback before continuing.", "evidence_ids": ["src-crew-play-504"]}
+      ],
+      "story_spine": "Opening the number wheel obscured the range → the player had to hunt for the rule while choosing → pinning the bounds keeps the next choice legible.",
+      "decision": {"outcome": "selected", "reason_code": "specific_ui_friction", "reason": "A concrete interface mismatch makes a small real fix understandable without inventing a test or reader reaction."},
+      "quality_review": {
+        "truth": {"status": "pass", "reason": "The commit diff explicitly pins the allowed range in the wheel and game panel."},
+        "interest": {"status": "pass", "reason": "The game asks for a guess while the current bounds disappear from view."},
+        "personal_relevance": {"status": "pass", "reason": "This is a direct change in the author's Crew Play repository."},
+        "opening": {"status": "pass", "reason": "Start on the specific UI friction rather than a company announcement."},
+        "template_risk": {"status": "pass", "reason": "The draft uses a concrete product moment and avoids the recent news-summary pattern."},
+        "media_fit": {"status": "hold", "reason": "A genuine Number Bomb screen capture would prove the layout; none is stored with this review, so the copy stays draft-only."}
+      },
+      "template_scan": {"compared_review_ids": ["recent Queue and posts from 2026-11-02 through 2026-11-04"], "repeated_openers": [], "stock_phrase_hits": [], "note": "The opening is a UI friction, not a repeated news or research lead."},
+      "drafts": {
+        "facebook": {"text": "Crew Play 的「終極密碼」有個很小的 UI 問題：數字滾輪一打開，目前可猜的範圍就被遮住了。\n\n玩家要選數字，還得先找規則在哪。互動很像把考題出好了，再把題目蓋起來。\n\n現在把上下界固定顯示在滾輪裡。這次也把回合節奏理清：玩家猜、AI 當主持；翻牌要等棋盤狀態確認、語音播完再繼續。\n\n這次不是多加一個更會講話的 AI。是先讓它知道什麼時候該安靜。"},
+        "threads": {"text": "Crew Play 的終極密碼一打開數字滾輪，可猜範圍就被遮住了。\n\n玩家選數字，還得先找規則在哪。現在把上下界固定放在滾輪裡。\n\nAI 主持等回合確認、語音播完再接話。產品有時候升級，是讓 AI 晚半拍。"},
+        "first_replies": null
+      },
+      "media": {"type": "real_screenshot", "reason": "An actual Number Bomb capture showing the wheel and visible allowed range would prove the change. Do not synthesize a fake UI.", "asset": {"status": "not_available", "path": null, "provenance": null}, "alt_text": "待取得真實畫面；Crew Play 終極密碼數字滾輪與固定顯示的可猜範圍。"},
+      "handoff": {"status": "draft_handoff_only", "authorization_basis": null, "publish_permitted": false, "media_verified": false, "queue_path": null, "schedule": null}
+    },
+    {
+      "id": "candidate-02-hosted-guessing",
+      "topic": "Changing Number Bomb into a player-only hosted guessing game",
+      "class": "development",
+      "evidence": [{"id": "src-crew-play-504b", "type": "github_commit", "label": "Crew Play issue 504 Number Bomb host mode", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
+      "claims": [{"text": "The player makes the guesses while the AI friend hosts instead of taking a contestant turn.", "evidence_ids": ["src-crew-play-504b"]}],
+      "story_spine": "The game changed from alternating guesses to a player-only host mode → the AI's role is clearer → separate from the range-visibility story only if a real interaction sequence is available.",
+      "decision": {"outcome": "rejected", "reason_code": "overlaps_selected_story", "reason": "The role change is in the same release but reads as a feature note without a distinct interaction or observed consequence."},
+      "quality_review": {
+        "truth": {"status": "pass", "reason": "The commit message and tests state hosted guessing and player-only turns."},
+        "interest": {"status": "revise", "reason": "A role change could be interesting, but this evidence has no separate moment to show."},
+        "personal_relevance": {"status": "pass", "reason": "It concerns the author's own Crew Play game."},
+        "opening": {"status": "revise", "reason": "A feature announcement would not give a reader a specific scene."},
+        "template_risk": {"status": "pass", "reason": "The release-note structure is detectable and is rejected before drafting."},
+        "media_fit": {"status": "hold", "reason": "A real play sequence would be needed to make host mode visible."}
+      },
+      "template_scan": {"compared_review_ids": ["candidate-01-range-wheel"], "repeated_openers": [], "stock_phrase_hits": [], "note": "Same release and overlapping proof; keep the better UI-friction story."},
+      "drafts": null,
+      "media": {"type": "real_screenshot", "reason": "Would require an actual play capture to show player and host roles.", "asset": {"status": "not_available", "path": null, "provenance": null}, "alt_text": null},
+      "handoff": {"status": "not_created", "authorization_basis": null, "publish_permitted": false, "media_verified": false, "queue_path": null, "schedule": null}
+    },
+    {
+      "id": "candidate-03-memory-pacing",
+      "topic": "Memory Match waits for the verified pair and voice playback to finish",
+      "class": "development",
+      "evidence": [{"id": "src-crew-play-504c", "type": "github_commit", "label": "Crew Play issue 504 verified-turn narration and audio-drain pacing", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
+      "claims": [{"text": "Memory Match AI narration waits for the resolved pair and completed speech playback.", "evidence_ids": ["src-crew-play-504c"]}],
+      "story_spine": "Voice used to risk moving ahead of game state → narration is tied to resolved turns and drained audio → explain only with a real clip or reproduction.",
+      "decision": {"outcome": "hold", "reason_code": "needs_demonstration", "reason": "The code and tests show careful pacing logic, but a reader-facing clip or explicit reported symptom is needed to make the story concrete."},
+      "quality_review": {
+        "truth": {"status": "pass", "reason": "The commit includes tests for resolved pairs, playback drain, and waiting for the cue."},
+        "interest": {"status": "hold", "reason": "The timing issue may be relatable, but no actual stumble or clip is documented here."},
+        "personal_relevance": {"status": "pass", "reason": "It is a real voice interaction in the author's game."},
+        "opening": {"status": "hold", "reason": "Need the actual moment where speech and game state diverged before choosing a hook."},
+        "template_risk": {"status": "pass", "reason": "No draft yet, so do not invent a punchline to imitate the selected story."},
+        "media_fit": {"status": "hold", "reason": "A real short capture can show turn completion and voice timing; none is attached."}
+      },
+      "template_scan": {"compared_review_ids": ["candidate-01-range-wheel"], "repeated_openers": [], "stock_phrase_hits": [], "note": "Kept separate as a hold because it needs proof of the user-visible timing moment."},
+      "drafts": null,
+      "media": {"type": "real_screenshot", "reason": "A screen recording or capture of the actual turn and narration would be needed; do not simulate it.", "asset": {"status": "not_available", "path": null, "provenance": null}, "alt_text": null},
+      "handoff": {"status": "not_created", "authorization_basis": null, "publish_permitted": false, "media_verified": false, "queue_path": null, "schedule": null}
+    },
+    {
+      "id": "candidate-04-late-voice-start",
+      "topic": "Preventing old silent-game narration from playing when Live starts later",
+      "class": "development",
+      "evidence": [{"id": "src-crew-play-504d", "type": "github_commit", "label": "Crew Play issue 504 stale narration guard", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
+      "claims": [{"text": "The change prevents old keyless narration from being replayed when Live voice begins after a game event.", "evidence_ids": ["src-crew-play-504d"]}],
+      "story_spine": "Live voice could start after a silent turn → stale narration needs a guard → this is a maintenance detail without a captured user-facing consequence.",
+      "decision": {"outcome": "rejected", "reason_code": "low_reader_payoff", "reason": "The fix is real but too internal to carry a post by itself without an observed user problem."},
+      "quality_review": {
+        "truth": {"status": "pass", "reason": "The commit explicitly says old silent-game narration must not replay when Live starts later."},
+        "interest": {"status": "fail", "reason": "No specific reader-facing consequence or surprising interaction is recorded."},
+        "personal_relevance": {"status": "pass", "reason": "This is a real voice-state edge case in Crew Play."},
+        "opening": {"status": "revise", "reason": "The implementation detail has no vivid first line on its own."},
+        "template_risk": {"status": "pass", "reason": "Not drafted; avoid making it another generic bug-fix diary entry."},
+        "media_fit": {"status": "hold", "reason": "Would need an authentic recording of the stale speech issue."}
+      },
+      "template_scan": {"compared_review_ids": [], "repeated_openers": [], "stock_phrase_hits": [], "note": "Rejected on reader payoff before drafting; retain for technical history only."},
+      "drafts": null,
+      "media": {"type": "real_output", "reason": "Would need an actual recorded reproduction or log tied to the user-facing effect.", "asset": {"status": "not_available", "path": null, "provenance": null}, "alt_text": null},
+      "handoff": {"status": "not_created", "authorization_basis": null, "publish_permitted": false, "media_verified": false, "queue_path": null, "schedule": null}
+    },
+    {
+      "id": "candidate-05-voice-reconnect",
+      "topic": "Keeping committed voice cues when the connection changes",
+      "class": "development",
+      "evidence": [{"id": "src-crew-play-504e", "type": "github_commit", "label": "Crew Play issue 504 queued narration survives voice reconnect", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
+      "claims": [{"text": "Tests cover a committed narration cue remaining queued across a voice reconnect.", "evidence_ids": ["src-crew-play-504e"]}],
+      "story_spine": "Connection changes could interrupt committed voice cues → the code retains them → need an actual reproduction or user-facing example before telling it as a story.",
+      "decision": {"outcome": "hold", "reason_code": "needs_user_visible_context", "reason": "A commit test documents an edge case, but the record does not say who encountered it or what was heard."},
+      "quality_review": {
+        "truth": {"status": "pass", "reason": "The commit includes a test that queued turn narration survives voice reconnect."},
+        "interest": {"status": "hold", "reason": "The resilience detail needs a concrete consequence before it becomes a story."},
+        "personal_relevance": {"status": "pass", "reason": "It belongs to the project's real voice flow."},
+        "opening": {"status": "hold", "reason": "No documented symptom supports a specific hook yet."},
+        "template_risk": {"status": "pass", "reason": "No draft is written; do not fill it with generic reliability language."},
+        "media_fit": {"status": "hold", "reason": "A genuine reconnect reproduction or relevant log would make this understandable."}
+      },
+      "template_scan": {"compared_review_ids": [], "repeated_openers": [], "stock_phrase_hits": [], "note": "Hold pending a concrete effect; avoid a generic engineering reliability explanation."},
+      "drafts": null,
+      "media": {"type": "real_output", "reason": "An actual reconnect trace or recording is required for this low-visibility state change.", "asset": {"status": "not_available", "path": null, "provenance": null}, "alt_text": null},
+      "handoff": {"status": "not_created", "authorization_basis": null, "publish_permitted": false, "media_verified": false, "queue_path": null, "schedule": null}
+    },
+    {
+      "id": "candidate-06-game-hub-copy",
+      "topic": "Clarifying the game catalog's host and optional voice labels",
+      "class": "development",
+      "evidence": [{"id": "src-crew-play-504f", "type": "github_commit", "label": "Crew Play issue 504 game hub copy and optional voice labels", "url": "https://github.com/magic76/magic76.github.io/commit/5f635e0135c2a0c0924251a9e3fe7ffb367cf1f2", "checked_at": "2026-11-04"}],
+      "claims": [{"text": "The game hub describes Number Bomb as player guesses with the AI friend hosting and labels some games as optional voice.", "evidence_ids": ["src-crew-play-504f"]}],
+      "story_spine": "The catalog labels explain host/voice behavior → clearer expectations help selection → this is a release note without a unique story or reader payoff.",
+      "decision": {"outcome": "rejected", "reason_code": "announcement_only", "reason": "The wording improvement is useful product maintenance but there is no concrete surprise or separate editorial story."},
+      "quality_review": {
+        "truth": {"status": "pass", "reason": "The commit updates the Number Bomb description and optional voice labels."},
+        "interest": {"status": "fail", "reason": "The change alone is a catalog copy update and lacks a distinct event."},
+        "personal_relevance": {"status": "pass", "reason": "It is part of the Crew Play product interface."},
+        "opening": {"status": "revise", "reason": "The current fact would open like a product changelog."},
+        "template_risk": {"status": "pass", "reason": "Rejecting it avoids adding one more generic feature announcement."},
+        "media_fit": {"status": "hold", "reason": "A real catalog capture could prove the copy but would not create a stronger story."}
+      },
+      "template_scan": {"compared_review_ids": [], "repeated_openers": [], "stock_phrase_hits": [], "note": "Rejected as a changelog item; revisit only with a reader question or actual confusion."},
+      "drafts": null,
+      "media": {"type": "real_screenshot", "reason": "A catalog screenshot is real proof but adds little beyond the release note.", "asset": {"status": "not_available", "path": null, "provenance": null}, "alt_text": null},
+      "handoff": {"status": "not_created", "authorization_basis": null, "publish_permitted": false, "media_verified": false, "queue_path": null, "schedule": null}
+    }
+  ]
+}

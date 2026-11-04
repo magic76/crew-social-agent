@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Crew Lab SI Editorial Feedback Event",
+  "type": "object",
+  "required": ["event_id", "date", "signal_type", "content_id", "owner_signal", "editor_hypothesis", "evidence", "status"],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 8},
+    "date": {"type": "string", "format": "date"},
+    "signal_type": {"enum": ["topic_request", "rewrite", "rejection", "image_change", "positive_editorial_feedback", "performance_note", "workflow_direction"]},
+    "content_id": {"type": ["string", "null"]},
+    "owner_signal": {"type": "string", "minLength": 12},
+    "before": {"type": ["string", "null"]},
+    "after": {"type": ["string", "null"]},
+    "editor_hypothesis": {"type": ["string", "null"]},
+    "evidence": {"type": "array", "items": {"type": "string"}},
+    "metrics": {"type": ["object", "null"]},
+    "scope": {"type": "string"},
+    "status": {"enum": ["direct_instruction", "provisional", "confirmed", "retired"]}
+  },
+  "additionalProperties": false
+}

@@ -16,7 +16,8 @@
     "video:check": "node scripts/video-lab.mjs check",
     "video:preview": "node scripts/video-lab.mjs preview",
     "video:render": "node scripts/video-lab.mjs render",
-    "video:voice": "node scripts/video-voice.mjs"
+    "video:voice": "node scripts/video-voice.mjs",
+    "editorial:check": "node scripts/check-editorial-review.mjs"
   },
   "engines": {
     "node": ">=22"

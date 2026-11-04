@@ -2,6 +2,12 @@
 
 此目錄是 ChatGPT 內容與本地 publisher 的 GitHub 交接 Queue。Publisher 只讀取 Queue，不會修改遠端內容。每個 Queue 項目包含 Facebook／Threads 各自的文案與固定 `requestId`；每個平台各自持有發布狀態。
 
+## 新內容的編輯入口
+
+Queue 是通過選題與編輯審核後的交接格式，不是每日產量清單。新批次先依 [Crew Social Editor](../../skills/crew-social-editor/SKILL.md) 記錄至少六個候選題材及各自的素材、選擇／淘汰理由和六項文字審查，再執行 `npm run editorial:check`。14 天試行期間每日最多兩篇，零篇也可以。舊 Queue 不受此數量限制，既有 id、requestId、排程、授權和發布狀態不可為配合試行而改寫。
+
+新文章僅在適用的既有明確發布授權範圍內，且完成審核、素材檢查與去重後，才能沿用原 schema 建立 `ready_for_local_agent` handoff。審核通過本身不會授權發布；授權不明或稿件尚未核准時，保留 `draft_handoff_only`／draft，不得設定 `mode=live` 或 `safety.publish_permitted=true`。不調整 Local Publisher，不直接呼叫 Meta API。
+
 ## 已核准的第一篇正式圖文（2026-10-30）
 
 - `2026-10-30-android-studio-agents.json`：Android Studio Agent 新聞；**`status=ready_for_local_agent`、`mode=live`、`safety.publish_permitted=true`，本篇已由管理者授權自動發布**。

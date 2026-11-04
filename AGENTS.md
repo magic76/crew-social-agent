@@ -11,7 +11,7 @@ When asked to make science explainers, tutorials, HTML animations, voice-over vi
 5. Never say an MP4 has been rendered without a real file plus ffprobe/visual checks.
 
 ## Social publishing
-Read [skills/crew-social-agent/SKILL.md](skills/crew-social-agent/SKILL.md). Never place video files in the existing image/text Queue. Video handoffs use their own contract and publisher; only `ready_for_video_publisher` plus `publish_permitted=true`, a due schedule, global live mode and valid credentials can publish. Preserve production publisher safety and idempotency.
+Read [skills/crew-social-agent/SKILL.md](skills/crew-social-agent/SKILL.md) and, when creating or reviewing social content, [skills/crew-social-editor/SKILL.md](skills/crew-social-editor/SKILL.md). A passing editorial review is not publication authorization. Keep the existing `draft_handoff_only` / `ready_for_local_agent`, `mode`, safety flags, request IDs, platform states, retries and deduplication semantics. Never rewrite an existing, authorized, scheduled or published Queue item to meet a new editorial rule. Never place video files in the image/text Queue. Video handoffs use their own contract and publisher; only `ready_for_video_publisher` plus `publish_permitted=true`, a due schedule, global live mode and valid credentials can publish. Preserve production publisher safety and idempotency.
 
 ## Boundaries
 - Never commit API keys, Meta tokens, generated voice secrets or private data.
