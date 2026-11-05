@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-09-google-guided-learning",
+  "created_date": "2026-11-05",
+  "title": "Google 將 Guided Learning 帶到 Classroom 與 Search，並擴充 K-12 管理控制",
+  "category": "ai-education",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-05",
+    "time": "18:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Google",
+    "published_date": "2026-11-03",
+    "title": "AI in the learning era",
+    "url": "https://blog.google/products-and-platforms/products/education/ai-learning-era-2026/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜Google: AI in the learning era (2026-11-03)（2026-11-03）\nhttps://blog.google/products-and-platforms/products/education/ai-learning-era-2026/",
+      "requestId": "6b9fbe34-2952-4cb6-af9d-a7675a738b21"
+    },
+    "threads": {
+      "text": "參考來源｜Google: AI in the learning era (2026-11-03)（2026-11-03）\nhttps://blog.google/products-and-platforms/products/education/ai-learning-era-2026/",
+      "requestId": "6ee8d27c-0754-4269-b982-4fb10c995e1d"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Google 這次公布的 AI 教育更新，不只是再加一個聊天框。11/3 的公告說，Guided Learning 正在全球擴展到 Google Classroom 和 Search；學校管理員也能替 K-12 帳號管理 Gemini、NotebookLM、Classroom 和 Search 的使用控制。\\n\\n學生端有學習引導，老師和學校端也得知道哪些功能能用、怎麼管理。這些是 Google 公布的推出方向，實際到不同地區和帳號的時間可能不一樣。",
+      "requestId": "dfa44d3d-edab-4645-b078-3dfc243d5e9a"
+    },
+    "threads": {
+      "text": "Google 公布 Guided Learning 正在全球擴展到 Classroom 和 Search，並替 K-12 帳號增加 Gemini、NotebookLM、Classroom、Search 的管理控制。\\n\\nAI 進教室除了「能回答什麼」，還多了老師和學校要怎麼管理這題。功能推出時間會因地區和帳號而異。",
+      "requestId": "953cb64c-233a-49b9-9f5d-dbbbbda2868c"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials."
+  }
+}

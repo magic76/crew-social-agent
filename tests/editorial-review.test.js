@@ -24,7 +24,7 @@ test('daily review requires six candidates', () => {
 
 test('daily six-topic policy requires six selected topics and permits six distinct drafts', () => {
   const belowMinimum = structuredClone(sample);
-  belowMinimum.date = '2026-11-06';
+  belowMinimum.date = '2026-11-05';
   belowMinimum.selection_policy = { minimum_selected: 6, target_selected: 6, unit: 'distinct_topics_not_platform_copies' };
   assert.ok(validateEditorialReview(belowMinimum, { repoRoot: root }).errors.some(message => message.includes('daily minimum is six selected topics')));
 

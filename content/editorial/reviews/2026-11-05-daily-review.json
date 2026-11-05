@@ -81,11 +81,11 @@
         },
         "first_replies": {
           "facebook": {
-            "text": "參考來源｜Crew Teacher Android WebView 開場音訊修正（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+            "text": "參考來源｜GitHub · magic76/magic76.github.io｜Crew Teacher commit #511: sustained early speech before skipping the opening（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
             "requestId": "05d66b1a-52ba-46cc-a34b-1d3269f415aa"
           },
           "threads": {
-            "text": "參考來源｜Crew Teacher Android WebView 開場音訊修正（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+            "text": "參考來源｜GitHub · magic76/magic76.github.io｜Crew Teacher commit #511: sustained early speech before skipping the opening（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
             "requestId": "6cca9ff9-79f6-4f54-bf65-f7d092ade1bd"
           }
         }
@@ -101,14 +101,14 @@
         "alt_text": null
       },
       "handoff": {
-        "status": "draft_handoff_only",
-        "authorization_basis": null,
-        "publish_permitted": false,
-        "media_verified": false,
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
         "queue_path": "content/queue/2026-11-05-crew-teacher-android-greeting.json",
         "schedule": {
           "date": "2026-11-05",
-          "time": "10:00",
+          "time": "14:00",
           "timezone": "Asia/Taipei"
         }
       }
@@ -197,11 +197,11 @@
         },
         "first_replies": {
           "facebook": {
-            "text": "參考來源｜Crew Pocket 合併 PR #129：Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+            "text": "參考來源｜GitHub · magic76/crew-pocket｜Crew Pocket merge commit for PR #129: Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
             "requestId": "c94055a1-27e5-4ffd-af76-da2be36d183c"
           },
           "threads": {
-            "text": "參考來源｜Crew Pocket 合併 PR #129：Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+            "text": "參考來源｜GitHub · magic76/crew-pocket｜Crew Pocket merge commit for PR #129: Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
             "requestId": "6e4a5c0a-5d17-4af1-af01-5e0b50608ced"
           }
         }
@@ -217,10 +217,10 @@
         "alt_text": null
       },
       "handoff": {
-        "status": "draft_handoff_only",
-        "authorization_basis": null,
-        "publish_permitted": false,
-        "media_verified": false,
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
         "queue_path": "content/queue/2026-11-05-crew-pocket-role-skills.json",
         "schedule": {
           "date": "2026-11-05",
@@ -589,6 +589,471 @@
         "queue_path": null,
         "schedule": null
       }
+    },
+    {
+      "id": "candidate-07-openai-linux-root-paths",
+      "topic": "Linux kernel 漏洞處理流程：重現、利用與候選修補",
+      "class": "ai_news",
+      "evidence": [
+        {
+          "id": "src-openai-linux-root-paths-20261104",
+          "type": "primary_research",
+          "label": "OpenAI: A thousand fewer paths to root (2026-11-04)",
+          "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "OpenAI 表示其受控 Linux kernel 管線重現了 1,724 個已知漏洞案例。",
+          "evidence_ids": [
+            "src-openai-linux-root-paths-20261104"
+          ]
+        },
+        {
+          "text": "該管線產生 948 個本機提權 exploit 與候選修補，交由維護者檢視；這不等於 948 個漏洞已修復。",
+          "evidence_ids": [
+            "src-openai-linux-root-paths-20261104"
+          ]
+        },
+        {
+          "text": "OpenAI 對這次研究的估計花費約為 121.3 萬美元。",
+          "evidence_ids": [
+            "src-openai-linux-root-paths-20261104"
+          ]
+        }
+      ],
+      "reader_context": "Linux kernel 是許多電腦與雲端服務使用的核心系統；這篇 OpenAI 研究談 AI 如何協助重現漏洞並產生待審查的修補候選。",
+      "story_spine": "OpenAI 公布一條可重現既有 Linux kernel 漏洞的研究流程 → 數字很大，但 exploit 和修補仍是候選結果 → 看點是產物能否重現並交給維護者審查。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "evidence_backed_external_topic",
+        "reason": "這是近期官方研究，重現數字和人工審查環節都具體；內容清楚區分候選修補與已修復漏洞，補足今日真實開發素材不足。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "OpenAI 的研究文章支撐案例與數字，文案明說 exploit 和 patch 是候選結果，並非已修復漏洞。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "重現漏洞、產生 exploit 與候選 patch 讓研究產物有可檢查的具體落點。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "以工程師角度討論安全流程是否可重現、可審查，不把作者研究說成個人實驗。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭交代 Linux kernel 安全研究及其數字，讀者不需要先知道 OpenAI 內部名詞。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "以研究流程是否可重現為主線，不用通用 AI 安全結論或新聞週報結構。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "官方來源是研究文字，純文字能交代方法與限制；沒有用生成圖冒充漏洞畫面。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "recent Queue posts dated 2026-11-02 through 2026-11-04"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "Compared with recent Queue topics; the angle and opening do not repeat a selected story from the prior three days."
+      },
+      "drafts": {
+        "facebook": {
+          "text": "OpenAI 最近公開一項 Linux kernel 安全研究：研究團隊在受控流程中重現了 1,724 個已知漏洞案例，並產生 948 個本機提權 exploit 和候選修補，交給維護者檢視。這不是「AI 已修好 948 個漏洞」；候選 exploit 和 patch 還要經過人類審查與實際驗證。OpenAI 估算這次流程花費約 121.3 萬美元。\\n\\n我覺得最值得看的不是單一大數字，而是 AI 安全研究的產物有沒有辦法重現、檢查，再交進維護流程。漏洞不是生成一段 patch 就能打勾。"
+        },
+        "threads": {
+          "text": "OpenAI 說它的 Linux kernel 研究流程重現了 1,724 個已知漏洞案例，產生 948 個提權 exploit 與候選修補，交給維護者審查。不是 948 個漏洞都修好了，候選結果仍要人工檢查與驗證。\\n\\n有意思的是，AI 安全研究最後得交出可重現、可審查的東西，不能只交一段看起來很像答案的 patch。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源｜OpenAI: A thousand fewer paths to root (2026-11-04)（2026-11-04）\nhttps://openai.com/index/a-thousand-fewer-paths-to-root/",
+            "requestId": "b7d284f4-026c-4caa-9a7d-e9df8eafb59d"
+          },
+          "threads": {
+            "text": "參考來源｜OpenAI: A thousand fewer paths to root (2026-11-04)（2026-11-04）\nhttps://openai.com/index/a-thousand-fewer-paths-to-root/",
+            "requestId": "24355a12-2f82-43c5-8efd-81f2389e00b0"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "官方來源是研究文字，純文字能交代方法與限制；沒有用生成圖冒充漏洞畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-05-openai-linux-root-paths.json",
+        "schedule": {
+          "date": "2026-11-05",
+          "time": "15:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-08-openai-images-26",
+      "topic": "Images 2.6 將局部編輯、GIF 與 SVG 放進同一套工具",
+      "class": "practical",
+      "evidence": [
+        {
+          "id": "src-openai-images-26-20261104",
+          "type": "primary_research",
+          "label": "OpenAI: Introducing Images 2.6 (2026-11-04)",
+          "url": "https://openai.com/index/introducing-images-2-6/",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "OpenAI 公布 Images 2.6 支援以圖像標記指定區域編輯，也提到 GIF 生成和 SVG 匯出。",
+          "evidence_ids": [
+            "src-openai-images-26-20261104"
+          ]
+        },
+        {
+          "text": "文章列出控制畫面複雜度的設定，並將其與圖像品質設定分開。",
+          "evidence_ids": [
+            "src-openai-images-26-20261104"
+          ]
+        },
+        {
+          "text": "OpenAI 稱 Images 2.6 比前一代快 50%；此數字是公司公布的比較，並非本人的測試結果。",
+          "evidence_ids": [
+            "src-openai-images-26-20261104"
+          ]
+        }
+      ],
+      "reader_context": "Images 2.6 是 OpenAI 公布的圖像生成與編輯工具更新，包含區域編輯和多種輸出能力。",
+      "story_spine": "圖像編輯常卡在只想改一小塊卻得重生整張 → OpenAI 公布可標記區域編輯與更多輸出格式 → 值得注意的是控制範圍與畫面複雜度被獨立處理。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "evidence_backed_external_topic",
+        "reason": "公告提供可具體說明的編輯控制方式與輸出形式，能寫成工具使用場景；文案明示速度是官方聲稱、不冒稱親自測試。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "OpenAI 官方文章列出功能與速度比較；50% 僅作為公司公布數字，沒有寫成作者測試。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "局部編輯、GIF 和 SVG 提供明確工作情境，比抽象介紹圖像模型更具體。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "以 AI 工具使用者角度聚焦局部修改控制，並清楚承認沒有自行測試。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先描寫局部改圖的明白摩擦，再介紹 Images 2.6 更新。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "聚焦『只改哪一塊』的工具控制，不複製新功能清單式開場。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "功能的價值可由文字說清楚，沒有作者自行生成的示範畫面可用，故純文字更準確。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "recent Queue posts dated 2026-11-02 through 2026-11-04"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "Compared with recent Queue topics; the angle and opening do not repeat a selected story from the prior three days."
+      },
+      "drafts": {
+        "facebook": {
+          "text": "AI 生圖有時最麻煩的不是生不出來，而是只想改角落那個招牌，結果整張圖又重畫一次。OpenAI 11/4 公布 Images 2.6，列出可用標記指定區域編輯，也支援 GIF 生成和 SVG 匯出；畫面複雜度還多了一個和品質分開的控制設定。\\n\\nOpenAI 說速度比前一代快 50%。這是官方公布的數字，我還沒自行測過。比起再多一種風格，我更想看它能不能把「只改這裡」真的控制好。"
+        },
+        "threads": {
+          "text": "只想改圖上的一個角落，結果整張重畫，這種感覺很像為了換門把把房子拆掉。OpenAI 公布 Images 2.6：可標記區域編輯、生成 GIF、匯出 SVG，還能分開控制畫面複雜度和品質。\\n\\n官方稱比前代快 50%；我還沒自行測過。這次我比較在意「改哪裡」能不能真的聽話。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源｜OpenAI: Introducing Images 2.6 (2026-11-04)（2026-11-04）\nhttps://openai.com/index/introducing-images-2-6/",
+            "requestId": "0f762b3c-f499-4f6b-932a-5533f4ccc488"
+          },
+          "threads": {
+            "text": "參考來源｜OpenAI: Introducing Images 2.6 (2026-11-04)（2026-11-04）\nhttps://openai.com/index/introducing-images-2-6/",
+            "requestId": "9c1059e4-09c9-4b77-8fb5-28db158504ce"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "功能的價值可由文字說清楚，沒有作者自行生成的示範畫面可用，故純文字更準確。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-05-openai-images-26.json",
+        "schedule": {
+          "date": "2026-11-05",
+          "time": "16:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-09-google-guided-learning",
+      "topic": "Google 將 Guided Learning 帶到 Classroom 與 Search，並擴充 K-12 管理控制",
+      "class": "ai_news",
+      "evidence": [
+        {
+          "id": "src-google-guided-learning-20261103",
+          "type": "primary_research",
+          "label": "Google: AI in the learning era (2026-11-03)",
+          "url": "https://blog.google/products-and-platforms/products/education/ai-learning-era-2026/",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Google 表示 Guided Learning 正在全球擴展到 Google Classroom 和 Search。",
+          "evidence_ids": [
+            "src-google-guided-learning-20261103"
+          ]
+        },
+        {
+          "text": "Google 公布學校管理員可為 K-12 帳號管理 Gemini、NotebookLM、Classroom 和 Search 的使用控制。",
+          "evidence_ids": [
+            "src-google-guided-learning-20261103"
+          ]
+        },
+        {
+          "text": "公告描述的是功能推出與管理工具；不同地區或帳號的實際可用時間可能不同。",
+          "evidence_ids": [
+            "src-google-guided-learning-20261103"
+          ]
+        }
+      ],
+      "reader_context": "Guided Learning 是 Google 推出的 AI 學習引導功能；公告談它進入課堂工具與學校帳號管理方式。",
+      "story_spine": "Google 將 AI 學習引導放入 Classroom 和 Search → 同一波也談 K-12 管理控制 → AI 進教室除了回答問題，也牽涉老師和學校能管理什麼。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "evidence_backed_external_topic",
+        "reason": "這是官方教育產品公告，既有學生端用途也有管理端限制，讀者可從具體推出方向理解教育應用，不把公告寫成已全面到位。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "Google 公告描述正在推出的功能與管理控制，文案保留地區和帳號可用性差異。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "同時談學習引導和學校管理控制，展示教育應用的兩側需求。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "題材連到 Crew Teacher 的 AI 教學方向，但沒有暗示 Google 功能已整合進自家產品。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先說明 Google 的教育產品更新，再列出 Classroom、Search 和 K-12 控制。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "從教育使用與管理控制切入，沒有套固定的 AI 教育宣言或 CTA。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "官方公告的產品範圍以文字表述足夠，未使用未核實的教室截圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "recent Queue posts dated 2026-11-02 through 2026-11-04"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "Compared with recent Queue topics; the angle and opening do not repeat a selected story from the prior three days."
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Google 這次公布的 AI 教育更新，不只是再加一個聊天框。11/3 的公告說，Guided Learning 正在全球擴展到 Google Classroom 和 Search；學校管理員也能替 K-12 帳號管理 Gemini、NotebookLM、Classroom 和 Search 的使用控制。\\n\\n學生端有學習引導，老師和學校端也得知道哪些功能能用、怎麼管理。這些是 Google 公布的推出方向，實際到不同地區和帳號的時間可能不一樣。"
+        },
+        "threads": {
+          "text": "Google 公布 Guided Learning 正在全球擴展到 Classroom 和 Search，並替 K-12 帳號增加 Gemini、NotebookLM、Classroom、Search 的管理控制。\\n\\nAI 進教室除了「能回答什麼」，還多了老師和學校要怎麼管理這題。功能推出時間會因地區和帳號而異。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源｜Google: AI in the learning era (2026-11-03)（2026-11-03）\nhttps://blog.google/products-and-platforms/products/education/ai-learning-era-2026/",
+            "requestId": "6b9fbe34-2952-4cb6-af9d-a7675a738b21"
+          },
+          "threads": {
+            "text": "參考來源｜Google: AI in the learning era (2026-11-03)（2026-11-03）\nhttps://blog.google/products-and-platforms/products/education/ai-learning-era-2026/",
+            "requestId": "6ee8d27c-0754-4269-b982-4fb10c995e1d"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "官方公告的產品範圍以文字表述足夠，未使用未核實的教室截圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-05-google-guided-learning.json",
+        "schedule": {
+          "date": "2026-11-05",
+          "time": "18:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-10-long-horizon-agent-reasoning",
+      "topic": "預印本探討投機解碼是否影響長流程 Agent 推理",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-arxiv-long-horizon-2611-05345",
+          "type": "primary_research",
+          "label": "arXiv: Adversarial Speculative Reasoning Improves Long Horizon Agents (submitted 2026-11-03)",
+          "url": "https://arxiv.org/abs/2611.05345",
+          "checked_at": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "這篇 2026-11-03 提交的 arXiv 預印本研究投機解碼訊號與長流程 Agent 推理的關係。",
+          "evidence_ids": [
+            "src-arxiv-long-horizon-2611-05345"
+          ]
+        },
+        {
+          "text": "作者報告接受模式等訊號在超過 30 步的推理任務中可能影響 Agent 表現。",
+          "evidence_ids": [
+            "src-arxiv-long-horizon-2611-05345"
+          ]
+        },
+        {
+          "text": "作者報告在 coding benchmark 上取得改善；這是預印本作者結果，尚不是同儕審查後的普遍結論。",
+          "evidence_ids": [
+            "src-arxiv-long-horizon-2611-05345"
+          ]
+        }
+      ],
+      "reader_context": "投機解碼是一種加速語言模型生成的方式；這篇預印本研究其接受或拒絕訊號會不會影響長流程 Agent。",
+      "story_spine": "解碼加速通常被當成速度議題 → 預印本作者觀察它可能影響超過 30 步的 Agent 推理 → 讀者可留意加速策略是否也改變長流程可靠性，但結果仍待驗證。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "evidence_backed_external_topic",
+        "reason": "預印本把推論加速和長流程 Agent 表現連在一起，是值得追蹤的具體研究問題；文案明確標示作者報告與未經同儕審查的限制。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "引用 11/3 提交的 arXiv 預印本，並將 benchmark 和長流程結果標為作者報告。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "把常見的解碼加速和 30 步以上 Agent 任務連起來，提出具體且可被後續驗證的研究問題。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "Agent 長流程研究與多 Agent 開發方向直接相關，且文案沒有延伸到未證實的個人實驗。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先解釋加速設定可能影響長流程，再交代預印本研究對象與限制。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "以一個研究問題收尾，沒有把單篇預印本寫成普遍規則或固定道理。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "研究主張需要說清楚樣本與預印本限制，文字比未核實的示意圖更合適。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "recent Queue posts dated 2026-11-02 through 2026-11-04"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "Compared with recent Queue topics; the angle and opening do not repeat a selected story from the prior three days."
+      },
+      "drafts": {
+        "facebook": {
+          "text": "模型的加速方法，可能不只改變它回得多快。這篇 11/3 提交到 arXiv 的預印本，研究投機解碼的接受訊號會不會影響長流程 Agent 推理；作者報告在超過 30 步的任務和 coding benchmark 上看到表現差異。\\n\\n先把範圍講清楚：這是作者公布的預印本結果，還不是同儕審查後能推廣到所有 Agent 的結論。不過它提出一個值得追的問題：我們為了加速模型做的取捨，會不會也改變它走長流程時的判斷？"
+        },
+        "threads": {
+          "text": "投機解碼原本常被當成加速技巧；一篇 11/3 的 arXiv 預印本研究它的接受訊號是否也影響長流程 Agent 推理。作者報告在 30 步以上任務和 coding benchmark 上觀察到差異。\\n\\n這是預印本的作者結果，尚未同儕審查。加速模型的設定，會不會也改變 Agent 長跑時的判斷？"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源｜arXiv: Adversarial Speculative Reasoning Improves Long Horizon Agents (submitted 2026-11-03)（2026-11-03）\nhttps://arxiv.org/abs/2611.05345",
+            "requestId": "c9fd99a0-bdcd-4720-9331-37fdd923c502"
+          },
+          "threads": {
+            "text": "參考來源｜arXiv: Adversarial Speculative Reasoning Improves Long Horizon Agents (submitted 2026-11-03)（2026-11-03）\nhttps://arxiv.org/abs/2611.05345",
+            "requestId": "10efff13-b2de-4ba7-8518-89aac20e2182"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "研究主張需要說清楚樣本與預印本限制，文字比未核實的示意圖更合適。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-05-long-horizon-agent-reasoning.json",
+        "schedule": {
+          "date": "2026-11-05",
+          "time": "21:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
     }
-  ]
+  ],
+  "selection_policy": {
+    "minimum_selected": 6,
+    "target_selected": 6,
+    "unit": "distinct_topics_not_platform_copies"
+  }
 }

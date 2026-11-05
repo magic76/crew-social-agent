@@ -4,8 +4,8 @@
   "created_date": "2026-11-05",
   "title": "Crew Pocket 讓 Agent 自己挑技能手冊",
   "category": "development-diary",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-05",
     "time": "19:00",
@@ -24,11 +24,11 @@
   },
   "first_replies": {
     "facebook": {
-      "text": "參考來源｜Crew Pocket 合併 PR #129：Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+      "text": "參考來源｜GitHub · magic76/crew-pocket｜Crew Pocket merge commit for PR #129: Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
       "requestId": "c94055a1-27e5-4ffd-af76-da2be36d183c"
     },
     "threads": {
-      "text": "參考來源｜Crew Pocket 合併 PR #129：Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
+      "text": "參考來源｜GitHub · magic76/crew-pocket｜Crew Pocket merge commit for PR #129: Agent-selected Role Skill discovery with persistent SKILL.md（2026-11-04）\nhttps://github.com/magic76/crew-pocket/commit/5de73086e3e43e93a66fc240a3bab44c534dd034",
       "requestId": "6e4a5c0a-5d17-4af1-af01-5e0b50608ced"
     }
   },
@@ -43,7 +43,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "Draft only; approval for this specific copy was not found, and this run cannot verify the owner’s local live mode or credentials."
+    "publish_permitted": true,
+    "reason": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials."
   }
 }

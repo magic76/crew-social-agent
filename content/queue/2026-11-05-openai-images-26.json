@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-08-openai-images-26",
+  "created_date": "2026-11-05",
+  "title": "Images 2.6 將局部編輯、GIF 與 SVG 放進同一套工具",
+  "category": "ai-tool",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-05",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-11-04",
+    "title": "Introducing Images 2.6",
+    "url": "https://openai.com/index/introducing-images-2-6/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜OpenAI: Introducing Images 2.6 (2026-11-04)（2026-11-04）\nhttps://openai.com/index/introducing-images-2-6/",
+      "requestId": "0f762b3c-f499-4f6b-932a-5533f4ccc488"
+    },
+    "threads": {
+      "text": "參考來源｜OpenAI: Introducing Images 2.6 (2026-11-04)（2026-11-04）\nhttps://openai.com/index/introducing-images-2-6/",
+      "requestId": "9c1059e4-09c9-4b77-8fb5-28db158504ce"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 生圖有時最麻煩的不是生不出來，而是只想改角落那個招牌，結果整張圖又重畫一次。OpenAI 11/4 公布 Images 2.6，列出可用標記指定區域編輯，也支援 GIF 生成和 SVG 匯出；畫面複雜度還多了一個和品質分開的控制設定。\\n\\nOpenAI 說速度比前一代快 50%。這是官方公布的數字，我還沒自行測過。比起再多一種風格，我更想看它能不能把「只改這裡」真的控制好。",
+      "requestId": "b7c84ff7-e396-4eed-957b-1496593522db"
+    },
+    "threads": {
+      "text": "只想改圖上的一個角落，結果整張重畫，這種感覺很像為了換門把把房子拆掉。OpenAI 公布 Images 2.6：可標記區域編輯、生成 GIF、匯出 SVG，還能分開控制畫面複雜度和品質。\\n\\n官方稱比前代快 50%；我還沒自行測過。這次我比較在意「改哪裡」能不能真的聽話。",
+      "requestId": "92b50c48-6572-46e8-8aad-ae6f824f363d"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials."
+  }
+}

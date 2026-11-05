@@ -26,14 +26,42 @@
 
 ## 今日編輯決策
 
-今日選出兩個近期真實開發故事，另有兩題暫緩、兩題淘汰。完整 claim→evidence 和六項審核理由見 [每日編輯審核紀錄](../editorial/reviews/2026-11-05-daily-review.json)。
+原本的兩篇開發日記已保留，並依今天的六篇安排增加四個有原始來源的題材。今日編輯紀錄共有十個候選：六個入選、兩個暫緩、兩個淘汰。每篇的 claim→evidence、六項理由與平台文案見 [每日編輯審核紀錄](../editorial/reviews/2026-11-05-daily-review.json)。
 
-- **Crew Teacher Android 開場音訊**：commit 顯示 WebView 啟動雜音不應略過 AI 開場；改動要求 240 ms 持續語音並加入開場／首段播放診斷。只寫程式碼變更，不聲稱 Android 真機驗收完成。
-- **Crew Pocket Role Skill 路由**：PR #129 將關鍵字自動注入改成 Agent 檢視人工啟用目錄、按需讀完整 SKILL.md；候選技能需人工確認。
-- 研究雖有新進展，今天沒有比兩個開發故事更貼近讀者的個人工作場景；不拿新聞補足數量。
+- **Crew Teacher Android 開場音訊**：commit 顯示 WebView 啟動雜音可能被當成使用者開口；程式改用 240 ms 語音門檻並加入開場／首段播放診斷。Android 真機重測尚未完成。
+- **Linux kernel 漏洞研究**：OpenAI 公布受控流程重現漏洞及產生候選 exploit／patch 的數字；候選不等於已修復，仍需維護者審查。
+- **Images 2.6 工具更新**：OpenAI 公布標記區域編輯、GIF、SVG 等能力；50% 速度是公司說法，沒有寫成親自測試。
+- **Google Guided Learning 教育應用**：Google 公布 Classroom、Search 的推出與 K-12 管理控制；實際可用時間依地區和帳號而異。
+- **Crew Pocket Role Skill 路由**：PR #129 將關鍵字自動注入改成 Agent 檢視人工啟用目錄、按需讀取完整 SKILL.md；候選技能仍需人確認。
+- **長流程 Agent 推理研究**：一篇 11/3 提交的 arXiv 預印本報告投機解碼訊號與長流程推理的關聯；結果仍待審查與獨立驗證。
+- Object Soul 編輯器和對話量測各暫緩一題；Crew Play 數字輪故事因前一天已選過而淘汰，Anthropic vault 研究因預印本連結尚未公開且與自家工作連結較弱而淘汰。
+
+## 今日補充原始來源
+
+以下四項是在六篇安排確定後補查的官方／原始來源，與前段簡報已列的四項分開記錄；所有日期和 URL 均對應來源頁面。
+
+5. **OpenAI｜A thousand fewer paths to root**  
+   發布日期：2026-11-04  
+   URL：https://openai.com/index/a-thousand-fewer-paths-to-root/  
+   OpenAI 表示，受控 Linux kernel 流程重現 1,724 個漏洞案例，產生 948 個本機提權 exploit 與候選修補供維護者檢視；這不代表 948 個漏洞已修復。公司估計研究成本約 121.3 萬美元。
+
+6. **OpenAI｜Introducing Images 2.6**  
+   發布日期：2026-11-04  
+   URL：https://openai.com/index/introducing-images-2-6/  
+   官方列出標記區域編輯、GIF 生成、SVG 匯出及複雜度控制；OpenAI 稱比前代快 50%，屬公司公布的比較，未由本次執行自行測試。
+
+7. **Google｜AI in the learning era**  
+   發布日期：2026-11-03  
+   URL：https://blog.google/products-and-platforms/products/education/ai-learning-era-2026/  
+   Google 表示 Guided Learning 正在全球擴展至 Classroom 和 Search，並公布 K-12 帳號的 Gemini、NotebookLM、Classroom、Search 管理控制；推出時程可能因地區和帳號而異。
+
+8. **arXiv｜Adversarial Speculative Reasoning Improves Long Horizon Agents**  
+   提交日期：2026-11-03（預印本）  
+   URL：https://arxiv.org/abs/2611.05345  
+   作者報告投機解碼訊號可能影響 30 步以上 Agent 推理，並在 coding benchmark 觀察到改善。這是尚未經同儕審查的作者結果，不推廣成所有長任務都會變好。
 
 ## 發布與追蹤
 
-兩篇皆保留完整 Facebook／Threads 文案於 schema_version 1 Queue，status=draft、mode=dry_run、publish_permitted=false；來源名稱、發布日期、完整 URL 及每平台獨立首則回覆 requestId 都已寫入。兩篇均選純文字：沒有可分享的真實畫面，不以生成 UI 充數。Local Publisher 尚待核准與執行；本次執行環境狀態回報 Facebook／Threads 憑證皆不可用，且 SOCIAL_AGENT_MODE 未設定，因此不授權發布。
+今天共有六篇不同主題，各自有 Facebook 與 Threads 文案。Queue 設為 ready_for_local_agent、mode=live、publish_permitted=true，因使用者要求每日最少六篇並指定重新安排今天批次；每篇有獨立平台 UUIDv4，來源文章的兩平台首則回覆都含來源名稱與完整 URL。今天使用純文字是刻意選擇：沒有可分享的真實畫面，生成 UI 會誤導。
 
-14 天 tracker 的 metrics.csv 目前只有欄名，沒有已核實的 11/05 發布或觀察值。為遵守只記錄實際發文的規則，今日不加空白或推測列；實際發布後再補平台數據，若數據無法讀取就留白並標記 manual_data_needed。今天沒有製作影片：兩個故事以文字足夠，且本次沒有影片授權。
+本次只更新 GitHub handoff，沒有呼叫 Meta、Threads 或 Metricool API。雲端執行環境無法讀取使用者本機的 SOCIAL_AGENT_MODE 與平台憑證；Local Publisher 仍須以 live 設定和可用憑證執行，實際發布狀態目前待核實。14 天 tracker 只在確認平台實際發布後追加數據；目前沒有已核實的今日流量或互動值，保持空白，不推測。今天沒有製作影片。

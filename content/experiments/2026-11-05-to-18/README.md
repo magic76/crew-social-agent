@@ -2,11 +2,11 @@
 
 ## Purpose
 
-Test whether evidence-backed development stories and varied media produce more worthwhile reading and interaction than the previous news-summary-heavy pattern. Daily research continues separately. Starting with the 2026-11-06 run, prepare at least six distinct topic drafts each day, one for each planned time slot; each topic has separate Facebook and Threads copy. The number actually published may be lower because publication still depends on explicit authorization and Local Publisher conditions.
+Test whether evidence-backed development stories and varied media produce more worthwhile reading and interaction than the previous news-summary-heavy pattern. Daily research continues separately. Starting with the 2026-11-05 run, prepare at least six distinct topic drafts each day, one for each planned time slot; each topic has separate Facebook and Threads copy. The number actually published may be lower because publication still depends on explicit authorization and Local Publisher conditions.
 
 ## Pilot rules
 
-- 14 consecutive days: 2026-11-05 through 2026-11-18 inclusive. Review the process on 2026-11-19. Use only actual posts and actual observations. The 2026-11-05 batch is a transition baseline; the daily-six draft target starts on 2026-11-06.
+- 14 consecutive days: 2026-11-05 through 2026-11-18 inclusive. Review the process on 2026-11-19. Use only actual posts and actual observations. The 2026-11-05 batch was expanded to six topics after the owner clarified the daily minimum; the six-topic target applies from 2026-11-05 onward.
 - Search credible online primary sources to fill gaps in owned-project stories. Keep each article tied to verifiable evidence and do not invent personal testing or first-person development experiences.
 - Initial content-mix direction across the window: about 60% development/bug/project story, 30% practical technique or discussion, 10% AI news/research. These are descriptive targets, not quotas.
 - Keep the existing Facebook/Threads Queue and Local Publisher contracts. The editorial pilot does not grant publication authorization. Do not alter past or already authorized Queue items.

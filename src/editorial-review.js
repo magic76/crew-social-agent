@@ -6,7 +6,7 @@ const OUTCOMES = new Set(['selected', 'rejected', 'hold']);
 const REVIEW_STATES = new Set(['pass', 'revise', 'fail', 'hold', 'not_applicable']);
 const HANDOFF_STATES = new Set(['not_created', 'draft_handoff_only', 'ready_for_local_agent']);
 const MEDIA_TYPES = new Set(['real_screenshot', 'real_photo', 'real_output', 'story_comic', 'diagram', 'original_illustration', 'text_only', 'other']);
-const DAILY_SIX_POLICY_START = '2026-11-06';
+const DAILY_SIX_POLICY_START = '2026-11-05';
 const STOCK_PHRASES = [
   /最近.{0,12}發布/, /這讓我想到/, /真正重要的不是.{0,30}而是/, /這不代表.{0,30}但值得關注/, /你怎麼看[？?]/
 ];
@@ -29,7 +29,7 @@ export function validateEditorialReview(review, { repoRoot = process.cwd() } = {
   if (!Array.isArray(review?.candidates) || review.candidates.length < 6) error('candidates', 'record at least six candidates, including rejected and held topics');
   const dailySixPolicy = isIsoDate(review?.date) && review.date >= DAILY_SIX_POLICY_START;
   if (dailySixPolicy && (review?.selection_policy?.minimum_selected !== 6 || review?.selection_policy?.target_selected !== 6 || review?.selection_policy?.unit !== 'distinct_topics_not_platform_copies')) {
-    error('selection_policy', 'from 2026-11-06, record a six-topic minimum and target; platform copies count as one topic');
+    error('selection_policy', 'from 2026-11-05, record a six-topic minimum and target; platform copies count as one topic');
   }
 
   const candidates = Array.isArray(review?.candidates) ? review.candidates : [];

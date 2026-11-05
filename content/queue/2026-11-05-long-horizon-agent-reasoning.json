@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-10-long-horizon-agent-reasoning",
+  "created_date": "2026-11-05",
+  "title": "預印本探討投機解碼是否影響長流程 Agent 推理",
+  "category": "agent-research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-05",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "arXiv",
+    "published_date": "2026-11-03",
+    "title": "Adversarial Speculative Reasoning Improves Long Horizon Agents",
+    "url": "https://arxiv.org/abs/2611.05345"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜arXiv: Adversarial Speculative Reasoning Improves Long Horizon Agents (submitted 2026-11-03)（2026-11-03）\nhttps://arxiv.org/abs/2611.05345",
+      "requestId": "c9fd99a0-bdcd-4720-9331-37fdd923c502"
+    },
+    "threads": {
+      "text": "參考來源｜arXiv: Adversarial Speculative Reasoning Improves Long Horizon Agents (submitted 2026-11-03)（2026-11-03）\nhttps://arxiv.org/abs/2611.05345",
+      "requestId": "10efff13-b2de-4ba7-8518-89aac20e2182"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "模型的加速方法，可能不只改變它回得多快。這篇 11/3 提交到 arXiv 的預印本，研究投機解碼的接受訊號會不會影響長流程 Agent 推理；作者報告在超過 30 步的任務和 coding benchmark 上看到表現差異。\\n\\n先把範圍講清楚：這是作者公布的預印本結果，還不是同儕審查後能推廣到所有 Agent 的結論。不過它提出一個值得追的問題：我們為了加速模型做的取捨，會不會也改變它走長流程時的判斷？",
+      "requestId": "18ec498a-6a00-4d0c-9238-ec07b6b28ff9"
+    },
+    "threads": {
+      "text": "投機解碼原本常被當成加速技巧；一篇 11/3 的 arXiv 預印本研究它的接受訊號是否也影響長流程 Agent 推理。作者報告在 30 步以上任務和 coding benchmark 上觀察到差異。\\n\\n這是預印本的作者結果，尚未同儕審查。加速模型的設定，會不會也改變 Agent 長跑時的判斷？",
+      "requestId": "8ea56df5-fe68-4ed5-b26c-bb3a11c6138f"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials."
+  }
+}

@@ -4,11 +4,11 @@
   "created_date": "2026-11-05",
   "title": "Crew Teacher Android 開場暖機音訊修正",
   "category": "development-diary",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-05",
-    "time": "10:00",
+    "time": "14:00",
     "timezone": "Asia/Taipei"
   },
   "networks": [
@@ -24,11 +24,11 @@
   },
   "first_replies": {
     "facebook": {
-      "text": "參考來源｜Crew Teacher Android WebView 開場音訊修正（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+      "text": "參考來源｜GitHub · magic76/magic76.github.io｜Crew Teacher commit #511: sustained early speech before skipping the opening（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
       "requestId": "05d66b1a-52ba-46cc-a34b-1d3269f415aa"
     },
     "threads": {
-      "text": "參考來源｜Crew Teacher Android WebView 開場音訊修正（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
+      "text": "參考來源｜GitHub · magic76/magic76.github.io｜Crew Teacher commit #511: sustained early speech before skipping the opening（2026-11-04）\nhttps://github.com/magic76/magic76.github.io/commit/f20ccd0e20b5f8693f06b41dd35c678308fd8091",
       "requestId": "6cca9ff9-79f6-4f54-bf65-f7d092ade1bd"
     }
   },
@@ -43,7 +43,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "Draft only; approval for this specific copy was not found, and this run cannot verify the owner’s local live mode or credentials."
+    "publish_permitted": true,
+    "reason": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials."
   }
 }

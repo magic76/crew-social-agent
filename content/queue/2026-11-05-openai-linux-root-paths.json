@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-07-openai-linux-root-paths",
+  "created_date": "2026-11-05",
+  "title": "Linux kernel 漏洞處理流程：重現、利用與候選修補",
+  "category": "ai-security",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-05",
+    "time": "15:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-11-04",
+    "title": "A thousand fewer paths to root",
+    "url": "https://openai.com/index/a-thousand-fewer-paths-to-root/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源｜OpenAI: A thousand fewer paths to root (2026-11-04)（2026-11-04）\nhttps://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "requestId": "b7d284f4-026c-4caa-9a7d-e9df8eafb59d"
+    },
+    "threads": {
+      "text": "參考來源｜OpenAI: A thousand fewer paths to root (2026-11-04)（2026-11-04）\nhttps://openai.com/index/a-thousand-fewer-paths-to-root/",
+      "requestId": "24355a12-2f82-43c5-8efd-81f2389e00b0"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "OpenAI 最近公開一項 Linux kernel 安全研究：研究團隊在受控流程中重現了 1,724 個已知漏洞案例，並產生 948 個本機提權 exploit 和候選修補，交給維護者檢視。這不是「AI 已修好 948 個漏洞」；候選 exploit 和 patch 還要經過人類審查與實際驗證。OpenAI 估算這次流程花費約 121.3 萬美元。\\n\\n我覺得最值得看的不是單一大數字，而是 AI 安全研究的產物有沒有辦法重現、檢查，再交進維護流程。漏洞不是生成一段 patch 就能打勾。",
+      "requestId": "61f0fa88-3b12-4a6d-ad62-8ba5c5355af5"
+    },
+    "threads": {
+      "text": "OpenAI 說它的 Linux kernel 研究流程重現了 1,724 個已知漏洞案例，產生 948 個提權 exploit 與候選修補，交給維護者審查。不是 948 個漏洞都修好了，候選結果仍要人工檢查與驗證。\\n\\n有意思的是，AI 安全研究最後得交出可重現、可審查的東西，不能只交一段看起來很像答案的 patch。",
+      "requestId": "b515d231-efb4-42ba-944e-e8ae0473d455"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner's 2026-11-05 instruction to prepare at least six distinct daily topics and re-adjust today's planned batch; Local Publisher must still verify local live mode and platform credentials."
+  }
+}
