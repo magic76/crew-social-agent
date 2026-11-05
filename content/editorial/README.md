@@ -4,13 +4,13 @@ This directory stores the new editorial decisions and learning records. It is se
 
 ## Daily files
 
-- `reviews/YYYY-MM-DD-<slug>.json` records at least six candidates, evidence, a plain-language `reader_context`, selection or rejection reasons, six concrete quality notes, the chosen copy, media direction, and handoff readiness. Use `templates/daily-review.template.json` as a shape guide.
+- `reviews/YYYY-MM-DD-<slug>.json` records at least six candidates and at least six selected topics under the daily-six policy, evidence, a plain-language `reader_context`, selection or rejection reasons, six concrete quality notes, the chosen copy, media direction, and handoff readiness. Use `templates/daily-review.template.json` as a shape guide.
 - Run `npm run editorial:check` after adding or editing a review. A valid file is structurally complete; it is not automatically suitable or authorized for publication.
 - Keep the original research report in `content/reports/` or `content/research/`; do not count a research finding as a social post.
 - Keep owner feedback in `feedback/events.jsonl`. Append, never rewrite prior events. Use the schema and instructions in that folder.
 - Keep pilot design and actual-post metrics under `content/experiments/2026-11-05-to-18/`.
 
-The pilot allows at most two posts on a day and explicitly allows zero. The approximate 60/30/10 mix is evaluated over the 14 days, not enforced as a daily quota. A held or rejected candidate is retained for learning but must not be copied into Queue.
+The daily target is at least six distinct topic drafts, one for each 10:00, 12:00, 14:00, 16:00, 19:00 and 21:00 Asia/Taipei slot. Each topic has separate Facebook and Threads edits; platform copies do not count as separate topics. If owned-project material is insufficient, research credible original online sources and develop useful research, technique, tool or application topics. Keep the 60/30/10 mix as an aggregate 14-day observation, not a per-day quota. A held or rejected candidate is retained for learning but must not be copied into Queue.
 
 ## Reasons and evidence
 

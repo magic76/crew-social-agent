@@ -2,6 +2,7 @@
   "schema_version": 1,
   "date": "YYYY-MM-DD",
   "review_id": "YYYY-MM-DD-topic-review",
+  "selection_policy": {"minimum_selected": 6, "target_selected": 6, "unit": "distinct_topics_not_platform_copies"},
   "candidates": [
     {
       "id": "candidate-01",

@@ -4,7 +4,7 @@
 
 ## 社群內容流程
 
-新貼文使用 [Crew Social Editor](skills/crew-social-editor/SKILL.md) 的證據導向編輯流程：先選故事，再寫稿；初始 14 天試行每日最多兩篇，零篇也可以；研究報告和發布 Queue 分開維護。既有已授權 Queue 與 Local Publisher 契約維持不變。
+新貼文使用 [Crew Social Editor](skills/crew-social-editor/SKILL.md) 的證據導向編輯流程：每天至少六個不同主題，每題分別撰寫 Facebook 與 Threads 版本；先找有證據的故事，不足時以網路可信來源補充，不虛構個人經驗。研究報告和發布 Queue 分開維護。既有已授權 Queue 與 Local Publisher 契約維持不變。
 
 ## 安全預設與發布條件
 
@@ -52,7 +52,7 @@ Live 項目另需 `image.public_url`：Meta 伺服器要能直接以 HTTPS 讀�
 
 目前同時發 FB Page Reels 和 Threads 的安全範圍是 MP4、直式 9:16、至少 540×960、23–60 fps、4–60 秒、影片編碼 H.264 或 HEVC；本地 publisher 為單次驗證設 1 GB 上限。日後擴充規格時先更新平台驗證與測試。`draft_handoff_only` 不會自動升級成可發布狀態。
 
-台灣每日預設時段為 12:00、19:00、21:00，可由每篇 `schedule` 設定；Agent 預設每 30 分鐘輪詢一次，可用 `.env` 的 `SOCIAL_POLL_INTERVAL_MS` 調整。超過三小時的稿件標記 `skipped_expired`，需重新排程才可處理。圖文稿 reschedule 只寫入本機 override，不改 GitHub Queue。
+台灣每日預設時段為 10:00、12:00、14:00、16:00、19:00、21:00，可由每篇 `schedule` 設定；Agent 預設每 30 分鐘輪詢一次，可用 `.env` 的 `SOCIAL_POLL_INTERVAL_MS` 調整。超過三小時的稿件標記 `skipped_expired`，需重新排程才可處理。圖文稿 reschedule 只寫入本機 override，不改 GitHub Queue。
 
 ## 執行指令
 

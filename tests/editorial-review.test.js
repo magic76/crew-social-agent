@@ -16,18 +16,32 @@ test('dated sample records six evidence-backed candidates and a draft-only examp
   assert.equal(result.summary.queueReady, 0);
 });
 
-test('daily review rejects fewer than six candidates and more than two selections', () => {
+test('daily review requires six candidates', () => {
   const tooFew = structuredClone(sample);
   tooFew.candidates = tooFew.candidates.slice(0, 5);
   assert.ok(validateEditorialReview(tooFew, { repoRoot: root }).errors.some(message => message.includes('at least six')));
-  const tooMany = structuredClone(sample);
-  const extra = structuredClone(tooMany.candidates[0]);
-  extra.id = 'candidate-extra';
-  tooMany.candidates.push(extra);
-  const extra2 = structuredClone(extra);
-  extra2.id = 'candidate-extra-2';
-  tooMany.candidates.push(extra2);
-  assert.ok(validateEditorialReview(tooMany, { repoRoot: root }).errors.some(message => message.includes('cap is two')));
+});
+
+test('daily six-topic policy requires six selected topics and permits six distinct drafts', () => {
+  const belowMinimum = structuredClone(sample);
+  belowMinimum.date = '2026-11-06';
+  belowMinimum.selection_policy = { minimum_selected: 6, target_selected: 6, unit: 'distinct_topics_not_platform_copies' };
+  assert.ok(validateEditorialReview(belowMinimum, { repoRoot: root }).errors.some(message => message.includes('daily minimum is six selected topics')));
+
+  const sixTopics = structuredClone(belowMinimum);
+  const template = structuredClone(sixTopics.candidates[0]);
+  sixTopics.candidates = Array.from({ length: 6 }, (_, index) => {
+    const candidate = structuredClone(template);
+    candidate.id = `selected-topic-${index + 1}`;
+    candidate.topic = `Distinct review fixture topic ${index + 1}`;
+    candidate.decision.reason = `This fixture represents a distinct selected topic number ${index + 1} with evidence and a reader payoff.`;
+    candidate.drafts.facebook.text = `FB ${index + 1}: ${template.drafts.facebook.text}`;
+    candidate.drafts.threads.text = `Threads ${index + 1}: ${template.drafts.threads.text}`;
+    return candidate;
+  });
+  const result = validateEditorialReview(sixTopics, { repoRoot: root });
+  assert.equal(result.summary.selected, 6);
+  assert.deepEqual(result.errors, []);
 });
 
 test('selected drafts need independent copy and specific reasons for all six review dimensions', () => {
@@ -49,7 +63,7 @@ test('owner edit feedback log is append-ready JSONL and keeps observation separa
   const content = await readFile(resolve(root, 'content/editorial/feedback/events.jsonl'), 'utf8');
   const events = content.split(/\r?\n/).filter(line => line.trim()).map(line => JSON.parse(line));
   assert.ok(events.length >= 1);
-  assert.ok(events.every(event => typeof event.owner_signal === 'string' && typeof event.editor_hypothesis === 'string' && event.status === 'provisional'));
+  assert.ok(events.every(event => typeof event.owner_signal === 'string' && (typeof event.editor_hypothesis === 'string' || event.editor_hypothesis === null) && ['direct_instruction', 'provisional', 'confirmed', 'retired'].includes(event.status)));
 });
 
 test('Queue-ready draft cannot bypass unresolved review, source replies, or authorization', () => {
@@ -67,7 +81,7 @@ test('Queue-ready draft cannot bypass unresolved review, source replies, or auth
   assert.ok(result.errors.some(message => message.includes('media')));
 });
 
-test('pilot cap checker catches a repeated selected Threads opener', () => {
+test('editorial checker catches a repeated selected Threads opener', () => {
   const repeated = structuredClone(sample);
   const second = structuredClone(repeated.candidates[0]);
   second.id = 'candidate-second';

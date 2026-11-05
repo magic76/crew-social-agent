@@ -4,7 +4,7 @@
 
 ## 新內容的編輯入口
 
-Queue 是通過選題與編輯審核後的交接格式，不是每日產量清單。新批次先依 [Crew Social Editor](../../skills/crew-social-editor/SKILL.md) 記錄至少六個候選題材及各自的素材、選擇／淘汰理由和六項文字審查，再執行 `npm run editorial:check`。14 天試行期間每日最多兩篇，零篇也可以。舊 Queue 不受此數量限制，既有 id、requestId、排程、授權和發布狀態不可為配合試行而改寫。
+Queue 是通過選題與編輯審核後的交接格式。每日目標至少六個不同主題，每個主題分別編輯 Facebook／Threads 文案，跨平台版本不重複計數；以台北時間 10:00、12:00、14:00、16:00、19:00、21:00 各安排一題。新批次先依 [Crew Social Editor](../../skills/crew-social-editor/SKILL.md) 記錄候選題材、素材、選擇／淘汰理由和六項文字審查，再執行 `npm run editorial:check`。若自有專案素材不足，以上網查得的可信原始來源、研究、技巧或工具／應用案例補足，不捏造個人經驗。舊 Queue 不受此數量調整影響，既有 id、requestId、排程、授權和發布狀態不可為配合新規則而改寫。
 
 新文章僅在適用的既有明確發布授權範圍內，且完成審核、素材檢查與去重後，才能沿用原 schema 建立 `ready_for_local_agent` handoff。審核通過本身不會授權發布；授權不明或稿件尚未核准時，保留 `draft_handoff_only`／draft，不得設定 `mode=live` 或 `safety.publish_permitted=true`。不調整 Local Publisher，不直接呼叫 Meta API。
 
@@ -26,7 +26,7 @@ Queue 是通過選題與編輯審核後的交接格式，不是每日產量清�
 {"date":"2026-11-01","time":"12:00","timezone":"Asia/Taipei"}
 ```
 
-每日預設可排 12:00、19:00、21:00。新聞類需填 `source.publisher`、`source.url`、`source.published_date`。多個來源可放在 `references` 陣列，每項包含 publisher、HTTPS URL 與 published_date。2026-10-31 起建立的來源文章，每個 network 的首則回覆都必須包含全部來源 URL；Facebook 回覆最多 1000 字、Threads 最多 500 字。無來源的文章可省略 `first_replies`。更早建立的 Queue 仍按舊格式驗證，以免影響既有或已發布項目。
+每日預設可排 10:00、12:00、14:00、16:00、19:00、21:00（Asia/Taipei）。新聞類需填 `source.publisher`、`source.url`、`source.published_date`。多個來源可放在 `references` 陣列，每項包含 publisher、HTTPS URL 與 published_date。2026-10-31 起建立的來源文章，每個 network 的首則回覆都必須包含全部來源 URL；Facebook 回覆最多 1000 字、Threads 最多 500 字。無來源的文章可省略 `first_replies`。更早建立的 Queue 仍按舊格式驗證，以免影響既有或已發布項目。
 
 ```json
 {

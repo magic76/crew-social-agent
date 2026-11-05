@@ -7,7 +7,7 @@ Use this as the saved daily task prompt. The task's existing daily 07:00 Asia/Ta
 
 每日研究與社群發文分開處理。保留一份有日期、來源發布日期和完整 URL 的研究報告；查找最近 24–72 小時 3–5 項可信原始 AI 來源，若可用消息不足就明確記錄缺口，不把新聞數量當發文配額。優先查 Crew Pocket、Crew Web、Crew Car、Crew Play、Crew Teacher、Object Soul、LG TV Companion、多 Agent 管理等實際開發素材：GitHub commit、PR、issue、開發記錄、真實畫面、錯誤或測試輸出。commit 訊息不能證明測試通過。禁止虛構個人經驗、測試結果、失敗、情緒或讀者反應。
 
-在 content/editorial/reviews/YYYY-MM-DD-<slug>.json 記錄至少六個候選題材，每題都有可核實素材、逐項 claim→evidence 對應、以一句白話介紹產品或玩法的 reader_context、入選／淘汰／暫緩理由，以及 truth、interest、personal_relevance、opening、template_risk、media_fit 六項具體審核理由。貼文開頭先讓沒看過專案的讀者知道這是什麼，再帶出具體事件，避免直接丟未解釋的產品名或 UI 問題。每天都要完成至少一篇通過基本真實性檢查的社群貼文草稿，原則上 1–2 篇；若沒有真實開發故事，改選有可靠來源與明確讀者價值的實用技巧／討論或 AI 研究常青題材。不得為數量杜撰經歷或湊普通新聞；只有來源不可用或安全問題導致無法核實時，才可降為零篇，並清楚記錄原因與補救方向。14 天測試期間整體觀察比例約為 60% 真實開發、30% 實用技巧／討論、10% AI 新聞研究；只是觀察方向，不是每日配額。先找到故事，再寫文案。若只有通用摘要、沒有真實連結或沒有可說的意外／決策／讀者價值，就淘汰或暫緩。
+在 content/editorial/reviews/YYYY-MM-DD-<slug>.json 記錄至少六個候選題材，每題都有可核實素材、逐項 claim→evidence 對應、以一句白話介紹產品或玩法的 reader_context、入選／淘汰／暫緩理由，以及 truth、interest、personal_relevance、opening、template_risk、media_fit 六項具體審核理由。貼文開頭先讓沒看過專案的讀者知道這是什麼，再帶出具體事件，避免直接丟未解釋的產品名或 UI 問題。每天至少產出六個不同主題，每個主題各自編輯 Facebook 與 Threads 文案，分別安排在台北時間 10:00、12:00、14:00、16:00、19:00、21:00；跨平台版本不重複計數。真實開發素材不足時上網搜尋可信原始來源、研究、實用技巧或工具／應用案例，並記錄來源名稱、發布日期與完整 URL。不得虛構個人經驗、測試或讀者反應。若查證或安全限制仍使六題無法成立，記錄缺口與原因，不以低品質題材硬湊。14 天測試期間整體觀察比例約為 60% 真實開發、30% 實用技巧／討論、10% AI 新聞研究；只是觀察方向，不是每日配額。先找到故事，再寫文案。若只有通用摘要、沒有真實連結或沒有可說的意外／決策／讀者價值，就淘汰或暫緩。
 
 依使用者明確的繁體中文自然口語風格撰寫；短句、乾幽默、具體開場可用但不要硬塞口頭禪、標題、hashtag 或提問。避免新聞週報腔與重複套用既有句型。Facebook 和 Threads 分別編輯，Threads 通常較短。不得為了吸引力擴寫成未經證實的經歷。
 
@@ -21,5 +21,5 @@ Use this as the saved daily task prompt. The task's existing daily 07:00 Asia/Ta
 
 在 content/experiments/2026-11-05-to-18/metrics.csv 只記錄已核實發布與實際觀察。平台數據讀不到就留白並標 manual_data_needed；不得杜撰或只憑一次觸及量推斷內容有效。收到使用者主動選題、修改、拒絕、換圖、正負回饋或成效資訊時，將原始回饋追加到 content/editorial/feedback/events.jsonl，分開記錄原話和假設，不把單次回饋擴成永久規則。
 
-若有新增 repo 檔案，檢查 main HEAD 未變並用 fast-forward 提交；絕不改寫舊正式稿或 secrets。回報：研究報告與來源、至少六個候選題及選淘理由、每日目標 1–2 篇的完整雙平台文案和圖片方向、Queue／draft handoff、Publisher 尚待執行或已核實狀態、14 天 tracker 的資料缺口。不要為了交付完整感而補做普通題材或影片。
+若有新增 repo 檔案，檢查 main HEAD 未變並用 fast-forward 提交；絕不改寫舊正式稿或 secrets。回報：研究報告與來源、至少六個候選題及選淘理由、至少六篇不同主題的完整雙平台文案和圖片方向、Queue／draft handoff、Publisher 尚待執行或已核實狀態、14 天 tracker 的資料缺口。不要為了交付完整感而補做普通題材或影片。
 ```
