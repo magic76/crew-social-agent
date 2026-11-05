@@ -345,10 +345,23 @@ function diagnostic(error){
   return msg.slice(0,240);
 }
 
+function escapedNewlineReason(text,field){
+  // Queue JSON must contain actual LF/CR characters, not the two-character
+  // escape sequence. Do not silently rewrite content that may be intentional.
+  return typeof text==='string'&&/\\[nr]/.test(text)?`${field}_CONTAINS_ESCAPED_NEWLINE`:null;
+}
+
 async function publishFirstReply(task,{stateDir,env,now,fetcher,sendFirstReply,lookupFirstReplies}){
   const reply=task.firstReply;
   if(!reply||reply.state==='published'||reply.state==='skipped_expired'||reply.state==='skipped')
     return {task,state:reply?.state||'not_configured',remoteId:reply?.remoteId||null};
+  if(reply.state!=='needs_reconciliation'){
+    const reason=escapedNewlineReason(reply.text,'FIRST_REPLY_TEXT');
+    if(reason){
+      const updated=await updateTask(stateDir,task,{firstReply:{...reply,lastError:reason}});
+      return {task:updated,state:'blocked',reason};
+    }
+  }
   if(!task.remoteId)return {task,state:'blocked',reason:'PARENT_POST_ID_MISSING'};
   const startedAt=Date.parse(reply.startedAt||reply.createdAt||task.publishedAt||task.createdAt)-5*60*1000;
   try{
@@ -429,6 +442,16 @@ export async function runQueue({items,queueErrors=[],stateDir=DEFAULT_STATE_DIR,
         }
         if(task.state==='skipped'||task.state==='skipped_expired'||task.state==='needs_reconciliation'){
           results.push({postId:entry.id,network,state:task.state,remoteId:task.remoteId||undefined});continue;
+        }
+        const escapedPostReason=escapedNewlineReason(checked.posts[network].text,'POST_TEXT');
+        if(escapedPostReason){
+          task=await updateTask(stateDir,task,{lastError:escapedPostReason});
+          results.push({postId:entry.id,network,state:'blocked',reason:escapedPostReason});continue;
+        }
+        const escapedReplyReason=escapedNewlineReason(checked.firstReplies[network]?.text,'FIRST_REPLY_TEXT');
+        if(escapedReplyReason){
+          task=await updateTask(stateDir,task,{firstReply:{...task.firstReply,lastError:escapedReplyReason}});
+          results.push({postId:entry.id,network,state:'blocked',reason:escapedReplyReason});continue;
         }
         const override=await readOverride(stateDir,entry.id,network);
         if(override.skip){task=await updateTask(stateDir,task,{state:'skipped',lastError:'SKIPPED_BY_LOCAL_OPERATOR'});results.push({postId:entry.id,network,state:'skipped'});continue;}
