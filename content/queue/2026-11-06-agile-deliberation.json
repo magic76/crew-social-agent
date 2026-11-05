@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261106-agile-deliberation",
+  "created_date": "2026-11-06",
+  "title": "人類自己都說不清楚，AI 要怎麼學灰色地帶",
+  "category": "ai-research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-06",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Google Research",
+    "published_date": "2026-11-04",
+    "title": "Agile Deliberation: How AI helps humans define the gray areas",
+    "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "Google Research｜Agile Deliberation: How AI helps humans define the gray areas\nhttps://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+      "requestId": "f174e8e3-6607-4ea8-81cb-7af1c9e13381"
+    },
+    "threads": {
+      "text": "Google Research｜Agile Deliberation: How AI helps humans define the gray areas\nhttps://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+      "requestId": "d2916c1b-d44a-447c-9ebc-84c12a23a039"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "「健康食物」要怎麼交給 AI 分類？\n\n沙拉大概沒問題。果昔呢？有水果，但糖很多。蛋白棒算健康，還是只是包裝很會說話？\n\n這類題目沒有一條全世界共用的標準，麻煩的是，人類通常也要看到例外，才知道自己的規則到底是什麼。\n\nGoogle Research 11/4 分享的 Agile Deliberation，不先逼使用者寫出完美提示詞。它先把概念拆成「包含」和「排除」，再主動找出最難判斷的邊界圖片。人只要回答這些案例算不算，系統就把回饋送進提示詞最佳化迴圈，繼續調整分類器。\n\n研究以 18 場、每場 1.5 小時的真人測試比較。作者報告，這種流程讓標記更一致、分類表現更好，也降低手動改提示詞的疲勞。這是特定研究的結果，不代表所有主觀任務都已解決。\n\nAI 不一定要先替人做決定。它也可以先把最值得人決定的地方找出來。",
+      "requestId": "9f4b0b1a-b006-4e85-a3d8-120bd9fb09ac"
+    },
+    "threads": {
+      "text": "「健康食物」要怎麼讓 AI 分類？沙拉好像可以，果昔有水果但糖很多，蛋白棒又算哪邊？\n\nGoogle Research 的 Agile Deliberation 不先逼人寫完美提示詞。系統把概念拆成包含／排除，再主動找最模糊的邊界圖片；人回答這些例外算不算，分類規則就跟著更新。\n\n作者在 18 場真人研究中報告，這樣能提高一致性與分類表現，也減少手動改 prompt 的疲勞。\n\nAI 不一定替你決定。它也能先找出，真正需要你決定的地方。",
+      "requestId": "b668eb54-3f83-4994-8625-14e204527597"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials."
+  }
+}

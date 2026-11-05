@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261106-mystery-gift-discovery",
+  "created_date": "2026-11-06",
+  "title": "首頁的盲盒，最後決定不要把雲朵和禮物黏在一起",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-06",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/magic76.github.io",
+    "published_date": "2026-11-05",
+    "title": "Crew 首頁驚喜盲盒與後續視覺修正",
+    "url": "https://github.com/magic76/magic76.github.io/commit/01b7cd41461f366ec13ab8c9f849524183317bf0"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "GitHub · magic76/magic76.github.io｜Crew 首頁驚喜盲盒與後續視覺修正\nhttps://github.com/magic76/magic76.github.io/commit/01b7cd41461f366ec13ab8c9f849524183317bf0\n\nGitHub · magic76/magic76.github.io｜floating Crew mystery gift\nhttps://github.com/magic76/magic76.github.io/commit/dfbb87c19a9f4c99a4eb4d7316e35495580ad858\n\nGitHub · magic76/magic76.github.io｜separate Crew Cloud and gift\nhttps://github.com/magic76/magic76.github.io/commit/76d98d773e4d0f7db4ef86ad0bed7ad9ac039522",
+      "requestId": "36390f41-dd3d-4368-8077-28d9ba808578"
+    },
+    "threads": {
+      "text": "GitHub · magic76/magic76.github.io｜Crew 首頁驚喜盲盒與後續視覺修正\nhttps://github.com/magic76/magic76.github.io/commit/01b7cd41461f366ec13ab8c9f849524183317bf0\n\nGitHub · magic76/magic76.github.io｜floating Crew mystery gift\nhttps://github.com/magic76/magic76.github.io/commit/dfbb87c19a9f4c99a4eb4d7316e35495580ad858\n\nGitHub · magic76/magic76.github.io｜separate Crew Cloud and gift\nhttps://github.com/magic76/magic76.github.io/commit/76d98d773e4d0f7db4ef86ad0bed7ad9ac039522",
+      "requestId": "06ec195d-6c9a-4354-9086-056b0ddf44ea"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew 是我做的 AI 朋友、遊戲和學習網站。首頁右下角最近多了一顆驚喜盲盒，打開後會帶你去找朋友聊天、玩遊戲、讓物品開口，或學一句外語。\n\n一開始，我們把 Crew Cloud 和禮物一起塞進那個小角落。\n\n嗯……很努力，也很擠。\n\n後來先把雲朵和禮物拆開，又發現結果卡的人物會壓到按鈕文字。最後乾脆讓入口回到一顆會動的禮盒，人物靠右站好，不要每個角色都想搶 C 位。\n\n這次沒有增加更深的選單。盲盒只是替原本就存在的功能加一個「不知道會抽到什麼」的入口。\n\n有時候 UI 不是少一個功能，而是少一點大家同時擠進畫面的熱情。",
+      "requestId": "2e221558-3a23-4cd7-88e8-6ebe30966b70"
+    },
+    "threads": {
+      "text": "Crew 是我的 AI 朋友、遊戲和學習網站。首頁右下角加了一顆驚喜盲盒，會隨機帶你去聊天、玩遊戲、Object Soul 或學外語。\n\n第一版把 Crew Cloud 和禮物塞在一起。很可愛，也很像兩個人同時卡在門口。\n\n後來拆開角色和禮物、修掉結果卡重疊，最後讓入口只留一顆會動的禮盒，人物靠右站，不再遮按鈕。\n\nUI 有時不用再加東西。叫大家各自站好，就差很多。",
+      "requestId": "e53272c8-f8f3-45bf-a588-99f59a7b2097"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials."
+  }
+}

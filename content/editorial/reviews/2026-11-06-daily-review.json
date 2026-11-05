@@ -1,0 +1,900 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-06",
+  "review_id": "2026-11-06-daily-editorial-review",
+  "selection_policy": {
+    "minimum_selected": 6,
+    "target_selected": 6,
+    "unit": "distinct_topics_not_platform_copies"
+  },
+  "candidates": [
+    {
+      "id": "candidate-01-mystery-gift-discovery",
+      "topic": "首頁的盲盒，最後決定不要把雲朵和禮物黏在一起",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-main",
+          "type": "github_commit",
+          "label": "GitHub · magic76/magic76.github.io｜Crew 首頁驚喜盲盒與後續視覺修正",
+          "url": "https://github.com/magic76/magic76.github.io/commit/01b7cd41461f366ec13ab8c9f849524183317bf0",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "id": "src-gift-origin",
+          "type": "github_commit",
+          "label": "GitHub · magic76/magic76.github.io｜floating Crew mystery gift",
+          "url": "https://github.com/magic76/magic76.github.io/commit/dfbb87c19a9f4c99a4eb4d7316e35495580ad858",
+          "checked_at": "2026-11-06"
+        },
+        {
+          "id": "src-gift-separation",
+          "type": "github_commit",
+          "label": "GitHub · magic76/magic76.github.io｜separate Crew Cloud and gift",
+          "url": "https://github.com/magic76/magic76.github.io/commit/76d98d773e4d0f7db4ef86ad0bed7ad9ac039522",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "首頁右下角新增不占內容區塊的驚喜盲盒，結果會直接通往既有的朋友、遊戲、Object Soul 或學習路徑。",
+          "evidence_ids": [
+            "src-gift-origin"
+          ]
+        },
+        {
+          "text": "後續修正先把 Crew Cloud 與禮物拆開，並處理結果卡重疊。",
+          "evidence_ids": [
+            "src-gift-separation"
+          ]
+        },
+        {
+          "text": "最新修改改用獨立禮盒作為入口，並把人物圖靠右避免遮住按鈕文字。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        }
+      ],
+      "reader_context": "Crew 是一個集合 AI 朋友、遊戲和語言學習的網站；首頁右下角現在有一顆會帶人去不同體驗的驚喜盲盒。",
+      "story_spine": "首頁加入探索盲盒 → 雲朵、禮物與結果人物互相搶空間 → 幾次小修正最後讓入口只負責吸引點擊、結果卡只負責介紹目的地。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_recent_development",
+        "reason": "同一功能在一天內留下清楚的設計迭代：先加入口，再依實際版面問題拆角色、禮物與人物位置，具備真實決策與乾幽默。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "所有實質主張都連到 GitHub · magic76/magic76.github.io 的原始證據；文案明確保留未驗收、公司報告或研究範圍限制。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "首頁加入探索盲盒 → 雲朵、禮物與結果人物互相搶空間 → 幾次小修正最後讓入口只負責吸引點擊、結果卡只負責介紹目的地。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "題材直接來自作者近期 Crew 專案與發布工具的程式變更。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭先交代 Crew 是一個集合 AI 朋友、遊戲和語言學習的網站；首頁右下角現在有一顆會帶人去不同體驗的驚喜盲盒。，再進入具體事件或反差。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "結構依各題的實際事件安排，沒有重複近期「某公司發布」式開頭、固定道理或制式 CTA。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "這是實際 UI 迭代，但 repo 沒有可核實且可分享的最新手機截圖；純文字能說清楚設計變化，也避免生成假 UI。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-editorial-review",
+          "Queue posts dated 2026-11-03 through 2026-11-05"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已比對前三天題材、開頭與結尾；本題沒有重複近期選題或固定問句。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew 是我做的 AI 朋友、遊戲和學習網站。首頁右下角最近多了一顆驚喜盲盒，打開後會帶你去找朋友聊天、玩遊戲、讓物品開口，或學一句外語。\n\n一開始，我們把 Crew Cloud 和禮物一起塞進那個小角落。\n\n嗯……很努力，也很擠。\n\n後來先把雲朵和禮物拆開，又發現結果卡的人物會壓到按鈕文字。最後乾脆讓入口回到一顆會動的禮盒，人物靠右站好，不要每個角色都想搶 C 位。\n\n這次沒有增加更深的選單。盲盒只是替原本就存在的功能加一個「不知道會抽到什麼」的入口。\n\n有時候 UI 不是少一個功能，而是少一點大家同時擠進畫面的熱情。"
+        },
+        "threads": {
+          "text": "Crew 是我的 AI 朋友、遊戲和學習網站。首頁右下角加了一顆驚喜盲盒，會隨機帶你去聊天、玩遊戲、Object Soul 或學外語。\n\n第一版把 Crew Cloud 和禮物塞在一起。很可愛，也很像兩個人同時卡在門口。\n\n後來拆開角色和禮物、修掉結果卡重疊，最後讓入口只留一顆會動的禮盒，人物靠右站，不再遮按鈕。\n\nUI 有時不用再加東西。叫大家各自站好，就差很多。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "GitHub · magic76/magic76.github.io｜Crew 首頁驚喜盲盒與後續視覺修正\nhttps://github.com/magic76/magic76.github.io/commit/01b7cd41461f366ec13ab8c9f849524183317bf0\n\nGitHub · magic76/magic76.github.io｜floating Crew mystery gift\nhttps://github.com/magic76/magic76.github.io/commit/dfbb87c19a9f4c99a4eb4d7316e35495580ad858\n\nGitHub · magic76/magic76.github.io｜separate Crew Cloud and gift\nhttps://github.com/magic76/magic76.github.io/commit/76d98d773e4d0f7db4ef86ad0bed7ad9ac039522",
+            "requestId": "36390f41-dd3d-4368-8077-28d9ba808578"
+          },
+          "threads": {
+            "text": "GitHub · magic76/magic76.github.io｜Crew 首頁驚喜盲盒與後續視覺修正\nhttps://github.com/magic76/magic76.github.io/commit/01b7cd41461f366ec13ab8c9f849524183317bf0\n\nGitHub · magic76/magic76.github.io｜floating Crew mystery gift\nhttps://github.com/magic76/magic76.github.io/commit/dfbb87c19a9f4c99a4eb4d7316e35495580ad858\n\nGitHub · magic76/magic76.github.io｜separate Crew Cloud and gift\nhttps://github.com/magic76/magic76.github.io/commit/76d98d773e4d0f7db4ef86ad0bed7ad9ac039522",
+            "requestId": "06ec195d-6c9a-4354-9086-056b0ddf44ea"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "這是實際 UI 迭代，但 repo 沒有可核實且可分享的最新手機截圖；純文字能說清楚設計變化，也避免生成假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-06-mystery-gift-discovery.json",
+        "schedule": {
+          "date": "2026-11-06",
+          "time": "10:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-02-role-dna-risk-gate",
+      "topic": "AI 技能手冊可以自動上架，但先過兩次窄門",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-main",
+          "type": "github_commit",
+          "label": "GitHub · magic76/crew-pocket｜risk-gated automatic verification for scoped low-risk skills",
+          "url": "https://github.com/magic76/crew-pocket/commit/d5da11d006e36434e428a85a1bc22bc3ae9d7699",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Pocket 的 Skill DNA 現在只允許低風險候選技能進入自動驗證。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "候選技能列出的每一條精確 node test 指令，必須在兩個不同完成回合都回報非零測試數且零失敗，才會自動啟用。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "高風險、模糊、主觀或只跑通用 lint/build 的技能仍要人工審核；後續指定測試失敗會撤銷自動驗證。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        }
+      ],
+      "reader_context": "Crew Pocket 是管理多個 AI 角色的 Android 工作台；Skill DNA 會替每個角色保存可重複使用的技能手冊。",
+      "story_spine": "技能候選全部等人工驗證很安全但容易堆積 → 新機制只替低風險且有精確驗收測試的手冊開小門 → 連續兩個回合都通過才上架，失敗還會撤回。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_recent_development",
+        "reason": "這是昨天技能路由故事的下一個可核實步驟，焦點從「Agent 如何挑手冊」轉成「手冊如何取得上架資格」，不重複前文。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "所有實質主張都連到 GitHub · magic76/crew-pocket 的原始證據；文案明確保留未驗收、公司報告或研究範圍限制。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "技能候選全部等人工驗證很安全但容易堆積 → 新機制只替低風險且有精確驗收測試的手冊開小門 → 連續兩個回合都通過才上架，失敗還會撤回。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "題材直接來自作者近期 Crew 專案與發布工具的程式變更。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭先交代 Crew Pocket 是管理多個 AI 角色的 Android 工作台；Skill DNA 會替每個角色保存可重複使用的技能手冊。，再進入具體事件或反差。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "結構依各題的實際事件安排，沒有重複近期「某公司發布」式開頭、固定道理或制式 CTA。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "規則與風險門檻用文字較準確；沒有可分享的真實驗證畫面或結果輸出，不製作看似真實的狀態 UI。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-editorial-review",
+          "Queue posts dated 2026-11-03 through 2026-11-05"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已比對前三天題材、開頭與結尾；本題沒有重複近期選題或固定問句。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "讓 AI 自己批准自己的技能，聽起來很像內控事故。\n\nCrew Pocket 是我用來管理多個 AI 角色的 Android 工作台。每個角色都有自己的 Skill DNA，也就是它慢慢累積的技能手冊。\n\n如果每一本候選手冊都等人按驗證，待審清單很快會像信箱裡永遠讀不完的通知。現在開了一條很窄的自動通道。\n\n只有低風險技能可以進來，而且不能拿「npm test 有綠」當通行證。手冊必須明確列出要跑的 node 測試；每一條都要在兩個不同的完成回合中，出現非零測試數、零失敗，才會自動啟用。之後指定測試失敗，資格還會被撤回。\n\n碰到部署、權限、金鑰、刪除等高風險內容，照樣回去排人工隊伍。\n\n自動化不是把門拆掉。比較像只開一個很小的員工通道，還要刷兩次卡。"
+        },
+        "threads": {
+          "text": "讓 AI 自己批准自己的技能，聽起來很像內控事故。\n\nCrew Pocket 是管理 AI 角色的 Android 工作台；Skill DNA 是每個角色自己的技能手冊。如果候選手冊全部等人工驗證，待審清單很快會像信箱。\n\n現在只讓低風險技能走自動通道：手冊列出的精確 node 測試，要在兩個不同回合都出現非零測試、零失敗，才會啟用。指定測試之後失敗，資格還會被撤回。\n\n部署、權限、金鑰、刪除這些高風險內容，還是人工看。\n\n門沒拆，只是多了一條要刷兩次卡的小通道。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "GitHub · magic76/crew-pocket｜risk-gated automatic verification for scoped low-risk skills\nhttps://github.com/magic76/crew-pocket/commit/d5da11d006e36434e428a85a1bc22bc3ae9d7699",
+            "requestId": "077b6d46-ddfd-46f5-ad87-54818b4ac52a"
+          },
+          "threads": {
+            "text": "GitHub · magic76/crew-pocket｜risk-gated automatic verification for scoped low-risk skills\nhttps://github.com/magic76/crew-pocket/commit/d5da11d006e36434e428a85a1bc22bc3ae9d7699",
+            "requestId": "a94bccb6-0662-4d88-ad64-35b63bc81548"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "規則與風險門檻用文字較準確；沒有可分享的真實驗證畫面或結果輸出，不製作看似真實的狀態 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-06-role-dna-risk-gate.json",
+        "schedule": {
+          "date": "2026-11-06",
+          "time": "12:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-03-browser-message-outbox",
+      "topic": "瀏覽器傳給手機 AI 的訊息，先放進真的寄件匣",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-main",
+          "type": "github_commit",
+          "label": "GitHub · magic76/crew-pocket｜persist direct message delivery",
+          "url": "https://github.com/magic76/crew-pocket/commit/973f3bb296fc1ffe8d3ef34b388470e4e92efcd1",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Pocket 瀏覽器擴充功能新增使用 chrome.storage.local 保存的直送訊息 outbox，上限 100 筆。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "連線中斷時訊息保留，程式設有 15 秒重試與 WebSocket 心跳。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "每筆訊息使用 clientMessageId，伺服器保存收件紀錄以避免重送時重複入列。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        }
+      ],
+      "reader_context": "Crew Pocket 的瀏覽器擴充功能可以把目前網頁與訊息送到手機上的 AI 工作台。",
+      "story_spine": "瀏覽器訊息原本依賴當下 WebSocket → 斷線時按下傳送不能只靠運氣 → 新版先持久化到 outbox，以固定 ID 重試並等伺服器回執。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_recent_development",
+        "reason": "訊息「按了但到底有沒有到」是具體且容易理解的可靠性問題；commit 提供持久化、重試與去重三個可核實機制。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "所有實質主張都連到 GitHub · magic76/crew-pocket 的原始證據；文案明確保留未驗收、公司報告或研究範圍限制。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "瀏覽器訊息原本依賴當下 WebSocket → 斷線時按下傳送不能只靠運氣 → 新版先持久化到 outbox，以固定 ID 重試並等伺服器回執。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "題材直接來自作者近期 Crew 專案與發布工具的程式變更。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭先交代 Crew Pocket 的瀏覽器擴充功能可以把目前網頁與訊息送到手機上的 AI 工作台。，再進入具體事件或反差。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "結構依各題的實際事件安排，沒有重複近期「某公司發布」式開頭、固定道理或制式 CTA。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有可分享的真實斷線測試紀錄或擴充功能截圖；文字能交代 outbox、重試與回執，不以生成圖假裝實測。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-editorial-review",
+          "Queue posts dated 2026-11-03 through 2026-11-05"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已比對前三天題材、開頭與結尾；本題沒有重複近期選題或固定問句。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "訊息最麻煩的狀態不是失敗，是畫面說寄出了，對方卻沒收到。\n\nCrew Pocket 的瀏覽器擴充功能，可以把目前網頁和一句話直接送到手機上的 AI 工作台。但 WebSocket 不會因為你很急就保證自己剛好在線。\n\n如果按下傳送的那一刻連線斷掉，只把訊息往 socket 丟一次，畫面很容易看起來像寄出了，實際上沒人簽收。\n\n新版先把訊息存進瀏覽器的 outbox，最多保留 100 筆。每筆都有固定 clientMessageId；連線不在就等，恢復後再送，程式也會每 15 秒重試。伺服器收到後回傳收據，重送相同 ID 不會再排一份。\n\n改動已進程式；這裡只確認機制，沒有把實際斷線測試說成已完成。\n\n原來「傳訊息」最麻煩的部分，不是傳，是要知道對方真的收到了。"
+        },
+        "threads": {
+          "text": "Crew Pocket 的瀏覽器擴充功能，可以把網頁和一句話直接送到手機 AI 工作台。\n\n但 WebSocket 不會因為你按得很有決心，就保證自己在線。\n\n新版先把訊息存進本機 outbox，最多 100 筆；每筆有固定 ID，斷線就保留，恢復後重送，伺服器回收據，同一個 ID 不重複入列。\n\n程式已加入這套機制，實際斷線驗收還沒被這份 commit 證明。\n\n傳送不難。知道對方真的收到，才難。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "GitHub · magic76/crew-pocket｜persist direct message delivery\nhttps://github.com/magic76/crew-pocket/commit/973f3bb296fc1ffe8d3ef34b388470e4e92efcd1",
+            "requestId": "c40a53c7-5a70-4d22-b3e5-3b52795e84bf"
+          },
+          "threads": {
+            "text": "GitHub · magic76/crew-pocket｜persist direct message delivery\nhttps://github.com/magic76/crew-pocket/commit/973f3bb296fc1ffe8d3ef34b388470e4e92efcd1",
+            "requestId": "bfed0ca4-4243-45be-aede-6b00b49557b7"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "沒有可分享的真實斷線測試紀錄或擴充功能截圖；文字能交代 outbox、重試與回執，不以生成圖假裝實測。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-06-browser-message-outbox.json",
+        "schedule": {
+          "date": "2026-11-06",
+          "time": "14:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-04-escaped-newline-guard",
+      "topic": "Publisher 現在先擋住看起來像換行的兩個字元",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-main",
+          "type": "github_commit",
+          "label": "GitHub · magic76/crew-social-agent｜Block escaped newlines before social publishing",
+          "url": "https://github.com/magic76/crew-social-agent/commit/e2539ffc84362e1d24e19b1fb9dac3c397938d79",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Local Publisher 新增檢查，會在主文或首則回覆含有字面上的反斜線 n／r 時阻擋發布。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "檢查不會偷偷改寫內容，而是把任務標為 blocked 並留下對應錯誤原因。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "已進入 needs_reconciliation 的任務不會被這項新檢查改寫既有處理語意。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        }
+      ],
+      "reader_context": "Crew Social Agent 是透過 GitHub Queue 把 Facebook 與 Threads 文案交給本機 Publisher 的工具。",
+      "story_spine": "JSON 裡的換行可能被多包一層後變成看得見的反斜線 n → 自動發布若照單全收會把格式錯誤帶上平台 → Publisher 現在先阻擋並要求修稿，不暗中猜作者意思。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_recent_development",
+        "reason": "這是自動發文流程中很小但可直接影響成品的真實防呆，兼具工程細節與一般讀者能理解的反差。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "所有實質主張都連到 GitHub · magic76/crew-social-agent 的原始證據；文案明確保留未驗收、公司報告或研究範圍限制。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "JSON 裡的換行可能被多包一層後變成看得見的反斜線 n → 自動發布若照單全收會把格式錯誤帶上平台 → Publisher 現在先阻擋並要求修稿，不暗中猜作者意思。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "題材直接來自作者近期 Crew 專案與發布工具的程式變更。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭先交代 Crew Social Agent 是透過 GitHub Queue 把 Facebook 與 Threads 文案交給本機 Publisher 的工具。，再進入具體事件或反差。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "結構依各題的實際事件安排，沒有重複近期「某公司發布」式開頭、固定道理或制式 CTA。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "這篇靠「真正換行」與「字面反斜線 n」的文字反差成立；插圖不會增加證據或理解，因此刻意使用純文字。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-editorial-review",
+          "Queue posts dated 2026-11-03 through 2026-11-05"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已比對前三天題材、開頭與結尾；本題沒有重複近期選題或固定問句。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Social Agent 是我用 GitHub Queue 交接 Facebook 和 Threads 文案，再由手機上的本機 Publisher 發文的工具。\n\n最近補了一道很工程師的檢查：看起來像換行的東西，可能根本不是換行。\n\nJSON 經過多一層處理後，真正的斷行有機會變成兩個普通字元：反斜線和小寫 n。人看原始資料時很容易略過，平台收到後卻可能把那兩個字元老實印出來。\n\n現在 Publisher 在送出主文和來源回覆前會檢查這件事。看到字面上的跳脫換行，就直接 blocked，留下明確原因；它不會自作聰明把內容改掉，因為那個反斜線也可能是作者故意寫的。\n\n自動化最可靠的時候，常常不是它很會修，而是它知道哪裡不該猜。"
+        },
+        "threads": {
+          "text": "Crew Social Agent 會從 GitHub Queue 讀取 FB／Threads 文案，再交給本機 Publisher。\n\n看起來像換行的東西，可能只是兩個普通字元：反斜線和小寫 n。多包一層 JSON 後，人眼容易略過，平台卻可能很誠實地把它們印出來。\n\n現在 Publisher 送出主文或來源回覆前會先檢查；遇到就 blocked，留下原因，不偷偷幫作者改字。\n\n有時候可靠的自動化，不是很會猜，是知道哪裡不能猜。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "GitHub · magic76/crew-social-agent｜Block escaped newlines before social publishing\nhttps://github.com/magic76/crew-social-agent/commit/e2539ffc84362e1d24e19b1fb9dac3c397938d79",
+            "requestId": "0ebfb2e9-f2bb-4c49-a109-07d9d0bc9f60"
+          },
+          "threads": {
+            "text": "GitHub · magic76/crew-social-agent｜Block escaped newlines before social publishing\nhttps://github.com/magic76/crew-social-agent/commit/e2539ffc84362e1d24e19b1fb9dac3c397938d79",
+            "requestId": "2aa0abd2-7949-4fb6-8312-65bacce88c77"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "這篇靠「真正換行」與「字面反斜線 n」的文字反差成立；插圖不會增加證據或理解，因此刻意使用純文字。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-06-escaped-newline-guard.json",
+        "schedule": {
+          "date": "2026-11-06",
+          "time": "16:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-05-agile-deliberation",
+      "topic": "人類自己都說不清楚，AI 要怎麼學灰色地帶",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-main",
+          "type": "primary_research",
+          "label": "Google Research｜Agile Deliberation: How AI helps humans define the gray areas",
+          "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Agile Deliberation 先讓使用者拆出包含與排除範圍，再主動找出邊界圖片供人判斷。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "人的邊界回饋會送進自動提示詞最佳化迴圈，持續更新分類規則。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "Google Research 報告 18 場、每場 1.5 小時的真人研究；作者稱流程提高一致性與分類表現並降低手動調提示詞的負擔。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        }
+      ],
+      "reader_context": "Agile Deliberation 是 Google Research 提出的互動式流程，用來建立「健康食物」這類沒有唯一標準答案的影像分類器。",
+      "story_spine": "主觀分類要求人先寫完整規則，但人通常也是看到例外才知道自己的界線 → 系統主動挑最模糊的圖片來問 → 人只需處理真正有爭議的案例，規則再跟著更新。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "source_backed_reader_payoff",
+        "reason": "研究把 AI 角色從代替人決定改成協助人找出需要決定的邊界，機制具體、可轉成實用設計觀點，也適合今日影片。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "所有實質主張都連到 Google Research 的原始證據；文案明確保留未驗收、公司報告或研究範圍限制。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "主觀分類要求人先寫完整規則，但人通常也是看到例外才知道自己的界線 → 系統主動挑最模糊的圖片來問 → 人只需處理真正有爭議的案例，規則再跟著更新。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "研究可轉成 Crew 的 Agent、分類與工作流程設計觀點，且沒有假裝成作者親測。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭先交代 Agile Deliberation 是 Google Research 提出的互動式流程，用來建立「健康食物」這類沒有唯一標準答案的影像分類器。，再進入具體事件或反差。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "結構依各題的實際事件安排，沒有重複近期「某公司發布」式開頭、固定道理或制式 CTA。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "研究流程可以做準確機制圖，但本批次影片已用 Crew Light v1 呈現；社群主文避免重複資產，純文字仍能說清楚邊界案例。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-editorial-review",
+          "Queue posts dated 2026-11-03 through 2026-11-05"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已比對前三天題材、開頭與結尾；本題沒有重複近期選題或固定問句。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "「健康食物」要怎麼交給 AI 分類？\n\n沙拉大概沒問題。果昔呢？有水果，但糖很多。蛋白棒算健康，還是只是包裝很會說話？\n\n這類題目沒有一條全世界共用的標準，麻煩的是，人類通常也要看到例外，才知道自己的規則到底是什麼。\n\nGoogle Research 11/4 分享的 Agile Deliberation，不先逼使用者寫出完美提示詞。它先把概念拆成「包含」和「排除」，再主動找出最難判斷的邊界圖片。人只要回答這些案例算不算，系統就把回饋送進提示詞最佳化迴圈，繼續調整分類器。\n\n研究以 18 場、每場 1.5 小時的真人測試比較。作者報告，這種流程讓標記更一致、分類表現更好，也降低手動改提示詞的疲勞。這是特定研究的結果，不代表所有主觀任務都已解決。\n\nAI 不一定要先替人做決定。它也可以先把最值得人決定的地方找出來。"
+        },
+        "threads": {
+          "text": "「健康食物」要怎麼讓 AI 分類？沙拉好像可以，果昔有水果但糖很多，蛋白棒又算哪邊？\n\nGoogle Research 的 Agile Deliberation 不先逼人寫完美提示詞。系統把概念拆成包含／排除，再主動找最模糊的邊界圖片；人回答這些例外算不算，分類規則就跟著更新。\n\n作者在 18 場真人研究中報告，這樣能提高一致性與分類表現，也減少手動改 prompt 的疲勞。\n\nAI 不一定替你決定。它也能先找出，真正需要你決定的地方。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "Google Research｜Agile Deliberation: How AI helps humans define the gray areas\nhttps://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+            "requestId": "f174e8e3-6607-4ea8-81cb-7af1c9e13381"
+          },
+          "threads": {
+            "text": "Google Research｜Agile Deliberation: How AI helps humans define the gray areas\nhttps://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+            "requestId": "d2916c1b-d44a-447c-9ebc-84c12a23a039"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "研究流程可以做準確機制圖，但本批次沒有完成可驗證的圖像或影片資產；社群主文以純文字說清楚邊界案例，不用未驗證示意圖填數量。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-06-agile-deliberation.json",
+        "schedule": {
+          "date": "2026-11-06",
+          "time": "19:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-06-science-claude-usage",
+      "topic": "科學家用 AI 最多的地方，居然不是想新點子",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-main",
+          "type": "primary_research",
+          "label": "Anthropic｜AI for scientific discovery: How researchers use Claude",
+          "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Anthropic 使用隱私保護方法分析 207,000 個 Claude 與 Claude Code 科研工作階段的分類標籤。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "公司報告資料分析約占 Claude 科研工作階段三分之一，在 Claude Code 接近一半；想法生成與資料蒐集較少。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        },
+        {
+          "text": "形式科學使用較多，實驗室與需要實體操作的領域較少；報告的加速情境是模型推估，不是已觀察的產出增幅。",
+          "evidence_ids": [
+            "src-main"
+          ]
+        }
+      ],
+      "reader_context": "Anthropic 的研究分析科學家實際如何使用 Claude 與 Claude Code，並用聚合分類保留研究內容隱私。",
+      "story_spine": "大家常想像 AI 最擅長替科學家想突破性點子 → 實際使用更集中在資料分析與寫作 → AI 目前加速的是認知工作，實驗、採樣等物理瓶頸仍然存在。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "source_backed_reader_payoff",
+        "reason": "207,000 個工作階段提供具體行為資料，結論又能連回工程工作流：先找 AI 已能穩定接手的步驟，而不是直接宣稱自動做完整研究。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "所有實質主張都連到 Anthropic 的原始證據；文案明確保留未驗收、公司報告或研究範圍限制。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "大家常想像 AI 最擅長替科學家想突破性點子 → 實際使用更集中在資料分析與寫作 → AI 目前加速的是認知工作，實驗、採樣等物理瓶頸仍然存在。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "研究可轉成 Crew 的 Agent、分類與工作流程設計觀點，且沒有假裝成作者親測。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭先交代 Anthropic 的研究分析科學家實際如何使用 Claude 與 Claude Code，並用聚合分類保留研究內容隱私。，再進入具體事件或反差。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "結構依各題的實際事件安排，沒有重複近期「某公司發布」式開頭、固定道理或制式 CTA。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "來源包含聚合統計但社群稿只使用文字摘要；沒有重繪官方圖表，避免讓示意圖看起來像原研究數據。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-editorial-review",
+          "Queue posts dated 2026-11-03 through 2026-11-05"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已比對前三天題材、開頭與結尾；本題沒有重複近期選題或固定問句。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "AI 進實驗室後，科學家最常叫它做什麼？\n\n答案目前比較不像「替我想出下一個重大發現」，比較像「先幫我把這批資料處理完」。\n\nAnthropic 11/5 發布一份使用研究，以隱私保護方式分析 207,000 個 Claude 與 Claude Code 的科研工作階段。研究團隊只保留領域、任務等分類標籤，不保存資料集、假說或未公開論文內容。\n\n公司報告，資料分析約占 Claude 科研工作階段三分之一，在 Claude Code 接近一半；想法生成和資料蒐集反而較少。電腦科學、數學、統計等形式科學使用較多，需要實驗與實體操作的領域較少。\n\n報告也做了未來產出情境推估，但那是模型推估，不是已經觀察到研究量翻倍。\n\n現階段的 AI 比較像先接走螢幕裡的工作。試管、樣本和現實世界，還是很有存在感。"
+        },
+        "threads": {
+          "text": "科學家用 AI 最多的地方，現在不是想新點子，而是分析資料。\n\nAnthropic 以隱私保護方式分析 207,000 個 Claude／Claude Code 科研工作階段。公司報告：資料分析約占 Claude 的三分之一，在 Claude Code 接近一半；想法生成與資料蒐集反而較少。\n\n電腦科學、數學、統計用得比較多；需要實驗與實體操作的領域較少。報告裡的未來產出增幅是情境推估，不是已發生的成效。\n\nAI 先接走螢幕裡的工作。試管還沒有要退休。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "Anthropic｜AI for scientific discovery: How researchers use Claude\nhttps://www.anthropic.com/research/how-researchers-use-claude",
+            "requestId": "f45d41fb-e3aa-48f5-8040-ec043a1c4b9f"
+          },
+          "threads": {
+            "text": "Anthropic｜AI for scientific discovery: How researchers use Claude\nhttps://www.anthropic.com/research/how-researchers-use-claude",
+            "requestId": "3b316c4a-90f4-4eb2-a6f6-fec557c5b4dd"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "來源包含聚合統計但社群稿只使用文字摘要；沒有重繪官方圖表，避免讓示意圖看起來像原研究數據。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "ready_for_local_agent",
+        "authorization_basis": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials.",
+        "publish_permitted": true,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-06-science-claude-usage.json",
+        "schedule": {
+          "date": "2026-11-06",
+          "time": "21:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-07-gpt6-cyber",
+      "topic": "GPT-6 Cyber security model release",
+      "class": "ai_news",
+      "evidence": [
+        {
+          "id": "src-gpt6-cyber",
+          "type": "primary_source",
+          "label": "OpenAI｜GPT-6 Cyber: Advancing the frontier of aligned cybersecurity agents",
+          "url": "https://openai.com/index/introducing-gpt-6-cyber/",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "OpenAI 於 2026-11-05 公布 GPT-6 Cyber，並限制初期存取於獲准的 Daybreak Red 客戶。",
+          "evidence_ids": [
+            "src-gpt6-cyber"
+          ]
+        },
+        {
+          "text": "OpenAI 報告 ExploitGym 48.5% 與受控範圍評估結果；數字屬公司測試。",
+          "evidence_ids": [
+            "src-gpt6-cyber"
+          ]
+        }
+      ],
+      "reader_context": "GPT-6 Cyber 是 OpenAI 面向獲准安全研究者的資安模型，主打漏洞研究與遵守授權範圍。",
+      "story_spine": "新模型公布更強的漏洞能力與邊界評估 → 但昨日已發布 Linux exploit 研究 → 今天再寫會重複同一組安全數字與「可驗證修補」角度。",
+      "decision": {
+        "outcome": "rejected",
+        "reason_code": "duplicate_recent_security_story",
+        "reason": "昨日 Queue 已用同一批 Linux 漏洞與修補資料做完整安全研究貼文；今天保留於研究報告，不再消耗一個社群時段。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "官方文章提供日期、存取範圍與測試數字。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "資安能力與範圍遵守的取捨值得追蹤。"
+        },
+        "personal_relevance": {
+          "status": "revise",
+          "reason": "與現有 Crew 工作的連結弱於今日四個真實開發故事。"
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "若發文需要避開昨日 Linux 漏洞開頭，但目前沒有更獨立的角度。"
+        },
+        "template_risk": {
+          "status": "fail",
+          "reason": "會重複昨日 OpenAI Linux 安全研究的數字與人工審查結論。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "沒有需要新增的準確機制圖或可分享原始素材。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-editorial-review"
+        ],
+        "repeated_openers": [
+          "OpenAI Linux/security model release"
+        ],
+        "stock_phrase_hits": [],
+        "note": "與 2026-11-05 OpenAI Linux root-paths 題材高度重疊，故淘汰。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "只保留研究報告，沒有社群媒體資產需求。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-08-wearable-hypertension",
+      "topic": "Wearable sensors for hypertension screening research",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-google-hypertension",
+          "type": "primary_research",
+          "label": "Google Research｜Detecting signs of hypertension using wearable sensors",
+          "url": "https://research.google/blog/detecting-signs-of-hypertension-using-wearable-sensors/",
+          "checked_at": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Google Research 於 2026-11-05 公布使用一般智慧手錶 PPG 與加速度計被動偵測高血壓跡象的研究。",
+          "evidence_ids": [
+            "src-google-hypertension"
+          ]
+        },
+        {
+          "text": "研究以 196 名參與者的前瞻性多中心研究對照 24 小時動態血壓監測。",
+          "evidence_ids": [
+            "src-google-hypertension"
+          ]
+        }
+      ],
+      "reader_context": "這項 Google Research 研究嘗試用智慧手錶既有感測器，長期聚合訊號來篩檢高血壓跡象。",
+      "story_spine": "穿戴裝置研究有明確方法與臨床對照 → 但涉及健康解讀與特定研究族群 → 今日沒有足夠篇幅把敏感度、特異度和「篩檢不等於診斷」講完整。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "medical_context_requires_more_space",
+        "reason": "來源可信且研究有趣，但短社群稿容易把篩檢工具寫成診斷能力；先留在研究報告，等能完整交代限制時再寫。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "Google Research 文章與 Nature 論文連結提供研究設計和數字。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "以既有手錶感測器聚合多日訊號，機制具體。"
+        },
+        "personal_relevance": {
+          "status": "revise",
+          "reason": "與目前 Crew 開發故事沒有直接連結。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "需先解釋篩檢、確診與醫療限制，短開頭容易誤導。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "沒有與近期貼文重複的健康題材。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "若製圖需準確呈現研究流程與醫療限制，目前未建立可驗證圖表。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "Queue posts dated 2026-11-03 through 2026-11-05"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "題材不重複，但因醫療語境與篇幅暫緩。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "diagram",
+        "reason": "需要準確的研究流程圖才適合公開解說，目前沒有已驗證資產。",
+        "asset": {
+          "status": "not_available",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    }
+  ]
+}

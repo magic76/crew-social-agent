@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261106-browser-message-outbox",
+  "created_date": "2026-11-06",
+  "title": "瀏覽器傳給手機 AI 的訊息，先放進真的寄件匣",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-06",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/crew-pocket",
+    "published_date": "2026-11-05",
+    "title": "persist direct message delivery",
+    "url": "https://github.com/magic76/crew-pocket/commit/973f3bb296fc1ffe8d3ef34b388470e4e92efcd1"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "GitHub · magic76/crew-pocket｜persist direct message delivery\nhttps://github.com/magic76/crew-pocket/commit/973f3bb296fc1ffe8d3ef34b388470e4e92efcd1",
+      "requestId": "c40a53c7-5a70-4d22-b3e5-3b52795e84bf"
+    },
+    "threads": {
+      "text": "GitHub · magic76/crew-pocket｜persist direct message delivery\nhttps://github.com/magic76/crew-pocket/commit/973f3bb296fc1ffe8d3ef34b388470e4e92efcd1",
+      "requestId": "bfed0ca4-4243-45be-aede-6b00b49557b7"
+    }
+  },
+  "posts": {
+    "facebook": {
+    "text": "訊息最麻煩的狀態不是失敗，是畫面說寄出了，對方卻沒收到。\n\nCrew Pocket 的瀏覽器擴充功能，可以把目前網頁和一句話直接送到手機上的 AI 工作台。但 WebSocket 不會因為你很急就保證自己剛好在線。\n\n如果按下傳送的那一刻連線斷掉，只把訊息往 socket 丟一次，畫面很容易看起來像寄出了，實際上沒人簽收。\n\n新版先把訊息存進瀏覽器的 outbox，最多保留 100 筆。每筆都有固定 clientMessageId；連線不在就等，恢復後再送，程式也會每 15 秒重試。伺服器收到後回傳收據，重送相同 ID 不會再排一份。\n\n改動已進程式；這裡只確認機制，沒有把實際斷線測試說成已完成。\n\n原來「傳訊息」最麻煩的部分，不是傳，是要知道對方真的收到了。",
+      "requestId": "b2c7a873-828a-488e-afd6-7a7948e668e2"
+    },
+    "threads": {
+      "text": "Crew Pocket 的瀏覽器擴充功能，可以把網頁和一句話直接送到手機 AI 工作台。\n\n但 WebSocket 不會因為你按得很有決心，就保證自己在線。\n\n新版先把訊息存進本機 outbox，最多 100 筆；每筆有固定 ID，斷線就保留，恢復後重送，伺服器回收據，同一個 ID 不重複入列。\n\n程式已加入這套機制，實際斷線驗收還沒被這份 commit 證明。\n\n傳送不難。知道對方真的收到，才難。",
+      "requestId": "6a355921-4fb6-4932-b1fa-105ebb8711fb"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials."
+  }
+}

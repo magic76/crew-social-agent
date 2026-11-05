@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261106-science-claude-usage",
+  "created_date": "2026-11-06",
+  "title": "科學家用 AI 最多的地方，居然不是想新點子",
+  "category": "ai-research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-06",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Anthropic",
+    "published_date": "2026-11-05",
+    "title": "AI for scientific discovery: How researchers use Claude",
+    "url": "https://www.anthropic.com/research/how-researchers-use-claude"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "Anthropic｜AI for scientific discovery: How researchers use Claude\nhttps://www.anthropic.com/research/how-researchers-use-claude",
+      "requestId": "f45d41fb-e3aa-48f5-8040-ec043a1c4b9f"
+    },
+    "threads": {
+      "text": "Anthropic｜AI for scientific discovery: How researchers use Claude\nhttps://www.anthropic.com/research/how-researchers-use-claude",
+      "requestId": "3b316c4a-90f4-4eb2-a6f6-fec557c5b4dd"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 進實驗室後，科學家最常叫它做什麼？\n\n答案目前比較不像「替我想出下一個重大發現」，比較像「先幫我把這批資料處理完」。\n\nAnthropic 11/5 發布一份使用研究，以隱私保護方式分析 207,000 個 Claude 與 Claude Code 的科研工作階段。研究團隊只保留領域、任務等分類標籤，不保存資料集、假說或未公開論文內容。\n\n公司報告，資料分析約占 Claude 科研工作階段三分之一，在 Claude Code 接近一半；想法生成和資料蒐集反而較少。電腦科學、數學、統計等形式科學使用較多，需要實驗與實體操作的領域較少。\n\n報告也做了未來產出情境推估，但那是模型推估，不是已經觀察到研究量翻倍。\n\n現階段的 AI 比較像先接走螢幕裡的工作。試管、樣本和現實世界，還是很有存在感。",
+      "requestId": "76eb9ebd-e7f4-4d8d-be59-143bf7a3e03b"
+    },
+    "threads": {
+      "text": "科學家用 AI 最多的地方，現在不是想新點子，而是分析資料。\n\nAnthropic 以隱私保護方式分析 207,000 個 Claude／Claude Code 科研工作階段。公司報告：資料分析約占 Claude 的三分之一，在 Claude Code 接近一半；想法生成與資料蒐集反而較少。\n\n電腦科學、數學、統計用得比較多；需要實驗與實體操作的領域較少。報告裡的未來產出增幅是情境推估，不是已發生的成效。\n\nAI 先接走螢幕裡的工作。試管還沒有要退休。",
+      "requestId": "2fd43ed9-a459-4f7f-9778-4b001d2e12df"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261106-escaped-newline-guard",
+  "created_date": "2026-11-06",
+  "title": "Publisher 現在先擋住看起來像換行的兩個字元",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-06",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/crew-social-agent",
+    "published_date": "2026-11-05",
+    "title": "Block escaped newlines before social publishing",
+    "url": "https://github.com/magic76/crew-social-agent/commit/e2539ffc84362e1d24e19b1fb9dac3c397938d79"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "GitHub · magic76/crew-social-agent｜Block escaped newlines before social publishing\nhttps://github.com/magic76/crew-social-agent/commit/e2539ffc84362e1d24e19b1fb9dac3c397938d79",
+      "requestId": "0ebfb2e9-f2bb-4c49-a109-07d9d0bc9f60"
+    },
+    "threads": {
+      "text": "GitHub · magic76/crew-social-agent｜Block escaped newlines before social publishing\nhttps://github.com/magic76/crew-social-agent/commit/e2539ffc84362e1d24e19b1fb9dac3c397938d79",
+      "requestId": "2aa0abd2-7949-4fb6-8312-65bacce88c77"
+    }
+  },
+  "posts": {
+    "facebook": {
+    "text": "Crew Social Agent 是我用 GitHub Queue 交接 Facebook 和 Threads 文案，再由手機上的本機 Publisher 發文的工具。\n\n最近補了一道很工程師的檢查：看起來像換行的東西，可能根本不是換行。\n\nJSON 經過多一層處理後，真正的斷行有機會變成兩個普通字元：反斜線和小寫 n。人看原始資料時很容易略過，平台收到後卻可能把那兩個字元老實印出來。\n\n現在 Publisher 在送出主文和來源回覆前會檢查這件事。看到字面上的跳脫換行，就直接 blocked，留下明確原因；它不會自作聰明把內容改掉，因為那個反斜線也可能是作者故意寫的。\n\n自動化最可靠的時候，常常不是它很會修，而是它知道哪裡不該猜。",
+      "requestId": "1d610105-5a53-4827-a275-9dc89ca97ffb"
+    },
+    "threads": {
+      "text": "Crew Social Agent 會從 GitHub Queue 讀取 FB／Threads 文案，再交給本機 Publisher。\n\n看起來像換行的東西，可能只是兩個普通字元：反斜線和小寫 n。多包一層 JSON 後，人眼容易略過，平台卻可能很誠實地把它們印出來。\n\n現在 Publisher 送出主文或來源回覆前會先檢查；遇到就 blocked，留下原因，不偷偷幫作者改字。\n\n有時候可靠的自動化，不是很會猜，是知道哪裡不能猜。",
+      "requestId": "d3991dbf-da3f-4291-8593-ab8d93297b25"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261106-role-dna-risk-gate",
+  "created_date": "2026-11-06",
+  "title": "AI 技能手冊可以自動上架，但先過兩次窄門",
+  "category": "development-diary",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-06",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/crew-pocket",
+    "published_date": "2026-11-05",
+    "title": "risk-gated automatic verification for scoped low-risk skills",
+    "url": "https://github.com/magic76/crew-pocket/commit/d5da11d006e36434e428a85a1bc22bc3ae9d7699"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "GitHub · magic76/crew-pocket｜risk-gated automatic verification for scoped low-risk skills\nhttps://github.com/magic76/crew-pocket/commit/d5da11d006e36434e428a85a1bc22bc3ae9d7699",
+      "requestId": "077b6d46-ddfd-46f5-ad87-54818b4ac52a"
+    },
+    "threads": {
+      "text": "GitHub · magic76/crew-pocket｜risk-gated automatic verification for scoped low-risk skills\nhttps://github.com/magic76/crew-pocket/commit/d5da11d006e36434e428a85a1bc22bc3ae9d7699",
+      "requestId": "a94bccb6-0662-4d88-ad64-35b63bc81548"
+    }
+  },
+  "posts": {
+    "facebook": {
+    "text": "讓 AI 自己批准自己的技能，聽起來很像內控事故。\n\nCrew Pocket 是我用來管理多個 AI 角色的 Android 工作台。每個角色都有自己的 Skill DNA，也就是它慢慢累積的技能手冊。\n\n如果每一本候選手冊都等人按驗證，待審清單很快會像信箱裡永遠讀不完的通知。現在開了一條很窄的自動通道。\n\n只有低風險技能可以進來，而且不能拿「npm test 有綠」當通行證。手冊必須明確列出要跑的 node 測試；每一條都要在兩個不同的完成回合中，出現非零測試數、零失敗，才會自動啟用。之後指定測試失敗，資格還會被撤回。\n\n碰到部署、權限、金鑰、刪除等高風險內容，照樣回去排人工隊伍。\n\n自動化不是把門拆掉。比較像只開一個很小的員工通道，還要刷兩次卡。",
+      "requestId": "779ceb3a-4af7-455b-9478-e72edf17cfa0"
+    },
+    "threads": {
+    "text": "讓 AI 自己批准自己的技能，聽起來很像內控事故。\n\nCrew Pocket 是管理 AI 角色的 Android 工作台；Skill DNA 是每個角色自己的技能手冊。如果候選手冊全部等人工驗證，待審清單很快會像信箱。\n\n現在只讓低風險技能走自動通道：手冊列出的精確 node 測試，要在兩個不同回合都出現非零測試、零失敗，才會啟用。指定測試之後失敗，資格還會被撤回。\n\n部署、權限、金鑰、刪除這些高風險內容，還是人工看。\n\n門沒拆，只是多了一條要刷兩次卡的小通道。",
+      "requestId": "390cac7c-22db-4dc5-ac22-c62ae8043f3e"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "Owner recurring daily-content instruction requires six distinct daily topics for Local Publisher; actual sending remains conditional on the owner machine running SOCIAL_AGENT_MODE=live with valid platform credentials."
+  }
+}
