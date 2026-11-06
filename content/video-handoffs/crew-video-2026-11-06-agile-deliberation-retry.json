@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "id": "crew-video-2026-11-06-agile-deliberation-retry",
+  "created_date": "2026-11-06",
+  "status": "draft_handoff_only",
+  "publish_permitted": false,
+  "schedule": null,
+  "platforms": [
+    "facebook",
+    "threads"
+  ],
+  "title": "AI 怎麼學健康食物的灰色地帶？",
+  "source": {
+    "publisher": "Google Research",
+    "published_date": "2026-11-04",
+    "title": "Agile Deliberation: How AI helps humans define the gray areas",
+    "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+    "note": "18 場、每場 1.5 小時的真人研究；食物卡片是研究中的概念示意，不是 Crew 的實際測試。"
+  },
+  "media": {
+    "type": "video/mp4",
+    "path": "content/video-handoffs/assets/2026-11-06-agile-deliberation-retry.mp4",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/video-handoffs/assets/2026-11-06-agile-deliberation-retry.mp4",
+    "size_bytes": 1541132,
+    "sha256": "85e2396b3171aabd267c35b31fd9cb655a185fd6bc808bc3a942f0804a106013",
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration_seconds": 30.507,
+    "alt_text": "Crew Cloud 以健康食物的模糊分類為例，說明 Agile Deliberation 如何由人界定包含與排除，再以模糊案例和回饋修正 AI 分類邊界。畫面是研究流程概念示意，非實際介面。"
+  },
+  "narration": {
+    "provider": "Crew Web TTS Worker",
+    "model": "Gemini",
+    "voice": "Kore",
+    "language": "zh-TW",
+    "job_id": "crew-tts-agile-deliberation-retry-20261106-01",
+    "source_wav_url": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-agile-deliberation-retry-20261106-01",
+    "source_wav_duration_seconds": 27.72,
+    "source_wav_sha256": "6e961a14f4089e52dc678b94d121e79fb4e3808d87d2200cbdf0fce6a336058e",
+    "playback_rate": 1,
+    "lead_in_seconds": 0,
+    "pitch_preserved": true,
+    "captions": "13 burned Traditional Chinese cues; cue positions follow measured speech pauses. Manual listening and word-for-word audio QA remain unverified.",
+    "source_wav_repo_path": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-agile-deliberation-retry-20261106-01"
+  },
+  "posts": {
+    "facebook": {
+      "text": "Google Research 的 Agile Deliberation 研究一個很生活化的問題：像「健康食物」這種主觀分類，AI 怎麼知道邊界？研究流程先讓人列出包含和排除，再由系統找出模糊圖片，讓人回饋修正分類規則。團隊在 18 場真人研究中，報告分類一致性和表現優於基準方法。重點不是 AI 自己替人定義健康，而是它能把難判斷的例子先找出來。",
+      "requestId": "04d83259-d68c-4bb6-8ca4-bf6ee63f5552"
+    },
+    "threads": {
+      "text": "「健康食物」聽起來像簡單分類，直到你要回答：果昔算不算？Google Research 的 Agile Deliberation 讓 AI 找出模糊案例，再由人回饋修正邊界。18 場真人研究中，團隊報告分類一致性和表現優於基準方法。AI 幫忙找灰色地帶，標準還是人定。",
+      "requestId": "be68cf12-15dc-4641-86da-c96b0461746f"
+    }
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Google Research — Agile Deliberation\nhttps://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+      "requestId": "7dbff1d9-43b7-4459-a947-0e3fb2538a77"
+    },
+    "threads": {
+      "text": "參考來源：Google Research — Agile Deliberation\nhttps://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+      "requestId": "6f35668f-a8bb-43cf-a2df-f55c538f643c"
+    }
+  },
+  "local_agent_note": "僅供審稿；目前 publish_permitted=false。發佈前須完成實際聽音與逐字字幕核對，取得本篇影片授權，設定有效未過期排程，並確認 SOCIAL_AGENT_MODE=live 與平台憑證。"
+}

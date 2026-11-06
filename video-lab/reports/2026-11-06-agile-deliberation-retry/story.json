@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "id": "agile-deliberation-20261106-retry",
+  "title": "AI 怎麼學健康食物的灰色地帶？",
+  "language": "zh-TW",
+  "kind": "explainer",
+  "font": "assets/crew-font.otf",
+  "audio": "assets/narration.wav",
+  "video": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "duration": 30.5
+  },
+  "sources": [
+    {
+      "publisher": "Google Research",
+      "title": "Agile Deliberation: How AI helps humans define the gray areas",
+      "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/",
+      "published_date": "2026-11-04",
+      "note": "18 場、每場 1.5 小時的研究報告；影片中的食物例子為概念示意，不是研究數據。"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "healthy-food-hook",
+      "start": 0,
+      "duration": 5,
+      "title": "健康食物怎麼分？",
+      "body": "沙拉？果昔？蛋白棒？",
+      "items": ["沙拉", "果昔", "蛋白棒"],
+      "graphic": {"type": "foods", "labels": ["沙拉", "果昔", "蛋白棒"]},
+      "visualType": "tasks",
+      "pose": "surprise",
+      "note": "概念示意",
+      "narration": "AI 怎麼分辨健康食物？沙拉容易，果昔呢？"
+    },
+    {
+      "id": "define-the-boundary",
+      "start": 5,
+      "duration": 5.9,
+      "title": "先列出包含與排除",
+      "body": "規則不用一次寫完",
+      "items": ["包含", "排除"],
+      "graphic": {"type": "boundary", "labels": ["包含", "排除"], "note": "先定義範圍"},
+      "visualType": "tasks",
+      "pose": "think",
+      "note": "研究流程示意",
+      "narration": "Google Research 先讓人列出包含和排除，"
+    },
+    {
+      "id": "ask-about-edges",
+      "start": 10.9,
+      "duration": 4.533333,
+      "title": "AI 找最模糊的例子",
+      "body": "人來判斷邊界",
+      "items": ["挑出模糊圖片", "人回答算不算", "回饋更新規則"],
+      "graphic": {"type": "ambiguous", "labels": ["邊界圖片", "人來判斷", "規則更新"]},
+      "visualType": "verify",
+      "pose": "think",
+      "note": "流程概念示意",
+      "narration": "再挑模糊圖片請人判斷，依回饋更新分類規則。"
+    },
+    {
+      "id": "research-result",
+      "start": 15.433333,
+      "duration": 7.633334,
+      "title": "18 場真人研究",
+      "body": "作者報告：更一致、較少手動調整",
+      "items": ["分類一致性提高", "分類表現提高", "提示詞疲勞降低"],
+      "graphic": {"type": "results", "labels": ["標記更一致", "分類表現提高", "少手動調提示詞"]},
+      "visualType": "verify",
+      "pose": "surprise",
+      "note": "作者報告的研究結果",
+      "narration": "十八場研究中，作者報告一致性和分類表現提高，手動改提示詞較少。"
+    },
+    {
+      "id": "human-decides",
+      "start": 23.066667,
+      "duration": 7.433333,
+      "title": "人保留最後判斷",
+      "body": "先找出真正的灰色地帶",
+      "items": ["AI 找出難題", "人決定界線"],
+      "graphic": {"type": "loop", "labels": ["AI 找例外", "人定界線", "規則更新"]},
+      "visualType": "repeat",
+      "pose": "thumbs-up",
+      "note": "特定任務的研究結論",
+      "narration": "這是特定任務的結果。AI 有時先找出真正需要人決定的灰色地帶。"
+    }
+  ],
+  "captions": [
+    {"start": 0.12, "end": 1.96, "text": "AI 怎麼分辨健康食物？"},
+    {"start": 2.45, "end": 3.34, "text": "沙拉容易，"},
+    {"start": 3.56, "end": 4.28, "text": "果昔呢？"},
+    {"start": 4.99, "end": 7.7, "text": "Google Research 先讓人列出", "display": "Google Research\n先讓人列出"},
+    {"start": 7.7, "end": 10.89, "text": "包含和排除，"},
+    {"start": 11.16, "end": 13.08, "text": "再挑模糊圖片請人判斷，"},
+    {"start": 13.43, "end": 15.43, "text": "依回饋更新分類規則。"},
+    {"start": 15.43, "end": 17.8, "text": "十八場研究中，作者報告"},
+    {"start": 17.8, "end": 20.37, "text": "一致性和分類表現提高，"},
+    {"start": 21.03, "end": 22.75, "text": "手動改提示詞較少。"},
+    {"start": 23.07, "end": 24.45, "text": "這是特定任務的結果。"},
+    {"start": 24.45, "end": 25.7, "text": "AI 有時先找出"},
+    {"start": 25.7, "end": 27.45, "text": "真正需要人決定的灰色地帶。"}
+  ]
+}

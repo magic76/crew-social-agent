@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "video_id": "crew-video-2026-11-06-agile-deliberation-retry",
+  "created_at": "2026-11-06",
+  "status": "blocked_manual_audio_review",
+  "checks": {
+    "tts": {
+      "status": "pass",
+      "provider": "Gemini",
+      "voice": "Kore",
+      "http_status": 200,
+      "content_type": "audio/wav",
+      "bytes": 1336676,
+      "sha256": "6e961a14f4089e52dc678b94d121e79fb4e3808d87d2200cbdf0fce6a336058e",
+      "format": "PCM s16le, mono, 24000 Hz",
+      "duration_seconds": 27.72
+    },
+    "storyboard": {
+      "status": "pass",
+      "dimensions": "1080x1920",
+      "fps": 30,
+      "duration_seconds": 30.5,
+      "scenes": 5,
+      "caption_cues": 13,
+      "style": "Crew Light v1; warm ivory, blue-violet glow, rounded cards, Crew Cloud mascot, white capsule captions; no screen recording"
+    },
+    "captions": {
+      "status": "render_pass_text_sync_not_verified",
+      "timing_basis": "Measured silencedetect pauses in the generated WAV",
+      "caption_text_matches_requested_script": true,
+      "manual_listen_and_word_alignment": "not_verified"
+    },
+    "mp4": {
+      "status": "pass",
+      "video_codec": "H.264",
+      "audio_codec": "AAC",
+      "pixel_format": "yuv420p",
+      "dimensions": "1080x1920",
+      "fps": 30,
+      "duration_seconds": 30.507,
+      "size_bytes": 1541132,
+      "sha256": "85e2396b3171aabd267c35b31fd9cb655a185fd6bc808bc3a942f0804a106013",
+      "full_decode": "pass"
+    },
+    "frame_review": {
+      "status": "pass",
+      "sample_seconds": [
+        0.8,
+        7,
+        15,
+        29.5
+      ],
+      "notes": "Checked opening hook, mid-story scene, final scene, readability, mascot, Crew Light palette and caption pill."
+    },
+    "motion": {
+      "status": "pass",
+      "notes": "Ken Burns pan/zoom is active across each scene with short fades between cards; scene durations are at most 7.64 seconds but camera motion continues."
+    },
+    "publish_gate": {
+      "status": "blocked",
+      "status_value": "draft_handoff_only",
+      "publish_permitted": false,
+      "reason": "No audio-capable listening or transcription tool is available in this runtime; exact spoken pronunciation and word-for-word caption match need human listening."
+    }
+  },
+  "source": {
+    "publisher": "Google Research",
+    "published_date": "2026-11-04",
+    "url": "https://research.google/blog/agile-deliberation-how-ai-helps-humans-define-the-gray-areas/"
+  }
+}
