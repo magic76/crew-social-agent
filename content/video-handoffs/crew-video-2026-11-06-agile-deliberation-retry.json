@@ -41,8 +41,7 @@
     "playback_rate": 1,
     "lead_in_seconds": 0,
     "pitch_preserved": true,
-    "captions": "13 burned Traditional Chinese cues; cue positions follow measured speech pauses. Manual listening and word-for-word audio QA remain unverified.",
-    "source_wav_repo_path": "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-agile-deliberation-retry-20261106-01"
+    "captions": "13 burned Traditional Chinese cues; cue positions follow measured speech pauses. Manual listening and word-for-word audio QA remain unverified."
   },
   "posts": {
     "facebook": {
@@ -64,5 +63,5 @@
       "requestId": "6f35668f-a8bb-43cf-a2df-f55c538f643c"
     }
   },
-  "local_agent_note": "僅供審稿；目前 publish_permitted=false。發佈前須完成實際聽音與逐字字幕核對，取得本篇影片授權，設定有效未過期排程，並確認 SOCIAL_AGENT_MODE=live 與平台憑證。"
+  "local_agent_note": "僅供審稿；目前 publish_permitted=false。發佈前須完成實際聽音與逐字字幕核對、取得本篇影片授權並設定有效未過期排程；此外，現行 local-publisher/video.js 尚未派送 first_replies，需先更新影片 Publisher 以確保來源回覆能發布，並確認 SOCIAL_AGENT_MODE=live 與平台憑證。"
 }

@@ -60,7 +60,11 @@
       "status": "blocked",
       "status_value": "draft_handoff_only",
       "publish_permitted": false,
-      "reason": "No audio-capable listening or transcription tool is available in this runtime; exact spoken pronunciation and word-for-word caption match need human listening."
+      "reason": "Manual listening and exact caption check remain incomplete; additionally, the current local video publisher does not dispatch first_replies for source URLs."
+    },
+    "local_publisher": {
+      "status": "blocked_first_reply_support",
+      "notes": "The current local-publisher/video.js sends the video post but does not dispatch first_replies. The source reply cannot be guaranteed until that publisher path is updated."
     }
   },
   "source": {
