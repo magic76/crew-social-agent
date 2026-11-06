@@ -167,7 +167,8 @@
       var meta = el('div','meta');
       var st = statusLabel(item);
       var status = el('span','badge ' + st[1],st[0]); meta.appendChild(status);
-      if (item.schedule && item.schedule.time) meta.appendChild(el('span','','排程 ' + item.schedule.time));
+      var scheduledAt=[item.scheduleDate,item.scheduleTime].filter(Boolean).join(' ');
+      if (scheduledAt) meta.appendChild(el('span','','排程 ' + scheduledAt));
       (item.networks || []).forEach(function(n){ meta.appendChild(el('span','badge',n === 'facebook' ? 'Facebook' : (n === 'threads' ? 'Threads' : n))); });
       left.appendChild(meta);
       left.appendChild(el('h3','',item.title || item.id || '未命名貼文'));
