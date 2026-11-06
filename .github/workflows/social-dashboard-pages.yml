@@ -1,0 +1,51 @@
+name: Deploy social content dashboard
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/queue/**'
+      - 'content/video-handoffs/**'
+      - 'content/reports/**'
+      - 'content/research/**'
+      - 'social-dashboard/**'
+      - 'scripts/build-social-dashboard.mjs'
+      - '.github/workflows/social-dashboard-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: Build dashboard
+        run: node scripts/build-social-dashboard.mjs
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
