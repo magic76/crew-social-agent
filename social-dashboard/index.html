@@ -59,6 +59,10 @@
     details.reply{border-top:1px solid var(--line);padding:0 12px 11px}
     details.reply summary{padding-top:10px;color:#726b60;font-size:12px;cursor:pointer}
     .reply-text{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;color:#615b52;margin:8px 0 1px}
+    .expandable-text.collapsed{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:10;line-clamp:10;overflow:hidden}
+    .expandable-text.expanded{display:block;-webkit-line-clamp:unset;line-clamp:unset;max-height:none;overflow:visible}
+    .expandable-toggle{display:block;margin:5px 10px 10px auto;padding:5px 8px;border:0;border-radius:7px;background:#fff4df;color:#895800;font-size:12px;font-weight:700}
+    .expandable-toggle:hover{background:#ffebc3}
     .sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
     .source-link{color:#85601e;font-size:12px;text-decoration:none;border:1px solid #f0e5d0;background:#fffbf3;border-radius:999px;padding:5px 10px}
     .empty{border:1px dashed #d9d3c8;border-radius:15px;padding:32px 20px;text-align:center;color:var(--muted);background:rgba(255,255,255,.46)}
@@ -112,6 +116,7 @@
     var data = null;
     var activeTab = 'today';
     var selectedDate = 'all';
+    var expandableBlocks = [];
     var today = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
     var root = document.getElementById('content');
     function el(tag, className, text) {
@@ -119,6 +124,29 @@
       if (className) node.className = className;
       if (text !== undefined && text !== null) node.textContent = text;
       return node;
+    }
+    function expandableText(node) {
+      var wrapper=el('div','expandable-block');
+      var button=el('button','expandable-toggle','Load more');
+      node.classList.add('expandable-text','collapsed');
+      button.type='button'; button.hidden=true; button.setAttribute('aria-expanded','false');
+      button.addEventListener('click',function(){
+        var expanded=node.classList.toggle('expanded');
+        node.classList.toggle('collapsed',!expanded);
+        button.textContent=expanded?'Show less':'Load more';
+        button.setAttribute('aria-expanded',String(expanded));
+      });
+      wrapper.appendChild(node); wrapper.appendChild(button);
+      expandableBlocks.push({node:node,button:button});
+      return wrapper;
+    }
+    function updateExpandableBlocks() {
+      expandableBlocks.forEach(function(block){
+        var wasExpanded=block.node.classList.contains('expanded');
+        block.node.classList.remove('expanded'); block.node.classList.add('collapsed');
+        block.button.hidden=block.node.scrollHeight<=block.node.clientHeight+1;
+        if(wasExpanded){block.node.classList.remove('collapsed');block.node.classList.add('expanded');}
+      });
     }
     function safeUrl(value) {
       try { var url = new URL(value); return url.protocol === 'https:' ? url.href : ''; } catch (error) { return ''; }
@@ -151,11 +179,12 @@
         navigator.clipboard.writeText(text || '').then(function() { copy.textContent = '已複製'; setTimeout(function(){copy.textContent='複製文案'},1400); }).catch(function(){ copy.textContent='複製失敗'; });
       });
       head.appendChild(copy); box.appendChild(head);
-      box.appendChild(el('p','post-text',text || '（此平台尚無文案）'));
+      box.appendChild(expandableText(el('p','post-text',text || '（此平台尚無文案）')));
       if (reply) {
         var details = el('details','reply');
         details.appendChild(el('summary','', '首則留言 / 參考來源'));
-        details.appendChild(el('p','reply-text',reply));
+        details.appendChild(expandableText(el('p','reply-text',reply)));
+        details.addEventListener('toggle',function(){requestAnimationFrame(updateExpandableBlocks);});
         box.appendChild(details);
       }
       return box;
@@ -218,7 +247,7 @@
       header.appendChild(left);
       var file=link('開啟原始紀錄 ↗',item.fileUrl,'repo-link'); if(file) header.appendChild(file);
       card.appendChild(header);
-      card.appendChild(el('pre','report-body',item.body || ''));
+      card.appendChild(expandableText(el('pre','report-body',item.body || '')));
       return card;
     }
     function noItems(text) { root.replaceChildren(el('div','empty',text)); }
@@ -263,6 +292,7 @@
       root.replaceChildren(); var list=el('div','report-list'); items.forEach(function(item){list.appendChild(reportCard(item));}); root.appendChild(list);
     }
     function render() {
+      expandableBlocks=[];
       document.querySelectorAll('.tab').forEach(function(button){button.classList.toggle('active',button.dataset.tab===activeTab);});
       document.getElementById('date-filter').style.display=activeTab==='today'?'none':'';
       document.getElementById('status-filter').style.display=activeTab==='posts'?'':'none';
@@ -270,6 +300,7 @@
       if(activeTab==='posts') renderPosts();
       if(activeTab==='videos') renderVideos();
       if(activeTab==='reports') renderReports();
+      requestAnimationFrame(updateExpandableBlocks);
     }
     function load() {
       fetch('./data.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('Could not load dashboard data');return r.json();}).then(function(value){
@@ -296,6 +327,7 @@
     document.getElementById('search').addEventListener('input',render);
     document.getElementById('date-filter').addEventListener('change',function(){selectedDate=this.value;render();});
     document.getElementById('status-filter').addEventListener('change',render);
+    window.addEventListener('resize',function(){requestAnimationFrame(updateExpandableBlocks);});
     load();
   </script>
 </body>
