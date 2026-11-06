@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>Crew Lab SI｜社群內容看板</title>
+  <style>
+    :root{color-scheme:light;--ink:#24211d;--muted:#77736c;--line:#e9e5dd;--paper:#fff;--bg:#f5f3ee;--orange:#ff9a00;--green:#287557;--shadow:0 12px 32px rgba(37,31,21,.06)}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",sans-serif;line-height:1.55}
+    button,input,select{font:inherit}
+    button{cursor:pointer}
+    .wrap{max-width:1120px;margin:0 auto;padding:34px 24px 72px}
+    .brand{display:flex;align-items:center;gap:10px;color:#716c63;font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase}
+    .brand-mark{width:12px;height:12px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 5px rgba(255,154,0,.13)}
+    .hero{padding:22px 0 25px}
+    .hero-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
+    h1{font-size:clamp(34px,6vw,52px);letter-spacing:-.045em;line-height:1.12;margin:14px 0 8px}
+    .intro{margin:0;color:var(--muted);font-size:16px}
+    .updated{display:flex;align-items:center;gap:8px;color:#666159;font-size:12px;white-space:nowrap;padding-bottom:7px}
+    .pulse{width:8px;height:8px;background:#44a277;border-radius:50%;box-shadow:0 0 0 4px rgba(68,162,119,.12)}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:24px}
+    .stat{background:rgba(255,255,255,.68);border:1px solid var(--line);border-radius:15px;padding:15px 17px}
+    .stat strong{display:block;font-size:23px;letter-spacing:-.03em}
+    .stat span{font-size:12px;color:var(--muted)}
+    .tabs{display:flex;gap:6px;border-bottom:1px solid var(--line);margin-top:24px;overflow-x:auto}
+    .tab{border:0;background:transparent;color:var(--muted);padding:13px 15px 12px;border-bottom:2px solid transparent;white-space:nowrap;font-weight:650}
+    .tab.active{color:var(--ink);border-bottom-color:var(--orange)}
+    .toolbar{display:flex;gap:10px;align-items:center;margin:18px 0 15px}
+    .search{flex:1;min-width:170px;position:relative}
+    .search input,.toolbar select{height:43px;border:1px solid var(--line);border-radius:11px;background:#fff;color:var(--ink);padding:0 13px;outline:none}
+    .search input{width:100%;padding-left:38px}
+    .search input:focus,.toolbar select:focus{border-color:#d5a959;box-shadow:0 0 0 3px rgba(255,154,0,.12)}
+    .search-icon{position:absolute;left:13px;top:10px;color:#8c867c}
+    .notice{display:flex;align-items:flex-start;gap:10px;border:1px solid #f0dfbf;background:#fff9ed;color:#776343;border-radius:12px;padding:12px 15px;font-size:13px;margin:0 0 17px}
+    .notice b{color:#59441f}
+    .day-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:26px 2px 13px}
+    .day-head h2{font-size:17px;margin:0;letter-spacing:-.015em}
+    .day-head span{font-size:12px;color:var(--muted)}
+    .cards{display:grid;gap:15px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow);overflow:hidden}
+    .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:18px 20px 0}
+    .meta{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:var(--muted);font-size:12px}
+    .badge{display:inline-flex;align-items:center;border-radius:999px;padding:4px 9px;background:#f3f1ed;color:#655f55;font-size:11px;font-weight:700}
+    .badge.ready{background:#e9f5ee;color:#236b4d}
+    .badge.draft{background:#fff2d9;color:#8b5c09}
+    .card h3{font-size:19px;line-height:1.38;letter-spacing:-.02em;margin:10px 0 0}
+    .repo-link{color:#817b70;text-decoration:none;font-size:12px;white-space:nowrap}
+    .repo-link:hover,.source-link:hover{color:#a46700;text-decoration:underline}
+    .card-inner{padding:16px 20px 20px}
+    .image{display:block;width:100%;max-height:390px;object-fit:cover;border:1px solid var(--line);border-radius:12px;background:#f3f1ed;margin:0 0 15px}
+    .platforms{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .platform{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff}
+    .platform-head{display:flex;justify-content:space-between;align-items:center;padding:9px 12px;background:#faf9f6;border-bottom:1px solid var(--line);font-size:12px;font-weight:750}
+    .copy{border:1px solid var(--line);border-radius:7px;background:white;color:#575147;padding:4px 8px;font-size:11px}
+    .copy:hover{border-color:#d6b16d;background:#fffaf0}
+    .post-text{padding:12px;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.7}
+    details.reply{border-top:1px solid var(--line);padding:0 12px 11px}
+    details.reply summary{padding-top:10px;color:#726b60;font-size:12px;cursor:pointer}
+    .reply-text{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;color:#615b52;margin:8px 0 1px}
+    .sources{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .source-link{color:#85601e;font-size:12px;text-decoration:none;border:1px solid #f0e5d0;background:#fffbf3;border-radius:999px;padding:5px 10px}
+    .empty{border:1px dashed #d9d3c8;border-radius:15px;padding:32px 20px;text-align:center;color:var(--muted);background:rgba(255,255,255,.46)}
+    .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .video-card video{display:block;width:100%;max-height:520px;background:#191919;object-fit:contain}
+    .video-card .card-top{padding-bottom:12px}
+    .video-info{padding:0 20px 17px;color:var(--muted);font-size:12px;display:flex;gap:8px;flex-wrap:wrap}
+    .video-info .badge{font-weight:600}
+    .report-list{display:grid;gap:15px}
+    .report-card{padding:19px 20px}
+    .report-title{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}
+    .report-title h3{font-size:18px;margin:0}
+    .report-body{margin:15px 0 0;padding:15px 16px;border-radius:12px;background:#faf9f6;border:1px solid #eeebe5;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.75 ui-monospace,SFMono-Regular,Menlo,monospace;color:#49453f;max-height:650px;overflow:auto}
+    footer{margin-top:32px;color:#8b867d;font-size:12px;text-align:center}
+    @media(max-width:720px){.wrap{padding:24px 15px 56px}.hero-row{display:block}.updated{padding:12px 0 0}.stats{grid-template-columns:repeat(2,1fr);gap:9px}.stat{padding:12px 14px}.toolbar{flex-wrap:wrap}.search{flex-basis:100%}.toolbar select{flex:1;min-width:130px}.platforms,.video-grid{grid-template-columns:1fr}.card-top{padding:16px 15px 0}.card-inner{padding:14px 15px 16px}.card h3{font-size:17px}.repo-link{font-size:11px}.video-card .card-top{padding:16px 15px 10px}.video-info{padding:0 15px 15px}.report-card{padding:16px 15px}.report-title{display:block}.report-title .repo-link{display:inline-block;margin-top:8px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="brand"><span class="brand-mark"></span><span>Crew Lab SI · Social Studio</span></div>
+    <section class="hero">
+      <div class="hero-row">
+        <div><h1>社群內容看板</h1><p class="intro">今天要發什麼、過去整理了什麼，都在這裡。</p></div>
+        <div class="updated"><span class="pulse"></span><span id="updated">正在讀取 GitHub 資料…</span></div>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong id="stat-today">—</strong><span>今日排程</span></div>
+        <div class="stat"><strong id="stat-posts">—</strong><span>貼文紀錄</span></div>
+        <div class="stat"><strong id="stat-videos">—</strong><span>影片紀錄</span></div>
+        <div class="stat"><strong id="stat-reports">—</strong><span>研究與工作摘要</span></div>
+      </div>
+    </section>
+    <nav class="tabs" aria-label="內容分類">
+      <button class="tab active" data-tab="today">今日排程</button>
+      <button class="tab" data-tab="posts">全部貼文</button>
+      <button class="tab" data-tab="videos">影片紀錄</button>
+      <button class="tab" data-tab="reports">研究與摘要</button>
+    </nav>
+    <div class="toolbar">
+      <label class="search"><span class="search-icon">⌕</span><input id="search" type="search" placeholder="搜尋標題或貼文內容" aria-label="搜尋"></label>
+      <select id="date-filter" aria-label="日期篩選"><option value="all">全部日期</option></select>
+      <select id="status-filter" aria-label="狀態篩選">
+        <option value="all">全部狀態</option><option value="ready">可交接</option><option value="draft">草稿</option>
+      </select>
+    </div>
+    <div class="notice"><span>ℹ</span><div><b>唯讀預覽。</b>這裡顯示 GitHub Queue 的排程與交接狀態，不會發文；本地發布器的實際發布結果不會同步到這個頁面。</div></div>
+    <section id="content" aria-live="polite"><div class="empty">正在載入內容…</div></section>
+    <footer>資料來源：crew-social-agent 的 GitHub Queue、影片交接與研究紀錄 · main 更新後自動部署</footer>
+  </main>
+  <script>
+    var data = null;
+    var activeTab = 'today';
+    var selectedDate = 'all';
+    var today = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Taipei',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+    var root = document.getElementById('content');
+    function el(tag, className, text) {
+      var node = document.createElement(tag);
+      if (className) node.className = className;
+      if (text !== undefined && text !== null) node.textContent = text;
+      return node;
+    }
+    function safeUrl(value) {
+      try { var url = new URL(value); return url.protocol === 'https:' ? url.href : ''; } catch (error) { return ''; }
+    }
+    function link(label, href, className) {
+      var url = safeUrl(href);
+      if (!url) return null;
+      var node = el('a', className || 'source-link', label);
+      node.href = url; node.target = '_blank'; node.rel = 'noopener noreferrer';
+      return node;
+    }
+    function statusLabel(post) {
+      if (post.status === 'ready_for_local_agent') return ['可交接本地 Agent','ready'];
+      if (post.status === 'draft_handoff_only') return ['草稿，待確認','draft'];
+      return [post.status || 'Queue 紀錄',''];
+    }
+    function sourceNodes(item, parent) {
+      (item.sources || []).forEach(function(source) {
+        var a = link(source.publisher || source.title || '參考來源', source.url, 'source-link');
+        if (a) parent.appendChild(a);
+      });
+    }
+    function platformCard(label, text, reply) {
+      var box = el('section','platform');
+      var head = el('div','platform-head');
+      head.appendChild(el('span','',label));
+      var copy = el('button','copy','複製文案');
+      copy.type = 'button';
+      copy.addEventListener('click', function() {
+        navigator.clipboard.writeText(text || '').then(function() { copy.textContent = '已複製'; setTimeout(function(){copy.textContent='複製文案'},1400); }).catch(function(){ copy.textContent='複製失敗'; });
+      });
+      head.appendChild(copy); box.appendChild(head);
+      box.appendChild(el('p','post-text',text || '（此平台尚無文案）'));
+      if (reply) {
+        var details = el('details','reply');
+        details.appendChild(el('summary','', '首則留言 / 參考來源'));
+        details.appendChild(el('p','reply-text',reply));
+        box.appendChild(details);
+      }
+      return box;
+    }
+    function postCard(item) {
+      var card = el('article','card');
+      var top = el('div','card-top');
+      var left = el('div','');
+      var meta = el('div','meta');
+      var st = statusLabel(item);
+      var status = el('span','badge ' + st[1],st[0]); meta.appendChild(status);
+      if (item.schedule && item.schedule.time) meta.appendChild(el('span','','排程 ' + item.schedule.time));
+      (item.networks || []).forEach(function(n){ meta.appendChild(el('span','badge',n === 'facebook' ? 'Facebook' : (n === 'threads' ? 'Threads' : n))); });
+      left.appendChild(meta);
+      left.appendChild(el('h3','',item.title || item.id || '未命名貼文'));
+      top.appendChild(left);
+      var fileLink = link('開啟 Queue ↗',item.fileUrl,'repo-link'); if(fileLink) top.appendChild(fileLink);
+      card.appendChild(top);
+      var inner = el('div','card-inner');
+      if (item.imageUrl) {
+        var img = el('img','image'); img.src = safeUrl(item.imageUrl); img.alt = item.imageAlt || item.title || '貼文圖片'; img.loading = 'lazy'; inner.appendChild(img);
+      }
+      var platforms = el('div','platforms');
+      platforms.appendChild(platformCard('Facebook',item.facebookText,item.facebookReply));
+      platforms.appendChild(platformCard('Threads',item.threadsText,item.threadsReply));
+      inner.appendChild(platforms);
+      if (item.sources && item.sources.length) { var sources=el('div','sources'); sourceNodes(item,sources); inner.appendChild(sources); }
+      card.appendChild(inner);
+      return card;
+    }
+    function videoCard(item) {
+      var card = el('article','card video-card');
+      var top = el('div','card-top'), left=el('div','');
+      var meta=el('div','meta'), st=item.publishPermitted ? ['發布旗標已開','ready'] : ['尚未授權發布','draft'];
+      meta.appendChild(el('span','badge '+st[1],st[0]));
+      if(item.schedule && item.schedule.time) meta.appendChild(el('span','','排程 '+item.schedule.time));
+      left.appendChild(meta); left.appendChild(el('h3','',item.title || item.id));
+      top.appendChild(left);
+      var source=link('開啟交接 ↗',item.fileUrl,'repo-link'); if(source) top.appendChild(source);
+      card.appendChild(top);
+      if(item.videoUrl) { var v=el('video',''); v.controls=true; v.preload='metadata'; v.playsInline=true; v.src=safeUrl(item.videoUrl); card.appendChild(v); }
+      var info=el('div','video-info');
+      info.appendChild(el('span','badge',item.status || '影片交接'));
+      if(item.duration) info.appendChild(el('span','badge',item.duration+' 秒'));
+      if(item.source && item.source.publisher) info.appendChild(el('span','badge','來源：'+item.source.publisher));
+      card.appendChild(info);
+      if(item.facebookText || item.threadsText) {
+        var inner=el('div','card-inner'), platforms=el('div','platforms');
+        platforms.appendChild(platformCard('Facebook',item.facebookText,item.facebookReply));
+        platforms.appendChild(platformCard('Threads',item.threadsText,item.threadsReply));
+        inner.appendChild(platforms); card.appendChild(inner);
+      }
+      return card;
+    }
+    function reportCard(item) {
+      var card=el('article','card report-card'), header=el('div','report-title'), left=el('div','');
+      left.appendChild(el('div','meta',item.date || ''));
+      left.appendChild(el('h3','',item.title || item.file));
+      header.appendChild(left);
+      var file=link('開啟原始紀錄 ↗',item.fileUrl,'repo-link'); if(file) header.appendChild(file);
+      card.appendChild(header);
+      card.appendChild(el('pre','report-body',item.body || ''));
+      return card;
+    }
+    function noItems(text) { root.replaceChildren(el('div','empty',text)); }
+    function renderToday() {
+      var items=data.posts.filter(function(item){return item.scheduleDate === today;});
+      items=items.filter(function(item){return matchesSearch(item);}).sort(function(a,b){return (a.scheduleTime||'').localeCompare(b.scheduleTime||'');});
+      if (!items.length) { noItems('今天（台北時間 '+today+'）目前沒有貼文排程。'); return; }
+      root.replaceChildren();
+      var head=el('div','day-head'); head.appendChild(el('h2','', '今天要發布')); head.appendChild(el('span','',items.length+' 篇 · Asia/Taipei')); root.appendChild(head);
+      var cards=el('div','cards'); items.forEach(function(item){cards.appendChild(postCard(item));}); root.appendChild(cards);
+    }
+    function matchesSearch(item) {
+      var q=document.getElementById('search').value.trim().toLocaleLowerCase();
+      if(!q) return true;
+      return [item.title,item.facebookText,item.threadsText,item.status].join(' ').toLocaleLowerCase().includes(q);
+    }
+    function renderPosts() {
+      var items=data.posts.filter(matchesSearch);
+      if(selectedDate !== 'all') items=items.filter(function(x){return x.scheduleDate===selectedDate || x.createdDate===selectedDate;});
+      var status=document.getElementById('status-filter').value;
+      if(status==='ready') items=items.filter(function(x){return x.status==='ready_for_local_agent';});
+      if(status==='draft') items=items.filter(function(x){return x.status!=='ready_for_local_agent';});
+      items.sort(function(a,b){return ((b.scheduleDate||b.createdDate||'')+(b.scheduleTime||'')).localeCompare((a.scheduleDate||a.createdDate||'')+(a.scheduleTime||''));});
+      if(!items.length){noItems('沒有符合條件的貼文紀錄。');return;}
+      root.replaceChildren();
+      var cards=el('div','cards'); items.forEach(function(item){cards.appendChild(postCard(item));}); root.appendChild(cards);
+    }
+    function renderVideos() {
+      var q=document.getElementById('search').value.trim().toLocaleLowerCase();
+      var items=data.videos.filter(function(item){
+        var text=[item.title,item.status,item.facebookText,item.threadsText].join(' ').toLocaleLowerCase();
+        return (!q || text.includes(q)) && (selectedDate==='all' || item.date===selectedDate);
+      }).sort(function(a,b){return (b.date||'').localeCompare(a.date||'');});
+      if(!items.length){noItems('沒有符合條件的影片紀錄。');return;}
+      root.replaceChildren(); var grid=el('div','video-grid'); items.forEach(function(item){grid.appendChild(videoCard(item));}); root.appendChild(grid);
+    }
+    function renderReports() {
+      var q=document.getElementById('search').value.trim().toLocaleLowerCase();
+      var items=data.reports.filter(function(item){return (!q || (item.title+' '+item.body).toLocaleLowerCase().includes(q)) && (selectedDate==='all' || item.date===selectedDate);})
+        .sort(function(a,b){return (b.date||'').localeCompare(a.date||'');});
+      if(!items.length){noItems('沒有符合條件的研究或摘要紀錄。');return;}
+      root.replaceChildren(); var list=el('div','report-list'); items.forEach(function(item){list.appendChild(reportCard(item));}); root.appendChild(list);
+    }
+    function render() {
+      document.querySelectorAll('.tab').forEach(function(button){button.classList.toggle('active',button.dataset.tab===activeTab);});
+      document.getElementById('date-filter').style.display=activeTab==='today'?'none':'';
+      document.getElementById('status-filter').style.display=activeTab==='posts'?'':'none';
+      if(activeTab==='today') renderToday();
+      if(activeTab==='posts') renderPosts();
+      if(activeTab==='videos') renderVideos();
+      if(activeTab==='reports') renderReports();
+    }
+    function load() {
+      fetch('./data.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('Could not load dashboard data');return r.json();}).then(function(value){
+        data=value;
+        var allDates=[].concat(data.posts.map(function(x){return x.scheduleDate||x.createdDate;}),data.videos.map(function(x){return x.date;}),data.reports.map(function(x){return x.date;})).filter(Boolean);
+        var unique=Array.from(new Set(allDates)).sort().reverse();
+        var select=document.getElementById('date-filter');
+        unique.forEach(function(date){var option=el('option','',date);option.value=date;select.appendChild(option);});
+        document.getElementById('stat-today').textContent=data.posts.filter(function(x){return x.scheduleDate===today;}).length;
+        document.getElementById('stat-posts').textContent=data.posts.length;
+        document.getElementById('stat-videos').textContent=data.videos.length;
+        document.getElementById('stat-reports').textContent=data.reports.length;
+        var built=data.generatedAt ? new Date(data.generatedAt).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}) : '已同步';
+        document.getElementById('updated').textContent='main 更新 · '+built;
+        render();
+      }).catch(function(){noItems('GitHub Pages 的內容資料還沒載入，請稍後重新整理。');});
+    }
+    document.querySelectorAll('.tab').forEach(function(button){button.addEventListener('click',function(){
+      activeTab=button.dataset.tab;
+      if(activeTab!=='today' && selectedDate==='today') selectedDate='all';
+      document.getElementById('date-filter').value=selectedDate;
+      render();
+    });});
+    document.getElementById('search').addEventListener('input',render);
+    document.getElementById('date-filter').addEventListener('change',function(){selectedDate=this.value;render();});
+    document.getElementById('status-filter').addEventListener('change',render);
+    load();
+  </script>
+</body>
+</html>
