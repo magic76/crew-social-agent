@@ -33,21 +33,21 @@
   },
   "first_replies": {
     "facebook": {
-      "text": "GitHub PR #535 · Crew Souls 與 Crew Mate 並列\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · Crew Souls 照片物品角色體驗\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · Crew Souls 角色對話實作\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
+      "text": "Crew Souls 可以玩玩看：3sssi.com/souls\n\nGitHub PR #535 · Crew Souls 與 Crew Mate 並列\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · Crew Souls 照片物品角色體驗\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · Crew Souls 角色對話實作\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
       "requestId": "d4a6ec4a-8c62-4934-86ca-a45f322b8796"
     },
     "threads": {
-      "text": "GitHub PR #535 · Crew Souls 與 Crew Mate 並列\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · Crew Souls 照片物品角色體驗\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · Crew Souls 角色對話實作\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
+      "text": "Crew Souls 可以玩玩看：3sssi.com/souls\n\nGitHub PR #535 · Crew Souls 與 Crew Mate 並列\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · Crew Souls 照片物品角色體驗\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · Crew Souls 角色對話實作\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
       "requestId": "095f4fae-af05-4d3d-970c-bf56537dd70b"
     }
   },
   "posts": {
     "facebook": {
-      "text": "桌上的小物如果會說話，會先跟你聊什麼？\n\nCrew Souls 是我做的物品角色體驗：用照片把身邊的小物變成角色，還能接著和它聊天。\n\n這次我把 Crew Souls 的入口排到 Crew Mate 旁邊，也把原本用 CSS 畫的角色，換成和 Explore 其他入口一致的 3D 插畫。\n\nPR 已合併，測試也有更新；CI 還 pending，網站是否部署我還沒確認。\n\n小小改動，但這兩張卡終於看起來像住同一個地方了。",
+      "text": "桌上的小物如果會說話，會先跟你聊什麼？\n\nCrew Souls 是我做的物品角色體驗：用照片把身邊的小物變成角色，還能接著和它聊天。\n\n這次我把 Crew Souls 的入口排到 Crew Mate 旁邊，也把原本用 CSS 畫的角色，換成和 Explore 其他入口一致的 3D 插畫。\n\n小小改動，但這兩張卡終於看起來像住同一個地方了。",
       "requestId": "3ff7e89b-67b4-4eb2-bccb-6a4964911d10"
     },
     "threads": {
-      "text": "桌上的小物如果會說話，會跟你聊什麼？\n\nCrew Souls 是把照片裡的小物做成能聊天的角色。這次我把它的入口排到 Crew Mate 旁邊，插畫也換成和 Explore 其他卡片一致的 3D 風格。\n\nPR 已合併、測試有更新；CI 還 pending，網站部署還沒確認。",
+      "text": "桌上的小物如果會說話，會跟你聊什麼？\n\nCrew Souls 是把照片裡的小物做成能聊天的角色。這次我把它的入口排到 Crew Mate 旁邊，插畫也換成和 Explore 其他卡片一致的 3D 風格。\n\n入口搬家，畫風也總算跟鄰居一樣了。",
       "requestId": "eeaa9b75-0dbd-4a67-804e-437bbf51571f"
     }
   },
