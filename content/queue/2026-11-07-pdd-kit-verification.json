@@ -4,8 +4,8 @@
   "created_date": "2026-11-07",
   "title": "先寫清楚規格，才知道 Agent 程式驗什麼",
   "category": "ai-research",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-07",
     "time": "21:00",
@@ -52,7 +52,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "這是今天新整理、尚未逐篇核准的草稿；先保留 draft/dry_run，不交給 Publisher 發布。"
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-07 指示今日貼文可發布；排程 21:00（Asia/Taipei），由 Local Publisher 執行。"
   }
 }
