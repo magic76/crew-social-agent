@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261107-agent-memory-discipline",
+  "created_date": "2026-11-07",
+  "title": "Agent 整理記憶，整理到忘了做任務",
+  "category": "ai-research",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-07",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "png",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-07-agent-memory-discipline.png.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "02ccf9f1cf8556f9f5145ad77d0b8f5a0fcd460bf9934089ff6201a004d762b4",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-07-agent-memory-discipline.png",
+    "alt": "原創 3D 概念插畫：小機器人站在大量記憶資料夾之間，前方的小型冒險路徑仍空著；象徵記憶維護可能佔用任務時間，不是實際遊戲畫面。"
+  },
+  "source": {
+    "publisher": "Anthropic｜The components of agent memory",
+    "published_date": "2026-11-06",
+    "title": "The components of agent memory",
+    "url": "https://www.anthropic.com/research/components-of-agent-memory"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Anthropic｜The components of agent memory\nhttps://www.anthropic.com/research/components-of-agent-memory",
+      "requestId": "99e21496-c8d8-4584-9d9a-015cca82d580"
+    },
+    "threads": {
+      "text": "參考來源：Anthropic｜The components of agent memory\nhttps://www.anthropic.com/research/components-of-agent-memory",
+      "requestId": "36ee2df6-b35f-4a1d-8fab-e1f10adac0a8"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Agent 記憶有時候會忙到忘記眼前要做什麼。Anthropic 的一組 Pokémon 比較裡，Sonnet 3.7 那次累積了 413 個記憶檔、約 97 萬字元；接近一萬步時，花了 17 步整理檔案，期間沒有做遊戲動作。\n\n對照的 Fable 5 那次只有 10 個檔案。不過兩邊都只是一個 run，不能因此說「記憶越少越好」。\n\n我比較想問：這些記憶，下次到底有沒有讓 Agent 做出不同的選擇？",
+      "requestId": "eb59bad5-dcbf-4f97-947b-21fc85456a31"
+    },
+    "threads": {
+      "text": "Anthropic 的 Agent 記憶研究，出現一個有趣的停頓：Sonnet 3.7 那次有 413 個記憶檔；某段花 17 步整理，沒有做遊戲動作。Fable 5 那次是 10 個檔案。\n\n各一個 run，不能當普遍結論。但很像我們該問的問題：記憶下一次有沒有真的改變它的行動？",
+      "requestId": "d30ab1fe-67eb-415a-ac57-23e1619e6417"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "這是今天新整理、尚未逐篇核准的草稿；先保留 draft/dry_run，不交給 Publisher 發布。"
+  }
+}

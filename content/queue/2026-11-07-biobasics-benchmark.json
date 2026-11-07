@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261107-biobasics-benchmark",
+  "created_date": "2026-11-07",
+  "title": "菌落多算約 12%，實驗室 AI 仍要看過程",
+  "category": "ai-research",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-07",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "png",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-07-biobasics-benchmark.png.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "adbba0a853d91e14a107e7474e24642e5aa236bbfc05837ba5b7c11864237186",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-07-biobasics-benchmark.png",
+    "alt": "原創實驗室概念插畫：研究者查看培養皿，一個額外亮點顯示計數可能多算；非真實樣本或研究數據圖。"
+  },
+  "source": {
+    "publisher": "OpenAI｜Measuring how AI agents handle everyday wet-lab science",
+    "published_date": "2026-11-06",
+    "title": "Measuring how AI agents handle everyday wet-lab science",
+    "url": "https://openai.com/index/measuring-how-ai-agents-handle-everyday-wet-lab-science/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：OpenAI｜Measuring how AI agents handle everyday wet-lab science\nhttps://openai.com/index/measuring-how-ai-agents-handle-everyday-wet-lab-science/",
+      "requestId": "54cbbde6-2ec0-4786-9325-1c5fd07e7936"
+    },
+    "threads": {
+      "text": "參考來源：OpenAI｜Measuring how AI agents handle everyday wet-lab science\nhttps://openai.com/index/measuring-how-ai-agents-handle-everyday-wet-lab-science/",
+      "requestId": "0f62c3a0-cf12-4e72-9322-cd612fa2bdcd"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 做實驗時，連「盤子上有幾個點」都不能只看最後答案。OpenAI 的 BioBasicsBench 把 100 種例行濕實驗室任務做成測試，累積 18,500 筆模型結果；其中一個菌落計數例子，輸出大約多算 12%。\n\n這是 OpenAI 自家的基準和單一案例，不代表模型進了真實實驗室就一定會有相同表現。只是提醒我：重要任務除了答案，過程也要能核對。",
+      "requestId": "dd57b3d1-85a5-4715-8bd4-d0201935b950"
+    },
+    "threads": {
+      "text": "OpenAI 的 BioBasicsBench 是一套濕實驗室 AI 基準，涵蓋 100 種例行任務和 18,500 筆模型結果。裡面有個菌落計數例子，輸出大約多算 12%。\n\n這是公司自家的 benchmark，不等於整個真實實驗室。重要任務不能只看答案，過程也得能核對。",
+      "requestId": "316eace8-518c-476d-891c-0565fe26f9d7"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "這是今天新整理、尚未逐篇核准的草稿；先保留 draft/dry_run，不交給 Publisher 發布。"
+  }
+}

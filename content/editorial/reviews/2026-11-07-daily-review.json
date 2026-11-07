@@ -1,0 +1,950 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-07",
+  "review_id": "2026-11-07-daily-editorial-review",
+  "selection_policy": {
+    "minimum_selected": 6,
+    "target_selected": 6,
+    "unit": "distinct_topics_not_platform_copies"
+  },
+  "candidates": [
+    {
+      "id": "candidate-01-crew-souls-explore",
+      "topic": "Crew Souls 搬到 Mate 隔壁",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pr",
+          "type": "github_pull_request",
+          "label": "GitHub · magic76/magic76.github.io｜Crew Souls 放到 Mate 旁的 Explore PR #535",
+          "url": "https://github.com/magic76/magic76.github.io/pull/535",
+          "checked_at": "2026-11-07",
+          "claims": [
+            {
+              "text": "Crew Web 的 Explore 區將 Crew Souls 放到 Crew Mate 旁邊，形成手機上的兩欄相鄰卡片。",
+              "evidence_ids": [
+                "src-pr"
+              ]
+            },
+            {
+              "text": "PR 以原創、在 repo 本地託管的 3:2 柔和 3D WebP 插畫取代 CSS 畫出的 Souls 圖像，並更新卡片順序與圖片相關測試；PR 已合併，但 CI 仍 pending，沒有 live 部署確認。",
+              "evidence_ids": [
+                "src-pr"
+              ]
+            }
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Web 的 Explore 區將 Crew Souls 放到 Crew Mate 旁邊，形成手機上的兩欄相鄰卡片。",
+          "evidence_ids": [
+            "src-pr"
+          ]
+        },
+        {
+          "text": "PR 以原創、在 repo 本地託管的 3:2 柔和 3D WebP 插畫取代 CSS 畫出的 Souls 圖像，並更新卡片順序與圖片相關測試；PR 已合併，但 CI 仍 pending，沒有 live 部署確認。",
+          "evidence_ids": [
+            "src-pr"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 是集合 AI 朋友、探索體驗和語言學習的網站；Explore 區放著 Crew Mate 與 Crew Souls 等入口。",
+      "story_spine": "Crew Souls 要和 Mate 並排 → 原先的 CSS 人物風格不一致 → 改成同風格的本地插畫並更新測試，但 CI 與網站部署仍待確認。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_recent_development",
+        "reason": "這是剛合併的實際手機版 Explore 調整；細節可核對，而且保留 CI 尚待結果、未確認部署的界線。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "逐項 claim 都連到同一筆一手來源；文案把 PR、單次研究或公司基準的範圍寫清楚，沒有宣稱未驗收或已部署。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "Crew Souls 要和 Mate 並排 → 原先的 CSS 人物風格不一致 → 改成同風格的本地插畫並更新測試，但 CI 與網站部署仍待確認。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "這題來自作者正在做的 Crew 產品，或能直接回到 AI agent 的記憶、驗證與可靠性工程。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭以白話交代Crew Web 是集合 AI 朋友、探索體驗和語言學習的網站；Explore 區放著 Crew Mate 與 Crew Souls 等入口。，再進入具體更新、研究例子或限制。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "前三天的題材與開頭已比對；本稿以本題具體反差起筆，未複製固定問句或「某公司發布」句型。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。 Alt text 只描述可見內容並明示不是實際介面或數據。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-04-crew-play",
+          "2026-11-05-daily-editorial-review",
+          "2026-11-06-daily-editorial-review",
+          "Queue posts dated 2026-11-04 through 2026-11-06"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "開頭先交代讀者需要的產品／研究背景，再講今天實際新增或發現；逐一比對近三天選題與開頭，沒有沿用固定新聞週報句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Web 是我做的 AI 朋友、探索和語言學習網站。這次把 Explore 裡的 Crew Souls 放到 Mate 旁邊，手機上兩張入口卡並排；原本用 CSS 畫的角色，也換成同風格、放在 repo 裡的 3D 插畫。\n\nPR 已合併，相關測試也有更新；但 CI 仍 pending，網站有沒有部署我還沒確認。\n\n角色先搬到隔壁，驗收還得等紅綠燈。這次我先不替它宣布入住完成。"
+        },
+        "threads": {
+          "text": "Crew Web 是我的 AI 朋友與探索網站。這次讓 Crew Souls 搬到 Mate 隔壁，手機 Explore 兩張卡並排；原先 CSS 畫的角色改成同風格的本地 3D 插畫。\n\nPR 已合併、測試有更新，但 CI 還 pending，網站部署也未確認。角色搬完家，還得等驗收簽收。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io｜Crew Souls 放到 Mate 旁的 Explore PR #535\nhttps://github.com/magic76/magic76.github.io/pull/535",
+            "requestId": "d4a6ec4a-8c62-4934-86ca-a45f322b8796"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io｜Crew Souls 放到 Mate 旁的 Explore PR #535\nhttps://github.com/magic76/magic76.github.io/pull/535",
+            "requestId": "095f4fae-af05-4d3d-970c-bf56537dd70b"
+          }
+        }
+      },
+      "media": {
+        "type": "original_illustration",
+        "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。",
+        "asset": {
+          "status": "available",
+          "path": "content/queue/assets/2026-11-07-crew-souls-explore.png",
+          "provenance": "ImageGen 原創生成，2026-11-07；概念插畫，不冒充產品截圖或測試結果。"
+        },
+        "alt_text": "奶油色背景的原創 3D 插畫：白雲角色與橘帽夥伴走在藍橘兩條路上，象徵 Explore 裡的兩個入口並列；不是 Crew 網站截圖。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": "本日新稿尚未逐篇核准；明確保留不可發布。",
+        "publish_permitted": false,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-07-crew-souls-explore.json",
+        "schedule": {
+          "date": "2026-11-07",
+          "time": "10:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-02-pocket-api-discovery",
+      "topic": "掃到 API 候選，不等於它真的在跑",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pocket",
+          "type": "github_commit",
+          "label": "GitHub · magic76/crew-pocket｜API discovery and page debugging",
+          "url": "https://github.com/magic76/crew-pocket/commit/71801106526dee05126f1017ebed3d1d6e4d617e",
+          "checked_at": "2026-11-07",
+          "claims": [
+            {
+              "text": "Crew Pocket 瀏覽器擴充功能新增同源 JavaScript 靜態掃描，只列出 API 候選，不確認頁面執行時真的使用它。",
+              "evidence_ids": [
+                "src-pocket"
+              ]
+            },
+            {
+              "text": "新增一次性 15 秒頁面擷取，帶遮罩與大小限制；頁面 EVAL 除錯需明確啟用 5 分鐘，限制為最多 20 次、每次程式 8 KiB、執行 5 秒、結果 32 KiB。",
+              "evidence_ids": [
+                "src-pocket"
+              ]
+            }
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Pocket 瀏覽器擴充功能新增同源 JavaScript 靜態掃描，只列出 API 候選，不確認頁面執行時真的使用它。",
+          "evidence_ids": [
+            "src-pocket"
+          ]
+        },
+        {
+          "text": "新增一次性 15 秒頁面擷取，帶遮罩與大小限制；頁面 EVAL 除錯需明確啟用 5 分鐘，限制為最多 20 次、每次程式 8 KiB、執行 5 秒、結果 32 KiB。",
+          "evidence_ids": [
+            "src-pocket"
+          ]
+        }
+      ],
+      "reader_context": "Crew Pocket 是管理多個 AI 角色的 Android 工作台；瀏覽器擴充功能可以把目前網頁資訊交給手機上的工作台。",
+      "story_spine": "擴充功能多了 API 發現與頁面排錯 → 自動掃描只能找候選，不能證明 runtime 用途 → 短時間、明確啟用並限制次數與資料大小，讓排錯有邊界。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_recent_development",
+        "reason": "把容易被誤讀成「AI 自動看懂網站」的功能，講清楚它只找候選並設有短時限與上限；是很具體的安全工程故事。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "逐項 claim 都連到同一筆一手來源；文案把 PR、單次研究或公司基準的範圍寫清楚，沒有宣稱未驗收或已部署。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "擴充功能多了 API 發現與頁面排錯 → 自動掃描只能找候選，不能證明 runtime 用途 → 短時間、明確啟用並限制次數與資料大小，讓排錯有邊界。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "這題來自作者正在做的 Crew 產品，或能直接回到 AI agent 的記憶、驗證與可靠性工程。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭以白話交代Crew Pocket 是管理多個 AI 角色的 Android 工作台；瀏覽器擴充功能可以把目前網頁資訊交給手機上的工作台。，再進入具體更新、研究例子或限制。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "前三天的題材與開頭已比對；本稿以本題具體反差起筆，未複製固定問句或「某公司發布」句型。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。 Alt text 只描述可見內容並明示不是實際介面或數據。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-04-crew-play",
+          "2026-11-05-daily-editorial-review",
+          "2026-11-06-daily-editorial-review",
+          "Queue posts dated 2026-11-04 through 2026-11-06"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "開頭先交代讀者需要的產品／研究背景，再講今天實際新增或發現；逐一比對近三天選題與開頭，沒有沿用固定新聞週報句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Pocket 是管理多個 AI 角色的 Android 工作台，另外有瀏覽器擴充功能。新版加入 API 發現和頁面除錯工具，但這裡有個容易被講太滿的地方：靜態掃描找到的只是 API 候選，不代表頁面執行時真的用了它。\n\n頁面擷取是一次性的 15 秒操作，會遮罩並限制資料大小。要開頁面除錯，得明確啟用，五分鐘後關閉；最多 20 次、每次程式 8 KiB、跑 5 秒、結果 32 KiB。\n\n嗯……連 debug 都先設鬧鐘。"
+        },
+        "threads": {
+          "text": "Crew Pocket 的瀏覽器擴充功能新增 API 探索，不過掃到的只是候選，未必代表頁面真的使用它。另有一次性 15 秒擷取，會遮罩並限制資料量；頁面除錯要手動開 5 分鐘，最多 20 次、每次 5 秒。\n\n這些是新功能的限制設計；commit 本身不能證明 runtime 測試已通過。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/crew-pocket｜API discovery and page debugging\nhttps://github.com/magic76/crew-pocket/commit/71801106526dee05126f1017ebed3d1d6e4d617e",
+            "requestId": "ea8db69b-9c5a-4762-bf42-967106680418"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/crew-pocket｜API discovery and page debugging\nhttps://github.com/magic76/crew-pocket/commit/71801106526dee05126f1017ebed3d1d6e4d617e",
+            "requestId": "336d29c7-cf86-4593-9dab-50962ef1ed77"
+          }
+        }
+      },
+      "media": {
+        "type": "original_illustration",
+        "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。",
+        "asset": {
+          "status": "available",
+          "path": "content/queue/assets/2026-11-07-pocket-api-discovery.png",
+          "provenance": "ImageGen 原創生成，2026-11-07；概念插畫，不冒充產品截圖或測試結果。"
+        },
+        "alt_text": "原創 3D 概念插畫：探險者用手電筒照亮瀏覽器與手機之間的資料路徑，旁有鎖盾和沙漏；不是實際產品介面。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": "本日新稿尚未逐篇核准；明確保留不可發布。",
+        "publish_permitted": false,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-07-pocket-api-discovery.json",
+        "schedule": {
+          "date": "2026-11-07",
+          "time": "12:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-03-home-discovery-line",
+      "topic": "首頁先把意思說完，再開始打字",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-home",
+          "type": "github_commit",
+          "label": "GitHub · magic76/magic76.github.io｜home discovery line",
+          "url": "https://github.com/magic76/magic76.github.io/commit/600177969c2916f6722256756f5768f92f44ca4d",
+          "checked_at": "2026-11-07",
+          "claims": [
+            {
+              "text": "Crew 首頁新增一行探索提示，完整句子在伺服器輸出的首屏內容中可見，打字效果不負責提供唯一文案。",
+              "evidence_ids": [
+                "src-home"
+              ]
+            },
+            {
+              "text": "打字動畫等頁面閒置且目標可見時才啟動，並保留單一手動主要 CTA；commit 有新增測試檔，但沒有 CI 通過證據。",
+              "evidence_ids": [
+                "src-home"
+              ]
+            }
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew 首頁新增一行探索提示，完整句子在伺服器輸出的首屏內容中可見，打字效果不負責提供唯一文案。",
+          "evidence_ids": [
+            "src-home"
+          ]
+        },
+        {
+          "text": "打字動畫等頁面閒置且目標可見時才啟動，並保留單一手動主要 CTA；commit 有新增測試檔，但沒有 CI 通過證據。",
+          "evidence_ids": [
+            "src-home"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 首頁負責讓第一次造訪的人知道可探索的 AI 朋友、遊戲和學習功能。",
+      "story_spine": "首頁增加探索提示 → 如果等打字動畫結束才理解內容，新訪客得先等 → 先呈現完整句子，再把動畫留作裝飾效果。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_recent_development",
+        "reason": "把第一次進站的資訊理解和動畫效能放在同一個具體改動裡；容易理解，也能清楚交代 commit 有測試檔但無 CI 結果。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "逐項 claim 都連到同一筆一手來源；文案把 PR、單次研究或公司基準的範圍寫清楚，沒有宣稱未驗收或已部署。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "首頁增加探索提示 → 如果等打字動畫結束才理解內容，新訪客得先等 → 先呈現完整句子，再把動畫留作裝飾效果。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "這題來自作者正在做的 Crew 產品，或能直接回到 AI agent 的記憶、驗證與可靠性工程。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭以白話交代Crew Web 首頁負責讓第一次造訪的人知道可探索的 AI 朋友、遊戲和學習功能。，再進入具體更新、研究例子或限制。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "前三天的題材與開頭已比對；本稿以本題具體反差起筆，未複製固定問句或「某公司發布」句型。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。 Alt text 只描述可見內容並明示不是實際介面或數據。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-04-crew-play",
+          "2026-11-05-daily-editorial-review",
+          "2026-11-06-daily-editorial-review",
+          "Queue posts dated 2026-11-04 through 2026-11-06"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "開頭先交代讀者需要的產品／研究背景，再講今天實際新增或發現；逐一比對近三天選題與開頭，沒有沿用固定新聞週報句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Web 首頁是第一次來的人認識 AI 朋友、遊戲和學習功能的入口。這次新增一行探索提示，整句話一開始就已經在頁面裡；打字動畫只是後續效果，不用等它跑完才知道內容。\n\n動畫還會等頁面閒置、提示真的進入畫面才啟動。改動有測試檔，但目前我沒有 CI 通過的證據。\n\n小動畫可以慢慢演，入口的意思要先到。"
+        },
+        "threads": {
+          "text": "Crew Web 首頁這次讓完整探索提示先到，打字動畫晚一點開始。句子一開始就能讀，動畫要等頁面閒置、文字可見時才啟動。\n\ncommit 加了測試檔，CI 結果尚未確認。動效可以晚一點，意思要先到。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io｜home discovery line\nhttps://github.com/magic76/magic76.github.io/commit/600177969c2916f6722256756f5768f92f44ca4d",
+            "requestId": "7384af77-e56e-4ac8-a9a2-f31770dc1640"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io｜home discovery line\nhttps://github.com/magic76/magic76.github.io/commit/600177969c2916f6722256756f5768f92f44ca4d",
+            "requestId": "9205e1c5-bed3-4741-924a-0f58780d5fbf"
+          }
+        }
+      },
+      "media": {
+        "type": "original_illustration",
+        "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。",
+        "asset": {
+          "status": "available",
+          "path": "content/queue/assets/2026-11-07-home-discovery-line.png",
+          "provenance": "ImageGen 原創生成，2026-11-07；概念插畫，不冒充產品截圖或測試結果。"
+        },
+        "alt_text": "原創插畫：訪客走向敞開的門，完整光帶先出現，周圍只有抽象字母光點；象徵內容先可讀、動畫後播放，非實際首頁畫面。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": "本日新稿尚未逐篇核准；明確保留不可發布。",
+        "publish_permitted": false,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-07-home-discovery-line.json",
+        "schedule": {
+          "date": "2026-11-07",
+          "time": "14:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-04-agent-memory-discipline",
+      "topic": "Agent 整理記憶，整理到忘了做任務",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-memory",
+          "type": "primary_research",
+          "label": "Anthropic｜The components of agent memory",
+          "url": "https://www.anthropic.com/research/components-of-agent-memory",
+          "checked_at": "2026-11-07",
+          "claims": [
+            {
+              "text": "Anthropic 的 agent memory 文章描述一組 Pokémon 比較：Sonnet 3.7 某次 run 的記憶資料有 413 個檔案、約 977,930 字元；約第 10,000 步附近花 17 步整理記憶檔，期間沒有遊戲動作。",
+              "evidence_ids": [
+                "src-memory"
+              ]
+            },
+            {
+              "text": "文章對照的 Fable 5 run 有 10 個檔案；比較各一個 run，不能推出檔案越少越好，也不代表所有 Agent 的記憶維護行為。",
+              "evidence_ids": [
+                "src-memory"
+              ]
+            }
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "Anthropic 的 agent memory 文章描述一組 Pokémon 比較：Sonnet 3.7 某次 run 的記憶資料有 413 個檔案、約 977,930 字元；約第 10,000 步附近花 17 步整理記憶檔，期間沒有遊戲動作。",
+          "evidence_ids": [
+            "src-memory"
+          ]
+        },
+        {
+          "text": "文章對照的 Fable 5 run 有 10 個檔案；比較各一個 run，不能推出檔案越少越好，也不代表所有 Agent 的記憶維護行為。",
+          "evidence_ids": [
+            "src-memory"
+          ]
+        }
+      ],
+      "reader_context": "Anthropic 的 agent memory 文章記錄模型如何從對話與經驗寫下可重用記憶，並用遊戲任務觀察維護成本。",
+      "story_spine": "長期記憶想幫 Agent 延續任務 → 記憶檔也可能大到需要花步數整理 → 研究中的一個例子停下來整理 17 步，提醒設計者檢查記憶是否改變下一個任務動作。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "source_backed_reader_payoff",
+        "reason": "單次案例有具體的檔案量與任務中斷，能引出「記住是否真的改變下一步」；文案也明示這不是普遍定律。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "逐項 claim 都連到同一筆一手來源；文案把 PR、單次研究或公司基準的範圍寫清楚，沒有宣稱未驗收或已部署。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "長期記憶想幫 Agent 延續任務 → 記憶檔也可能大到需要花步數整理 → 研究中的一個例子停下來整理 17 步，提醒設計者檢查記憶是否改變下一個任務動作。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "這題來自作者正在做的 Crew 產品，或能直接回到 AI agent 的記憶、驗證與可靠性工程。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭以白話交代Anthropic 的 agent memory 文章記錄模型如何從對話與經驗寫下可重用記憶，並用遊戲任務觀察維護成本。，再進入具體更新、研究例子或限制。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "前三天的題材與開頭已比對；本稿以本題具體反差起筆，未複製固定問句或「某公司發布」句型。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。 Alt text 只描述可見內容並明示不是實際介面或數據。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-04-crew-play",
+          "2026-11-05-daily-editorial-review",
+          "2026-11-06-daily-editorial-review",
+          "Queue posts dated 2026-11-04 through 2026-11-06"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "開頭先交代讀者需要的產品／研究背景，再講今天實際新增或發現；逐一比對近三天選題與開頭，沒有沿用固定新聞週報句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Agent 記憶有時候會忙到忘記眼前要做什麼。Anthropic 的一組 Pokémon 比較裡，Sonnet 3.7 那次累積了 413 個記憶檔、約 97 萬字元；接近一萬步時，花了 17 步整理檔案，期間沒有做遊戲動作。\n\n對照的 Fable 5 那次只有 10 個檔案。不過兩邊都只是一個 run，不能因此說「記憶越少越好」。\n\n我比較想問：這些記憶，下次到底有沒有讓 Agent 做出不同的選擇？"
+        },
+        "threads": {
+          "text": "Anthropic 的 Agent 記憶研究，出現一個有趣的停頓：Sonnet 3.7 那次有 413 個記憶檔；某段花 17 步整理，沒有做遊戲動作。Fable 5 那次是 10 個檔案。\n\n各一個 run，不能當普遍結論。但很像我們該問的問題：記憶下一次有沒有真的改變它的行動？"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Anthropic｜The components of agent memory\nhttps://www.anthropic.com/research/components-of-agent-memory",
+            "requestId": "99e21496-c8d8-4584-9d9a-015cca82d580"
+          },
+          "threads": {
+            "text": "參考來源：Anthropic｜The components of agent memory\nhttps://www.anthropic.com/research/components-of-agent-memory",
+            "requestId": "36ee2df6-b35f-4a1d-8fab-e1f10adac0a8"
+          }
+        }
+      },
+      "media": {
+        "type": "original_illustration",
+        "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。",
+        "asset": {
+          "status": "available",
+          "path": "content/queue/assets/2026-11-07-agent-memory-discipline.png",
+          "provenance": "ImageGen 原創生成，2026-11-07；概念插畫，不冒充產品截圖或測試結果。"
+        },
+        "alt_text": "原創 3D 概念插畫：小機器人站在大量記憶資料夾之間，前方的小型冒險路徑仍空著；象徵記憶維護可能佔用任務時間，不是實際遊戲畫面。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": "本日新稿尚未逐篇核准；明確保留不可發布。",
+        "publish_permitted": false,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-07-agent-memory-discipline.json",
+        "schedule": {
+          "date": "2026-11-07",
+          "time": "16:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-05-biobasics-benchmark",
+      "topic": "菌落多算約 12%，實驗室 AI 仍要看過程",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-biobasics",
+          "type": "primary_source",
+          "label": "OpenAI｜Measuring how AI agents handle everyday wet-lab science",
+          "url": "https://openai.com/index/measuring-how-ai-agents-handle-everyday-wet-lab-science/",
+          "checked_at": "2026-11-07",
+          "claims": [
+            {
+              "text": "OpenAI 的 BioBasicsBench 涵蓋 100 項例行濕實驗室任務，累積 18,500 筆模型結果。",
+              "evidence_ids": [
+                "src-biobasics"
+              ]
+            },
+            {
+              "text": "文章舉出一個菌落計數例子，模型輸出約多算 12%；這是 OpenAI 自家基準中的單一例子，不能代表所有實驗室或所有任務的表現。",
+              "evidence_ids": [
+                "src-biobasics"
+              ]
+            }
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "OpenAI 的 BioBasicsBench 涵蓋 100 項例行濕實驗室任務，累積 18,500 筆模型結果。",
+          "evidence_ids": [
+            "src-biobasics"
+          ]
+        },
+        {
+          "text": "文章舉出一個菌落計數例子，模型輸出約多算 12%；這是 OpenAI 自家基準中的單一例子，不能代表所有實驗室或所有任務的表現。",
+          "evidence_ids": [
+            "src-biobasics"
+          ]
+        }
+      ],
+      "reader_context": "BioBasicsBench 是 OpenAI 為評估 AI agent 日常濕實驗室科學能力而建立的基準測試。",
+      "story_spine": "AI 能協助濕實驗室日常任務 → 一個菌落計數例子仍多算約 12% → 基準分數要搭配可核對的中間步驟，且公司自家測試不能直接等同真實實驗室成果。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "source_backed_reader_payoff",
+        "reason": "一個具體計數偏差比抽象排行榜更容易懂；限制清楚，能提醒讀者實驗任務要看過程證據。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "逐項 claim 都連到同一筆一手來源；文案把 PR、單次研究或公司基準的範圍寫清楚，沒有宣稱未驗收或已部署。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "AI 能協助濕實驗室日常任務 → 一個菌落計數例子仍多算約 12% → 基準分數要搭配可核對的中間步驟，且公司自家測試不能直接等同真實實驗室成果。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "這題來自作者正在做的 Crew 產品，或能直接回到 AI agent 的記憶、驗證與可靠性工程。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭以白話交代BioBasicsBench 是 OpenAI 為評估 AI agent 日常濕實驗室科學能力而建立的基準測試。，再進入具體更新、研究例子或限制。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "前三天的題材與開頭已比對；本稿以本題具體反差起筆，未複製固定問句或「某公司發布」句型。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。 Alt text 只描述可見內容並明示不是實際介面或數據。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-04-crew-play",
+          "2026-11-05-daily-editorial-review",
+          "2026-11-06-daily-editorial-review",
+          "Queue posts dated 2026-11-04 through 2026-11-06"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "開頭先交代讀者需要的產品／研究背景，再講今天實際新增或發現；逐一比對近三天選題與開頭，沒有沿用固定新聞週報句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "AI 做實驗時，連「盤子上有幾個點」都不能只看最後答案。OpenAI 的 BioBasicsBench 把 100 種例行濕實驗室任務做成測試，累積 18,500 筆模型結果；其中一個菌落計數例子，輸出大約多算 12%。\n\n這是 OpenAI 自家的基準和單一案例，不代表模型進了真實實驗室就一定會有相同表現。只是提醒我：重要任務除了答案，過程也要能核對。"
+        },
+        "threads": {
+          "text": "OpenAI 的 BioBasicsBench 是一套濕實驗室 AI 基準，涵蓋 100 種例行任務和 18,500 筆模型結果。裡面有個菌落計數例子，輸出大約多算 12%。\n\n這是公司自家的 benchmark，不等於整個真實實驗室。重要任務不能只看答案，過程也得能核對。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：OpenAI｜Measuring how AI agents handle everyday wet-lab science\nhttps://openai.com/index/measuring-how-ai-agents-handle-everyday-wet-lab-science/",
+            "requestId": "54cbbde6-2ec0-4786-9325-1c5fd07e7936"
+          },
+          "threads": {
+            "text": "參考來源：OpenAI｜Measuring how AI agents handle everyday wet-lab science\nhttps://openai.com/index/measuring-how-ai-agents-handle-everyday-wet-lab-science/",
+            "requestId": "0f62c3a0-cf12-4e72-9322-cd612fa2bdcd"
+          }
+        }
+      },
+      "media": {
+        "type": "original_illustration",
+        "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。",
+        "asset": {
+          "status": "available",
+          "path": "content/queue/assets/2026-11-07-biobasics-benchmark.png",
+          "provenance": "ImageGen 原創生成，2026-11-07；概念插畫，不冒充產品截圖或測試結果。"
+        },
+        "alt_text": "原創實驗室概念插畫：研究者查看培養皿，一個額外亮點顯示計數可能多算；非真實樣本或研究數據圖。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": "本日新稿尚未逐篇核准；明確保留不可發布。",
+        "publish_permitted": false,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-07-biobasics-benchmark.json",
+        "schedule": {
+          "date": "2026-11-07",
+          "time": "19:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-06-pdd-kit-verification",
+      "topic": "先寫清楚規格，才知道 Agent 程式驗什麼",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-pdd",
+          "type": "primary_research",
+          "label": "Microsoft Research｜Formally verifying agent-written full-stack web apps with PDD Kit",
+          "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+          "checked_at": "2026-11-07",
+          "claims": [
+            {
+              "text": "Microsoft Research 的 PDD Kit 先把意圖轉成 Verus 規格，再對規格覆蓋的程式部分使用形式化證明；無法由證明涵蓋的部分以測試補充。",
+              "evidence_ids": [
+                "src-pdd"
+              ]
+            },
+            {
+              "text": "文章示範為約 5,000 行 Rust Pet Store 專案，但本文聚焦登入邏輯；測試只覆蓋實際執行的輸入，第三方相依仍在信任邊界。",
+              "evidence_ids": [
+                "src-pdd"
+              ]
+            }
+          ]
+        }
+      ],
+      "claims": [
+        {
+          "text": "Microsoft Research 的 PDD Kit 先把意圖轉成 Verus 規格，再對規格覆蓋的程式部分使用形式化證明；無法由證明涵蓋的部分以測試補充。",
+          "evidence_ids": [
+            "src-pdd"
+          ]
+        },
+        {
+          "text": "文章示範為約 5,000 行 Rust Pet Store 專案，但本文聚焦登入邏輯；測試只覆蓋實際執行的輸入，第三方相依仍在信任邊界。",
+          "evidence_ids": [
+            "src-pdd"
+          ]
+        }
+      ],
+      "reader_context": "PDD Kit 是 Microsoft Research 分享的工作流程，用規格、形式證明和測試檢查 AI agent 編寫的全端程式。",
+      "story_spine": "要檢查 Agent 寫的程式 → 先把意圖落成可形式化的規格 → 證明覆蓋規格能描述的部分，測試補上證明到不了的部分，但仍有相依與規格邊界。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "source_backed_reader_payoff",
+        "reason": "這篇不只說「加測試」，而是把規格、證明、測試各自能保證到哪裡講清楚；範例範圍也能如實限定在登入流程。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "逐項 claim 都連到同一筆一手來源；文案把 PR、單次研究或公司基準的範圍寫清楚，沒有宣稱未驗收或已部署。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "要檢查 Agent 寫的程式 → 先把意圖落成可形式化的規格 → 證明覆蓋規格能描述的部分，測試補上證明到不了的部分，但仍有相依與規格邊界。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "這題來自作者正在做的 Crew 產品，或能直接回到 AI agent 的記憶、驗證與可靠性工程。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭以白話交代PDD Kit 是 Microsoft Research 分享的工作流程，用規格、形式證明和測試檢查 AI agent 編寫的全端程式。，再進入具體更新、研究例子或限制。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "前三天的題材與開頭已比對；本稿以本題具體反差起筆，未複製固定問句或「某公司發布」句型。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。 Alt text 只描述可見內容並明示不是實際介面或數據。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-04-crew-play",
+          "2026-11-05-daily-editorial-review",
+          "2026-11-06-daily-editorial-review",
+          "Queue posts dated 2026-11-04 through 2026-11-06"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "開頭先交代讀者需要的產品／研究背景，再講今天實際新增或發現；逐一比對近三天選題與開頭，沒有沿用固定新聞週報句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "要驗證 Agent 寫的程式，先得說清楚你希望它符合什麼規格。Microsoft Research 分享的 PDD Kit，會把意圖轉成 Verus 規格；能被形式證明涵蓋的部分用證明檢查，剩下的再用測試補。\n\n示範放在約 5,000 行的 Rust Pet Store 專案，但文章聚焦登入邏輯。這不代表整個 App 都被證明正確：證明只對寫下的規格，測試只看跑過的輸入，第三方套件仍是信任邊界。\n\n嗯……驗收的第一步，還是先把「對」寫清楚。"
+        },
+        "threads": {
+          "text": "Microsoft Research 的 PDD Kit 把 AI 程式開發意圖轉成 Verus 規格，再用形式證明檢查能涵蓋的部分、測試補上其餘部分。\n\n示範是 Rust Pet Store 的登入邏輯，不是整個 App。證明不超出規格，測試不超出跑過的輸入，第三方依賴仍要信任。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Microsoft Research｜Formally verifying agent-written full-stack web apps with PDD Kit\nhttps://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+            "requestId": "9ccc6a9b-5367-47c8-b627-6da2dcbef2d0"
+          },
+          "threads": {
+            "text": "參考來源：Microsoft Research｜Formally verifying agent-written full-stack web apps with PDD Kit\nhttps://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+            "requestId": "559e45b4-a184-4ab1-914f-395327b0a6bd"
+          }
+        }
+      },
+      "media": {
+        "type": "original_illustration",
+        "reason": "採用為本篇獨立生成的 1254×1254 原創概念插畫；它用隱喻補足故事，不是實際介面、測試畫面或研究數據。",
+        "asset": {
+          "status": "available",
+          "path": "content/queue/assets/2026-11-07-pdd-kit-verification.png",
+          "provenance": "ImageGen 原創生成，2026-11-07；概念插畫，不冒充產品截圖或測試結果。"
+        },
+        "alt_text": "原創概念插畫：程式碼方塊搭成通往規格藍圖的小橋，證明印章支撐橋面，測試燈照向仍有陰影的角落；非實際產品介面。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": "本日新稿尚未逐篇核准；明確保留不可發布。",
+        "publish_permitted": false,
+        "media_verified": true,
+        "queue_path": "content/queue/2026-11-07-pdd-kit-verification.json",
+        "schedule": {
+          "date": "2026-11-07",
+          "time": "21:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-07-science-claude-usage-repeat",
+      "topic": "Claude 科研使用分析資料的比例",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-science-repeat",
+          "type": "primary_research",
+          "label": "Anthropic｜AI for scientific discovery: How researchers use Claude",
+          "url": "https://www.anthropic.com/research/how-researchers-use-claude",
+          "checked_at": "2026-11-07"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Anthropic 分析 207,049 個 Claude／Claude Code 科研工作階段的聚合分類。",
+          "evidence_ids": [
+            "src-science-repeat"
+          ]
+        },
+        {
+          "text": "公司報告資料分析約占 Claude 科研工作階段三分之一，在 Claude Code 接近一半。",
+          "evidence_ids": [
+            "src-science-repeat"
+          ]
+        }
+      ],
+      "reader_context": "Anthropic 的報告使用聚合分類，描述研究人員如何使用 Claude 與 Claude Code。",
+      "story_spine": "資料很具體且與 Agent 工程相關 → 但 2026-11-06 Queue 已用相同研究與核心數字 → 保留在今日研究報告，不重覆排社群稿。",
+      "decision": {
+        "outcome": "rejected",
+        "reason_code": "duplicate_recent_topic",
+        "reason": "2026-11-06 Queue 已發布編輯交接同一篇 Anthropic 科學使用報告，今天不重複占用一個社群時段。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "來源是 Anthropic 原始報告，數字以公司分析口徑表述。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "資料分析佔比能說明實際使用工作流。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "研究與 Agent 在科研工作中的任務分配相關。"
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "本題昨天已使用相近的科研工作流角度，今天無需另寫開頭。"
+        },
+        "template_risk": {
+          "status": "fail",
+          "reason": "與昨天已入列的科學家使用 Claude 貼文和核心數字重複。"
+        },
+        "media_fit": {
+          "status": "not_applicable",
+          "reason": "因選題重複不製作社群媒體資產。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-editorial-review",
+          "Queue posts dated 2026-11-06"
+        ],
+        "repeated_openers": [
+          "Anthropic science usage analysis"
+        ],
+        "stock_phrase_hits": [],
+        "note": "昨天已使用同一報告與資料分析比例，今天淘汰以避免重複。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "只列入研究報告，不建立新的社群交接。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-08-dashboard-expand-controls",
+      "topic": "社群儀表板替長文加入展開控制",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-dashboard",
+          "type": "github_commit",
+          "label": "GitHub · magic76/crew-social-agent｜Add expand controls to dashboard content blocks",
+          "url": "https://github.com/magic76/crew-social-agent/commit/6a763a4667721285637d7ac7e565ca252ba7e355",
+          "checked_at": "2026-11-07"
+        }
+      ],
+      "claims": [
+        {
+          "text": "最新 commit 為儀表板長貼文與回覆文字加入收合／展開控制。",
+          "evidence_ids": [
+            "src-dashboard"
+          ]
+        },
+        {
+          "text": "目前沒有可核實的使用者回饋或量測，能證明長文折疊是今日最有價值的社群故事。",
+          "evidence_ids": [
+            "src-dashboard"
+          ]
+        }
+      ],
+      "reader_context": "Crew Social Agent 的儀表板讓作者檢查社群草稿、來源回覆與影片交接。",
+      "story_spine": "儀表板長文字新增 Load more 控制 → 功能差異可由 commit 確認 → 但沒有讀者痛點證據，暫緩，避免把一般 UI 更新寫成重大成果。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "insufficient_reader_evidence",
+        "reason": "程式修改本身可核實，但沒有使用者回饋或使用量證明痛點；先留作一般維護記錄，不搶今日六個故事名額。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "commit diff 明確顯示長文區塊新增收合和 Load more 按鈕。"
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "功能容易理解，但目前沒有證據證明它改變使用者成功率或阻塞流程。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接來自作者的 Crew Social Agent 儀表板維護。"
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "目前缺少讀者痛點，因此難以用一個具體事件建立開頭。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "近三天沒有同類儀表板題材，但新鮮不等於有足夠讀者價值。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "沒有可核實的儀表板截圖，也不應用假 UI 示意真實操作。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-04-crew-play",
+          "2026-11-05-daily-editorial-review",
+          "2026-11-06-daily-editorial-review",
+          "Queue posts dated 2026-11-04 through 2026-11-06"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "題材未重複，但缺少讀者痛點證據，暫緩而非硬湊入選。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "沒有可分享的真實儀表板截圖；本輪不生成假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    }
+  ]
+}

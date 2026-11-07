@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261107-pdd-kit-verification",
+  "created_date": "2026-11-07",
+  "title": "先寫清楚規格，才知道 Agent 程式驗什麼",
+  "category": "ai-research",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-07",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "png",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-07-pdd-kit-verification.png.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "6733a321848c54a93594b83ad5297467557d596a3b14597f78891ae3e202544a",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-07-pdd-kit-verification.png",
+    "alt": "原創概念插畫：程式碼方塊搭成通往規格藍圖的小橋，證明印章支撐橋面，測試燈照向仍有陰影的角落；非實際產品介面。"
+  },
+  "source": {
+    "publisher": "Microsoft Research｜Formally verifying agent-written full-stack web apps with PDD Kit",
+    "published_date": "2026-11-05",
+    "title": "Formally verifying agent-written full-stack web apps with PDD Kit",
+    "url": "https://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Microsoft Research｜Formally verifying agent-written full-stack web apps with PDD Kit\nhttps://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+      "requestId": "9ccc6a9b-5367-47c8-b627-6da2dcbef2d0"
+    },
+    "threads": {
+      "text": "參考來源：Microsoft Research｜Formally verifying agent-written full-stack web apps with PDD Kit\nhttps://www.microsoft.com/en-us/research/blog/formally-verifying-agent-written-full-stack-web-apps-with-pdd-kit/",
+      "requestId": "559e45b4-a184-4ab1-914f-395327b0a6bd"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "要驗證 Agent 寫的程式，先得說清楚你希望它符合什麼規格。Microsoft Research 分享的 PDD Kit，會把意圖轉成 Verus 規格；能被形式證明涵蓋的部分用證明檢查，剩下的再用測試補。\n\n示範放在約 5,000 行的 Rust Pet Store 專案，但文章聚焦登入邏輯。這不代表整個 App 都被證明正確：證明只對寫下的規格，測試只看跑過的輸入，第三方套件仍是信任邊界。\n\n嗯……驗收的第一步，還是先把「對」寫清楚。",
+      "requestId": "1004abd0-cfc0-459f-ab67-cfe569956cb7"
+    },
+    "threads": {
+      "text": "Microsoft Research 的 PDD Kit 把 AI 程式開發意圖轉成 Verus 規格，再用形式證明檢查能涵蓋的部分、測試補上其餘部分。\n\n示範是 Rust Pet Store 的登入邏輯，不是整個 App。證明不超出規格，測試不超出跑過的輸入，第三方依賴仍要信任。",
+      "requestId": "ee63fa5b-ba91-4c3c-b64e-eb301b33b57b"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "這是今天新整理、尚未逐篇核准的草稿；先保留 draft/dry_run，不交給 Publisher 發布。"
+  }
+}

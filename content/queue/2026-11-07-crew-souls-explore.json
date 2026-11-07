@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261107-crew-souls-explore",
+  "created_date": "2026-11-07",
+  "title": "Crew Souls 搬到 Mate 隔壁",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-07",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "png",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-07-crew-souls-explore.png.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "f2869557e63ceb2ba72a5b5ce54cb5a548fdcc74ce49705572391716fa294e09",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-07-crew-souls-explore.png",
+    "alt": "奶油色背景的原創 3D 插畫：白雲角色與橘帽夥伴走在藍橘兩條路上，象徵 Explore 裡的兩個入口並列；不是 Crew 網站截圖。"
+  },
+  "source": {
+    "publisher": "GitHub · magic76/magic76.github.io｜Crew Souls 放到 Mate 旁的 Explore PR #535",
+    "published_date": "2026-11-07",
+    "title": "Crew Souls 放到 Mate 旁的 Explore PR #535",
+    "url": "https://github.com/magic76/magic76.github.io/pull/535"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io｜Crew Souls 放到 Mate 旁的 Explore PR #535\nhttps://github.com/magic76/magic76.github.io/pull/535",
+      "requestId": "d4a6ec4a-8c62-4934-86ca-a45f322b8796"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io｜Crew Souls 放到 Mate 旁的 Explore PR #535\nhttps://github.com/magic76/magic76.github.io/pull/535",
+      "requestId": "095f4fae-af05-4d3d-970c-bf56537dd70b"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Web 是我做的 AI 朋友、探索和語言學習網站。這次把 Explore 裡的 Crew Souls 放到 Mate 旁邊，手機上兩張入口卡並排；原本用 CSS 畫的角色，也換成同風格、放在 repo 裡的 3D 插畫。\n\nPR 已合併，相關測試也有更新；但 CI 仍 pending，網站有沒有部署我還沒確認。\n\n角色先搬到隔壁，驗收還得等紅綠燈。這次我先不替它宣布入住完成。",
+      "requestId": "3ff7e89b-67b4-4eb2-bccb-6a4964911d10"
+    },
+    "threads": {
+      "text": "Crew Web 是我的 AI 朋友與探索網站。這次讓 Crew Souls 搬到 Mate 隔壁，手機 Explore 兩張卡並排；原先 CSS 畫的角色改成同風格的本地 3D 插畫。\n\nPR 已合併、測試有更新，但 CI 還 pending，網站部署也未確認。角色搬完家，還得等驗收簽收。",
+      "requestId": "eeaa9b75-0dbd-4a67-804e-437bbf51571f"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "這是今天新整理、尚未逐篇核准的草稿；先保留 draft/dry_run，不交給 Publisher 發布。"
+  }
+}

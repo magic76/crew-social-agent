@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261107-home-discovery-line",
+  "created_date": "2026-11-07",
+  "title": "首頁先把意思說完，再開始打字",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-07",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "png",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-07-home-discovery-line.png.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "cef25742149b242d74ea67123ef92ec29da9edfdb22ae70113445b12e4d46b4f",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-07-home-discovery-line.png",
+    "alt": "原創插畫：訪客走向敞開的門，完整光帶先出現，周圍只有抽象字母光點；象徵內容先可讀、動畫後播放，非實際首頁畫面。"
+  },
+  "source": {
+    "publisher": "GitHub · magic76/magic76.github.io｜home discovery line",
+    "published_date": "2026-11-06",
+    "title": "home discovery line",
+    "url": "https://github.com/magic76/magic76.github.io/commit/600177969c2916f6722256756f5768f92f44ca4d"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io｜home discovery line\nhttps://github.com/magic76/magic76.github.io/commit/600177969c2916f6722256756f5768f92f44ca4d",
+      "requestId": "7384af77-e56e-4ac8-a9a2-f31770dc1640"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io｜home discovery line\nhttps://github.com/magic76/magic76.github.io/commit/600177969c2916f6722256756f5768f92f44ca4d",
+      "requestId": "9205e1c5-bed3-4741-924a-0f58780d5fbf"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Web 首頁是第一次來的人認識 AI 朋友、遊戲和學習功能的入口。這次新增一行探索提示，整句話一開始就已經在頁面裡；打字動畫只是後續效果，不用等它跑完才知道內容。\n\n動畫還會等頁面閒置、提示真的進入畫面才啟動。改動有測試檔，但目前我沒有 CI 通過的證據。\n\n小動畫可以慢慢演，入口的意思要先到。",
+      "requestId": "84c79339-a60c-4cfc-ad4b-d5cb54a2b09c"
+    },
+    "threads": {
+      "text": "Crew Web 首頁這次讓完整探索提示先到，打字動畫晚一點開始。句子一開始就能讀，動畫要等頁面閒置、文字可見時才啟動。\n\ncommit 加了測試檔，CI 結果尚未確認。動效可以晚一點，意思要先到。",
+      "requestId": "3aa2209c-48b1-45bf-8c96-1ecd7941ecab"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "這是今天新整理、尚未逐篇核准的草稿；先保留 draft/dry_run，不交給 Publisher 發布。"
+  }
+}
