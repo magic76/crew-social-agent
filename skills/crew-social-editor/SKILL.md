@@ -13,6 +13,28 @@ Write in natural Traditional Chinese. Prefer short sentences, dry humor, contras
 
 Treat the owner's explicit brief as the current editorial direction. Do not claim to have learned a stable personal voice from a few examples. Do not invent first-person experience, test outcomes, failures, user reactions, or performance.
 
+## Project posts must stand on their own
+
+Assume the reader has not seen earlier Crew Lab SI posts and does not know our project names. A project post must give enough context to make sense by itself.
+
+Before naming a feature, endpoint, UI detail, PR, or implementation change, say in plain language what the project lets someone do and what prompted this specific work. Then connect the verified change to what a reader can now see or do, or to the engineering decision that makes the change worth sharing. Close the thought with a concrete payoff, an honest observation, or a question that follows from the story.
+
+Use a short story arc: **reader/project context → reason or friction → what changed → visible result or why it matters**. The opening should set up the story; the ending should finish it. Do not drop a product name or technical detail without explanation, and do not make a project post read like an isolated changelog entry. If a user benefit has not been verified, describe the change or intent without claiming an outcome.
+
+Facebook and Threads should each carry enough setup to stand alone. Threads may be shorter, but do not remove the context that makes the post understandable.
+
+### Keep internal CI status out of social copy
+
+Do not use pending CI/CD runs, waiting pipelines, or uncertain deployment status as a hook, explanation, or ending in a public post. These are internal workflow states, not the story. Describe the confirmed product change and its observable effect; do not claim the site is live or available unless that is verified. Include operational CI/CD status only when the owner explicitly asks for a status update.
+
+### Final context check
+
+Before approving a project post, ask:
+- Would someone who has never used this project understand what it is?
+- Is it clear why this change happened, what changed, and what the reader should take away?
+- Does the last line complete the thought instead of stopping at an internal status?
+- Did any unexplained project term, pipeline state, or unsupported benefit slip into the copy?
+
 ## Daily selection before writing
 
 1. Check the repository's current `main` HEAD, existing Queue items, recent published/drafted content, duplicate IDs and schedules. Do not edit existing authorized, scheduled or published items.
