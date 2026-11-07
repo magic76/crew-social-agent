@@ -4,11 +4,11 @@
   "created_date": "2026-11-07",
   "title": "掃到 API 候選，不等於它真的在跑",
   "category": "development",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-07",
-    "time": "12:00",
+    "time": "18:00",
     "timezone": "Asia/Taipei"
   },
   "networks": [
@@ -52,7 +52,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "這是今天新整理、尚未逐篇核准的草稿；先保留 draft/dry_run，不交給 Publisher 發布。"
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-07 指示今日貼文可發布；排程 18:00（Asia/Taipei），由 Local Publisher 執行。"
   }
 }
