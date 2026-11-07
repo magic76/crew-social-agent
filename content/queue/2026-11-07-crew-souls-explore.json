@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "crew-lab-20261107-crew-souls-explore",
   "created_date": "2026-11-07",
-  "title": "Crew Souls 搬到 Mate 隔壁",
+  "title": "Crew Souls 換了新插畫，也和 Crew Mate 當鄰居",
   "category": "development",
   "status": "draft",
   "mode": "dry_run",
@@ -33,26 +33,40 @@
   },
   "first_replies": {
     "facebook": {
-      "text": "參考來源：GitHub · magic76/magic76.github.io｜Crew Souls 放到 Mate 旁的 Explore PR #535\nhttps://github.com/magic76/magic76.github.io/pull/535",
+      "text": "GitHub · magic76/magic76.github.io｜Crew Souls 與 Crew Mate 並列的 Explore PR #535\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · magic76/magic76.github.io｜Crew Souls photo-first object characters\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · magic76/magic76.github.io｜Crew Souls character conversation\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
       "requestId": "d4a6ec4a-8c62-4934-86ca-a45f322b8796"
     },
     "threads": {
-      "text": "參考來源：GitHub · magic76/magic76.github.io｜Crew Souls 放到 Mate 旁的 Explore PR #535\nhttps://github.com/magic76/magic76.github.io/pull/535",
+      "text": "GitHub · magic76/magic76.github.io｜Crew Souls 與 Crew Mate 並列的 Explore PR #535\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · magic76/magic76.github.io｜Crew Souls photo-first object characters\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · magic76/magic76.github.io｜Crew Souls character conversation\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
       "requestId": "095f4fae-af05-4d3d-970c-bf56537dd70b"
     }
   },
   "posts": {
     "facebook": {
-      "text": "Crew Web 是我做的 AI 朋友、探索和語言學習網站。這次把 Explore 裡的 Crew Souls 放到 Mate 旁邊，手機上兩張入口卡並排；原本用 CSS 畫的角色，也換成同風格、放在 repo 裡的 3D 插畫。\n\nPR 已合併，相關測試也有更新；但 CI 仍 pending，網站有沒有部署我還沒確認。\n\n角色先搬到隔壁，驗收還得等紅綠燈。這次我先不替它宣布入住完成。",
+      "text": "桌上的小物如果會說話，會先跟你聊什麼？\n\nCrew Souls 是我做的物品角色體驗：用照片把身邊的小物變成角色，還能接著和它聊天。\n\n這次我把 Crew Souls 的入口排到 Crew Mate 旁邊，也把原本用 CSS 畫的角色，換成和 Explore 其他入口一致的 3D 插畫。\n\nPR 已合併，測試也有更新；CI 還 pending，網站是否部署我還沒確認。\n\n小小改動，但這兩張卡終於看起來像住同一個地方了。",
       "requestId": "3ff7e89b-67b4-4eb2-bccb-6a4964911d10"
     },
     "threads": {
-      "text": "Crew Web 是我的 AI 朋友與探索網站。這次讓 Crew Souls 搬到 Mate 隔壁，手機 Explore 兩張卡並排；原先 CSS 畫的角色改成同風格的本地 3D 插畫。\n\nPR 已合併、測試有更新，但 CI 還 pending，網站部署也未確認。角色搬完家，還得等驗收簽收。",
+      "text": "桌上的小物如果會說話，會跟你聊什麼？\n\nCrew Souls 是把照片裡的小物做成能聊天的角色。這次我把它的入口排到 Crew Mate 旁邊，插畫也換成和 Explore 其他卡片一致的 3D 風格。\n\nPR 已合併、測試有更新；CI 還 pending，網站部署還沒確認。",
       "requestId": "eeaa9b75-0dbd-4a67-804e-437bbf51571f"
     }
   },
   "safety": {
     "publish_permitted": false,
     "reason": "這是今天新整理、尚未逐篇核准的草稿；先保留 draft/dry_run，不交給 Publisher 發布。"
-  }
+  },
+  "references": [
+    {
+      "publisher": "GitHub · magic76/magic76.github.io",
+      "published_date": "2026-11-07",
+      "title": "Crew Souls photo-first object characters",
+      "url": "https://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx"
+    },
+    {
+      "publisher": "GitHub · magic76/magic76.github.io",
+      "published_date": "2026-11-07",
+      "title": "Crew Souls character conversation",
+      "url": "https://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx"
+    }
+  ]
 }
