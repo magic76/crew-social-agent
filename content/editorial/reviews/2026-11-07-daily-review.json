@@ -49,23 +49,23 @@
           ]
         },
         {
-          "text": "PR #535 將 Explore 的 Crew Souls 卡片放到 Crew Mate 旁，並以本地原創 3:2 3D WebP 插畫取代 CSS 圖形；PR 已合併，但 CI 仍 pending，部署未確認。",
+          "text": "PR #535 將 Explore 的 Crew Souls 卡片放到 Crew Mate 旁，並以本地原創 3:2 3D WebP 插畫取代 CSS 圖形。",
           "evidence_ids": [
             "src-pr"
           ]
         }
       ],
       "reader_context": "Crew Souls 是把照片裡的物品做成角色、再和角色聊天的體驗；Crew Mate 是 AI 朋友入口。這篇更新談的是兩個 Explore 入口的排序與插畫風格。",
-      "story_spine": "Crew Souls 要和 Mate 並排 → 原先的 CSS 人物風格不一致 → 改成同風格的本地插畫並更新測試，但 CI 與網站部署仍待確認。",
+      "story_spine": "照片中的物品可以變成會聊天的角色 → Crew Souls 的 Explore 入口原本與 Crew Mate 分開 → PR 把兩個入口排在一起，並統一插畫風格。",
       "decision": {
         "outcome": "selected",
         "reason_code": "verified_recent_development",
-        "reason": "PR #535 把 Crew Souls 入口排到 Crew Mate 旁，並統一插畫風格；文案先解釋照片物品角色體驗，再保留 CI pending 與尚未確認部署的限制。"
+        "reason": "文案先用桌上小物的情境說明 Crew Souls，再交代入口與插畫的實際調整，讀者能直接理解變動和產品玩法。"
       },
       "quality_review": {
         "truth": {
           "status": "pass",
-          "reason": "產品用途由 SoulsPage.tsx 與 SoulChat.tsx 支持；位置、插畫與 PR/CI 狀態由 PR #535 支持，沒有宣稱已部署。"
+          "reason": "產品用途由 SoulsPage.tsx 與 SoulChat.tsx 支持；入口位置與插畫調整由 PR #535 支持，文案沒有宣稱網站已部署。"
         },
         "interest": {
           "status": "pass",
@@ -101,18 +101,18 @@
       },
       "drafts": {
         "facebook": {
-          "text": "桌上的小物如果會說話，會先跟你聊什麼？\n\nCrew Souls 是我做的物品角色體驗：用照片把身邊的小物變成角色，還能接著和它聊天。\n\n這次我把 Crew Souls 的入口排到 Crew Mate 旁邊，也把原本用 CSS 畫的角色，換成和 Explore 其他入口一致的 3D 插畫。\n\nPR 已合併，測試也有更新；CI 還 pending，網站是否部署我還沒確認。\n\n小小改動，但這兩張卡終於看起來像住同一個地方了。"
+          "text": "桌上的小物如果會說話，會先跟你聊什麼？\n\nCrew Souls 是我做的物品角色體驗：用照片把身邊的小物變成角色，還能接著和它聊天。\n\n這次我把 Crew Souls 的入口排到 Crew Mate 旁邊，也把原本用 CSS 畫的角色，換成和 Explore 其他入口一致的 3D 插畫。\n\n小小改動，但這兩張卡終於看起來像住同一個地方了。"
         },
         "threads": {
-          "text": "桌上的小物如果會說話，會跟你聊什麼？\n\nCrew Souls 是把照片裡的小物做成能聊天的角色。這次我把它的入口排到 Crew Mate 旁邊，插畫也換成和 Explore 其他卡片一致的 3D 風格。\n\nPR 已合併、測試有更新；CI 還 pending，網站部署還沒確認。"
+          "text": "桌上的小物如果會說話，會跟你聊什麼？\n\nCrew Souls 是把照片裡的小物做成能聊天的角色。這次我把它的入口排到 Crew Mate 旁邊，插畫也換成和 Explore 其他卡片一致的 3D 風格。\n\n入口搬家，畫風也總算跟鄰居一樣了。"
         },
         "first_replies": {
           "facebook": {
-            "text": "GitHub PR #535 · Crew Souls 與 Crew Mate 並列\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · Crew Souls 照片物品角色體驗\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · Crew Souls 角色對話實作\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
+            "text": "Crew Souls 可以玩玩看：3sssi.com/souls\n\nGitHub PR #535 · Crew Souls 與 Crew Mate 並列\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · Crew Souls 照片物品角色體驗\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · Crew Souls 角色對話實作\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
             "requestId": "d4a6ec4a-8c62-4934-86ca-a45f322b8796"
           },
           "threads": {
-            "text": "GitHub PR #535 · Crew Souls 與 Crew Mate 並列\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · Crew Souls 照片物品角色體驗\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · Crew Souls 角色對話實作\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
+            "text": "Crew Souls 可以玩玩看：3sssi.com/souls\n\nGitHub PR #535 · Crew Souls 與 Crew Mate 並列\nhttps://github.com/magic76/magic76.github.io/pull/535\n\nGitHub · Crew Souls 照片物品角色體驗\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulsPage.tsx\n\nGitHub · Crew Souls 角色對話實作\nhttps://github.com/magic76/magic76.github.io/blob/8926f81cd6fe271c8ab4eb7ccd6b97cb1bab5f5c/web-spa/src/souls/SoulChat.tsx",
             "requestId": "095f4fae-af05-4d3d-970c-bf56537dd70b"
           }
         }
