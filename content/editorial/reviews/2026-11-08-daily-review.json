@@ -638,7 +638,8 @@
         "status": "draft_handoff_only",
         "authorization_basis": null,
         "publish_permitted": false,
-        "queue_path": "content/queue/2026-11-08-gemini-omni-video-model-card.json"
+        "queue_path": null,
+        "reason": "今日 10:00 時段已過，剩餘五個有效時段已排入前五篇；保留此文完整雙平台草稿但不建立過期 Queue。"
       }
     },
     {

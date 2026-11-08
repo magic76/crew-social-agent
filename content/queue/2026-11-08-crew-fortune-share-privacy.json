@@ -8,7 +8,7 @@
   "mode": "dry_run",
   "schedule": {
     "date": "2026-11-08",
-    "time": "16:00",
+    "time": "19:00",
     "timezone": "Asia/Taipei"
   },
   "networks": [

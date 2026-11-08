@@ -47,9 +47,9 @@ PR 描述內有測試計畫或新增測試檔，不等於我們取得了通過�
 
 ## 候選裁決與今日六篇
 
-今日選出六個不同主題：10:00 Crew Car 封包誤判、12:00 Crew Web 分類控制、14:00 PWA 圖示 URL、16:00 Fortune 分享資料最小化、19:00 Google Agent Distraction、21:00 Gemini Omni model card。每篇均有 Facebook／Threads 獨立稿和來源首則回覆；跨平台版本只算一個主題。其餘 GA4 歸因、Anthropic 科學建模先暫緩，Meta 專用模型公告因公司內部評測及與昨日記憶稿重疊淘汰。完整 claim→evidence、六項品質理由、雙平台定稿與媒體決策見 [今日 review](https://github.com/magic76/crew-social-agent/blob/main/content/editorial/reviews/2026-11-08-daily-review.json)。
+今日完成六個不同主題的 Facebook／Threads 草稿：Crew Car 封包誤判、Crew Web 分類控制、PWA 圖示 URL、Fortune 分享資料最小化、Google Agent Distraction、Gemini Omni model card。編輯時 10:00 時段已過，沒有回填過期時間；前五題分別排在 12:00、14:00、16:00、19:00、21:00，Gemini Omni 草稿留在 review，不建立過期 Queue。其餘 GA4 歸因、Anthropic 科學建模先暫緩，Meta 專用模型公告因公司內部評測及與昨日記憶稿重疊淘汰。完整 claim→evidence、六項品質理由、雙平台定稿與媒體決策見 [今日 review](https://github.com/magic76/crew-social-agent/blob/main/content/editorial/reviews/2026-11-08-daily-review.json)。
 
-六篇均選純文字：目前沒有可核實的 Crew Car 實機畫面或 Crew Web 手機前後截圖；研究則沒有可公開 trace 或使用者實測片段。沒有為湊數生成圖。每篇 Queue 都是 `status=draft`、`mode=dry_run`、`safety.publish_permitted=false`，並排在今日尚未過期的台北時間 10:00、12:00、14:00、16:00、19:00、21:00。未送出任何平台 API 或 Local Publisher 任務。
+六個主題都選純文字：目前沒有可核實的 Crew Car 實機畫面或 Crew Web 手機前後截圖；研究則沒有可公開 trace 或使用者實測片段。沒有為湊數生成圖。五個 Queue 都是 `status=draft`、`mode=dry_run`、`safety.publish_permitted=false`，排在今日尚未過期的 12:00、14:00、16:00、19:00、21:00；第六篇維持 review-only draft。未送出任何平台 API 或 Local Publisher 任務。
 
 ## Local Publisher／結構檢查
 
