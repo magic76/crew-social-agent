@@ -35,11 +35,11 @@
   },
   "posts": {
     "facebook": {
-      "text": "Crew Car 是把 Gemini Live 接上玩具車的 Android 專案，手機還要收車上的 FPV 影像。\n\n做 UDP 影像除錯時，log 裡出現 `rx packets=1` 不代表影格到了。Crew Car 的真實紀錄只有一包從相機命令埠 23459 回來；它可能只是 START 的回覆，不能當成影片已收到的證據。\n\n這次 PR 把 `cameraReplies`、`video`、`invalid` 分開計數。\n\n實用判斷：先看來源埠和封包格式，再對照直連小車與手機熱點的 `video` 計數。如果直連有影片封包、熱點只有 `cameraReplies>0、video=0`，先查熱點的 NAT 路徑；還沒收到有效影片，就先怪 H.265 解碼器也太早。",
+      "text": "Crew Car 是把 Gemini Live 接上玩具車上的 Android 專案，手機還要收車上的 FPV 影像。\n\n一次手機熱點紀錄只有一個 UDP 封包：來源是相機命令埠 23459，可能只是相機 START 的回覆，不能證明影片已經進來。只看到 rx packets=1 就當成有畫面，很容易追錯方向。\n\n這次 PR 把相機回覆、有效影片封包和無效封包分開計數。排查時先比較直連和手機熱點：直連能收到影片、熱點不行，就先查熱點轉送；兩邊都收得到，再往影格組裝和解碼查。",
       "requestId": "febde5d6-2bb6-471b-be1c-c2cc7bcec068"
     },
     "threads": {
-      "text": "Crew Car 是把 Gemini Live 接上玩具車的 Android 專案，手機還要收 FPV。\n\nUDP log 出現 `rx packets=1`，不代表影片到了。真實紀錄只有一包從相機命令埠 23459 回來，可能只是 START 回覆。\n\n這次 PR 把 `cameraReplies`、`video`、`invalid` 分開計數。若直連小車有 `video`，手機熱點卻只有 `cameraReplies>0、video=0`，先查 NAT 路徑；有效影片都還沒收到，先怪 H.265 解碼器太早。",
+      "text": "Crew Car 是把 Gemini Live 接到玩具車上的 Android 專案，手機也要收車上的 FPV。\n\n手機熱點 log 只有一包 UDP，來源是相機命令埠 23459；可能只是 START 回覆，不能證明影片有到。\n\n這次 PR 把相機回覆、有效影片封包和無效封包分開計數。先比較直連與熱點：直連能收到影片、熱點不行，就查熱點轉送；兩邊都收得到，再查影格組裝和解碼。",
       "requestId": "64be02c9-d2ac-449f-a532-de087fd38c08"
     }
   },
