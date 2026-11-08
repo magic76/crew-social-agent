@@ -28,7 +28,7 @@
         {
           "id": "src-car-pr35",
           "type": "github_pr",
-          "label": "Crew Car PR #35；含手機熱點 log、封包判讀改動與待實機驗證清單",
+          "label": "GitHub · magic76/crew-car PR #35",
           "url": "https://github.com/magic76/crew-car/pull/35",
           "checked_at": "2026-11-08",
           "published_date": "2026-11-06"
@@ -103,10 +103,20 @@
         },
         "threads": {
           "text": "Crew Car 是把 Gemini Live 接到玩具車上的 Android 專案，手機也要收車上的 FPV。\n\n手機熱點 log 只有一包 UDP，來源是相機命令埠 23459；可能只是 START 回覆，不能證明影片有到。\n\n這次 PR 把相機回覆、有效影片封包和無效封包分開計數。先比較直連與熱點：直連能收到影片、熱點不行，就查熱點轉送；兩邊都收得到，再查影格組裝和解碼。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/crew-car PR #35｜Distinguish camera UDP replies from video and move STOP off UI thread\nhttps://github.com/magic76/crew-car/pull/35",
+            "requestId": "5261afa4-fd60-47d7-bcca-20c4d38ca337"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/crew-car PR #35｜Distinguish camera UDP replies from video and move STOP off UI thread\nhttps://github.com/magic76/crew-car/pull/35",
+            "requestId": "916fa6c1-5435-4236-9c3e-6cb668f934d2"
+          }
         }
       },
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "真實 log 和封包分類已能用文字說清楚；沒有可核實的實機畫面，因此不生成假 UI。",
         "asset": {
           "status": "not_needed",
@@ -116,10 +126,16 @@
         "alt_text": null
       },
       "handoff": {
-        "status": "draft_handoff_only",
-        "authorization_basis": null,
-        "publish_permitted": false,
-        "queue_path": "content/queue/2026-11-08-crew-car-camera-datagram.json"
+        "status": "ready_for_local_agent",
+        "authorization_basis": "使用者於 2026-11-08 明確要求將今日既有 Queue 稿整理為可發布；保留原文案、純文字媒體選擇、requestId 與台北時間排程。",
+        "publish_permitted": true,
+        "queue_path": "content/queue/2026-11-08-crew-car-camera-datagram.json",
+        "media_verified": true,
+        "schedule": {
+          "date": "2026-11-08",
+          "time": "12:00",
+          "timezone": "Asia/Taipei"
+        }
       }
     },
     {
@@ -201,7 +217,7 @@
       },
       "drafts": null,
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "這個故事的價值在控制狀態變得更清楚，文字能直接說明；未取得真實截圖。",
         "asset": {
           "status": "not_needed",
@@ -225,7 +241,7 @@
         {
           "id": "src-pwa-pr549",
           "type": "github_pr",
-          "label": "Crew Web PR #549；manifest、iOS icon 和雲端產物改用版本化圖示 URL，保留舊路徑",
+          "label": "GitHub · magic76/magic76.github.io PR #549",
           "url": "https://github.com/magic76/magic76.github.io/pull/549",
           "checked_at": "2026-11-08",
           "published_date": "2026-11-07"
@@ -233,7 +249,7 @@
         {
           "id": "src-chrome-pwa-update",
           "type": "official_documentation",
-          "label": "Chrome for Developers 說明 Chrome 144 起 icon URL 或 metadata 必須變更才會觸發圖示更新；文章發布日 2026-01-21",
+          "label": "Chrome for Developers",
           "url": "https://developer.chrome.com/blog/improvements-to-web-app-updates/",
           "checked_at": "2026-11-08",
           "published_date": "2026-01-21"
@@ -309,10 +325,20 @@
         },
         "threads": {
           "text": "Crew Web 可以加到 Android 主畫面。換了圖示還是舊圖？Chrome 144 起，manifest 用的圖示網址沒變，就不會重新下載比對。\n\n若網址改了，圖示或名稱更新可能出現在 App 三點選單的「Review app update」，讓使用者確認。Crew Web 把新版圖示換成帶版本的網址，也保留舊檔。\n\n換圖先改 manifest 指向；只覆蓋同名檔案不一定會觸發更新。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #549｜Refresh installed app logo via versioned icon URLs\nhttps://github.com/magic76/magic76.github.io/pull/549\n\nChrome for Developers｜A better way to update your web apps\nhttps://developer.chrome.com/blog/improvements-to-web-app-updates/",
+            "requestId": "e87e911b-594e-44c4-ac17-1f50b650648f"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #549｜Refresh installed app logo via versioned icon URLs\nhttps://github.com/magic76/magic76.github.io/pull/549\n\nChrome for Developers｜A better way to update your web apps\nhttps://developer.chrome.com/blog/improvements-to-web-app-updates/",
+            "requestId": "c611e366-e08a-4fe2-a068-09b1b030a38c"
+          }
         }
       },
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "以實際 PR 與 Chrome 行為說明快取機制，文字比示意 UI 更準確。",
         "asset": {
           "status": "not_needed",
@@ -322,10 +348,16 @@
         "alt_text": null
       },
       "handoff": {
-        "status": "draft_handoff_only",
-        "authorization_basis": null,
-        "publish_permitted": false,
-        "queue_path": "content/queue/2026-11-08-crew-web-pwa-icon-version.json"
+        "status": "ready_for_local_agent",
+        "authorization_basis": "使用者於 2026-11-08 明確要求將今日既有 Queue 稿整理為可發布；保留原文案、純文字媒體選擇、requestId 與台北時間排程。",
+        "publish_permitted": true,
+        "queue_path": "content/queue/2026-11-08-crew-web-pwa-icon-version.json",
+        "media_verified": true,
+        "schedule": {
+          "date": "2026-11-08",
+          "time": "16:00",
+          "timezone": "Asia/Taipei"
+        }
       }
     },
     {
@@ -336,7 +368,7 @@
         {
           "id": "src-fortune-pr546",
           "type": "github_pr",
-          "label": "Crew Fortune PR #546；公開身份 DTO、命盤依據與私密生日資料排除規則",
+          "label": "GitHub · magic76/magic76.github.io PR #546",
           "url": "https://github.com/magic76/magic76.github.io/pull/546",
           "checked_at": "2026-11-08",
           "published_date": "2026-11-07"
@@ -411,10 +443,20 @@
         },
         "threads": {
           "text": "Crew Fortune 可以把命格卡做成圖片分享。\n\n分享只帶卡片文案和精簡依據；出生日期、時間、地點和完整命盤不會跟出去。\n\n命理內容是自我探索，不是科學人格診斷。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #546｜Evidence-backed Fortune identity cards, sharing and feedback\nhttps://github.com/magic76/magic76.github.io/pull/546",
+            "requestId": "22442617-4890-4abf-b61d-f488dacd23ed"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #546｜Evidence-backed Fortune identity cards, sharing and feedback\nhttps://github.com/magic76/magic76.github.io/pull/546",
+            "requestId": "e16b8b77-8762-4710-8f7d-c6985585c48b"
+          }
         }
       },
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "命盤資料具個人性且此稿主談資料範圍；不用真實個人畫面或生成假命盤。",
         "asset": {
           "status": "not_needed",
@@ -424,21 +466,27 @@
         "alt_text": null
       },
       "handoff": {
-        "status": "draft_handoff_only",
-        "authorization_basis": null,
-        "publish_permitted": false,
-        "queue_path": "content/queue/2026-11-08-crew-fortune-share-privacy.json"
+        "status": "ready_for_local_agent",
+        "authorization_basis": "使用者於 2026-11-08 明確要求將今日既有 Queue 稿整理為可發布；保留原文案、純文字媒體選擇、requestId 與台北時間排程。",
+        "publish_permitted": true,
+        "queue_path": "content/queue/2026-11-08-crew-fortune-share-privacy.json",
+        "media_verified": true,
+        "schedule": {
+          "date": "2026-11-08",
+          "time": "19:00",
+          "timezone": "Asia/Taipei"
+        }
       }
     },
     {
       "id": "candidate-05-google-agent-distraction",
       "topic": "Google 追蹤 Coding Agent 被舊 TODO 帶去支線",
-      "class": "ai-research",
+      "class": "research",
       "evidence": [
         {
           "id": "src-google-agent-distraction-20261106",
           "type": "primary_research",
-          "label": "Google Developers Blog 分析數千工程師與數億 agent steps 的自家 coding-agent traces",
+          "label": "Google Developers Blog",
           "url": "https://developers.googleblog.com/agent-distraction/",
           "checked_at": "2026-11-08",
           "published_date": "2026-11-06"
@@ -513,10 +561,20 @@
         },
         "threads": {
           "text": "Google 分析自家 coding agent traces：程式裡的 TODO/FIXME 出現在 13% 的讀檔 session；6% 會追著 bug ticket 做事，其中 83% 沒有人要求。\n\nGoogle 估計這種支線每個 session 多 70% steps、77% tokens、105% 等待時間。這是公司自家資料，不是所有 Agent 的通則。\n\n放很久的 TODO，AI 也可能當真。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Google Developers Blog｜Agent Distraction\nhttps://developers.googleblog.com/agent-distraction/",
+            "requestId": "49b297a9-0442-4e6b-8d6f-cc35d990981c"
+          },
+          "threads": {
+            "text": "參考來源：Google Developers Blog｜Agent Distraction\nhttps://developers.googleblog.com/agent-distraction/",
+            "requestId": "a87c21ce-2d89-49a3-a783-59f576fca39c"
+          }
         }
       },
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "這是 traces 分析但沒有可公開的原始 trace 畫面；以純文字保留統計分母和限制最準確。",
         "asset": {
           "status": "not_needed",
@@ -526,16 +584,22 @@
         "alt_text": null
       },
       "handoff": {
-        "status": "draft_handoff_only",
-        "authorization_basis": null,
-        "publish_permitted": false,
-        "queue_path": "content/queue/2026-11-08-google-agent-distraction.json"
+        "status": "ready_for_local_agent",
+        "authorization_basis": "使用者於 2026-11-08 明確要求將今日既有 Queue 稿整理為可發布；保留原文案、純文字媒體選擇、requestId 與台北時間排程。",
+        "publish_permitted": true,
+        "queue_path": "content/queue/2026-11-08-google-agent-distraction.json",
+        "media_verified": true,
+        "schedule": {
+          "date": "2026-11-08",
+          "time": "21:00",
+          "timezone": "Asia/Taipei"
+        }
       }
     },
     {
       "id": "candidate-06-gemini-omni-video-model-card",
       "topic": "Gemini Omni 1.2 Flash 可多模態輸入並產生有聲影片",
-      "class": "ai-research",
+      "class": "ai_news",
       "evidence": [
         {
           "id": "src-gemini-omni-card-20261105",
@@ -618,7 +682,7 @@
         }
       },
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "沒有可核驗的模型示範片；用純文字引用官方能力和限制，避免製作仿真生成畫面。",
         "asset": {
           "status": "not_needed",
@@ -643,7 +707,7 @@
         {
           "id": "src-ga4-pr545",
           "type": "github_pr",
-          "label": "Crew Web PR #545；GA4 page_referrer 與 allowlisted UTM 欄位修正",
+          "label": "GitHub · magic76/magic76.github.io PR #545",
           "url": "https://github.com/magic76/magic76.github.io/pull/545",
           "checked_at": "2026-11-08",
           "published_date": "2026-11-07"
@@ -718,10 +782,20 @@
         },
         "threads": {
           "text": "Crew Web 是放 AI 聊天、語言學習和遊戲的網站。社群連結帶來的人若被 GA4 算成 direct，就很難知道是哪篇貼文帶來訪客。\n\n舊追蹤碼把外站來源和 UTM 活動標籤清掉。修正只留合規的來源、媒介和活動識別；外站只留網域，不送其他網址參數或平台點擊追蹤碼。\n\n保留歸因需要的資訊就好，整串網址不必全傳。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #545｜fix: restore privacy-safe GA4 UTM and referral attribution\nhttps://github.com/magic76/magic76.github.io/pull/545",
+            "requestId": "14d65f26-a87a-4b23-b6d3-a9fcae19db95"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #545｜fix: restore privacy-safe GA4 UTM and referral attribution\nhttps://github.com/magic76/magic76.github.io/pull/545",
+            "requestId": "1253b0c5-c0fd-42a3-89af-3b835e4ac1f8"
+          }
         }
       },
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "讓讀者看懂歸因與資料最小化的做法即可；沒有真實 Network capture，不製作示意儀表板圖。",
         "asset": {
           "status": "not_needed",
@@ -731,16 +805,22 @@
         "alt_text": null
       },
       "handoff": {
-        "status": "draft_handoff_only",
-        "authorization_basis": null,
-        "publish_permitted": false,
-        "queue_path": "content/queue/2026-11-08-crew-web-ga4-attribution.json"
+        "status": "ready_for_local_agent",
+        "authorization_basis": "使用者於 2026-11-08 明確要求將今日既有 Queue 稿整理為可發布；保留原文案、純文字媒體選擇、requestId 與台北時間排程。",
+        "publish_permitted": true,
+        "queue_path": "content/queue/2026-11-08-crew-web-ga4-attribution.json",
+        "media_verified": true,
+        "schedule": {
+          "date": "2026-11-08",
+          "time": "14:00",
+          "timezone": "Asia/Taipei"
+        }
       }
     },
     {
       "id": "candidate-08-anthropic-scientific-model-distributions",
       "topic": "科學模型應呈現多個可行解而非只交最佳擬合",
-      "class": "ai-research",
+      "class": "research",
       "evidence": [
         {
           "id": "src-anthropic-science-models-20261106",
@@ -816,7 +896,7 @@
       },
       "drafts": null,
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "作為暫緩題材保留；若之後要寫，可用來源原圖或另做明確標示的機制圖。",
         "asset": {
           "status": "not_needed",
@@ -835,7 +915,7 @@
     {
       "id": "candidate-09-meta-specialized-muse-memory",
       "topic": "Meta 自報 Muse 專用模型的記憶與任務結果提升",
-      "class": "ai-research",
+      "class": "ai_news",
       "evidence": [
         {
           "id": "src-meta-muse-specialized-20261106",
@@ -905,7 +985,7 @@
       },
       "drafts": null,
       "media": {
-        "type": "text-only",
+        "type": "text_only",
         "reason": "不進 Queue；公司 eval 圖表不適合做成看似獨立驗證的配圖。",
         "asset": {
           "status": "not_needed",

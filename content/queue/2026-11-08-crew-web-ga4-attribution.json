@@ -4,8 +4,8 @@
   "created_date": "2026-11-08",
   "title": "GA4 不必收整串網址，也能留下活動來源",
   "category": "development",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-08",
     "time": "14:00",
@@ -22,7 +22,6 @@
     "title": "fix: restore privacy-safe GA4 UTM and referral attribution",
     "url": "https://github.com/magic76/magic76.github.io/pull/545"
   },
-  "references": [],
   "first_replies": {
     "facebook": {
       "text": "參考來源：GitHub · magic76/magic76.github.io PR #545｜fix: restore privacy-safe GA4 UTM and referral attribution\nhttps://github.com/magic76/magic76.github.io/pull/545",
@@ -44,7 +43,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-08 明確要求將今日既有 Queue 稿整理為可發布；保留原文案、純文字媒體選擇、requestId 與台北時間排程。"
   }
 }

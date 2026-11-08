@@ -4,8 +4,8 @@
   "created_date": "2026-11-08",
   "title": "Google 追蹤 Coding Agent 被舊 TODO 帶去支線",
   "category": "ai-research",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-08",
     "time": "21:00",
@@ -22,7 +22,6 @@
     "title": "Agent Distraction",
     "url": "https://developers.googleblog.com/agent-distraction/"
   },
-  "references": [],
   "first_replies": {
     "facebook": {
       "text": "參考來源：Google Developers Blog｜Agent Distraction\nhttps://developers.googleblog.com/agent-distraction/",
@@ -44,7 +43,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-08 明確要求將今日既有 Queue 稿整理為可發布；保留原文案、純文字媒體選擇、requestId 與台北時間排程。"
   }
 }

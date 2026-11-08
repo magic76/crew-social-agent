@@ -4,8 +4,8 @@
   "created_date": "2026-11-08",
   "title": "Crew Fortune 命格卡分享只帶必要資料",
   "category": "development",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-08",
     "time": "19:00",
@@ -22,7 +22,6 @@
     "title": "Evidence-backed Fortune identity cards, sharing and feedback",
     "url": "https://github.com/magic76/magic76.github.io/pull/546"
   },
-  "references": [],
   "first_replies": {
     "facebook": {
       "text": "參考來源：GitHub · magic76/magic76.github.io PR #546｜Evidence-backed Fortune identity cards, sharing and feedback\nhttps://github.com/magic76/magic76.github.io/pull/546",
@@ -44,7 +43,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-08 明確要求將今日既有 Queue 稿整理為可發布；保留原文案、純文字媒體選擇、requestId 與台北時間排程。"
   }
 }
