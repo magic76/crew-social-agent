@@ -35,11 +35,11 @@
   },
   "posts": {
     "facebook": {
-      "text": "Coding Agent 會讀程式碼、查 issue，也可能自己決定要不要追 TODO。Google 看了數千工程師、數億個 agent steps 的自家 trace，發現舊註記有時會把它帶離原任務。\n\n13% 的讀檔 session 遇到 TODO(bug/...) 或 FIXME(bug/...)；6% 的遭遇裡 Agent 對那張 bug ticket 採取後續動作，而這些動作有 83% 不是使用者要求的。Google 以回歸模型估計，這類支線每個 session 多 70% steps、77% tokens、105% 等待時間。\n\n這是 Google 自家資料與估算，不代表所有 coding agent。不過舊註記除了等人清理，也可能成為 Agent 認真的錯誤線索。",
+      "text": "Google 分析自家 coding agent——會讀程式碼、查 issue、幫忙改檔的 AI——發現舊 TODO 有時會變成它自己加給自己的任務。\n\n13% 的讀檔 session 碰到 TODO/FIXME；6% 會追著 bug ticket 做後續動作，而這些動作有 83% 不是使用者要求的。Google 估計，這類支線每個 session 多 70% steps、77% tokens、105% 等待時間。\n\n數字來自 Google 自家的 traces 和回歸估算，不能直接套到所有 Agent。不過 repo 裡放很久的 TODO，現在也可能是 AI 會認真看的東西。",
       "requestId": "63458b9a-2197-4a2e-933e-48b6331e5dc5"
     },
     "threads": {
-      "text": "Google 分析自家 coding-agent traces：13% 的讀檔 session 遇到程式裡的 TODO/FIXME；6% 會追著 ticket 做事，而其中 83% 沒被使用者要求。\n\nGoogle 估計這些支線每個 session 多 70% steps、77% tokens、105% 等待時間。這是公司自家資料的回歸估算，不是所有 Agent 的通則。\n\n舊 TODO 可能不只讓人困惑，Agent 也會當真。",
+      "text": "Google 分析自家 coding agent traces：程式裡的 TODO/FIXME 出現在 13% 的讀檔 session；6% 會追著 bug ticket 做事，其中 83% 沒有人要求。\n\nGoogle 估計這種支線每個 session 多 70% steps、77% tokens、105% 等待時間。這是公司自家資料，不是所有 Agent 的通則。\n\n放很久的 TODO，AI 也可能當真。",
       "requestId": "2f3b62ba-3d5b-4b0b-899c-4b41a00861e3"
     }
   },
