@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "crew-lab-20261108-crew-car-camera-datagram",
   "created_date": "2026-11-08",
-  "title": "Crew Car 把相機命令回覆和 FPV 影像分開算",
+  "title": "UDP 有封包，FPV 為什麼還是零？",
   "category": "development",
   "status": "draft",
   "mode": "dry_run",
@@ -35,11 +35,11 @@
   },
   "posts": {
     "facebook": {
-      "text": "Crew Car 是我用 Gemini Live 控制的小車，手機端還要接收車上的 FPV 影像。\n\n一份手機熱點 log 看起來有收到相機資料，但每次 START 後只有命令埠 23459 回了一個封包。這不算有畫面。關閉相機時，Android 還在 UI thread 直接送 UDP STOP，結果拋出 NetworkOnMainThreadException。\n\n現在把命令回覆、影片片段和無效封包分開記，STOP 也挪到背景執行緒。\n\n至少「有回應」和「有畫面」不會再算成同一件事。手機熱點能不能轉送 FPV，這次修改沒有保證。",
+      "text": "Crew Car 是把 Gemini Live 接上玩具車的 Android 專案，手機還要收車上的 FPV 影像。\n\n做 UDP 影像除錯時，log 裡出現 `rx packets=1` 不代表影格到了。Crew Car 的真實紀錄只有一包從相機命令埠 23459 回來；它可能只是 START 的回覆，不能當成影片已收到的證據。\n\n這次 PR 把 `cameraReplies`、`video`、`invalid` 分開計數。\n\n實用判斷：先看來源埠和封包格式，再對照直連小車與手機熱點的 `video` 計數。如果直連有影片封包、熱點只有 `cameraReplies>0、video=0`，先查熱點的 NAT 路徑；還沒收到有效影片，就先怪 H.265 解碼器也太早。",
       "requestId": "febde5d6-2bb6-471b-be1c-c2cc7bcec068"
     },
     "threads": {
-      "text": "Crew Car 是我用 Gemini Live 控制的小車。log 裡有相機回覆，但只有命令埠 23459 的單一封包，不能當 FPV 影像；關閉時還抓到 UI thread 直接送 UDP STOP 的錯誤。\n\n現在分開記命令回覆、影片片段和無效封包，STOP 改交背景執行緒。\n\n手機熱點能不能轉送 FPV，這次修正沒有保證。",
+      "text": "Crew Car 是把 Gemini Live 接上玩具車的 Android 專案，手機還要收 FPV。\n\nUDP log 出現 `rx packets=1`，不代表影片到了。真實紀錄只有一包從相機命令埠 23459 回來，可能只是 START 回覆。\n\n這次 PR 把 `cameraReplies`、`video`、`invalid` 分開計數。若直連小車有 `video`，手機熱點卻只有 `cameraReplies>0、video=0`，先查 NAT 路徑；有效影片都還沒收到，先怪 H.265 解碼器太早。",
       "requestId": "64be02c9-d2ac-449f-a532-de087fd38c08"
     }
   },

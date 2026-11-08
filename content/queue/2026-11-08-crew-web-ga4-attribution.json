@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261108-crew-web-ga4-attribution",
+  "created_date": "2026-11-08",
+  "title": "GA4 不必收整串網址，也能留下活動來源",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-08",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/magic76.github.io PR #545",
+    "published_date": "2026-11-07",
+    "title": "fix: restore privacy-safe GA4 UTM and referral attribution",
+    "url": "https://github.com/magic76/magic76.github.io/pull/545"
+  },
+  "references": [],
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #545｜fix: restore privacy-safe GA4 UTM and referral attribution\nhttps://github.com/magic76/magic76.github.io/pull/545",
+      "requestId": "14d65f26-a87a-4b23-b6d3-a9fcae19db95"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #545｜fix: restore privacy-safe GA4 UTM and referral attribution\nhttps://github.com/magic76/magic76.github.io/pull/545",
+      "requestId": "1253b0c5-c0fd-42a3-89af-3b835e4ac1f8"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Web 是放 AI 聊天、語言學習和遊戲的網站。從社群貼文點進來的訪客，如果被 GA4 算成 direct，就很難知道是哪個連結帶來的。\n\n這次修到的原因在追蹤碼：原本把 `page_referrer` 清空，也把網址裡所有 UTM 都拿掉。修正後只留下格式合規的來源、媒介、活動等短標籤；外站來源只留網域，原始 query、`utm_term` 和 click ID 不送。\n\n想知道哪篇貼文帶來流量，不必把整串網址交給分析工具。",
+      "requestId": "91a18206-74ea-4516-8aaf-1e24c5bd4b90"
+    },
+    "threads": {
+      "text": "Crew Web 是放 AI 聊天、語言學習和遊戲的網站。從 FB／Threads 點進來，GA4 卻可能把來源算成 direct。\n\n原追蹤碼把 referrer 清空、UTM 全刪了。修正後只留格式合規的來源／媒介／活動標籤，外站只留網域；原始 query、`utm_term` 和 click ID 不送。\n\n要看哪個活動帶來流量，不代表整串網址都要收。",
+      "requestId": "1d0e0925-8a88-4ddc-9a7b-84d0f4c77d40"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+  }
+}

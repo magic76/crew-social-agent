@@ -17,12 +17,12 @@
       "近期開發稿常先以 Crew 專案名稱開場；今日先給產品／用途，再落到事件。"
     ],
     "stock_phrase_hits": [],
-    "note": "檢查過前三日 18 篇 Queue 與三份 review。今日避免重用近期的 Crew Souls、Pocket API、首頁打字動畫、Agent memory、BioBasicsBench、PDD Kit 題材；不用固定問句、AI 新聞週報腔或同一種反轉結尾。"
+    "note": "檢查過前三日 18 篇 Queue 與三份 review。今日避免重用近期的 Crew Souls、Pocket API、首頁打字動畫、Agent memory、BioBasicsBench、PDD Kit 題材；不用固定問句、AI 新聞週報腔或同一種反轉結尾。收到使用者對 12/14/16 草稿的明確回饋後，將微型選單稿暫緩，14:00 改選 GA4 歸因題；這是當日修稿，不擴成額外永久文風規則。"
   },
   "candidates": [
     {
       "id": "candidate-01-crew-car-camera-datagram",
-      "topic": "Crew Car 把相機命令回覆和 FPV 影像分開算",
+      "topic": "UDP 封包有到，Crew Car 的 FPV 為什麼還是零？",
       "class": "development",
       "evidence": [
         {
@@ -55,11 +55,11 @@
         }
       ],
       "reader_context": "Crew Car 是以 Gemini Live 控制的玩具車專案，手機端也需要接收車上的 FPV 影像。",
-      "story_spine": "手機熱點記錄看似收到相機資料 → 收到的其實只有命令埠封包，且關閉相機有 UI thread 網路錯誤 → 現在分辨命令回覆／影像片段並把 STOP 移到背景執行緒 → 不把封包回覆誤當成畫面已通。",
+      "story_spine": "log 顯示封包但沒有影格 → 真實來源埠符合相機命令埠且可能只是回覆 → 加入命令回覆／影片／無效封包分類 → 讀者可以用有效影片計數判斷先查熱點路徑還是後續影格處理。",
       "decision": {
         "outcome": "selected",
         "reason_code": "specific_diagnostic_and_scope_boundary",
-        "reason": "真實記錄揭露『有封包』不等於『有影像』，修正也明確限制在封包判讀和停止流程，不誇稱已打通熱點 FPV。"
+        "reason": "素材提供可複用的排查方法：先辨識 UDP 封包是否為有效影片，再比較直連與手機熱點計數；沒有把『收到一包』誇寫成影像已通。"
       },
       "quality_review": {
         "truth": {
@@ -68,7 +68,7 @@
         },
         "interest": {
           "status": "pass",
-          "reason": "把一個容易誤判的 UDP 回覆和真正影像區分，是具體工程反差。"
+          "reason": "讀者可直接帶走一個除錯順序：分辨命令回覆與有效影片，並以直連／熱點的 video 計數縮小範圍。"
         },
         "personal_relevance": {
           "status": "pass",
@@ -76,11 +76,11 @@
         },
         "opening": {
           "status": "pass",
-          "reason": "開頭先介紹 Crew Car 和手機影像用途，再交代 log 的誤判。"
+          "reason": "先說 Crew Car 是什麼、手機要收什麼，再解釋 rx packets=1 不代表影格到達。"
         },
         "template_risk": {
           "status": "pass",
-          "reason": "與前三日的網站 UI／AI 研究稿不同，採用封包證據和修正邊界，沒有固定問句開頭。"
+          "reason": "以可操作的封包分類和對照步驟為主，不只報告作者改了什麼，也不靠空泛的自我感想收尾。"
         },
         "media_fit": {
           "status": "pass",
@@ -99,10 +99,10 @@
       },
       "drafts": {
         "facebook": {
-          "text": "Crew Car 是我用 Gemini Live 控制的小車，手機端還要接收車上的 FPV 影像。\n\n一份手機熱點 log 看起來有收到相機資料，但每次 START 後只有命令埠 23459 回了一個封包。這不算有畫面。關閉相機時，Android 還在 UI thread 直接送 UDP STOP，結果拋出 NetworkOnMainThreadException。\n\n現在把命令回覆、影片片段和無效封包分開記，STOP 也挪到背景執行緒。\n\n至少「有回應」和「有畫面」不會再算成同一件事。手機熱點能不能轉送 FPV，這次修改沒有保證。"
+          "text": "Crew Car 是把 Gemini Live 接上玩具車的 Android 專案，手機還要收車上的 FPV 影像。\n\n做 UDP 影像除錯時，log 裡出現 `rx packets=1` 不代表影格到了。Crew Car 的真實紀錄只有一包從相機命令埠 23459 回來；它可能只是 START 的回覆，不能當成影片已收到的證據。\n\n這次 PR 把 `cameraReplies`、`video`、`invalid` 分開計數。\n\n實用判斷：先看來源埠和封包格式，再對照直連小車與手機熱點的 `video` 計數。如果直連有影片封包、熱點只有 `cameraReplies>0、video=0`，先查熱點的 NAT 路徑；還沒收到有效影片，就先怪 H.265 解碼器也太早。"
         },
         "threads": {
-          "text": "Crew Car 是我用 Gemini Live 控制的小車。log 裡有相機回覆，但只有命令埠 23459 的單一封包，不能當 FPV 影像；關閉時還抓到 UI thread 直接送 UDP STOP 的錯誤。\n\n現在分開記命令回覆、影片片段和無效封包，STOP 改交背景執行緒。\n\n手機熱點能不能轉送 FPV，這次修正沒有保證。"
+          "text": "Crew Car 是把 Gemini Live 接上玩具車的 Android 專案，手機還要收 FPV。\n\nUDP log 出現 `rx packets=1`，不代表影片到了。真實紀錄只有一包從相機命令埠 23459 回來，可能只是 START 回覆。\n\n這次 PR 把 `cameraReplies`、`video`、`invalid` 分開計數。若直連小車有 `video`，手機熱點卻只有 `cameraReplies>0、video=0`，先查 NAT 路徑；有效影片都還沒收到，先怪 H.265 解碼器太早。"
         }
       },
       "media": {
@@ -159,9 +159,9 @@
       "reader_context": "Crew Web 是把 AI 聊天、學習和遊戲入口放在一起的網站，功能目錄用分類展開 32 個直接入口。",
       "story_spine": "多功能目錄的分類展開狀態不夠直覺 → 以加號／減號直接表示收合／展開 → 保留分類、目的地與輔助技術狀態 → 使用者不必猜圖示方向。",
       "decision": {
-        "outcome": "selected",
-        "reason_code": "small_visible_interaction_fix",
-        "reason": "改動範圍小但改善的是選單裡明確的下一步提示；有 32 個入口的實際目錄背景，不是抽象 UI 微調。"
+        "outcome": "hold",
+        "reason_code": "owner_feedback_low_reader_value",
+        "reason": "使用者明確拒絕本日這版文案，指出內容像自言自語且資訊不足；今天不排程。改動本身仍有可核實素材，日後若能補上真實使用情境或讀者可帶走的結果再評估。"
       },
       "quality_review": {
         "truth": {
@@ -169,8 +169,8 @@
           "reason": "32 個入口、5 組分類、加減號狀態與 aria-expanded 等細節均由 PR #543 描述及對應程式改動支持。"
         },
         "interest": {
-          "status": "pass",
-          "reason": "上下箭頭換成加減號，讀者能立即看懂變化和它解決的困惑。"
+          "status": "revise",
+          "reason": "使用者回饋指出原稿的加減號微調沒有提供足夠讀者價值；保留在候選紀錄，不把一次回饋擴大為通用規則。"
         },
         "personal_relevance": {
           "status": "pass",
@@ -199,14 +199,7 @@
         "stock_phrase_hits": [],
         "note": "比較前三日 Queue 與 review 的選題和開頭；本題沒有重複既有事件或文案句型。"
       },
-      "drafts": {
-        "facebook": {
-          "text": "Crew Web 是把 AI 聊天、學習和遊戲放在一起的網站，功能目錄裡有 32 個入口。\n\n分類以前靠上下箭頭表示開或關。現在收起來是「＋」，展開是「－」；單一功能連結仍留著右箭頭。\n\n一個小改動，省掉一點猜箭頭的時間。"
-        },
-        "threads": {
-          "text": "Crew Web 的功能目錄有 32 個入口。分類按鈕以前是上下箭頭，現在收起來顯示「＋」，打開是「－」。\n\n狀態直接寫在圖示上，箭頭不用再考大家方向感。"
-        }
-      },
+      "drafts": null,
       "media": {
         "type": "text-only",
         "reason": "這個故事的價值在控制狀態變得更清楚，文字能直接說明；未取得真實截圖。",
@@ -221,12 +214,12 @@
         "status": "draft_handoff_only",
         "authorization_basis": null,
         "publish_permitted": false,
-        "queue_path": "content/queue/2026-11-08-crew-web-directory-plus-minus.json"
+        "queue_path": null
       }
     },
     {
       "id": "candidate-03-crew-web-pwa-icon-version",
-      "topic": "Crew Web 安裝版圖示改用新網址更新",
+      "topic": "PWA 換了圖示還是舊圖？Chrome 144 要看 manifest 和更新確認",
       "class": "development",
       "evidence": [
         {
@@ -268,11 +261,11 @@
         }
       ],
       "reader_context": "Crew Web 是可加到手機主畫面的網站；安裝後的圖示更新要同時考慮瀏覽器快取與使用者確認。",
-      "story_spine": "網站圖示檔內容換了但網址沒換 → Chrome 144 對未變的 icon URL 不重新下載 → 使用新版本 URL 並保留舊資產 → 修正圖示更新的來源識別，但不承諾每台裝置立即換圖。",
+      "story_spine": "已安裝 PWA 的圖示可能仍舊 → Chrome 144 以 manifest icons 欄位變動觸發圖示更新，且身分更新由使用者確認 → Crew Web PR 改用版本化網址並保留舊檔 → 讀者可先檢查 manifest URL，並知道去哪裡確認更新。",
       "decision": {
         "outcome": "selected",
         "reason_code": "browser_behavior_meets_project_fix",
-        "reason": "瀏覽器規則解釋了一個使用者看得到的安裝圖示問題，Crew Web 的實際修改也有對應到規則；稿件會保留使用者確認限制。"
+        "reason": "改寫後提供兩個可操作資訊：icon URL 不變可能不觸發重新下載，且使用者可從 Review app update 確認圖示變更；Crew PR #549 是具體對應案例。"
       },
       "quality_review": {
         "truth": {
@@ -281,7 +274,7 @@
         },
         "interest": {
           "status": "pass",
-          "reason": "換了圖檔卻仍看到舊圖是具體且令人意外的 PWA 問題。"
+          "reason": "不是只記錄替換 icon URL，而是回答讀者遇到舊圖時能查什麼、去哪裡確認更新。"
         },
         "personal_relevance": {
           "status": "pass",
@@ -289,11 +282,11 @@
         },
         "opening": {
           "status": "pass",
-          "reason": "先介紹可安裝的網站，再說手機主畫面可能保留舊圖的原因。"
+          "reason": "先描述 Android 主畫面圖示仍舊這個常見問題，再說 Chrome 的規則和 Crew Web 的改動。"
         },
         "template_risk": {
           "status": "pass",
-          "reason": "與最近貼文的 AI 研究和首頁導覽故事不同，主軸是瀏覽器 icon URL 更新規則。"
+          "reason": "給出 manifest 檢查和更新確認步驟，避免以『我換了網址』作為唯一內容。"
         },
         "media_fit": {
           "status": "pass",
@@ -312,10 +305,10 @@
       },
       "drafts": {
         "facebook": {
-          "text": "Crew Web 可以加到手機主畫面，像 App 一樣打開。換了圖示，已安裝的 PWA 卻可能還是舊圖。\n\nChrome 144 起，manifest 裡的圖示網址如果沒變，就不會重新下載比對。所以我把新版圖示改成帶版本的新網址，也保留舊路徑，避免舊安裝版本找不到檔案。\n\n想換一張 icon，最後還得先換網址。"
+          "text": "網站加到 Android 主畫面後換了圖示，還看到舊圖？不一定是手機快取卡住。\n\nChrome 144 起，manifest 裡的 `icons` 欄位沒變就不會重新下載圖檔比對。若圖示網址變了，名稱或圖示更新可能會出現在 App 三點選單的「Review app update」，由使用者決定要不要套用。\n\nCrew Web PR #549 把新版圖示改成版本化網址，也保留舊檔。PWA 換圖時，先檢查 manifest 是否指向新網址；只覆蓋同名圖片不一定足夠。"
         },
         "threads": {
-          "text": "Crew Web 可以加到手機主畫面。換了圖，已安裝的 PWA 還可能顯示舊圖。\n\nChrome 144 起，icon URL 沒變就不重新下載比對。我把新版圖示換成版本化網址，舊路徑照留，避免舊安裝版找不到檔案。\n\n換圖一事，最後要從網址下手。"
+          "text": "Android 主畫面的 PWA 換過圖，仍看到舊 icon？Chrome 144 起，manifest 的 `icons` 欄位沒變就不重新下載比對。\n\n若圖示網址變了，Chrome 會把名稱或圖示更新放在 App 三點選單的「Review app update」，讓使用者確認。Crew Web PR #549 也把新圖示換成版本化網址，舊檔照留。\n\n換圖先檢查 manifest 指向的網址；只覆蓋同名檔案不一定會觸發更新。"
         }
       },
       "media": {
@@ -676,37 +669,37 @@
           ]
         }
       ],
-      "reader_context": "Crew Web 是作者的多功能 AI 網站；GA4 用來了解訪客是從哪個外部連結進站。",
-      "story_spine": "UTM 與 referrer 被清掉會把部分導流誤歸 direct → 修正保留經允許清單過濾的歸因欄位 → 同時排除原始查詢和 click IDs → 對讀者有隱私與量測價值，但沒有直接可見的用戶端結果。",
+      "reader_context": "Crew Web 是把 AI 聊天、語言學習和遊戲放在一起的網站；GA4 用來查看哪些外部連結帶來訪客。",
+      "story_spine": "社群連結來訪可能因 referrer 與 UTM 被清除而歸為 direct → 追蹤碼只保留允許格式的短活動欄位與外部網域 → 排除原始 query、utm_term 和 click IDs → 讀者能留住歸因所需資訊，又少傳不必要的網址資料。",
       "decision": {
-        "outcome": "hold",
-        "reason_code": "internal_measurement_and_deploy_unknown",
-        "reason": "程式修正本身有明確隱私設計，但受益主要是站內歸因資料，且目前無法核實已部署；先留在研究與開發紀錄，不占今日社群時段。"
+        "outcome": "selected",
+        "reason_code": "practical_reader_takeaway_after_owner_feedback",
+        "reason": "取代今天讀者價值不足的目錄微調稿。這篇能讓讀者理解 GA4 為何可能把社群來訪算成 direct，也提供一個隱私較精簡的實務做法：保留允許的 UTM 標籤，只傳外部網域。文案聚焦問題與可帶走資訊，不宣稱部署或分析成效已驗證。"
       },
       "quality_review": {
         "truth": {
           "status": "pass",
-          "reason": "舊行為、新 allowlist 和無法回填舊資料均由 PR #545 描述。"
+          "reason": "PR #545 直接說明舊版清空 page_referrer 並刪除所有 UTM，新版只保留指定格式欄位與外站 origin；文章沒有聲稱部署後流量數據已改善。"
         },
         "interest": {
-          "status": "revise",
-          "reason": "資料最小化值得保留，但短文容易變成 analytics 變更紀錄，缺少外部可感知結果。"
+          "status": "pass",
+          "reason": "以社群流量被算成 direct 的具體問題開場，並給出保留歸因、排除原始 query 和 click ID 的可用做法。"
         },
         "personal_relevance": {
           "status": "pass",
-          "reason": "是 Crew Web 實際歸因處理改動。"
+          "reason": "素材來自 Crew Web 實際 GA4 修正；同一做法也能幫其他網站作者檢查自己的來源歸因。"
         },
         "opening": {
-          "status": "revise",
-          "reason": "可先解釋 GA4 導流，但仍需避免以內部欄位作為主要 hook。"
+          "status": "pass",
+          "reason": "第一句先介紹 Crew Web 是什麼，接著點出 GA4 direct 歸因問題，讀者不需認得專案名也能理解。"
         },
         "template_risk": {
           "status": "pass",
-          "reason": "題材和近期文章不同，但不值得為追求新主題硬湊。"
+          "reason": "提供問題成因與處理方式，不靠『我又改了一個東西』的自我旁白、空泛反轉或固定提問。"
         },
         "media_fit": {
           "status": "pass",
-          "reason": "如果日後採用可用文字或真實請求範例；目前不需要產生追蹤儀表板圖。"
+          "reason": "內容是追蹤欄位白名單與隱私邊界，純文字比未經實際 Network 擷取的示意截圖更可信。"
         }
       },
       "template_scan": {
@@ -719,10 +712,17 @@
         "stock_phrase_hits": [],
         "note": "與 11/5–11/7 Queue 去重；裁決依本日讀者價值、重複性與來源限制作成。"
       },
-      "drafts": null,
+      "drafts": {
+        "facebook": {
+          "text": "Crew Web 是放 AI 聊天、語言學習和遊戲的網站。從社群貼文點進來的訪客，如果被 GA4 算成 direct，就很難知道是哪個連結帶來的。\n\n這次修到的原因在追蹤碼：原本把 `page_referrer` 清空，也把網址裡所有 UTM 都拿掉。修正後只留下格式合規的來源、媒介、活動等短標籤；外站來源只留網域，原始 query、`utm_term` 和 click ID 不送。\n\n想知道哪篇貼文帶來流量，不必把整串網址交給分析工具。"
+        },
+        "threads": {
+          "text": "Crew Web 是放 AI 聊天、語言學習和遊戲的網站。從 FB／Threads 點進來，GA4 卻可能把來源算成 direct。\n\n原追蹤碼把 referrer 清空、UTM 全刪了。修正後只留格式合規的來源／媒介／活動標籤，外站只留網域；原始 query、`utm_term` 和 click ID 不送。\n\n要看哪個活動帶來流量，不代表整串網址都要收。"
+        }
+      },
       "media": {
         "type": "text-only",
-        "reason": "保留為候選，不進 Queue；若重啟需先確認部署狀態和可公開的 Network 證據。",
+        "reason": "讓讀者看懂歸因與資料最小化的做法即可；沒有真實 Network capture，不製作示意儀表板圖。",
         "asset": {
           "status": "not_needed",
           "path": null,
@@ -734,7 +734,7 @@
         "status": "draft_handoff_only",
         "authorization_basis": null,
         "publish_permitted": false,
-        "queue_path": null
+        "queue_path": "content/queue/2026-11-08-crew-web-ga4-attribution.json"
       }
     },
     {

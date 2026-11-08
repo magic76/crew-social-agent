@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "crew-lab-20261108-crew-web-pwa-icon-version",
   "created_date": "2026-11-08",
-  "title": "Crew Web 安裝版圖示改用新網址更新",
+  "title": "Chrome 144 更新 PWA 圖示要先檢查 manifest",
   "category": "development",
   "status": "draft",
   "mode": "dry_run",
@@ -42,11 +42,11 @@
   },
   "posts": {
     "facebook": {
-      "text": "Crew Web 可以加到手機主畫面，像 App 一樣打開。換了圖示，已安裝的 PWA 卻可能還是舊圖。\n\nChrome 144 起，manifest 裡的圖示網址如果沒變，就不會重新下載比對。所以我把新版圖示改成帶版本的新網址，也保留舊路徑，避免舊安裝版本找不到檔案。\n\n想換一張 icon，最後還得先換網址。",
+      "text": "網站加到 Android 主畫面後換了圖示，還看到舊圖？不一定是手機快取卡住。\n\nChrome 144 起，manifest 裡的 `icons` 欄位沒變就不會重新下載圖檔比對。若圖示網址變了，名稱或圖示更新可能會出現在 App 三點選單的「Review app update」，由使用者決定要不要套用。\n\nCrew Web PR #549 把新版圖示改成版本化網址，也保留舊檔。PWA 換圖時，先檢查 manifest 是否指向新網址；只覆蓋同名圖片不一定足夠。",
       "requestId": "56c0f2ab-a243-4e76-b86c-9358b45befb9"
     },
     "threads": {
-      "text": "Crew Web 可以加到手機主畫面。換了圖，已安裝的 PWA 還可能顯示舊圖。\n\nChrome 144 起，icon URL 沒變就不重新下載比對。我把新版圖示換成版本化網址，舊路徑照留，避免舊安裝版找不到檔案。\n\n換圖一事，最後要從網址下手。",
+      "text": "Android 主畫面的 PWA 換過圖，仍看到舊 icon？Chrome 144 起，manifest 的 `icons` 欄位沒變就不重新下載比對。\n\n若圖示網址變了，Chrome 會把名稱或圖示更新放在 App 三點選單的「Review app update」，讓使用者確認。Crew Web PR #549 也把新圖示換成版本化網址，舊檔照留。\n\n換圖先檢查 manifest 指向的網址；只覆蓋同名檔案不一定會觸發更新。",
       "requestId": "4783f213-56eb-495e-87f3-cbf54e6e3efb"
     }
   },

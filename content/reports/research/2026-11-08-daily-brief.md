@@ -41,15 +41,15 @@ Meta 表示將 Muse Wonder 訓練出的專用模型帶到 Muse 與 Meta AI。Met
 | 2026-11-07 | [Crew Web PR #543](https://github.com/magic76/magic76.github.io/pull/543) | 5 組分類、32 個直接入口；分類收合／展開改成 +／−，保留 aria-expanded 與 reduced-motion。 |
 | 2026-11-07 | [Crew Web PR #549](https://github.com/magic76/magic76.github.io/pull/549) | PWA 圖示路徑改用 crew-teacher-v2-*，保留舊路徑；依 Chrome 144 更新 icon URL 比對方式處理安裝版圖示更新。Android 身分圖示可能仍需使用者確認。 |
 | 2026-11-07 | [Crew Web PR #546](https://github.com/magic76/magic76.github.io/pull/546) | 分享命格卡只帶公開身份 DTO、卡片文案與精簡依據，不放出生日期／時間／地點及完整命盤；是自我探索符號，不宣稱科學人格診斷。 |
-| 2026-11-07 | [Crew Web PR #545](https://github.com/magic76/magic76.github.io/pull/545) | GA4 修復導流歸因同時建立 UTM allowlist、排除原始 query 和 click ID；暫緩，因外部讀者價值較弱且無法核實部署。 |
+| 2026-11-07 | [Crew Web PR #545](https://github.com/magic76/magic76.github.io/pull/545) | GA4 修復導流歸因，同時建立 UTM allowlist、排除原始 query 和 click ID；依使用者回饋改寫成 14:00 題材，提供 direct 歸因排查與資料最小化做法。文案只描述 PR，不宣稱部署或成效已驗證。 |
 
 PR 描述內有測試計畫或新增測試檔，不等於我們取得了通過結果；本文不宣稱這些修改已部署或實機驗收通過。
 
 ## 候選裁決與今日六篇
 
-今日完成六個不同主題的 Facebook／Threads 草稿：Crew Car 封包誤判、Crew Web 分類控制、PWA 圖示 URL、Fortune 分享資料最小化、Google Agent Distraction、Gemini Omni model card。編輯時 10:00 時段已過，沒有回填過期時間；前五題分別排在 12:00、14:00、16:00、19:00、21:00，Gemini Omni 草稿留在 review，不建立過期 Queue。其餘 GA4 歸因、Anthropic 科學建模先暫緩，Meta 專用模型公告因公司內部評測及與昨日記憶稿重疊淘汰。完整 claim→evidence、六項品質理由、雙平台定稿與媒體決策見 [今日 review](https://github.com/magic76/crew-social-agent/blob/main/content/editorial/reviews/2026-11-08-daily-review.json)。
+今日六個不同主題的 Facebook／Threads 草稿為：Crew Car 封包判讀、Crew Web 的 GA4 社群歸因、PWA 圖示更新確認、Fortune 分享資料最小化、Google Agent Distraction、Gemini Omni model card。使用者指出 12:00、14:00、16:00 原稿內容像自言自語且資訊不足；因此 12:00 加入直連／熱點封包判讀步驟，14:00 由目錄加減號改成 GA4 歸因，16:00 加入 Chrome 144 的 manifest 與 Review app update 操作。加減號題留在候選紀錄但不排程。編輯時 10:00 已過，沒有回填過期時間；前五題排在 12:00、14:00、16:00、19:00、21:00，Gemini Omni 草稿留在 review，不建立過期 Queue。Anthropic 科學建模暫緩；Meta 專用模型公告因公司內部評測及與昨日記憶稿重疊淘汰。完整 claim→evidence、六項品質理由、雙平台定稿與媒體決策見 [今日 review](https://github.com/magic76/crew-social-agent/blob/main/content/editorial/reviews/2026-11-08-daily-review.json)。
 
-六個主題都選純文字：目前沒有可核實的 Crew Car 實機畫面或 Crew Web 手機前後截圖；研究則沒有可公開 trace 或使用者實測片段。沒有為湊數生成圖。五個 Queue 都是 `status=draft`、`mode=dry_run`、`safety.publish_permitted=false`，排在今日尚未過期的 12:00、14:00、16:00、19:00、21:00；第六篇維持 review-only draft。未送出任何平台 API 或 Local Publisher 任務。
+六個主題都選純文字：目前沒有可核實的 Crew Car 實機畫面或 Crew Web 手機前後截圖；研究則沒有可公開 trace 或使用者實測片段。沒有為湊數生成圖。五個 Queue 都是 `status=draft`、`mode=dry_run`、`safety.publish_permitted=false`，排在今日尚未過期的 12:00、14:00、16:00、19:00、21:00；第六篇維持 review-only draft。12:00、14:00、16:00 依使用者回饋修訂，改稿內容仍未獲發布授權。未送出任何平台 API 或 Local Publisher 任務。
 
 ## Local Publisher／結構檢查
 
