@@ -1,0 +1,913 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-09",
+  "review_id": "2026-11-09-daily-review",
+  "selection_policy": {
+    "minimum_selected": 6,
+    "target_selected": 6,
+    "unit": "distinct_topics_not_platform_copies"
+  },
+  "formula_scan": {
+    "compared_queue_dates": [
+      "2026-11-06",
+      "2026-11-07",
+      "2026-11-08"
+    ],
+    "repeated_openers": [
+      "近期多篇以 Crew 專案名稱直接開場；今天先給讀者問題或使用情境。"
+    ],
+    "stock_phrase_hits": [],
+    "note": "避開近三日已用的 Crew Car、GA4、PWA icon、Fortune 分享、Agent memory、BioBasicsBench、Crew Souls 等題材；六篇各自提供具體判斷或設計原則，不用固定問句或自言自語式感想。PWA 故障 PR 因與 11/8 PWA 題接近而轉為暫緩。"
+  },
+  "candidates": [
+    {
+      "id": "agent-review-before-merge",
+      "topic": "Agent 寫得比人快時，審查不能晚於合併",
+      "class": "practical",
+      "evidence": [
+        {
+          "id": "src-agent-review-before-merge",
+          "type": "primary_case_study",
+          "label": "Rush｜When an Agent Makes a Mistake Twice, We Make It a Check",
+          "url": "https://getrush.ai/blog/two-of-us-and-a-fleet-of-agents/",
+          "checked_at": "2026-11-09",
+          "published_date": "2026-11-07"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Rush 團隊自述兩人一年合併 11,040 個 PR，2026 年 10 月有 82% commit 帶有 agent 簽名。",
+          "evidence_ids": [
+            "src-agent-review-before-merge"
+          ]
+        },
+        {
+          "text": "文中記錄雲端 reviewer 審查 259 個 PR，其中 101 次評論晚於 merge。",
+          "evidence_ids": [
+            "src-agent-review-before-merge"
+          ]
+        },
+        {
+          "text": "32 個 PR 在 reviewer 最新判定仍需修改時就已被合併；這是單一團隊案例，不是跨團隊實驗。",
+          "evidence_ids": [
+            "src-agent-review-before-merge"
+          ]
+        }
+      ],
+      "reader_context": "Rush 是一個由兩人使用大量 coding agents 開發產品的工程團隊，文章公開回顧其審查流程。",
+      "story_spine": "Agent 讓 PR 量暴增 → reviewer 的意見多次晚於 merge → 把重複錯誤轉成自動檢查並讓審查先於合併 → 讀者可調整自己的 agent gate。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "一手團隊案例有具體 PR、審查延遲與錯誤數字，能轉成可操作的合併門檻，不只是稱讚 Agent 產量。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "所有數字均標明來自 Rush 單一團隊自述，不外推為普遍產業結論。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "101 次評論晚於 merge 與 32 個仍需修改的 PR 是明確流程風險。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接對應使用者以 manager、agents 與 subagents 並行開發的工作方式。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先說 reviewer 來不及的具體後果，再交代團隊與數字。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不是新聞摘要或自我感想，核心是合併門檻與自動檢查。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "數字與流程用文字即可準確表達，沒有必要製造團隊儀表板。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較最近三天 Queue 與 review；未重複既有題目、開頭或固定反轉結尾。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Agent 寫程式的速度上來後，最容易落後的不是開發，是審查。\n\nRush 是一個由兩人帶著大量 coding agents 開發產品的團隊。他們回顧一年合併 11,040 個 PR；光 10 月，就有 82% commit 帶有 agent 簽名。\n\n麻煩也很具體：雲端 reviewer 審查了 259 個 PR，其中 101 次評論出現在 merge 之後；還有 32 個 PR，在 reviewer 最新判定仍需要修改時就先合併了。文中甚至記錄一次真機檢查，才發現「已修好」的修改根本沒生效。\n\n這不是 Agent 不能用，而是流程不能只追產量。reviewer 必須變成 merge 前的 gate；同一種錯誤出現第二次，就把它做成自動檢查，別再靠下一個人記得。\n\n兩個人可以帶很多 Agent，但合併按鈕還是得知道誰說了算。"
+        },
+        "threads": {
+          "text": "Agent 寫得越快，reviewer 越可能來不及。\n\nRush 兩人團隊一年合併 11,040 個 PR。雲端 reviewer 審查 259 個 PR，其中 101 次評論晚於 merge；32 個 PR 在最新判定仍需修改時就先合併了。\n\n他們的做法很實際：review 要成為 merge 前的 gate；同一錯誤出現第二次，就做成自動檢查。\n\n多 Agent 的瓶頸很快就不再是寫程式，而是誰有權讓它進主幹。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Rush｜When an Agent Makes a Mistake Twice, We Make It a Check\nhttps://getrush.ai/blog/two-of-us-and-a-fleet-of-agents/",
+            "requestId": "60f57890-6e50-4192-8ec3-578b686aaa94"
+          },
+          "threads": {
+            "text": "參考來源：Rush｜When an Agent Makes a Mistake Twice, We Make It a Check\nhttps://getrush.ai/blog/two-of-us-and-a-fleet-of-agents/",
+            "requestId": "61414808-88e8-4d62-a422-ffa038158040"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "數字與流程用文字即可準確表達；沒有必要生成假的團隊儀表板或 PR 畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-09",
+          "time": "10:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "learning-language-confirmation",
+      "topic": "學語言網站第一次進來，先確認目標語言再開始",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-learning-language-confirmation",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #567",
+          "url": "https://github.com/magic76/magic76.github.io/pull/567",
+          "checked_at": "2026-11-09",
+          "published_date": "2026-11-08"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #567 已合併一個 Learn routes 的一次性目標語言確認流程。",
+          "evidence_ids": [
+            "src-learning-language-confirmation"
+          ]
+        },
+        {
+          "text": "選單提供 12 種目標語言並涵蓋 11 個 UI locale。",
+          "evidence_ids": [
+            "src-learning-language-confirmation"
+          ]
+        },
+        {
+          "text": "既有 Friend 或 Teacher 選擇會略過提示，Teacher 與 Friends 共用目標語言。",
+          "evidence_ids": [
+            "src-learning-language-confirmation"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 的 Learn 區讓使用者選 AI 老師或朋友練習外語。",
+      "story_spine": "入口直接開始容易選錯語言 → 第一次只問一個必要問題 → 既有選擇不再重問 → 讀者可看見 onboarding 減法。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "它不是新增說明頁，而是用一次確認修正後續整段學習脈絡，讀者價值明確。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "合併狀態與 12 語言、11 locale、略過規則均由 PR 直接支持。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "一次選錯會讓老師與朋友整段對話跑偏，問題具體。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接關聯 Crew Web 語言學習入口。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "以新使用者第一個選擇切入，不從功能名稱開始。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "避免自我對話與『做了一個小功能』式流水帳。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字能完整說明狀態與決策，不需製造假選單。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較最近三天 Queue 與 review；未重複既有題目、開頭或固定反轉結尾。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "語言學習網站一打開就開始聊天，看起來很快；如果一開始選錯語言，後面每一步都很快地走錯。\n\nCrew Web 的 Learn 區可以選 AI 老師或朋友練口說。這次合併的流程只在第一次進入時確認一件事：你要學哪個語言。選單有 12 種目標語言，也補齊 11 個介面語系。\n\n已經在 Teacher 或 Friends 選過的人不會再被問一次，兩邊共用目標語言；朋友聊天本身的模式則繼續由原本設定決定。\n\n這種 onboarding 不需要講完整產品故事。先把會影響後續的那個選擇問對，剩下的讓使用者直接去用。"
+        },
+        "threads": {
+          "text": "學語言網站最怕第一步很順，方向卻選錯。\n\nCrew Web 的 Learn 區現在第一次進入會先確認目標語言，提供 12 種選擇與 11 個介面語系。已在 AI 老師或朋友那邊選過的人不會再被問，兩邊共用目標語言。\n\nOnboarding 不必把功能全部介紹一遍。只問那個會讓後面整段體驗走偏的問題就夠了。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #567\nhttps://github.com/magic76/magic76.github.io/pull/567\n\n網站：\nhttps://3sssi.com",
+            "requestId": "b2dbd2fb-17be-4455-ae23-8b4110affe94"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #567\nhttps://github.com/magic76/magic76.github.io/pull/567\n\n網站：\nhttps://3sssi.com",
+            "requestId": "5af9e083-aebf-4da2-bef5-e7d428f758d1"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "現有一手證據足以用文字說清楚；沒有可核實且必要的真實畫面，不為配額生成假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-09",
+          "time": "12:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "japanese-english-three-language-model",
+      "topic": "日文母語者學英文，介面語言、母語與目標語言不能混成一個設定",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-japanese-english-three-language-model",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #563",
+          "url": "https://github.com/magic76/magic76.github.io/pull/563",
+          "checked_at": "2026-11-09",
+          "published_date": "2026-11-08"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #563 已合併日文母語者的英文學習流程。",
+          "evidence_ids": [
+            "src-japanese-english-three-language-model"
+          ]
+        },
+        {
+          "text": "內容包含 6 個 track、16 個 unit、49 個 lesson、147 個 mission goal 與 99 個日文釋義 warmup。",
+          "evidence_ids": [
+            "src-japanese-english-three-language-model"
+          ]
+        },
+        {
+          "text": "16 位 tutor 的學習文字已加入日文支援。",
+          "evidence_ids": [
+            "src-japanese-english-three-language-model"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 的 AI 語言老師依使用者母語解釋正在學的目標語言。",
+      "story_spine": "日文介面不必然等於學日文 → 拆出 UI、native、target 三層 → 課程與暖身跟著母語調整 → 讀者可套用到多語產品資料模型。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "這是多語產品常見但容易被忽略的資料模型問題，並有完整數量與合併 PR 可核實。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "合併 PR 直接列出課程、任務、暖身與 tutor 的數量和語言範圍。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "『日文介面卻想學英文』是具體且常見的多語情境。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接連到 Crew Web 語言課程架構。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先提出三種語言被混在一起的後果，再交代專案處理。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不把大量數字當成炫耀，而用來證明覆蓋範圍。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有真實畫面必要，文字更適合說明三層資料模型。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較最近三天 Queue 與 review；未重複既有題目、開頭或固定反轉結尾。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "做多語言學習產品時，「使用日文」至少可能有三種意思：介面是日文、使用者母語是日文，或他正在學日文。混成一個 language 欄位，課程很快就會答非所問。\n\nCrew Web 的 AI 語言老師這次補上日文母語者學英文的完整路徑：6 個學習方向、16 個單元、49 堂課、147 個任務目標，99 個暖身題也加上日文釋義；16 位老師的學習文字同步支援日文。\n\n這批內容的價值不只在翻譯量。資料上要分清楚 UI locale、native language 和 target language，老師才知道該用什麼語言解釋、又要把使用者帶到哪個語言。\n\n多語產品真正容易爆掉的，常常不是少一條翻譯，是三種語言被塞進同一個設定。"
+        },
+        "threads": {
+          "text": "「日文」在語言學習產品裡，可能是介面、母語，也可能是目標語言。\n\nCrew Web 這次補上日文母語者學英文的路徑：6 個方向、16 個單元、49 堂課、147 個任務，99 個暖身題有日文釋義，16 位老師也補上日文學習文字。\n\n關鍵是把 UI locale、native language、target language 拆開。少一層，老師就可能用對介面、教錯語言。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #563\nhttps://github.com/magic76/magic76.github.io/pull/563\n\n網站：\nhttps://3sssi.com",
+            "requestId": "31518cf3-01cc-4aa6-a22d-6ca00e414b36"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #563\nhttps://github.com/magic76/magic76.github.io/pull/563\n\n網站：\nhttps://3sssi.com",
+            "requestId": "019c0618-e8e7-455f-bb7e-b283e9128887"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "現有一手證據足以用文字說清楚；沒有可核實且必要的真實畫面，不為配額生成假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-09",
+          "time": "14:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "pwa-install-after-value",
+      "topic": "PWA 安裝提示應該等使用者先得到價值",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pwa-install-after-value",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #561",
+          "url": "https://github.com/magic76/magic76.github.io/pull/561",
+          "checked_at": "2026-11-09",
+          "published_date": "2026-11-08"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #561 已合併首頁與選單的 PWA 安裝入口。",
+          "evidence_ids": [
+            "src-pwa-install-after-value"
+          ]
+        },
+        {
+          "text": "自動邀請只會在有意義互動後出現，第一次冷卻 7 天，選擇稍後則冷卻 14 天。",
+          "evidence_ids": [
+            "src-pwa-install-after-value"
+          ]
+        },
+        {
+          "text": "流程以 appinstalled 事件區分真正安裝成功與僅點擊提示。",
+          "evidence_ids": [
+            "src-pwa-install-after-value"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 可安裝成 PWA，讓網站像 App 一樣從手機桌面開啟。",
+      "story_spine": "一進站就要求安裝容易打擾 → 等有意義互動後再提示 → 分清點擊與真正安裝 → 讀者能直接帶走提示節奏。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "提供具體時機、冷卻與成功事件，能成為其他產品可套用的 UX 規則。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "安裝入口、互動條件、7／14 天冷卻與 appinstalled 事件都有 PR 依據。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "幾乎每個 PWA 都會遇到何時提示安裝的決策。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接連到 Crew Web 的安裝與新手流程。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "以『先用到價值』切入，而不是宣告新增安裝按鈕。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "避免純 changelog，給出可複用的提示設計。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字即可清楚表達時間與事件判斷。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較最近三天 Queue 與 review；未重複既有題目、開頭或固定反轉結尾。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "網站一進來就叫人安裝 App，跟第一次見面就問要不要搬來一起住差不多。\n\nCrew Web 可以裝成 PWA，從手機桌面直接開。這次合併的安裝流程沒有立刻跳提示，而是等使用者完成一次有意義的互動後才邀請；第一次關掉，7 天內不再打擾，按「稍後」則等 14 天。\n\n另外，點過安裝按鈕不算成功。流程會等瀏覽器的 appinstalled 事件，才把它記成真的裝好了。\n\n安裝提示的重點不是出現得夠醒目，是出現在使用者已經知道它值得留下的時候。"
+        },
+        "threads": {
+          "text": "第一次進網站就叫人安裝 App，有點太熟。\n\nCrew Web 的 PWA 邀請改成完成有意義互動後才出現；第一次關掉冷卻 7 天，選「稍後」則等 14 天。點過按鈕也不算安裝，收到 appinstalled 事件才算成功。\n\n先讓人用到價值，再問要不要留下。這個順序比按鈕多大重要。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #561\nhttps://github.com/magic76/magic76.github.io/pull/561\n\n網站：\nhttps://3sssi.com",
+            "requestId": "bc9421bd-73bf-48cb-bf6f-9dac787a29e8"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #561\nhttps://github.com/magic76/magic76.github.io/pull/561\n\n網站：\nhttps://3sssi.com",
+            "requestId": "e16064ff-dcc5-4cd9-9e7a-03b602189cb9"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "現有一手證據足以用文字說清楚；沒有可核實且必要的真實畫面，不為配額生成假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-09",
+          "time": "16:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "fortune-one-deep-reading-action",
+      "topic": "算命結果頁的 AI 按鈕太多，反而讓主動作消失",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-fortune-one-deep-reading-action",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #565",
+          "url": "https://github.com/magic76/magic76.github.io/pull/565",
+          "checked_at": "2026-11-09",
+          "published_date": "2026-11-08"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #565 已合併 Fortune 結果頁的單一 AI 深入解讀 CTA。",
+          "evidence_ids": [
+            "src-fortune-one-deep-reading-action"
+          ]
+        },
+        {
+          "text": "PR 移除重複動作並整理結果頁區段，涵蓋 11 個 locale。",
+          "evidence_ids": [
+            "src-fortune-one-deep-reading-action"
+          ]
+        },
+        {
+          "text": "此 PR 描述的是介面收斂，不能據此宣稱轉換率提升。",
+          "evidence_ids": [
+            "src-fortune-one-deep-reading-action"
+          ]
+        }
+      ],
+      "reader_context": "Crew Fortune 是 Crew Web 裡的命格與每日運勢功能，結果頁可以再請 AI 做深入解讀。",
+      "story_spine": "每段都放 AI 行動會稀釋主線 → 收斂成一個深入解讀入口 → 不虛構成效 → 讀者可理解少一個按鈕的價值。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "有明確設計取捨與不誇大成效的邊界，避免變成單純功能公告。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "合併 PR 支持單一 CTA、移除重複動作與 11 locale；文案不聲稱數據成效。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "按鈕越多越難決定是常見產品問題，讀者容易理解。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接連到 Crew Fortune 結果頁的真實調整。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先說使用者看完結果後要做什麼，再解釋按鈕收斂。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不使用『做減法才是加法』等套話，落在具體 CTA。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有前後真實截圖可用，純文字避免假 UI。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較最近三天 Queue 與 review；未重複既有題目、開頭或固定反轉結尾。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "算命結果頁最容易犯的錯，是每看完一段就塞一個「問 AI」。看起來每個區塊都有下一步，實際上使用者反而不知道哪個才是主線。\n\nCrew Fortune 是 Crew Web 裡的命格與每日運勢功能。這次合併的調整把結果頁上重複的 AI 動作收掉，只留一個明確的深入解讀入口，並同步整理 11 個介面語系的區段。\n\n這個 PR 能證明的是介面收斂，不能證明轉換率已經變好。要不要有效，還得等真的使用資料。\n\n但設計方向很清楚：使用者剛看完結果時，只需要知道最值得做的下一步，不需要被一排看起來都一樣重要的按鈕考試。"
+        },
+        "threads": {
+          "text": "結果頁每段都放「問 AI」，最後通常不是更多人點，是沒人知道該點哪個。\n\nCrew Fortune 把重複 AI 動作收掉，只留一個深入解讀入口，並整理 11 個介面語系的區段。\n\n這能證明介面變簡單，不能先宣稱成效變好。至少使用者看完結果後，不必再猜哪個按鈕才是主線。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #565\nhttps://github.com/magic76/magic76.github.io/pull/565\n\n網站：\nhttps://3sssi.com",
+            "requestId": "ff62c179-2b71-4aef-8bcc-1e4a7df4d07f"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #565\nhttps://github.com/magic76/magic76.github.io/pull/565\n\n網站：\nhttps://3sssi.com",
+            "requestId": "ae97eb20-be70-4b6b-a2a3-a523f4c6e225"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "現有一手證據足以用文字說清楚；沒有可核實且必要的真實畫面，不為配額生成假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-09",
+          "time": "19:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "artex-agentic-attack-speed",
+      "topic": "Agent 攻擊把老手法加速，防守要準備假目標",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-artex-agentic-attack-speed",
+          "type": "primary_research",
+          "label": "Microsoft Threat Intelligence｜ARTEX abuse expands as cybercriminals target financial sector",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+          "checked_at": "2026-11-09",
+          "published_date": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Microsoft 觀察到 Storm-3358 使用 ARTEX 與傳統自動化工具攻擊金融組織。",
+          "evidence_ids": [
+            "src-artex-agentic-attack-speed"
+          ]
+        },
+        {
+          "text": "ARTEX agents 被觀察用於掃描、利用 Web 漏洞、下載 RAT、橫向移動與資料外洩。",
+          "evidence_ids": [
+            "src-artex-agentic-attack-speed"
+          ]
+        },
+        {
+          "text": "Microsoft 建議 honeypot、decoy、tarpit 和 fake wins 可吸引或消耗自主攻擊。",
+          "evidence_ids": [
+            "src-artex-agentic-attack-speed"
+          ]
+        }
+      ],
+      "reader_context": "ARTEX 是一套可讓 AI Agent 執行滲透與攻擊流程的 offensive security framework。",
+      "story_spine": "攻擊技術並非全新 → Agent 將掃描、重試與後續動作加速 → 防守加入可觀察的誘餌與消耗面 → 讀者得到具體安全方向。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "一手威脅情報提供真實事件與防守措施，不只轉述『AI 被拿來攻擊』。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "攻擊者、工具、動作與緩解措施皆由 Microsoft Threat Intelligence 原文支持。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "把抽象 Agent 風險落到掃描速度與誘餌防守，資訊密度足夠。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "與使用者大量使用 Agent、GitHub 和雲端服務的工作方式相關。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先解釋 ARTEX 是什麼，再說它如何改變攻擊節奏。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "避免新聞週報口吻與空泛恐嚇，保留行為和對策。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "研究本身已有機制，純文字足以準確傳達，不另畫誇張攻擊圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較最近三天 Queue 與 review；未重複既有題目、開頭或固定反轉結尾。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "AI Agent 被拿去攻擊系統，最麻煩的地方不一定是它發明了新招，而是它把舊招跑得非常快。\n\nARTEX 是一套讓 Agent 執行滲透流程的攻擊框架。Microsoft Threat Intelligence 觀察到金融動機攻擊者用它搭配傳統自動化工具，掃描公開系統、利用 Web 漏洞、下載遠端控制工具，再用取得的憑證與主機繼續橫向移動。\n\n這種 Agent 會在短時間送出大量不同請求，失敗後快速換做法。只封一個 user agent 沒太大意義，因為它也會換。\n\n比較有意思的防守是準備 honeypot、decoy、tarpit，甚至 fake wins：讓 Agent 以為找到目標、消耗它的時間和預算，同時留下高訊號的行為紀錄。\n\n以前是把入口藏好。現在還得考慮，門外要不要放一扇很吸引機器的假門。"
+        },
+        "threads": {
+          "text": "ARTEX 是讓 AI Agent 執行滲透流程的攻擊框架。\n\nMicrosoft 觀察到攻擊者用它掃描公開系統、利用 Web 漏洞、下載 RAT，取得憑證後再快速橫向移動。新意不一定在招式，而是 Agent 能大量重試、換手法、接著做下一步。\n\n防守也不只封特徵。honeypot、decoy、tarpit，甚至 fake wins，可以把 Agent 引去假目標，消耗時間與預算，順便留下高訊號紀錄。\n\n以後門外可能不只要上鎖，還要放一扇給機器看的假門。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Microsoft Threat Intelligence｜ARTEX abuse expands as cybercriminals target financial sector\nhttps://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+            "requestId": "92e66daa-d5c1-4eeb-a2bd-d655a1462f54"
+          },
+          "threads": {
+            "text": "參考來源：Microsoft Threat Intelligence｜ARTEX abuse expands as cybercriminals target financial sector\nhttps://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+            "requestId": "0f0f0775-e901-43d9-8365-cd958cabb8b5"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "現有一手證據足以用文字說清楚；沒有可核實且必要的真實畫面，不為配額生成假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-09",
+          "time": "21:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "pwa-stale-build-boundary-hold",
+      "topic": "PWA 舊快取與 runtime error 的故障邊界",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pwa-hold",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #568",
+          "url": "https://github.com/magic76/magic76.github.io/pull/568",
+          "checked_at": "2026-11-09",
+          "published_date": "2026-11-08"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #568 已合併 MIME 快取檢查、獨立 Service Worker 更新註冊與可選 widget 錯誤邊界。",
+          "evidence_ids": [
+            "src-pwa-hold"
+          ]
+        },
+        {
+          "text": "PR 描述明示不能只由 RouteErrorBoundary 畫面判定是 chunk 失敗或 runtime error。",
+          "evidence_ids": [
+            "src-pwa-hold"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 是把 AI 聊天、學習、遊戲與算命放在同一個可安裝 PWA 的網站。",
+      "story_spine": "安裝版故障 → 畫面不足以鎖定根因 → 修正增加快取與元件邊界 → 但與前日 PWA 題重疊且真實根因未確認。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "recent_topic_overlap",
+        "reason": "11/8 已有 PWA icon 題，今天再發 PWA 容易形成連續 changelog；真實故障根因也尚未由證據確認。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "合併內容與未確認根因均有 PR 描述支持。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "MIME 污染與 runtime error 分流具除錯價值。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接對應 Crew Web 安裝版的真實回報。"
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "若日後採用，需避免與 11/8 PWA icon 稿同樣從安裝版問題開場。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "與前一日 PWA 題距離太近，容易變成連續版本紀錄。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "沒有能證明根因的真實錯誤錄影或診斷畫面。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review"
+        ],
+        "repeated_openers": [
+          "11/8 PWA icon 稿同屬安裝版題材。"
+        ],
+        "stock_phrase_hits": [],
+        "note": "題材有價值，但和前一日 PWA 文章太接近，先保留證據不發。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "若後續根因確認，可用文字說明分流；目前不建立媒體。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": null
+      }
+    },
+    {
+      "id": "guest-live-retry-suspected-hold",
+      "topic": "訪客 Live 首次連線失敗後缺少同頁重試入口",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-live-retry-hold",
+          "type": "github_issue",
+          "label": "GitHub · magic76/magic76.github.io issue #532",
+          "url": "https://github.com/magic76/magic76.github.io/issues/532",
+          "checked_at": "2026-11-09",
+          "published_date": "2026-11-08"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Issue #532 依 source flow 指出 guest error 顯示 finish，而一般 LiveControls 有重連入口。",
+          "evidence_ids": [
+            "src-live-retry-hold"
+          ]
+        },
+        {
+          "text": "Issue 標示 suspected，沒有真實 390px 錄影或失敗重現證據。",
+          "evidence_ids": [
+            "src-live-retry-hold"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 的 Guest Live 讓未登入訪客先試用一次即時語音聊天。",
+      "story_spine": "首次連線若失敗 → guest 流程可能只顯示結束 → 一般流程有重連 → 但尚未重現且短效 grant 能否重用未確認。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "needs_reproduction",
+        "reason": "問題仍標 suspected，缺少真實失敗重現與授權重用確認；不能寫成已發生或已修復的使用者事故。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "hold",
+          "reason": "只有 source flow 推論，尚無可核實的實機重現。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "首次語音失敗卻無法重試是高影響 onboarding 斷點。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接關聯 Crew Web 的訪客 Live 試用。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "在沒有重現前不能以『使用者被卡住』當既成事實開場。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與最近三天題材不同，沒有句型重複問題。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "需要真實 390px 失敗錄影或畫面才能支撐工程故事。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "題材未重複，但證據停在 suspected issue，按品質門檻暫緩。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "目前不製作媒體；取得重現後應優先使用真實錯誤畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": null
+      }
+    }
+  ]
+}
+
