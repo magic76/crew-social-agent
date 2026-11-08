@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261108-crew-fortune-share-privacy",
+  "created_date": "2026-11-08",
+  "title": "Crew Fortune 命格卡分享只帶必要資料",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-08",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/magic76.github.io PR #546",
+    "published_date": "2026-11-07",
+    "title": "Evidence-backed Fortune identity cards, sharing and feedback",
+    "url": "https://github.com/magic76/magic76.github.io/pull/546"
+  },
+  "references": [],
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #546｜Evidence-backed Fortune identity cards, sharing and feedback\nhttps://github.com/magic76/magic76.github.io/pull/546",
+      "requestId": "22442617-4890-4abf-b61d-f488dacd23ed"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #546｜Evidence-backed Fortune identity cards, sharing and feedback\nhttps://github.com/magic76/magic76.github.io/pull/546",
+      "requestId": "e16b8b77-8762-4710-8f7d-c6985585c48b"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Fortune 是 Crew Web 裡的命理探索工具，算完後可以把命格身份卡做成圖片分享。\n\n分享時不需要把整份出生資料一起交出去。這張卡只帶公開的身份卡文案和精簡計算依據；出生日期、時間、地點和完整命盤都不放進分享資料。\n\n原本的完整報告分享也還在。命格卡依傳統命理符號做自我探索，不是科學人格診斷。",
+      "requestId": "74dd2fd0-f305-425e-9ca5-a13e8c218ab1"
+    },
+    "threads": {
+      "text": "Crew Fortune 是 Crew Web 的命理探索工具，可以把命格身份卡做成圖片分享。\n\n分享資料只帶公開卡片文案和精簡依據；出生日期、時間、地點與完整命盤不會一起送出去。\n\n這是傳統命理的自我探索，不是科學人格診斷。",
+      "requestId": "eefddf9b-a141-4ff0-bf86-6eee14a8e70e"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+  }
+}

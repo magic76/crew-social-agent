@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261108-gemini-omni-video-model-card",
+  "created_date": "2026-11-08",
+  "title": "Gemini Omni 1.2 Flash 可多模態輸入並產生有聲影片",
+  "category": "ai-research",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-08",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Google DeepMind",
+    "published_date": "2026-11-05",
+    "title": "Gemini Omni 1.2 Flash model card",
+    "url": "https://deepmind.google/models/model-cards/gemini-omni-1-2-flash/"
+  },
+  "references": [],
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Google DeepMind｜Gemini Omni 1.2 Flash model card\nhttps://deepmind.google/models/model-cards/gemini-omni-1-2-flash/",
+      "requestId": "954db08b-f365-45bb-8c11-6e7d3a70bc26"
+    },
+    "threads": {
+      "text": "參考來源：Google DeepMind｜Gemini Omni 1.2 Flash model card\nhttps://deepmind.google/models/model-cards/gemini-omni-1-2-flash/",
+      "requestId": "d568e02f-03cb-4303-91aa-cec6360443b8"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Google DeepMind 的 Gemini Omni 1.2 Flash 是影片生成和編輯模型，官方模型卡列出它可接收文字、圖片、音訊和影片，輸出則是含音訊的高解析影片。\n\n模型卡也寫到可以用對話方式編輯影片。有一項容易忽略的限制：它能改變影片裡人物的說話內容，但這項能力目前先受到限制，Google 還在研究怎麼安全推出。\n\n這不是我實測，也不代表每個地區、每個帳號現在都能用。做影片工具研究，能力表旁邊的限制欄也得一起看。",
+      "requestId": "1c762d65-fc15-4d35-a97d-0d6cc307ddf5"
+    },
+    "threads": {
+      "text": "Google DeepMind 的 Gemini Omni 1.2 Flash 模型卡列出：可輸入文字、圖片、音訊、影片，輸出含音訊的高解析影片，也支援對話式編輯。\n\n它能改變影片中人物的說話內容，但 Google 說這項功能目前先受到限制。這是官方文件，不是我的實測，也不代表所有帳號現在都能用。",
+      "requestId": "59a67b5a-83aa-4df1-91b7-ae66ffd5c979"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+  }
+}

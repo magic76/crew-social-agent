@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261108-crew-web-directory-plus-minus",
+  "created_date": "2026-11-08",
+  "title": "Crew Web 功能選單改用加減號表示展開狀態",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-08",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/magic76.github.io PR #543",
+    "published_date": "2026-11-07",
+    "title": "Simplify Crew directory expand controls to plus/minus",
+    "url": "https://github.com/magic76/magic76.github.io/pull/543"
+  },
+  "references": [],
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #543｜Simplify Crew directory expand controls to plus/minus\nhttps://github.com/magic76/magic76.github.io/pull/543",
+      "requestId": "8321619e-b14f-40fc-adb8-cc47f1b70e16"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #543｜Simplify Crew directory expand controls to plus/minus\nhttps://github.com/magic76/magic76.github.io/pull/543",
+      "requestId": "77af4965-05e5-4d1a-b756-d8fc287d4240"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Web 是把 AI 聊天、學習和遊戲放在一起的網站，功能目錄裡有 32 個直接入口。\n\n分類展開以前靠上下箭頭提示。這次改成收合顯示「＋」、打開顯示「－」；單一功能連結仍留著右箭頭。\n\n看符號就知道這一組會不會打開，不必再研究箭頭等等要往哪裡轉。分類的鍵盤與螢幕閱讀器狀態也照樣保留。",
+      "requestId": "839280e9-b177-4b8e-9381-31d05a1c2e3b"
+    },
+    "threads": {
+      "text": "Crew Web 把 AI 聊天、學習和遊戲放在同一個網站，功能目錄有 32 個入口。\n\n分類收合時顯示「＋」，展開後變「－」；單一功能連結仍用右箭頭。\n\n看符號就知道下一步會發生什麼，不用再猜箭頭方向。",
+      "requestId": "f780a24b-1c2f-4c04-8e3c-732501ef5380"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+  }
+}

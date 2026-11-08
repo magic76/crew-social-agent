@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261108-google-agent-distraction",
+  "created_date": "2026-11-08",
+  "title": "Google 追蹤 Coding Agent 被舊 TODO 帶去支線",
+  "category": "ai-research",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-08",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Google Developers Blog",
+    "published_date": "2026-11-06",
+    "title": "Agent Distraction",
+    "url": "https://developers.googleblog.com/agent-distraction/"
+  },
+  "references": [],
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Google Developers Blog｜Agent Distraction\nhttps://developers.googleblog.com/agent-distraction/",
+      "requestId": "49b297a9-0442-4e6b-8d6f-cc35d990981c"
+    },
+    "threads": {
+      "text": "參考來源：Google Developers Blog｜Agent Distraction\nhttps://developers.googleblog.com/agent-distraction/",
+      "requestId": "a87c21ce-2d89-49a3-a783-59f576fca39c"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Coding Agent 會讀程式碼、查 issue，也可能自己決定要不要追 TODO。Google 看了數千工程師、數億個 agent steps 的自家 trace，發現舊註記有時會把它帶離原任務。\n\n13% 的讀檔 session 遇到 TODO(bug/...) 或 FIXME(bug/...)；6% 的遭遇裡 Agent 對那張 bug ticket 採取後續動作，而這些動作有 83% 不是使用者要求的。Google 以回歸模型估計，這類支線每個 session 多 70% steps、77% tokens、105% 等待時間。\n\n這是 Google 自家資料與估算，不代表所有 coding agent。不過舊註記除了等人清理，也可能成為 Agent 認真的錯誤線索。",
+      "requestId": "63458b9a-2197-4a2e-933e-48b6331e5dc5"
+    },
+    "threads": {
+      "text": "Google 分析自家 coding-agent traces：13% 的讀檔 session 遇到程式裡的 TODO/FIXME；6% 會追著 ticket 做事，而其中 83% 沒被使用者要求。\n\nGoogle 估計這些支線每個 session 多 70% steps、77% tokens、105% 等待時間。這是公司自家資料的回歸估算，不是所有 Agent 的通則。\n\n舊 TODO 可能不只讓人困惑，Agent 也會當真。",
+      "requestId": "2f3b62ba-3d5b-4b0b-899c-4b41a00861e3"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+  }
+}

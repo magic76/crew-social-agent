@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261108-crew-web-pwa-icon-version",
+  "created_date": "2026-11-08",
+  "title": "Crew Web 安裝版圖示改用新網址更新",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-08",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/magic76.github.io PR #549",
+    "published_date": "2026-11-07",
+    "title": "Refresh installed app logo via versioned icon URLs",
+    "url": "https://github.com/magic76/magic76.github.io/pull/549"
+  },
+  "references": [
+    {
+      "publisher": "Chrome for Developers",
+      "published_date": "2026-01-21",
+      "title": "A better way to update your web apps",
+      "url": "https://developer.chrome.com/blog/improvements-to-web-app-updates/"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #549｜Refresh installed app logo via versioned icon URLs\nhttps://github.com/magic76/magic76.github.io/pull/549\n\nChrome for Developers｜A better way to update your web apps\nhttps://developer.chrome.com/blog/improvements-to-web-app-updates/",
+      "requestId": "e87e911b-594e-44c4-ac17-1f50b650648f"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #549｜Refresh installed app logo via versioned icon URLs\nhttps://github.com/magic76/magic76.github.io/pull/549\n\nChrome for Developers｜A better way to update your web apps\nhttps://developer.chrome.com/blog/improvements-to-web-app-updates/",
+      "requestId": "c611e366-e08a-4fe2-a068-09b1b030a38c"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Web 可以加到手機主畫面，像 App 一樣打開。換了圖示，手機裡的安裝版卻可能還是舊圖，原因不一定是圖檔沒更新。\n\nChrome 144 起，manifest 裡的圖示網址如果沒變，就不會重新下載來比對。所以這次把新圖示改成帶版本的新網址，也保留舊路徑，避免還沒更新的安裝版找不到檔案。\n\n有個小細節要記得：Android 上的 App 圖示屬於身分資訊，瀏覽器可能會請使用者確認更新。",
+      "requestId": "56c0f2ab-a243-4e76-b86c-9358b45befb9"
+    },
+    "threads": {
+      "text": "Crew Web 可以加到手機主畫面當 App。換了圖檔，安裝版卻可能還是舊圖。\n\nChrome 144 起，icon URL 沒變就不會重新下載比對。這次把圖示網址改成新版本，同時保留舊檔案路徑。\n\nAndroid 可能仍會請使用者確認 App 圖示更新。",
+      "requestId": "4783f213-56eb-495e-87f3-cbf54e6e3efb"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+  }
+}

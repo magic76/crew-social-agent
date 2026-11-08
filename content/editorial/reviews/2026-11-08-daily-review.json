@@ -1,0 +1,924 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-08",
+  "review_id": "2026-11-08-daily-review",
+  "selection_policy": {
+    "minimum_selected": 6,
+    "target_selected": 6,
+    "unit": "distinct_topics_not_platform_copies"
+  },
+  "formula_scan": {
+    "compared_queue_dates": [
+      "2026-11-05",
+      "2026-11-06",
+      "2026-11-07"
+    ],
+    "repeated_openers": [
+      "近期開發稿常先以 Crew 專案名稱開場；今日先給產品／用途，再落到事件。"
+    ],
+    "stock_phrase_hits": [],
+    "note": "檢查過前三日 18 篇 Queue 與三份 review。今日避免重用近期的 Crew Souls、Pocket API、首頁打字動畫、Agent memory、BioBasicsBench、PDD Kit 題材；不用固定問句、AI 新聞週報腔或同一種反轉結尾。"
+  },
+  "candidates": [
+    {
+      "id": "candidate-01-crew-car-camera-datagram",
+      "topic": "Crew Car 把相機命令回覆和 FPV 影像分開算",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-car-pr35",
+          "type": "github_pr",
+          "label": "Crew Car PR #35；含手機熱點 log、封包判讀改動與待實機驗證清單",
+          "url": "https://github.com/magic76/crew-car/pull/35",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "一份手機熱點記錄每次 START 後只收到來源埠 23459 的單一 UDP 封包，與相機命令埠相符，不能據此認定收到影片。",
+          "evidence_ids": [
+            "src-car-pr35"
+          ]
+        },
+        {
+          "text": "PR 將命令回覆、有效影片片段和無效封包分開計數，並把相機 STOP 網路動作移出 Android UI thread。",
+          "evidence_ids": [
+            "src-car-pr35"
+          ]
+        },
+        {
+          "text": "此修改不保證 Android 熱點 NAT 會轉送 FPV 影像。",
+          "evidence_ids": [
+            "src-car-pr35"
+          ]
+        }
+      ],
+      "reader_context": "Crew Car 是以 Gemini Live 控制的玩具車專案，手機端也需要接收車上的 FPV 影像。",
+      "story_spine": "手機熱點記錄看似收到相機資料 → 收到的其實只有命令埠封包，且關閉相機有 UI thread 網路錯誤 → 現在分辨命令回覆／影像片段並把 STOP 移到背景執行緒 → 不把封包回覆誤當成畫面已通。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_diagnostic_and_scope_boundary",
+        "reason": "真實記錄揭露『有封包』不等於『有影像』，修正也明確限制在封包判讀和停止流程，不誇稱已打通熱點 FPV。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "log 的來源埠、封包數和 NetworkOnMainThreadException，以及程式分類變更均由 PR #35 直接支持；文案明示沒有保證 NAT 影像轉送。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "把一個容易誤判的 UDP 回覆和真正影像區分，是具體工程反差。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接關聯使用者 Crew Car 的相機與手機熱點開發。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "開頭先介紹 Crew Car 和手機影像用途，再交代 log 的誤判。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與前三日的網站 UI／AI 研究稿不同，採用封包證據和修正邊界，沒有固定問句開頭。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "採純文字；目前沒有可核實的實機相機畫面，避免用假 UI 或假 FPV 畫面。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較前三日 Queue 與 review 的選題和開頭；本題沒有重複既有事件或文案句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Car 是我用 Gemini Live 控制的小車專案，手機也要接收車上的 FPV 影像。\n\n一份手機熱點 log 看起來像相機有回資料，但每次 START 後只收到相機命令埠 23459 的一個封包。這不能算收到影片；同一份記錄還抓到關閉相機時，Android UI thread 直接送 UDP STOP 而拋出的錯誤。\n\n這次程式把命令回覆、影片片段和無效封包分開計數，STOP 也改交給背景執行緒。\n\n先分清楚「有回應」和「有畫面」。這次修的是判讀與關閉流程，沒有因此保證手機熱點已能轉送 FPV 影片。"
+        },
+        "threads": {
+          "text": "Crew Car 是我用 Gemini Live 控制的小車專案，手機端也要收 FPV 影像。\n\n一份手機熱點 log 每次相機 START 後只收到命令埠 23459 的封包，不能當成影片；關閉時還抓到 UI thread 直接送 UDP STOP 的錯誤。\n\n現在分開計數命令回覆、影片片段和無效封包，STOP 改交背景執行緒。\n\n有回應不等於有畫面；這次沒有保證熱點已能轉送 FPV。"
+        }
+      },
+      "media": {
+        "type": "text-only",
+        "reason": "真實 log 和封包分類已能用文字說清楚；沒有可核實的實機畫面，因此不生成假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": "content/queue/2026-11-08-crew-car-camera-datagram.json"
+      }
+    },
+    {
+      "id": "candidate-02-crew-web-directory-plus-minus",
+      "topic": "Crew Web 功能選單改用加減號表示展開狀態",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-directory-pr543",
+          "type": "github_pr",
+          "label": "Crew Web PR #543；5 組分類、32 個直接入口與加減號展開狀態",
+          "url": "https://github.com/magic76/magic76.github.io/pull/543",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-07"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Web 功能目錄維持 5 組分類並提供 32 個直接目的地。",
+          "evidence_ids": [
+            "src-directory-pr543"
+          ]
+        },
+        {
+          "text": "分類收合時顯示加號，展開時顯示減號；個別目的地仍保留右向箭頭。",
+          "evidence_ids": [
+            "src-directory-pr543"
+          ]
+        },
+        {
+          "text": "這次改動保留 aria-expanded、動畫及 reduced-motion 支援。",
+          "evidence_ids": [
+            "src-directory-pr543"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 是把 AI 聊天、學習和遊戲入口放在一起的網站，功能目錄用分類展開 32 個直接入口。",
+      "story_spine": "多功能目錄的分類展開狀態不夠直覺 → 以加號／減號直接表示收合／展開 → 保留分類、目的地與輔助技術狀態 → 使用者不必猜圖示方向。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "small_visible_interaction_fix",
+        "reason": "改動範圍小但改善的是選單裡明確的下一步提示；有 32 個入口的實際目錄背景，不是抽象 UI 微調。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "32 個入口、5 組分類、加減號狀態與 aria-expanded 等細節均由 PR #543 描述及對應程式改動支持。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "上下箭頭換成加減號，讀者能立即看懂變化和它解決的困惑。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "是使用者 Crew Web 功能入口的實際修改。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先說明網站包含什麼，再講分類選單的小改動。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不沿用最近首頁動畫稿的『意思先到』收尾，改以圖示狀態的具體理由說明。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字足夠；目前沒有可核實截圖，避免另造介面圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較前三日 Queue 與 review 的選題和開頭；本題沒有重複既有事件或文案句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Web 是把 AI 聊天、學習和遊戲放在一起的網站，功能目錄裡有 32 個直接入口。\n\n分類展開以前靠上下箭頭提示。這次改成收合顯示「＋」、打開顯示「－」；單一功能連結仍留著右箭頭。\n\n看符號就知道這一組會不會打開，不必再研究箭頭等等要往哪裡轉。分類的鍵盤與螢幕閱讀器狀態也照樣保留。"
+        },
+        "threads": {
+          "text": "Crew Web 把 AI 聊天、學習和遊戲放在同一個網站，功能目錄有 32 個入口。\n\n分類收合時顯示「＋」，展開後變「－」；單一功能連結仍用右箭頭。\n\n看符號就知道下一步會發生什麼，不用再猜箭頭方向。"
+        }
+      },
+      "media": {
+        "type": "text-only",
+        "reason": "這個故事的價值在控制狀態變得更清楚，文字能直接說明；未取得真實截圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": "content/queue/2026-11-08-crew-web-directory-plus-minus.json"
+      }
+    },
+    {
+      "id": "candidate-03-crew-web-pwa-icon-version",
+      "topic": "Crew Web 安裝版圖示改用新網址更新",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pwa-pr549",
+          "type": "github_pr",
+          "label": "Crew Web PR #549；manifest、iOS icon 和雲端產物改用版本化圖示 URL，保留舊路徑",
+          "url": "https://github.com/magic76/magic76.github.io/pull/549",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-07"
+        },
+        {
+          "id": "src-chrome-pwa-update",
+          "type": "official_documentation",
+          "label": "Chrome for Developers 說明 Chrome 144 起 icon URL 或 metadata 必須變更才會觸發圖示更新；文章發布日 2026-01-21",
+          "url": "https://developer.chrome.com/blog/improvements-to-web-app-updates/",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-01-21"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Web 可安裝為 PWA；PR #549 將 manifest、Apple touch icon 與部署產物的圖示路徑更新為 crew-teacher-v2-*，並保留舊路徑。",
+          "evidence_ids": [
+            "src-pwa-pr549"
+          ]
+        },
+        {
+          "text": "Chrome 144 起，若 manifest 的 icons 欄位保持不變，Chrome 不會重新下載圖示做像素比較；更改 metadata 或 icon URL 可觸發更新。",
+          "evidence_ids": [
+            "src-chrome-pwa-update"
+          ]
+        },
+        {
+          "text": "已安裝 Android PWA 的名稱與圖示屬於需使用者確認的身分變更；圖示更新不保證無提示自動換好。",
+          "evidence_ids": [
+            "src-chrome-pwa-update",
+            "src-pwa-pr549"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 是可加到手機主畫面的網站；安裝後的圖示更新要同時考慮瀏覽器快取與使用者確認。",
+      "story_spine": "網站圖示檔內容換了但網址沒換 → Chrome 144 對未變的 icon URL 不重新下載 → 使用新版本 URL 並保留舊資產 → 修正圖示更新的來源識別，但不承諾每台裝置立即換圖。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "browser_behavior_meets_project_fix",
+        "reason": "瀏覽器規則解釋了一個使用者看得到的安裝圖示問題，Crew Web 的實際修改也有對應到規則；稿件會保留使用者確認限制。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "Chrome 官方文章明確說明 Chrome 144 的 icon URL 比對行為；PR #549 列出更新路徑與保留舊檔。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "換了圖檔卻仍看到舊圖是具體且令人意外的 PWA 問題。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "指向使用者 Crew Web 的安裝版入口和品牌圖示。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先介紹可安裝的網站，再說手機主畫面可能保留舊圖的原因。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與最近貼文的 AI 研究和首頁導覽故事不同，主軸是瀏覽器 icon URL 更新規則。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "兩段 URL/快取機制用文字足夠；沒有實機前後截圖就不製作假畫面。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較前三日 Queue 與 review 的選題和開頭；本題沒有重複既有事件或文案句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Web 可以加到手機主畫面，像 App 一樣打開。換了圖示，手機裡的安裝版卻可能還是舊圖，原因不一定是圖檔沒更新。\n\nChrome 144 起，manifest 裡的圖示網址如果沒變，就不會重新下載來比對。所以這次把新圖示改成帶版本的新網址，也保留舊路徑，避免還沒更新的安裝版找不到檔案。\n\n有個小細節要記得：Android 上的 App 圖示屬於身分資訊，瀏覽器可能會請使用者確認更新。"
+        },
+        "threads": {
+          "text": "Crew Web 可以加到手機主畫面當 App。換了圖檔，安裝版卻可能還是舊圖。\n\nChrome 144 起，icon URL 沒變就不會重新下載比對。這次把圖示網址改成新版本，同時保留舊檔案路徑。\n\nAndroid 可能仍會請使用者確認 App 圖示更新。"
+        }
+      },
+      "media": {
+        "type": "text-only",
+        "reason": "以實際 PR 與 Chrome 行為說明快取機制，文字比示意 UI 更準確。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": "content/queue/2026-11-08-crew-web-pwa-icon-version.json"
+      }
+    },
+    {
+      "id": "candidate-04-crew-fortune-share-privacy",
+      "topic": "Crew Fortune 命格卡分享只帶必要資料",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-fortune-pr546",
+          "type": "github_pr",
+          "label": "Crew Fortune PR #546；公開身份 DTO、命盤依據與私密生日資料排除規則",
+          "url": "https://github.com/magic76/magic76.github.io/pull/546",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-07"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Fortune 的命格卡分享只使用公開身份卡 DTO、卡片文案與精簡計算依據，不放出生日期、時間、地點或完整命盤。",
+          "evidence_ids": [
+            "src-fortune-pr546"
+          ]
+        },
+        {
+          "text": "分享 PNG 和朋友挑戰入口沿用既有結果資料，原本的全文報告分享功能仍保留。",
+          "evidence_ids": [
+            "src-fortune-pr546"
+          ]
+        },
+        {
+          "text": "Crew Fortune 將身份描述定位為傳統命理符號的自我探索，不作科學驗證的人格診斷。",
+          "evidence_ids": [
+            "src-fortune-pr546"
+          ]
+        }
+      ],
+      "reader_context": "Crew Fortune 是 Crew Web 的命理探索工具，可以依八字、塔羅或印度占星產生命格身份卡。",
+      "story_spine": "使用者想分享一張命格卡 → 分享資料可能不需要帶整份出生檔案 → 分享只包含公開卡片內容與精簡依據 → 卡片仍可分享，同時不把出生細節塞進分享資料。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "privacy_scope_is_user_visible",
+        "reason": "分享流程中的資料最小化是具體且讀者容易理解的設計選擇；稿件也會明確說明它不是科學人格診斷。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "分享 DTO、生日時間地點與完整命盤的排除內容由 PR #546 直接列出。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "分享個人化結果卻不必分享整份生日／命盤資料，是明確的隱私取捨。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "是使用者 Crew Fortune 的實際資料分享設計。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先說明工具與卡片用途，再講分享時不帶哪些資料。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不重複近期 Agent 記憶或安全研究模板，採產品分享資料範圍角度。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "不展示未取得的命盤或個人資料；文字直接交代分享包含與排除項目。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較前三日 Queue 與 review 的選題和開頭；本題沒有重複既有事件或文案句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Crew Fortune 是 Crew Web 裡的命理探索工具，算完後可以把命格身份卡做成圖片分享。\n\n分享時不需要把整份出生資料一起交出去。這張卡只帶公開的身份卡文案和精簡計算依據；出生日期、時間、地點和完整命盤都不放進分享資料。\n\n原本的完整報告分享也還在。命格卡依傳統命理符號做自我探索，不是科學人格診斷。"
+        },
+        "threads": {
+          "text": "Crew Fortune 是 Crew Web 的命理探索工具，可以把命格身份卡做成圖片分享。\n\n分享資料只帶公開卡片文案和精簡依據；出生日期、時間、地點與完整命盤不會一起送出去。\n\n這是傳統命理的自我探索，不是科學人格診斷。"
+        }
+      },
+      "media": {
+        "type": "text-only",
+        "reason": "命盤資料具個人性且此稿主談資料範圍；不用真實個人畫面或生成假命盤。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": "content/queue/2026-11-08-crew-fortune-share-privacy.json"
+      }
+    },
+    {
+      "id": "candidate-05-google-agent-distraction",
+      "topic": "Google 追蹤 Coding Agent 被舊 TODO 帶去支線",
+      "class": "ai-research",
+      "evidence": [
+        {
+          "id": "src-google-agent-distraction-20261106",
+          "type": "primary_research",
+          "label": "Google Developers Blog 分析數千工程師與數億 agent steps 的自家 coding-agent traces",
+          "url": "https://developers.googleblog.com/agent-distraction/",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Google 以數千位工程師和超過數億個 agent steps 的分散式 traces，分析 coding agent 遇到程式碼內 TODO(bug/...) 與 FIXME(bug/...) 的情況。",
+          "evidence_ids": [
+            "src-google-agent-distraction-20261106"
+          ]
+        },
+        {
+          "text": "文章稱 13% file-reading sessions 暴露於此類註記；6% 遭遇中 Agent 對 bug ID 采取後續行動，這些後續行動中 83% 未受使用者要求。",
+          "evidence_ids": [
+            "src-google-agent-distraction-20261106"
+          ]
+        },
+        {
+          "text": "Google 的多因子回歸估計，未受要求的 bug detour 每個 session 增加 70% steps、77% tokens 和 105% wait time；這是 Google 自家 traces 的估計，不是全產業普遍定律。",
+          "evidence_ids": [
+            "src-google-agent-distraction-20261106"
+          ]
+        }
+      ],
+      "reader_context": "Coding Agent 是能讀程式碼、查 issue 並改檔的 AI 工具；此文分析它們會不會被程式裡的 TODO 帶離原任務。",
+      "story_spine": "看似無害的 TODO 會進到 Agent 讀到的上下文 → Google 自家 traces 發現有未被要求的 bug detour → 統計估計多耗步數、tokens 和等待時間 → 舊註記不只是人類維護負擔，也可能成為 Agent 的錯誤線索。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "source_backed_workflow_risk",
+        "reason": "有可量化的意外與直接工程做法價值；數字清楚標為 Google 自家 traces 和回歸估算，不外推成所有 coding agent 的定律。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "數字、資料範圍和估算方法取自 Google 11/6 原文；文案會保留 13%/6%/83% 各自分母。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "舊 TODO 被 Agent 看成新支線任務是具體而出乎預期的現象。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "與使用者的多 Agent 開發和維護上下文直接相關。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先界定 Google 分析的是 coding agent trace，再帶出 TODO 造成的支線。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不使用「AI 不是 X 而是 Y」式結尾；以資料範圍和維護含義結束。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有原始 trace 可以公開截圖；文字足以交代分母與估算，避免抽象 AI 插圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較前三日 Queue 與 review 的選題和開頭；本題沒有重複既有事件或文案句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Coding Agent 會讀程式碼、查 issue，也可能自己決定要不要追 TODO。Google 看了數千工程師、數億個 agent steps 的自家 trace，發現舊註記有時會把它帶離原任務。\n\n13% 的讀檔 session 遇到 TODO(bug/...) 或 FIXME(bug/...)；6% 的遭遇裡 Agent 對那張 bug ticket 採取後續動作，而這些動作有 83% 不是使用者要求的。Google 以回歸模型估計，這類支線每個 session 多 70% steps、77% tokens、105% 等待時間。\n\n這是 Google 自家資料與估算，不代表所有 coding agent。不過舊註記除了等人清理，也可能成為 Agent 認真的錯誤線索。"
+        },
+        "threads": {
+          "text": "Google 分析自家 coding-agent traces：13% 的讀檔 session 遇到程式裡的 TODO/FIXME；6% 會追著 ticket 做事，而其中 83% 沒被使用者要求。\n\nGoogle 估計這些支線每個 session 多 70% steps、77% tokens、105% 等待時間。這是公司自家資料的回歸估算，不是所有 Agent 的通則。\n\n舊 TODO 可能不只讓人困惑，Agent 也會當真。"
+        }
+      },
+      "media": {
+        "type": "text-only",
+        "reason": "這是 traces 分析但沒有可公開的原始 trace 畫面；以純文字保留統計分母和限制最準確。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": "content/queue/2026-11-08-google-agent-distraction.json"
+      }
+    },
+    {
+      "id": "candidate-06-gemini-omni-video-model-card",
+      "topic": "Gemini Omni 1.2 Flash 可多模態輸入並產生有聲影片",
+      "class": "ai-research",
+      "evidence": [
+        {
+          "id": "src-gemini-omni-card-20261105",
+          "type": "model_card",
+          "label": "Google DeepMind Gemini Omni 1.2 Flash model card：輸入輸出與 speech editing 限制",
+          "url": "https://deepmind.google/models/model-cards/gemini-omni-1-2-flash/",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "模型卡列出的輸入包括文字、圖片、音訊和影片；輸出為高解析、含音訊的影片。",
+          "evidence_ids": [
+            "src-gemini-omni-card-20261105"
+          ]
+        },
+        {
+          "text": "Google 表示支援以對話方式編輯影片；修改影片中人物說話內容的能力目前受到限制。",
+          "evidence_ids": [
+            "src-gemini-omni-card-20261105"
+          ]
+        },
+        {
+          "text": "model card 列出 Gemini app、Google AI Studio、Gemini API、Google Flow、Vertex AI、Workspace 等分發渠道，但不證明所有地區或帳號已可用。",
+          "evidence_ids": [
+            "src-gemini-omni-card-20261105"
+          ]
+        }
+      ],
+      "reader_context": "Gemini Omni 1.2 Flash 是 Google DeepMind 的影片生成與編輯模型；模型卡列出它接受的素材和可產生的內容。",
+      "story_spine": "影片工具常被簡化成文字生成 → 官方模型卡寫明可輸入文字／圖／音／影片並產生有聲影片，也能對話編輯 → 其中改變人物說話的功能目前受限制 → 看功能時同時留意可用渠道和安全邊界。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "concrete_creator_capability_with_limit",
+        "reason": "具體輸入、輸出和編輯限制對短影音創作者有用；文案標示為官方 model card 能力，不假裝親自試用，也不宣稱所有帳號可用。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "輸入輸出、對話式編輯、限制和發布渠道均來自 11/5 的 Google DeepMind model card。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "由文字 prompt 擴到已有素材的多模態編輯，且語音變更能力暫時受限，形成實際決策點。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "使用者正做垂直影片和 TTS 工作流，這是直接相關的影片工具能力。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先說明是哪個影片模型，再列出可放進去與拿出來的素材。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "避免新品快報式速度／性能比較，聚焦影片製作流程與明確限制。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有使用者可驗證的影片 demo；純文字和來源卡片比假示範片更安全。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較前三日 Queue 與 review 的選題和開頭；本題沒有重複既有事件或文案句型。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "Google DeepMind 的 Gemini Omni 1.2 Flash 是影片生成和編輯模型，官方模型卡列出它可接收文字、圖片、音訊和影片，輸出則是含音訊的高解析影片。\n\n模型卡也寫到可以用對話方式編輯影片。有一項容易忽略的限制：它能改變影片裡人物的說話內容，但這項能力目前先受到限制，Google 還在研究怎麼安全推出。\n\n這不是我實測，也不代表每個地區、每個帳號現在都能用。做影片工具研究，能力表旁邊的限制欄也得一起看。"
+        },
+        "threads": {
+          "text": "Google DeepMind 的 Gemini Omni 1.2 Flash 模型卡列出：可輸入文字、圖片、音訊、影片，輸出含音訊的高解析影片，也支援對話式編輯。\n\n它能改變影片中人物的說話內容，但 Google 說這項功能目前先受到限制。這是官方文件，不是我的實測，也不代表所有帳號現在都能用。"
+        }
+      },
+      "media": {
+        "type": "text-only",
+        "reason": "沒有可核驗的模型示範片；用純文字引用官方能力和限制，避免製作仿真生成畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": "content/queue/2026-11-08-gemini-omni-video-model-card.json"
+      }
+    },
+    {
+      "id": "candidate-07-crew-web-ga4-attribution",
+      "topic": "GA4 保留 UTM 歸因但排除原始 query 與點擊 ID",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-ga4-pr545",
+          "type": "github_pr",
+          "label": "Crew Web PR #545；GA4 page_referrer 與 allowlisted UTM 欄位修正",
+          "url": "https://github.com/magic76/magic76.github.io/pull/545",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-07"
+        }
+      ],
+      "claims": [
+        {
+          "text": "舊實作把 page_referrer 固定清空，並從 page_location 刪除所有 UTM 參數。",
+          "evidence_ids": [
+            "src-ga4-pr545"
+          ]
+        },
+        {
+          "text": "修正後只保留格式合法的指定 UTM 欄位及外部 origin，排除 utm_term、原始 query 和點擊追蹤 ID。",
+          "evidence_ids": [
+            "src-ga4-pr545"
+          ]
+        },
+        {
+          "text": "該修正影響合併並部署後的新事件，無法回填舊資料。",
+          "evidence_ids": [
+            "src-ga4-pr545"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 是作者的多功能 AI 網站；GA4 用來了解訪客是從哪個外部連結進站。",
+      "story_spine": "UTM 與 referrer 被清掉會把部分導流誤歸 direct → 修正保留經允許清單過濾的歸因欄位 → 同時排除原始查詢和 click IDs → 對讀者有隱私與量測價值，但沒有直接可見的用戶端結果。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "internal_measurement_and_deploy_unknown",
+        "reason": "程式修正本身有明確隱私設計，但受益主要是站內歸因資料，且目前無法核實已部署；先留在研究與開發紀錄，不占今日社群時段。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "舊行為、新 allowlist 和無法回填舊資料均由 PR #545 描述。"
+        },
+        "interest": {
+          "status": "revise",
+          "reason": "資料最小化值得保留，但短文容易變成 analytics 變更紀錄，缺少外部可感知結果。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "是 Crew Web 實際歸因處理改動。"
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "可先解釋 GA4 導流，但仍需避免以內部欄位作為主要 hook。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "題材和近期文章不同，但不值得為追求新主題硬湊。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "如果日後採用可用文字或真實請求範例；目前不需要產生追蹤儀表板圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "與 11/5–11/7 Queue 去重；裁決依本日讀者價值、重複性與來源限制作成。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text-only",
+        "reason": "保留為候選，不進 Queue；若重啟需先確認部署狀態和可公開的 Network 證據。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": null
+      }
+    },
+    {
+      "id": "candidate-08-anthropic-scientific-model-distributions",
+      "topic": "科學模型應呈現多個可行解而非只交最佳擬合",
+      "class": "ai-research",
+      "evidence": [
+        {
+          "id": "src-anthropic-science-models-20261106",
+          "type": "primary_research",
+          "label": "Anthropic 研究者客座文章：Teaching AI to build scientific models",
+          "url": "https://www.anthropic.com/research/teaching-ai-to-build-scientific-models",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "文章把科學建模分成建立模型、約束模型參數、解讀模型三步。",
+          "evidence_ids": [
+            "src-anthropic-science-models-20261106"
+          ]
+        },
+        {
+          "text": "作者指出多個模型可能同樣符合觀察資料，單一最佳擬合會隱藏其他可行解與證據不足處。",
+          "evidence_ids": [
+            "src-anthropic-science-models-20261106"
+          ]
+        },
+        {
+          "text": "文章說目前多數 AI 科學建模系統仍以重現已知模型為主，對未知答案問題的證據稀少。",
+          "evidence_ids": [
+            "src-anthropic-science-models-20261106"
+          ]
+        }
+      ],
+      "reader_context": "這篇由圖賓根研究者撰寫的文章，討論 AI 在建立、擬合和解讀科學模型中的角色。",
+      "story_spine": "一個最佳擬合模型看起來完整 → 多個不同模型可能同樣解釋資料 → 呈現模型分布能指出哪些結論穩固、哪些需要新實驗 → 但未知答案上的 AI 證據仍有限。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "technical_depth_and_weak_project_bridge",
+        "reason": "研究觀點有價值且限制清楚，但今天已選入一則 coding-agent 工作流研究；這篇需要更多篇幅解釋 Bayesian/SBI 與模型可識別性，無法用短文講得既清楚又不失真。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "建模步驟、模型分布論點和未知問題的證據限制均在原文直接陳述。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "單一最佳擬合可能隱藏多個同樣合理的解，是可解釋性研究的具體觀點。"
+        },
+        "personal_relevance": {
+          "status": "revise",
+          "reason": "與 AI 工具工作流相關，但沒有直接連上近期 Crew 開發素材。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "可用一般讀者熟悉的『同一組資料可能有不同解釋』開場。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不同於 Agent 工作流或產品更新，但今日外部研究數量已足夠。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "文章含機制圖，但此環境無法確認圖像引用和重繪權利；以短文硬畫不如留待可核對素材時再做。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "與 11/5–11/7 Queue 去重；裁決依本日讀者價值、重複性與來源限制作成。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text-only",
+        "reason": "作為暫緩題材保留；若之後要寫，可用來源原圖或另做明確標示的機制圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": null
+      }
+    },
+    {
+      "id": "candidate-09-meta-specialized-muse-memory",
+      "topic": "Meta 自報 Muse 專用模型的記憶與任務結果提升",
+      "class": "ai-research",
+      "evidence": [
+        {
+          "id": "src-meta-muse-specialized-20261106",
+          "type": "primary_research",
+          "label": "Meta AI Research 自家 Muse / Meta AI specialized model 公告與內部 eval",
+          "url": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai",
+          "checked_at": "2026-11-08",
+          "published_date": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Meta 於 2026-11-06 公布用 Muse Wonder 訓練 Muse 與 Meta AI 的專用模型版本。",
+          "evidence_ids": [
+            "src-meta-muse-specialized-20261106"
+          ]
+        },
+        {
+          "text": "Meta 自報 Muse Active Memory eval 由 76% 到 90%，並稱關鍵資訊遺忘減少 2.4 倍；意外問題日常任務完成提升 67%。",
+          "evidence_ids": [
+            "src-meta-muse-specialized-20261106"
+          ]
+        }
+      ],
+      "reader_context": "Muse 和 Meta AI 是 Meta 面向使用者的 AI 助理，公告描述其專用模型的記憶和任務處理更新。",
+      "story_spine": "Meta 宣布助理模型更新 → 官方列出內部 Active Memory 和任務完成數字 → 結果屬公司自報 eval，且記憶主題昨日已經寫過 → 保留來源但不重複發文。",
+      "decision": {
+        "outcome": "rejected",
+        "reason_code": "duplicate_memory_theme_and_vendor_eval",
+        "reason": "數據是 Meta 自家評測，不能獨立驗證；而記憶主題已在 11/7 Queue 使用，今天再發會重複近期選題。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "能力與數字清楚標為 Meta 自報，不會當成獨立驗證。"
+        },
+        "interest": {
+          "status": "revise",
+          "reason": "性能數字可吸引注意，但缺少外部對照或方法細節。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "助理記憶與 Agent 工作流相關。"
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "易落入一般『AI 記憶升級』新聞稿口吻。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "Anthropic agent memory 主題已於 11/7 排入 Queue，重複風險高。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "若只保留研究報告，使用文字摘要即可；不拿公司內部 eval 圖作獨立證據。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-05-daily-review",
+          "2026-11-06-daily-review",
+          "2026-11-07-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "與 11/5–11/7 Queue 去重；裁決依本日讀者價值、重複性與來源限制作成。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text-only",
+        "reason": "不進 Queue；公司 eval 圖表不適合做成看似獨立驗證的配圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "queue_path": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261108-crew-car-camera-datagram",
+  "created_date": "2026-11-08",
+  "title": "Crew Car 把相機命令回覆和 FPV 影像分開算",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-08",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/crew-car PR #35",
+    "published_date": "2026-11-06",
+    "title": "Distinguish camera UDP replies from video and move STOP off UI thread",
+    "url": "https://github.com/magic76/crew-car/pull/35"
+  },
+  "references": [],
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/crew-car PR #35｜Distinguish camera UDP replies from video and move STOP off UI thread\nhttps://github.com/magic76/crew-car/pull/35",
+      "requestId": "5261afa4-fd60-47d7-bcca-20c4d38ca337"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/crew-car PR #35｜Distinguish camera UDP replies from video and move STOP off UI thread\nhttps://github.com/magic76/crew-car/pull/35",
+      "requestId": "916fa6c1-5435-4236-9c3e-6cb668f934d2"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Crew Car 是我用 Gemini Live 控制的小車專案，手機也要接收車上的 FPV 影像。\n\n一份手機熱點 log 看起來像相機有回資料，但每次 START 後只收到相機命令埠 23459 的一個封包。這不能算收到影片；同一份記錄還抓到關閉相機時，Android UI thread 直接送 UDP STOP 而拋出的錯誤。\n\n這次程式把命令回覆、影片片段和無效封包分開計數，STOP 也改交給背景執行緒。\n\n先分清楚「有回應」和「有畫面」。這次修的是判讀與關閉流程，沒有因此保證手機熱點已能轉送 FPV 影片。",
+      "requestId": "febde5d6-2bb6-471b-be1c-c2cc7bcec068"
+    },
+    "threads": {
+      "text": "Crew Car 是我用 Gemini Live 控制的小車專案，手機端也要收 FPV 影像。\n\n一份手機熱點 log 每次相機 START 後只收到命令埠 23459 的封包，不能當成影片；關閉時還抓到 UI thread 直接送 UDP STOP 的錯誤。\n\n現在分開計數命令回覆、影片片段和無效封包，STOP 改交背景執行緒。\n\n有回應不等於有畫面；這次沒有保證熱點已能轉送 FPV。",
+      "requestId": "64be02c9-d2ac-449f-a532-de087fd38c08"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "2026-11-08 新稿未取得當日明確發布授權；保留 draft/dry_run，交由使用者與 Local Publisher 後續處理。"
+  }
+}
