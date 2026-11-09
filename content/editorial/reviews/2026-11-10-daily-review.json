@@ -1,0 +1,1012 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-10",
+  "review_id": "2026-11-10-daily-review",
+  "selection_policy": {
+    "minimum_selected": 6,
+    "target_selected": 6,
+    "unit": "distinct_topics_not_platform_copies"
+  },
+  "formula_scan": {
+    "compared_queue_dates": [
+      "2026-11-07",
+      "2026-11-08",
+      "2026-11-09"
+    ],
+    "repeated_openers": [],
+    "stock_phrase_hits": [],
+    "note": "今日六篇是草稿目標而非新聞配額；四篇實際開發、一篇語言資料研究、一篇官方模型公告。Pocket 與 Car 因近三日題材重疊暫緩，NVIDIA 來源缺獨立脈絡而淘汰。"
+  },
+  "candidates": [
+    {
+      "id": "live-keyboard-without-mic",
+      "topic": "打字模式底下仍可能生成音訊的 Live 文字聊天",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-live",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #573｜Gemini 3.8 Live 文字聊天共用語音核心，免麥克風",
+          "url": "https://github.com/magic76/magic76.github.io/pull/573",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Web Teacher/Friend 的 BYOK 文字路徑改為 Gemini Live WebSocket，輸入鍵盤文字並以輸出轉錄呈現。",
+          "evidence_ids": [
+            "src-live"
+          ]
+        },
+        {
+          "text": "textOnly 略過瀏覽器麥克風、AudioContext 與播放；PR 說明 response modality 仍為 AUDIO，服務端可能生成音訊。",
+          "evidence_ids": [
+            "src-live"
+          ]
+        },
+        {
+          "text": "PR 明示尚未以真實 BYOK 金鑰完成端到端驗證。",
+          "evidence_ids": [
+            "src-live"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 提供 AI 老師與聊天朋友練語言；這項改動處理自備金鑰使用者的鍵盤聊天。",
+      "story_spine": "打字看似純文字 → 實作仍走 Live 音訊模型 → 瀏覽器不錄音不播放但服務端可能生成音訊 → 分清介面輸出與模型模態。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "一手 PR 支持具體技術界線，能帶出對成本與驗證的實用提醒。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "每項能力與尚未驗證的 BYOK E2E 界線都出自 PR #573；不把 PR 內容寫成正式站測試通過。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "輸出只顯示文字但底層 response modality 是 AUDIO，資訊落差具體。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "對使用 Gemini Live、BYOK 或 WebSocket 的人有直接參考價值。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "以「打字模式還是 Live 嗎」切入，不先介紹產品。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與近三日 Live 題材相鄰，但故事聚焦 AUDIO 模態、mic 和成本，不重複 onboarding。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字能準確說明差異；沒有真實 BYOK 畫面，不仿製 UI。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "把麥克風關掉，文字模式還是 Live 嗎？這次改動的答案是：連線仍走 Live，但瀏覽器不錄音也不播放；Google 端仍可能生成音訊，費用不能直接當成一般純文字 REST。\n\nCrew Web 的 Teacher／Friend BYOK 文字聊天，改用 Gemini Live WebSocket 收鍵盤輸入，再把輸出轉錄顯示成文字。PR 描述新增 lifecycle 模擬測試，也明寫真實 BYOK 金鑰端到端尚未驗證。\n\n所以「畫面只顯示文字」不等於底層只跑純文字。這條界線，比按鈕叫文字模式還重要。"
+        },
+        "threads": {
+          "text": "鍵盤打字，底層仍是 Live。\n\nCrew Web 的 Teacher／Friend BYOK 文字聊天改走 Gemini Live WebSocket，瀏覽器不錄音、不播放，再用輸出轉錄顯示文字。PR 也明說真實 BYOK 金鑰端到端還沒驗證；Google 端仍可能生成音訊，費用不等同純文字 REST。\n\n「看起來是文字」和「底層只跑文字」是兩回事。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #573｜Gemini 3.8 Live 文字聊天共用語音核心，免麥克風（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/573",
+            "requestId": "6c111776-40aa-4423-983f-b531f9202e73"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #573｜Gemini 3.8 Live 文字聊天共用語音核心，免麥克風（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/573",
+            "requestId": "37b8c5b3-4624-4562-a80e-1edf1c7602e5"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "純文字能準確說明差異；沒有真實 BYOK 畫面，不仿製 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-10-live-keyboard-text.json",
+        "schedule": {
+          "date": "2026-11-10",
+          "time": "10:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "fortune-float-tail",
+      "topic": "3.3999999999999995 如何變回可讀的 3.4",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-float",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #579｜Fortune 浮點尾數修正",
+          "url": "https://github.com/magic76/magic76.github.io/pull/579",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #579 的回歸案例將 3.3999999999999995 預期正規化為 3.4。",
+          "evidence_ids": [
+            "src-float"
+          ]
+        },
+        {
+          "text": "加權值進入 AI prompt 前整理至兩位小數；既有解說只清明顯浮點尾數，保留其他精度。",
+          "evidence_ids": [
+            "src-float"
+          ]
+        },
+        {
+          "text": "PR 新增回歸案例；PR 本身不證明檢查通過或正式站已部署。",
+          "evidence_ids": [
+            "src-float"
+          ]
+        }
+      ],
+      "reader_context": "Crew Fortune 計算命盤並產生解說；顯示層與送進 AI 的數字都不應把浮點尾數當成有效精度。",
+      "story_spine": "計算值長成 3.3999999999999995 → 使用者可能誤讀 → prompt 與既有解說採不同精度處理 → 清除噪音但保留其他資訊。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "PR 有具體輸入值與預期修正，能講清計算表示如何影響使用者理解。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "PR 直接支持數值和改動範圍；只稱回歸案例的預期值，未宣稱測試已通過。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "長尾數值容易理解，修正前後差異鮮明。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "所有展示計算結果的 AI 產品都可能遇到這種呈現問題。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "完整數字作第一句，讀者不用先了解 Fortune。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不只是泛稱修 bug；聚焦精度如何進入 prompt 和解說。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字足夠；沒有可公開的真實正式站截圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "3.3999999999999995。不是命盤突然多算了幾個 9，是 JavaScript 浮點數把尾巴一起帶上來。\n\nCrew Fortune 這次把送進 AI 提示的加權數值整理到小數點後兩位；舊解說則只清掉明顯的浮點尾數，其他精度照留。PR 加了一個預期把這種尾數顯示成 3.4 的回歸案例。\n\n這裡說的是程式改動和測試案例，不代表 CI 結果或正式站畫面已確認。小數看起來只是多幾個字，讀者看到的卻像計算器剛打完噴嚏。"
+        },
+        "threads": {
+          "text": "3.3999999999999995 不是命盤多算了幾個 9，是浮點數把尾巴帶到畫面上。\n\nCrew Fortune 這次把送進 AI 的加權值整理到兩位小數，既有解說只清掉明顯浮點尾數。PR 加了預期顯示為 3.4 的回歸案例；目前不把它寫成 CI 已通過或正式站已驗收。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #579｜Fortune 浮點尾數修正（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/579",
+            "requestId": "e1c6802a-40a8-4733-ac55-6b998c46abee"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #579｜Fortune 浮點尾數修正（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/579",
+            "requestId": "37d71594-bca6-414b-b85a-ade315a490d8"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "純文字足夠；沒有可公開的真實正式站截圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-10-fortune-float-tail.json",
+        "schedule": {
+          "date": "2026-11-10",
+          "time": "12:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "turnstile-message-state",
+      "topic": "驗證中的訊息不該冒充已送出的訊息",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-verify",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #578｜Friend chat 驗證狀態與草稿修正",
+          "url": "https://github.com/magic76/magic76.github.io/pull/578",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #578 將 Turnstile 驗證中和朋友回覆中分成不同狀態。",
+          "evidence_ids": [
+            "src-verify"
+          ]
+        },
+        {
+          "text": "PR 表示驗證時切出文字模式，未送出的草稿回到輸入框，不留下懸空訊息泡泡。",
+          "evidence_ids": [
+            "src-verify"
+          ]
+        },
+        {
+          "text": "PR 描述列 390px 與 1280px 寬度驗收；未以本輪重新操作正式站。",
+          "evidence_ids": [
+            "src-verify"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web Friend 文字聊天的訊息送出前可能經 Turnstile 驗證，介面要分清草稿、等待驗證和已送出。",
+      "story_spine": "訊息仍驗證中 → 顯示對方回覆會誤導為已送達 → 切走時草稿應回輸入框 → PR 以獨立狀態處理這個界線。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "這個 PR 說明了使用者可見的狀態邊界及草稿處理，不需要虛構事故。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "只陳述 PR 指定的狀態邏輯與視窗寬度，不稱真實使用者事故。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "「訊息有沒有送出去」是聊天流程裡明確的使用者困擾。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "也適用於表單驗證和非同步送出流程。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從狀態誤導造成的含意開場，再補產品背景。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與前日 PR 合併意外不同，聚焦訊息狀態語意。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字可說明狀態；沒有可公開的真實驗證畫面。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "等待驗證的訊息，不等於 Zoe 已經收到。\n\nCrew Web 的 Friend 文字聊天有一段 Turnstile 驗證流程。PR #578 把「驗證中」和「對方回覆中」分開；如果人在驗證時切走文字模式，未送出的草稿會回到輸入框，不該留下看似已經送出的訊息泡泡。\n\n這是一個很小的狀態差別，卻會改變使用者以為訊息有沒有送出去。PR 描述列出 390 與 1280 寬度的驗收；這裡只記錄 PR 所述，不延伸成平台正式環境的使用結果。"
+        },
+        "threads": {
+          "text": "等待 Turnstile 驗證，不等於 Zoe 已經收到訊息。\n\nFriend 文字聊天的 PR #578 把「驗證中」和「對方回覆中」拆開。若驗證時切走，未送出的草稿回到輸入框，不該留下假裝送成功的泡泡。\n\n小小一個狀態字，決定使用者以為訊息有沒有出去。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #578｜Friend chat 驗證狀態與草稿修正（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/578",
+            "requestId": "11d3933d-16d9-4ce1-94b8-d352879654cc"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io PR #578｜Friend chat 驗證狀態與草稿修正（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/578",
+            "requestId": "41c38d42-5047-4b9f-b05f-ae18ee49bc41"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "純文字可說明狀態；沒有可公開的真實驗證畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-10-turnstile-message-state.json",
+        "schedule": {
+          "date": "2026-11-10",
+          "time": "14:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "research-canonical-redirect",
+      "topic": "未翻譯的研究深層連結不該落到首頁",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-seo",
+          "type": "github_commit",
+          "label": "GitHub · magic76/magic76.github.io commit e05bfa9｜research 英文深層連結導向 canonical 頁",
+          "url": "https://github.com/magic76/magic76.github.io/commit/e05bfa9df100a516c2fb5a7e61f456738b9ec2a6",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "commit e05bfa9 新增未翻譯英文 research detail 導向對應中文 canonical URL 的 301。",
+          "evidence_ids": [
+            "src-seo"
+          ]
+        },
+        {
+          "text": "commit 說明舊 fallback 可能回傳可索引首頁快照；英文 research hub 保留。",
+          "evidence_ids": [
+            "src-seo"
+          ]
+        },
+        {
+          "text": "commit 不能證明 Google 已重新爬取或收錄。",
+          "evidence_ids": [
+            "src-seo"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 有多語研究入口和單篇文章；若文章沒有英文翻譯，深層路徑應導到存在的 canonical 內容。",
+      "story_spine": "無翻譯英文路徑 → 舊 fallback 指向首頁快照 → 改導中文 canonical 頁但保留英文 hub → 目的地修正了，索引變化仍待觀察。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "改動直接涉及讀者抵達內容的路徑，並可清楚說明部署與搜尋索引的證據界線。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "commit 直接支持 301 與 fallback 背景；正文不宣稱實際索引改變。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "錯誤路由會讓訪客迷路，也可能讓搜尋索引理解錯誤。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "多語網站維護者可套用 canonical 導向判斷。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先講錯誤目的地的後果，再補 Crew Web 背景。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不泛談 SEO，不和 PWA/搜尋週報開場重複。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字最準；不製作假搜尋結果或 Search Console 圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "英文研究文章沒有翻譯時，把深層連結送到首頁，讀者找不到文章，搜尋引擎還可能把首頁快照當成那篇內容。\n\nCrew Web 的 research detail 英文路徑現在會 301 到對應的中文 canonical 頁；英文研究入口頁則保留。這次修改針對的是「路徑不存在時錯誤回到首頁」這個路由決策。\n\n它能修正網站送出的目的地，不能單憑 commit 說 Google 已重新收錄。SEO 有時不是再塞一段關鍵字，而是先別把人帶錯門。"
+        },
+        "threads": {
+          "text": "英文研究文章沒翻譯，深層連結以前可能回到首頁快照。讀者看不到文章，搜尋引擎還可能把首頁當成內容。\n\nCrew Web 現在把英文 detail 路徑 301 到中文 canonical 頁，英文入口頁仍保留。這是路由修正，不是 Google 已重新收錄的證明。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io commit e05bfa9｜research 英文深層連結導向 canonical 頁（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/commit/e05bfa9df100a516c2fb5a7e61f456738b9ec2a6",
+            "requestId": "ad8a8aba-9bbe-4124-afe8-d5f6c3dc2917"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/magic76.github.io commit e05bfa9｜research 英文深層連結導向 canonical 頁（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/commit/e05bfa9df100a516c2fb5a7e61f456738b9ec2a6",
+            "requestId": "918c3621-542e-4c89-94b5-d09344944632"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "純文字最準；不製作假搜尋結果或 Search Console 圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-10-research-canonical-redirect.json",
+        "schedule": {
+          "date": "2026-11-10",
+          "time": "16:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "google-language-explorer",
+      "topic": "語言資料探索平台如何呈現語言多樣性",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-google",
+          "type": "official_research",
+          "label": "Google Research｜Exploring the world’s languages with Language Explorer",
+          "url": "https://research.google/blog/exploring-the-worlds-languages-with-language-explorer/",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Google Research 於 2026-11-09 介紹互動式 Language Explorer，用於視覺化世界語言多樣性。",
+          "evidence_ids": [
+            "src-google"
+          ]
+        },
+        {
+          "text": "文章提及開源 LinguaMeta 和 Project Vaani、WAXAL 等社群合作。",
+          "evidence_ids": [
+            "src-google"
+          ]
+        },
+        {
+          "text": "文章描述的是資料探索平台，不代表各語言都有同等品質的語音資料，也不是新模型發布。",
+          "evidence_ids": [
+            "src-google"
+          ]
+        }
+      ],
+      "reader_context": "Language Explorer 是 Google Research 用來瀏覽世界語言多樣性與資料脈絡的互動工具。",
+      "story_spine": "多語 AI 不只需要介面翻譯 → 需要看到資料來源和合作關係 → Language Explorer 提供探索入口 → 把資料治理納入多語產品設計。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "官方研究來源有明確工具與合作脈絡，能由摘要轉成多語產品的資料觀察。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "官方頁面支持工具、LinguaMeta 和合作名稱；沒有擴大成各語種覆蓋率。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "把「資料從哪來」變成可探索介面，讀者能理解用途。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "對多語產品、語音資料和教育工具的開發者有關聯。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從資料來源難題切入，非 Crew 專案自我介紹。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不是新聞條目羅列，而是帶出資料治理觀點。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字可以準確說明工具；不仿製未檢視的平台畫面。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "多語內容不是把翻譯檔一口氣塞進資料夾就完成了，還得知道每一筆語言資料從哪來、彼此怎麼對照。\n\nGoogle Research 在 11 月 9 日介紹 Language Explorer：一個用來視覺化世界語言多樣性的互動平台，資料包含開源 LinguaMeta，也連到 Project Vaani、WAXAL 等社群合作計畫。\n\n這篇談的是語言資料探索工具，不是新模型，也不代表所有語言都已經有同等品質的語音資料。做多語 AI 時，資料來源和在地合作本身就是產品的一部分。"
+        },
+        "threads": {
+          "text": "多語 AI 不只缺翻譯，還得知道資料從哪來、怎麼連在一起。\n\nGoogle Research 11/9 介紹 Language Explorer：互動式語言多樣性視覺化平台，使用開源 LinguaMeta，也連到 Project Vaani、WAXAL 等社群合作。這是資料探索工具，不是新模型，也不代表所有語言已有同等語音資料。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Google Research｜Exploring the world’s languages with Language Explorer（發布日期：2026-11-09）\nhttps://research.google/blog/exploring-the-worlds-languages-with-language-explorer/",
+            "requestId": "bed13071-d0b3-4303-9c44-779cce187077"
+          },
+          "threads": {
+            "text": "參考來源：Google Research｜Exploring the world’s languages with Language Explorer（發布日期：2026-11-09）\nhttps://research.google/blog/exploring-the-worlds-languages-with-language-explorer/",
+            "requestId": "89d7a6df-e63e-4c15-9c2e-37c9747d8afb"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "純文字可以準確說明工具；不仿製未檢視的平台畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-10-language-explorer.json",
+        "schedule": {
+          "date": "2026-11-10",
+          "time": "19:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "anthropic-fable-mythos",
+      "topic": "同底層模型的 Fable 與 Mythos 安全分層",
+      "class": "ai_news",
+      "evidence": [
+        {
+          "id": "src-anthropic",
+          "type": "official_company_blog",
+          "label": "Anthropic｜Claude Fable 5.2 and Mythos 5.2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Anthropic 於 2026-11-09 公布 Fable 5.2 與 Mythos 5.2，稱使用相同底層模型。",
+          "evidence_ids": [
+            "src-anthropic"
+          ]
+        },
+        {
+          "text": "Anthropic 表示 Fable 開放所有使用者並套用 cyber/bio safeguards；Mythos 由專案申請取得。",
+          "evidence_ids": [
+            "src-anthropic"
+          ]
+        },
+        {
+          "text": "文中的能力與基準數字是 Anthropic 自述，不等於獨立評測。",
+          "evidence_ids": [
+            "src-anthropic"
+          ]
+        }
+      ],
+      "reader_context": "Anthropic 將 Fable 5.2 和 Mythos 5.2 描述為相同底層模型的不同安全處理與取得方式。",
+      "story_spine": "同一底層模型有公開與受限路徑 → 安全和權限成為產品設計 → 讀者分開看可用性與基準 → 不把公司自述誤認獨立比較。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_verified_reader_value",
+        "reason": "重點不只是兩個名稱，而是安全與取得政策；官方來源也能清楚限定證據。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "只採官方公告的名稱與存取政策，基準數字明確標為公司自述。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "模型名稱背後的權限差異值得比版本號更仔細讀。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "對多 Agent 權限和模型安全分層有討論價值。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從同底層模型卻有不同取得路徑切入。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "不做版本清單或週報摘要，只留下安全和存取差異。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字較能清楚標示來源自述；不生成不準確機制圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "同一個底層模型，產品名稱和可用方式卻分成兩條路。這次 Anthropic 公布 Fable 5.2 和 Mythos 5.2，差異不只在命名。\n\n依 Anthropic 自己的說明，Fable 對所有使用者開放，並套用網路安全與生物安全防護；Mythos 則透過專案申請取得。文中的能力與基準數字是公司公布的結果，不能當成獨立比較。\n\n讀模型公告時，除了問「它多會做」，也要看誰能用、哪些能力被限制，以及廠商怎麼描述安全邊界。"
+        },
+        "threads": {
+          "text": "Fable 5.2 和 Mythos 5.2，Anthropic 說底層是同一個模型，但安全防護與取得方式不同：Fable 對所有使用者開放；Mythos 要透過專案申請。\n\n基準數字是公司自述。看模型公告也要看誰能用、能力被怎麼限制。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Anthropic｜Claude Fable 5.2 and Mythos 5.2（發布日期：2026-11-09）\nhttps://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "requestId": "3c76e898-9d6c-40f9-83f8-e4550d65003e"
+          },
+          "threads": {
+            "text": "參考來源：Anthropic｜Claude Fable 5.2 and Mythos 5.2（發布日期：2026-11-09）\nhttps://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "requestId": "d3c59360-c1b1-4e46-b40c-c2c957175f5f"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "純文字較能清楚標示來源自述；不生成不準確機制圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-10-fable-mythos.json",
+        "schedule": {
+          "date": "2026-11-10",
+          "time": "21:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "pocket-risk-gated-auto-verify",
+      "topic": "Crew Pocket 以限定範圍測試做技能自動驗證",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pocket",
+          "type": "github_commit",
+          "label": "GitHub · magic76/crew-pocket commit d5da11d｜Role DNA 低風險技能自動驗證",
+          "url": "https://github.com/magic76/crew-pocket/commit/d5da11d006e36434e428a85a1bc22bc3ae9d7699",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-05"
+        }
+      ],
+      "claims": [
+        {
+          "text": "commit d5da11d 增加 Role DNA 低風險限定測試驗證、高風險拒絕自動啟用邏輯。",
+          "evidence_ids": [
+            "src-pocket"
+          ]
+        },
+        {
+          "text": "改動要求精確測試命令、runner summary 與不同回合證據；一般 test/build 不當成技能驗證。",
+          "evidence_ids": [
+            "src-pocket"
+          ]
+        },
+        {
+          "text": "commit 列出測試程式但不證明 CI 已通過。",
+          "evidence_ids": [
+            "src-pocket"
+          ]
+        }
+      ],
+      "reader_context": "Crew Pocket 管理多個 Agent、角色與技能記憶；Role DNA 追蹤哪些技能有足夠證據可供 Agent 使用。",
+      "story_spine": "通用 exit code 太寬 → 只接收安全逐檔測試證據 → 不同回合證據才啟用低風險技能，失敗可撤銷 → 可參考 fail-closed gate。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "recent_topic_overlap_or_missing_output",
+        "reason": "技術故事可講，但近三日已出現 Pocket/Agent 管理題，此輪連續發同一生態系易成 changelog，暫緩。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "hold",
+          "reason": "commit diff 說明限定證據，不宣稱自動驗證已成功運作。"
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "把「test exit code=0」和技能有效性拆開很有意思。"
+        },
+        "personal_relevance": {
+          "status": "hold",
+          "reason": "直接貼近多 Agent 與角色技能管理。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "可從通用 exit code 不足以證明技能切入。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "與近三日 Pocket/Agent 管理素材重疊，先留出間隔。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "目前沒有真實審核畫面，純文字可供未來再寫。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "目前沒有真實審核畫面，純文字可供未來再寫。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null
+      }
+    },
+    {
+      "id": "nvidia-robotics-simulation",
+      "topic": "機器人在模擬中反覆練精細操作",
+      "class": "ai_news",
+      "evidence": [
+        {
+          "id": "src-nvidia",
+          "type": "official_company_blog",
+          "label": "NVIDIA｜Practice Makes Precise: robotics rehearsal in simulation",
+          "url": "https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "NVIDIA 於 2026-11-09 文章介紹 CoRL 機器人模擬與 GR00T 相關合作。",
+          "evidence_ids": [
+            "src-nvidia"
+          ]
+        },
+        {
+          "text": "任務成績和展示說法來自 NVIDIA 與合作方，不是獨立基準評估。",
+          "evidence_ids": [
+            "src-nvidia"
+          ]
+        }
+      ],
+      "reader_context": "NVIDIA 文章描述機器人先在模擬中練習，再連到實體操作的研究與合作案例。",
+      "story_spine": "模擬可重複練習 → 廠商展示任務成果 → 缺獨立對照且無 Crew 細節 → 若只摘要就是泛泛新聞。",
+      "decision": {
+        "outcome": "rejected",
+        "reason_code": "vendor_claims_without_independent_context",
+        "reason": "來源是一手，但目前只有廠商展示主張，缺少獨立脈絡和可執行讀者收穫，淘汰不硬湊。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "revise",
+          "reason": "官方文章支持它被介紹，但任務數字缺獨立交叉核對。"
+        },
+        "interest": {
+          "status": "revise",
+          "reason": "主題有吸引力，現有資料仍不足以說明有何意外。"
+        },
+        "personal_relevance": {
+          "status": "revise",
+          "reason": "和 Crew 專案連結薄弱。"
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "尚無可支撐深入開場的決策或反例。"
+        },
+        "template_risk": {
+          "status": "revise",
+          "reason": "改寫會變成「機器人能在模擬中訓練」的新聞摘要。"
+        },
+        "media_fit": {
+          "status": "revise",
+          "reason": "需要精確機制圖或核實素材，現有環境沒有。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "需要精確機制圖或核實素材，現有環境沒有。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null
+      }
+    },
+    {
+      "id": "crew-car-camera-udp",
+      "topic": "Crew Car 將 UDP 控制 ACK 與影像封包分流",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-car",
+          "type": "github_commit",
+          "label": "GitHub · magic76/crew-car commit c147414｜camera UDP ACK 與影像封包分流",
+          "url": "https://github.com/magic76/crew-car/commit/c147414c25123434cb09d778c6af4faffb9e04d6",
+          "checked_at": "2026-11-10",
+          "published_date": "2026-11-06"
+        }
+      ],
+      "claims": [
+        {
+          "text": "commit c147414 分別分類 WL video fragments 與 camera command replies。",
+          "evidence_ids": [
+            "src-car"
+          ]
+        },
+        {
+          "text": "commit 描述 STOP 離開 UI thread，並新增一封包 NAT 診斷和 on-device QA 文件。",
+          "evidence_ids": [
+            "src-car"
+          ]
+        },
+        {
+          "text": "commit message 不提供本輪實機畫面或可獨立閱讀的測試輸出。",
+          "evidence_ids": [
+            "src-car"
+          ]
+        }
+      ],
+      "reader_context": "Crew Car 是 Android 控制介面與玩具車連線的專案；相機 UDP 控制回覆與影像資料需要被分開辨認。",
+      "story_spine": "UDP 控制回覆與影像片段混流 → 分錯類會影響畫面或停止流程 → commit 改分類與 STOP 執行緒 → 近幾日已談 Car/UDP，沒有新輸出可支撐。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "recent_topic_overlap_or_missing_output",
+        "reason": "保留真實 code change，但近三日 Car/UDP 題材重複，且未取得真實封包輸出。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "hold",
+          "reason": "commit 只支持程式變更，不是實機驗收證明。"
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "控制 ACK 被誤認影像的衝突具體，但題材距離太近。"
+        },
+        "personal_relevance": {
+          "status": "hold",
+          "reason": "與使用者 Crew Car 開發相關，需控制同題材頻率。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "可從封包分類發現切入，缺真實輸出佐證意外。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "近三日已有 Crew Car/UDP 修正，避免連續工程日誌。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "未取得封包截圖或影片，應等真實素材再寫。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-07-daily-review",
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 2026-11-07 至 2026-11-09 的 review、Queue 與開場；未把產品名開場設成固定要求。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "未取得封包截圖或影片，應等真實素材再寫。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null
+      }
+    }
+  ]
+}

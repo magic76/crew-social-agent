@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261110-turnstile-message-state",
+  "created_date": "2026-11-10",
+  "title": "Friend chat 驗證狀態與草稿修正",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-10",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub — magic76/magic76.github.io PR #578",
+    "published_date": "2026-11-09",
+    "title": "Friend chat 驗證狀態與草稿修正",
+    "url": "https://github.com/magic76/magic76.github.io/pull/578"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #578｜Friend chat 驗證狀態與草稿修正（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/578",
+      "requestId": "11d3933d-16d9-4ce1-94b8-d352879654cc"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #578｜Friend chat 驗證狀態與草稿修正（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/578",
+      "requestId": "41c38d42-5047-4b9f-b05f-ae18ee49bc41"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "等待驗證的訊息，不等於 Zoe 已經收到。\n\nCrew Web 的 Friend 文字聊天有一段 Turnstile 驗證流程。PR #578 把「驗證中」和「對方回覆中」分開；如果人在驗證時切走文字模式，未送出的草稿會回到輸入框，不該留下看似已經送出的訊息泡泡。\n\n這是一個很小的狀態差別，卻會改變使用者以為訊息有沒有送出去。PR 描述列出 390 與 1280 寬度的驗收；這裡只記錄 PR 所述，不延伸成平台正式環境的使用結果。",
+      "requestId": "2eb28b5d-5527-4d18-8023-b7f354c5e078"
+    },
+    "threads": {
+      "text": "等待 Turnstile 驗證，不等於 Zoe 已經收到訊息。\n\nFriend 文字聊天的 PR #578 把「驗證中」和「對方回覆中」拆開。若驗證時切走，未送出的草稿回到輸入框，不該留下假裝送成功的泡泡。\n\n小小一個狀態字，決定使用者以為訊息有沒有出去。",
+      "requestId": "dc5d18e5-3415-474b-8f8e-5b980d6ac1a5"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "未找到明確涵蓋本篇內容的既有發布授權；僅建立 draft，須逐篇核准。"
+  }
+}

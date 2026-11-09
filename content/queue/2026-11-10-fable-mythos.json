@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261110-fable-mythos",
+  "created_date": "2026-11-10",
+  "title": "Claude Fable 5.2 and Mythos 5.2",
+  "category": "ai_news",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-10",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Anthropic",
+    "published_date": "2026-11-09",
+    "title": "Claude Fable 5.2 and Mythos 5.2",
+    "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Anthropic｜Claude Fable 5.2 and Mythos 5.2（發布日期：2026-11-09）\nhttps://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "requestId": "3c76e898-9d6c-40f9-83f8-e4550d65003e"
+    },
+    "threads": {
+      "text": "參考來源：Anthropic｜Claude Fable 5.2 and Mythos 5.2（發布日期：2026-11-09）\nhttps://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "requestId": "d3c59360-c1b1-4e46-b40c-c2c957175f5f"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "同一個底層模型，產品名稱和可用方式卻分成兩條路。這次 Anthropic 公布 Fable 5.2 和 Mythos 5.2，差異不只在命名。\n\n依 Anthropic 自己的說明，Fable 對所有使用者開放，並套用網路安全與生物安全防護；Mythos 則透過專案申請取得。文中的能力與基準數字是公司公布的結果，不能當成獨立比較。\n\n讀模型公告時，除了問「它多會做」，也要看誰能用、哪些能力被限制，以及廠商怎麼描述安全邊界。",
+      "requestId": "0e6dffe5-959c-4e01-ad53-831c4f37362a"
+    },
+    "threads": {
+      "text": "Fable 5.2 和 Mythos 5.2，Anthropic 說底層是同一個模型，但安全防護與取得方式不同：Fable 對所有使用者開放；Mythos 要透過專案申請。\n\n基準數字是公司自述。看模型公告也要看誰能用、能力被怎麼限制。",
+      "requestId": "dce23917-e74d-4162-862a-dec937e9f6ea"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "未找到明確涵蓋本篇內容的既有發布授權；僅建立 draft，須逐篇核准。"
+  }
+}

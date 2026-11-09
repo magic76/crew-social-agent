@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261110-fortune-float-tail",
+  "created_date": "2026-11-10",
+  "title": "Fortune 浮點尾數修正",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-10",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub — magic76/magic76.github.io PR #579",
+    "published_date": "2026-11-09",
+    "title": "Fortune 浮點尾數修正",
+    "url": "https://github.com/magic76/magic76.github.io/pull/579"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #579｜Fortune 浮點尾數修正（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/579",
+      "requestId": "e1c6802a-40a8-4733-ac55-6b998c46abee"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #579｜Fortune 浮點尾數修正（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/579",
+      "requestId": "37d71594-bca6-414b-b85a-ade315a490d8"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "3.3999999999999995。不是命盤突然多算了幾個 9，是 JavaScript 浮點數把尾巴一起帶上來。\n\nCrew Fortune 這次把送進 AI 提示的加權數值整理到小數點後兩位；舊解說則只清掉明顯的浮點尾數，其他精度照留。PR 加了一個預期把這種尾數顯示成 3.4 的回歸案例。\n\n這裡說的是程式改動和測試案例，不代表 CI 結果或正式站畫面已確認。小數看起來只是多幾個字，讀者看到的卻像計算器剛打完噴嚏。",
+      "requestId": "890d69d3-bfd5-489d-81db-625c372e4143"
+    },
+    "threads": {
+      "text": "3.3999999999999995 不是命盤多算了幾個 9，是浮點數把尾巴帶到畫面上。\n\nCrew Fortune 這次把送進 AI 的加權值整理到兩位小數，既有解說只清掉明顯浮點尾數。PR 加了預期顯示為 3.4 的回歸案例；目前不把它寫成 CI 已通過或正式站已驗收。",
+      "requestId": "8c3cbc6c-d356-4551-9bb7-f0f5baf02a12"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "未找到明確涵蓋本篇內容的既有發布授權；僅建立 draft，須逐篇核准。"
+  }
+}

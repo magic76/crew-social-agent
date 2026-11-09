@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261110-language-explorer",
+  "created_date": "2026-11-10",
+  "title": "Exploring the world’s languages with Language Explorer",
+  "category": "research",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-10",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Google Research",
+    "published_date": "2026-11-09",
+    "title": "Exploring the world’s languages with Language Explorer",
+    "url": "https://research.google/blog/exploring-the-worlds-languages-with-language-explorer/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Google Research｜Exploring the world’s languages with Language Explorer（發布日期：2026-11-09）\nhttps://research.google/blog/exploring-the-worlds-languages-with-language-explorer/",
+      "requestId": "bed13071-d0b3-4303-9c44-779cce187077"
+    },
+    "threads": {
+      "text": "參考來源：Google Research｜Exploring the world’s languages with Language Explorer（發布日期：2026-11-09）\nhttps://research.google/blog/exploring-the-worlds-languages-with-language-explorer/",
+      "requestId": "89d7a6df-e63e-4c15-9c2e-37c9747d8afb"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "多語內容不是把翻譯檔一口氣塞進資料夾就完成了，還得知道每一筆語言資料從哪來、彼此怎麼對照。\n\nGoogle Research 在 11 月 9 日介紹 Language Explorer：一個用來視覺化世界語言多樣性的互動平台，資料包含開源 LinguaMeta，也連到 Project Vaani、WAXAL 等社群合作計畫。\n\n這篇談的是語言資料探索工具，不是新模型，也不代表所有語言都已經有同等品質的語音資料。做多語 AI 時，資料來源和在地合作本身就是產品的一部分。",
+      "requestId": "e3d219c4-399e-4dd3-bbe4-732dc906f698"
+    },
+    "threads": {
+      "text": "多語 AI 不只缺翻譯，還得知道資料從哪來、怎麼連在一起。\n\nGoogle Research 11/9 介紹 Language Explorer：互動式語言多樣性視覺化平台，使用開源 LinguaMeta，也連到 Project Vaani、WAXAL 等社群合作。這是資料探索工具，不是新模型，也不代表所有語言已有同等語音資料。",
+      "requestId": "a899ebc3-b4c5-48c9-a3af-56e4472956b5"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "未找到明確涵蓋本篇內容的既有發布授權；僅建立 draft，須逐篇核准。"
+  }
+}

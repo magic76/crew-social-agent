@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261110-live-keyboard-text",
+  "created_date": "2026-11-10",
+  "title": "Gemini 3.8 Live 文字聊天共用語音核心，免麥克風",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-10",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub — magic76/magic76.github.io PR #573",
+    "published_date": "2026-11-09",
+    "title": "Gemini 3.8 Live 文字聊天共用語音核心，免麥克風",
+    "url": "https://github.com/magic76/magic76.github.io/pull/573"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #573｜Gemini 3.8 Live 文字聊天共用語音核心，免麥克風（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/573",
+      "requestId": "6c111776-40aa-4423-983f-b531f9202e73"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io PR #573｜Gemini 3.8 Live 文字聊天共用語音核心，免麥克風（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/pull/573",
+      "requestId": "37b8c5b3-4624-4562-a80e-1edf1c7602e5"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "把麥克風關掉，文字模式還是 Live 嗎？這次改動的答案是：連線仍走 Live，但瀏覽器不錄音也不播放；Google 端仍可能生成音訊，費用不能直接當成一般純文字 REST。\n\nCrew Web 的 Teacher／Friend BYOK 文字聊天，改用 Gemini Live WebSocket 收鍵盤輸入，再把輸出轉錄顯示成文字。PR 描述新增 lifecycle 模擬測試，也明寫真實 BYOK 金鑰端到端尚未驗證。\n\n所以「畫面只顯示文字」不等於底層只跑純文字。這條界線，比按鈕叫文字模式還重要。",
+      "requestId": "6edd59f1-8a0f-4161-8285-092fd112d99a"
+    },
+    "threads": {
+      "text": "鍵盤打字，底層仍是 Live。\n\nCrew Web 的 Teacher／Friend BYOK 文字聊天改走 Gemini Live WebSocket，瀏覽器不錄音、不播放，再用輸出轉錄顯示文字。PR 也明說真實 BYOK 金鑰端到端還沒驗證；Google 端仍可能生成音訊，費用不等同純文字 REST。\n\n「看起來是文字」和「底層只跑文字」是兩回事。",
+      "requestId": "f619e9c7-3b11-48a4-8dc0-eb8d0efa702a"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "未找到明確涵蓋本篇內容的既有發布授權；僅建立 draft，須逐篇核准。"
+  }
+}

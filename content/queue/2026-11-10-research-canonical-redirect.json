@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261110-research-canonical-redirect",
+  "created_date": "2026-11-10",
+  "title": "research 英文深層連結導向 canonical 頁",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-10",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub — magic76/magic76.github.io commit e05bfa9",
+    "published_date": "2026-11-09",
+    "title": "research 英文深層連結導向 canonical 頁",
+    "url": "https://github.com/magic76/magic76.github.io/commit/e05bfa9df100a516c2fb5a7e61f456738b9ec2a6"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io commit e05bfa9｜research 英文深層連結導向 canonical 頁（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/commit/e05bfa9df100a516c2fb5a7e61f456738b9ec2a6",
+      "requestId": "ad8a8aba-9bbe-4124-afe8-d5f6c3dc2917"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/magic76.github.io commit e05bfa9｜research 英文深層連結導向 canonical 頁（發布日期：2026-11-09）\nhttps://github.com/magic76/magic76.github.io/commit/e05bfa9df100a516c2fb5a7e61f456738b9ec2a6",
+      "requestId": "918c3621-542e-4c89-94b5-d09344944632"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "英文研究文章沒有翻譯時，把深層連結送到首頁，讀者找不到文章，搜尋引擎還可能把首頁快照當成那篇內容。\n\nCrew Web 的 research detail 英文路徑現在會 301 到對應的中文 canonical 頁；英文研究入口頁則保留。這次修改針對的是「路徑不存在時錯誤回到首頁」這個路由決策。\n\n它能修正網站送出的目的地，不能單憑 commit 說 Google 已重新收錄。SEO 有時不是再塞一段關鍵字，而是先別把人帶錯門。",
+      "requestId": "8111b743-e9d4-4c6b-aa9a-13e2795a62a0"
+    },
+    "threads": {
+      "text": "英文研究文章沒翻譯，深層連結以前可能回到首頁快照。讀者看不到文章，搜尋引擎還可能把首頁當成內容。\n\nCrew Web 現在把英文 detail 路徑 301 到中文 canonical 頁，英文入口頁仍保留。這是路由修正，不是 Google 已重新收錄的證明。",
+      "requestId": "dc5013b4-35bb-4d33-bed4-7681e9a218ad"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "未找到明確涵蓋本篇內容的既有發布授權；僅建立 draft，須逐篇核准。"
+  }
+}
