@@ -45,14 +45,16 @@
 ## Queue、授權與 Publisher
 
 - 新增 6 個當日 Queue 草稿，排程台北時間 10:00、12:00、14:00、16:00、19:00、21:00。每篇為 `status=draft`、`mode=dry_run`、`safety.publish_permitted=false`、`image=null`；主文與兩平台來源回覆皆是獨立 UUID v4。每個來源回覆有來源名稱、日期、完整 URL。
-- 開始檢查時沒有既有 11/10 Queue 檔。11/7–11/9 的 13 個已授權項目維持原樣；排程日期已過，不重排不補發。因本輪無法取得本機 Publisher journal 的逐篇遠端核對結果，這些舊貼文的實際發佈狀態是未知。
+- 開始檢查時沒有既有 11/10 Queue 檔。11/7–11/9 的 13 個已授權項目維持原樣；排程日期已過，不重排不補發。repo 沒有獨立的近期已發布貼文紀錄，且本輪 checkout 的 Publisher journal 無對應 task，因此這些舊貼文實際發佈狀態未知。
 - 已檢查 Local Publisher `core.js`／`github.js` 發布條件。repo 沒有 `.env`，`SOCIAL_AGENT_MODE` 未設定，環境變數未見 Facebook／Threads 發布憑證；本輪不符合 live 條件，也未呼叫 Meta、Threads 或 Metricool API。
+- `node scripts/social-agent.mjs status` 在這個臨時 checkout 回報 `dry_run`、`paused=false`、Facebook／Threads credentials 均為 false、`taskCount=0`、`lastSync=null`。這不是使用者手機上的 Publisher 狀態；舊貼文實際發布與否仍未知。
 
 ## 未完成影片恢復
 
 - 延續 `crew-video-2026-11-06-agile-deliberation-retry`，不建立第二支，不重送同一 TTS ID。結果 URL 單次 GET 回傳 HTTP 200、`audio/wav`。取得的 WAV 是 RIFF/WAVE、PCM s16le、單聲道 24 kHz、1,336,676 bytes、27.72 秒，SHA-256 `6e961a14f4089e52dc678b94d121e79fb4e3808d87d2200cbdf0fce6a336058e`，與既有 QA／handoff 記錄吻合。低於 31 秒與 1.6 MB 門檻，不需切段或再次付費請求。
-- `ffprobe` 可讀 WAV；`ffmpeg silencedetect` 的停頓與原 13 個字幕 cue 大致吻合。既有 MP4 規格為 1080×1920、30fps、30.507 秒，舊 QA 記錄完整解碼與畫面抽查通過。
-- **仍未達可發布門檻**：本輪無法接收音訊播放的聽感回饋，逐字聽音核對未執行；舊 QA 也把字幕逐字與人工聲畫同步留作未驗證。原 handoff 繼續為 `draft_handoff_only`、`publish_permitted=false`。下一步：人工聽完整 WAV 對照 13 個 cue，按實際語速調整字幕，完成影音 QA；再確認影片 Publisher 能否派送來源回覆。
+- `ffprobe` 可讀 WAV；`ffmpeg silencedetect` 的停頓與原 13 個字幕 cue 大致吻合。既有 MP4 是 1080×1920、30fps、30.507 秒。
+- 本輪重新對 MP4 做完整 `ffmpeg` decode，SHA-256 仍為 `85e2396b3171aabd267c35b31fd9cb655a185fd6bc808bc3a942f0804a106013`；抽查 0.8、15、29.5 秒畫面，直式版面與繁中字幕可讀。
+- **仍未達可發布門檻**：本輪無法接收音訊播放的聽感回饋，逐字聽音核對未執行；舊 QA 的逐字字幕與人工聲畫同步欄位仍未驗證。影片 handoff 維持 `draft_handoff_only`、`publish_permitted=false`。下一步是人工聽完整 WAV 對照 13 個 cue，依實際語速調整字幕並完成影音 QA，再確認影片 Publisher 能否派送來源回覆。
 
 ## 14 天實驗資料
 
@@ -60,6 +62,7 @@
 
 ## 本輪檢查
 
-- `npm run editorial:check`：新增前的基準版本 6 份既有 review 通過；新增今日稿後需再執行全量檢查並逐條修正。
-- `npm run queue:check`：新增草稿後再執行，只檢查 schema、來源、UUID 和排程，不發布。
-- `npm run video:handoffs`：新增前 6 份 handoff 結構檢查通過；本輪未修改影片發佈欄位。
+- `npm run editorial:check`：通過；共 7 份 review，今日 9 個候選、6 選入、1 淘汰、2 暫緩、0 篇 Queue-ready。
+- `npm run queue:check`：通過；61 個 Queue 項目結構有效，包含本輪 6 個 draft；沒有呼叫發文 API。
+- `node scripts/social-agent.mjs status`：本 checkout 是 dry-run，無發布憑證、無同步紀錄、無可核實貼文任務。
+- `npm run video:handoffs`：通過；6 個 handoff、invalid 0；前案影片仍是 draft-only。
