@@ -19,11 +19,11 @@
     "format": "jpeg",
     "storage": "base64-utf8",
     "path": "content/queue/assets/2026-11-09-artex-decoy-defense.jpg.base64",
-    "width": 1254,
-    "height": 1254,
-    "sha256": "171f12bbc6a78e7789930268d327580194ca767c18843c8b4f8ce5a6065a0e8c",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "6148a799b747ed8386f6f8ee03746bb9b99d45beeec0b3abf2e6b2145c3c0550",
     "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-09-artex-decoy-defense.jpg",
-    "alt": "Crew Light 概念插畫：Crew Cloud 觀察深色自動化小球被引向誘餌入口，伺服器圖示位於淡藍護盾後；示意誘餌式防守，非攻擊畫面。"
+    "alt": "直式插畫；上方標題「把攻擊引去假的目標」。黑色自動化球體沿彎曲路徑進入亮橘色誘餌入口，背景的伺服器留在淡藍色防護罩內；橘色雲朵角色在旁觀察。概念示意，非真實攻擊畫面。"
   },
   "source": {
     "publisher": "Microsoft Threat Intelligence",

@@ -19,11 +19,11 @@
     "format": "jpeg",
     "storage": "base64-utf8",
     "path": "content/queue/assets/2026-11-09-rush-fix-verification.jpg.base64",
-    "width": 1254,
-    "height": 1254,
-    "sha256": "92ffd1daa873b4a3c60451c48038d973cc19b166bfc71ca02dbf6c48589fdd65",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "74ca32e7b6c95a406016fef1d32991d976ae2896ed8acb061dcc427bff165164",
     "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-09-rush-fix-verification.jpg",
-    "alt": "Crew Light 概念插畫：Crew Cloud 用放大鏡檢查測試架上的兩個相同服務模組，呈現修正合併後仍需確認實際執行狀態；非真實系統畫面。"
+    "alt": "直式插畫；上方標題「PR 合併了，錯誤還在」。工作桌旁的伺服器機櫃裡，兩個相同服務模組同時亮著，其中一個上方紅色警示燈亮起；橘色雲朵角色拿著打勾的合併核准紙檢查。概念示意，非真實系統畫面。"
   },
   "source": {
     "publisher": "Rush",

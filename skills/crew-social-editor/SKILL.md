@@ -72,7 +72,7 @@ No self-scored average or universal numerical cutoff decides quality. The determ
 
 ## Media choice
 
-Follow [the media policy](../../content/editorial/MEDIA_POLICY.md). Use real product captures, logs or test outputs for engineering stories only when those genuine assets exist and are safe to share. Never use generated imagery to impersonate a real interface or test. For humorous moments, make a small visual story with a clear action and emotion. Use simple diagrams for mechanisms. Text-only is a valid deliberate choice. Do not generate an image merely to fill a daily slot.
+Follow the [canonical editorial guidelines](../../docs/editorial-guidelines.md) and [media policy](../../content/editorial/MEDIA_POLICY.md). Images should show the story's actual scene or conflict with enough setting and detail to understand it; avoid a lone symbolic object and ad-like compositions. Add one short, phone-readable Traditional Chinese headline. For social posts, use portrait 4:5 at 1080×1350; keep small text legible or omit it. Crew Cloud is optional and remains a supporting character. Never fabricate screenshots, data, tests, or results. Record generated illustrations as illustrations with provenance and accurate alt text. Before handoff, ask: “不看文字，這張圖能讓人猜到主題嗎？” If not, revise it or choose real shareable evidence or text-only. Text-only is valid; never make an image just to fill a slot.
 
 ## Feedback and learning
 

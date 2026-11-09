@@ -9,7 +9,17 @@ Record one concrete reason for each row for every candidate. Include a `reader_c
 | Personal relevance | The material connects to the author's real project or a clearly stated point of view. | It could be posted unchanged by any AI news account. |
 | Opening | Start with the most concrete situation, reader problem, decision or discovery supported by the evidence. Add a short product explanation where it helps the reader follow. | The opening is vague, unsupported, or leaves the reader unable to understand the stakes; product-first wording is not required. |
 | Template risk | The draft has a distinct structure and does not repeat an opener, punchline, or moral from recent posts. | Stock phrases, repeated framing, or an interchangeable AI conclusion dominate. |
-| Media fit | The chosen medium adds proof, context, humor, or clarity; text-only is intentional when enough. | The image is decorative, misleading, fabricated as a real UI, or required only to fill a slot. |
+| Media fit | The chosen medium adds proof, context, humor, or clarity. An illustration shows the story's key scene/conflict, not just a symbol; it has layered setting/details, one short readable Traditional Chinese headline, 4:5 portrait 1080×1350 output, truthful alt/provenance, and no fake UI/data or ad-like framing. Crew Cloud is optional. Text-only is intentional when enough. | The image is decorative or only symbolic, the scene does not communicate the event, the headline is hard to read on a phone, it implies fake UI/data or results, feels like an ad, or exists only to fill a slot. |
+
+## Image preflight
+
+Before approving an image, confirm the story has a visual reason for one and inspect the image at phone-feed size:
+
+- Does the scene show the story's key situation or conflict with recognizable setting and details?
+- Is there one short Traditional Chinese headline, readable at a glance, in a 4:5 portrait 1080×1350 frame?
+- Is Crew Cloud secondary or omitted when unnecessary?
+- Are all interface-like elements, numbers, and outcomes either genuine and approved or absent?
+- Hide the headline or ignore all lettering and ask: **「不看文字，這張圖能讓人猜到主題嗎？」** If not, revise the image or use real evidence/text-only.
 
 ## Dispositions
 

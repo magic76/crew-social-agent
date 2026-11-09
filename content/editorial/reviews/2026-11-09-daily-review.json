@@ -116,14 +116,14 @@
         }
       },
       "media": {
-        "type": "text_only",
-        "reason": "數字與流程用文字即可準確表達；沒有必要生成假的團隊儀表板或 PR 畫面。",
+        "type": "original_illustration",
+        "reason": "把打勾的合併核准紙與仍同時運作、其中一個亮起警示燈的兩個服務模組放在同一個工作場景，直接呈現合併狀態和線上執行不一致；這是概念插畫，不是真實系統畫面。",
         "asset": {
-          "status": "not_needed",
-          "path": null,
-          "provenance": null
+          "status": "available",
+          "path": "content/queue/assets/2026-11-09-rush-fix-verification.jpg",
+          "provenance": "Crew Light v1 inspired 的 AI 概念插畫，使用 Crew Cloud 吉祥物參考圖；沒有真實介面、測試輸出或數據。"
         },
-        "alt_text": null
+        "alt_text": "直式插畫；上方標題「PR 合併了，錯誤還在」。工作桌旁的伺服器機櫃裡，兩個相同服務模組同時亮著，其中一個上方紅色警示燈亮起；橘色雲朵角色拿著打勾的合併核准紙檢查。概念示意，非真實系統畫面。"
       },
       "handoff": {
         "status": "draft_handoff_only",
@@ -706,14 +706,14 @@
         }
       },
       "media": {
-        "type": "text_only",
-        "reason": "現有一手證據足以用文字說清楚；沒有可核實且必要的真實畫面，不為配額生成假 UI。",
+        "type": "original_illustration",
+        "reason": "以沿著路徑進入誘餌入口的攻擊球體，對照藍色防護罩內的真實伺服器，呈現誘餌式防守如何把攻擊引離資產；屬於來源支持的概念示意，不是真實攻擊畫面。",
         "asset": {
-          "status": "not_needed",
-          "path": null,
-          "provenance": null
+          "status": "available",
+          "path": "content/queue/assets/2026-11-09-artex-decoy-defense.jpg",
+          "provenance": "Crew Light v1 inspired 的 AI 概念插畫，使用 Crew Cloud 吉祥物參考圖；不含真實攻擊介面、數據或測試輸出。"
         },
-        "alt_text": null
+        "alt_text": "直式插畫；上方標題「把攻擊引去假的目標」。黑色自動化球體沿彎曲路徑進入亮橘色誘餌入口，背景的伺服器留在淡藍色防護罩內；橘色雲朵角色在旁觀察。概念示意，非真實攻擊畫面。"
       },
       "handoff": {
         "status": "draft_handoff_only",
@@ -910,4 +910,3 @@
     }
   ]
 }
-
