@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261109-artex-decoy-defense",
+  "created_date": "2026-11-09",
+  "title": "ARTEX 與誘餌式防守",
+  "category": "ai-research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-09",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-09-artex-decoy-defense.jpg.base64",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "171f12bbc6a78e7789930268d327580194ca767c18843c8b4f8ce5a6065a0e8c",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-09-artex-decoy-defense.jpg",
+    "alt": "Crew Light 概念插畫：Crew Cloud 觀察深色自動化小球被引向誘餌入口，伺服器圖示位於淡藍護盾後；示意誘餌式防守，非攻擊畫面。"
+  },
+  "source": {
+    "publisher": "Microsoft Threat Intelligence",
+    "published_date": "2026-11-06",
+    "title": "ARTEX abuse expands as cybercriminals target financial sector",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Microsoft Threat Intelligence｜ARTEX abuse expands as cybercriminals target financial sector（2026-11-06）\nhttps://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+      "requestId": "ba3ad736-ea3f-41f6-b07a-4dfef3e6a5c4"
+    },
+    "threads": {
+      "text": "參考來源：Microsoft Threat Intelligence｜ARTEX abuse expands as cybercriminals target financial sector（2026-11-06）\nhttps://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/",
+      "requestId": "c5790621-d921-4980-8c0c-f5eea2c3c695"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Microsoft Threat Intelligence 在 2026 年 10 月觀察到，鎖定金融業的 Storm-3358 使用 ARTEX，搭配傳統自動化工具掃描公開系統、利用 Web 漏洞，並在已入侵系統部署遠端控制工具。\n\n這類 Agent 的特點是能在短時間送出不同請求、重試手法，或直接接著做下一步。只封一種 user-agent 特徵不夠，因為工具很快能換掉它。\n\nMicrosoft 提到的防守方法包括 honeypot、decoy、tarpit 和 fake wins：把攻擊流程引去假的目標，或讓它把時間和預算花在無效路徑。Microsoft 說，自己的測試中，這些措施減少了抵達真實資產的攻擊流量，也留下高信心辨識訊號。\n\n對防守方來說，至少別只押在一個可以快速替換的特徵上。",
+      "requestId": "c539e1f4-e4fb-49db-b0ee-8a37276dc037"
+    },
+    "threads": {
+      "text": "Microsoft Threat Intelligence 在 2026 年 10 月觀察到，Storm-3358 使用 ARTEX 搭配一般自動化工具攻擊金融業系統：掃描公開服務、利用 Web 漏洞，並部署遠端控制工具。\n\n這類 Agent 能很快送出大量請求、重試不同做法，再接著跑下一步。只封一種 user-agent 特徵不夠，工具很快就能換。\n\nMicrosoft 提到 honeypot、decoy、tarpit 和 fake wins 這些誘餌式防守；他們的測試中，這些措施降低了到達真實資產的流量，也留下高信心辨識線索。\n\n不是單一解法，但提醒很具體：別只靠一個特徵找攻擊。",
+      "requestId": "77a121bf-058b-4d7a-9a1a-0e1879e9d04a"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-09 明確核准此篇文案、配圖及台北時間 16:00 排程，交由手機本地 agent 發文；僅在指定時段由 Local Publisher 執行。"
+  }
+}
