@@ -4,8 +4,8 @@
   "created_date": "2026-11-10",
   "title": "Exploring the world’s languages with Language Explorer",
   "category": "research",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-10",
     "time": "19:00",
@@ -43,7 +43,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "未找到明確涵蓋本篇內容的既有發布授權；僅建立 draft，須逐篇核准。"
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-10 明確指示將今日 Queue 稿改為可發布並發布未發稿件；保留原文案、requestId、純文字媒體選擇與排程。"
   }
 }
