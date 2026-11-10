@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261111-alphaproof-code-signal",
+  "created_date": "2026-11-11",
+  "title": "AlphaProof Code：agent 寫證明，Lean kernel 驗證 libsignal 的指定安全性質",
+  "category": "practical",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-11",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Google DeepMind",
+    "published_date": "2026-11-10",
+    "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+    "url": "https://deepmind.google/blog/introducing-alphaproof-code/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Google DeepMind｜Introducing AlphaProof Code（發布日期：2026-11-10）\nhttps://deepmind.google/blog/introducing-alphaproof-code/\n技術論文｜AlphaProof Code: Verifying Signal’s Security at the Machine-Code Level（2026-11-10）\nhttps://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+      "requestId": "b05385c7-8996-4df3-9632-e0a5e8dfbbb2"
+    },
+    "threads": {
+      "text": "參考來源：Google DeepMind｜Introducing AlphaProof Code（發布日期：2026-11-10）\nhttps://deepmind.google/blog/introducing-alphaproof-code/\n技術論文｜AlphaProof Code: Verifying Signal’s Security at the Machine-Code Level（2026-11-10）\nhttps://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+      "requestId": "2a0a2b3e-5528-4163-b793-ab498f513461"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "讓 AI agent 寫出證明，不等於讓它自己判自己滿分。\n\nGoogle DeepMind 的 AlphaProof Code 用在人和 AI 先寫、再核准要證明的安全規格；一組 prover agents 產生 Lean 證明，最後由 Lean kernel 檢查。團隊報告對 libsignal 編譯後的程式產生約 650 萬行 machine-checked proof；把兩個已修過的 bug 放回隔離版本時，證明也指出該版本不安全。\n\n這不是整個 Signal app 已被證明零漏洞。結果只涵蓋核准的規格與列明假設。值得看的設計是：產生證明的 agent 不負責當自己的裁判。",
+      "requestId": "fac41d24-94c9-4916-b5da-39c65fcde5ab"
+    },
+    "threads": {
+      "text": "AI agent 寫出證明，不等於它自己驗收。AlphaProof Code 讓人核准要證明的規格、agents 產生 Lean proof，再由 Lean kernel 檢查。Google DeepMind 報告對 libsignal 編譯後程式產生約 650 萬行機器檢查證明；結論只限核准性質與假設，不是整個 Signal app 保證零漏洞。",
+      "requestId": "54e27d2a-899d-4c76-a14a-e04567c7617e"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "新稿未取得逐篇發布授權；編輯審核不構成發布許可。"
+  },
+  "references": [
+    {
+      "publisher": "Google DeepMind technical paper",
+      "published_date": "2026-11-10",
+      "title": "AlphaProof Code: Verifying Signal’s Security at the Machine-Code Level",
+      "url": "https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf"
+    }
+  ]
+}

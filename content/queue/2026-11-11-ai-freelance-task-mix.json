@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261111-ai-freelance-task-mix",
+  "created_date": "2026-11-11",
+  "title": "Upwork AI 相關職缺的任務組合變得更多樣",
+  "category": "research",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-11",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "OpenAI Economic Research / Upwork",
+    "published_date": "2026-11-10",
+    "title": "Work at the Frontier: AI’s effect on freelance work",
+    "url": "https://openai.com/index/ai-effect-on-freelance-work/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：OpenAI Economic Research / Upwork｜Work at the Frontier: AI’s effect on freelance work（發布日期：2026-11-10）\nhttps://openai.com/index/ai-effect-on-freelance-work/",
+      "requestId": "9a337f7c-9518-4776-92d0-bcdea0bd8f4b"
+    },
+    "threads": {
+      "text": "參考來源：OpenAI Economic Research / Upwork｜Work at the Frontier: AI’s effect on freelance work（發布日期：2026-11-10）\nhttps://openai.com/index/ai-effect-on-freelance-work/",
+      "requestId": "dfd63bfc-9059-46a5-9ce8-59265cfd7cac"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 接案職缺的變化，不一定只是「多了一種 AI 工作」。\n\nOpenAI Economic Research 和 Upwork 分析平台貼文：2023 年初到 2025 年末，AI 相關職缺的任務組合多樣度增加 45%，約從 14.6 增到 21.2 種等量任務。報告也觀察到固定價預算較高、工時較多，但同類工作的刊登時薪相近。\n\n這是 Upwork 的職缺資料，不等於整體就業趨勢，也不能單靠它證明 AI 導致了變化。",
+      "requestId": "53bc6234-fad8-4f63-866d-2d33019df6c5"
+    },
+    "threads": {
+      "text": "AI 接案的變化，不一定只是「多了一種 AI 工作」。OpenAI＋Upwork 稱，AI 相關職缺的任務組合多樣度從 2023 初到 2025 末增加 45%（約 14.6→21.2 種等量任務）。\n\n這是 Upwork 刊登資料，不代表整體就業，也不是因果證明。",
+      "requestId": "27aa3e0e-767d-4c71-9496-1c078d0e337e"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "新稿未取得逐篇發布授權；審核與草稿交接不構成發布許可。"
+  }
+}

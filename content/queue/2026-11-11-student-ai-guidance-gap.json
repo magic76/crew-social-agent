@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261111-student-ai-guidance-gap",
+  "created_date": "2026-11-11",
+  "title": "學生自陳使用 AI 的比例高於得到使用指引的比例",
+  "category": "discussion",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-11",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-11-10",
+    "title": "Closing the AI guidance gap in education",
+    "url": "https://openai.com/index/closing-ai-guidance-gap-education/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：OpenAI｜Closing the AI guidance gap in education（發布日期：2026-11-10）\nhttps://openai.com/index/closing-ai-guidance-gap-education/",
+      "requestId": "22d7675c-c08f-4e4f-851b-8a2225eef0ac"
+    },
+    "threads": {
+      "text": "參考來源：OpenAI｜Closing the AI guidance gap in education（發布日期：2026-11-10）\nhttps://openai.com/index/closing-ai-guidance-gap-education/",
+      "requestId": "7b243465-064a-46d6-a9ea-40baa27cc72d"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "學生使用 AI 的比例，比他們得到使用指引的比例高。\n\nOpenAI 引述 ThinkYoung 調查：79% 受訪學生表示會用 AI 做作業或功課，47% 表示曾被教過怎麼用。這組數字比較的是使用與指導，不是學習成效。\n\n它也不是台灣學生的比例。對做 AI 教學的人來說，除了開放工具，什麼時候用、怎麼查證、哪些作業要說明使用方式，也需要講清楚。",
+      "requestId": "ad027b5d-6f23-4a45-ba1b-2d8d782b310f"
+    },
+    "threads": {
+      "text": "學生使用 AI 的比例，比得到使用指引的比例高。OpenAI 引述 ThinkYoung 調查：79% 受訪學生用 AI 做作業，47% 曾被教過怎麼用。\n\n這是該調查的自陳結果，不代表台灣比例，也沒有測量學習成效。工具進教室時，使用規範也得一起教。",
+      "requestId": "5ed532e8-a881-4ba4-91c1-f024cc5f7bfe"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "新稿未取得逐篇發布授權；審核與草稿交接不構成發布許可。"
+  }
+}

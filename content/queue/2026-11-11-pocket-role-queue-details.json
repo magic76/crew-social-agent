@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261111-pocket-role-queue-details",
+  "created_date": "2026-11-11",
+  "title": "多 Agent 工作裡，哪些角色的訊息還在排隊",
+  "category": "development",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-11",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "GitHub · magic76/crew-pocket",
+    "published_date": "2026-11-10",
+    "title": "per-role queue details and retry visibility",
+    "url": "https://github.com/magic76/crew-pocket/commit/1893bfd4d90b174afec236bc49be89a913ae742e"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：GitHub · magic76/crew-pocket commit 1893bfd｜per-role queue details and retry visibility（發布日期：2026-11-10）\nhttps://github.com/magic76/crew-pocket/commit/1893bfd4d90b174afec236bc49be89a913ae742e",
+      "requestId": "ff0bbf38-2b1c-4882-b47d-890411da7aa9"
+    },
+    "threads": {
+      "text": "參考來源：GitHub · magic76/crew-pocket commit 1893bfd｜per-role queue details and retry visibility（發布日期：2026-11-10）\nhttps://github.com/magic76/crew-pocket/commit/1893bfd4d90b174afec236bc49be89a913ae742e",
+      "requestId": "38d0f4c0-55e5-45a4-a558-3df58c5f89aa"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "多個 AI 角色一起跑，最怕的不是沒回覆，是不知道誰還在排隊、重試卡在哪。\n\nCrew Pocket 最近的 commit 加入每個角色的 queue detail：待處理訊息、自動回應、狀態、時間和重試原因。這讓工作交接停在哪一段比較看得見。這裡說的是程式碼變更，不代表正式環境或測試已驗證。\n\n多 Agent 管理先把「誰在等什麼」說清楚，比畫一排會發光的終端機實在。",
+      "requestId": "7cc41c33-c481-4e42-9d74-47d2cc8dcfb4"
+    },
+    "threads": {
+      "text": "多個 AI 角色一起跑，先要看得見誰還在排隊。\n\nCrew Pocket 最近的 commit 加了 per-role queue detail：待處理訊息、自動回應、狀態、時間和重試原因。這是程式碼變更，不等於正式環境或測試已驗證。",
+      "requestId": "fad78eab-d915-4fc7-be38-d4cac40b0a53"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "新稿未取得逐篇發布授權；審核與草稿交接不構成發布許可。"
+  }
+}

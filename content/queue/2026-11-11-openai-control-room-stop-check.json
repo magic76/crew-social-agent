@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261111-openai-control-room-stop-check",
+  "created_date": "2026-11-11",
+  "title": "AI 工作停止時，授權檢查放在推理層還是工作程式",
+  "category": "practical",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-11",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "OpenAI",
+    "published_date": "2026-11-09",
+    "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+    "url": "https://openai.com/index/control-room/"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：OpenAI｜Control Room: A central system to track and stop model workloads across our research infrastructure（發布日期：2026-11-09）\nhttps://openai.com/index/control-room/",
+      "requestId": "188576b6-3313-4a8a-9587-6aede99acd9a"
+    },
+    "threads": {
+      "text": "參考來源：OpenAI｜Control Room: A central system to track and stop model workloads across our research infrastructure（發布日期：2026-11-09）\nhttps://openai.com/index/control-room/",
+      "requestId": "59307932-8dfb-42b1-aa56-dcc62b0100a8"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "要停一個 AI 工作，光叫任務程式收工還不夠。\n\nOpenAI 描述的 Control Room 會替研究工作建立 job_id；每次模型推理前，inference engine 都回查這個工作是否仍獲准。工作被停止後，下一次輸出請求會被拒絕。\n\n整合設計在 Control Room 故障時 fail closed；但停止指令到不再輸出，官方寫的最長延遲是 35 秒。這是 OpenAI 研究基礎設施的做法，不是所有 agent 產品現成可用的開關。",
+      "requestId": "368e0e50-ceaf-42f7-8c63-e77bbccc35a8"
+    },
+    "threads": {
+      "text": "AI 工作要停，授權檢查放哪裡很重要。OpenAI 的 Control Room 讓 inference engine 帶著 job_id 回查工作是否仍獲准；被停止後，後續推理請求會被拒。\n\n系統故障時採 fail closed，但停止到不再輸出最多仍有 35 秒。這篇談的是 OpenAI 研究基礎設施。",
+      "requestId": "03cd2ba7-0e7f-41d4-bb38-8418212de5d6"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "新稿未取得逐篇發布授權；審核與草稿交接不構成發布許可。"
+  }
+}

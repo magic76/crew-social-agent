@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261111-anthropic-electronics-prototypes",
+  "created_date": "2026-11-11",
+  "title": "Claude 電子原型設計：電路板走線混亂時重新安排，而非局部補丁",
+  "category": "research",
+  "status": "draft",
+  "mode": "dry_run",
+  "schedule": {
+    "date": "2026-11-11",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Anthropic",
+    "published_date": "2026-11-09",
+    "title": "Testing Claude on real-world electronics design",
+    "url": "https://www.anthropic.com/research/claude-electronics-design"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "參考來源：Anthropic｜Testing Claude on real-world electronics design（發布日期：2026-11-09）\nhttps://www.anthropic.com/research/claude-electronics-design",
+      "requestId": "5a49b455-808e-4eaa-ac7b-1b23074ac047"
+    },
+    "threads": {
+      "text": "參考來源：Anthropic｜Testing Claude on real-world electronics design（發布日期：2026-11-09）\nhttps://www.anthropic.com/research/claude-electronics-design",
+      "requestId": "38321e0d-ded2-49ad-a5a6-5a6f1c2aa64a"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "電路板走線太亂時，Anthropic 說 Claude 會把一整角重新排過，不是一直在原路線上貼補丁。\n\n這是 Anthropic 與硬體公司 Diode 的原型合作：Fable 5.2 設計了 speakerphone、voice-assistant hub 和手持電子寵物；Diode 的工程師組裝。文章描述 Claude 會查元件資料、重新安排零件和走線，也會做機殼與韌體。\n\n目前是早期原型。Anthropic 說原型已運作數週，但商業認證和長期耐用度仍未知。比起「AI 會設計硬體」的大標題，更值得看的，是它得在電路、機構、零件供應和可製造限制之間反覆修改。",
+      "requestId": "a623da53-7f2b-4acc-9342-b371d7205503"
+    },
+    "threads": {
+      "text": "走線太亂時，Anthropic 說 Claude 把電路板一角拆掉重排，沒有一直補線。這次合作用 Fable 5.2 設計三種硬體原型，再由 Diode 工程師組裝。\n\n原型運作數週，但商業認證與長期耐用度仍未知。硬體設計的難點是電路、機構、零件與製造限制要一起顧。",
+      "requestId": "e5b59d28-68f0-4c4f-bbee-109d36b6c864"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "新稿未取得逐篇發布授權；編輯審核不構成發布許可。"
+  }
+}

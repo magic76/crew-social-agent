@@ -1,0 +1,1229 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-11",
+  "review_id": "2026-11-11-daily-review",
+  "selection_policy": {
+    "minimum_selected": 6,
+    "target_selected": 6,
+    "unit": "distinct_topics_not_platform_copies"
+  },
+  "formula_scan": {
+    "compared_queue_dates": [
+      "2026-11-08",
+      "2026-11-09",
+      "2026-11-10"
+    ],
+    "repeated_openers": [],
+    "stock_phrase_hits": [],
+    "note": "候選 11 題，入選 6、暫緩 4、淘汰 1。入選 1 個 Crew 開發、2 個 AI 安全／驗證實務、2 個 AI 研究應用、1 個教育討論；近期 Crew 內容不足以提供六個不重複故事，故以可信原始來源補足。"
+  },
+  "candidates": [
+    {
+      "id": "candidate-01-pocket-role-queue-details",
+      "topic": "多 Agent 工作裡，哪些角色的訊息還在排隊",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-1-1",
+          "type": "github_commit",
+          "label": "GitHub · magic76/crew-pocket commit 1893bfd｜per-role queue details and retry visibility",
+          "url": "https://github.com/magic76/crew-pocket/commit/1893bfd4d90b174afec236bc49be89a913ae742e",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Crew Pocket 最近的 commit 加入依角色查看 queue detail 的 UI/API。",
+          "evidence_ids": [
+            "src-1-1"
+          ]
+        },
+        {
+          "text": "細節包含待處理角色訊息、自動回應、狀態、時間與 retry reason。",
+          "evidence_ids": [
+            "src-1-1"
+          ]
+        },
+        {
+          "text": "commit 能證明程式碼變更，不能證明測試通過或功能已在正式環境驗收。",
+          "evidence_ids": [
+            "src-1-1"
+          ]
+        }
+      ],
+      "reader_context": "Crew Pocket 是一個管理多個 AI 角色與工作記憶的工具；這次改動讓管理者查看各角色待處理訊息的狀態。",
+      "story_spine": "多個角色同時工作時，回覆以外還要知道誰在等什麼；近期 commit 加入 per-role queue detail，讓待處理訊息、狀態和重試理由可被查看；讀者可借此理解多 Agent 管理要先解決可觀察性。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_development_evidence",
+        "reason": "commit diff 具體列出角色 queue 的訊息、狀態和 retry reason，能說明多 Agent 的交接可觀察性；不把程式碼變更寫成已部署或測試通過。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "主張限於 commit diff 明列的 queue 欄位，並清楚保留未驗證正式環境的界線。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "「誰還在排隊、卡在哪」是多角色管理的具體問題，不是功能清單。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "與使用者正在發展的 Crew Pocket 和多 Agent 管理直接相關。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從多 Agent 最容易遇到的排隊可見性開場，無需先介紹產品。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "近三日 Queue 沒有相同的角色 queue 可觀察性主題；與昨天 Crew Web Live 文本不同。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有可分享的真實介面截圖，純文字能精確交代欄位，不造 UI。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue 的題材、開場和慣用語；本題開場依故事決定，未重複近三日主題。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "多個 AI 角色一起跑，最怕的不是沒回覆，是不知道誰還在排隊、重試卡在哪。\n\nCrew Pocket 最近的 commit 加入每個角色的 queue detail：待處理訊息、自動回應、狀態、時間和重試原因。這讓工作交接停在哪一段比較看得見。這裡說的是程式碼變更，不代表正式環境或測試已驗證。\n\n多 Agent 管理先把「誰在等什麼」說清楚，比畫一排會發光的終端機實在。"
+        },
+        "threads": {
+          "text": "多個 AI 角色一起跑，先要看得見誰還在排隊。\n\nCrew Pocket 最近的 commit 加了 per-role queue detail：待處理訊息、自動回應、狀態、時間和重試原因。這是程式碼變更，不等於正式環境或測試已驗證。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub · magic76/crew-pocket commit 1893bfd｜per-role queue details and retry visibility（發布日期：2026-11-10）\nhttps://github.com/magic76/crew-pocket/commit/1893bfd4d90b174afec236bc49be89a913ae742e",
+            "requestId": "ff0bbf38-2b1c-4882-b47d-890411da7aa9"
+          },
+          "threads": {
+            "text": "參考來源：GitHub · magic76/crew-pocket commit 1893bfd｜per-role queue details and retry visibility（發布日期：2026-11-10）\nhttps://github.com/magic76/crew-pocket/commit/1893bfd4d90b174afec236bc49be89a913ae742e",
+            "requestId": "38d0f4c0-55e5-45a4-a558-3df58c5f89aa"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "沒有可公開的真實介面畫面；純文字直接列出 commit 支持的 queue 欄位，不製作假 UI。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-11-pocket-role-queue-details.json",
+        "schedule": {
+          "date": "2026-11-11",
+          "time": "10:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-02-alphaproof-code-signal",
+      "topic": "AlphaProof Code：agent 寫證明，Lean kernel 驗證 libsignal 的指定安全性質",
+      "class": "practical",
+      "evidence": [
+        {
+          "id": "src-alpha-article",
+          "type": "official_source",
+          "label": "Google DeepMind｜Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
+          "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        },
+        {
+          "id": "src-alpha-paper",
+          "type": "research_paper",
+          "label": "Google DeepMind technical paper｜AlphaProof Code: Verifying Signal’s Security at the Machine-Code Level",
+          "url": "https://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "AlphaProof Code 由人和 spec-writer agent 共同形成規格並經人核准，再由 prover agents 產生證明，Lean kernel 檢查證明。",
+          "evidence_ids": [
+            "src-alpha-article",
+            "src-alpha-paper"
+          ]
+        },
+        {
+          "text": "Google DeepMind 報告約 650 萬行 Lean proof，對象是 libsignal 編譯後機器碼中的特定安全性質。",
+          "evidence_ids": [
+            "src-alpha-paper"
+          ]
+        },
+        {
+          "text": "研究把兩個先前修正過的 bug 放回隔離版本，machine-checked proofs 指出 bug 版本不安全。",
+          "evidence_ids": [
+            "src-alpha-paper"
+          ]
+        },
+        {
+          "text": "結果依賴人核准的規格及論文列出的模型／外部例程假設，不能概括為整個 Signal app 無漏洞。",
+          "evidence_ids": [
+            "src-alpha-article",
+            "src-alpha-paper"
+          ]
+        }
+      ],
+      "reader_context": "AlphaProof Code 是 Google DeepMind 公布的形式驗證多 Agent 框架；它用來驗證 libsignal 某些核准的安全規格。",
+      "story_spine": "人先決定程式需要滿足哪些安全性質，AI agents 產生 Lean proof，Lean kernel 獨立檢查；研究也用兩個舊 bug 測試規格能否抓出不安全版本；讀者可帶走生成與驗證應分開的設計。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_source_and_reader_value",
+        "reason": "官方原文和論文都提供明確流程、適用程式範圍與假設界線；內容可帶出產生／驗證分離，不宣稱 Signal 全面無漏洞。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "將結果限定為 libsignal 的指定安全性質與核准規格，避免把形式證明外推到整個 Signal app。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "約 650 萬行 proof 的亮點不是行數，而是 agent 產生、Lean kernel 驗證的分工。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "對多 Agent 管理與 AI 可靠度討論有直接參考；核心不是 agent 數量，而是信任邊界。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從 agent 不能自己給自己打分切入，隨後說明規格和獨立 checker。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "近三日沒有正式驗證或機器可檢查證明主題；不重複 Pocket queue 可觀察性。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "來源包含工作流程圖，但沒有本輪下載、重製或核對授權的圖檔；純文字能說清 spec / prover / Lean kernel 的分工與適用界線。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue 的題材、開場和慣用語；本題開場依故事決定，未重複近三日主題。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "讓 AI agent 寫出證明，不等於讓它自己判自己滿分。\n\nGoogle DeepMind 的 AlphaProof Code 用在人和 AI 先寫、再核准要證明的安全規格；一組 prover agents 產生 Lean 證明，最後由 Lean kernel 檢查。團隊報告對 libsignal 編譯後的程式產生約 650 萬行 machine-checked proof；把兩個已修過的 bug 放回隔離版本時，證明也指出該版本不安全。\n\n這不是整個 Signal app 已被證明零漏洞。結果只涵蓋核准的規格與列明假設。值得看的設計是：產生證明的 agent 不負責當自己的裁判。"
+        },
+        "threads": {
+          "text": "AI agent 寫出證明，不等於它自己驗收。AlphaProof Code 讓人核准要證明的規格、agents 產生 Lean proof，再由 Lean kernel 檢查。Google DeepMind 報告對 libsignal 編譯後程式產生約 650 萬行機器檢查證明；結論只限核准性質與假設，不是整個 Signal app 保證零漏洞。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Google DeepMind｜Introducing AlphaProof Code（發布日期：2026-11-10）\nhttps://deepmind.google/blog/introducing-alphaproof-code/\n技術論文｜AlphaProof Code: Verifying Signal’s Security at the Machine-Code Level（2026-11-10）\nhttps://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+            "requestId": "b05385c7-8996-4df3-9632-e0a5e8dfbbb2"
+          },
+          "threads": {
+            "text": "參考來源：Google DeepMind｜Introducing AlphaProof Code（發布日期：2026-11-10）\nhttps://deepmind.google/blog/introducing-alphaproof-code/\n技術論文｜AlphaProof Code: Verifying Signal’s Security at the Machine-Code Level（2026-11-10）\nhttps://deepmind.google/documents/36/Formal_Verification_of_Signal_4.pdf",
+            "requestId": "2a0a2b3e-5528-4163-b793-ab498f513461"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "來源包含工作流程圖，但沒有本輪下載、重製或核對授權的圖檔；純文字能說清 spec / prover / Lean kernel 的分工與適用界線。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-11-alphaproof-code-signal.json",
+        "schedule": {
+          "date": "2026-11-11",
+          "time": "12:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-03-anthropic-electronics-prototypes",
+      "topic": "Claude 電子原型設計：電路板走線混亂時重新安排，而非局部補丁",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-anthropic-electronics",
+          "type": "official_source",
+          "label": "Anthropic｜Testing Claude on real-world electronics design",
+          "url": "https://www.anthropic.com/research/claude-electronics-design",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Anthropic 與 Diode 以 Claude Fable 5.2 設計 speakerphone、voice-assistant hub 和手持虛擬寵物三種原型，由人類工程師組裝。",
+          "evidence_ids": [
+            "src-anthropic-electronics"
+          ]
+        },
+        {
+          "text": "文章記錄 Claude 查看 datasheet、安排元件、修改銅箔走線、設計機殼並編寫 firmware。",
+          "evidence_ids": [
+            "src-anthropic-electronics"
+          ]
+        },
+        {
+          "text": "Anthropic 稱原型運作數週，但商業認證和長期耐用度未知。",
+          "evidence_ids": [
+            "src-anthropic-electronics"
+          ]
+        },
+        {
+          "text": "文中的 benchmark 數字由 Anthropic / Diode 公布，不是獨立比較。",
+          "evidence_ids": [
+            "src-anthropic-electronics"
+          ]
+        }
+      ],
+      "reader_context": "Anthropic 與電路板公司 Diode 合作，讓 Claude 從電路與零件資料出發做三種硬體原型，再由工程師組裝。",
+      "story_spine": "硬體設計不只畫電路；原型要同時顧元件、走線、機殼、firmware 與製造限制。Claude 多次重排線路，原型由工程師組裝，但仍未經商業認證或長期耐用驗證。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "specific_source_and_reader_value",
+        "reason": "有具體設計迭代、實物原型和未解限制；可講工程取捨，不寫成泛泛能力宣告。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "設計與組裝範圍、原型狀態及認證限制都按 Anthropic 原文歸因。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "走線太亂而重排一角，是比「AI 設計硬體」更具體的工程摩擦。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "使用者開發 Crew Car、LG TV Companion 等含實體／裝置整合專案，硬體約束與軟體工作交會有關聯。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從走線太亂需要重排切入，先有具體事件再交代合作背景。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與 Pocket queue 和 Control Room 的抽象 agent 管理不同，聚焦實體電路設計限制。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "文章有原型照片但本輪沒有取得可再發布的媒體授權檔；純文字能描述具體重排決策並標明是早期原型。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue 的題材、開場和慣用語；本題開場依故事決定，未重複近三日主題。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "電路板走線太亂時，Anthropic 說 Claude 會把一整角重新排過，不是一直在原路線上貼補丁。\n\n這是 Anthropic 與硬體公司 Diode 的原型合作：Fable 5.2 設計了 speakerphone、voice-assistant hub 和手持電子寵物；Diode 的工程師組裝。文章描述 Claude 會查元件資料、重新安排零件和走線，也會做機殼與韌體。\n\n目前是早期原型。Anthropic 說原型已運作數週，但商業認證和長期耐用度仍未知。比起「AI 會設計硬體」的大標題，更值得看的，是它得在電路、機構、零件供應和可製造限制之間反覆修改。"
+        },
+        "threads": {
+          "text": "走線太亂時，Anthropic 說 Claude 把電路板一角拆掉重排，沒有一直補線。這次合作用 Fable 5.2 設計三種硬體原型，再由 Diode 工程師組裝。\n\n原型運作數週，但商業認證與長期耐用度仍未知。硬體設計的難點是電路、機構、零件與製造限制要一起顧。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Anthropic｜Testing Claude on real-world electronics design（發布日期：2026-11-09）\nhttps://www.anthropic.com/research/claude-electronics-design",
+            "requestId": "5a49b455-808e-4eaa-ac7b-1b23074ac047"
+          },
+          "threads": {
+            "text": "參考來源：Anthropic｜Testing Claude on real-world electronics design（發布日期：2026-11-09）\nhttps://www.anthropic.com/research/claude-electronics-design",
+            "requestId": "38321e0d-ded2-49ad-a5a6-5a6f1c2aa64a"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "文章有原型照片但本輪沒有取得可再發布的媒體授權檔；純文字能描述具體重排決策並標明是早期原型。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-11-anthropic-electronics-prototypes.json",
+        "schedule": {
+          "date": "2026-11-11",
+          "time": "14:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-04-openai-control-room-stop-check",
+      "topic": "AI 工作停止時，授權檢查放在推理層還是工作程式",
+      "class": "practical",
+      "evidence": [
+        {
+          "id": "src-4-1",
+          "type": "official_source",
+          "label": "OpenAI｜Control Room: A central system to track and stop model workloads across our research infrastructure",
+          "url": "https://openai.com/index/control-room/",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-09"
+        }
+      ],
+      "claims": [
+        {
+          "text": "OpenAI 描述的 Control Room 為研究工作建立 job_id，並由 inference engine 在生成請求時向中央服務確認該 job 是否仍獲准。",
+          "evidence_ids": [
+            "src-4-1"
+          ]
+        },
+        {
+          "text": "被停止的 job 下一次推理請求會被拒絕；其整合設計在 Control Room 失效時 fail closed。",
+          "evidence_ids": [
+            "src-4-1"
+          ]
+        },
+        {
+          "text": "OpenAI 表示停止指令後最多 35 秒可阻止後續輸出；文章描述的是其研究基礎設施。",
+          "evidence_ids": [
+            "src-4-1"
+          ]
+        }
+      ],
+      "reader_context": "Control Room 是 OpenAI 為研究模型工作負載建立的集中追蹤與停止機制；文章談的是研究推理工作，不是所有 OpenAI 產品的通用功能。",
+      "story_spine": "停止指令若只依賴任務程式自行配合，可能留下缺口；OpenAI 描述把 job 授權查核放到 inference engine；停止後拒絕後續推理，但受快取影響最多延遲 35 秒；這提供一個 agent 管理者可思考的安全設計點。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "primary_architecture_with_limits",
+        "reason": "OpenAI 原始文章詳細解釋推理層授權與 fail-closed，並量化 35 秒延遲；適合說明機制及其適用範圍，不包裝成普遍最佳解。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "job_id、推理層檢查、fail-closed 和 35 秒都來自官方文章，且限定在 OpenAI research workloads。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "安全控制位於哪一層，以及停令不是零延遲，是可討論的具體決策。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "多 Agent 與 AI 工作管理者能將此案例轉成自己的權限／停止路徑檢查問題。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "直接從「停機鍵放哪裡」開場，機制稍後再交代。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "近三日未有停機權限或 inference gating 主題；與一般 AI 新聞摘要不同。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "示意圖需要完整準確表達授權流程；純文字加上 35 秒界線較不易造成誤解。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue 的題材、開場和慣用語；本題開場依故事決定，未重複近三日主題。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "要停一個 AI 工作，光叫任務程式收工還不夠。\n\nOpenAI 描述的 Control Room 會替研究工作建立 job_id；每次模型推理前，inference engine 都回查這個工作是否仍獲准。工作被停止後，下一次輸出請求會被拒絕。\n\n整合設計在 Control Room 故障時 fail closed；但停止指令到不再輸出，官方寫的最長延遲是 35 秒。這是 OpenAI 研究基礎設施的做法，不是所有 agent 產品現成可用的開關。"
+        },
+        "threads": {
+          "text": "AI 工作要停，授權檢查放哪裡很重要。OpenAI 的 Control Room 讓 inference engine 帶著 job_id 回查工作是否仍獲准；被停止後，後續推理請求會被拒。\n\n系統故障時採 fail closed，但停止到不再輸出最多仍有 35 秒。這篇談的是 OpenAI 研究基礎設施。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：OpenAI｜Control Room: A central system to track and stop model workloads across our research infrastructure（發布日期：2026-11-09）\nhttps://openai.com/index/control-room/",
+            "requestId": "188576b6-3313-4a8a-9587-6aede99acd9a"
+          },
+          "threads": {
+            "text": "參考來源：OpenAI｜Control Room: A central system to track and stop model workloads across our research infrastructure（發布日期：2026-11-09）\nhttps://openai.com/index/control-room/",
+            "requestId": "59307932-8dfb-42b1-aa56-dcc62b0100a8"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "沒有必要製作仿真的 OpenAI Control Room UI；純文字保留 job_id、推理層核准和最長 35 秒延遲三個關鍵細節。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-11-openai-control-room-stop-check.json",
+        "schedule": {
+          "date": "2026-11-11",
+          "time": "16:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-05-ai-freelance-task-mix",
+      "topic": "Upwork AI 相關職缺的任務組合變得更多樣",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-5-1",
+          "type": "official_source",
+          "label": "OpenAI Economic Research / Upwork｜Work at the Frontier: AI’s effect on freelance work",
+          "url": "https://openai.com/index/ai-effect-on-freelance-work/",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "OpenAI/Upwork 分析稱，2023 年初至 2025 年末，Upwork AI 相關貼文的任務組合多樣度提高 45%，約由 14.6 增至 21.2 種等量任務。",
+          "evidence_ids": [
+            "src-5-1"
+          ]
+        },
+        {
+          "text": "分析還觀察到 AI 相關專案固定價預算較高、工時較多，而刊登時薪相近；相關比較涵蓋至 2026 年 4 月。",
+          "evidence_ids": [
+            "src-5-1"
+          ]
+        },
+        {
+          "text": "資料來自 Upwork 職缺貼文，並非整體勞動市場因果證明。",
+          "evidence_ids": [
+            "src-5-1"
+          ]
+        }
+      ],
+      "reader_context": "這份 OpenAI Economic Research 與 Upwork 的分析使用自由工作平台刊登資料，觀察 AI 如何改變雇主張貼的任務組合與專案範圍。",
+      "story_spine": "談 AI 工作常被縮成取代或不取代；Upwork 貼文分析看到 AI 相關職缺組合變多樣、專案工時與固定價預算較高；樣本限於平台刊登，不能直接推為整體就業或因果。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "bounded_primary_research",
+        "reason": "報告提供可量化的新發現與明確資料界線，能避免落入「AI 取代工作」二分摘要；已限定是 Upwork 平台觀察。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "數值、期間、資料來源與因果限制皆按 OpenAI/Upwork 報告陳述。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "任務多樣度比簡單職缺數更具體，能改變讀者觀察 AI 工作的角度。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "自由工作者與雇主可參考任務包裝及技能組合的變化，但不外推台灣市場。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "以「不只是多一種 AI 任務」開場，再交代報告觀察。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "近三日沒有接案市場研究題；不是模型發布週報式摘要。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有原始資料圖可驗證本地呈現，純文字保留研究單位、期間和限制。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue 的題材、開場和慣用語；本題開場依故事決定，未重複近三日主題。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "AI 接案職缺的變化，不一定只是「多了一種 AI 工作」。\n\nOpenAI Economic Research 和 Upwork 分析平台貼文：2023 年初到 2025 年末，AI 相關職缺的任務組合多樣度增加 45%，約從 14.6 增到 21.2 種等量任務。報告也觀察到固定價預算較高、工時較多，但同類工作的刊登時薪相近。\n\n這是 Upwork 的職缺資料，不等於整體就業趨勢，也不能單靠它證明 AI 導致了變化。"
+        },
+        "threads": {
+          "text": "AI 接案的變化，不一定只是「多了一種 AI 工作」。OpenAI＋Upwork 稱，AI 相關職缺的任務組合多樣度從 2023 初到 2025 末增加 45%（約 14.6→21.2 種等量任務）。\n\n這是 Upwork 刊登資料，不代表整體就業，也不是因果證明。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：OpenAI Economic Research / Upwork｜Work at the Frontier: AI’s effect on freelance work（發布日期：2026-11-10）\nhttps://openai.com/index/ai-effect-on-freelance-work/",
+            "requestId": "9a337f7c-9518-4776-92d0-bcdea0bd8f4b"
+          },
+          "threads": {
+            "text": "參考來源：OpenAI Economic Research / Upwork｜Work at the Frontier: AI’s effect on freelance work（發布日期：2026-11-10）\nhttps://openai.com/index/ai-effect-on-freelance-work/",
+            "requestId": "dfd63bfc-9059-46a5-9ce8-59265cfd7cac"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "純文字能說清研究單位、期間和 45% 所代表的任務組合多樣度；沒有可直接重製的資料圖，不另畫示意數據。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-11-ai-freelance-task-mix.json",
+        "schedule": {
+          "date": "2026-11-11",
+          "time": "19:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-06-student-ai-guidance-gap",
+      "topic": "學生自陳使用 AI 的比例高於得到使用指引的比例",
+      "class": "discussion",
+      "evidence": [
+        {
+          "id": "src-6-1",
+          "type": "official_source",
+          "label": "OpenAI｜Closing the AI guidance gap in education",
+          "url": "https://openai.com/index/closing-ai-guidance-gap-education/",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "OpenAI 文章引用 ThinkYoung 調查：79% 受訪學生表示會用 AI 做作業或功課，47% 表示有人教過如何使用。",
+          "evidence_ids": [
+            "src-6-1"
+          ]
+        },
+        {
+          "text": "此比例是文章所引調查的自陳結果，不是台灣學生比例，也不測量學習成效。",
+          "evidence_ids": [
+            "src-6-1"
+          ]
+        },
+        {
+          "text": "文章主張教育機構應提供教師支援與更清楚的使用規範；這是 OpenAI 的政策觀點。",
+          "evidence_ids": [
+            "src-6-1"
+          ]
+        }
+      ],
+      "reader_context": "OpenAI 的教育文章整理 EMEA 合作經驗，並引用 ThinkYoung 學生調查；貼文只談其中自陳使用與受指引比例的落差。",
+      "story_spine": "學生使用 AI 的普及速度可能快過正式教學；OpenAI 引用 ThinkYoung 調查中 79% 使用、47% 曾獲指導的數字；地域、調查方法與自陳限制不能外推到台灣或學習效果。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "bounded_education_evidence",
+        "reason": "有清晰、可核實的使用與指引比例落差；社群價值在於討論使用規範，而非把單一調查當台灣現況。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "比例標明為 OpenAI 所引 ThinkYoung 調查自陳結果，並寫明不能外推台灣或成效。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "使用率與指導率的差距具體，提出教育者應先釐清什麼的實務討論。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "Crew Teacher 相關讀者可關心如何教人使用工具；只提出指引議題，不冒認本地數據。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "以兩個調查比例的落差開場，讀者立刻知道故事焦點。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "近三日未有 AI 教育指引研究；避免照抄新聞內容，聚焦教學缺口。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有原始統計表可供準確繪圖；純文字標示 79/47 與地域限制更可靠。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue 的題材、開場和慣用語；本題開場依故事決定，未重複近三日主題。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "學生使用 AI 的比例，比他們得到使用指引的比例高。\n\nOpenAI 引述 ThinkYoung 調查：79% 受訪學生表示會用 AI 做作業或功課，47% 表示曾被教過怎麼用。這組數字比較的是使用與指導，不是學習成效。\n\n它也不是台灣學生的比例。對做 AI 教學的人來說，除了開放工具，什麼時候用、怎麼查證、哪些作業要說明使用方式，也需要講清楚。"
+        },
+        "threads": {
+          "text": "學生使用 AI 的比例，比得到使用指引的比例高。OpenAI 引述 ThinkYoung 調查：79% 受訪學生用 AI 做作業，47% 曾被教過怎麼用。\n\n這是該調查的自陳結果，不代表台灣比例，也沒有測量學習成效。工具進教室時，使用規範也得一起教。"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：OpenAI｜Closing the AI guidance gap in education（發布日期：2026-11-10）\nhttps://openai.com/index/closing-ai-guidance-gap-education/",
+            "requestId": "22d7675c-c08f-4e4f-851b-8a2225eef0ac"
+          },
+          "threads": {
+            "text": "參考來源：OpenAI｜Closing the AI guidance gap in education（發布日期：2026-11-10）\nhttps://openai.com/index/closing-ai-guidance-gap-education/",
+            "requestId": "7b243465-064a-46d6-a9ea-40baa27cc72d"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "純文字足以準確呈現調查中 79%／47% 的差距及適用範圍；無原始統計表素材，不製作假比例圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": "content/queue/2026-11-11-student-ai-guidance-gap.json",
+        "schedule": {
+          "date": "2026-11-11",
+          "time": "21:00",
+          "timezone": "Asia/Taipei"
+        }
+      }
+    },
+    {
+      "id": "candidate-07-gemini-carbon-swarm",
+      "topic": "Gemini 4 Carbon 預覽的 /swarm 多 Agent 編排",
+      "class": "ai_news",
+      "evidence": [
+        {
+          "id": "src-7-1",
+          "type": "official_source",
+          "label": "Google｜Gemini 4 Carbon is now available — /swarm preview",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Google 宣布 Antigravity 的 /swarm 預覽可協調多個 agent 在隔離工作區處理任務，並提到 adversarial verifiers。",
+          "evidence_ids": [
+            "src-7-1"
+          ]
+        },
+        {
+          "text": "這些能力是 Google 公告中的描述，尚無本輪獨立測試素材。",
+          "evidence_ids": [
+            "src-7-1"
+          ]
+        }
+      ],
+      "reader_context": "這是 Google 宣布的多 Agent 開發工具預覽，涉及多個 agent 和隔離工作區的協作。",
+      "story_spine": "官方宣布預覽，但與今日 Crew Pocket 多 Agent 管理故事相近，且素材只有廠商宣稱；缺少可獨立驗證的使用流程。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "preview_and_topic_overlap",
+        "reason": "與今日 Crew Pocket 角色 queue 題材重疊，且只有預覽公告，沒有讀者可核對的實際操作故事；等有更具體可驗證材料再評估。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "官方來源能證明公告內容，不能證明第三方效能。"
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "預覽公告本身沒有獨立使用情境或意外決策。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "多 Agent 工具管理和 Crew Pocket 方向相關。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "現在只能從公告切入，容易變成新品摘要。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "與今日 Pocket 多 Agent 管理故事明顯相鄰。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "要畫多 Agent 機制圖須依官方產品細節；本輪未驗證具體畫面。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue；此項保留為暫緩或淘汰記錄，未占用今日發文時段。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "暫不製作媒體：題材未入選，或尚缺足以決定配圖的真實素材。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-08-mic-denial-text-fallback",
+      "topic": "麥克風拒絕後的 Crew Web 文字聊天 fallback",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-8-1",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #600｜Friend mic denial text fallback",
+          "url": "https://github.com/magic76/magic76.github.io/pull/600",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        },
+        {
+          "id": "src-8-2",
+          "type": "github_pr",
+          "label": "GitHub · magic76/crew-teacher PR #602｜Teacher text fallback",
+          "url": "https://github.com/magic76/crew-teacher/pull/602",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #600 和 #602 分別描述 Friend / Teacher 麥克風拒絕時的文字 fallback 改動。",
+          "evidence_ids": [
+            "src-8-1",
+            "src-8-2"
+          ]
+        },
+        {
+          "text": "PR 的本機測試說明不能替代正式環境的真實 BYOK 端到端證據。",
+          "evidence_ids": [
+            "src-8-1",
+            "src-8-2"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 和 Crew Teacher 提供 AI 朋友／老師對話；這兩個 PR 處理麥克風權限拒絕後可否轉用文字的流程。",
+      "story_spine": "拒絕麥克風後仍需有替代方式，但昨天的內容已談 Live 文字路徑；目前只有 PR 層證據，缺本輪正式站真實流程確認。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "needs_live_e2e_and_topic_spacing",
+        "reason": "題材合理但與 11/10 Live 文字聊天過近；目前 PR 只支撐程式碼與本機測試描述，未證明正式 BYOK 路徑完整，先等可核實畫面或輸出。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "只把變更稱為 PR 描述，不宣稱正式站或真實 API 回覆成功。"
+        },
+        "interest": {
+          "status": "revise",
+          "reason": "拒絕麥克風後轉文字有讀者價值，但本次與昨日貼文主題太接近。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "Crew Teacher/Friend 直接對應使用者產品。"
+        },
+        "opening": {
+          "status": "revise",
+          "reason": "可從拒絕權限切入，但需要確認實際 fallback 的使用者可見行為。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "昨日 Live 文字已佔相鄰時段，避免同類功能連發。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "目前沒有當下真實畫面或文字輸出可配，等 E2E 再判媒體。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue；此項保留為暫緩或淘汰記錄，未占用今日發文時段。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "暫不製作媒體：題材未入選，或尚缺足以決定配圖的真實素材。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-09-beta-badge-cleanup",
+      "topic": "移除 Crew Web 頁面上的測試版標籤",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-9-1",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #595｜remove beta badges",
+          "url": "https://github.com/magic76/magic76.github.io/pull/595",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #595 描述移除指定 Crew Web 頁面的 beta 標籤。",
+          "evidence_ids": [
+            "src-9-1"
+          ]
+        },
+        {
+          "text": "可取得的證據沒有提供因標籤造成的使用者困惑或行為變化資料。",
+          "evidence_ids": [
+            "src-9-1"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 有多個頁面與功能入口；PR #595 調整頁面上測試版標籤的顯示。",
+      "story_spine": "標籤文字被移除，但目前沒有證據顯示這項改動解決了讀者困擾或帶來可描述的產品決策。",
+      "decision": {
+        "outcome": "rejected",
+        "reason_code": "low_reader_value",
+        "reason": "只有小幅標籤清理，未找到具體使用者情境、摩擦或可驗證結果；現寫會像變更公告，與正式準則要求的讀者收穫不符。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "PR 足以證明標籤改動，不支持任何使用成效。"
+        },
+        "interest": {
+          "status": "fail",
+          "reason": "可說的只有文字被移除，沒有意外、決策或可帶走的資訊。"
+        },
+        "personal_relevance": {
+          "status": "revise",
+          "reason": "屬 Crew Web 但題材本身與一般讀者關聯薄弱。"
+        },
+        "opening": {
+          "status": "fail",
+          "reason": "沒有足夠故事支撐具體開場，容易直接寫成公告。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "沒有直接重複近期主題，但題材過薄。"
+        },
+        "media_fit": {
+          "status": "not_applicable",
+          "reason": "不入選，且缺少值得配圖的讀者故事。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue；此項保留為暫緩或淘汰記錄，未占用今日發文時段。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "暫不製作媒體：題材未入選，或尚缺足以決定配圖的真實素材。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-10-fortune-text-first-share",
+      "topic": "Crew Fortune 分享先帶走文字，卡片圖片另存再附",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-2-1",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #598｜Fortune text-first sharing flow",
+          "url": "https://github.com/magic76/magic76.github.io/pull/598",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #598 加入複製貼文文字、純文字原生分享與 fallback。",
+          "evidence_ids": [
+            "src-2-1"
+          ]
+        },
+        {
+          "text": "分享卡 PNG 可另行下載，流程提示使用者自行附上圖片。",
+          "evidence_ids": [
+            "src-2-1"
+          ]
+        },
+        {
+          "text": "改動涵蓋 11 個語系；PR 不保證各平台都會自動附加圖片。",
+          "evidence_ids": [
+            "src-2-1"
+          ]
+        }
+      ],
+      "reader_context": "Crew Fortune 會產生可分享的命理卡與文字；這項改動把文案傳遞和卡片圖片下載分成明確步驟。",
+      "story_spine": "分享卡同時有文案和圖片，但不同平台的分享行為不一；PR #598 選擇先提供可複製／分享的文字，再讓使用者下載 PNG 自行附圖；讀者可帶走一個降低跨平台分享不確定性的設計取捨。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "recent_topic_cluster",
+        "reason": "11/08 已有命格卡分享隱私題，11/10 又有 Fortune 浮點修正；三天內再發分享流程仍太集中。 素材本身可核實，但保留間隔比硬排入六篇更合適。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "文案逐項對應 PR 描述；沒有假設圖片一定會隨原生分享傳遞。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "文字與圖片被拆成兩步，是具體可理解的產品取捨。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "Crew Fortune 是使用者實際專案，分享流程可供其他做卡片產品的人參考。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從「這次分享拆兩步」帶出決策，不必先作產品介紹。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "11/08 已有命格卡分享隱私題，11/10 又有 Fortune 浮點修正；三天內再發分享流程仍太集中。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有真實當前分享畫面素材；以純文字解釋流程比畫假平台 UI 準確。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue；此項保留為暫緩或淘汰記錄，未占用今日發文時段。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "本題暫緩，不製作媒體；今日不需以圖片填補數量。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    },
+    {
+      "id": "candidate-11-seo-metadata-baseline",
+      "topic": "Crew Web 對齊中英文 metadata，先留 Search Console 基線",
+      "class": "practical",
+      "evidence": [
+        {
+          "id": "src-3-1",
+          "type": "github_pr",
+          "label": "GitHub · magic76/magic76.github.io PR #596｜homepage and Teacher metadata alignment",
+          "url": "https://github.com/magic76/magic76.github.io/pull/596",
+          "checked_at": "2026-11-11",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR #596 對齊首頁與 Teacher 中英文 title、description、Open Graph 與 JSON-LD。",
+          "evidence_ids": [
+            "src-3-1"
+          ]
+        },
+        {
+          "text": "PR 涵蓋 SPA/SSG metadata parity，並補上 Search Console 基線和量測規劃。",
+          "evidence_ids": [
+            "src-3-1"
+          ]
+        },
+        {
+          "text": "PR 明示目前沒有 CTR 成效數據，不能宣稱點擊率已改善。",
+          "evidence_ids": [
+            "src-3-1"
+          ]
+        }
+      ],
+      "reader_context": "Crew Web 是一個多語 AI 生活平台；這次網站調整處理首頁與 Teacher 頁面在中英文及不同渲染路徑上的搜尋 metadata 一致性。",
+      "story_spine": "搜尋結果呈現取決於頁面 metadata；PR #596 先對齊頁面與渲染路徑，再定義 Search Console 基線；CTR 結果尚不存在，讀者可帶走先確保可量測、再談成效的順序。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "recent_topic_cluster",
+        "reason": "11/10 才發英文 research canonical redirect，11/08 又談 GA4 歸因；今日再談 SEO metadata 會形成連續 SEO 主題。 素材本身可核實，但保留間隔比硬排入六篇更合適。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "逐項 claim 都由 PR 支持；清楚寫明沒有點擊率成效，不推論排名或流量。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "搜尋結果 metadata 和量測基線，能讓做網站的人直接理解下一步。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "對 Crew Web 多語 SEO 和任何做多語網站的人都有實際關聯。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "以驗收標準切入，直接指出「不能只看起來比較好」。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "11/10 才發英文 research canonical redirect，11/08 又談 GA4 歸因；今日再談 SEO metadata 會形成連續 SEO 主題。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "沒有可公開且必要的真實 Search Console 截圖；純文字避免暗示已有成效。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-08-daily-review",
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比對 11/08–11/10 review 與 Queue；此項保留為暫緩或淘汰記錄，未占用今日發文時段。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "本題暫緩，不製作媒體；今日不需以圖片填補數量。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      }
+    }
+  ]
+}
