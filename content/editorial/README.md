@@ -4,8 +4,8 @@ This directory stores the new editorial decisions and learning records. It is se
 
 ## Daily files
 
-- `reviews/YYYY-MM-DD-<slug>.json` records at least six candidates and at least six selected topics under the daily-six policy, evidence, a plain-language `reader_context`, selection or rejection reasons, six concrete quality notes, the chosen copy, media direction, and handoff readiness. Use `templates/daily-review.template.json` as a shape guide.
-- Run `npm run editorial:check` after adding or editing a review. A valid file is structurally complete; it is not automatically suitable or authorized for publication.
+- `reviews/YYYY-MM-DD-<slug>.json` records at least six candidates and at least six selected topics under the daily-six policy, evidence, a plain-language `reader_context`, selection or rejection reasons, six concrete quality notes, the chosen copy, media direction, and handoff readiness. New records use schema v2: each candidate has a `product_mention` record, and the review has a cumulative `weekly_product_mention_tracking` summary. Use `templates/daily-review.template.json` as a shape guide.
+- Run `npm run editorial:check` after adding or editing a review. The validator keeps historical v1 reviews readable and checks mention tracking in v2. A valid file is structurally complete; it is not automatically suitable or authorized for publication.
 - Keep the original research report in `content/reports/` or `content/research/`; do not count a research finding as a social post.
 - Keep owner feedback in `feedback/events.jsonl`. Append, never rewrite prior events. Use the schema and instructions in that folder.
 - Keep pilot design and actual-post metrics under `content/experiments/2026-11-05-to-18/`.

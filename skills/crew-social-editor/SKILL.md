@@ -27,7 +27,7 @@ Follow [the canonical editorial guidelines](../../docs/editorial-guidelines.md) 
 
 A project post should make sense to its intended reader, but it does not have to introduce the product before the story. Start with the concrete event, reader problem, decision, or discovery when that is the strongest opening. Add a brief product or feature explanation only when it helps, and place it wherever it fits naturally. The `reader_context` in review JSON is editorial metadata; it does not prescribe the post's opening or need to appear verbatim in the copy.
 
-Explain why the work happened, what was encountered, and what was learned. A short update by itself is not a story; several related, verified changes may be combined when they form a useful account. Mention the product, link, or invitation only when it materially belongs in the story. Source citations remain separate from promotional calls to action.
+Explain why the work happened, what was encountered, and what was learned. A short update by itself is not a story; several related, verified changes may be combined when they form a useful account. Follow the canonical mention budget: by default omit the site and product, never put URLs in post bodies, and use a product link only in a first reply when the story truly needs it. A source citation in a first reply is separate and does not count as promotion.
 
 For each draft, check that the reader can follow the point, the evidence supports the claims, and the story offers value beyond naming the project or listing changes. Vary the opening and ending to fit the material; there is no required product-first sequence.
 
@@ -42,6 +42,16 @@ Before approving a project post, ask:
 - Is it clear why this change happened, what changed, and what the reader should take away?
 - Does the last line complete the thought instead of stopping at an internal status?
 - Did any unexplained project term, pipeline state, or unsupported benefit slip into the copy?
+
+## Product mention budget and tracking
+
+Follow the canonical guidelines before writing. Check selected topics and available product-mention quota for the Asia/Taipei Monday–Sunday week. At most two selected story topics may mention a Crew site/product; the Facebook and Threads versions of one topic count once. Default to zero. A story must be genuinely about the product and supported by traceable evidence; a feature PR alone is not enough. If the quota is exhausted, omit product names, invitations and product links from remaining drafts.
+
+Never put a URL in post-body copy. If a product link is genuinely needed, put it in a first reply only. Source names and source URLs in first replies remain required when applicable and do not count toward the product quota. A first-reply product link does count.
+
+In every schema-v2 review candidate, record `product_mention`: whether it was reviewed, whether the selected post mentions or links the owned site/product, placement (`post_body` or `first_reply_product_link`), platform(s), entity names, and whether the selected topic uses weekly quota. Record the cumulative selected-topic count, mention count, ratio and remaining quota in `weekly_product_mention_tracking`. Count one story once across platforms. If legacy same-week reviews cannot establish the mention state, label tracking coverage incomplete rather than guessing.
+
+For each actually published platform post, set `product_mentioned` in the experiment metrics row. Source-only first replies are false; a product link or product/site name is true. Compare actual reach, new follows and website clicks by platform and mention status only when the source data is verified.
 
 ## Daily selection before writing
 
@@ -65,8 +75,8 @@ For each of six or more candidates, preserve:
 - decision (`selected`, `rejected`, or `hold`) and a concrete reason;
 - a reason for each of six editorial dimensions: truth, interest, personal relevance, opening, template risk, and media fit;
 - a scan for repeated openers and stock phrases; record the phrase and what makes it formulaic, not only a numeric rating;
-- if selected, the final Facebook and Threads copy, media choice and its value, and whether a real asset exists;
-- handoff readiness and authorization basis. Never put an unapproved draft into the live Queue.
+- if selected, the final Facebook and Threads copy, media choice and its value, whether a real asset exists, and the required `product_mention` record;
+- handoff readiness and authorization basis; and the top-level `weekly_product_mention_tracking` summary. Never put an unapproved draft into the live Queue.
 
 No self-scored average or universal numerical cutoff decides quality. The deterministic check only catches missing evidence, missing reasons, repeated copy, unsafe handoffs and failure to meet the six-topic minimum for the new policy. Review notes must identify the actual reason a story was selected, rejected, revised or held.
 

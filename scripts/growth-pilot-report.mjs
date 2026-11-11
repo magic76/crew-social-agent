@@ -24,7 +24,7 @@ export function parseCsv(source){
  if(field||row.length){row.push(field);if(row.some(v=>v!==""))rows.push(row);}
  if(!rows.length)throw Error("CSV header is missing");
  const header=rows.shift().map(s=>s.replace(/^\uFEFF/,""));
- const needed=["date","content_id","platform","topic_class","media_type","published_at","remote_url","non_follower_reach","comments","shares","new_followers","website_clicks","data_source","observed_at","status"];
+ const needed=["date","content_id","platform","topic_class","media_type","product_mentioned","published_at","remote_url","non_follower_reach","comments","shares","new_followers","website_clicks","data_source","observed_at","status"];
  for(const name of needed)if(!header.includes(name))throw Error("Missing CSV header: "+name);
  return rows.map((fields,i)=>{
   if(fields.length!==header.length)throw Error("CSV row "+(i+2)+" has "+fields.length+" fields, expected "+header.length);
@@ -36,6 +36,10 @@ export function renderPilotReport(source){
  const rows=parseCsv(source);
  const verified=rows.filter(r=>r.status.trim().toLowerCase()==="published"&&r.published_at.trim()&&r.remote_url.trim());
  const keys=new Set();
+ for(const row of verified){
+  const mention=(row.product_mentioned||"").trim().toLowerCase();
+  if(mention&&!["true","false"].includes(mention))throw Error("Invalid product_mentioned for "+row.content_id);
+ }
  for(const row of verified){
   const key=row.platform+"/"+row.content_id;
   if(keys.has(key))throw Error("Duplicated published record: "+key);
@@ -81,6 +85,20 @@ export function renderPilotReport(source){
    const [platform,topic,media]=key.split(" / ");
    out+="| "+[platform,topic,media,group.length,summary(group,"website_clicks")].join(" | ")+" |\n";
   }
+ }
+ out+="\n## 正文網站／產品提及與實際流量（只統計已確認發文）\n\n";
+ const knownMentions=verified.filter(r=>["true","false"].includes((r.product_mentioned||"").trim().toLowerCase()));
+ const unknownMentions=verified.length-knownMentions.length;
+ if(!knownMentions.length)out+="目前沒有可用的提及標記；歷史或空白標記維持未知，不當成未提及。\n";
+ else{
+  out+="| 平台 | 正文／產品連結提及 | 篇數 | 非粉絲觸及 | 新追蹤 | 網站點擊 |\n| --- | --- | ---: | --- | --- | --- |\n";
+  for(const platform of platforms){
+   for(const value of ["true","false"]){
+    const group=knownMentions.filter(r=>r.platform.trim().toLowerCase()===platform&&(r.product_mentioned||"").trim().toLowerCase()===value);
+    if(group.length)out+="| "+platform+" | "+(value==="true"?"有":"沒有")+" | "+group.length+" | "+summary(group,"non_follower_reach")+" | "+summary(group,"new_followers")+" | "+summary(group,"website_clicks")+" |\n";
+   }
+  }
+  out+="\n可分類 "+knownMentions.length+"/"+verified.length+" 篇；提及狀態未知 "+unknownMentions+" 篇。這是平台內的描述性對照，不代表提及造成觸及或點擊變化。\n";
  }
  out+="\n## 尚未直接取得的資料\n\n";
  out+="- Search Console：自然曝光、自然點擊、索引狀態 — **待匯出／授權**。\n";

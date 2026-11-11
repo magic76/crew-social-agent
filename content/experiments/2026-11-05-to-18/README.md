@@ -10,9 +10,9 @@ Test whether evidence-backed development stories and varied media produce more w
 - Search credible online primary sources to fill gaps in owned-project stories. Keep each article tied to verifiable evidence and do not invent personal testing or first-person development experiences.
 - Initial content-mix direction across the window: about 60% development/bug/project story, 30% practical technique or discussion, 10% AI news/research. These are descriptive targets, not quotas.
 - Keep the existing Facebook/Threads Queue and Local Publisher contracts. The editorial pilot does not grant publication authorization. Do not alter past or already authorized Queue items.
-- Preserve each post's platform, actual publish time, topic class, copy-length band, media type, source, and status. Facebook and Threads are separate observations for the same story, not independent editorial topics.
+- Preserve each post's platform, actual publish time, topic class, copy-length band, media type, `product_mentioned` (true/false from the actual copy), source, and status. Facebook and Threads are separate observations for the same story, not independent editorial topics. A product-specific name/link counts; a first-reply source citation alone does not.
 - Do not vary every factor at once. Prefer natural comparisons within the same platform and similar topic class. Record when no comparable pair exists. The six daily topics must be distinct and pass the editorial gate; never duplicate or fabricate content solely to fill a slot.
-- Compare development story vs AI news, short vs standard copy, real screenshot vs story comic vs diagram vs text-only, and Facebook vs Threads. For each comparison, report counts and raw observed values; do not claim causal lift or statistical confidence from this small exploratory sample.
+- Compare development story vs AI news, short vs standard copy, real screenshot vs story comic vs diagram vs text-only, Facebook vs Threads, and posts with vs without a site/product mention. For mention comparisons, group by platform and use only verified published rows; report sample counts and raw observed reach, new follows, and website clicks. Do not claim causal lift or statistical confidence from this small exploratory sample.
 
 ## Measures
 

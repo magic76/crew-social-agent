@@ -1,6 +1,6 @@
 # Social Editor quality gate
 
-Record one concrete reason for each row for every candidate. Include a `reader_context` sentence that introduces a named product or feature to someone who has never seen it. Do not average ratings or let an AI's numeric self-score approve a story.
+Record one concrete reason for each row for every candidate. Include a `reader_context` sentence as internal context for someone unfamiliar with the activity; it does not prescribe the post opening. Do not average ratings or let an AI's numeric self-score approve a story.
 
 | Dimension | Pass asks | Hold or reject when |
 |---|---|---|
@@ -20,6 +20,15 @@ Before approving an image, confirm the story has a visual reason for one and ins
 - Is Crew Cloud secondary or omitted when unnecessary?
 - Are all interface-like elements, numbers, and outcomes either genuine and approved or absent?
 - Hide the headline or ignore all lettering and ask: **「不看文字，這張圖能讓人猜到主題嗎？」** If not, revise the image or use real evidence/text-only.
+
+## Product and link check
+
+- Default to no owned-site/product mention and no URL in either post body.
+- A product mention needs a story whose subject is genuinely the product, supported by traceable evidence; a feature list or PR alone does not qualify.
+- Check the Asia/Taipei Monday–Sunday quota before selection. Maximum two distinct selected topics; Facebook and Threads copies count once. If the quota is used, omit product mentions and product links from other drafts.
+- Record `product_mention` per candidate and the cumulative weekly ratio in the review. Product names or links count; first-reply source citations alone do not.
+- If a product link is necessary, keep it in a first reply. Keep source citations there under existing rules; do not put URLs in the body.
+- Compare `product_mentioned` published rows against verified platform metrics in the pilot report. Treat missing values as unknown and report observations without causal claims.
 
 ## Dispositions
 

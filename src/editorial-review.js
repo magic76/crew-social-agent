@@ -15,6 +15,15 @@ function isIsoDate(value) {
   return typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(`${value}T00:00:00Z`));
 }
 
+function taipeiWeekWindow(date) {
+  const value = new Date(`${date}T00:00:00Z`);
+  const daysSinceMonday = (value.getUTCDay() + 6) % 7;
+  value.setUTCDate(value.getUTCDate() - daysSinceMonday);
+  const start = value.toISOString().slice(0, 10);
+  value.setUTCDate(value.getUTCDate() + 6);
+  return { start, end: value.toISOString().slice(0, 10) };
+}
+
 function duplicateOpening(text) {
   return text.trim().split(/[。！？!?\n]/, 1)[0].trim().replace(/\s+/g, '').toLowerCase();
 }
@@ -23,7 +32,8 @@ export function validateEditorialReview(review, { repoRoot = process.cwd() } = {
   const errors = [];
   const error = (where, message) => errors.push(`${where}: ${message}`);
 
-  if (review?.schema_version !== 1) error('schema_version', 'must be 1');
+  const tracksProductMentions = review?.schema_version === 2;
+  if (![1, 2].includes(review?.schema_version)) error('schema_version', 'must be 1 or 2');
   if (!isIsoDate(review?.date)) error('date', 'must be YYYY-MM-DD');
   if (typeof review?.review_id !== 'string' || !/^[a-z0-9-]{8,100}$/.test(review.review_id)) error('review_id', 'must be a stable lowercase id');
   if (!Array.isArray(review?.candidates) || review.candidates.length < 6) error('candidates', 'record at least six candidates, including rejected and held topics');
@@ -35,6 +45,7 @@ export function validateEditorialReview(review, { repoRoot = process.cwd() } = {
   const candidates = Array.isArray(review?.candidates) ? review.candidates : [];
   const ids = new Set();
   const selected = [];
+  let selectedMentionCount = 0;
   for (const [index, candidate] of candidates.entries()) {
     const where = `candidates[${index}]`;
     if (!candidate || typeof candidate !== 'object') { error(where, 'must be an object'); continue; }
@@ -60,6 +71,29 @@ export function validateEditorialReview(review, { repoRoot = process.cwd() } = {
       if (!Array.isArray(claim?.evidence_ids) || claim.evidence_ids.length === 0 || claim.evidence_ids.some(id => !evidenceIds.has(id))) error(`${where}.claims[${cIndex}].evidence_ids`, 'must point to existing evidence IDs');
     }
     if (typeof candidate.reader_context !== 'string' || candidate.reader_context.trim().length < 15) error(`${where}.reader_context`, 'explain the product, feature or activity for someone who has not seen it before');
+    if (tracksProductMentions) {
+      const mention = candidate.product_mention;
+      const placements = ['post_body', 'first_reply_product_link'];
+      const platforms = ['facebook', 'threads'];
+      if (!mention || typeof mention !== 'object') error(`${where}.product_mention`, 'schema v2 requires a product mention record');
+      else {
+        if (typeof mention.reviewed !== 'boolean') error(`${where}.product_mention.reviewed`, 'must say whether the draft was checked');
+        if (typeof mention.mentioned !== 'boolean') error(`${where}.product_mention.mentioned`, 'must be true or false');
+        if (!Array.isArray(mention.placements) || mention.placements.some(value => !placements.includes(value))) error(`${where}.product_mention.placements`, 'use post_body and/or first_reply_product_link');
+        if (!Array.isArray(mention.platforms) || mention.platforms.some(value => !platforms.includes(value))) error(`${where}.product_mention.platforms`, 'use facebook and/or threads');
+        if (!Array.isArray(mention.entities) || mention.entities.some(value => typeof value !== 'string' || !value.trim())) error(`${where}.product_mention.entities`, 'list named products/sites or use an empty array');
+        if (mention.mentioned !== (Array.isArray(mention.placements) && mention.placements.length > 0)) error(`${where}.product_mention.mentioned`, 'must match the recorded placement(s); source citations alone are not product mentions');
+        if (mention.mentioned && (!mention.platforms?.length || !mention.entities?.length)) error(`${where}.product_mention`, 'a mention needs at least one platform and entity');
+        if (!mention.mentioned && (mention.platforms?.length || mention.entities?.length)) error(`${where}.product_mention`, 'an unmentioned post must have empty platform and entity lists');
+        if (candidate.decision?.outcome === 'selected' && mention.reviewed !== true) error(`${where}.product_mention.reviewed`, 'selected drafts must be checked');
+        const usesQuota = candidate.decision?.outcome === 'selected' && mention.mentioned === true;
+        if (mention.counts_toward_weekly_cap !== usesQuota) error(`${where}.product_mention.counts_toward_weekly_cap`, 'only a selected topic with a product mention counts, once across platforms');
+        for (const platform of platforms) {
+          const body = candidate.drafts?.[platform]?.text;
+          if (typeof body === 'string' && /(?:https?:\/\/|www\.|\b[\w.-]+\.(?:com|org|net|io|tw|ai|dev|app)\b)/i.test(body)) error(`${where}.drafts.${platform}.text`, 'schema v2 post bodies must not contain URLs; put a necessary product link in the first reply');
+        }
+      }
+    }
     if (typeof candidate.story_spine !== 'string' || candidate.story_spine.trim().length < 20) error(`${where}.story_spine`, 'state event, friction/choice and reader value, or explain what is missing');
     if (!OUTCOMES.has(candidate.decision?.outcome)) error(`${where}.decision.outcome`, 'must be selected, rejected or hold');
     if (typeof candidate.decision?.reason_code !== 'string' || candidate.decision.reason_code.trim().length < 3) error(`${where}.decision.reason_code`, 'use a trackable reason code');
@@ -109,12 +143,36 @@ export function validateEditorialReview(review, { repoRoot = process.cwd() } = {
     }
     if (candidate.decision?.outcome === 'selected') {
       selected.push({ candidate, where });
+      if (tracksProductMentions && candidate.product_mention?.mentioned === true) selectedMentionCount++;
       if (typeof candidate.drafts?.facebook?.text !== 'string' || !candidate.drafts.facebook.text.trim()) error(`${where}.drafts.facebook.text`, 'selected topic needs complete Facebook copy');
       if (typeof candidate.drafts?.threads?.text !== 'string' || !candidate.drafts.threads.text.trim()) error(`${where}.drafts.threads.text`, 'selected topic needs independently edited Threads copy');
       if (candidate.drafts?.facebook?.text?.trim() === candidate.drafts?.threads?.text?.trim()) error(`${where}.drafts`, 'Facebook and Threads copy must be separately edited');
     }
   }
   if (dailySixPolicy && selected.length < 6) error('candidates', `daily minimum is six selected topics, found ${selected.length}`);
+  if (tracksProductMentions) {
+    const tracking = review?.weekly_product_mention_tracking;
+    const fields = ['selected_topics', 'product_mentioned_topics', 'weekly_cap', 'remaining'];
+    if (!tracking || typeof tracking !== 'object') error('weekly_product_mention_tracking', 'schema v2 requires a weekly mention summary');
+    else {
+      const expectedWindow = isIsoDate(review?.date) ? taipeiWeekWindow(review.date) : null;
+      if (!expectedWindow || tracking.week_start !== expectedWindow.start || tracking.week_end !== expectedWindow.end) error('weekly_product_mention_tracking.week_start/week_end', 'must be the Asia/Taipei Monday–Sunday containing the review date');
+      for (const field of fields) if (!Number.isInteger(tracking[field]) || tracking[field] < 0) error(`weekly_product_mention_tracking.${field}`, 'must be a non-negative integer');
+      if (tracking.weekly_cap !== 2) error('weekly_product_mention_tracking.weekly_cap', 'the weekly maximum is two distinct topics');
+      if (tracking.product_mentioned_topics > tracking.selected_topics) error('weekly_product_mention_tracking.product_mentioned_topics', 'cannot exceed selected_topics');
+      if (tracking.product_mentioned_topics > 2) error('weekly_product_mention_tracking.product_mentioned_topics', 'weekly product mention cap is two');
+      if (tracking.selected_topics < selected.length) error('weekly_product_mention_tracking.selected_topics', 'must include the selected topics in this review');
+      if (tracking.product_mentioned_topics < selectedMentionCount) error('weekly_product_mention_tracking.product_mentioned_topics', 'must include product-mentioned selected topics in this review');
+      const expectedRemaining = Math.max(0, 2 - tracking.product_mentioned_topics);
+      if (tracking.remaining !== expectedRemaining) error('weekly_product_mention_tracking.remaining', 'must equal the unspent weekly cap');
+      const expectedRatio = tracking.selected_topics > 0 ? Math.round((tracking.product_mentioned_topics / tracking.selected_topics) * 1000) / 1000 : 0;
+      if (typeof tracking.mention_ratio !== 'number' || !Number.isFinite(tracking.mention_ratio) || Math.abs(tracking.mention_ratio - expectedRatio) > 0.001) error('weekly_product_mention_tracking.mention_ratio', 'must equal product_mentioned_topics / selected_topics, rounded to three decimals');
+      if (typeof tracking.counting_note !== 'string' || tracking.counting_note.trim().length < 15) error('weekly_product_mention_tracking.counting_note', 'explain the topic-level counting basis and any coverage gap');
+      if (!['pending_metrics', 'insufficient_data', 'compared'].includes(tracking.traffic_comparison?.status)) error('weekly_product_mention_tracking.traffic_comparison.status', 'use pending_metrics, insufficient_data or compared');
+      if (tracking.traffic_comparison?.metrics_path !== 'content/experiments/2026-11-05-to-18/metrics.csv') error('weekly_product_mention_tracking.traffic_comparison.metrics_path', 'must point to the actual-post metrics file');
+      if (typeof tracking.traffic_comparison?.note !== 'string' || tracking.traffic_comparison.note.trim().length < 15) error('weekly_product_mention_tracking.traffic_comparison.note', 'state the data coverage or comparison limitation');
+    }
+  }
   const openingMap = new Map();
   for (const { candidate, where } of selected) {
     const opening = duplicateOpening(candidate.drafts?.threads?.text ?? '');
