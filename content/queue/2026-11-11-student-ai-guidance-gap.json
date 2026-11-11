@@ -4,8 +4,8 @@
   "created_date": "2026-11-11",
   "title": "學生自陳使用 AI 的比例高於得到使用指引的比例",
   "category": "discussion",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-11",
     "time": "21:00",
@@ -43,7 +43,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "新稿未取得逐篇發布授權；審核與草稿交接不構成發布許可。"
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-11 明確核准此篇純文字文案與排程，授權交由手機本地 agent 在台北時間 21:00 發布。"
   }
 }
