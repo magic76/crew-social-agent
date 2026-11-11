@@ -11,6 +11,14 @@ Record one concrete reason for each row for every candidate. Include a `reader_c
 | Template risk | The draft has a distinct structure and does not repeat an opener, punchline, or moral from recent posts. | Stock phrases, repeated framing, or an interchangeable AI conclusion dominate. |
 | Media fit | The chosen medium adds proof, context, humor, or clarity. An illustration shows the story's key scene/conflict, not just a symbol; it has layered setting/details, one short readable Traditional Chinese headline, 4:5 portrait 1080×1350 output, truthful alt/provenance, and no fake UI/data or ad-like framing. Crew Cloud is optional. Text-only is intentional when enough. | The image is decorative or only symbolic, the scene does not communicate the event, the headline is hard to read on a phone, it implies fake UI/data or results, feels like an ad, or exists only to fill a slot. |
 
+## Required reader takeaway: 「所以呢」
+
+For each Facebook and Threads version, check that at least one sentence after the verified facts gives a concrete meaning for the reader or something the reader can do. A number followed only by limitations does not pass. For example, a post about changing freelance task mixes could suggest estimating prompting, data work, acceptance checks and communication separately when quoting a project. Label advice or inference as such; do not present it as a measured result or invented personal experience.
+
+Keep necessary limitations brief and toward the end, without making them the main point of the ending. The phrase 「所以呢」 itself and any fixed wording are optional. **A version without a concrete takeaway must be revised or held; it cannot pass editorial review**, even if its other checks pass.
+
+Identify each platform version's takeaway in the existing `story_spine` or `quality_review.interest.reason`; the review schema still has six quality dimensions. `npm run editorial:check` checks structure and safety, not the substantive quality of the takeaway, so a passing command does not replace this editorial judgment.
+
 ## Image preflight
 
 Before approving an image, confirm the story has a visual reason for one and inspect the image at phone-feed size:
