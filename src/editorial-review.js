@@ -160,7 +160,10 @@ export function validateEditorialReview(review, { repoRoot = process.cwd() } = {
       for (const field of fields) if (!Number.isInteger(tracking[field]) || tracking[field] < 0) error(`weekly_product_mention_tracking.${field}`, 'must be a non-negative integer');
       if (tracking.weekly_cap !== 2) error('weekly_product_mention_tracking.weekly_cap', 'the weekly maximum is two distinct topics');
       if (tracking.product_mentioned_topics > tracking.selected_topics) error('weekly_product_mention_tracking.product_mentioned_topics', 'cannot exceed selected_topics');
-      if (tracking.product_mentioned_topics > 2) error('weekly_product_mention_tracking.product_mentioned_topics', 'weekly product mention cap is two');
+      // Preserve historical totals even if earlier selections exceeded today's cap.
+      // The current review may not add mentions once the prior count reaches it.
+      const priorMentionCount = tracking.product_mentioned_topics - selectedMentionCount;
+      if (Number.isInteger(priorMentionCount) && priorMentionCount >= 0 && selectedMentionCount > Math.max(0, 2 - priorMentionCount)) error('weekly_product_mention_tracking.product_mentioned_topics', 'weekly product mention quota is exhausted; current selections exceed the remaining quota');
       if (tracking.selected_topics < selected.length) error('weekly_product_mention_tracking.selected_topics', 'must include the selected topics in this review');
       if (tracking.product_mentioned_topics < selectedMentionCount) error('weekly_product_mention_tracking.product_mentioned_topics', 'must include product-mentioned selected topics in this review');
       const expectedRemaining = Math.max(0, 2 - tracking.product_mentioned_topics);

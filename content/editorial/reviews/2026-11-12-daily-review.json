@@ -1,0 +1,1222 @@
+{
+  "schema_version": 2,
+  "date": "2026-11-12",
+  "review_id": "2026-11-12-daily-review",
+  "selection_policy": {
+    "minimum_selected": 6,
+    "target_selected": 6,
+    "unit": "distinct_topics_not_platform_copies"
+  },
+  "formula_scan": {
+    "compared_queue_dates": [
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11"
+    ],
+    "repeated_openers": [],
+    "stock_phrase_hits": [],
+    "note": "近三日已含 Agent 驗收、Live 文字及權重以外的攻擊題；今日拆為具體分類、截斷、動畫、指引實驗、裁判引文和權重來源六題。"
+  },
+  "candidates": [
+    {
+      "id": "candidate-sewing-question-fallback",
+      "post_id": "crew-lab-20261112-sewing-question-fallback",
+      "topic": "縫收納袋卻被問味道：關鍵字分類需要退路",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pr609",
+          "type": "github_pr",
+          "label": "GitHub PR #609｜Photo questions match the post caption",
+          "url": "https://github.com/magic76/magic76.github.io/pull/609",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-11"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR 記錄照片問題分類抓到 lunch break 等附帶字詞，把縫收納袋貼文判成食物並產生味道問題。",
+          "evidence_ids": [
+            "src-pr609"
+          ]
+        },
+        {
+          "text": "修正後只採 caption 中高信心主要活動；判斷不出時使用既有通用問題。",
+          "evidence_ids": [
+            "src-pr609"
+          ]
+        },
+        {
+          "text": "PR 描述的畫面驗收使用本機 Playwright 與模擬驗證；沒有提供真實讀者成效。",
+          "evidence_ids": [
+            "src-pr609"
+          ]
+        }
+      ],
+      "reader_context": "這是一個依照片貼文文字推薦聊天開場問題的分類流程。",
+      "story_spine": "縫袋子貼文被附帶的午餐字詞帶到食物分類；修正改看主要活動並在不確定時退回通用問題；讀者可用帶背景字詞的案例測試分類器。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_story_and_takeaway",
+        "reason": "有具體錯誤問題、可查的規則變更與清楚的 fallback 建議；不聲稱真實讀者成效。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "事件與規則均由 PR 文字及其自述的模擬流程支持，不把圖片辨識或讀者反應寫成事實。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "FB 與 Threads 都給出用背景字詞測分類、保留通用 fallback 的實際動作。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "對做聊天開場、分類器和建議系統的讀者均有直接參考價值。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "以縫袋子卻被問味道的具體錯誤直接開場。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "同日 prompt 截斷題討論另一個失敗環節；本題聚焦分類與不確定時的退路。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "使用具體縫紉場景與錯誤食物聯想的概念插畫；圖片標為示意並經手機尺寸查看。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "與 11/09–11/11 review 對照；主角是錯誤分類及通用 fallback，不重用近期的驗證狀態開場。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "一篇縫收納袋的貼文，開場問題卻是：\n\n「這次味道怎麼樣？」\n\nPR 記錄，選問題的程式抓到貼文裡的「lunch break」，就把主題歸到食物。主要活動明明是縫袋子，旁邊的午餐字詞卻搶走了判斷。\n\n修正後改看貼文中較明確的主要活動；判斷不出來，就退回「怎麼回事？」這類通用問題。這是分類規則的修正，目前沒有讀者成效資料。\n\n如果你也在做自動分類，可以故意在測試句子裡放背景字詞，看看主題會不會被帶偏。判不準時，留一個通用選項也很好用。",
+          "requestId": "51c9d6ac-90d0-4b86-83ef-73984fb61c48"
+        },
+        "threads": {
+          "text": "一篇縫收納袋的貼文，開場問題卻是：「這次味道怎麼樣？」\n\n選問題的程式抓到文中的「lunch break」，把主題歸到食物。修正後改看較明確的主要活動；判斷不出來，就用通用問題。\n\n做自動分類時，可以在測試句子裡塞幾個背景字詞，看看答案會不會被帶偏。",
+          "requestId": "f4514fa0-bc26-4a0e-be90-52b17c007417"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub PR #609｜Photo questions match the post caption（2026-11-11）\nhttps://github.com/magic76/magic76.github.io/pull/609",
+            "requestId": "bccf084d-a4dd-4d55-8b05-2f36cbdc31ba"
+          },
+          "threads": {
+            "text": "參考來源：GitHub PR #609｜Photo questions match the post caption（2026-11-11）\nhttps://github.com/magic76/magic76.github.io/pull/609",
+            "requestId": "bc9d26e6-00f0-4395-bf11-3187f1c30a25"
+          }
+        }
+      },
+      "media": {
+        "type": "original_illustration",
+        "reason": "PR 中的舊比較圖原始連結取回 404；以明示概念插畫的縫紉與食物誤會呈現事件，不冒充產品截圖。",
+        "asset": {
+          "status": "available",
+          "path": "content/editorial/assets/2026-11-12-sewing-question-illustration.jpg",
+          "provenance": "2026-11-12 AI 生成概念插畫；故事依 GitHub PR #609，非實際使用者或產品畫面。"
+        },
+        "alt_text": "概念插畫：縫紉室裡的人拿著布製收納袋，橘色雲朵卻拿著湯匙和碗、想著便當；標題為「縫袋子，怎麼問味道？」。",
+        "direction": "1080×1350，縫袋子與食物誤判在同一場景；先供審稿。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-12",
+          "time": "10:00",
+          "timezone": "Asia/Taipei"
+        }
+      },
+      "product_mention": {
+        "reviewed": true,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-prompt-middle-cut",
+      "post_id": "crew-lab-20261112-prompt-middle-cut",
+      "topic": "聊天背景寫進 prompt 卻在截斷後消失",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pr616",
+          "type": "github_pr",
+          "label": "GitHub PR #616｜Keep Shorts post context in first text-chat reply",
+          "url": "https://github.com/magic76/magic76.github.io/pull/616",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-11"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR 記錄免費文字聊天超過 6,000 字元時保留前 4,800 與後 1,100，位於中間的貼文背景可能被切掉。",
+          "evidence_ids": [
+            "src-pr616"
+          ]
+        },
+        {
+          "text": "修正保護貼文、故事背景、首輪承接及語言規則，縮減其他人物背景。",
+          "evidence_ids": [
+            "src-pr616"
+          ]
+        },
+        {
+          "text": "PR 的正式站前態探測攔截送出的 request，沒有呼叫模型；不能據此聲稱模型回覆已通過。",
+          "evidence_ids": [
+            "src-pr616"
+          ]
+        }
+      ],
+      "reader_context": "這是一段把貼文背景送進 AI 文字聊天的長度控制流程。",
+      "story_spine": "貼文背景原本放在過長 prompt 中段，頭尾截斷後消失；修正優先保留必要內容；讀者可直接檢查截斷後送出的 payload。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_story_and_takeaway",
+        "reason": "有可定位的截斷邊界與可操作的驗證方法；明示未在該次探測呼叫模型。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "數字、截斷位置與截取請求的限制都對應 PR #616。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "兩平台都建議檢查長度處理後真正送出的 prompt。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "對做聊天記憶、摘要和模型請求的工程師有具體參考。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從背景原本存在卻在送出時消失這個衝突切入。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與今日分類題不同，聚焦長度裁切後的上下文，而非主題判斷。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "PR 表示此修改無畫面差異，文字比虛構介面截圖更可靠。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "與 11/11 角色排隊、11/10 Live 文字題的開場不同；今天重點是 prompt 截斷位置與請求邊界。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "貼文背景明明寫進 prompt，送出去時卻不見了。\n\n一個聊天流程的 PR 記錄：內容超過 6,000 字元時，原本只保留前面 4,800 和後面 1,100。貼文背景剛好在中間，被整段切掉。\n\n修正改為先保留貼文、首輪回覆指示和語言規則，再縮減其他人物背景。PR 的正式站探測攔截的是送出請求，沒有呼叫模型。\n\n如果你也在做聊天記憶，可以拿測試資料檢查「截斷後真正送出去的內容」，不要只看組裝完成時的 prompt。",
+          "requestId": "490248ac-bf83-4550-af4a-b93f360d21b8"
+        },
+        "threads": {
+          "text": "貼文背景明明寫進 prompt，送出去時卻不見了。\n\n原本超過 6,000 字元就保留前 4,800 和後 1,100；背景剛好在中間，被切掉。修正改成優先保留貼文和首輪指示，再縮減其他背景。\n\nPR 的探測只攔截請求、沒有呼叫模型。做聊天記憶時，記得檢查截斷後真正送出去的內容。",
+          "requestId": "f80463ae-c2fa-43bc-b042-31acddadbd68"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub PR #616｜Keep Shorts post context in first text-chat reply（2026-11-11）\nhttps://github.com/magic76/magic76.github.io/pull/616",
+            "requestId": "25ddd7b3-cb2d-4715-a826-11ec41c03411"
+          },
+          "threads": {
+            "text": "參考來源：GitHub PR #616｜Keep Shorts post context in first text-chat reply（2026-11-11）\nhttps://github.com/magic76/magic76.github.io/pull/616",
+            "requestId": "79a1f59c-29cb-4a46-8879-1db4e968903b"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "PR 明示純 prompt 變更沒有畫面差異；文字與來源足以交代裁切前後，避免製造假請求截圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null,
+        "direction": "若取得可公開且已遮蔽敏感資料的真實請求輸出，再考慮做裁切前後對照。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-12",
+          "time": "12:00",
+          "timezone": "Asia/Taipei"
+        }
+      },
+      "product_mention": {
+        "reviewed": true,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-running-feet-contact",
+      "post_id": "crew-lab-20261112-running-feet-contact",
+      "topic": "跑步像滑行：支撐腳與圖層如何檢查",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pr610",
+          "type": "github_pr",
+          "label": "GitHub PR #610｜人物跑步與腳掌著地修正",
+          "url": "https://github.com/magic76/magic76.github.io/pull/610",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-11"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR 描述人物上半身圖殘留固定腿，與程式繪製的動態腿重疊。",
+          "evidence_ids": [
+            "src-pr610"
+          ]
+        },
+        {
+          "text": "修改將步態分成 contact、down、passing、up 四拍，補償身體上下移動，並將射擊後座力限制於上身。",
+          "evidence_ids": [
+            "src-pr610"
+          ]
+        },
+        {
+          "text": "PR 自述本地幾何測試與 390px Chrome 截圖；本輪沒有重新驗證手機實機手感。",
+          "evidence_ids": [
+            "src-pr610"
+          ]
+        }
+      ],
+      "reader_context": "這是一個以程式繪製角色腿部動作的遊戲跑步動畫修正。",
+      "story_spine": "固定腿與動態腿重疊、腳底又要配合重心上下晃動；PR 分離圖層並處理著地四拍；讀者可先檢查支撐腳高度。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_story_and_takeaway",
+        "reason": "具體對應使用者先前指出的腿部動作問題，也有可重用的動畫檢查方式；沒有虛構手機實測結果。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "圖層、四拍和腳底補償均由 PR 說明支撐；測試只標為 PR 自述。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "兩平台都提供先觀察支撐腳著地高度的具體檢查。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "讀者可將動作拆成圖層與接觸地面問題來檢查。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從跑步看似滑行的畫面問題出發，接著指出圖層原因。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與近期貼文及今日其他兩篇聊天流程題的場景和對象不同。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "PR 未附可直接分享的連續動作素材；用文字交代事實，待真實錄影再配圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已對照近三日 Queue，沒有相同的步態與腳底接觸主題；與今日暫緩的 Boss 題分開處理。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "角色明明在跑，畫面看起來卻像在滑行。\n\n一個遊戲動作修正的 PR 記錄：上半身圖還留著一截固定腿，下面又疊了兩條會動的腿。\n\n這次先清掉固定腿，再把腳步拆成接觸、下壓、交會、抬起四拍。腳著地時補償身體的上下晃動；射擊後座力則只作用在上半身。PR 有本地檢查紀錄，本輪沒有重新驗收手機手感。\n\n如果你也在調跑步動畫，可以先盯著支撐的那隻腳：著地時腳底高度有沒有和身體晃動打架？",
+          "requestId": "d7bf1306-7009-4258-99e4-7fcfac6c9077"
+        },
+        "threads": {
+          "text": "角色明明在跑，畫面卻像在滑行。\n\nPR 記錄上半身圖還留著一截固定腿，下面又疊了兩條會動的腿。修正把固定腿清掉，腳步拆成接觸、下壓、交會、抬起四拍，也補償著地時身體的上下晃動。\n\n調跑步動畫時，可以先盯著支撐腳：著地時腳底高度有沒有和身體晃動打架？",
+          "requestId": "103dedc3-3f73-47cc-9bcc-218a243fb755"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：GitHub PR #610｜人物跑步與腳掌著地修正（2026-11-11）\nhttps://github.com/magic76/magic76.github.io/pull/610",
+            "requestId": "b321f9ff-3289-4478-a1b8-4e89de5c6d0f"
+          },
+          "threads": {
+            "text": "參考來源：GitHub PR #610｜人物跑步與腳掌著地修正（2026-11-11）\nhttps://github.com/magic76/magic76.github.io/pull/610",
+            "requestId": "0a3bd14f-fd97-4873-b0f5-7ab7823f51e5"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "PR 沒有附可直接分享的連續動作素材；文字可清楚說明排查，沒有虛構遊戲截圖。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null,
+        "direction": "後續若取得真實跑步錄影，可擷取著地與抬腳畫面做前後比較；先確認可分享。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-12",
+          "time": "14:00",
+          "timezone": "Asia/Taipei"
+        }
+      },
+      "product_mention": {
+        "reviewed": true,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-agents-md-small-eval",
+      "post_id": "crew-lab-20261112-agents-md-small-eval",
+      "topic": "一份 Agent 指引在單一網站的小樣本比較",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-aaif",
+          "type": "official_source",
+          "label": "Agentic AI Foundation｜DevEx for your agents: How AGENTS.md cut token usage and cost",
+          "url": "https://aaif.io/blog/devex-for-your-agents-how-agents-md-cut-token-usage-and-cost",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-11"
+        }
+      ],
+      "claims": [
+        {
+          "text": "AAIF 作者在同一 Hugo 網站比較有無 AGENTS.md，三項任務每組各執行三次，共 18 次。",
+          "evidence_ids": [
+            "src-aaif"
+          ]
+        },
+        {
+          "text": "作者報告有指引組 9/9 符合條件、無指引組 7/9，平均每次約 285k 對 447k tokens。",
+          "evidence_ids": [
+            "src-aaif"
+          ]
+        },
+        {
+          "text": "作者說明這是單站、單一 agent 設定的小樣本，結果不一定適用於其他專案。",
+          "evidence_ids": [
+            "src-aaif"
+          ]
+        }
+      ],
+      "reader_context": "AGENTS.md 是提供程式代理閱讀的專案指引；來源比較一個 Hugo 網站有無該檔的執行結果。",
+      "story_spine": "兩份相同網站只有指引檔不同；三任務重複比較正確率和成本；讀者可先寫易漏步驟，再用自己任務測。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_story_and_takeaway",
+        "reason": "有對照組、明確樣本與可複製的讀者行動；小樣本和廠商作者限制清楚呈現。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "全部數字來自 AAIF 作者的單站實驗，沒有推廣成所有專案結果。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "FB 與 Threads 都建議記錄版本、啟動步驟並以相同任務比較。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "直接回應多 Agent 與專案指引維護的日常困擾。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "以一份指引能否少繞路切入，緊接實驗設計。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "近三日沒有此一 AGENTS.md 對照實驗，與今日評審證據題不同。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "自製數據圖明示單一網站、樣本與近似 token，不偽造 UI。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "對照 11/09–11/11 review；這是指引文件的有無對照，不重複昨天 Agent 評分或安全議題。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "一份給 AI 看的說明書，能讓它少繞多少路？\n\nAAIF 部落格一位作者在一個 Hugo 網站做了小實驗：兩份專案只有其中一份多了約 50 行 AGENTS.md。讓 Claude Code 分別嘗試啟動網站、加文章、查文章和圖片位置；每項任務各跑 3 次。\n\n有指引的 9 次全部符合標準，沒有指引的 9 次中有 7 次符合；平均 token 約 28.5 萬對 44.7 萬。這是單一網站、單一 Agent 設定，不是每個專案都能複製的省錢公式。\n\n想知道自己的專案有沒有差，可以先寫清楚環境版本、啟動方式和容易漏掉的路徑，再用同一組任務比較。專案改了，也記得更新文件；過時的指引一樣會被 AI 認真照做。",
+          "requestId": "7f11a196-a843-4e77-92d8-3bab6d5ffa49"
+        },
+        "threads": {
+          "text": "同一份專案，加一份 AGENTS.md，AI 會少繞多少路？\n\nAAIF 部落格的作者用 Claude Code 在一個 Hugo 網站做 3 項任務，各跑 3 次。有指引的 9 次全符合標準；沒有指引的 9 次中有 7 次符合，平均 token 約 28.5 萬對 44.7 萬。\n\n這是單一網站的小實驗。可以先寫清版本、啟動指令和檔案位置，再用相同任務比較；專案變了也記得更新指引。",
+          "requestId": "4c613496-e2e5-4545-a9ca-125346de7df4"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Agentic AI Foundation｜DevEx for your agents: How AGENTS.md cut token usage and cost（2026-11-11）\nhttps://aaif.io/blog/devex-for-your-agents-how-agents-md-cut-token-usage-and-cost",
+            "requestId": "6436de9a-ab27-4306-ae02-fb844ff020e1"
+          },
+          "threads": {
+            "text": "參考來源：Agentic AI Foundation｜DevEx for your agents: How AGENTS.md cut token usage and cost（2026-11-11）\nhttps://aaif.io/blog/devex-for-your-agents-how-agents-md-cut-token-usage-and-cost",
+            "requestId": "10d04402-447a-4790-b447-7bf8668319ef"
+          }
+        }
+      },
+      "media": {
+        "type": "diagram",
+        "reason": "以原始實驗的近似 token 與 7/9、9/9 繪製 4:5 數據圖，標註單站樣本，幫讀者直接比較。",
+        "asset": {
+          "status": "available",
+          "path": "content/editorial/assets/2026-11-12-agents-md-eval.png",
+          "provenance": "依 AAIF 作者 2026-11-11 原始數據以 Matplotlib 自繪；平均 token 為約數，單站小樣本。"
+        },
+        "alt_text": "數據圖：單一網站三種任務各跑三次，無指引平均約 44.7 萬 token、有 AGENTS.md 約 28.5 萬；完整符合條件分別為 7/9 與 9/9。",
+        "direction": "1080×1350 數據圖，標示樣本與限制；來源仍放首則留言。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-12",
+          "time": "16:00",
+          "timezone": "Asia/Taipei"
+        }
+      },
+      "product_mention": {
+        "reviewed": true,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-judge-needs-evidence",
+      "post_id": "crew-lab-20261112-judge-needs-evidence",
+      "topic": "讓 AI 評審引用受評內容中的真實證據",
+      "class": "practical",
+      "evidence": [
+        {
+          "id": "src-aws",
+          "type": "official_source",
+          "label": "AWS｜UAEF: A framework-agnostic system for closed-loop evaluation of AI agents",
+          "url": "https://aws.amazon.com/blogs/machine-learning/uaef-a-framework-agnostic-system-for-closed-loop-evaluation-of-ai-agents/",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-11"
+        }
+      ],
+      "claims": [
+        {
+          "text": "AWS 的 UAEF 以 adapter 將不同框架的訊息、工具呼叫與交接整理為共同 AgentTrace。",
+          "evidence_ids": [
+            "src-aws"
+          ]
+        },
+        {
+          "text": "AWS 描述模型裁判將受評內容視為不可信，評分規則分開，並要求引用原文存在的片段，找不到證據的分數被拒收。",
+          "evidence_ids": [
+            "src-aws"
+          ]
+        },
+        {
+          "text": "AWS 明示裁判分數是評估訊號，不應作為安全控制決策。",
+          "evidence_ids": [
+            "src-aws"
+          ]
+        }
+      ],
+      "reader_context": "UAEF 是 AWS 介紹的 Agent 評估框架，會整理執行紀錄供不同指標與模型裁判評分。",
+      "story_spine": "受評內容可能影響裁判；來源框架隔開規則並要求可核對引用；讀者可要求每個評分指回原文，安全控制另設。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_story_and_takeaway",
+        "reason": "故事有具體威脅與拒收條件，能直接應用到自動評審；清楚歸因為 AWS 設計。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "評分規則、引用與拒收行為均按 AWS 原文歸因，不聲稱防護完美。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "FB 與 Threads 都建議要求原文證據，並將安全檢查獨立處理。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "適合使用多 Agent 與自動 review 的讀者直接參考。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "從受評內容可能影響裁判的問題切入。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與今天 AGENTS.md 文件對照及近期 PR 驗收題不同，聚焦評分證據。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字足以交代三道邊界，暫不製作可能被誤認真實介面的截圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "比較近期 Rush PR 驗收稿；這篇談評分輸出需要可核對引文，不重述 merge 與驗收的差別。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "讓 AI 幫另一個 AI 打分，還得小心被評的內容影響裁判。\n\nAWS 介紹的 UAEF 會把 Agent 的訊息、工具呼叫和交接整理成共同格式。其中使用語言模型當裁判時，受評內容被視為不可信資料；評分規則另外提供，裁判還得引用內容裡實際存在的片段，找不到證據就不記錄分數。\n\n這是 AWS 對自己框架的設計說明，分數不能直接當成安全保證。\n\n如果你也在做 Agent 評估，可以先要求每個分數附上原文證據，再拿同一批案例比較改版前後；涉及安全的操作另外設檢查，別只看 AI 裁判給幾分。",
+          "requestId": "ee1287ca-2340-4c76-811c-0fc12733221d"
+        },
+        "threads": {
+          "text": "讓 AI 幫 AI 打分，還要防被評的內容影響裁判。\n\nAWS 的 UAEF 把受評內容當成不可信資料，評分規則分開提供；裁判必須引用內容中真實存在的片段，找不到證據就不記分。\n\n這是該框架的做法，分數不能保證安全。自己做評估時，可以要求每個分數附原文證據，安全操作再另設檢查。",
+          "requestId": "ff50e92d-42c4-4ecb-90c0-72689b471ba4"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：AWS｜UAEF: A framework-agnostic system for closed-loop evaluation of AI agents（2026-11-11）\nhttps://aws.amazon.com/blogs/machine-learning/uaef-a-framework-agnostic-system-for-closed-loop-evaluation-of-ai-agents/",
+            "requestId": "db60ec9e-87c0-49a8-b529-ca2da1b1c986"
+          },
+          "threads": {
+            "text": "參考來源：AWS｜UAEF: A framework-agnostic system for closed-loop evaluation of AI agents（2026-11-11）\nhttps://aws.amazon.com/blogs/machine-learning/uaef-a-framework-agnostic-system-for-closed-loop-evaluation-of-ai-agents/",
+            "requestId": "cbfc580e-019d-4fc1-99ee-d9aa930b0b0a"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "流程以三段文字即可準確說明；未取得可分享的來源圖，也不捏造評審介面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null,
+        "direction": "如需後續配圖，可依官方流程製作「受評內容→裁判引用→核對證據」的概念圖。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-12",
+          "time": "19:00",
+          "timezone": "Asia/Taipei"
+        }
+      },
+      "product_mention": {
+        "reviewed": true,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-model-weight-backdoor",
+      "post_id": "crew-lab-20261112-model-weight-backdoor",
+      "topic": "模型權重被改動後的觸發式 Agent 行為",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-ms",
+          "type": "official_source",
+          "label": "Microsoft Research｜Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents",
+          "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Microsoft Research 報告在能修改模型權重的前提下，重編程少於十個休眠神經元可植入觸發行為，無需重新訓練。",
+          "evidence_ids": [
+            "src-ms"
+          ]
+        },
+        {
+          "text": "研究舉出特定日期觸發 agent 下載並執行攻擊者程式的例子，並指出模型可通過常規評測。",
+          "evidence_ids": [
+            "src-ms"
+          ]
+        },
+        {
+          "text": "Microsoft 將來源與權重完整性列為防守重點，並明示掃描不是萬無一失。",
+          "evidence_ids": [
+            "src-ms"
+          ]
+        }
+      ],
+      "reader_context": "Lazarus 是 Microsoft Research 描述的一種模型權重後門研究，關注具工具權限的 AI Agent。",
+      "story_spine": "模型可在一般情況正常運作，特定條件才觸發被修改權重的行為；讀者可核實模型來源並限制 agent 的工具權限。",
+      "decision": {
+        "outcome": "selected",
+        "reason_code": "verified_story_and_takeaway",
+        "reason": "有明確攻擊前提與實際防守建議，避免誤寫成一般提示詞就能改模型權重。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "pass",
+          "reason": "修改權重是明確前提；少於十個神經元及掃描限制均直接歸因研究。"
+        },
+        "interest": {
+          "status": "pass",
+          "reason": "FB 與 Threads 都建議核對可信權重並縮小終端機／檔案權限。"
+        },
+        "personal_relevance": {
+          "status": "pass",
+          "reason": "與自架模型、終端機 Agent 及工具權限直接相關。"
+        },
+        "opening": {
+          "status": "pass",
+          "reason": "先描述模型平時正常、條件觸發後行為改變的風險。"
+        },
+        "template_risk": {
+          "status": "pass",
+          "reason": "與 11/09 ARTEX 誘餌防守區分為模型權重供應鏈風險。"
+        },
+        "media_fit": {
+          "status": "pass",
+          "reason": "純文字說明攻擊前提與權限動作；不生成假終端機畫面或暗示攻擊成功的截圖。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "與 11/09 ARTEX 外部攻擊者流量不同：本題前提是權重遭修改，重點是模型來源及權限。"
+      },
+      "drafts": {
+        "facebook": {
+          "text": "模型平常看起來正常，等到某個條件出現，Agent 才突然執行不該做的事。\n\nMicrosoft Research 的 Lazarus 研究指出，研究者修改模型權重中少於 10 個休眠神經元，就能植入特定觸發行為，過程不需重新訓練。報告舉的例子裡，日期變化可能觸發 Agent 下載並執行程式；模型平時仍可能通過標準評測。\n\n這項研究的前提是攻擊者能修改模型權重；掃描也不能保證模型完全安全。\n\n如果你自己架模型並給 Agent 終端機權限，可以先確認模型來源、比對可信原始權重，再限制敏感檔案與指令權限，重要操作加一道確認。",
+          "requestId": "dff2f5d4-e147-4d5d-a076-4e6676edb5ad"
+        },
+        "threads": {
+          "text": "模型平常看起來正常，特定條件出現時卻可能觸發被植入的行為。\n\nMicrosoft 的 Lazarus 研究指出，修改少於 10 個休眠神經元，就可能讓 Agent 在觸發後執行攻擊者指令，過程不需重訓；前提是攻擊者能修改模型權重。\n\n掃描不是安全保證。自己架模型時，可以先確認來源、比對可信原始權重，再縮小 Agent 的終端機和敏感檔案權限。",
+          "requestId": "362e703d-b8b1-4753-afd5-ea5c8f57f660"
+        },
+        "first_replies": {
+          "facebook": {
+            "text": "參考來源：Microsoft Research｜Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents（2026-11-10）\nhttps://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+            "requestId": "292e2659-dd7e-4153-b035-1c18a922020a"
+          },
+          "threads": {
+            "text": "參考來源：Microsoft Research｜Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents（2026-11-10）\nhttps://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+            "requestId": "92c64b01-bd62-45a5-83e1-36043bf98bd6"
+          }
+        }
+      },
+      "media": {
+        "type": "text_only",
+        "reason": "權重遭修改的前提比驚悚畫面重要；沒有產生假終端機或偽造漏洞畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null,
+        "direction": "若要後續配圖，以標明「概念示意」的模型權重來源與權限邊界圖為方向。"
+      },
+      "handoff": {
+        "status": "draft_handoff_only",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": {
+          "date": "2026-11-12",
+          "time": "21:00",
+          "timezone": "Asia/Taipei"
+        }
+      },
+      "product_mention": {
+        "reviewed": true,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-boss-phase-threshold",
+      "topic": "高傷害同幀跨過 Boss 階段的防跳關設計",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-pr627",
+          "type": "github_pr",
+          "label": "GitHub PR #627｜Neon Swarm 三階段 Boss 與預警",
+          "url": "https://github.com/magic76/magic76.github.io/pull/627",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-12"
+        }
+      ],
+      "claims": [
+        {
+          "text": "PR 描述以階段 HP 下限與裝甲避免高傷害同幀跳過 P2／P3。",
+          "evidence_ids": [
+            "src-pr627"
+          ]
+        },
+        {
+          "text": "PR 明示仍須手機真人試玩難度與預警對比。",
+          "evidence_ids": [
+            "src-pr627"
+          ]
+        }
+      ],
+      "reader_context": "這是一個遊戲 Boss 按血量切換階段與預警動作的設計。",
+      "story_spine": "高傷害可能跨過狀態門檻；PR 以階段下限和裝甲保留每階段招式；仍需手機真人試玩。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "editorial_spacing_or_scope",
+        "reason": "可核對的設計有讀者價值，但今日已選一篇遊戲動作題，暫緩以免連續同遊戲題材。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "hold",
+          "reason": "主張限於一手來源所述範圍，未推論真實用戶反應。"
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "題材有具體觀察，但本輪保留間隔或先補公開適用性。"
+        },
+        "personal_relevance": {
+          "status": "hold",
+          "reason": "與使用者的開發或多 Agent 工作相關，仍需符合讀者價值。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "現有事實可形成開場，尚未決定是否適合本日發布。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "與今日已選題相近或涉及敏感事件，先暫緩避免重複。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "目前未製作圖片，題材暫緩且尚未確認合適素材。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已對照近三日題材與今日六題，暫緩原因記在 decision。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "尚未入選，先不製作素材或虛構實際畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null,
+        "direction": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      },
+      "product_mention": {
+        "reviewed": false,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-mcp-skills-division",
+      "topic": "MCP 與 Skills 如何分開工具和流程知識",
+      "class": "practical",
+      "evidence": [
+        {
+          "id": "src-google",
+          "type": "official_source",
+          "label": "Google Open Source｜Scaling AI agents with open standards: MCP and Agent Skills",
+          "url": "https://opensource.googleblog.com/2026/11/scaling-ai-agents-open-standards-mcp-aaif.html",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-11"
+        }
+      ],
+      "claims": [
+        {
+          "text": "Google Open Source 文章說 MCP 連接即時工具和資料，Skills 可按任務載入程序指引。",
+          "evidence_ids": [
+            "src-google"
+          ]
+        }
+      ],
+      "reader_context": "Google Open Source 訪談 MCP 和 Agent Skills 維護者，討論工具連接與按需載入知識。",
+      "story_spine": "工具呼叫和流程知識放在不同層處理；可幫讀者理解上下文負擔，但今日已有兩篇 Agent 題。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "editorial_spacing_or_scope",
+        "reason": "來源可靠且切題，但與今日已選 Agent 指引及評審故事相鄰，先保留素材以免集中。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "hold",
+          "reason": "主張限於一手來源所述範圍，未推論真實用戶反應。"
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "題材有具體觀察，但本輪保留間隔或先補公開適用性。"
+        },
+        "personal_relevance": {
+          "status": "hold",
+          "reason": "與使用者的開發或多 Agent 工作相關，仍需符合讀者價值。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "現有事實可形成開場，尚未決定是否適合本日發布。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "與今日已選題相近或涉及敏感事件，先暫緩避免重複。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "目前未製作圖片，題材暫緩且尚未確認合適素材。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已對照近三日題材與今日六題，暫緩原因記在 decision。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "尚未入選，先不製作素材或虛構實際畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null,
+        "direction": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      },
+      "product_mention": {
+        "reviewed": false,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-cot-monitorability-proxies",
+      "topic": "CoT 可監控性與代理指標的差距",
+      "class": "research",
+      "evidence": [
+        {
+          "id": "src-openai",
+          "type": "official_source",
+          "label": "OpenAI Alignment｜What affects chain-of-thought monitorability across the model lifecycle?",
+          "url": "https://alignment.openai.com/cot-monitorability-model-lifecycle/",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-10"
+        }
+      ],
+      "claims": [
+        {
+          "text": "OpenAI 研究以 no-CoT 能力與 CoT 可控性作為最壞情境監控迴避能力的代理指標。",
+          "evidence_ids": [
+            "src-openai"
+          ]
+        },
+        {
+          "text": "作者指出代理指標與實際監控迴避能力的關係有局限，不能把兩者直接等同。",
+          "evidence_ids": [
+            "src-openai"
+          ]
+        }
+      ],
+      "reader_context": "這是一項研究模型推理過程可監控性的 OpenAI Alignment 研究。",
+      "story_spine": "研究使用兩項代理指標觀察監控迴避的潛在能力；其指標限制需避免過度簡化。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "editorial_spacing_or_scope",
+        "reason": "題材重要但抽象，尚需更具體的讀者行動與研究條件拆解，今日暫緩。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "hold",
+          "reason": "主張限於一手來源所述範圍，未推論真實用戶反應。"
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "題材有具體觀察，但本輪保留間隔或先補公開適用性。"
+        },
+        "personal_relevance": {
+          "status": "hold",
+          "reason": "與使用者的開發或多 Agent 工作相關，仍需符合讀者價值。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "現有事實可形成開場，尚未決定是否適合本日發布。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "與今日已選題相近或涉及敏感事件，先暫緩避免重複。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "目前未製作圖片，題材暫緩且尚未確認合適素材。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已對照近三日題材與今日六題，暫緩原因記在 decision。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "尚未入選，先不製作素材或虛構實際畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null,
+        "direction": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      },
+      "product_mention": {
+        "reviewed": false,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    },
+    {
+      "id": "candidate-queue-authorization-boundary",
+      "topic": "入列、發布授權與實際發文分開確認",
+      "class": "development",
+      "evidence": [
+        {
+          "id": "src-approval1",
+          "type": "github_commit",
+          "label": "GitHub commit｜Queue authorization change",
+          "url": "https://github.com/magic76/crew-social-agent/commit/fdf0b43db46cbec50866abfd5c578761a5949406",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-11"
+        },
+        {
+          "id": "src-approval2",
+          "type": "github_commit",
+          "label": "GitHub commit｜Restore unapproved drafts",
+          "url": "https://github.com/magic76/crew-social-agent/commit/d7a4b4d0a671a27889df5bcd01d5402bb84dc4ff",
+          "checked_at": "2026-11-12",
+          "published_date": "2026-11-11"
+        }
+      ],
+      "claims": [
+        {
+          "text": "第一筆 commit 修改了四個 Queue 項目的發布授權欄位。",
+          "evidence_ids": [
+            "src-approval1"
+          ]
+        },
+        {
+          "text": "後續 commit 將四個項目恢復為未授權草稿。",
+          "evidence_ids": [
+            "src-approval2"
+          ]
+        }
+      ],
+      "reader_context": "這是一組公開 GitHub Queue 提交與後續撤回，涉及排程交接與發布授權的界線。",
+      "story_spine": "Queue 欄位變化及撤回有 commit 紀錄，但沒有可核實的錯誤發布結果；涉及個人工作流程的公開敘述應謹慎。",
+      "decision": {
+        "outcome": "hold",
+        "reason_code": "editorial_spacing_or_scope",
+        "reason": "事件涉及發布權限及使用者與助手的個人交接；未獲授權公開作為社群故事，暫緩，不推斷曾誤發。"
+      },
+      "quality_review": {
+        "truth": {
+          "status": "hold",
+          "reason": "主張限於一手來源所述範圍，未推論真實用戶反應。"
+        },
+        "interest": {
+          "status": "hold",
+          "reason": "題材有具體觀察，但本輪保留間隔或先補公開適用性。"
+        },
+        "personal_relevance": {
+          "status": "hold",
+          "reason": "與使用者的開發或多 Agent 工作相關，仍需符合讀者價值。"
+        },
+        "opening": {
+          "status": "hold",
+          "reason": "現有事實可形成開場，尚未決定是否適合本日發布。"
+        },
+        "template_risk": {
+          "status": "hold",
+          "reason": "與今日已選題相近或涉及敏感事件，先暫緩避免重複。"
+        },
+        "media_fit": {
+          "status": "hold",
+          "reason": "目前未製作圖片，題材暫緩且尚未確認合適素材。"
+        }
+      },
+      "template_scan": {
+        "compared_review_ids": [
+          "2026-11-09-daily-review",
+          "2026-11-10-daily-review",
+          "2026-11-11-daily-review"
+        ],
+        "repeated_openers": [],
+        "stock_phrase_hits": [],
+        "note": "已對照近三日題材與今日六題，暫緩原因記在 decision。"
+      },
+      "drafts": null,
+      "media": {
+        "type": "text_only",
+        "reason": "尚未入選，先不製作素材或虛構實際畫面。",
+        "asset": {
+          "status": "not_needed",
+          "path": null,
+          "provenance": null
+        },
+        "alt_text": null,
+        "direction": null
+      },
+      "handoff": {
+        "status": "not_created",
+        "authorization_basis": null,
+        "publish_permitted": false,
+        "media_verified": false,
+        "queue_path": null,
+        "schedule": null
+      },
+      "product_mention": {
+        "reviewed": false,
+        "mentioned": false,
+        "placements": [],
+        "platforms": [],
+        "entities": [],
+        "counts_toward_weekly_cap": false
+      }
+    }
+  ],
+  "weekly_product_mention_tracking": {
+    "week_start": "2026-11-09",
+    "week_end": "2026-11-15",
+    "selected_topics": 20,
+    "product_mentioned_topics": 5,
+    "mention_ratio": 0.25,
+    "weekly_cap": 2,
+    "remaining": 0,
+    "counting_note": "本週先前保留的選稿：11/09 三題（Rush、ARTEX、兩篇合併的語言稿；語言稿提及產品但使用者指示不入 Queue）、11/10 六題（四題正文提及產品）、11/11 五題含延後 draft（Pocket 已刪），共 14 題、五題提及；加今天六題共 20 題，今日新增提及零。11/09 原 review 的 PWA 與 Fortune 題依後續重審淘汰。這是選稿比例，不代表已發布。",
+    "prior_product_mentioned_topics": 5,
+    "current_product_mentioned_topics": 0,
+    "historical_over_cap": 3,
+    "traffic_comparison": {
+      "status": "pending_metrics",
+      "metrics_path": "content/experiments/2026-11-05-to-18/metrics.csv",
+      "note": "metrics.csv 目前只有標頭；未核實實際發布或平台流量，保留 manual_data_needed，不推論因果。"
+    }
+  }
+}

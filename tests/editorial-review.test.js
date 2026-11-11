@@ -90,3 +90,53 @@ test('editorial checker catches a repeated selected Threads opener', () => {
   const result = validateEditorialReview(repeated, { repoRoot: root });
   assert.ok(result.errors.some(message => message.includes('repeats the selected opener')));
 });
+
+function weeklyMentionReview(priorCount, newCount) {
+  const review = structuredClone(sample);
+  const base = structuredClone(sample.candidates[0]);
+  review.schema_version = 2;
+  review.date = '2026-11-12';
+  review.review_id = '2026-11-12-mention-boundary';
+  review.selection_policy = { minimum_selected: 6, target_selected: 6, unit: 'distinct_topics_not_platform_copies' };
+  review.candidates = Array.from({ length: 6 }, (_, index) => {
+    const candidate = structuredClone(base);
+    const mentioned = index < newCount;
+    candidate.id = `mention-fixture-${index + 1}`;
+    candidate.topic = `Distinct weekly mention fixture topic ${index + 1}`;
+    candidate.drafts = {
+      facebook: { text: `FB fixture ${index + 1}: ${mentioned ? 'Crew Web' : 'A general example'} explains a reader takeaway.` },
+      threads: { text: `Threads fixture ${index + 1}: ${mentioned ? 'Crew Web' : 'A general example'} offers a different takeaway.` },
+      // A source-only reply is not a product mention or a quota use.
+      first_replies: { facebook: { text: 'Source: https://example.org/research' }, threads: { text: 'Source: https://example.org/research' } }
+    };
+    candidate.media = { type: 'text_only', reason: 'The selected story is adequately explained in text.', asset: { status: 'not_needed', path: null, provenance: null }, alt_text: null };
+    candidate.handoff = { status: 'draft_handoff_only', publish_permitted: false, authorization_basis: null, queue_path: null };
+    candidate.product_mention = {
+      reviewed: true, mentioned, placements: mentioned ? ['post_body'] : [],
+      platforms: mentioned ? ['facebook', 'threads'] : [], entities: mentioned ? ['Crew Web'] : [],
+      counts_toward_weekly_cap: mentioned
+    };
+    return candidate;
+  });
+  const total = priorCount + newCount;
+  const selected = 14;
+  review.weekly_product_mention_tracking = {
+    week_start: '2026-11-09', week_end: '2026-11-15', selected_topics: selected,
+    product_mentioned_topics: total, mention_ratio: Math.round(total / selected * 1000) / 1000,
+    weekly_cap: 2, remaining: Math.max(0, 2 - total),
+    counting_note: 'Count prior topics and the current review once across platforms.',
+    traffic_comparison: {
+      status: 'pending_metrics', metrics_path: 'content/experiments/2026-11-05-to-18/metrics.csv',
+      note: 'Actual publication and platform observations have not been verified.'
+    }
+  };
+  return review;
+}
+
+test('weekly cap preserves historical overage but blocks new product mentions when exhausted', () => {
+  const validate = review => validateEditorialReview(review, { repoRoot: root });
+  assert.deepEqual(validate(weeklyMentionReview(4, 0)).errors, []);
+  assert.ok(validate(weeklyMentionReview(4, 1)).errors.some(message => message.includes('quota is exhausted')));
+  assert.deepEqual(validate(weeklyMentionReview(1, 1)).errors, []);
+  assert.ok(validate(weeklyMentionReview(1, 2)).errors.some(message => message.includes('quota is exhausted')));
+});
