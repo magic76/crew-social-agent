@@ -4,11 +4,11 @@
   "created_date": "2026-11-11",
   "title": "AlphaProof Code：agent 寫證明，Lean kernel 驗證 libsignal 的指定安全性質",
   "category": "practical",
-  "status": "ready_for_local_agent",
-  "mode": "live",
+  "status": "draft",
+  "mode": "dry_run",
   "schedule": {
     "date": "2026-11-11",
-    "time": "17:30",
+    "time": "12:00",
     "timezone": "Asia/Taipei"
   },
   "networks": [
@@ -43,8 +43,8 @@
     }
   },
   "safety": {
-    "publish_permitted": true,
-    "reason": "使用者於 2026-11-11 明確核准此篇文案以純文字格式，交由手機本地 agent 於 2026-11-11 17:30（Asia/Taipei）發文；本次僅更新 GitHub Queue，未呼叫發布 API。"
+    "publish_permitted": false,
+    "reason": "新稿未取得逐篇發布授權；編輯審核不構成發布許可。"
   },
   "references": [
     {
