@@ -4,8 +4,8 @@
   "created_date": "2026-11-11",
   "title": "AI 工作停止時，授權檢查放在推理層還是工作程式",
   "category": "practical",
-  "status": "draft",
-  "mode": "dry_run",
+  "status": "ready_for_local_agent",
+  "mode": "live",
   "schedule": {
     "date": "2026-11-11",
     "time": "16:00",
@@ -43,7 +43,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "新稿未取得逐篇發布授權；審核與草稿交接不構成發布許可。"
+    "publish_permitted": true,
+    "reason": "使用者於 2026-11-11 明確核准此篇文案以純文字格式，交由手機本地 agent 於 2026-11-11 16:00（Asia/Taipei）發文；本次僅更新 GitHub Queue，未呼叫發布 API。"
   }
 }
