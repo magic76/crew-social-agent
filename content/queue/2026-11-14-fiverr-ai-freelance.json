@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261114-fiverr-ai-freelance",
+  "created_date": "2026-11-13",
+  "title": "省下的 AI 工時，怎麼反映在報價",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-14",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "HR News Canada",
+    "published_date": "2026-11-12",
+    "title": "More than four in 10 employees would take a pay cut to work for themselves",
+    "url": "https://hrnewscanada.com/interactives/pay-cut-to-be-own-boss/"
+  },
+  "references": [
+    {
+      "publisher": "Talker Research",
+      "published_date": "2026-11-10",
+      "title": "Workers see AI assistants, flexible schedules shaping future of work",
+      "url": "https://talkerresearch.com/workers-see-ai-assistants-flexible-schedules-shaping-future-of-work/"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "來源：HR News Canada（2026-11-12）\nhttps://hrnewscanada.com/interactives/pay-cut-to-be-own-boss/\nTalker Research（2026-11-10）\nhttps://talkerresearch.com/workers-see-ai-assistants-flexible-schedules-shaping-future-of-work/",
+      "requestId": "56ec6313-bcff-4cf7-827b-88ccb0bc523b"
+    },
+    "threads": {
+      "text": "來源：HR News Canada（2026-11-12）\nhttps://hrnewscanada.com/interactives/pay-cut-to-be-own-boss/\nTalker Research（2026-11-10）\nhttps://talkerresearch.com/workers-see-ai-assistants-flexible-schedules-shaping-future-of-work/",
+      "requestId": "e41329ee-f065-446e-86cf-53eed9d93306"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Fiverr 委託做的一份調查，問了 5 個國家的 2,850 位接案者和 2,900 位上班族。\n\n有用 AI 的人當中，31% 的接案者說 AI 幫他們少花時間在行政雜事上，上班族只有 20%。\n\n但有一項反過來：在美國，說 AI 幫他們談薪水或開口要更多錢的，接案者 17%，上班族反而有 22%。\n\n也就是說，很多人用 AI 把時間省下來了，但沒有把省下來的價值算進報價裡。\n\n下次報價前，可以請 AI 幫你把交付內容逐項列清楚、估每項的工時，再拿這張表去談價錢，而不是只用 AI 做得更快、收一樣的錢。\n\n（這份調查是賣接案服務的公司委託做的，而且是自填的問卷。）",
+      "requestId": "4b4b9ff1-bae4-44b3-967a-19ba9add4ae5"
+    },
+    "threads": {
+      "text": "Fiverr 委託做的一份調查，問了 5 個國家的 2,850 位接案者和 2,900 位上班族。\n\n有用 AI 的人當中，31% 的接案者說 AI 幫他們少花時間在行政雜事上，上班族只有 20%。\n\n但有一項反過來：在美國，說 AI 幫他們談薪水或開口要更多錢的，接案者 17%，上班族反而有 22%。\n\n也就是說，很多人用 AI 把時間省下來了，但沒有把省下來的價值算進報價裡。\n\n下次報價前，可以請 AI 幫你把交付內容逐項列清楚、估每項的工時，再拿這張表去談價錢，而不是只用 AI 做得更快、收一樣的錢。\n\n（這份調查是賣接案服務的公司委託做的，而且是自填的問卷。）",
+      "requestId": "62e0ac52-7aa8-4119-a466-22c53fbf555e"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-13 明確核准僅此四篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定本篇台北時間 2026-11-14 10:00。"
+  }
+}

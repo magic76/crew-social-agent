@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261113-study-why-questions",
+  "created_date": "2026-11-13",
+  "title": "會追問的人，考得比較好",
+  "category": "research",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-13",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-13-ai-study-why-questions.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "8d3cfa051ab077968a5209623f04bcdab56f09ac157177e23c3625932edcdbfb",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-13-ai-study-why-questions.jpg",
+    "alt": "4:5 概念插畫。左側學生翻讀湖泊生態課本、對筆電追問；右側學生照著筆電作答，面前的測驗卷仍空白。標題「會追問的人，考得比較好」。非實際研究測驗或產品介面。"
+  },
+  "source": {
+    "publisher": "Journal of Science Education and Technology",
+    "published_date": "2026-11-12",
+    "title": "What Makes Learning with GenAI Effective? Text Support and Deeper Engagement are Associated with Higher Performance in an Ecology Context",
+    "url": "https://link.springer.com/article/10.1007/s10956-026-10374-w"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Journal of Science Education and Technology（2026-11-12）\nhttps://link.springer.com/article/10.1007/s10956-026-10374-w",
+      "requestId": "e23a6827-057a-49f9-a252-9c73a0027273"
+    },
+    "threads": {
+      "text": "來源：Journal of Science Education and Technology（2026-11-12）\nhttps://link.springer.com/article/10.1007/s10956-026-10374-w",
+      "requestId": "a88444a0-86b3-4207-8699-55166e119ab1"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "有個實驗找了 185 位大學生讀同一份湖泊汙染的教材，再考一次不能看任何資料的測驗。\n\n分三組：只讀文章、只問 ChatGPT、兩個都能用。\n\n結果只問 ChatGPT 那組分數最低。他們跟 AI 來回聊得最多，但聊得多跟考得好沒有關係。\n\n真正有差的是「怎麼問」：會追問「為什麼」「那如果……呢」的人分數比較好；AI 回什麼就直接收下的人，分數比較差。\n\n下次用 AI 讀書，可以先自己讀過原文，再拿 AI 來追問、挑它的毛病，不要只叫它給答案。\n\n（這是單一研究、單一科目，不代表每科都一樣。）",
+      "requestId": "73fb1742-53d8-49d9-9d98-4573491214d6"
+    },
+    "threads": {
+      "text": "有個實驗找了 185 位大學生讀同一份湖泊汙染的教材，再考一次不能看任何資料的測驗。\n\n分三組：只讀文章、只問 ChatGPT、兩個都能用。\n\n結果只問 ChatGPT 那組分數最低。他們跟 AI 來回聊得最多，但聊得多跟考得好沒有關係。\n\n真正有差的是「怎麼問」：會追問「為什麼」「那如果……呢」的人分數比較好；AI 回什麼就直接收下的人，分數比較差。\n\n下次用 AI 讀書，可以先自己讀過原文，再拿 AI 來追問、挑它的毛病，不要只叫它給答案。\n\n（這是單一研究、單一科目，不代表每科都一樣。）",
+      "requestId": "9f18f6c6-27d1-4b98-a08a-6565ae00674a"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-13 明確核准僅此四篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定本篇台北時間 2026-11-13 21:00。"
+  }
+}

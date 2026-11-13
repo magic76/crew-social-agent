@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261113-openai-voice-change",
+  "created_date": "2026-11-13",
+  "title": "ChatGPT 語音 12 月改版",
+  "category": "news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-13",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "OpenAI Help Center / ChatGPT release notes",
+    "published_date": "2026-11-10",
+    "title": "Retiring Advanced and Standard Voice",
+    "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：ChatGPT release notes（2026-11-10）\nhttps://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "requestId": "2231cd79-8d5d-4c05-9ab4-a01b54db2096"
+    },
+    "threads": {
+      "text": "來源：ChatGPT release notes（2026-11-10）\nhttps://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "requestId": "07c8cc8a-6792-48a5-9f8e-fe4ce362ec7b"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "常用 ChatGPT 語音練英文口說的人，注意一下：OpenAI 說 12 月 11 日會下架舊的 Advanced 和 Standard 語音，之後全部改用新的 GPT-Live。\n\n官方說現在幾乎所有語音使用者都已經在用 GPT-Live 了。不過開鏡頭、分享螢幕這兩個功能，暫時還是由舊的 Advanced 語音在跑。\n\n如果你有一套習慣的練法（例如請它扮面試官、每句糾正你的發音），建議這個月就先在新語音上試一輪，有不順的地方提早找替代方式，不要等到下架那天才發現。",
+      "requestId": "d077ce79-a478-44be-bf65-0b3a44bbbd2e"
+    },
+    "threads": {
+      "text": "常用 ChatGPT 語音練英文口說的人，注意一下：OpenAI 說 12 月 11 日會下架舊的 Advanced 和 Standard 語音，之後全部改用新的 GPT-Live。\n\n官方說現在幾乎所有語音使用者都已經在用 GPT-Live 了。不過開鏡頭、分享螢幕這兩個功能，暫時還是由舊的 Advanced 語音在跑。\n\n如果你有一套習慣的練法（例如請它扮面試官、每句糾正你的發音），建議這個月就先在新語音上試一輪，有不順的地方提早找替代方式，不要等到下架那天才發現。",
+      "requestId": "23d7ca7b-1f4c-4483-af23-0f9a17e682d4"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-13 明確核准僅此四篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定本篇台北時間 2026-11-13 12:00。"
+  }
+}
