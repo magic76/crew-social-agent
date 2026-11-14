@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261114-ai-shopping-fake-store",
+  "created_date": "2026-11-14",
+  "title": "AI 推薦的官網，先核對",
+  "category": "news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-14",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-14-ai-shopping-fake-store.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "3f8a007d7063fdc3d86ddfdf8ed19161a50a8072aaf5f786f581ea681ead6a0a",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-14-ai-shopping-fake-store.jpg",
+    "alt": "4:5 概念插畫，非正式產品介面。夜間客廳裡，一人坐在沙發上滑手機、準備輸入信用卡號。手機是示意用的「AI 聊天助手」，推薦一個模糊假網址「官網」，並有輸入卡號與立即付款欄位。旁邊攤位站著戴假鬍子的可疑店員，招牌寫「假冒商店（非真正官方）」。標題「AI 推薦的官網，先核對」。"
+  },
+  "source": {
+    "publisher": "Podqi",
+    "published_date": "2026-11-12",
+    "title": "AI search is recommending fake retail websites",
+    "url": "https://podqi.com/research/ai-search-brand-risk"
+  },
+  "references": [
+    {
+      "publisher": "The Verge",
+      "published_date": "2026-11-12",
+      "title": "AI chatbots are recommending fake retail websites, study finds",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Podqi（2026-11-12）\nhttps://podqi.com/research/ai-search-brand-risk\nThe Verge（2026-11-12）\nhttps://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+      "requestId": "94940f7c-539c-44d9-9a68-cf240f3c7c78"
+    },
+    "threads": {
+      "text": "來源：Podqi（2026-11-12）\nhttps://podqi.com/research/ai-search-brand-risk\nThe Verge（2026-11-12）\nhttps://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+      "requestId": "ecd10ef0-0d53-45cd-ba8c-0a528b50e541"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "用 AI 找「這個牌子去哪買」的人越來越多，但有份測試值得先看一下。\n\n品牌保護公司 Podqi 在 9 月拿 151 個品牌，問 ChatGPT、Gemini、Perplexity 五種購物問題，總共 6,795 個回答。約 9% 的回答出現可疑網站，包括假冒官網、疑似賣仿冒品，或已經沒在營運的網域。依平台分：Perplexity 15%、ChatGPT 8%、Gemini 4%。\n\n更麻煩的是，出現這種網站時，AI 推薦它的次數是警告的 6.3 倍。問「有沒有其他國家的官網」時風險最高，約 16%。\n\n年底購物季，AI 列出來的店家可以當線索，但結帳前多做一步：從品牌官方社群或官網點進去核對網址，網址怪怪的、價格低得離譜就先停。\n\n（這是單一公司自己設計的測試，不是各平台的整體錯誤率。）",
+      "requestId": "06c4dbcc-9207-422d-97e1-a1c2ef613100"
+    },
+    "threads": {
+      "text": "雙 11 剛過、雙 12 快到了，提醒一下用 AI 問「哪裡買」的人。\n\n有家品牌保護公司拿 151 個品牌去問 ChatGPT、Gemini、Perplexity「去哪買」，6,795 個回答裡約 9% 出現可疑網站（假冒官網、賣仿冒品，或已經失效的網域）。出現這種網站時，AI 推薦它的次數是警告的 6 倍多。最危險的問法是「有沒有台灣／某國官網」。\n\nAI 給的購物連結先當成線索就好：到品牌官方 IG 或官網核對網址，再輸入卡號。\n\n（這是單一公司的測試，數字是 9 月的結果。）",
+      "requestId": "aeef8a34-2fb6-45fd-a0d3-fa0a46eaeffc"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-14 09:34 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-14 12:00。"
+  }
+}

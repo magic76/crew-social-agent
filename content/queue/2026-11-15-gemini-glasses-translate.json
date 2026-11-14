@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261115-gemini-glasses-translate",
+  "created_date": "2026-11-14",
+  "title": "翻譯交給眼鏡，聊天留給自己",
+  "category": "news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-15",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-15-gemini-glasses-translate.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "26be8e9a277bad2424199e3feb190a196fdbe6827357ae041845f92c8735e11f",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-15-gemini-glasses-translate.jpg",
+    "alt": "4:5 概念插畫，非正式產品畫面，眼鏡亦非真實品牌。國外小餐館裡，一位戴著普通外型智慧眼鏡的人看著法文菜單，眼鏡旁冒出中文翻譯泡泡「這道是燉牛肉」；對面的當地朋友揮手聊天，泡泡裡是法文。標題「翻譯交給眼鏡，聊天留給自己」。"
+  },
+  "source": {
+    "publisher": "Google Blog",
+    "published_date": "2026-11-12",
+    "title": "See our intelligent eyewear lineup and pre-order your pair",
+    "url": "https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/"
+  },
+  "references": [
+    {
+      "publisher": "Samsung Newsroom",
+      "published_date": "2026-11-12",
+      "title": "Samsung Announces December Release for Intelligent Eyewear, Bringing a Smarter Way To See the World",
+      "url": "https://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world"
+    },
+    {
+      "publisher": "The Verge",
+      "published_date": "2026-11-12",
+      "title": "I tried Google’s AI glasses and Meta’s finally got real competition",
+      "url": "https://www.theverge.com/tech/1031647/google-android-xr-warby-parker-gentle-monster-hands-on"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Google Blog（2026-11-12）\nhttps://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/\nSamsung Newsroom（2026-11-12）\nhttps://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world\nThe Verge（2026-11-12）\nhttps://www.theverge.com/tech/1031647/google-android-xr-warby-parker-gentle-monster-hands-on",
+      "requestId": "654c0fa1-154a-497f-84a5-d720b5f00cfd"
+    },
+    "threads": {
+      "text": "來源：Google Blog（2026-11-12）\nhttps://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/\nSamsung Newsroom（2026-11-12）\nhttps://news.samsung.com/global/samsung-announces-december-release-for-intelligent-eyewear-bringing-a-smarter-way-to-see-the-world\nThe Verge（2026-11-12）\nhttps://www.theverge.com/tech/1031647/google-android-xr-warby-parker-gentle-monster-hands-on",
+      "requestId": "ff00537a-c821-45f5-8295-3943e3ba45e4"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "Google 和三星合作的 Gemini 智慧眼鏡這週開放預購，12 月 10 日出貨。\n\n主打功能之一是即時翻譯：官方說它能翻 70 多種語言的對話和文字，會自動偵測語言。看著菜單或路牌問它，它就會用耳邊的喇叭唸翻譯給你聽。The Verge 試戴後說，好幾種語言混在一起的環境也能翻。\n\n台灣暫時買不到：目前只在美國和韓國上市，而且需要當地的 Google 帳號。Warby Parker 款 395 美元起，Gentle Monster 款 449 美元起。\n\n對正在學外語的人來說，力氣可以分配一下：問路、點餐、看標示這種「查一下就好」的事交給翻譯工具，學習時間留給想自己開口的場合，例如工作面談、跟朋友聊天。手機上的翻譯 App 現在就能拿來練：自己先說一次，再對照它的翻譯。",
+      "requestId": "d33ef168-e952-4810-9abe-8c0371e3793b"
+    },
+    "threads": {
+      "text": "Google 和三星的 Gemini 眼鏡開放預購了，12/10 出貨，能邊聽邊即時翻譯 70 多種語言，看到菜單也能直接唸翻譯給你聽。不過目前只在美國和韓國賣，Warby Parker 款 395 美元起。\n\n翻譯越來越方便，我反而覺得外語可以換個學法：旅行、看菜單交給工具，把時間留給你真的想用外語跟人聊天的場合。",
+      "requestId": "a922ca2e-40c2-4624-a837-8596810633b4"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-14 09:34 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-15 19:00。"
+  }
+}

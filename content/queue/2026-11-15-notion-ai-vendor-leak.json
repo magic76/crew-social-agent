@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261115-notion-ai-vendor-leak",
+  "created_date": "2026-11-14",
+  "title": "密碼金鑰不要貼進 AI",
+  "category": "news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-15",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Notion Security Advisory",
+    "published_date": "2026-11-12",
+    "title": "Fireworks AI incident",
+    "url": "https://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor"
+  },
+  "references": [
+    {
+      "publisher": "TechCrunch",
+      "published_date": "2026-11-12",
+      "title": "Cyberattack on Fireworks AI allowed hackers to access Notion customers' chat transcripts",
+      "url": "https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Notion Security Advisory（2026-11-12）\nhttps://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor\nTechCrunch（2026-11-12）\nhttps://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+      "requestId": "15835b44-810e-4292-8956-b93e09e19896"
+    },
+    "threads": {
+      "text": "來源：Notion Security Advisory（2026-11-12）\nhttps://www.notion.com/security/advisories/security-incident-involving-a-third-party-ai-vendor\nTechCrunch（2026-11-12）\nhttps://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/",
+      "requestId": "dd499a76-b184-47fb-8bd7-97099db92b4b"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "你在 AI 對話框裡貼過什麼？\n\nNotion 這週公布，它們用來跑部分 AI 功能的供應商 Fireworks 遭駭，部分 Notion AI 的對話紀錄外洩。Notion 說受影響的工作區不到 1%，大多數紀錄沒有標註是誰、哪間公司寫的。受影響的用戶已經收到通知，沒收到的目前不用做什麼。\n\n官方給受影響用戶的建議是：把這些資料當成已經外洩，如果在對話裡貼過密碼、API 金鑰或其他憑證，就要更換。\n\n這個提醒不只適用於 Notion：你用的 AI 工具，背後常常還有其他廠商在幫忙處理資料。所以密碼、金鑰、客戶個資這類東西，都不要貼進任何 AI 對話框。需要 AI 幫你看設定檔時，先把敏感欄位換成「XXXX」。\n\n（調查還在進行，細節以 Notion 官方公告為準。）",
+      "requestId": "497fb2f7-7fc4-4dbd-8978-5d41c19862bb"
+    },
+    "threads": {
+      "text": "Notion 這週說，它們用的 AI 供應商 Fireworks 被駭，部分 Notion AI 的對話紀錄被拿走了，影響不到 1% 的工作區，大多數紀錄也看不出是誰寫的。\n\n但官方的建議很值得記：如果你在那些對話裡貼過密碼或 API 金鑰，請換掉。\n\n習慣要養起來：密碼、金鑰、客戶個資都不要貼進任何 AI 對話框，就算是公司買的工具也一樣。",
+      "requestId": "bdaea5ff-23ca-4408-8f3a-50471df83eb9"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-14 09:34 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-15 12:00。"
+  }
+}

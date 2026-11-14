@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261114-pdf-to-markdown",
+  "created_date": "2026-11-14",
+  "title": "先把 PDF 轉成文字再丟給 AI",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-14",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Threads @el_howeed",
+    "published_date": "2026-11-13",
+    "url": "https://www.threads.com/@el_howeed/post/DfqWCHCD08X"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Threads @el_howeed（2026-11-13）\nhttps://www.threads.com/@el_howeed/post/DfqWCHCD08X",
+      "requestId": "0ae6e11d-d349-4acb-9d74-9823dbd1efc1"
+    },
+    "threads": {
+      "text": "來源：Threads @el_howeed（2026-11-13）\nhttps://www.threads.com/@el_howeed/post/DfqWCHCD08X",
+      "requestId": "a80725ea-44c7-4e71-89da-63e52a9f0d53"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "這兩天 Threads 上有篇老師的貼文很多人轉：學生把一份 20 頁的 PDF 直接上傳給 AI，結果額度很快就燒完了。老師的建議是先用工具（例如微軟開源的 MarkItDown）把 PDF 轉成 Markdown 這種純文字格式，再交給 AI。\n\n留言也有不同意見：有人說幾百頁的手冊 AI 也讀得動，關鍵是你怎麼跟它對話。\n\n兩種說法其實可以一起用。下次讀報告或講義，可以試這個順序：\n1. 先轉成文字，刪掉封面、目錄、參考文獻這些用不到的部分\n2. 只貼跟問題有關的章節\n3. 問具體的問題，例如「第 3 節的方法有什麼限制」，不要只說「幫我整理」\n\n（各家 AI 的額度算法不同，能省多少要看你用的工具。）",
+      "requestId": "8b04c862-6570-4f33-a9ed-6c6fffaed034"
+    },
+    "threads": {
+      "text": "看到一位老師的貼文：學生把 20 頁 PDF 直接丟給 AI，額度一下就用完了。老師建議先把 PDF 轉成 Markdown（純文字格式）再丟。\n\n底下也有人說幾百頁的手冊照樣能讀，問題在怎麼問。\n\n我覺得兩邊都對。實用的做法是先轉成文字，只貼需要的那幾段，再問具體的問題，別整本丟進去叫它「幫我整理」。",
+      "requestId": "01f2f980-3677-4826-9a29-4220b1fc8bb3"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-14 09:34 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-14 19:00。"
+  }
+}
