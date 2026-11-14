@@ -8,6 +8,10 @@ Follow the image section in [the canonical editorial guidelines](../../docs/edit
 
 Before handoff, view the image at phone-feed size, then cover the headline or ignore the lettering and ask: **「不看文字，這張圖能讓人猜到主題嗎？」** If the scene does not communicate the event or conflict without the words, revise it, choose genuine shareable evidence, or use text-only.
 
+## Evidence-first visual priority (2026-11-15)
+
+For hands-on DIY content or everyday AI makeovers, prefer the **actual output** over an attractive AI illustration: genuine device/control photos, a real website/game on a phone, safe before/after views, or a short clip of the demonstrated action. For tutorials, show the finished outcome and one or two real milestone steps rather than a wall of fake UI. Protect personal data, third-party imagery and credentials, and obtain any needed permissions. A generated concept image must never be labeled as the creator's finished work. If no shareable evidence exists, use a clearly labeled illustration or text-only; don't fabricate completion to secure a more clickable picture.
+
 ## Media by story type
 
 | Story type | Preferred evidence or treatment | Avoid |
