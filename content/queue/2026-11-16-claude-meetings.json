@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261116-claude-meetings",
+  "created_date": "2026-11-15",
+  "title": "開會後，先列出誰要做什麼",
+  "category": "news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-16",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "source": {
+    "publisher": "Anthropic",
+    "published_date": "2026-11-10",
+    "title": "Introducing Claude Meetings, now in beta",
+    "url": "https://claude.com/resources/articles/claude-meetings"
+  },
+  "references": [
+    {
+      "publisher": "TechCrunch",
+      "published_date": "2026-11-10",
+      "title": "Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks",
+      "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Anthropic（2026-11-10）\nhttps://claude.com/resources/articles/claude-meetings\nTechCrunch（2026-11-10）\nhttps://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+      "requestId": "00235183-2e88-4c34-aa8b-16343ffbbc07"
+    },
+    "threads": {
+      "text": "來源：Anthropic（2026-11-10）\nhttps://claude.com/resources/articles/claude-meetings\nTechCrunch（2026-11-10）\nhttps://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
+      "requestId": "47be57b2-6456-405c-b3e0-b54bb909419d"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "開會最怕的是，散會後沒人記得誰要做什麼。\n\nAnthropic 最近推出 Claude Meetings 測試版：Claude 會以看得見的與會者身分加入視訊會議，跟著討論寫筆記和待辦，有人開口要求時，也能當場起草計畫文件或白板。會議結束後，筆記和逐字稿會集中在同一頁。\n\n其中一個隱私設計值得參考：只要有組織外的人受邀或中途加入，它預設就不參加或會離開。\n\n目前只開放給 Team 和 Enterprise 方案。一般人還用不到，但可以先借用它的做法：會後把逐字稿或筆記貼給 AI，請它整理成「誰、要做什麼、哪天以前」三欄，再貼回群組確認。\n\n不管用哪一種 AI 記錄會議，都記得先告知與會者。",
+      "requestId": "07b64f03-1925-4ac0-8f49-bd5e70db9984"
+    },
+    "threads": {
+      "text": "Anthropic 最近推出 Claude Meetings 測試版：Claude 會以看得見的與會者身分加入視訊會議，邊聽邊寫筆記和待辦，也能當場幫大家起草文件。\n有個設計滿值得注意：只要有公司以外的人在會議裡，它預設就不加入。\n目前只開放給 Team 和 Enterprise 方案。\n就算你還用不到，也可以先學它的格式：會後把逐字稿貼給 AI，請它只列「誰、要做什麼、哪天以前」。\n要用任何 AI 記錄會議，記得先跟與會者說一聲。",
+      "requestId": "fc81940e-68cb-44b7-a228-aaab735886e5"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-15 08:27 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-16 12:00。"
+  }
+}

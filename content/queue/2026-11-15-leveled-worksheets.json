@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261115-leveled-worksheets",
+  "created_date": "2026-11-15",
+  "title": "同一題，出成七種難度",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-15",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-15-leveled-worksheets.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "deca6c385e2c0abb830d4da97d93cf4df4ff4ef82627718b550448a138ace00e",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-15-leveled-worksheets.jpg",
+    "alt": "4:5 概念插畫，非正式產品畫面。餐桌上有七張由淺到深、編號 1 到 7 的漸層練習紙，孩子拿著第 1 張，家長在旁邊陪伴。標題「同一題，出成七種難度」。"
+  },
+  "posts": {
+    "facebook": {
+      "text": "孩子一題數學卡住，一直重寫同一題，常常只會越寫越挫折。\n\nThreads 上有位小學老師分享她的做法：請 ChatGPT 把同一種長除法出成 7 個難度的練習卷，從最簡單的一步開始，慢慢加到跟課本一樣難，讓每個孩子都能找到剛好做得到的那一級。\n\n在家也可以這樣問 AI：\n「我的孩子小三，長除法『商中間有 0』的題目一直錯。請出 6 個難度，每級 3 題，從只要一個步驟的開始，最後一級和課本一樣難。答案和提示放在最後。」\n\n讓孩子從做得出來的那一級開始，做對了再往上，比一直重算錯的那一題更容易建立信心。\n\nAI 出的題目和答案偶爾會出錯，印出來之前，大人先自己算一遍比較保險。",
+      "requestId": "c5f436f1-2370-4c35-b1bb-feb0d43fd5e6"
+    },
+    "threads": {
+      "text": "看到一位小學老師分享，她請 ChatGPT 把同一種長除法出成 7 個難度的練習卷，讓程度不同的孩子都有一張「剛好做得到」的題目。\n家長也可以照著做：\n・先說孩子幾年級、卡在哪一題\n・請 AI 從「只差一步」到「跟課本一樣難」，分 5 到 7 級，每級 3 題\n・答案和提示集中放在最後\n讓孩子從做得出來的那一級開始，再一級一級往上，比較不會一開始就卡住。\nAI 出的題目和答案偶爾會錯，印之前自己先算一遍。",
+      "requestId": "d20bc20a-e6c6-4c76-b3aa-2b4f0f57f105"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-15 08:27 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-15 16:00。"
+  },
+  "source": {
+    "publisher": "Threads @pekopeko_miss.joey",
+    "published_date": "2026-11-15",
+    "url": "https://www.threads.com/@pekopeko_miss.joey/post/DfvTbJ9GP1l"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Threads @pekopeko_miss.joey（2026-11-15）\nhttps://www.threads.com/@pekopeko_miss.joey/post/DfvTbJ9GP1l",
+      "requestId": "582e5757-9c34-471c-8aac-d0bb57b4c85f"
+    },
+    "threads": {
+      "text": "來源：Threads @pekopeko_miss.joey（2026-11-15）\nhttps://www.threads.com/@pekopeko_miss.joey/post/DfvTbJ9GP1l",
+      "requestId": "bc4f818f-84d6-4722-ad6a-38e7db397789"
+    }
+  }
+}

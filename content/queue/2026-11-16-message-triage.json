@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261116-message-triage",
+  "created_date": "2026-11-15",
+  "title": "早上先讓 AI 把訊息分成三堆",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-16",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "posts": {
+    "facebook": {
+      "text": "同時帶 3 到 5 個專案，一整天都在回訊息、救火，真正要做的事卻一直沒動。這兩天 Threads 上一篇 PM 的求救文有近兩千人按讚，很多人都在留言分享自己的方法。\n\n一個不用裝新工具、明天早上就能試的方法：\n1. 把未讀訊息的重點複製下來，先刪掉客戶名稱、金額這類機密\n2. 貼給 ChatGPT 或 Gemini，請它分成「今天一定要回／可以排到明天／看過就好」\n3. 再請它幫第一堆的每一則先擬一句回覆草稿\n\n這樣你一進公司，看到的就是一張排好順序的清單，不是一百則紅點。\n\nAI 分錯是有可能的，最後的判斷和送出還是你自己來。牽涉人情、語氣很重要的訊息，建議自己讀原文。",
+      "requestId": "17ca0e3f-b9ff-4d16-870c-1272df174c80"
+    },
+    "threads": {
+      "text": "同時帶好幾個專案，最累的往往不是事情本身，而是一直被訊息打斷。\n這兩天一篇 PM 的求救文有快兩千人按讚，看來很多人都卡在這裡。\n有個馬上能試的小方法：早上把未讀訊息的重點複製給 AI（先刪掉客戶名稱和機密），請它分成三堆：\n今天一定要回／可以排到明天／看過就好。\n接著請它幫「今天一定要回」的每一則先擬一句回覆。\n最後還是你自己決定、自己送出，AI 只是先幫你把桌面清乾淨。\n牽涉人情、需要判斷的訊息，還是自己看比較好。",
+      "requestId": "854f4a66-9d2b-4ebd-9555-e753fd07486e"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-15 08:27 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-16 10:00。"
+  },
+  "source": {
+    "publisher": "Threads @enplan_25",
+    "published_date": "2026-11-14",
+    "url": "https://www.threads.com/@enplan_25/post/Dft5RYSEiVI"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Threads @enplan_25（2026-11-14）\nhttps://www.threads.com/@enplan_25/post/Dft5RYSEiVI",
+      "requestId": "0a2df308-cb9a-4264-adbe-a45c787de23e"
+    },
+    "threads": {
+      "text": "來源：Threads @enplan_25（2026-11-14）\nhttps://www.threads.com/@enplan_25/post/Dft5RYSEiVI",
+      "requestId": "b471597e-e33f-4517-b09a-cfe9198c6314"
+    }
+  }
+}

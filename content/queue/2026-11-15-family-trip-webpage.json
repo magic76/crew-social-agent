@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261115-family-trip-webpage",
+  "created_date": "2026-11-15",
+  "title": "爸媽不用再問等一下去哪",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-15",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-15-family-trip-webpage.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "137627559f51d645a2109d5f0d53fdf65ad287bd8c02a90ebf4bf87301c363ff",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-15-family-trip-webpage.jpg",
+    "alt": "4:5 概念插畫，非正式產品介面。車站大廳裡，一位家長拿著手機看大字行程頁（示意畫面，不是真實 App），兒女拖著行李站在旁邊。標題「爸媽不用再問等一下去哪」。"
+  },
+  "source": {
+    "publisher": "Threads @dryichen",
+    "published_date": "2026-11-15",
+    "url": "https://www.threads.com/@dryichen/post/DfumTIMj4ve"
+  },
+  "references": [
+    {
+      "publisher": "Threads @sha_ron__",
+      "published_date": "2026-01-24",
+      "url": "https://www.threads.com/@sha_ron__/post/DT4t3NjktME"
+    },
+    {
+      "publisher": "Threads @ritayang1212la",
+      "published_date": "2026-04-03",
+      "url": "https://www.threads.com/@ritayang1212la/post/DWqWmKvkw1D"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Threads @dryichen（2026-11-15）\nhttps://www.threads.com/@dryichen/post/DfumTIMj4ve\nThreads @sha_ron__（2026-01-24）\nhttps://www.threads.com/@sha_ron__/post/DT4t3NjktME\nThreads @ritayang1212la（2026-04-03）\nhttps://www.threads.com/@ritayang1212la/post/DWqWmKvkw1D",
+      "requestId": "79e35f33-b8ef-4bc5-9476-d10fffa85864"
+    },
+    "threads": {
+      "text": "來源：Threads @dryichen（2026-11-15）\nhttps://www.threads.com/@dryichen/post/DfumTIMj4ve\nThreads @sha_ron__（2026-01-24）\nhttps://www.threads.com/@sha_ron__/post/DT4t3NjktME\nThreads @ritayang1212la（2026-04-03）\nhttps://www.threads.com/@ritayang1212la/post/DWqWmKvkw1D",
+      "requestId": "e2cabd6f-a99c-4387-a26a-157ab7d3a2ad"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "帶爸媽出遊，最常被問的一句是：「等一下去哪？」\n\n最近 Threads 上很多人分享同一招：把排好的行程貼給 Gemini 或 Claude，請它做成一頁手機網頁。每個景點按一下就開 Google 地圖，住宿和交通也集中在同一頁。\n\n想讓長輩也看得懂，可以直接這樣交代：\n・「字要大，一天一頁，不要表格」\n・「每一站寫幾點出發、怎麼去、大概待多久」\n・「最上面放飯店地址和緊急聯絡電話」\n\n做好後用分享連結傳到家族群組，大家看的就是同一份，行程改了也只要改一個地方。\n\n提醒一點：護照號碼、訂位代碼、信用卡這類資料不要放進去，拿到連結的人都看得到。",
+      "requestId": "20188183-09be-44cf-bc53-ec907249867f"
+    },
+    "threads": {
+      "text": "帶爸媽出門，最常被問的一句是：「等一下去哪？」\n最近 Threads 上很多人分享，把行程丟給 Gemini 或 Claude，請它做成一頁手機網頁，每個景點按一下就開 Google 地圖。\n要給長輩用，可以多加三個要求：\n・字放大，一天一頁\n・每一站寫「幾點出發、搭什麼」\n・住宿和車票資訊放在最上面\n做好後把分享連結丟到家族群組，大家看的就是同一份。\n護照號碼、訂位代碼這類資料先別放，拿到連結的人都看得到。",
+      "requestId": "c9e4108f-a6b3-4d40-8e56-cb2708845f7c"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-15 08:27 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-15 21:00。"
+  }
+}
