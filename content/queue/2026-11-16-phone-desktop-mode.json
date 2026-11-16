@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261116-phone-desktop-mode",
+  "created_date": "2026-11-16",
+  "title": "一條線，手機變電腦",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-16",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-16-phone-desktop-mode.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "da8019ef888030d191149a16ae5900dc15616308f6fae4d9cd62b7e5b8a9494b",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-16-phone-desktop-mode.jpg",
+    "alt": "書桌上一支手機用 USB-C 線接著大螢幕，螢幕上開著好幾個視窗，旁邊有鍵盤滑鼠和闔起的筆電，標題「一條線，手機變電腦」"
+  },
+  "source": {
+    "publisher": "Engadget",
+    "published_date": "2026-09-27",
+    "title": "How to use Android's Desktop mode to turn your phone into a tiny PC",
+    "url": "https://www.engadget.com/2267572/how-to-use-desktop-mode-android-phone/"
+  },
+  "references": [
+    {
+      "publisher": "Android Authority",
+      "published_date": "2026-11-09",
+      "title": "One UI 9.5 could give Samsung Internet a dedicated desktop mode for DeX users",
+      "url": "https://www.androidauthority.com/samsung-internet-dex-desktop-mode-one-ui-9-5-leak-3732817/"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Engadget（2026-09-27）\nhttps://www.engadget.com/2267572/how-to-use-desktop-mode-android-phone/\nAndroid Authority（2026-11-09）\nhttps://www.androidauthority.com/samsung-internet-dex-desktop-mode-one-ui-9-5-leak-3732817/",
+      "requestId": "f5943b9a-9099-482a-83c3-994a41cd27fe"
+    },
+    "threads": {
+      "text": "來源：Engadget（2026-09-27）\nhttps://www.engadget.com/2267572/how-to-use-desktop-mode-android-phone/\nAndroid Authority（2026-11-09）\nhttps://www.androidauthority.com/samsung-internet-dex-desktop-mode-one-ui-9-5-leak-3732817/",
+      "requestId": "97c2ec75-f88f-4682-9c1d-97ed6e715403"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "家裡有螢幕、手機又是 Pixel 8 以後的機型，其實不一定要再買一台電腦，才有大螢幕可以用。\n\n需要準備的東西不多：Pixel 8 以後的手機，或是本來就支援 DeX 的三星手機；一條高速 USB-C 線；外接螢幕；再加上藍牙鍵盤和滑鼠。\n\n用線把手機接到螢幕上，選「桌面模式」之後，畫面會變成可以拉大縮小的視窗，還有開始選單。打字、同時開好幾個視窗都可以。若中途把線拔掉再接回來，剛才開著的視窗還會停在原來的位置。\n\n出差不想帶筆電，或家裡臨時需要大螢幕寫報告，可以先拿手機試試。\n\n有些手機遊戲不支援鍵盤；其他品牌支不支援，要看各家手機。三星下一版系統聽說會讓瀏覽器在 DeX 裡有電腦版介面和 AI 摘要，不過還在測試，不保證會上線。",
+      "requestId": "df4648e7-e8bc-4cec-b1d5-ceb3dd301b63"
+    },
+    "threads": {
+      "text": "家裡有螢幕、手機又是 Pixel 8 以後的機型的話，用一條高速 USB-C 線接上去，選「桌面模式」，畫面就會變成視窗＋開始選單，再接上藍牙鍵盤滑鼠就能打字、開好幾個視窗。三星手機的 DeX 也做得到。\n出差不想帶筆電，或家裡小孩寫報告需要大螢幕，可以先拿手機試試，不一定要多買一台電腦。\n有些手機遊戲不支援鍵盤；其他品牌支不支援，要看各家手機。",
+      "requestId": "84f7ddc1-0167-452e-a112-4adcec5d8b24"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-16 10:03 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-16 14:00。"
+  }
+}

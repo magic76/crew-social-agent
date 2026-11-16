@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261116-kids-homework-ai",
+  "created_date": "2026-11-16",
+  "title": "先寫 15 分鐘，再問 AI",
+  "category": "news",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-16",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-16-kids-homework-ai.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "ed84d84bc9fb1afcb6772af67e4f6c7b7b66c1235648ba245ba710aa86fbac34",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-16-kids-homework-ai.jpg",
+    "alt": "晚上餐桌旁孩子在寫作業，平板倒扣在一旁，家長比出先自己想的手勢，標題「先寫 15 分鐘，再問 AI」"
+  },
+  "source": {
+    "publisher": "聯合報",
+    "published_date": "2026-11-08",
+    "title": "PISA：用AI寫作業 恐落後一年學業",
+    "url": "https://udn.com/news/story/6885/9864285"
+  },
+  "references": [
+    {
+      "publisher": "公視新聞",
+      "published_date": "2026-11-13",
+      "title": "防學生過度仰賴AI解決問題 教育界籲設AI進退場機制",
+      "url": "https://news.pts.org.tw/article/835572"
+    }
+  ],
+  "first_replies": {
+    "facebook": {
+      "text": "來源：聯合報（2026-11-08）\nhttps://udn.com/news/story/6885/9864285\n公視新聞（2026-11-13）\nhttps://news.pts.org.tw/article/835572",
+      "requestId": "1176893e-9172-447c-a080-fb997b544aa2"
+    },
+    "threads": {
+      "text": "來源：聯合報（2026-11-08）\nhttps://udn.com/news/story/6885/9864285\n公視新聞（2026-11-13）\nhttps://news.pts.org.tw/article/835572",
+      "requestId": "273b273e-f02e-483e-89eb-02d0abd4a24f"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "PISA 最新報告提到：做摘要、查資料、寫作業這些事，不用 AI 的學生科學成績平均高出約 20 分，差不多是一年的程度。不過，常用 AI、同時在學校學過「怎麼判斷 AI 給的資訊對不對」的學生，科學表現反而略高。\n\n台師大副教授賴以威用計算機來比喻：把題目丟進去立刻有答案，數學能力不會因此變好；真正讓能力長大的，是中間那些又慢又容易算錯的過程。如果用 AI 把這段跳過去，學習就容易受損。上週台師大與中研院的研討會上，陽明交大講座教授林珊如則提到，老師要能決定 AI 什麼時候入場、什麼時候退場，也要讓學生自己承擔閱讀和判斷的責任。\n\n在家可以照這個順序試試：\n1. 先讓孩子自己寫 15 分鐘\n2. 卡住了才問 AI，而且只能要提示、不要直接要答案\n3. 寫完再請孩子講出，AI 哪一句可能有錯\n\n這份報告呈現的是相關性，不能直接說成績差異是 AI 造成的。怎麼用、用在什麼時候，比用不用更重要。",
+      "requestId": "0fda14c2-ce6a-4e63-a650-e0b5fa78556d"
+    },
+    "threads": {
+      "text": "PISA 最新報告提到：做摘要、查資料、寫作業這些事，不用 AI 的學生科學成績平均高出約 20 分，差不多是一年的程度。但是常用 AI、同時學過「怎麼判斷 AI 給的資訊對不對」的學生，表現反而略高。\n上週台師大的研討會上，學者也提到要讓 AI「進場、退場」。\n在家可以試試這樣分：先讓孩子自己寫 15 分鐘，卡住才問 AI，而且只能要提示、不要答案；寫完再請孩子講出 AI 哪一句可能有錯。",
+      "requestId": "1d9fee03-f2d6-495c-a31c-d625fa0f7e0f"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-16 10:03 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-16 19:00。"
+  }
+}
