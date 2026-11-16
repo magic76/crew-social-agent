@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261116-ai-examples-over-instructions",
+  "created_date": "2026-11-16",
+  "title": "要 AI 照著做，丟範例比寫說明有效",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-16",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "這篇是實用整理，出自 Threads 上的觀察。",
+      "requestId": "0b7b119e-cd19-4aca-9098-c97820ef6567"
+    },
+    "threads": {
+      "text": "這篇是實用整理，出自 Threads 上的觀察。",
+      "requestId": "a771cf15-fba8-4599-88dd-8001b3fe8e75"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "有人在 Threads 上抱怨，他請 AI 照原型做設計，AI 說完全照做了，結果其實是照「它自己對原型的理解」做的。他的結論是：給 AI 一份說明，它會自己腦補；給它一份參考範例，比較對得上。\n\n一般要 AI 幫忙時，也可以這樣做。例如：\n・排簡報：附上一份你喜歡的舊簡報，說「照這個版型排，大標、小標和頁尾位置不要改。」\n・改報價單：附上上次成交的報價單，說「欄位和格式照這份，只改客戶名稱、項目和金額。」\n・寫社團公告：附上一則你覺得語氣剛好的舊公告，說「語氣和段落照這篇，內容改成這次活動的時間地點。」\n\n範例裡如果有個資或客戶資料，先遮掉再貼。AI 也可能把範例裡你不想要的部分一起照抄過來，貼之前先說清楚哪些要留、哪些要改。",
+      "requestId": "58af945a-44ff-4f7b-a293-9315f89a5c7f"
+    },
+    "threads": {
+      "text": "有人在 Threads 上抱怨，他請 AI 照原型做設計，AI 說完全照做了，結果其實是照「它自己對原型的理解」做的。他的結論是：給 AI 一份說明，它會自己腦補；給它一份參考範例，比較對得上。\n一般人也一樣：要 AI 幫你排簡報、改報價單、寫公告，直接附上一份你喜歡的舊檔案或截圖，說「照這個格式」，通常比寫十行要求省事。\n範例裡有個資或客戶資料的話，先遮掉再貼。",
+      "requestId": "4e490662-86cc-4ed5-b4e3-96b13800165d"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋於 2026-11-16 10:03 明確核准本篇同時發布到 Crew Lab SI 研究社 Facebook 粉專與 Threads，指定台北時間 2026-11-16 21:00。"
+  }
+}
