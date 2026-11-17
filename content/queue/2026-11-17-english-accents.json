@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261117-english-accents",
+  "created_date": "2026-11-17",
+  "title": "耳朵先習慣各種口音",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-17",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-17-english-accents.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "a41775604d6a8381d3ae081a213021d79579db9513c1d9504a50ee4ecb09f0ef",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-17-english-accents.jpg",
+    "alt": "晚上的客廳，一個人戴耳機跟著手機跟讀，旁邊有英國、澳洲、印度三個口音對話框，標題「耳朵先習慣各種口音」"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：一位英文老師的 Threads 分享 https://www.threads.com/@regina.learn.english/post/Df0KYk7DI66",
+      "requestId": "22bc5e35-be83-4635-b757-5f47e5960548"
+    },
+    "threads": {
+      "text": "來源：一位英文老師的 Threads 分享 https://www.threads.com/@regina.learn.english/post/Df0KYk7DI66",
+      "requestId": "40cbb67c-e5cc-426d-b091-e96cee8bd921"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "說真的，學英文最卡的常常不是單字，是口音。\n課本練的是美式，出國、開會、看影片遇到的，常常是英式、澳洲、印度腔，一開口腦袋就當機。\n看到一位英文老師用 AI 讓學生聽不同口音，我覺得這招很實用：把你開會最常講的那幾句丟給 ChatGPT 語音，請它用三種口音各念一次，再跟著念。\nAI 模仿得不一定道地，但拿來讓耳朵先見見世面，剛好。\n你最聽不懂的是哪一種口音？",
+      "requestId": "a90c51b3-4902-4095-a52d-baf08e2d4f6d"
+    },
+    "threads": {
+      "text": "說真的，學英文最卡的常常不是單字，是口音。\n課本練的是美式，出國、開會、看影片遇到的，常常是英式、澳洲、印度腔，一開口腦袋就當機。\n看到一位英文老師用 AI 讓學生聽不同口音，我覺得這招很實用：把你開會最常講的那幾句丟給 ChatGPT 語音，請它用三種口音各念一次，再跟著念。\nAI 模仿得不一定道地，但拿來讓耳朵先見見世面，剛好。\n你最聽不懂的是哪一種口音？",
+      "requestId": "ccca5730-5ee6-491a-9944-2cdf070080ac"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-17 09:56 在 Grok Bot 聊天批准（發 1 3）"
+  }
+}

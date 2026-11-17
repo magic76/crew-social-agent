@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261117-new-city-ai-friends",
+  "created_date": "2026-11-17",
+  "title": "先跟 AI 練開場白，再去認識人",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-17",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-17-new-city-ai-friends.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "4864a67df675a9384ec8ee0042bcfee55677cbf2db2a2dd449564faad31e3032",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-17-new-city-ai-friends.jpg",
+    "alt": "新家窗邊，一個人抱著貓滑手機，窗外是社區聚會的暖色燈光，標題「先跟 AI 練開場白，再去認識人」"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Threads 上的這篇分享 https://www.threads.com/@ym_00018/post/DfyjhMPEf9j",
+      "requestId": "6acf7e50-546a-4340-ba3a-2aa7e268aa88"
+    },
+    "threads": {
+      "text": "來源：Threads 上的這篇分享 https://www.threads.com/@ym_00018/post/DfyjhMPEf9j",
+      "requestId": "9217f3ff-0f7a-4c5d-9a31-61a650b7be86"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "看到有人說搬到新城市沒朋友，每天只能跟貓講話。底下有人回：我也是，只跟貓和 ChatGPT 聊天。\n這不丟臉。我覺得 AI 很適合拿來暖身：請它想想附近有哪些固定聚會，讀書會、球隊、語言交換，再陪你演練第一次去要怎麼自我介紹。\n練完記得還是要出門，貓不會幫你介紹朋友。\n你搬家後，第一個朋友是怎麼認識的？",
+      "requestId": "67265675-3195-4e66-8c4c-99c8cb51ddae"
+    },
+    "threads": {
+      "text": "看到有人說搬到新城市沒朋友，每天只能跟貓講話。底下有人回：我也是，只跟貓和 ChatGPT 聊天。\n這不丟臉。我覺得 AI 很適合拿來暖身：請它想想附近有哪些固定聚會，讀書會、球隊、語言交換，再陪你演練第一次去要怎麼自我介紹。\n練完記得還是要出門，貓不會幫你介紹朋友。\n你搬家後，第一個朋友是怎麼認識的？",
+      "requestId": "f8160347-8c27-40fd-a748-8a450ab8c716"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-17 09:56 在 Grok Bot 聊天批准（發 1 3）"
+  }
+}
