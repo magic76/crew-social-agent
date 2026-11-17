@@ -19,6 +19,18 @@ Keep necessary limitations brief and toward the end, without making them the mai
 
 Identify each platform version's takeaway in the existing `story_spine` or `quality_review.interest.reason`; the review schema still has six quality dimensions. `npm run editorial:check` checks structure and safety, not the substantive quality of the takeaway, so a passing command does not replace this editorial judgment.
 
+## Growth writing check (2026-11-17)
+
+After the existing six dimensions and the 「所以呢」 takeaway, also check:
+
+- Is the draft in 立洋's first person, with a visible stance or lived observation rather than a press-release or tutorial tone? Do not invent first-person experience; an unsupported 「我」 still fails Truth.
+- Does line 1 stand alone as a hook a non-engineer can understand (contrast, confession, strong opinion, or a concrete surprising result)?
+- Does it end with one question a reader would genuinely want to answer, not a stock 「你怎麼看？」?
+- Is the post mainly a news or research digest? If so, hold or rewrite unless the hook and conclusion are 立洋's and the news is only an opening cue.
+- Until the Facebook Page has meaningful reach, Facebook copy must match the Threads text exactly (`posts.facebook.text` = `posts.threads.text`).
+
+Daily volume is 2–3 posts, not six. Prefer ordinary-people AI outcomes, family and parenting, money and value, and work-life or AI job anxiety over announcement summaries and product intros. Keep the existing 「所以呢」, no-URL-in-body, weekly product cap, and first-reply source rules.
+
 ## Image preflight
 
 Before approving an image, confirm the story has a visual reason for one and inspect the image at phone-feed size:
@@ -48,4 +60,4 @@ Before approving an image, confirm the story has a visual reason for one and ins
 
 ## Formula scan
 
-Read recent Facebook and Threads copy from the prior three days. Note repeated hooks, structures and endings. Specifically watch the owner's examples (“最近某公司發布……”, “這讓我想到……”, “真正重要的不是 A，而是 B……”, “這不代表……但值得關注……”, “你怎麼看？”); these are not a banned-word list, but repeated use is a reason to edit. Use the validator for duplicate selected openings and preserve the editor's concrete note in the JSON record.
+Read recent Facebook and Threads copy from the prior three days. Note repeated hooks, structures and endings. Specifically watch the owner's examples (“最近某公司發布……”, “這讓我想到……”, “真正重要的不是 A，而是 B……”, “這不代表……但值得關注……”, “你怎麼看？”); these are not a banned-word list, but repeated use is a reason to edit. A genuine, specific question that invites a real reply is now expected; a stock closing question is still a reason to edit. Use the validator for duplicate selected openings and preserve the editor's concrete note in the JSON record.
