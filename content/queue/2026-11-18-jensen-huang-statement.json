@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261118-jensen-huang-statement",
+  "created_date": "2026-11-18",
+  "title": "那個震撼股市的男人，會不會回來？",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-18",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：黃仁勳在 X 上的聲明 https://x.com/JensenHuang/status/2122726005219737649",
+      "requestId": "8d40b8ee-da83-4e24-9c4c-acda1593c5e5"
+    },
+    "threads": {
+      "text": "來源：黃仁勳在 X 上的聲明 https://x.com/JensenHuang/status/2122726005219737649",
+      "requestId": "08771555-e1ff-40c3-ab29-d5f0bc53e084"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "黃仁勳辭去 NVIDIA CEO 後，第一次公開發聲：\n\n「過去一週，朋友、業界夥伴，還有許多素不相識的人給了我很多愛和支持，謝謝每一位善待我和家人的人。\n\n我 53 年前來到美國，成為美國公民是我人生最珍貴的禮物、最驕傲的時刻之一。NVIDIA 是我一生的事業，能和同事們一起把它打造成今天的樣子，是我的榮幸。\n\n我沒有達到 NVIDIA 對每個人的標準，在個人生活上犯了嚴重的錯，也給董事會帶來了問題，我深感後悔。我完全承擔自己的錯，也會配合董事會的獨立調查。\n\n離開後，很多員工、投資人、夥伴和客戶希望我回去。如果董事會認為我回任對股東、員工、公司和美國最好，我會很榮幸接受，回去擔任 CEO。\n\n致我的家人：我愛你們，我會用餘生讓自己配得上你們的愛。」\n\n那個震撼股市的男人，會不會回來？",
+      "requestId": "0b73eec6-8feb-4fc1-b2fc-b5410f6d55e6"
+    },
+    "threads": {
+      "text": "黃仁勳辭去 NVIDIA CEO 後，第一次公開發聲：\n\n「過去一週，朋友、業界夥伴，還有許多素不相識的人給了我很多愛和支持，謝謝每一位善待我和家人的人。\n\n我 53 年前來到美國，成為美國公民是我人生最珍貴的禮物、最驕傲的時刻之一。NVIDIA 是我一生的事業，能和同事們一起把它打造成今天的樣子，是我的榮幸。\n\n我沒有達到 NVIDIA 對每個人的標準，在個人生活上犯了嚴重的錯，也給董事會帶來了問題，我深感後悔。我完全承擔自己的錯，也會配合董事會的獨立調查。\n\n離開後，很多員工、投資人、夥伴和客戶希望我回去。如果董事會認為我回任對股東、員工、公司和美國最好，我會很榮幸接受，回去擔任 CEO。\n\n致我的家人：我愛你們，我會用餘生讓自己配得上你們的愛。」\n\n那個震撼股市的男人，會不會回來？",
+      "requestId": "4bf5db6c-55e9-4e16-b3aa-b2375c1b07bb"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-18 在 Grok Bot 聊天批准（可）"
+  }
+}

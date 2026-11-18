@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261118-ask-ai-or-people",
+  "created_date": "2026-11-18",
+  "title": "先問 AI，還是先問人？",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-18",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-18-ask-ai-or-people.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "fa1135a6e60f53bd87c40cd4d5120d1a0a6ee5536f8da732039feaf3b3ed0bac",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-18-ask-ai-or-people.jpg",
+    "alt": "辦公室裡，新人盯著筆電問 AI，旁邊的前輩轉頭看著她，一朵小雲朵吉祥物飄在中間一臉疑惑，標題「先問 AI，還是先問人？」"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：BSI〈Human by Design〉調查新聞稿（2026/11/17） https://www.bsigroup.com/en-GB/insights-and-media/media-centre/press-releases/2026/november/job-poclaypse-deepens-as-businesses-rely-on-ai-over-human-talent/",
+      "requestId": "298fb995-860d-416a-9baa-e992e5312157"
+    },
+    "threads": {
+      "text": "來源：BSI〈Human by Design〉調查新聞稿（2026/11/17） https://www.bsigroup.com/en-GB/insights-and-media/media-centre/press-releases/2026/november/job-poclaypse-deepens-as-businesses-rely-on-ai-over-human-talent/",
+      "requestId": "5d02d2d4-1f8f-4879-9c5d-13dd3128a4eb"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "以前當菜鳥，最大的特權就是可以問蠢問題。\n現在連主管都不太問人了。\n\n一份這週剛出的調查，訪了九個國家、1,287 位主管：\n57% 說遇到問題，現在預設先問 AI，以前是先問同事。\n49% 擔心新人都在問 AI、不問主管，該學的沒學到。\n\n老實說這很合理，問 AI 不用看臉色，也不怕被唸。\n但我總覺得，工作上很多眉角是被前輩唸出來的，不是查出來的。\n\nAI 會給你答案，但不會在你做錯之前，先皺一下眉頭。\n\n你卡住的時候，第一個問的是 AI，還是隔壁同事？",
+      "requestId": "0b9e0549-171f-46de-a583-c4e1960c6cdb"
+    },
+    "threads": {
+      "text": "以前當菜鳥，最大的特權就是可以問蠢問題。\n現在連主管都不太問人了。\n\n一份這週剛出的調查，訪了九個國家、1,287 位主管：\n57% 說遇到問題，現在預設先問 AI，以前是先問同事。\n49% 擔心新人都在問 AI、不問主管，該學的沒學到。\n\n老實說這很合理，問 AI 不用看臉色，也不怕被唸。\n但我總覺得，工作上很多眉角是被前輩唸出來的，不是查出來的。\n\nAI 會給你答案，但不會在你做錯之前，先皺一下眉頭。\n\n你卡住的時候，第一個問的是 AI，還是隔壁同事？",
+      "requestId": "7c4a8e21-6b19-4d2a-9f3e-81a0c2b54716"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-18 在 Grok Bot 聊天批准（發 1 2）"
+  }
+}
