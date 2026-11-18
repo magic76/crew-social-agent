@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261118-ai-course-free",
+  "created_date": "2026-11-18",
+  "title": "先把免費的跑一輪",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-18",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Microsoft 在 GitHub 公開的 AI Agents for Beginners 課程 https://github.com/microsoft/ai-agents-for-beginners（有繁中版）",
+      "requestId": "df77a231-ecd3-4c40-a459-edcfad5c57ed"
+    },
+    "threads": {
+      "text": "來源：Microsoft 在 GitHub 公開的 AI Agents for Beginners 課程 https://github.com/microsoft/ai-agents-for-beginners（有繁中版）",
+      "requestId": "0f5ef6d8-09b2-43ab-8a53-2a3df54e8c7d"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "到處都在賣 AI 課，一堂收好幾千的也不少。\n結果微軟直接把 AI Agent 入門課整套公開，18 堂，免費。\n\n我不是說付費課都不值得。\n有人帶、有人回你問題、有人逼你做完，這些本來就該付錢。\n\n但如果整堂課只是把免費教材換一套簡報再講一次……那就有點尷尬了。\n\n我的做法是：先把免費的跑一輪，卡住了再決定要不要花錢買「有人陪」。\n\n你上過最值得、或最後悔的一堂 AI 課是哪一堂？",
+      "requestId": "3186cecd-25f0-4f62-a33c-c2fde86ed039"
+    },
+    "threads": {
+      "text": "到處都在賣 AI 課，一堂收好幾千的也不少。\n結果微軟直接把 AI Agent 入門課整套公開，18 堂，免費。\n\n我不是說付費課都不值得。\n有人帶、有人回你問題、有人逼你做完，這些本來就該付錢。\n\n但如果整堂課只是把免費教材換一套簡報再講一次……那就有點尷尬了。\n\n我的做法是：先把免費的跑一輪，卡住了再決定要不要花錢買「有人陪」。\n\n你上過最值得、或最後悔的一堂 AI 課是哪一堂？",
+      "requestId": "05d4a1d7-ecec-474b-9aee-f4d1ce45e6e7"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-18 在 Grok Bot 聊天批准（發 1 2）"
+  }
+}
