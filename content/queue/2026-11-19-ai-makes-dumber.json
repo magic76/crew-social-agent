@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261119-ai-makes-dumber",
+  "created_date": "2026-11-19",
+  "title": "AI 讓人變笨？",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-19",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Adam Grant 在 Threads 的貼文 https://www.threads.com/@adamgrant/post/Df5PO_eCY8l",
+      "requestId": "69902d34-4ae6-4496-a984-0f56a9ac45e7"
+    },
+    "threads": {
+      "text": "來源：Adam Grant 在 Threads 的貼文 https://www.threads.com/@adamgrant/post/Df5PO_eCY8l",
+      "requestId": "89b32663-b386-4b56-95a3-1e6acdd5b118"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "「AI 讓人每分鐘都在變笨。」\n\n組織心理學家 Adam Grant 這兩天在 Threads 上這樣說，希望蘋果把 iPhone 的 AI 寫作輔助關掉。六千多人按讚。\n\n我不完全同意「變笨」，但我懂他在怕什麼。\nAI 幫你潤稿沒問題，可怕的是連第一句都懶得自己想。\n\n我覺得比較好的用法是：先自己打一版爛的，再丟給 AI 修。\n爛稿代表你的腦袋有在動，AI 只是幫你擦乾淨。\n\n你最近一次完全沒靠 AI、從頭自己寫完的東西是什麼？",
+      "requestId": "43d18832-185a-4f03-9ad6-02db3fb8b616"
+    },
+    "threads": {
+      "text": "「AI 讓人每分鐘都在變笨。」\n\n組織心理學家 Adam Grant 這兩天在 Threads 上這樣說，希望蘋果把 iPhone 的 AI 寫作輔助關掉。六千多人按讚。\n\n我不完全同意「變笨」，但我懂他在怕什麼。\nAI 幫你潤稿沒問題，可怕的是連第一句都懶得自己想。\n\n我覺得比較好的用法是：先自己打一版爛的，再丟給 AI 修。\n爛稿代表你的腦袋有在動，AI 只是幫你擦乾淨。\n\n你最近一次完全沒靠 AI、從頭自己寫完的東西是什麼？",
+      "requestId": "4bc6a78c-7cf1-47a6-aad2-e734668fbbdb"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-19 在 Grok Bot 聊天批准（今天三篇都發）"
+  }
+}

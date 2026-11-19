@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261119-library-free-ai",
+  "created_date": "2026-11-19",
+  "title": "付費 AI，圖書館免費試吃",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-19",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-19-library-free-ai.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "ded68ecce1aab623e8896c1887428f673d82fb2aeecd5ee58c6cafbb1d3f0d1d",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-19-library-free-ai.jpg",
+    "alt": "圖書館角落，一位長輩和一個學生並肩用 AI 電腦，雲朵吉祥物在旁邊，標題：付費 AI，圖書館免費試吃"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：教育部 11/18 新聞稿 https://www.edu.tw/News_Content.aspx?n=9E7AC85F1954DDA8&s=EE0FB1660EDBB982\n國家圖書館「讀享AI」公告 https://www.ncl.edu.tw/exhibitions/0Q322396638926546133\n國家圖書館 AI 工具服務使用規範 https://www.ncl.edu.tw/xweb-tw/regulations/0Q315522518118567440",
+      "requestId": "fba5a7e9-22b1-4e41-8a11-b2c97a5cd784"
+    },
+    "threads": {
+      "text": "來源：教育部 11/18 新聞稿 https://www.edu.tw/News_Content.aspx?n=9E7AC85F1954DDA8&s=EE0FB1660EDBB982\n國家圖書館「讀享AI」公告 https://www.ncl.edu.tw/exhibitions/0Q322396638926546133\n國家圖書館 AI 工具服務使用規範 https://www.ncl.edu.tw/xweb-tw/regulations/0Q315522518118567440",
+      "requestId": "f9c0e615-24ce-4ea4-bc70-294a9c1af4da"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "付費版 AI 一個月好幾百塊，現在去圖書館可以免費用。\n\n教育部讓三間國立圖書館開了「讀享AI」專區，有借閱證就能在館內用 GPT、Gemini、Claude 這些模型。\n\n我第一個反應是：好事。\n很多學生、長輩根本不會為了「試試看」先刷卡訂閱。\n\n但看了一下規範：每館只有 5 台電腦，國圖每人每天限 1 小時，還要現場登記。\n所以比較像「試吃」，不是「吃到飽」。\n\n我覺得這樣剛好。\n先去用一小時，搞清楚自己會不會天天用，再決定要不要每個月付那筆錢。\n比起直接花幾千塊上課，這個試吃成本低太多了。\n\n你會為了用免費 AI 特地跑一趟圖書館嗎？",
+      "requestId": "e4c570ec-3843-41dd-9721-94b8c3721901"
+    },
+    "threads": {
+      "text": "付費版 AI 一個月好幾百塊，現在去圖書館可以免費用。\n\n教育部讓三間國立圖書館開了「讀享AI」專區，有借閱證就能在館內用 GPT、Gemini、Claude 這些模型。\n\n我第一個反應是：好事。\n很多學生、長輩根本不會為了「試試看」先刷卡訂閱。\n\n但看了一下規範：每館只有 5 台電腦，國圖每人每天限 1 小時，還要現場登記。\n所以比較像「試吃」，不是「吃到飽」。\n\n我覺得這樣剛好。\n先去用一小時，搞清楚自己會不會天天用，再決定要不要每個月付那筆錢。\n比起直接花幾千塊上課，這個試吃成本低太多了。\n\n你會為了用免費 AI 特地跑一趟圖書館嗎？",
+      "requestId": "8c9f8363-4e75-4bdf-885d-104d57151b29"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-19 在 Grok Bot 聊天批准（今天三篇都發）"
+  }
+}

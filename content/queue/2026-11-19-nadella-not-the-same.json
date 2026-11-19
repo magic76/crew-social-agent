@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261119-nadella-not-the-same",
+  "created_date": "2026-11-19",
+  "title": "「我不能說一切都會一樣」",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-19",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Moneycontrol（2026/11/17） https://www.moneycontrol.com/news/business/i-wish-i-could-say-it-ll-all-be-the-same-i-cannot-satya-nadella-on-microsoft-s-voluntary-exit-offer-14082139.html\nEconomic Times（2026/11/18） https://economictimes.indiatimes.com/news/international/business/i-cannot-say-itll-all-be-the-same-satya-nadella-explains-why-microsoft-is-offering-voluntary-exits/articleshow/135949044.cms\nCNBC（2026/10/26） https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html",
+      "requestId": "a14974e8-014d-4211-af8d-a593804921ed"
+    },
+    "threads": {
+      "text": "來源：Moneycontrol（2026/11/17） https://www.moneycontrol.com/news/business/i-wish-i-could-say-it-ll-all-be-the-same-i-cannot-satya-nadella-on-microsoft-s-voluntary-exit-offer-14082139.html\nEconomic Times（2026/11/18） https://economictimes.indiatimes.com/news/international/business/i-cannot-say-itll-all-be-the-same-satya-nadella-explains-why-microsoft-is-offering-voluntary-exits/articleshow/135949044.cms\nCNBC（2026/10/26） https://www.cnbc.com/2026/10/26/microsoft-msft-voluntary-buyouts.html",
+      "requestId": "c3ff6b3a-d71b-4f2a-b987-72f3d3288cff"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "「我希望我能說一切都會跟以前一樣。但我不能。」\n\n這是微軟 CEO 納德拉最近被問到的回答。\n微軟對大約 6 萬名員工開了自願離職方案，大家一直追問：這是不是 AI 裁員的前奏？\n他說不是單純的 AI 裁員，但團隊會換一種方式組成。\n\n老實說，我反而覺得這句很誠實。\n比那種「AI 只會讓大家更輕鬆」的說法誠實多了。\n\n身為上班族，我聽完的結論是：別等公司告訴你新位置在哪。\n趁現在自己先想清楚，哪些事 AI 做得比我快，哪些事還是非我不可。\n\n你覺得你的工作，五年後還會長一樣嗎？",
+      "requestId": "2f787e10-465d-4c6a-bc74-02c94e5d0187"
+    },
+    "threads": {
+      "text": "「我希望我能說一切都會跟以前一樣。但我不能。」\n\n這是微軟 CEO 納德拉最近被問到的回答。\n微軟對大約 6 萬名員工開了自願離職方案，大家一直追問：這是不是 AI 裁員的前奏？\n他說不是單純的 AI 裁員，但團隊會換一種方式組成。\n\n老實說，我反而覺得這句很誠實。\n比那種「AI 只會讓大家更輕鬆」的說法誠實多了。\n\n身為上班族，我聽完的結論是：別等公司告訴你新位置在哪。\n趁現在自己先想清楚，哪些事 AI 做得比我快，哪些事還是非我不可。\n\n你覺得你的工作，五年後還會長一樣嗎？",
+      "requestId": "fe0c3b70-1397-4147-b52e-bb2e5e8155cd"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-19 在 Grok Bot 聊天批准（今天三篇都發）"
+  }
+}
