@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261121-3sssi-traffic",
+  "created_date": "2026-11-21",
+  "title": "網站 30 天 4.5 萬次訪問",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-21",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-21-3sssi-traffic.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "43fa6a22a841bad5576c2dcf9513d0f32ce8bbb4627f00a5f307df949e8688ec",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-21-3sssi-traffic.jpg",
+    "alt": "網站過去 30 天的流量後台截圖：訪問總數 45.59k"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "想試試看的可以到 https://www.3sssi.com，英文口說練習在 /teacher",
+      "requestId": "bef77e6b-1ad1-42d2-8bfb-d74d5271cb6e"
+    },
+    "threads": {
+      "text": "想試試看的可以到 https://www.3sssi.com，英文口說練習在 /teacher",
+      "requestId": "a4e90b33-183a-46a5-9b93-d6e822311efd"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "我的網站過去 30 天，有 4.5 萬次訪問。\n\n老實說我自己都嚇到 😂\n這段時間我大概一直在跟 AI 搏鬥，\n它給一版、我說不對，它再給一版、我又說不對，\n來回到我懷疑是誰在訓練誰。\n\n最妙的是流量不是慢慢長，\n是某幾天突然暴衝，然後又掉回來。\n到現在我都不知道是誰偷偷幫我分享的。\n\n上面有 AI 英文口說陪練，還有一個猜數字學英文的小遊戲，\n不用背單字那種。\n\n所以呢？\nAI 不會幫你把事情做完，\n但只要你願意一直跟它磨，東西真的會做得出來。\n\n網址放留言，你們幫我看看，\n最想改掉的是哪一個地方？",
+      "requestId": "821d8cfc-ffd1-42b0-b6dc-fd8ebbc91d39"
+    },
+    "threads": {
+      "text": "我的網站過去 30 天，有 4.5 萬次訪問。\n\n老實說我自己都嚇到 😂\n這段時間我大概一直在跟 AI 搏鬥，\n它給一版、我說不對，它再給一版、我又說不對，\n來回到我懷疑是誰在訓練誰。\n\n最妙的是流量不是慢慢長，\n是某幾天突然暴衝，然後又掉回來。\n到現在我都不知道是誰偷偷幫我分享的。\n\n上面有 AI 英文口說陪練，還有一個猜數字學英文的小遊戲，\n不用背單字那種。\n\n所以呢？\nAI 不會幫你把事情做完，\n但只要你願意一直跟它磨，東西真的會做得出來。\n\n網址放留言，你們幫我看看，\n最想改掉的是哪一個地方？",
+      "requestId": "bd03017d-0c42-4871-8230-53c1cf8965ab"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-20 在 Grok Bot 聊天批准（好，發文吧；明天 12:00，配圖裁掉日期與網址列）"
+  }
+}
