@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261120-koolo-ai-friend",
+  "created_date": "2026-11-20",
+  "title": "三分之一的年輕人，把 AI 當朋友",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-20",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "想自己試試看跟 AI 朋友聊天、練口說，可以到 https://koolo.app",
+      "requestId": "2128583e-d741-49d4-bd26-79523f3e7d92"
+    },
+    "threads": {
+      "text": "想自己試試看跟 AI 朋友聊天、練口說，可以到 https://koolo.app",
+      "requestId": "8f040ff6-42de-4d92-920b-d168dc1fdbb8"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "三分之一的年輕人，把 AI 當朋友。\n\nGallup 和波士頓兒童醫院這週公布調查：16 個國家、將近 1 萬 6 千名 15 到 22 歲的人，有 33% 會靠 AI 作伴。每天用 AI 的人，這個比例到了 50%。\n\n我第一個反應不是責怪。\n有個不怕丟臉的對象陪你練講話，其實滿合理的。\n\n但我擔心的是，練完就停在螢幕前面。\nAI 不會累，也不會放你鴿子。\n可它沒辦法真的跟你見面。\n\n所以我覺得比較好的用法是：拿它來暖身、練口說。\n練完，還是要去找真人聊。\n\n你有沒有跟 AI 練過講話？後來有拿去跟真人用嗎？",
+      "requestId": "157d0f13-b512-4ba8-be75-235650e80f21"
+    },
+    "threads": {
+      "text": "三分之一的年輕人，把 AI 當朋友。\n\nGallup 和波士頓兒童醫院這週公布調查：16 個國家、將近 1 萬 6 千名 15 到 22 歲的人，有 33% 會靠 AI 作伴。每天用 AI 的人，這個比例到了 50%。\n\n我第一個反應不是責怪。\n有個不怕丟臉的對象陪你練講話，其實滿合理的。\n\n但我擔心的是，練完就停在螢幕前面。\nAI 不會累，也不會放你鴿子。\n可它沒辦法真的跟你見面。\n\n所以我覺得比較好的用法是：拿它來暖身、練口說。\n練完，還是要去找真人聊。\n\n你有沒有跟 AI 練過講話？後來有拿去跟真人用嗎？",
+      "requestId": "ee2e9aec-3d4c-4190-a9fb-547c117290a6"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-20 在 Grok Bot 聊天批准（今晚 21:00 發，第一則回覆只留 koolo.app）"
+  }
+}
