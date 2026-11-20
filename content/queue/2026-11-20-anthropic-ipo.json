@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261120-anthropic-ipo",
+  "created_date": "2026-11-20",
+  "title": "史上最大 IPO，大家都在問怎麼買",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-20",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：商業周刊〈Anthropic上市！ANT股票怎麼買？〉 https://www.businessweekly.com.tw/business/blog/3023610\nTVBS〈Anthropic代號ANT今掛牌上市！台灣怎麼買？〉 https://news.tvbs.com.tw/money/4052899",
+      "requestId": "9020dde2-c784-4477-8c34-83c844948712"
+    },
+    "threads": {
+      "text": "來源：商業周刊〈Anthropic上市！ANT股票怎麼買？〉 https://www.businessweekly.com.tw/business/blog/3023610\nTVBS〈Anthropic代號ANT今掛牌上市！台灣怎麼買？〉 https://news.tvbs.com.tw/money/4052899",
+      "requestId": "1eddb085-085d-4e6f-a499-a800b53cae3d"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "每次一個東西紅到大家都在問「怎麼買」，我就提醒自己慢一點。\n\n做 Claude 的 Anthropic 這週上市，募資 813 億美元，史上最大 IPO。\n新聞一出，我滑到的幾乎都是「台灣怎麼買」。\n\n我不是說不能買。\n只是對大部分人來說，AI 這波最確定的報酬，可能不在股票，而在你自己會不會用。\n股價會漲會跌，你學會的東西不會。\n\n這不是投資建議，首日波動本來就大，追高要想清楚。\n\n如果手上有一筆錢，你會拿去買 AI 公司的股票，還是拿來學會用 AI？",
+      "requestId": "6f050e57-1d2c-4e1c-ae4d-40f24af2c608"
+    },
+    "threads": {
+      "text": "每次一個東西紅到大家都在問「怎麼買」，我就提醒自己慢一點。\n\n做 Claude 的 Anthropic 這週上市，募資 813 億美元，史上最大 IPO。\n新聞一出，我滑到的幾乎都是「台灣怎麼買」。\n\n我不是說不能買。\n只是對大部分人來說，AI 這波最確定的報酬，可能不在股票，而在你自己會不會用。\n股價會漲會跌，你學會的東西不會。\n\n這不是投資建議，首日波動本來就大，追高要想清楚。\n\n如果手上有一筆錢，你會拿去買 AI 公司的股票，還是拿來學會用 AI？",
+      "requestId": "1e3332f1-50e9-40cd-846f-863105866ff6"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-20 在 Grok Bot 聊天批准（這些ok）"
+  }
+}

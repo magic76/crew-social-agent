@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261120-homework-ai",
+  "created_date": "2026-11-20",
+  "title": "作業交了就有分，那作業還剩什麼？",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-20",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-20-homework-ai.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "f48b8f452468f20e37e0fc57caf982257601188b48c90f61d32b2931da3f6225",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-20-homework-ai.jpg",
+    "alt": "晚上的書桌，孩子向微笑的家長講解作業，雲朵吉祥物在旁邊，標題：講得出來才算會"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：unwire.hk（2026/11/18）〈分不出 AI 代做 加州理工數學教授只看有否交功課〉 https://unwire.hk/2026/11/18/caltech-maths-professor-ai-homework-grading/ai/\nBusiness Insider（2026/11/16） https://www.businessinsider.com/ai-math-class-university-homework-caltech-careers-2026-11",
+      "requestId": "ad9960b8-c651-4df8-bfee-d94e03de782d"
+    },
+    "threads": {
+      "text": "來源：unwire.hk（2026/11/18）〈分不出 AI 代做 加州理工數學教授只看有否交功課〉 https://unwire.hk/2026/11/18/caltech-maths-professor-ai-homework-grading/ai/\nBusiness Insider（2026/11/16） https://www.businessinsider.com/ai-math-class-university-homework-caltech-careers-2026-11",
+      "requestId": "ceb77486-6162-47f2-91fa-7f8a8b9d9e06"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "如果作業交了就有分，那作業還剩什麼意義？\n\n看到新聞，加州理工一位教了 17 年的數學教授說，他已經分不出學生的作業是不是 AI 做的，乾脆不改對錯，只看有沒有交。\n\n我第一個反應是好笑，第二個反應是……其實滿合理的。\n\n作業本來就不是拿來打分數的，是拿來練的。\nAI 可以幫你交差，但進考場不能帶它。\n差距會在考試那天才出現。\n\n所以家裡有小孩的話，我覺得與其一直盯「有沒有用 AI」，不如問他一句：「這題你可以講給我聽嗎？」\n講得出來，才是真的會。\n\n你會讓小孩用 AI 寫作業嗎？底線畫在哪？",
+      "requestId": "5d42f857-a3c7-4b62-959f-29000166d822"
+    },
+    "threads": {
+      "text": "如果作業交了就有分，那作業還剩什麼意義？\n\n看到新聞，加州理工一位教了 17 年的數學教授說，他已經分不出學生的作業是不是 AI 做的，乾脆不改對錯，只看有沒有交。\n\n我第一個反應是好笑，第二個反應是……其實滿合理的。\n\n作業本來就不是拿來打分數的，是拿來練的。\nAI 可以幫你交差，但進考場不能帶它。\n差距會在考試那天才出現。\n\n所以家裡有小孩的話，我覺得與其一直盯「有沒有用 AI」，不如問他一句：「這題你可以講給我聽嗎？」\n講得出來，才是真的會。\n\n你會讓小孩用 AI 寫作業嗎？底線畫在哪？",
+      "requestId": "54f7e4e4-412c-485e-9167-94c5f75bc153"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-20 在 Grok Bot 聊天批准（這些ok）"
+  }
+}

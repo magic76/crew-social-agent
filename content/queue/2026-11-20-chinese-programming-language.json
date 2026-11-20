@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261120-chinese-programming-language",
+  "created_date": "2026-11-20",
+  "title": "現在最紅的程式語言，可能是中文",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-20",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Threads @steven.wang1012 貼文（2026/11/19）",
+      "requestId": "556a5bea-3abc-4840-919f-282cf3d552d6"
+    },
+    "threads": {
+      "text": "來源：Threads @steven.wang1012 貼文（2026/11/19）",
+      "requestId": "0f34b21a-17eb-419e-8e91-d15be23e806e"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "現在最紅的程式語言，可能是中文。\n\n這兩天 Threads 有一張「短短4年，程式語言的變化真大」被瘋傳，底下一堆工程師在苦笑。\n身為寫程式的人，我只想說：好啦，被說中了。\n\n以前要背語法、查文件、debug 到半夜。\n現在很多時候，是用「講」的。\n把需求講清楚的人，會比背很多語法的人先做出東西。\n\n但講不清楚的需求，AI 也只會很有自信地做錯。\n\n所以我覺得現在最值得練的，不是哪個新語言，是「把一件事講清楚」。\n這對不會寫程式的人來說，反而是好消息。\n\n你有沒有用「講的」做出過什麼小東西？做了什麼？",
+      "requestId": "5483857f-98a5-4e91-b917-2731f337a933"
+    },
+    "threads": {
+      "text": "現在最紅的程式語言，可能是中文。\n\n這兩天 Threads 有一張「短短4年，程式語言的變化真大」被瘋傳，底下一堆工程師在苦笑。\n身為寫程式的人，我只想說：好啦，被說中了。\n\n以前要背語法、查文件、debug 到半夜。\n現在很多時候，是用「講」的。\n把需求講清楚的人，會比背很多語法的人先做出東西。\n\n但講不清楚的需求，AI 也只會很有自信地做錯。\n\n所以我覺得現在最值得練的，不是哪個新語言，是「把一件事講清楚」。\n這對不會寫程式的人來說，反而是好消息。\n\n你有沒有用「講的」做出過什麼小東西？做了什麼？",
+      "requestId": "41048cd2-4a7a-4518-8177-d0feae5ceabe"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-20 在 Grok Bot 聊天批准（這些ok）"
+  }
+}
