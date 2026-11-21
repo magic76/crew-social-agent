@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261121-ai-unemployment-clip",
+  "created_date": "2026-11-21",
+  "title": "AI 讓所有人失業？那段影片少了一句",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-21",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：SnowRock 報導 https://snowrock.com/insights/tao-lin-anthropic-unemployable-clip\n完整訪談 https://www.youtube.com/watch?v=OPZCQk8jF-I",
+      "requestId": "9261ba79-0df4-41e9-9fe6-dc86023e2c80"
+    },
+    "threads": {
+      "text": "來源：SnowRock 報導 https://snowrock.com/insights/tao-lin-anthropic-unemployable-clip\n完整訪談 https://www.youtube.com/watch?v=OPZCQk8jF-I",
+      "requestId": "d2566d3c-13fd-4dae-a59c-30809e88d7e7"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "一段 16 秒的影片，這幾天在 X 被看了兩百多萬次。\nAnthropic 一位研究員說：幾乎所有人「很可能」會永久失業，只能靠政府救濟。\n\n這種標題，最容易讓人半夜睡不著。\n\n我去看了一下完整訪談，影片剛好剪掉下一句。\n主持人追問：「是未來 15 個月內嗎？」\n他回：「不是。」\n他還說，AI 能取代人，跟真的取代人，中間有很大一段距離。\n\n我不是要說可以放心了。\n只是覺得，焦慮可以，但別被 16 秒牽著走。\n與其一直滑恐慌影片，不如看看自己每天做的事，哪幾件已經能丟給 AI，哪幾件還非我不可。\n\n你現在的工作裡，你覺得哪一件會最先被 AI 搶走？",
+      "requestId": "3e606d84-eaf6-4642-ad77-0cd28c77171e"
+    },
+    "threads": {
+      "text": "一段 16 秒的影片，這幾天在 X 被看了兩百多萬次。\nAnthropic 一位研究員說：幾乎所有人「很可能」會永久失業，只能靠政府救濟。\n\n這種標題，最容易讓人半夜睡不著。\n\n我去看了一下完整訪談，影片剛好剪掉下一句。\n主持人追問：「是未來 15 個月內嗎？」\n他回：「不是。」\n他還說，AI 能取代人，跟真的取代人，中間有很大一段距離。\n\n我不是要說可以放心了。\n只是覺得，焦慮可以，但別被 16 秒牽著走。\n與其一直滑恐慌影片，不如看看自己每天做的事，哪幾件已經能丟給 AI，哪幾件還非我不可。\n\n你現在的工作裡，你覺得哪一件會最先被 AI 搶走？",
+      "requestId": "281eb6f7-c65a-41a5-9594-5d9c89a87376"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-21 09:18 在 Grok Bot 聊天批准（123）"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261121-ai-printer-fix",
+  "created_date": "2026-11-21",
+  "title": "十年老印表機，是 AI 救回來的",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-21",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：https://www.threads.com/@jacyan_/post/Df9I6W4GIWv",
+      "requestId": "0d3e6944-467d-4092-93ab-27960e6a3a89"
+    },
+    "threads": {
+      "text": "來源：https://www.threads.com/@jacyan_/post/Df9I6W4GIWv",
+      "requestId": "e2499cd7-a5ca-4468-809b-63a75cb4ff1e"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "十年的老印表機，換電腦後兩年都連不上。\n最後救回它的，不是維修師傅，是 AI。\n\n這兩天在 Threads 看到有人分享：問 ChatGPT 問了半天沒搞定，換成讓 Claude 直接在電腦上一步一步查，結果真的印出來了。沒買新機，也沒花修理費。\n\n我覺得這才是 AI 對一般人最有感的地方。\n不是寫報告、做簡報，\n是家裡那些「懶得找人修、又捨不得丟」的東西。\n\n當然，讓 AI 直接動你的電腦，先想清楚它能碰什麼，重要檔案先備份。\n\n你家有沒有哪個東西，壞了好幾年一直沒處理？",
+      "requestId": "c4a8944e-3a8d-4b83-b192-5a93d3746ccc"
+    },
+    "threads": {
+      "text": "十年的老印表機，換電腦後兩年都連不上。\n最後救回它的，不是維修師傅，是 AI。\n\n這兩天在 Threads 看到有人分享：問 ChatGPT 問了半天沒搞定，換成讓 Claude 直接在電腦上一步一步查，結果真的印出來了。沒買新機，也沒花修理費。\n\n我覺得這才是 AI 對一般人最有感的地方。\n不是寫報告、做簡報，\n是家裡那些「懶得找人修、又捨不得丟」的東西。\n\n當然，讓 AI 直接動你的電腦，先想清楚它能碰什麼，重要檔案先備份。\n\n你家有沒有哪個東西，壞了好幾年一直沒處理？",
+      "requestId": "14f1e609-de1c-4bee-9910-0c5b87c1057c"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-21 09:18 在 Grok Bot 聊天批准（123）"
+  }
+}
