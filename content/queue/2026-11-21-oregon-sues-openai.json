@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261121-oregon-sues-openai",
+  "created_date": "2026-11-21",
+  "title": "美國一州告 OpenAI：說「對孩子很安全」是騙家長",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-21",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-21-oregon-sues-openai.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "022dd4e2e349b96573be2708d14cf17754216000a4c99094ee79469a273d5bfd",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-21-oregon-sues-openai.jpg",
+    "alt": "爸媽晚上在餐桌邊看著孩子手機上的 AI 聊天畫面，標題：家長控制，夠嗎？"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：OPB https://www.opb.org/article/2026/11/17/oregon-ag-sues-openai-claims-company-knowingly-endangers-teens/\n奧勒岡州司法部新聞稿 https://www.doj.state.or.us/media-home/news-media-releases/ag-rayfield-files-2b-lawsuit-against-open-ai-launches-keeping-kids-safe-initiative/",
+      "requestId": "7c80a024-7049-4cdf-8611-92642908ebfa"
+    },
+    "threads": {
+      "text": "來源：OPB https://www.opb.org/article/2026/11/17/oregon-ag-sues-openai-claims-company-knowingly-endangers-teens/\n奧勒岡州司法部新聞稿 https://www.doj.state.or.us/media-home/news-media-releases/ag-rayfield-files-2b-lawsuit-against-open-ai-launches-keeping-kids-safe-initiative/",
+      "requestId": "d3852ce8-0bba-4752-9353-ade9178f7464"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "「這個產品對孩子是安全的。」\n美國奧勒岡州政府這週直接告 OpenAI，說這句話根本在騙家長。\n\n求償至少 20.35 億美元。\n起訴書寫：13 歲就能用，但常常沒確認家長真的同意；\n號稱更安全的青少年版，很容易被繞過，孩子問到自殘、飲食失調這類事，也不會通知家長。\nOpenAI 的回應是會繼續加強家長控制、休息提醒這些保護。\n\n官司誰對，交給法院。\n但我覺得做家長的不能等判決。\n「有家長控制」，不等於「我可以不用管」。\n說到底還是那件事：孩子每天在跟 AI 聊什麼，你大概知道嗎？\n\n你家小孩用 AI，你們有約好什麼規則嗎？還是乾脆不准用？",
+      "requestId": "2e4e632b-0c97-454f-94e3-d2e8bcf882e0"
+    },
+    "threads": {
+      "text": "「這個產品對孩子是安全的。」\n美國奧勒岡州政府這週直接告 OpenAI，說這句話根本在騙家長。\n\n求償至少 20.35 億美元。\n起訴書寫：13 歲就能用，但常常沒確認家長真的同意；\n號稱更安全的青少年版，很容易被繞過，孩子問到自殘、飲食失調這類事，也不會通知家長。\nOpenAI 的回應是會繼續加強家長控制、休息提醒這些保護。\n\n官司誰對，交給法院。\n但我覺得做家長的不能等判決。\n「有家長控制」，不等於「我可以不用管」。\n說到底還是那件事：孩子每天在跟 AI 聊什麼，你大概知道嗎？\n\n你家小孩用 AI，你們有約好什麼規則嗎？還是乾脆不准用？",
+      "requestId": "91c44b2c-9bd9-4782-81b4-4932d130bc36"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-21 09:18 在 Grok Bot 聊天批准（123）"
+  }
+}
