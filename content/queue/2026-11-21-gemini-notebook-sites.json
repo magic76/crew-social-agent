@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261121-gemini-notebook-sites",
+  "created_date": "2026-11-21",
+  "title": "Gemini Notebook 把筆記做成可點的網站",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-21",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-21-gemini-notebook-sites.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "391e5f103d53e9edb3f32525d98c53cd720273950f407d645ab1da4634d40a9c",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-21-gemini-notebook-sites.jpg",
+    "alt": "一疊講義經過箭頭變成筆電上的時間軸、測驗卡和圖表網頁，標題：講義變網頁"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Google 官方（2026/11/16）https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/\n操作說明 https://support.google.com/gemininotebook/answer/18945748\nT客邦（2026/11/18）台灣免費中文版實測 https://www.techbang.com/posts/134941-gemini-notebook-upgrade-interactive-websites\n天下雜誌（2026/11/18）https://www.cw.com.tw/article/5143758",
+      "requestId": "77ecd350-abe8-4807-a0a6-04d6b58a530e"
+    },
+    "threads": {
+      "text": "來源：Google 官方（2026/11/16）https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/\n操作說明 https://support.google.com/gemininotebook/answer/18945748\nT客邦（2026/11/18）台灣免費中文版實測 https://www.techbang.com/posts/134941-gemini-notebook-upgrade-interactive-websites\n天下雜誌（2026/11/18）https://www.cw.com.tw/article/5143758",
+      "requestId": "d3a96260-621e-4637-b2d6-54bf20df9363"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "講義、會議紀錄要給別人看，以前我都是傳一份 PDF，然後祈禱對方會打開。\n\n這週 Google 幫 Gemini Notebook（就是以前的 NotebookLM）加了一個功能：\n把你上傳的資料，做成一個可以點、可以互動的網頁。\n台灣科技媒體也實測了，免費中文版可以用。\n\n作法是：先把講義或資料丟進筆記本，\n再到聊天室打「幫我做成網站」，順便講你要給誰看。\n做出來可以開新分頁預覽，也能把連結傳出去。\n\n要先講醜話：\n這是讓資料更好懂，不是拿來做正式官網。\n分享前最好自己用無痕視窗點一次連結，數字和內容也要對過，別全信它整理的版本。\n\n所以呢？\n重點不是又多一個做網站的工具。\n是你已經整理好的東西，終於可以用別人願意點開的方式交出去。\n\n你手上那份一直傳 PDF、卻沒人看的資料，是什麼？",
+      "requestId": "6046cec4-6201-4fe7-90fd-0e179075f7ed"
+    },
+    "threads": {
+      "text": "講義、會議紀錄要給別人看，以前我都是傳一份 PDF，然後祈禱對方會打開。\n\n這週 Google 幫 Gemini Notebook（就是以前的 NotebookLM）加了一個功能：\n把你上傳的資料，做成一個可以點、可以互動的網頁。\n台灣科技媒體也實測了，免費中文版可以用。\n\n作法是：先把講義或資料丟進筆記本，\n再到聊天室打「幫我做成網站」，順便講你要給誰看。\n做出來可以開新分頁預覽，也能把連結傳出去。\n\n要先講醜話：\n這是讓資料更好懂，不是拿來做正式官網。\n分享前最好自己用無痕視窗點一次連結，數字和內容也要對過，別全信它整理的版本。\n\n所以呢？\n重點不是又多一個做網站的工具。\n是你已經整理好的東西，終於可以用別人願意點開的方式交出去。\n\n你手上那份一直傳 PDF、卻沒人看的資料，是什麼？",
+      "requestId": "b150cb30-fcea-44c7-96bf-ca98927080ec"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "立洋 2026-11-21 10:13 在 Grok Bot 聊天批准（這兩個都可以，排今天吧）；10:14 追加要配圖，圖未附上前不授權發布；2026-11-22 21:35/21:45 已手動發布 Threads+FB（見 social-publish-log.jsonl），保持 false 避免重發"
+  },
+  "published_manually": "2026-11-22 (Threads+FB), see social-publish-log.jsonl"
+}

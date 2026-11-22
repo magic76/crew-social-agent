@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261121-chatgpt-gif",
+  "created_date": "2026-11-21",
+  "title": "ChatGPT 一句話就能做 GIF",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-21",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-21-chatgpt-gif.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "a7e6e15c90325f823603e30f381223e9a3e328d4dce408c2b98ea8b51077e45b",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-21-chatgpt-gif.jpg",
+    "alt": "拿手機的人，貓咪照片變成動畫影格和貼圖，標題：一句話，照片動起來"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "來源：OpenAI 官方介紹 Images 2.6（含 GIF）https://openai.com/index/introducing-images-2-6/\n官方操作說明 https://help.openai.com/zh-hant/articles/11084440-images-in-chatgpt\n聯合新聞網科技玩家（2026/11/05）實測 https://tech.udn.com/tech/story/123454/9858808",
+      "requestId": "a9c13fab-dd84-4626-ba62-84f4e02ff19a"
+    },
+    "threads": {
+      "text": "來源：OpenAI 官方介紹 Images 2.6（含 GIF）https://openai.com/index/introducing-images-2-6/\n官方操作說明 https://help.openai.com/zh-hant/articles/11084440-images-in-chatgpt\n聯合新聞網科技玩家（2026/11/05）實測 https://tech.udn.com/tech/story/123454/9858808",
+      "requestId": "274a4852-226b-4419-8067-17667c6ee8af"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "想做一張會動的貼圖，以前我都是找一找軟體，然後放棄。\n\n這兩週很多人在傳：ChatGPT 現在可以直接做 GIF。\n官方那則介紹，光在 X 上就被看了快四百萬次。\n\n做法其實很單純。\n打開它，說「做一張會循環播放的 GIF」，把誰在動、怎麼動講清楚。\n也可以上傳自己的照片，請它讓畫面動起來。\n做好以後還能調速度，不滿意再改。\n\n不過有兩件事，我覺得比功能本身更重要：\n別人的照片、小孩的正面照，先別丟上去。\n還有，它做的是「看起來像」，不是精準修圖，細節常常會跑掉。\n\n所以呢？\n會動的圖，不再是會剪輯的人才做得了。\n但能不能傳出去，還是得自己看過再決定。\n\n你會想先拿來做什麼？群組回覆，還是把一張靜態照片變動畫？",
+      "requestId": "98fac085-6f2f-42b0-843d-bfe9ddca2a2d"
+    },
+    "threads": {
+      "text": "想做一張會動的貼圖，以前我都是找一找軟體，然後放棄。\n\n這兩週很多人在傳：ChatGPT 現在可以直接做 GIF。\n官方那則介紹，光在 X 上就被看了快四百萬次。\n\n做法其實很單純。\n打開它，說「做一張會循環播放的 GIF」，把誰在動、怎麼動講清楚。\n也可以上傳自己的照片，請它讓畫面動起來。\n做好以後還能調速度，不滿意再改。\n\n不過有兩件事，我覺得比功能本身更重要：\n別人的照片、小孩的正面照，先別丟上去。\n還有，它做的是「看起來像」，不是精準修圖，細節常常會跑掉。\n\n所以呢？\n會動的圖，不再是會剪輯的人才做得了。\n但能不能傳出去，還是得自己看過再決定。\n\n你會想先拿來做什麼？群組回覆，還是把一張靜態照片變動畫？",
+      "requestId": "54353bc2-3675-46ff-a479-613d0d95a00f"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "立洋 2026-11-21 10:13 在 Grok Bot 聊天批准（這兩個都可以，排今天吧）；10:14 追加要配圖，圖未附上前不授權發布；2026-11-22 21:35/21:45 已手動發布 Threads+FB（見 social-publish-log.jsonl），保持 false 避免重發"
+  },
+  "published_manually": "2026-11-22 (Threads+FB), see social-publish-log.jsonl"
+}
