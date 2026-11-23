@@ -127,6 +127,10 @@ pm2 resurrect
 
 `npm test` 使用本機檔案和 mock API，不會建立真實 Meta 貼文。真實發布仍需 Meta App 權限、Facebook Page／Threads token、公開圖片 URL，以及逐篇明確開啟的 live Queue。
 
+## Koolo 產品宣傳片
+
+與上方圖文 Queue、以及稍後的 HTML 科普動畫不同：Koolo 產品宣傳短片（痛點鉤子、角色開口打招呼、128 BPM 直式廣告）的製作理念、入鏡規則與逐步指令見 [docs/video-promo-workflow.md](docs/video-promo-workflow.md)。腳本與素材在 [video-lab/examples/koolo-promo](video-lab/examples/koolo-promo)。成品與發文稿在 [content/video-handoffs/](content/video-handoffs/)（參考 [PR #6](https://github.com/magic76/crew-social-agent/pull/6)）。社群文案仍遵守 [docs/editorial-guidelines.md](docs/editorial-guidelines.md)。
+
 ## Crew Video Lab：HTML 科普動畫／教學短片
 
 已加入共用 Agent Skills 和可修改的 1080×1920、30fps、24 秒 HTML 動畫範例。入口：[video-lab/README.md](video-lab/README.md) 與 [skills/crew-video-lab/SKILL.md](skills/crew-video-lab/SKILL.md)。

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" role="img" aria-labelledby="title">
+<title id="title">Koolo — smiling oo wordmark</title>
+<g fill="none" stroke="#153A35" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M15 10V36M15 25 31 11M16 25 32 37" stroke-width="9.2"/>
+  <circle cx="53" cy="24" r="10.2" stroke-width="8.8"/>
+  <circle cx="79" cy="24" r="10.2" stroke-width="8.8"/>
+  <path d="M105 10V37" stroke-width="9.4"/>
+  <circle cx="130" cy="24" r="10.3" stroke-width="8.8"/>
+</g>
+<circle cx="55" cy="22.7" r="2.2" fill="#153A35"/>
+<circle cx="81" cy="22.7" r="2.2" fill="#153A35"/>
+<path d="M55 44Q66 47 77 44" fill="none" stroke="#55B68D" stroke-width="3.2" stroke-linecap="round"/>
+<path d="m57 7-2-3M66 6V3.5m9 3.5 2-3" fill="none" stroke="#55B68D" stroke-width="3.2" stroke-linecap="round"/>
+<circle cx="152" cy="33" r="3.4" fill="#FF9678"/>
+</svg>
