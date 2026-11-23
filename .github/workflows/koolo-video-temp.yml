@@ -24,7 +24,19 @@ jobs:
           python -m pip install --disable-pip-version-check pillow numpy
       - name: Render 21.5s visual
         run: |
-          OUT=/tmp/koolo-render python scripts/koolo_video_temp.py
+          set +e
+          mkdir -p /tmp/koolo-render
+          OUT=/tmp/koolo-render python scripts/koolo_video_temp.py > /tmp/koolo-render/render.log 2>&1
+          code=$?
+          cat /tmp/koolo-render/render.log
+          exit $code
+      - name: Upload render diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: koolo-render-diagnostics
+          path: /tmp/koolo-render/render.log
+          retention-days: 1
       - name: Fetch Gemini Kore WAV
         run: |
           curl --fail --retry 3 --retry-delay 2 --connect-timeout 15             "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-koolo-demo-20261123"             -o /tmp/koolo-render/kore.wav
