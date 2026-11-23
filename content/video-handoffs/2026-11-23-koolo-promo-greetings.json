@@ -2,8 +2,13 @@
   "schema_version": 1,
   "id": "crew-video-2026-11-23-koolo-promo-greetings",
   "created_date": "2026-11-23",
-  "status": "draft_handoff_only",
-  "publish_permitted": false,
+  "status": "ready_for_video_publisher",
+  "publish_permitted": true,
+  "schedule": {
+    "date": "2026-11-24",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
   "title": "背了十年單字，還是不敢開口？",
   "platforms": [
     "facebook",
@@ -23,23 +28,23 @@
   },
   "posts": {
     "facebook": {
-      "text": "背了十年單字，還是不敢開口？\n\n我後來想，可能不是單字不夠，是太久沒有一個不怕丟臉的對象，讓你先開口。\n\n所以我做了一件事：找幾個 AI 朋友，打個招呼就開始聊。\n英、日、西、法、韓，五種語言，各用自己的聲音回你。\n不必先準備話題，也不考試、不強迫糾錯。\n想輕鬆一點，還可以一起玩遊戲、讀故事、看運勢。\n\n學語言不一定要正襟危坐。\n\n你上次敢開口說外語，是什麼時候？",
+      "text": "背了十年單字，還是不敢開口？\n\n我後來想，可能不是單字不夠，是少了一個不怕丟臉、可以先開口的對象。\n\n所以我做了 Koolo：\n1. 打個招呼就開始聊，不必先準備話題\n2. 英、日、西、法、韓，五個 AI 朋友各用自己的聲音回你\n3. 刷到喜歡的短片，直接跟朋友聊那一則\n4. 不考試，也不強迫糾錯；想放鬆就玩遊戲、讀故事、看運勢\n\n學語言不一定要正襟危坐，先開口比較重要。\n\n你上次敢開口說外語，是什麼時候？",
       "requestId": "06c23ae4-ff6e-4b32-a97c-660c1b1d877f"
     },
     "threads": {
-      "text": "背了十年單字，還是不敢開口？\n\n我後來想，可能不是單字不夠，是太久沒有一個不怕丟臉的對象，讓你先開口。\n\n所以我做了一件事：找幾個 AI 朋友，打個招呼就開始聊。\n英、日、西、法、韓，五種語言，各用自己的聲音回你。\n不必先準備話題，也不考試、不強迫糾錯。\n想輕鬆一點，還可以一起玩遊戲、讀故事、看運勢。\n\n學語言不一定要正襟危坐。\n\n你上次敢開口說外語，是什麼時候？",
+      "text": "背了十年單字，還是不敢開口？\n\n我後來想，可能不是單字不夠，是少了一個不怕丟臉、可以先開口的對象。\n\n所以我做了 Koolo：\n1. 打個招呼就開始聊，不必先準備話題\n2. 英、日、西、法、韓，五個 AI 朋友各用自己的聲音回你\n3. 刷到喜歡的短片，直接跟朋友聊那一則\n4. 不考試，也不強迫糾錯；想放鬆就玩遊戲、讀故事、看運勢\n\n學語言不一定要正襟危坐，先開口比較重要。\n\n你上次敢開口說外語，是什麼時候？",
       "requestId": "3d66684b-cc7b-483c-9089-b86afb343d97"
     }
   },
   "first_replies": {
     "facebook": {
-      "text": "想自己試試看跟 AI 朋友打招呼、練口說，可以到 https://koolo.app\n免費開始。",
+      "text": "免費開始：https://koolo.app",
       "requestId": "1f10de27-37ec-4bf1-9b6e-389de4fea429"
     },
     "threads": {
-      "text": "想自己試試看跟 AI 朋友打招呼、練口說，可以到 https://koolo.app\n免費開始。",
+      "text": "免費開始：https://koolo.app",
       "requestId": "118f59a0-6a03-4033-a1b7-1a0796f3f9b7"
     }
   },
-  "local_agent_note": "Koolo 宣傳片 v4.1（28 秒、9:16、1080×1920）。2026-11-23 立洋在 Grok Bot 聊天要求把已定稿影片放入社群發文配置，交由 grok 發文；尚未指定發文時間，也尚未授權正式發布。因此 status=draft_handoff_only、publish_permitted=false，未寫 schedule，避免被 Local Publisher 自動發出。\n授權並發布前請：1) 將本分支合併進 main，使 media.public_url（raw.githubusercontent.com/.../main/...）可被 Meta 下載且 SHA-256 相符；2) 由立洋確認文案與時段後，把 status 改為 ready_for_video_publisher、publish_permitted=true，並加上未過期的 schedule（date/time/timezone=Asia/Taipei）；3) 不要排在 2026-11-23，當日 Queue 已有 12:00、14:00、16:00、19:00、21:00 五篇（另加早上已發的 ai-quests），超過每日 2–3 篇準則。建議時段：2026-11-24 19:00 或 21:00 Asia/Taipei。\n本 publisher 只支援 Facebook Page Reels 與 Threads VIDEO，不支援 Instagram Reels、YouTube Shorts、TikTok；若要發這三個平台，需人工另外發，可用同目錄封面 koolo-promo-greetings-v4.1-cover.jpg（5.5 秒 Zoe＋「打個招呼就開始！」）。\n現行 local-publisher/video.js 不會自動派送 first_replies，主文成功後請人工補發首則留言（內含 https://koolo.app）。正文依編輯準則不放網址、不放公式 hashtag；Facebook 正文與 Threads 正文相同。本篇為產品向宣傳，台北時間 2026-11-23～11-29 當週產品提及額度計 1 篇（首則留言放自家產品連結）；寫稿當日該週其餘已排稿未提 Koolo/Crew 產品。\n若要加 hashtag，可加在首則留言或人工發文時補上，建議：#Koolo #學英文 #學日文 #口說練習 #AI學語言 #語言交換\n發布時保留各平台固定 requestId，不要把影片降級成圖文或純文字。"
+  "local_agent_note": "Koolo 宣傳片 v4.1（28 秒、9:16、1080×1920）。2026-11-23 立洋已核准修改版文案，並授權於 2026-11-24 19:00 Asia/Taipei 正式發布；因此 status=ready_for_video_publisher、publish_permitted=true，並已寫入 schedule。\n本 publisher 只支援 Facebook Page Reels 與 Threads VIDEO，不支援 Instagram Reels、YouTube Shorts、TikTok；若要發這三個平台，需人工另外發，可用同目錄封面 koolo-promo-greetings-v4.1-cover.jpg（5.5 秒 Zoe＋「打個招呼就開始！」）。\n現行 local-publisher/video.js 不會自動派送 first_replies，主文成功後必須人工補發首則留言（Facebook／Threads 皆為：免費開始：https://koolo.app）。正文依編輯準則不放網址、不放公式 hashtag；Facebook 正文與 Threads 正文相同。本篇為產品向宣傳，台北時間 2026-11-23～11-29 當週產品提及額度計 1 篇（首則留言放自家產品連結）。\n發布時保留各平台固定 requestId，不要把影片降級成圖文或純文字。"
 }
