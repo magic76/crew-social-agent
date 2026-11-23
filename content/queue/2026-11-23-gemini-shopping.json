@@ -15,7 +15,16 @@
     "facebook",
     "threads"
   ],
-  "image": null,
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-23-gemini-shopping.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "d5de33779ac9227a0fe1d1d8da70fdebc45f3ca3e8a56dd47b427b3f25340c32",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-23-gemini-shopping.jpg",
+    "alt": "晚上的書桌，一個人對著筆電比較兩個紙箱和價簽，標題：先比價，再下單"
+  },
   "first_replies": {
     "facebook": {
       "text": "來源：Google 台灣官方（2026/11/09）https://blog.google/intl/zh-tw/products/explore-get-answers/gemini-shopping/\n官方操作說明（台灣在支援地區內）https://support.google.com/gemini/answer/16730149?hl=zh-Hant\nT客邦（2026/11/09）https://www.techbang.com/posts/134724-google-gemini-chinese-shopping-features-taiwan\nGoogle 黑五購物指南（2026/11/16）https://blog.google/products-and-platforms/products/shopping/black-friday-cyber-monday-shopping-tips-2026/",
@@ -37,7 +46,7 @@
     }
   },
   "safety": {
-    "publish_permitted": false,
-    "reason": "圖未附上前不授權發布"
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-23 09:10 在 Grok Bot 聊天批准（其他ok）；配圖已於 09:15 附上"
   }
 }
