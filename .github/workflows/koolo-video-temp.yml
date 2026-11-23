@@ -6,20 +6,22 @@ on:
       - ".github/workflows/koolo-video-temp.yml"
       - "scripts/koolo_video_temp.py"
   workflow_dispatch:
+concurrency:
+  group: koolo-temp-render
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
   render:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Install render dependencies
+      - name: Check runner media tools
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg fonts-noto-cjk
-          python -m pip install --upgrade pip
-          python -m pip install pillow numpy
+          ffmpeg -version | head -1
+          fc-match "Noto Sans CJK TC" || true
+          python -m pip install --disable-pip-version-check pillow numpy
       - name: Render 21.5s visual
         run: |
           OUT=/tmp/koolo-render python scripts/koolo_video_temp.py
