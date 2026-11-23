@@ -168,3 +168,7 @@ Facebook 和 Threads 的每個版本，都要在可查證的事實之後，至�
 ## 與既有流程的關係
 
 本準則規範選題、寫法與社群配圖標準；不改變研究報告、候選 review 欄位、Queue schema、發布核准、Local Publisher 或影片交接。每日實際發布改為 2–3 篇；既有固定時段視為待驗證假設，見「成長寫法」。在粉專尚無足夠觸及前，Facebook 正文沿用 Threads 正文，不再另寫一個平台版本。依現有要求保留 claim→evidence、review、來源首則留言、排程與安全檢查；通過編輯審核不等於發布授權。
+
+## 產品宣傳短片
+
+若要製作或重做 Koolo 產品宣傳影片（9:16 Reels／Shorts／Threads 影片），先讀同目錄的 [video-promo-workflow.md](video-promo-workflow.md)。該文件記錄「打個招呼就開始」從靜態截圖到 v4.1 的教訓、入鏡禁令、配音與 `content/video-handoffs/` 交接方式。社群文案、產品提及額度與「所以呢」仍以本準則為準；影片怎麼拍、怎麼剪，以該文件為準。通過編輯審核或完成影片，都不等於發布授權。

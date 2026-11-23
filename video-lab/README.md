@@ -13,6 +13,11 @@
 - 自動發現：AGENTS.md，.agents/skills/crew-video-lab/SKILL.md，.claude/skills/crew-video-lab/SKILL.md。
 - 框架官方技能：在本地用 npx hyperframes skills update；Remotion 則用 npx skills add remotion-dev/skills。上游技能持續更新，本 repo 自有 Skills 不與之混淆。
 
+
+## Koolo 產品宣傳片（另一條管線）
+
+宣傳短片不是 HTML 科普動畫。請改讀 [docs/video-promo-workflow.md](../docs/video-promo-workflow.md)，並在 [examples/koolo-promo](examples/koolo-promo) 執行腳本。不要用 Crew Light／HyperFrames 範本去重做「打個招呼就開始」這類角色開口廣告。
+
 ## 立即驗證原始範例（Node.js 22+）
 
 ~~~sh
