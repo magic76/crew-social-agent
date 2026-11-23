@@ -17,11 +17,21 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Check runner media tools
+      - name: Prepare bundled ffmpeg
         run: |
-          ffmpeg -version | head -1
+          python -m pip install --disable-pip-version-check pillow numpy imageio-ffmpeg
+          mkdir -p "$HOME/.local/bin"
+          python - <<'PY'
+import imageio_ffmpeg, os
+src=imageio_ffmpeg.get_ffmpeg_exe()
+dst=os.path.expanduser("~/.local/bin/ffmpeg")
+try: os.remove(dst)
+except FileNotFoundError: pass
+os.symlink(src,dst)
+print(src)
+PY
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
           fc-match "Noto Sans CJK TC" || true
-          python -m pip install --disable-pip-version-check pillow numpy
       - name: Render 21.5s visual
         run: |
           set +e
@@ -40,11 +50,9 @@ jobs:
       - name: Fetch Gemini Kore WAV
         run: |
           curl --fail --retry 3 --retry-delay 2 --connect-timeout 15             "https://crew-guest-trial.shanliyoung.workers.dev/api/video/tts/result?id=crew-tts-koolo-demo-20261123"             -o /tmp/koolo-render/kore.wav
-          ffprobe -v error -show_entries format=duration,size -of json /tmp/koolo-render/kore.wav
       - name: Mix narration and subtle bed
         run: |
           ffmpeg -hide_banner -loglevel error -y             -i /tmp/koolo-render/visual.mp4             -i /tmp/koolo-render/kore.wav             -f lavfi -i "sine=frequency=110:sample_rate=48000:duration=21.5"             -f lavfi -i "sine=frequency=165:sample_rate=48000:duration=21.5"             -filter_complex "[1:a]adelay=450|450,volume=1.0[voice];[2:a]volume=0.018[bed1];[3:a]volume=0.011[bed2];[bed1][bed2]amix=inputs=2:normalize=0,lowpass=f=900,afade=t=in:st=0:d=1,afade=t=out:st=19.5:d=2[bed];[bed][voice]amix=inputs=2:normalize=0:duration=longest,alimiter=limit=0.92,loudnorm=I=-16:TP=-1.5:LRA=8[a]"             -map 0:v:0 -map "[a]"             -vf "scale=1080:1920:flags=lanczos,fps=30"             -c:v libx264 -preset medium -crf 20 -pix_fmt yuv420p             -c:a aac -b:a 192k -movflags +faststart -t 21.5             /tmp/koolo-render/koolo_21_5s_gemini_kore.mp4
-          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_type,codec_name,width,height,r_frame_rate -of json /tmp/koolo-render/koolo_21_5s_gemini_kore.mp4
       - uses: actions/upload-artifact@v4
         with:
           name: koolo-21-5s-gemini-kore
