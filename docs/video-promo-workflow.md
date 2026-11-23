@@ -405,3 +405,49 @@ node scripts/check-video-handoffs.mjs
 - 不要修改或覆寫歷史 v1／v2／v3 成片檔來「節省空間」；新版本另存。
 
 做完請回報：成片路徑、時間軸是否有改、每支 I2V 的檢查結論、以及任何妥協。
+
+---
+
+## 10. Zoe 介紹片管線（Flow 8 秒短片，2026-11-23 驗證）
+
+這是 v4.1 之外的第二條管線：Google Flow 生 8 秒介紹片，給一位 AI 朋友自我介紹加網站導流。2026-11-23 以 Zoe 驗證通過，成片 v7 為目前版本。
+
+### 10.1 生片
+
+- Flow 專案：https://flow.google.com/project/2b62b90f-2be6-41a4-b8ca-260ace0e3d0b，帳號 shanliyoung@gmail.com（PRO）。
+- Veo 3.1 Fast：每支 20 點、只能 8 秒、720p 9:16。每月 1000 點（2026-12-21 17:15 重設）＋每天 50 點。Veo 3.1 家族 2026-12-05 退役。
+- 用 Ingredients to Video，拿網站上該朋友的頭像當角色素材，臉會跟頭像一致。不要用肖像當首幀，會被知名人士政策擋下（20 點據稱會退）。
+- 一支只講一個主張。結構：中文鉤子 0–3 秒＋英文介紹 3.1–7.5 秒。鉤子例：「背了十年單字，還是不敢開口？」；介紹例：「Hi, I'm Zoe! On Koolo, just say hi — free for five minutes!」（完整句自然語速 6.56 秒塞不進 8 秒片，口白版須縮短，完整意思留字卡上）。
+
+### 10.2 後製
+
+- 字卡與字幕 pill 用 PIL 畫（Noto Sans CJK Bold），再用 ffmpeg filter graph 疊上：hook 卡 0.15–1.5 秒與 1.5–3.0 秒、字幕 pill、左上 Koolo wordmark（3.0 秒起）、緩推 zoom。
+- 每支的字幕燒錄位置都不一樣，蓋 pill 前先量該支的位置。pill 必須完全不透明，否則燒錄的字會透出來。
+- 疊圖用 `enable='between(t,...)'` 硬切，不要用 `fade … alpha=1`，靜態 PNG 會直接隱形。
+- 白閃（3.00–3.12 秒全白）是可選轉場，LY 覺得礙眼就拿掉，改硬切。無白閃版用不含 white overlay 的 filter graph。
+
+### 10.3 配音
+
+- 時間窗：鉤子 0.15–3.0 秒，介紹 3.10–7.55 秒。混音時不用 `-shortest`，會把影片截到音訊長度。
+- edge-tts 首選，但直連在 Muse 沙箱會被出口代理擋（WSS 握手 101）。繞路：公開 HF Space `innoai/Edge-TTS-Text-to-Speech`，用 gradio_client 呼叫 `predict(text, voice, rate, pitch, api_name="/tts_interface")`，voice 標籤照 Space 列的寫，例如 `zh-TW-HsiaoChenNeural - zh-TW (Female)`。rate／pitch 是百分比，實測 rate 0→3.60 秒、50→2.42 秒。注意 `no_proxy` 裡的中括號 IPv6 會讓 httpx 解析失敗，呼叫前先去掉含 `[`、`]` 的項目。此 Space 是第三方公開服務，可能休眠、排隊或下線，文字不要含敏感內容。
+- ChatGPT 的程式沙箱完全沒有對外網路，跑不了 edge-tts。Grok 可以（v4.1 配音就是這樣做的），LY 本機或 Colab 也可以，命令見 Muse 工作區 `work/VO_COMMANDS.md`。
+- 備援是本機 Piper TTS，免費免帳號，中文只有陸腔（zh_CN-huayan-medium）、無台灣腔，英文 en_US-amy-medium。語速用 `--length-scale` 調。
+- 其他方案見 2026-11-23 查價：MeloTTS（Cloudflare，需 API token 走 REST）、Google Cloud TTS（標準音每月免費 100 萬字元）、Azure 語音（每月免費 50 萬字元）、MiniMax／Fish Audio（中文最好聽，按量計費，一支片成本幾乎為零）。
+
+### 10.4 混音與驗收
+
+- 混音後跑兩次 loudnorm，目標 −14 LUFS、True Peak −1.5 dBTP；口白峰值通常卡在 −15 LUFS 左右，可接受。
+- 驗收：音訊 RMS 每 0.25 秒一切片，確認鉤子在 0.15–3.0 秒、介紹在 3.10–7.55 秒、7.5 秒後靜音；看 0.8 秒、3.05 秒、5.0 秒三幀，確認臉像、wordmark、字幕 pill，並確認 3.05 秒幀無白閃（平均亮度約 120，不是 250）。
+- 成片一律草稿，不自行發布。
+
+### 10.5 版本紀錄
+
+| 版本 | 配音 | 備註 |
+| --- | --- | --- |
+| v2 | Veo 原音 | 臉是仿生成品，LY 說臉不像、字幕錯 |
+| v3／v3.1 | Veo 原音 | Ingredients 用網站頭像，臉對了；v3.1 修掉尾部多餘「嗨」 |
+| v4 | Piper 全配 | 陸腔中文＋英文 Amy，LY 說好了 |
+| v4-en | Piper 全英文 | LY 定為英文版 |
+| v5 | edge-tts 全配 | HsiaoChen＋Ana，英文介紹 +55% 偏快 |
+| v6 | 混合 | 中文 edge-tts＋英文 Piper，兩段都不加速 |
+| v7 | 混合、無白閃 | 同 v6，拿掉 3 秒白閃，目前版本 |
