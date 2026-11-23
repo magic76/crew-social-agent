@@ -5,7 +5,7 @@
   "status": "ready_for_video_publisher",
   "publish_permitted": true,
   "schedule": {
-    "date": "2026-11-24",
+    "date": "2026-11-23",
     "time": "19:00",
     "timezone": "Asia/Taipei"
   },
@@ -46,5 +46,5 @@
       "requestId": "118f59a0-6a03-4033-a1b7-1a0796f3f9b7"
     }
   },
-  "local_agent_note": "Koolo 宣傳片 v4.1（28 秒、9:16、1080×1920）。2026-11-23 立洋已核准修改版文案，並授權於 2026-11-24 19:00 Asia/Taipei 正式發布；因此 status=ready_for_video_publisher、publish_permitted=true，並已寫入 schedule。\n本 publisher 只支援 Facebook Page Reels 與 Threads VIDEO，不支援 Instagram Reels、YouTube Shorts、TikTok；若要發這三個平台，需人工另外發，可用同目錄封面 koolo-promo-greetings-v4.1-cover.jpg（5.5 秒 Zoe＋「打個招呼就開始！」）。\n現行 local-publisher/video.js 不會自動派送 first_replies，主文成功後必須人工補發首則留言（Facebook／Threads 皆為：免費開始：https://koolo.app）。正文依編輯準則不放網址、不放公式 hashtag；Facebook 正文與 Threads 正文相同。本篇為產品向宣傳，台北時間 2026-11-23～11-29 當週產品提及額度計 1 篇（首則留言放自家產品連結）。\n發布時保留各平台固定 requestId，不要把影片降級成圖文或純文字。"
+  "local_agent_note": "Koolo 宣傳片 v4.1（28 秒、9:16、1080×1920）。2026-11-23 立洋已核准修改版文案，並授權於 2026-11-24 19:00 Asia/Taipei 正式發布；因此 status=ready_for_video_publisher、publish_permitted=true，並已寫入 schedule。\n本 publisher 只支援 Facebook Page Reels 與 Threads VIDEO，不支援 Instagram Reels、YouTube Shorts、TikTok；若要發這三個平台，需人工另外發，可用同目錄封面 koolo-promo-greetings-v4.1-cover.jpg（5.5 秒 Zoe＋「打個招呼就開始！」）。\n現行 local-publisher/video.js 不會自動派送 first_replies，主文成功後必須人工補發首則留言（Facebook／Threads 皆為：免費開始：https://koolo.app）。正文依編輯準則不放網址、不放公式 hashtag；Facebook 正文與 Threads 正文相同。本篇為產品向宣傳，台北時間 2026-11-23～11-29 當週產品提及額度計 1 篇（首則留言放自家產品連結）。\n發布時保留各平台固定 requestId，不要把影片降級成圖文或純文字。\n2026-11-23 13:12 立洋把發布時間改成 2026-11-23 19:00 Asia/Taipei（由 Soc 手動發）。"
 }
