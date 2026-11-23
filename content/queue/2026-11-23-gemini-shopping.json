@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261123-gemini-shopping",
+  "created_date": "2026-11-23",
+  "title": "黑五前，先讓 Gemini 幫你比價",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-23",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Google 台灣官方（2026/11/09）https://blog.google/intl/zh-tw/products/explore-get-answers/gemini-shopping/\n官方操作說明（台灣在支援地區內）https://support.google.com/gemini/answer/16730149?hl=zh-Hant\nT客邦（2026/11/09）https://www.techbang.com/posts/134724-google-gemini-chinese-shopping-features-taiwan\nGoogle 黑五購物指南（2026/11/16）https://blog.google/products-and-platforms/products/shopping/black-friday-cyber-monday-shopping-tips-2026/",
+      "requestId": "f8cd3b5b-7e74-404e-b731-b5136cb8aaa1"
+    },
+    "threads": {
+      "text": "來源：Google 台灣官方（2026/11/09）https://blog.google/intl/zh-tw/products/explore-get-answers/gemini-shopping/\n官方操作說明（台灣在支援地區內）https://support.google.com/gemini/answer/16730149?hl=zh-Hant\nT客邦（2026/11/09）https://www.techbang.com/posts/134724-google-gemini-chinese-shopping-features-taiwan\nGoogle 黑五購物指南（2026/11/16）https://blog.google/products-and-platforms/products/shopping/black-friday-cyber-monday-shopping-tips-2026/",
+      "requestId": "170ba9ec-a490-4374-829b-67ccf37eed17"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "黑五快到了，比價這件事，現在不必自己開十個分頁。\n\nGoogle 這個月在台灣開放了 Gemini 中文購物。\n官方說可以直接在對話裡比規格、比價格，T客邦也有介紹。\n你只要把需求和預算講清楚就好。\n\n1. 打開 Gemini 網頁或 App，用個人 Google 帳號登入，並開啟「記錄」\n2. 用白話問，例如：「預算 8,000 元以內，台北套房除濕機，推薦 3 款，比較除濕量、音量、耗電和價格。」\n3. 回覆裡會出現商品卡和比較表；感興趣的可以點「新增」，再叫它比規格或哪裡買\n4. 下單前，自己點進商品頁核對型號、含運價格和現貨，網址也看一眼是不是真的店家\n\n要年滿 18 歲，公司或學校帳號目前不能用。\n價格和庫存有時會跟賣場不一樣，別只看對話裡的數字就付款。\n\n所以呢？\nAI 適合幫你先縮小範圍。最後要不要買、在哪裡買，還是得自己看過再決定。\n\n你最近一次比價，是自己開很多分頁，還是丟給 AI？",
+      "requestId": "343ee78a-f0ee-40a9-8b39-ca1396ec20a3"
+    },
+    "threads": {
+      "text": "黑五快到了，比價這件事，現在不必自己開十個分頁。\n\nGoogle 這個月在台灣開放了 Gemini 中文購物。\n官方說可以直接在對話裡比規格、比價格，T客邦也有介紹。\n你只要把需求和預算講清楚就好。\n\n1. 打開 Gemini 網頁或 App，用個人 Google 帳號登入，並開啟「記錄」\n2. 用白話問，例如：「預算 8,000 元以內，台北套房除濕機，推薦 3 款，比較除濕量、音量、耗電和價格。」\n3. 回覆裡會出現商品卡和比較表；感興趣的可以點「新增」，再叫它比規格或哪裡買\n4. 下單前，自己點進商品頁核對型號、含運價格和現貨，網址也看一眼是不是真的店家\n\n要年滿 18 歲，公司或學校帳號目前不能用。\n價格和庫存有時會跟賣場不一樣，別只看對話裡的數字就付款。\n\n所以呢？\nAI 適合幫你先縮小範圍。最後要不要買、在哪裡買，還是得自己看過再決定。\n\n你最近一次比價，是自己開很多分頁，還是丟給 AI？",
+      "requestId": "88f468a1-29b0-4df6-8267-1fa2e4488b49"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "圖未附上前不授權發布"
+  }
+}

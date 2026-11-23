@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261123-gemini-skills",
+  "created_date": "2026-11-23",
+  "title": "同一段指令，別再打一次",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-23",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：Google 官方（Gem 轉技能，含 11/17、12/17 時程）https://support.google.com/gemini/answer/18560919?hl=zh-Hant\n官方操作說明（建立、用「/」呼叫技能）https://support.google.com/gemini/answer/17094296?hl=zh-Hant\nETtoday（2026/11/17）https://ai.ettoday.net/news/3273429\n自由時報 3C（2026/11/18）https://3c.ltn.com.tw/news/68316",
+      "requestId": "f0aa1a71-5f66-4a1e-85b7-8223b10e7df4"
+    },
+    "threads": {
+      "text": "來源：Google 官方（Gem 轉技能，含 11/17、12/17 時程）https://support.google.com/gemini/answer/18560919?hl=zh-Hant\n官方操作說明（建立、用「/」呼叫技能）https://support.google.com/gemini/answer/17094296?hl=zh-Hant\nETtoday（2026/11/17）https://ai.ettoday.net/news/3273429\n自由時報 3C（2026/11/18）https://3c.ltn.com.tw/news/68316",
+      "requestId": "9d0cb423-3198-4023-8ecd-294f4ab90f2b"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "想省時間，往往不是再學一句新的問法，是別把同一段話打第二次。\n\nGoogle 已經把 Gemini 裡的「Gem」換成「技能」。\nGoogle 官方說：個人帳號從 11/17 起，舊的 Gem 只能看、不能再用；12/17 會整個拿掉。\n\n新的作法比較單純，把你常用的工作方式存起來就好。\n\n1. 打開 Gemini（網頁或 App 都可以）\n2. 側邊選單找到「自訂」，再點「技能」\n3. 新建一個，寫清楚名稱、什麼時候該用、以及它該怎麼做\n比方說：「寫週報時用。先列本週完成、卡關、下週計畫，語氣口語，不要空話。」\n4. 之後在對話裡打「/」，選這個技能；相關的問題，它有時也會自己套上來\n\n要年滿 18 歲，用個人 Google 帳號。\n如果你以前在 Gem 裡傳過檔案，12/17 前先下載備份。音訊、影片、舊版 Word 那些，不會自動跟著過去。\n\n所以呢？\nAI 真正省時間的地方，常常不是更會問，而是把你已經問熟的那套，存成自己的工具。\n\n你工作上最常重複打的那一段指令，是什麼？",
+      "requestId": "a9d14ab9-f272-4e75-b963-6a2d6c06fb0a"
+    },
+    "threads": {
+      "text": "想省時間，往往不是再學一句新的問法，是別把同一段話打第二次。\n\nGoogle 已經把 Gemini 裡的「Gem」換成「技能」。\nGoogle 官方說：個人帳號從 11/17 起，舊的 Gem 只能看、不能再用；12/17 會整個拿掉。\n\n新的作法比較單純，把你常用的工作方式存起來就好。\n\n1. 打開 Gemini（網頁或 App 都可以）\n2. 側邊選單找到「自訂」，再點「技能」\n3. 新建一個，寫清楚名稱、什麼時候該用、以及它該怎麼做\n比方說：「寫週報時用。先列本週完成、卡關、下週計畫，語氣口語，不要空話。」\n4. 之後在對話裡打「/」，選這個技能；相關的問題，它有時也會自己套上來\n\n要年滿 18 歲，用個人 Google 帳號。\n如果你以前在 Gem 裡傳過檔案，12/17 前先下載備份。音訊、影片、舊版 Word 那些，不會自動跟著過去。\n\n所以呢？\nAI 真正省時間的地方，常常不是更會問，而是把你已經問熟的那套，存成自己的工具。\n\n你工作上最常重複打的那一段指令，是什麼？",
+      "requestId": "b8adc359-3042-4ede-98e3-6b82ec3a49ef"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-23 09:10 在 Grok Bot 聊天批准"
+  }
+}

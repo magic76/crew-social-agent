@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261123-chatgpt-outage",
+  "created_date": "2026-11-23",
+  "title": "別把整個工作流程押在一個 AI 上",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-23",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：OpenAI 官方事故報告 https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up\nAI Weekly 整理（2026/11/22）https://aiweekly.co/alerts/openai-postgres-replica-failure-peaked-api-chatgpt-errors-at-75",
+      "requestId": "bf76aa7a-0632-47ae-9608-2f60b5235c3a"
+    },
+    "threads": {
+      "text": "來源：OpenAI 官方事故報告 https://status.openai.com/incidents/01JMYB602A6H2E04Y1497J434X/write-up\nAI Weekly 整理（2026/11/22）https://aiweekly.co/alerts/openai-postgres-replica-failure-peaked-api-chatgpt-errors-at-75",
+      "requestId": "0ee2ac54-dc18-45d8-b5ca-ea9d2d1f44d1"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "上週六傍晚到晚上，ChatGPT 全球大面積不穩，大概持續三個半小時。\n\nOpenAI 自己的事故報告寫：11/21 太平洋時間 1:48 到 5:21（台灣時間當天 17:48 到 21:21），付費和免費版最高有 75% 的請求失敗。\n原因是一次資料庫維護，讓負責登入驗證的備用節點同時掛掉。連 API 也一起受影響。\n\n這不是誰比較倒楣的問題。\n是現在很多人的工作，已經經不起一個工具休息一下。\n\n所以呢？\n重要的稿、會議紀錄、還在改的版本，不要只活在某一個聊天室裡。\n平時就準備第二個可以用的 AI，必要的檔案在自己電腦也留一份。\n工具當掉不可控，但工作會不會全部停擺，可以先想過。\n\n你常用的 AI 掛掉時，手上還有備案嗎？還是只能乾等？",
+      "requestId": "5d267584-1a5d-4c58-92c7-1b47a1f0d3df"
+    },
+    "threads": {
+      "text": "上週六傍晚到晚上，ChatGPT 全球大面積不穩，大概持續三個半小時。\n\nOpenAI 自己的事故報告寫：11/21 太平洋時間 1:48 到 5:21（台灣時間當天 17:48 到 21:21），付費和免費版最高有 75% 的請求失敗。\n原因是一次資料庫維護，讓負責登入驗證的備用節點同時掛掉。連 API 也一起受影響。\n\n這不是誰比較倒楣的問題。\n是現在很多人的工作，已經經不起一個工具休息一下。\n\n所以呢？\n重要的稿、會議紀錄、還在改的版本，不要只活在某一個聊天室裡。\n平時就準備第二個可以用的 AI，必要的檔案在自己電腦也留一份。\n工具當掉不可控，但工作會不會全部停擺，可以先想過。\n\n你常用的 AI 掛掉時，手上還有備案嗎？還是只能乾等？",
+      "requestId": "566b2b65-c78b-449e-86bf-03ecd5df348a"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-23 09:10 在 Grok Bot 聊天批准"
+  }
+}

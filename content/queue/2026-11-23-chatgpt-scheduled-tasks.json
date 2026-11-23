@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261123-chatgpt-scheduled-tasks",
+  "created_date": "2026-11-23",
+  "title": "讓 ChatGPT 到點自己交功課",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-23",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "來源：OpenAI 官方說明（ChatGPT 排程任務）https://help.openai.com/zh-hant/articles/10291617-scheduled-tasks-in-chatgpt",
+      "requestId": "06590327-24a4-499b-b2aa-b957dd3bc897"
+    },
+    "threads": {
+      "text": "來源：OpenAI 官方說明（ChatGPT 排程任務）https://help.openai.com/zh-hant/articles/10291617-scheduled-tasks-in-chatgpt",
+      "requestId": "56cedf28-bfaa-44bc-b64b-18f1f91c7944"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "有些功課，其實不必每天打開 ChatGPT 再問一次。\n\n它可以排程，到點自己跑。\n官方說明寫：免費帳號也能用，只是每天最多一次，時間是上午、下午、晚上這種時段；要指定幾點，才需要付費方案。\n\n作法很直接。\n\n1. 先在平常的對話裡，把你要的結果問到滿意\n2. 接著在同一則對話說：「之後每個工作日早上，請再做一次，做完通知我。」\n3. 到側邊的「排程」（或設定 > 通知 > 管理任務）確認有沒有建成功、時區對不對\n4. 打開通知（推播或 email）；不用的任務記得暫停，不然還是會吃額度\n\n別把密碼、卡號、客戶個資寫進任務內容。\n在「專案」裡建立的任務，也讀不到你上傳到專案裡的檔案。\n\n所以呢？\n適合拿來做每天都要看的例行整理，不適合拿來做臨時、還在改來改去的工作。\n\n如果可以叫 AI 每天自動交一件功課，你會先排哪一件？",
+      "requestId": "2a9857be-cda4-47ae-ab26-9c90cfebce78"
+    },
+    "threads": {
+      "text": "有些功課，其實不必每天打開 ChatGPT 再問一次。\n\n它可以排程，到點自己跑。\n官方說明寫：免費帳號也能用，只是每天最多一次，時間是上午、下午、晚上這種時段；要指定幾點，才需要付費方案。\n\n作法很直接。\n\n1. 先在平常的對話裡，把你要的結果問到滿意\n2. 接著在同一則對話說：「之後每個工作日早上，請再做一次，做完通知我。」\n3. 到側邊的「排程」（或設定 > 通知 > 管理任務）確認有沒有建成功、時區對不對\n4. 打開通知（推播或 email）；不用的任務記得暫停，不然還是會吃額度\n\n別把密碼、卡號、客戶個資寫進任務內容。\n在「專案」裡建立的任務，也讀不到你上傳到專案裡的檔案。\n\n所以呢？\n適合拿來做每天都要看的例行整理，不適合拿來做臨時、還在改來改去的工作。\n\n如果可以叫 AI 每天自動交一件功課，你會先排哪一件？",
+      "requestId": "842387e8-7e70-4ae0-baa9-71c6ce725446"
+    }
+  },
+  "safety": {
+    "publish_permitted": false,
+    "reason": "圖未附上前不授權發布"
+  }
+}
