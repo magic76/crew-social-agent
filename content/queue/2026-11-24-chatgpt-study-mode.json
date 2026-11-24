@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261124-chatgpt-study-mode",
+  "created_date": "2026-11-24",
+  "title": "把 AI 從幫我做換成教我做",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-24",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "OpenAI 官方說明：https://help.openai.com/zh-hant/articles/11780217-using-study-mode-in-chatgpt",
+      "requestId": "7e8235c4-c869-447c-826d-5ca4429e72d6"
+    },
+    "threads": {
+      "text": "OpenAI 官方說明：https://help.openai.com/zh-hant/articles/11780217-using-study-mode-in-chatgpt",
+      "requestId": "e8e0beab-dd7f-4fb8-82bd-ad65f68b1bba"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "學新工具，我最怕 AI 一口氣丟十段說明給我，看完還是不會。\n\nChatGPT 有個「學習模式」，它不直接給答案，而是一次問你一題。\n\n怎麼開：\n1. 在輸入框打 @study，或按「＋」搜尋「學習」\n2. 開頭先講清楚你的程度和目標，例如：「我會用 Excel 加總，想學樞紐分析表，請一次問我一題，答錯再解釋」\n3. 可以丟 PDF、筆記或截圖，指定它看第幾頁\n\n把 AI 從「幫我做」換成「教我做」，學會的東西才是自己的。\n趕時間就直接叫它做，想學會就開這個。\n\n最近有什麼工具，你一直想學、但一直沒開始？",
+      "requestId": "6d405c7d-1b41-4a40-bb38-adedf8a2ca31"
+    },
+    "threads": {
+      "text": "學新工具，我最怕 AI 一口氣丟十段說明給我，看完還是不會。\n\nChatGPT 有個「學習模式」，它不直接給答案，而是一次問你一題。\n\n怎麼開：\n1. 在輸入框打 @study，或按「＋」搜尋「學習」\n2. 開頭先講清楚你的程度和目標，例如：「我會用 Excel 加總，想學樞紐分析表，請一次問我一題，答錯再解釋」\n3. 可以丟 PDF、筆記或截圖，指定它看第幾頁\n\n把 AI 從「幫我做」換成「教我做」，學會的東西才是自己的。\n趕時間就直接叫它做，想學會就開這個。\n\n最近有什麼工具，你一直想學、但一直沒開始？",
+      "requestId": "df0e8029-5487-429c-b672-e98cdb50290b"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-24 在 Grok Bot 聊天批准（發 1、2、3、4、5）"
+  }
+}

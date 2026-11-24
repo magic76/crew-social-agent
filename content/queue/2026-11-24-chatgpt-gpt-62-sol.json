@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261124-chatgpt-gpt-62-sol",
+  "created_date": "2026-11-24",
+  "title": "拍標籤給 AI，先加一句不要猜",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-24",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "The Verge：https://www.theverge.com/ai-artificial-intelligence/1040716/openai-launched-a-chat-specific-version-of-gpt-6-2-sol\nMacRumors：https://www.macrumors.com/2026/11/23/openai-gpt-6-2-sol-chatgpt/",
+      "requestId": "55d5843d-7974-449b-a301-b06432c833e7"
+    },
+    "threads": {
+      "text": "The Verge：https://www.theverge.com/ai-artificial-intelligence/1040716/openai-launched-a-chat-specific-version-of-gpt-6-2-sol\nMacRumors：https://www.macrumors.com/2026/11/23/openai-gpt-6-2-sol-chatgpt/",
+      "requestId": "10dc807a-2a53-47dd-a46b-07edf933372b"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "家電標籤上那排小字，老實說我從來沒認真看懂過。\n\nOpenAI 昨天把 GPT-6.2 Sol 放進 ChatGPT 的一般聊天，Plus 以上先用，免費版和 Go 沒有。\n官方特別提到：看照片細節變強了，像招牌上的符號、標籤上的文字。\n\n拿來用在生活和工作上：\n1. 拍清楚一點，正面拍、不要反光\n2. 問具體的問題：「這張電器標籤上的電壓和功率是多少？台灣插座能直接用嗎？」\n3. 多加一句：「看不清楚的字直接說看不清楚，不要猜」\n4. 重要的數字，自己對照原圖再看一次\n\n以前拍照問 AI，最怕它很有自信地唸錯。\n現在看得更清楚是好事，但第 3 步那句，我覺得還是要加。\n\n你最常拍什麼東西丟給 AI 看？",
+      "requestId": "b469cff7-d39a-4ded-9454-85ed33b5dc8b"
+    },
+    "threads": {
+      "text": "家電標籤上那排小字，老實說我從來沒認真看懂過。\n\nOpenAI 昨天把 GPT-6.2 Sol 放進 ChatGPT 的一般聊天，Plus 以上先用，免費版和 Go 沒有。\n官方特別提到：看照片細節變強了，像招牌上的符號、標籤上的文字。\n\n拿來用在生活和工作上：\n1. 拍清楚一點，正面拍、不要反光\n2. 問具體的問題：「這張電器標籤上的電壓和功率是多少？台灣插座能直接用嗎？」\n3. 多加一句：「看不清楚的字直接說看不清楚，不要猜」\n4. 重要的數字，自己對照原圖再看一次\n\n以前拍照問 AI，最怕它很有自信地唸錯。\n現在看得更清楚是好事，但第 3 步那句，我覺得還是要加。\n\n你最常拍什麼東西丟給 AI 看？",
+      "requestId": "faf46ab2-04d0-44a6-abd4-680c2ff864f4"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-24 在 Grok Bot 聊天批准（發 1、2、3、4、5）"
+  }
+}
