@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261124-chatgpt-space",
+  "created_date": "2026-11-24",
+  "title": "聊完記得存檔",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-24",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-24-chatgpt-space.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "b29c64e1feacc8f6d7183b9843f969f7596757e5775aeffe6e7e2c5eb24d2259",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-24-chatgpt-space.jpg",
+    "alt": "桌上散著一堆對話泡泡便利貼，正被收進一個整齊的資料夾，標題：聊完記得存檔"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "OpenAI 官方說明：https://help.openai.com/zh-hant/articles/20001549-getting-started-with-space-in-chatgpt\nZeroOne 整理：https://laplusda.com/posts/chatgpt-space-plus-pages-sharing/",
+      "requestId": "f6e2de5c-9d33-469a-8519-f3c7b727a134"
+    },
+    "threads": {
+      "text": "OpenAI 官方說明：https://help.openai.com/zh-hant/articles/20001549-getting-started-with-space-in-chatgpt\nZeroOne 整理：https://laplusda.com/posts/chatgpt-space-plus-pages-sharing/",
+      "requestId": "ce9d8172-e62b-49cc-b6a3-22b4916b796f"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "ChatGPT 用久了，最痛的是：好東西都散在十幾個對話裡，要找只能一直往上滑。\n\n這兩天 ChatGPT 把「空間（Space）」開放給 Plus，分批開。\n簡單說，就是把對話整理成一頁一頁的文件，收在同一個地方。\n\n怎麼用：\n1. 桌面 App 先更新到最新。側邊欄還是沒有 Space，就是還沒輪到你\n2. 跟它說：「建立一個名為『網站上線』的空間」\n3. 打開一個聊很久的對話，說：「根據這段對話建立頁面，包含目標、決議和下一步，放進『網站上線』」\n4. 頁面可以自己改字，也可以叫它「只縮短前言，其他不要動」\n5. 要給別人看，按分享，選對方只能看還是可以改\n\n我覺得重點不是多了一個功能，是對話終於有地方存檔了。\n聊完就丟，下次又從頭講一次，才是最浪費時間的。\n\n小提醒：空間會取代原本的「資料庫」，專案功能照舊。分享前，名字、日期、數字自己再看一次。\n\n你現在最想整理進去的，是哪一堆聊天紀錄？",
+      "requestId": "5e17fd8d-387e-4c44-b5e4-7f99e37cd52d"
+    },
+    "threads": {
+      "text": "ChatGPT 用久了，最痛的是：好東西都散在十幾個對話裡，要找只能一直往上滑。\n\n這兩天 ChatGPT 把「空間（Space）」開放給 Plus，分批開。\n簡單說，就是把對話整理成一頁一頁的文件，收在同一個地方。\n\n怎麼用：\n1. 桌面 App 先更新到最新。側邊欄還是沒有 Space，就是還沒輪到你\n2. 跟它說：「建立一個名為『網站上線』的空間」\n3. 打開一個聊很久的對話，說：「根據這段對話建立頁面，包含目標、決議和下一步，放進『網站上線』」\n4. 頁面可以自己改字，也可以叫它「只縮短前言，其他不要動」\n5. 要給別人看，按分享，選對方只能看還是可以改\n\n我覺得重點不是多了一個功能，是對話終於有地方存檔了。\n聊完就丟，下次又從頭講一次，才是最浪費時間的。\n\n小提醒：空間會取代原本的「資料庫」，專案功能照舊。分享前，名字、日期、數字自己再看一次。\n\n你現在最想整理進去的，是哪一堆聊天紀錄？",
+      "requestId": "bc340535-fe2d-4c72-b6ee-0ddcb8815f8e"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-24 在 Grok Bot 聊天批准（發 1、2、3、4、5）；配圖已附上"
+  }
+}

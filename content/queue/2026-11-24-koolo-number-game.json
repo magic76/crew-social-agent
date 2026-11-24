@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261124-koolo-number-game",
+  "created_date": "2026-11-24",
+  "title": "seventeen 還是 seventy？",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-24",
+    "time": "21:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-24-koolo-number-game.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "8cfae5a88faf94413cf4829b0334a8dde6583787fe309b16f98a7c243c2a8d0e",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-24-koolo-number-game.jpg",
+    "alt": "一個人看著手機在猜數字，旁邊冒出「17？70？」的對話泡泡，標題：seventeen 還是 seventy？"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "免費開始：https://koolo.app",
+      "requestId": "37f16150-06ba-4844-b159-b0230c7d8882"
+    },
+    "threads": {
+      "text": "免費開始：https://koolo.app",
+      "requestId": "519c58d8-07e4-46e1-bfe9-000a1eff47e0"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "學英文數字，我覺得最難的不是背，是聽到 seventeen 和 seventy 的那一秒，腦袋要轉一下。\n\n所以我在網站上放了一個英文猜數字遊戲。\n不用背，就是一直猜、一直聽，聽久了自然就分得出來。\n\n這段時間我一直在跟 AI 搏鬥，想把它做到小朋友和大人都玩得下去。\n還在改，玩起來哪裡卡卡的，歡迎直接跟我說。\n\n你學英文的時候，最常卡住的是數字、時間，還是金額？",
+      "requestId": "c711662c-ff7c-4e54-9e28-a59400961173"
+    },
+    "threads": {
+      "text": "學英文數字，我覺得最難的不是背，是聽到 seventeen 和 seventy 的那一秒，腦袋要轉一下。\n\n所以我在網站上放了一個英文猜數字遊戲。\n不用背，就是一直猜、一直聽，聽久了自然就分得出來。\n\n這段時間我一直在跟 AI 搏鬥，想把它做到小朋友和大人都玩得下去。\n還在改，玩起來哪裡卡卡的，歡迎直接跟我說。\n\n你學英文的時候，最常卡住的是數字、時間，還是金額？",
+      "requestId": "a70582da-bf78-4e7f-8d99-ddf544a2e11a"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-24 在 Grok Bot 聊天批准（發 1、2、3、4、5）；配圖已附上"
+  }
+}

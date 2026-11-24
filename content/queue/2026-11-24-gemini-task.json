@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261124-gemini-task",
+  "created_date": "2026-11-24",
+  "title": "AI 開始幫你跑腿",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-24",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-24-gemini-task.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "0bd7ae29734097573855b403e43ab0ccec20115da1ad360eeb5d5b80526ea60d",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-24-gemini-task.jpg",
+    "alt": "一個人躺在沙發上，手機裡的 AI 正在幫他打電話給汽車保養廠，標題：AI 開始幫你跑腿"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "T客邦：https://www.techbang.com/posts/134974-google-gemini-task-calls-scheduling-payments-free",
+      "requestId": "340f3e01-ffb6-470b-bbe6-e2e1a683d8f8"
+    },
+    "threads": {
+      "text": "T客邦：https://www.techbang.com/posts/134974-google-gemini-task-calls-scheduling-payments-free",
+      "requestId": "13e2f028-7f7b-44aa-98c8-e17fe6644df5"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "「叫 AI 幫我打電話預約保養廠」，Google 說已經可以了。\n\nGemini App 多了一個「任務（Task）」開關。從聊天切過去，跟它說要辦什麼事就好。\n它可以打電話預約、在線上等客服、敲好時間再排進行事曆，也能比價、找折扣碼、結帳。\n\n目前美國、日本、韓國、加拿大、澳洲、印度免費開放。\n台灣還沒有。\n\n聊天型的 AI 是幫你想，這個是幫你跑腿。\n方便是真的方便，但我第一個想到的是：付款要不要讓它碰？\n還好官方說，按「購買」這類關鍵動作前，它會先停下來問你。\n\n如果台灣開了，你第一件想丟給它的雜事是什麼？",
+      "requestId": "9496999a-0c09-4544-87b2-5b00e17c5230"
+    },
+    "threads": {
+      "text": "「叫 AI 幫我打電話預約保養廠」，Google 說已經可以了。\n\nGemini App 多了一個「任務（Task）」開關。從聊天切過去，跟它說要辦什麼事就好。\n它可以打電話預約、在線上等客服、敲好時間再排進行事曆，也能比價、找折扣碼、結帳。\n\n目前美國、日本、韓國、加拿大、澳洲、印度免費開放。\n台灣還沒有。\n\n聊天型的 AI 是幫你想，這個是幫你跑腿。\n方便是真的方便，但我第一個想到的是：付款要不要讓它碰？\n還好官方說，按「購買」這類關鍵動作前，它會先停下來問你。\n\n如果台灣開了，你第一件想丟給它的雜事是什麼？",
+      "requestId": "23ef124f-de29-4c51-b043-ccac3e2e7851"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-24 在 Grok Bot 聊天批准（發 1、2、3、4、5）；配圖已附上"
+  }
+}
