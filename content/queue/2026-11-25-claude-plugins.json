@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261125-claude-plugins",
+  "created_date": "2026-11-25",
+  "title": "別再複製貼上給 AI",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-25",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-25-claude-plugins.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "af9dc63cd3ca130d387a489caae26a18d4a864486b33602ec7e92f16df556c7e",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-25-claude-plugins.jpg",
+    "alt": "一個人被 Gmail、雲端硬碟、行事曆的視窗包圍，AI 把它們串成一條線。標題：別再複製貼上給 AI"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "ETtoday：https://ai.ettoday.net/news/3277392\nClaude 官方說明：https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page",
+      "requestId": "1ca591f5-c2f0-411c-a77e-b38ebd561e91"
+    },
+    "threads": {
+      "text": "ETtoday：https://ai.ettoday.net/news/3277392\nClaude 官方說明：https://support.claude.com/en/articles/17740565-manage-plugins-skills-and-connectors-from-one-plugins-page",
+      "requestId": "4266678a-96d8-45e4-b032-962532c53d98"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "以前用 AI 我最煩的就是：信在 Gmail、檔案在雲端硬碟，我得一直複製貼上給它看。\n\nClaude 這週把外掛整理成一個「Plugins」頁面，目錄裡超過一萬個，免費版也能用。\n最實用的大概是 Google Drive、Gmail、Google 日曆、Canva、Notion 這幾個。\n\n怎麼開：\n1. 在網頁版或桌面版 Claude，點左側的「Plugins」（原本叫 Customize）\n2. 搜尋 Gmail 或 Google Drive，點進去連接，登入授權\n3. 回到對話直接說：「幫我找上週客戶寄來的報價信，整理成三點」\n4. 裝好的技能，在對話框按「＋」或打「/」就叫得出來\n\n目錄裡的外掛會標「Verified」或「Community」，我會先挑 Verified 的。\n\n我的結論：AI 好不好用，很多時候不在模型多聰明，而在它拿不拿得到你的資料。\n不過授權信箱之前，先想清楚你願意讓它看到什麼。\n\n你最想讓 AI 幫你接手哪一個 App？",
+      "requestId": "6916fa8d-df7a-4500-b0e8-80d22327c531"
+    },
+    "threads": {
+      "text": "以前用 AI 我最煩的就是：信在 Gmail、檔案在雲端硬碟，我得一直複製貼上給它看。\n\nClaude 這週把外掛整理成一個「Plugins」頁面，目錄裡超過一萬個，免費版也能用。\n最實用的大概是 Google Drive、Gmail、Google 日曆、Canva、Notion 這幾個。\n\n怎麼開：\n1. 在網頁版或桌面版 Claude，點左側的「Plugins」（原本叫 Customize）\n2. 搜尋 Gmail 或 Google Drive，點進去連接，登入授權\n3. 回到對話直接說：「幫我找上週客戶寄來的報價信，整理成三點」\n4. 裝好的技能，在對話框按「＋」或打「/」就叫得出來\n\n目錄裡的外掛會標「Verified」或「Community」，我會先挑 Verified 的。\n\n我的結論：AI 好不好用，很多時候不在模型多聰明，而在它拿不拿得到你的資料。\n不過授權信箱之前，先想清楚你願意讓它看到什麼。\n\n你最想讓 AI 幫你接手哪一個 App？",
+      "requestId": "91125a3e-324f-4993-a650-e8938c3c3ff2"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-25 在 Grok Bot 聊天批准（發 1、2、3、4）；配圖已附上"
+  }
+}
