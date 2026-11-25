@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261125-gemini-notebook-flashcards",
+  "created_date": "2026-11-25",
+  "title": "最難的不是做閃卡，是記得回來翻",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-25",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "https://workspaceupdates.googleblog.com/2026/11/new-study-enhancements-for-flashcards-in-Gemini-Notebook.html",
+      "requestId": "ad34866a-33e0-4db9-b6b3-5a6377c49cbf"
+    },
+    "threads": {
+      "text": "https://workspaceupdates.googleblog.com/2026/11/new-study-enhancements-for-flashcards-in-Gemini-Notebook.html",
+      "requestId": "8d02def7-1b73-4765-b8ff-c5b06c0da57b"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "準備考試或證照，我最大的問題不是學不會，是筆記做完就沒再看第二次。\n\nGoogle 這週幫 Gemini Notebook 的閃卡加了三個功能：\n・閃卡會自動從你上傳的資料裡抓相關圖片\n・可以開碼表計時，模擬考試的感覺\n・手機 App 可以設定複習提醒\n個人 Google 帳號就能用。\n\n怎麼用：\n1. 打開 Gemini Notebook，上傳講義、PDF 或筆記\n2. 請它產生閃卡（Flashcards）\n3. 複習的時候打開碼表\n4. 在手機 App 設好提醒時間，讓它固定叫你回來複習\n\n我覺得最有用的是第 4 點。最難的從來不是做閃卡，是記得回來翻。\n\n你最近在準備什麼考試或證照？還是早就放棄提醒自己了 😂",
+      "requestId": "0609430e-50db-498f-89c2-0da0be156762"
+    },
+    "threads": {
+      "text": "準備考試或證照，我最大的問題不是學不會，是筆記做完就沒再看第二次。\n\nGoogle 這週幫 Gemini Notebook 的閃卡加了三個功能：\n・閃卡會自動從你上傳的資料裡抓相關圖片\n・可以開碼表計時，模擬考試的感覺\n・手機 App 可以設定複習提醒\n個人 Google 帳號就能用。\n\n怎麼用：\n1. 打開 Gemini Notebook，上傳講義、PDF 或筆記\n2. 請它產生閃卡（Flashcards）\n3. 複習的時候打開碼表\n4. 在手機 App 設好提醒時間，讓它固定叫你回來複習\n\n我覺得最有用的是第 4 點。最難的從來不是做閃卡，是記得回來翻。\n\n你最近在準備什麼考試或證照？還是早就放棄提醒自己了 😂",
+      "requestId": "c4994627-06db-452e-ac14-527ea6c6052f"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-25 在 Grok Bot 聊天批准（發 1、2、3、4）"
+  }
+}
