@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261125-gemini-training",
+  "created_date": "2026-11-25",
+  "title": "紀錄留著，不給 AI 練功",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-25",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-25-gemini-training.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "c4795bb8c7a70b41d15a4701300aa2b0871aad559c848d1182bca387bbc0ce00",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-25-gemini-training.jpg",
+    "alt": "上班族坐在電腦前，左邊是留著的聊天紀錄資料夾，右邊一個「訓練」開關被關掉。標題：紀錄留著，不給 AI 練功"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "9to5Google：https://9to5google.com/2026/11/24/gemini-history-ai-training/\nGoogle 官方：https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/",
+      "requestId": "e48c5f0d-42ae-45e8-b18a-ab73d4dbd256"
+    },
+    "threads": {
+      "text": "9to5Google：https://9to5google.com/2026/11/24/gemini-history-ai-training/\nGoogle 官方：https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/",
+      "requestId": "b7ad577b-4c48-41ab-9f52-1ce0a1067f4f"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "用 Gemini 最尷尬的一件事：想留著聊天紀錄，就等於同意拿去訓練 AI。\n現在可以分開設定了。\n\nGoogle 這週開始全面推新設定，9to5Google 也找到入口了。\n\n怎麼關：\n1. 電腦打開 gemini.google.com，點設定齒輪\n2. 拉到最下面，點「Gemini History」\n3. 會跳到 Google 的「我的活動」頁，紀錄保留維持開啟\n4. 找到「Help train generative AI models with」，把底下的「對話內容（含文字和附件）」關掉\n\n預設是開的，要自己去關。\n語音、Gemini Live 視訊和螢幕分享，本來就要你主動同意才會拿去訓練。\n\n我的想法是，工作資料或客戶檔案丟進去之前，花一分鐘看一下這個開關很值得。\n小提醒：你按過回饋的對話，還是可能被拿去用。這是分批推出的，還沒看到就過幾天再找。\n\n你會把工作檔案直接丟給 AI 嗎？還是都先刪掉敏感資料？",
+      "requestId": "66888373-7a62-40f2-8ac9-b441a810e9ba"
+    },
+    "threads": {
+      "text": "用 Gemini 最尷尬的一件事：想留著聊天紀錄，就等於同意拿去訓練 AI。\n現在可以分開設定了。\n\nGoogle 這週開始全面推新設定，9to5Google 也找到入口了。\n\n怎麼關：\n1. 電腦打開 gemini.google.com，點設定齒輪\n2. 拉到最下面，點「Gemini History」\n3. 會跳到 Google 的「我的活動」頁，紀錄保留維持開啟\n4. 找到「Help train generative AI models with」，把底下的「對話內容（含文字和附件）」關掉\n\n預設是開的，要自己去關。\n語音、Gemini Live 視訊和螢幕分享，本來就要你主動同意才會拿去訓練。\n\n我的想法是，工作資料或客戶檔案丟進去之前，花一分鐘看一下這個開關很值得。\n小提醒：你按過回饋的對話，還是可能被拿去用。這是分批推出的，還沒看到就過幾天再找。\n\n你會把工作檔案直接丟給 AI 嗎？還是都先刪掉敏感資料？",
+      "requestId": "72a97420-a716-45a8-862c-0715f2a2d449"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-25 在 Grok Bot 聊天批准（發 1、2、3、4）；配圖已附上"
+  }
+}
