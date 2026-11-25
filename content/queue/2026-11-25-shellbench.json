@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261125-shellbench",
+  "created_date": "2026-11-25",
+  "title": "AI 助理，三件搞砸一件",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-25",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-25-shellbench.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "a302d18d65066d2ec47cda3bb2adbea76859066e8b1ca5433963793cd1efcd6f",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-25-shellbench.jpg",
+    "alt": "AI 機器人管家手忙腳亂，行事曆、帳單、校門口接小孩的提醒掉了一地。標題：AI 助理，三件搞砸一件"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+      "requestId": "a51d6212-2c1a-4ac3-aa7e-edf6ba4b9e94"
+    },
+    "threads": {
+      "text": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+      "requestId": "ee9882a0-c056-44c7-9c8a-ff0d716a34a4"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "最強的 AI 助理，處理日常雜事還是有三分之一會搞砸。\n\nTechCrunch 這週報了一個新測驗，叫 ShellBench。研究者用超過 1000 萬筆真實使用紀錄出題，讓 OpenAI、Anthropic、Meta 的 AI 去處理信件、行事曆、帳單這些雜事。\n\n結果：\n・就算是最強的，也有超過三分之一失敗\n・同一題做三次，三次都對的不到一半\n・接小孩放學這件事，79.5% 的情況沒有好好考慮到\n・付帳單有 40.3% 的情況，建議了重複或錯誤的付款\n\n我自己每天也把一堆事丟給 AI 助理，看到這數字一點都不意外。\n它很能幹，但你不看一眼，它就會很有自信地做錯。\n\n我的結論：可以放手讓它跑，但付錢、接小孩、寄信出去這種事，最後一步還是自己按。\n\n你有沒有被 AI 很有自信地搞砸過什麼事？",
+      "requestId": "836b460e-9543-4a36-955a-78e1b910c5b0"
+    },
+    "threads": {
+      "text": "最強的 AI 助理，處理日常雜事還是有三分之一會搞砸。\n\nTechCrunch 這週報了一個新測驗，叫 ShellBench。研究者用超過 1000 萬筆真實使用紀錄出題，讓 OpenAI、Anthropic、Meta 的 AI 去處理信件、行事曆、帳單這些雜事。\n\n結果：\n・就算是最強的，也有超過三分之一失敗\n・同一題做三次，三次都對的不到一半\n・接小孩放學這件事，79.5% 的情況沒有好好考慮到\n・付帳單有 40.3% 的情況，建議了重複或錯誤的付款\n\n我自己每天也把一堆事丟給 AI 助理，看到這數字一點都不意外。\n它很能幹，但你不看一眼，它就會很有自信地做錯。\n\n我的結論：可以放手讓它跑，但付錢、接小孩、寄信出去這種事，最後一步還是自己按。\n\n你有沒有被 AI 很有自信地搞砸過什麼事？",
+      "requestId": "a84e3ec7-7c29-434b-b3b5-a6bb82f8edec"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-25 在 Grok Bot 聊天批准（發 1、2、3、4）；配圖已附上"
+  }
+}
