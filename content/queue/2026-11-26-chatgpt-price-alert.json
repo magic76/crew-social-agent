@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261126-chatgpt-price-alert",
+  "created_date": "2026-11-26",
+  "title": "黑五最累的不是搶",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-26",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-26-chatgpt-price-alert.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "41ce117a1dedae0ca4b713f2bef8a4b9e31a3053d50db4664f133391a4a4f3d9",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-26-chatgpt-price-alert.jpg",
+    "alt": "雲朵吉祥物拿著望遠鏡看降價標籤，旁邊有購物袋和提醒鈴鐺。標題：黑五降價，交給 AI 盯"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "OpenAI ChatGPT 版本說明：https://help.openai.com/en/articles/6825453-chatgpt-release-notes\nDigital Trends：https://www.digitaltrends.com/computing/chatgpt-is-getting-a-chat-tuned-gpt-6-2-sol-and-it-can-offer-to-watch-for-a-price-drop/",
+      "requestId": "63564b65-e1ad-4be2-b8c4-2746f5f615fd"
+    },
+    "threads": {
+      "text": "OpenAI ChatGPT 版本說明：https://help.openai.com/en/articles/6825453-chatgpt-release-notes\nDigital Trends：https://www.digitaltrends.com/computing/chatgpt-is-getting-a-chat-tuned-gpt-6-2-sol-and-it-can-offer-to-watch-for-a-price-drop/",
+      "requestId": "083e6c28-700c-4c3c-9db4-793d89704bb1"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "黑五最累的不是搶，是一直重新整理，看到底降價了沒。\n這件事可以丟給 ChatGPT 了。\n\nChatGPT 這週更新後，你問它「這個有在特價嗎」，它會主動問要不要在降價時通知你。Digital Trends 和《經濟時報》都有報導實測。\n\n怎麼做：\n1. 問的時候寫清楚三件事：完整型號、能接受的價格、想看哪幾家店\n2. 例如：「幫我看 ○○ 這個型號有沒有特價，低於 X 元就通知我，追到 12/1」\n3. 它問要不要追蹤，就答應\n4. 沒有跳出來，就直接說「每天幫我查一次，降到 X 元告訴我」，讓它用排程任務去跑\n\n限制：主動提醒是 GPT-6.2 的功能，Plus 以上才有。免費版也能用排程任務，只是一天最多一次。\n收到通知後，還是自己去店家頁面看一下價格和運費再下單。\n\n我覺得 AI 最省時間的用法，不是幫我挑，是幫我「盯」。\n\n你今年黑五在等哪一樣東西降價？",
+      "requestId": "ffc45551-2e4a-43e1-bc3d-0bad21d536c6"
+    },
+    "threads": {
+      "text": "黑五最累的不是搶，是一直重新整理，看到底降價了沒。\n這件事可以丟給 ChatGPT 了。\n\nChatGPT 這週更新後，你問它「這個有在特價嗎」，它會主動問要不要在降價時通知你。Digital Trends 和《經濟時報》都有報導實測。\n\n怎麼做：\n1. 問的時候寫清楚三件事：完整型號、能接受的價格、想看哪幾家店\n2. 例如：「幫我看 ○○ 這個型號有沒有特價，低於 X 元就通知我，追到 12/1」\n3. 它問要不要追蹤，就答應\n4. 沒有跳出來，就直接說「每天幫我查一次，降到 X 元告訴我」，讓它用排程任務去跑\n\n限制：主動提醒是 GPT-6.2 的功能，Plus 以上才有。免費版也能用排程任務，只是一天最多一次。\n收到通知後，還是自己去店家頁面看一下價格和運費再下單。\n\n我覺得 AI 最省時間的用法，不是幫我挑，是幫我「盯」。\n\n你今年黑五在等哪一樣東西降價？",
+      "requestId": "3d1a67df-edc5-418c-9e1d-98c2a7cb360b"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-26 在 Grok Bot 聊天批准（發 1、2、3、4、5）；配圖已附上"
+  }
+}
