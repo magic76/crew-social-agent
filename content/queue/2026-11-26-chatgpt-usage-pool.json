@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261126-chatgpt-usage-pool",
+  "created_date": "2026-11-26",
+  "title": "ChatGPT 用量要合併了",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-26",
+    "time": "19:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-26-chatgpt-usage-pool.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "c5b13530f338fe413d9c47e0937cc16829974633eecaaff24f9cdacdbaca280e",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-26-chatgpt-usage-pool.jpg",
+    "alt": "聊天和工作兩條用電量條合併成一條，雲朵吉祥物抱著合併後的綠色用量表。標題：ChatGPT 用量要合併了"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "TechCrunch：https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/\nThe Verge：https://www.theverge.com/ai-artificial-intelligence/1042187/openai-is-combining-chatgpt-and-codex-usage-limits",
+      "requestId": "25aa2012-7c1a-497d-b0d3-d3be5aa3bf8b"
+    },
+    "threads": {
+      "text": "TechCrunch：https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/\nThe Verge：https://www.theverge.com/ai-artificial-intelligence/1042187/openai-is-combining-chatgpt-and-codex-usage-limits",
+      "requestId": "bb7ec3af-9cfa-44f3-922b-9178311a636e"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "付一樣的錢，能用的量可能變少？ChatGPT 下個月要改算法了。\n\nTechCrunch 和 The Verge 這兩天都有報：ChatGPT 的一般聊天和 Work（含 Codex）要共用同一個用量額度。Plus、Pro、Business 都會改，12 月全面上路，現在先從一小群 Pro 開始。\n\nOpenAI 說，大部分人不會比較常撞到上限，但用最兇的那一小群人可能會更快用完。\nInstant 模型不算在額度裡，額度用完也還能繼續用 Instant。\n\n我也是 Plus 用戶，第一個反應是：額度要開始省著用了。\n重的工作留給思考模型，查資料、改錯字這種小事交給 Instant，應該就比較不會卡住。\n\n你的 AI 訂閱撞過用量上限嗎？撞到的時候你是等，還是直接換別家？",
+      "requestId": "cfff4e10-5451-4ef3-a700-5a48147befd3"
+    },
+    "threads": {
+      "text": "付一樣的錢，能用的量可能變少？ChatGPT 下個月要改算法了。\n\nTechCrunch 和 The Verge 這兩天都有報：ChatGPT 的一般聊天和 Work（含 Codex）要共用同一個用量額度。Plus、Pro、Business 都會改，12 月全面上路，現在先從一小群 Pro 開始。\n\nOpenAI 說，大部分人不會比較常撞到上限，但用最兇的那一小群人可能會更快用完。\nInstant 模型不算在額度裡，額度用完也還能繼續用 Instant。\n\n我也是 Plus 用戶，第一個反應是：額度要開始省著用了。\n重的工作留給思考模型，查資料、改錯字這種小事交給 Instant，應該就比較不會卡住。\n\n你的 AI 訂閱撞過用量上限嗎？撞到的時候你是等，還是直接換別家？",
+      "requestId": "fd0fc815-3f65-4e52-a042-f0319174d5b5"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-26 在 Grok Bot 聊天批准（發 1、2、3、4、5）；配圖已附上"
+  }
+}
