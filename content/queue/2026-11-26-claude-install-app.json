@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261126-claude-install-app",
+  "created_date": "2026-11-26",
+  "title": "AI 做的小工具，裝成 App",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-26",
+    "time": "12:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-26-claude-install-app.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "774713ee3d9c231a8b949e28d2b99daf5394ae824d19ef8b48e8ebcd2d25d780",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-26-claude-install-app.jpg",
+    "alt": "雲朵吉祥物站在筆電旁，對話泡泡裡的計時器變成獨立的 App 圖示。標題：AI 做的小工具，裝成 App"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "Claude 說明中心：https://support.claude.com/en/articles/18516354-install-an-artifact-as-an-app\nMacRumors：https://www.macrumors.com/2026/11/25/claude-install-artifacts-desktop-apps/",
+      "requestId": "51a9eed6-425b-4c53-ba76-eb7d89562d9b"
+    },
+    "threads": {
+      "text": "Claude 說明中心：https://support.claude.com/en/articles/18516354-install-an-artifact-as-an-app\nMacRumors：https://www.macrumors.com/2026/11/25/claude-install-artifacts-desktop-apps/",
+      "requestId": "ceeaa9fe-40db-42b1-98e8-49e52707aec3"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "AI 幫我做的小工具，以前都只能關在聊天視窗裡。\n現在可以直接裝成電腦上的 App 了。\n\nClaude 這週推出「Install as app」，還是測試版。Mac 和 Windows 的 Claude 桌面版都能用，免費方案也在陸續開放。\n\n怎麼用：\n1. 在 Claude 桌面版跟它說你要什麼，例如「做一個每小時提醒我起來伸展的小 App」\n2. 做好之後，點小工具標題的選單，或直接按右鍵\n3. 選「Install as app」，再按「安裝」\n4. Mac 去「應用程式」裡的 Claude Apps 資料夾找，Windows 在開始選單\n\n裝好的 App 有自己的圖示和視窗，原本的小工具一改，App 也會跟著更新。\n找不到這個選項，就先把 Claude 桌面版更新到最新。\n\n要注意：它可以要求通知、選單列，甚至整台電腦的存取權限。我的建議是權限先給最小的，真的需要再開。要連網、而且登入 Claude 才打得開。\n\n我覺得這才是一般人用 AI 最實際的地方：不用學寫程式，缺什麼小工具就叫它做一個。\n\n你最想要哪種小工具，一直放在電腦上？",
+      "requestId": "07dbdac3-e102-4bf5-9d5b-b1df1eae2b15"
+    },
+    "threads": {
+      "text": "AI 幫我做的小工具，以前都只能關在聊天視窗裡。\n現在可以直接裝成電腦上的 App 了。\n\nClaude 這週推出「Install as app」，還是測試版。Mac 和 Windows 的 Claude 桌面版都能用，免費方案也在陸續開放。\n\n怎麼用：\n1. 在 Claude 桌面版跟它說你要什麼，例如「做一個每小時提醒我起來伸展的小 App」\n2. 做好之後，點小工具標題的選單，或直接按右鍵\n3. 選「Install as app」，再按「安裝」\n4. Mac 去「應用程式」裡的 Claude Apps 資料夾找，Windows 在開始選單\n\n裝好的 App 有自己的圖示和視窗，原本的小工具一改，App 也會跟著更新。\n找不到這個選項，就先把 Claude 桌面版更新到最新。\n\n要注意：它可以要求通知、選單列，甚至整台電腦的存取權限。我的建議是權限先給最小的，真的需要再開。要連網、而且登入 Claude 才打得開。\n\n我覺得這才是一般人用 AI 最實際的地方：不用學寫程式，缺什麼小工具就叫它做一個。\n\n你最想要哪種小工具，一直放在電腦上？",
+      "requestId": "78515213-f6e5-4da8-90a1-67ee7a9dae9d"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-26 在 Grok Bot 聊天批准（發 1、2、3、4、5）；配圖已附上"
+  }
+}
