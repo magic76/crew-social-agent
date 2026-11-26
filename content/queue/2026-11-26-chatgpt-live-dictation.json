@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261126-chatgpt-live-dictation",
+  "created_date": "2026-11-26",
+  "title": "現在可以直接用講的了",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-26",
+    "time": "16:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "OpenAI ChatGPT 版本說明：https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "requestId": "5f3f4875-47f6-467f-8626-2c3eb1afc591"
+    },
+    "threads": {
+      "text": "OpenAI ChatGPT 版本說明：https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      "requestId": "8c228cc7-3b34-4aec-947a-33eaa12e8103"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "打字慢的人，現在可以直接用講的了，而且不用怕講到一半被切掉。\n\nChatGPT 的聽寫改成「即時聽寫」：你邊講，字就邊跑出來，不用等講完才轉。\n以前錄音最多 10 分鐘的上限也拿掉了。所有方案都有，手機、網頁和電腦版都在陸續開放。\n\n怎麼用：\n1. 點輸入框的麥克風，開始講\n2. 講的時候點一下波形，可以切換要不要即時顯示文字\n3. 講完先看一遍，再送出\n\n我覺得最適合兩種時候：\n開完會，把重點一口氣講給它，請它整理成待辦。\n腦袋很亂的時候，先全部講出來，再叫它幫你排順序。\n\n你平常用 AI 是打字多還是講話多？對著手機講話會不會覺得尷尬？",
+      "requestId": "a7395871-df6d-41d3-bb0a-47d5da499a45"
+    },
+    "threads": {
+      "text": "打字慢的人，現在可以直接用講的了，而且不用怕講到一半被切掉。\n\nChatGPT 的聽寫改成「即時聽寫」：你邊講，字就邊跑出來，不用等講完才轉。\n以前錄音最多 10 分鐘的上限也拿掉了。所有方案都有，手機、網頁和電腦版都在陸續開放。\n\n怎麼用：\n1. 點輸入框的麥克風，開始講\n2. 講的時候點一下波形，可以切換要不要即時顯示文字\n3. 講完先看一遍，再送出\n\n我覺得最適合兩種時候：\n開完會，把重點一口氣講給它，請它整理成待辦。\n腦袋很亂的時候，先全部講出來，再叫它幫你排順序。\n\n你平常用 AI 是打字多還是講話多？對著手機講話會不會覺得尷尬？",
+      "requestId": "67a83b97-9146-4048-8de1-83102cbf34d0"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-26 在 Grok Bot 聊天批准（發 1、2、3、4、5）"
+  }
+}
