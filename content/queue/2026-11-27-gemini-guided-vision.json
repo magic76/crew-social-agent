@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261127-gemini-guided-vision",
+  "created_date": "2026-11-27",
+  "title": "手機幫你看小字",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-27",
+    "time": "10:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": {
+    "format": "jpeg",
+    "storage": "base64-utf8",
+    "path": "content/queue/assets/2026-11-27-gemini-guided-vision.jpg.base64",
+    "width": 1080,
+    "height": 1350,
+    "sha256": "8a00e575a0df1feab462fbc0fa4675f7793440d1c96a6bb2aabe66e4029ea676",
+    "public_url": "https://raw.githubusercontent.com/magic76/crew-social-agent/main/content/queue/assets/2026-11-27-gemini-guided-vision.jpg",
+    "alt": "插畫：阿嬤站在洗衣機前用手機對準旋鈕，雲朵吉祥物靠在洗衣機上指向旋鈕，對話泡泡寫「往右一點」。標題：手機幫你看小字"
+  },
+  "first_replies": {
+    "facebook": {
+      "text": "Digital Trends：https://www.digitaltrends.com/phones/gemini-lives-guided-vision-now-works-on-iphone-but-google-left-out-a-few-details/",
+      "requestId": "c7999946-b493-45f2-a920-7784f5dbaa01"
+    },
+    "threads": {
+      "text": "Digital Trends：https://www.digitaltrends.com/phones/gemini-lives-guided-vision-now-works-on-iphone-but-google-left-out-a-few-details/",
+      "requestId": "bc4cf19a-85cb-48ae-ac92-eedf523d58f4"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "藥袋上的小字、洗衣機那一排模式，我每次都要瞇眼看半天。\n\nGoogle 這週讓 iPhone 也能用 Gemini Live 的「引導視覺」：鏡頭對著東西，它會用講的告訴你看到什麼。拍歪了還會提醒你「往右一點」「退後一點」。\n\n怎麼用：\n1. 打開 Gemini App，進入 Live\n2. 開鏡頭，對準要看的東西\n3. 直接問：「這包裝的保存期限是哪天？」「洗棉被要選哪個模式？」\n4. 畫面沒對好，就照它說的移動手機\n\nAndroid 10 月就有了，這次輪到 iPhone。\n\n我覺得最該用的不是我們，是家裡的爸媽。下次回家先幫他們設定好，比教他們把字體放大有用。\n\n小提醒：Google 說不要拿來導航、過馬路。台灣中文介面能不能用，官方還沒寫清楚，要先試一下。\n\n你家長輩最常叫你幫忙看的是什麼？",
+      "requestId": "4a4ccb42-3c6b-45b2-b000-e93702926bdd"
+    },
+    "threads": {
+      "text": "藥袋上的小字、洗衣機那一排模式，我每次都要瞇眼看半天。\n\nGoogle 這週讓 iPhone 也能用 Gemini Live 的「引導視覺」：鏡頭對著東西，它會用講的告訴你看到什麼。拍歪了還會提醒你「往右一點」「退後一點」。\n\n怎麼用：\n1. 打開 Gemini App，進入 Live\n2. 開鏡頭，對準要看的東西\n3. 直接問：「這包裝的保存期限是哪天？」「洗棉被要選哪個模式？」\n4. 畫面沒對好，就照它說的移動手機\n\nAndroid 10 月就有了，這次輪到 iPhone。\n\n我覺得最該用的不是我們，是家裡的爸媽。下次回家先幫他們設定好，比教他們把字體放大有用。\n\n小提醒：Google 說不要拿來導航、過馬路。台灣中文介面能不能用，官方還沒寫清楚，要先試一下。\n\n你家長輩最常叫你幫忙看的是什麼？",
+      "requestId": "5a90ca33-e039-44ba-a33e-f4d378274c52"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-27 在 Grok Bot 聊天批准（發 1、2、3、4、5）；配圖已附上"
+  }
+}
