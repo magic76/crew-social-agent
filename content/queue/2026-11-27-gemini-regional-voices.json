@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "crew-lab-20261127-gemini-regional-voices",
+  "created_date": "2026-11-27",
+  "title": "最難的不是單字，是換一個口音就聽不懂",
+  "category": "practical",
+  "status": "ready_for_local_agent",
+  "mode": "live",
+  "schedule": {
+    "date": "2026-11-27",
+    "time": "14:00",
+    "timezone": "Asia/Taipei"
+  },
+  "networks": [
+    "facebook",
+    "threads"
+  ],
+  "image": null,
+  "first_replies": {
+    "facebook": {
+      "text": "Google 官方部落格：https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/",
+      "requestId": "0259ad1d-decb-45f9-9774-6423496104be"
+    },
+    "threads": {
+      "text": "Google 官方部落格：https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/",
+      "requestId": "61f4b501-50bd-47e8-8058-f6e7a1d9b3e5"
+    }
+  },
+  "posts": {
+    "facebook": {
+      "text": "練英文聽力，我覺得最難的不是單字，是換一個口音就聽不懂。\n\nGemini 加了 66 種地區語音：美式、英式、印度英文，還有韓文、巴西葡萄牙文。它不是誇張的腔調，是比較接近當地人平常講話的節奏。\n\n怎麼換：\n1. Gemini App → 設定 → Gemini 的語音\n2. 或是在 Gemini Live 畫面的「⋯」選單裡直接換\n3. 選好之後，Live 聊天和朗讀回覆都會用同一個聲音\n\n如果是我，會這樣練：今天選英式，請它用英文跟我聊五分鐘通勤；聽不懂就叫它慢一點、再講一次。明天換印度英文。\n\n一個人練聽力，最缺的就是「不同的人」，現在換個設定就有了。\n\n你最聽不慣哪一種英文口音？",
+      "requestId": "30fe0bfa-d799-4613-ad5a-f22f1aa1a22c"
+    },
+    "threads": {
+      "text": "練英文聽力，我覺得最難的不是單字，是換一個口音就聽不懂。\n\nGemini 加了 66 種地區語音：美式、英式、印度英文，還有韓文、巴西葡萄牙文。它不是誇張的腔調，是比較接近當地人平常講話的節奏。\n\n怎麼換：\n1. Gemini App → 設定 → Gemini 的語音\n2. 或是在 Gemini Live 畫面的「⋯」選單裡直接換\n3. 選好之後，Live 聊天和朗讀回覆都會用同一個聲音\n\n如果是我，會這樣練：今天選英式，請它用英文跟我聊五分鐘通勤；聽不懂就叫它慢一點、再講一次。明天換印度英文。\n\n一個人練聽力，最缺的就是「不同的人」，現在換個設定就有了。\n\n你最聽不慣哪一種英文口音？",
+      "requestId": "1ff37520-335e-46d6-a2ff-55c40cc7bff2"
+    }
+  },
+  "safety": {
+    "publish_permitted": true,
+    "reason": "立洋 2026-11-27 在 Grok Bot 聊天批准（發 1、2、3、4、5）"
+  }
+}
